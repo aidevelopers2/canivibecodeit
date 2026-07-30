@@ -77,15 +77,13 @@
     }
   }
 
-  /* Full-width cursor wave: ripples radiate from the cursor's x position
-     through the entire dither field with a slow spatial decay, so the whole
-     area gradient comes alive while the data line itself never moves. */
-  const fieldWave = (mx, t, width) => (px, py) => {
-    const dx = px - mx;
-    const travel = Math.sin(Math.abs(dx) / 30 - t / 170);
-    const decay = Math.exp(-Math.abs(dx) / (width * 0.9));
-    const breathe = 0.8 + 0.2 * Math.sin(t / 340);
-    return 0.4 * travel * decay * breathe;
+  /* Cursor aura: a calm gaussian glow in the dither field around the pointer.
+     Localized on purpose (a full-field pulse proved headache-inducing), and it
+     only ever touches dot density, never the data geometry. */
+  const aura = (mx, my) => (px, py) => {
+    const dx = px - mx, dy = (py - my) * 1.6;
+    const dist2 = dx * dx + dy * dy;
+    return 0.7 * Math.exp(-dist2 / (2 * 70 * 70));
   };
 
   /* ---------- area chart ---------- */
@@ -130,7 +128,7 @@
       const visible = points.slice(0, upto);
       /* The line is data: it never moves. Only the fill's dither density
          carries the cursor wave, scaled by the eased amplitude. */
-      const raw = cursor && cursor.amp > 0.001 ? fieldWave(cursor.x, cursor.t, iw) : null;
+      const raw = cursor && cursor.amp > 0.001 ? aura(cursor.x, cursor.y) : null;
       const boost = raw ? (px, py) => raw(px, py) * cursor.amp : null;
       const ys = visible.map((p) => Y(p.v));
 
@@ -254,7 +252,7 @@
         ctx.textBaseline = 'middle';
         const label = r.label.length > 18 ? r.label.slice(0, 17) + '…' : r.label;
         ctx.fillText(label, 0, y);
-        const density = hot ? 0.62 + 0.1 * Math.sin(tNow / 260) : 0.45;
+        const density = hot ? 0.62 : 0.45;
         ditherRect(ctx, LABEL_W, y - BAR / 2, bw, BAR, rgb, density, 2);
         ctx.fillStyle = t.data;
         ctx.fillRect(LABEL_W + bw - 3, y - BAR / 2, 3, BAR);
