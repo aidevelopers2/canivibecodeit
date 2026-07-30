@@ -1,0 +1,51 @@
+{
+  "slug": "vernigo",
+  "name": "Vernigo",
+  "domain": "vernigo.com",
+  "category": "analytics",
+  "subcategory": "YouTube outlier and niche research",
+  "tagline": "Find outlier YouTube videos, unsaturated niches, and proven ideas from a continuously updated video database",
+  "priceMonthly": 39,
+  "pricing": {
+    "plan": "Pro",
+    "basis": "monthly",
+    "native": "39 USD monthly; 199 USD yearly",
+    "source": "https://www.vernigo.com/",
+    "checkedOn": "2026-07-30",
+    "confidence": "medium",
+    "notes": "Pricing is shown after signup rather than on a public pricing page. Current prices supplied by Vernigo: $39/month or $199/year."
+  },
+  "verdict": "no",
+  "verdictConfidence": "high",
+  "verdictSummary": "You can build filters, bookmarks, and an outlier score over a small set of YouTube channels, but Vernigo's product is the continuously refreshed corpus: millions of videos, channel baselines, niche-level supply and demand signals, and ranking data improved by how thousands of users interact with the library. A one-shot app can reproduce the interface and formula, not the dataset that makes the results useful.",
+  "coreLoopDIY": "Track a curated list of YouTube channels, compare each video's views with that channel's recent average, and browse the resulting outliers with filters and bookmark folders.",
+  "diyTimeEstimate": "multi-day",
+  "requirements": [
+    "YouTube Data API key",
+    "curated channel seed list",
+    "scheduled data collection",
+    "database",
+    "always-on box for refresh jobs"
+  ],
+  "whatYouLose": [
+    "the 10M-video historical and continuously updating database",
+    "broad discovery beyond channels you already know",
+    "unsaturated niche rankings across the wider YouTube market",
+    "community interaction signals from more than 2,000 users",
+    "ranking quality improved by accumulated usage data",
+    "coverage and freshness without managing YouTube API quotas"
+  ],
+  "moatType": "proprietary dataset + usage signals",
+  "whyPeopleStillPay": "The useful result is not calculating views divided by a channel average. It is having enough current video and channel history to discover outliers and undersupplied niches before you already know where to look. Building the dashboard is straightforward; collecting, refreshing, and ranking that market-wide dataset is the product.",
+  "priorArt": [],
+  "relatedSlugs": [
+    "vidiq",
+    "tubebuddy",
+    "socialblade"
+  ],
+  "pagePriority": 4,
+  "verifiedOneShot": false,
+  "notes": "An honest not-really: the UI is reproducible, but the discovery value comes from accumulated data, coverage, and ranking signals.",
+  "prompt": "Build me a personal YouTube outlier research tool inspired by Vernigo. Requirements:\n\n- Django + PostgreSQL, one self-hosted web app; Google login is out of scope,\n  use a single admin password from .env.\n- Let me add YouTube channel IDs manually or import them from a CSV seed list.\n- Pull each channel's recent videos through the official YouTube Data API and\n  store title, thumbnail, views, duration, publish date, and channel stats.\n- Calculate an outlier multiplier as video views divided by the average views\n  of that channel's previous five videos available in the database.\n- A searchable video grid with filters for multiplier, views, subscribers,\n  duration, publish date, category, and channel age; sortable by multiplier,\n  views, or newest.\n- Bookmark folders: create, rename, and delete folders, and save or remove\n  videos without duplicating them.\n- A niche page that groups imported channels by a manually assigned niche and\n  ranks niches using median views per video divided by videos published.\n- Run refresh jobs with Celery + Redis once per day, respect API quota errors,\n  and show the last successful refresh time for every channel.\n- Store all secrets in .env; include Docker Compose for Django, PostgreSQL,\n  Redis, Celery worker, and scheduler.\n- Out of scope: crawling all of YouTube, a 10M-video corpus, community ranking\n  signals, automatic niche classification, and claims that this finds the\n  best opportunities market-wide. It only analyzes the channels I seed.\n- README: YouTube API setup, quota limits, CSV format, calculation details,\n  backup steps, and the limits of a small personal dataset.",
+  "promptCurated": true
+}
