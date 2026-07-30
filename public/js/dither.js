@@ -77,13 +77,15 @@
     }
   }
 
-  /* Cursor aura: gaussian falloff that breathes and ripples outward, so the
-     dots near the pointer wake up like a wave. */
-  const aura = (mx, my, t) => (px, py) => {
-    const dx = px - mx, dy = (py - my) * 1.6;
-    const dist = Math.sqrt(dx * dx + dy * dy);
-    const ripple = 1 + 0.25 * Math.sin(dist / 14 - t / 180);
-    return 0.85 * Math.exp(-(dist * dist) / (2 * 70 * 70)) * ripple * (0.85 + 0.15 * Math.sin(t / 320));
+  /* Full-width cursor wave: ripples radiate from the cursor's x position
+     through the entire dither field with a slow spatial decay, so the whole
+     area gradient comes alive while the data line itself never moves. */
+  const fieldWave = (mx, t, width) => (px, py) => {
+    const dx = px - mx;
+    const travel = Math.sin(Math.abs(dx) / 30 - t / 170);
+    const decay = Math.exp(-Math.abs(dx) / (width * 0.9));
+    const breathe = 0.8 + 0.2 * Math.sin(t / 340);
+    return 0.4 * travel * decay * breathe;
   };
 
   /* ---------- area chart ---------- */
@@ -126,26 +128,13 @@
 
       const upto = Math.max(2, Math.floor(points.length * progress));
       const visible = points.slice(0, upto);
-      const boost = cursor ? aura(cursor.x, cursor.y, cursor.t) : null;
+      /* The line is data: it never moves. Only the fill's dither density
+         carries the cursor wave, scaled by the eased amplitude. */
+      const raw = cursor && cursor.amp > 0.001 ? fieldWave(cursor.x, cursor.t, iw) : null;
+      const boost = raw ? (px, py) => raw(px, py) * cursor.amp : null;
+      const ys = visible.map((p) => Y(p.v));
 
-      /* Elastic geometry: the curve pulls toward the cursor with a wide
-         gaussian reach, and a ripple cascades outward through the whole
-         line. amp eases in/out so enter/leave feel springy, not snappy. */
-      const ys = visible.map((p, i) => {
-        let y = Y(p.v);
-        if (cursor && cursor.amp > 0.001) {
-          const dx = X(i) - cursor.x;
-          const reach = Math.exp(-(dx * dx) / (2 * (iw / 4) * (iw / 4)));
-          const pull = (cursor.y - y) * 0.35 * reach;
-          const ripple =
-            7 * Math.sin(dx / 24 - cursor.t / 150) * Math.exp(-Math.abs(dx) / (iw * 0.6));
-          y += (pull + ripple) * cursor.amp;
-          y = Math.max(PAD.t + 2, Math.min(PAD.t + ih - 1, y));
-        }
-        return y;
-      });
-
-      /* dithered fill under the (displaced) line, density fading downward */
+      /* dithered fill under the line, density fading downward */
       ctx.save();
       ctx.beginPath();
       ctx.moveTo(X(0), PAD.t + ih);
@@ -160,7 +149,7 @@
       }
       ctx.restore();
 
-      /* the line itself, crisp, riding the displaced geometry */
+      /* the line itself, crisp and truthful */
       ctx.strokeStyle = t.data;
       ctx.lineWidth = 2;
       ctx.lineJoin = 'round';

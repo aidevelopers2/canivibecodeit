@@ -5,6 +5,9 @@
 HANDOFF.md
 *HANDOFF*
 
+# private business planning — never committed (public repo)
+planning/
+
 # private user data (also lives outside the repo tree on the server)
 data/private/
 *.db
