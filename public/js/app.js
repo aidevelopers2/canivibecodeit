@@ -24,12 +24,6 @@
     toastTimer = setTimeout(() => el.classList.remove('show'), 2400);
   };
 
-  window.CanIVibecodeIt = {
-    ...(window.CanIVibecodeIt || {}),
-    toast,
-    track,
-  };
-
   /* ---------- theme toggle ---------- */
   $('[data-toggle-theme]')?.addEventListener('click', () => {
     const next = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light';
@@ -74,7 +68,7 @@
      nobody has to scroll past the ticker to see what matched. */
   const srBox = $('#search-results');
   const rowData = rows.map((r) => ({
-    href: $('.row-link', r)?.getAttribute('href'),
+    href: r.getAttribute('href'),
     name: $('.name', r)?.textContent ?? '',
     lower: r.dataset.name,
     verdict: r.dataset.verdict,
@@ -299,19 +293,6 @@
     return ok;
   };
 
-  const launchAgent = (agentId, prompt) => {
-    const agent = AGENTS[agentId];
-    if (!agent) return false;
-    copyText(prompt);
-    toast(`opening ${agent.name} · prompt prefilled (and copied, just in case)`);
-    const url = agent.link(prompt);
-    if (agent.newTab) window.open(url, '_blank', 'noopener');
-    else window.location.href = url;
-    return true;
-  };
-
-  Object.assign(window.CanIVibecodeIt, { copyText, launchAgent });
-
   const flashCopied = (btn, text = 'copied ✓') => {
     const label = $('span:last-child', btn);
     const original = label.textContent;
@@ -341,8 +322,13 @@
         return;
       }
 
+      const agent = AGENTS[btn.dataset.agent];
+      copyText(prompt); // best-effort backup; don't block the deeplink on it
       flashCopied(btn, 'opening…');
-      launchAgent(btn.dataset.agent, prompt);
+      toast(`opening ${agent.name} · prompt prefilled (and copied, just in case)`);
+      const url = agent.link(prompt);
+      if (agent.newTab) window.open(url, '_blank', 'noopener');
+      else window.location.href = url;
       track('copy_prompt', { app: slug, agent: btn.dataset.agent });
     });
   });
