@@ -137,12 +137,12 @@
       </article>`;
   };
 
-  const phaseSection = (phase, ordinal) => {
+  const phaseSection = (phase) => {
     if (!phase.items.length) return '';
     return `
       <section class="roadmap-phase" aria-labelledby="phase-${esc(phase.id)}">
         <div class="roadmap-phase-head">
-          <span class="phase-index">${String(ordinal).padStart(2, '0')}</span>
+          <span class="phase-index">${String(phase.items.length).padStart(2, '0')}</span>
           <div>
             <h2 id="phase-${esc(phase.id)}">${esc(phase.title)}</h2>
             <p>${esc(phase.description)}</p>
@@ -358,7 +358,7 @@
             </section>`
           : ''
       }
-      ${currentRoadmap.phases.map((phase, i) => phaseSection(phase, i + 1)).join('')}
+      ${currentRoadmap.phases.map(phaseSection).join('')}
       ${
         currentRoadmap.keep.length
           ? `<section class="roadmap-phase keep-phase" aria-labelledby="probably-keep-title">

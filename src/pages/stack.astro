@@ -58,8 +58,8 @@ const description =
       </noscript>
     </div>
 
-    <script id="stack-app-data" type="application/json" set:html={JSON.stringify(apps).replace(/</g, '\\u003c')}></script>
-    <script src={`/js/stack-planner.js?v=${__BUILD_ID__}`} defer></script>
-    <script src={`/js/stack-page.js?v=${__BUILD_ID__}`} defer></script>
+    <script id="stack-app-data" type="application/json" set:html={JSON.stringify(apps)}></script>
+    <script src="/js/stack-planner.js" defer></script>
+    <script src="/js/stack-page.js" defer></script>
   </main>
 </Base>

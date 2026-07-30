@@ -118,7 +118,7 @@ const appSlugs = allApps().map((app) => app.slug);
     </footer>
 
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
-    <script id="stack-valid-slugs" type="application/json" set:html={JSON.stringify(appSlugs).replace(/</g, '\\u003c')}></script>
+    <script id="stack-valid-slugs" type="application/json" set:html={JSON.stringify(appSlugs)}></script>
     <script src={`/js/app.js?v=${__BUILD_ID__}`} defer></script>
     <script src={`/js/stack.js?v=${__BUILD_ID__}`} defer></script>
   </body>
