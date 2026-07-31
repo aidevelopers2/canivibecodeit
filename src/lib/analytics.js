@@ -8,11 +8,16 @@ const KEY = process.env.POSTHOG_PERSONAL_KEY;
 
 const QUERY = `
   SELECT
-    countDistinctIf(person_id, timestamp > now() - INTERVAL 5 MINUTE) AS online,
     countIf(event = '$pageview' AND timestamp >= toStartOfDay(now())) AS views_today,
     countIf(event = '$pageview') AS views_7d,
     countDistinctIf(person_id, event = '$pageview') AS visitors_7d,
-    countIf(event = 'copy_prompt') AS copies_7d
+    countIf(event = 'copy_prompt') AS copies_7d,
+    (SELECT max(pv) FROM (
+      SELECT toDate(timestamp) AS d, countIf(event = '$pageview') AS pv
+      FROM events
+      WHERE properties.$host = 'canivibecodeit.com'
+      GROUP BY d
+    )) AS best_day
   FROM events
   WHERE properties.$host = 'canivibecodeit.com'
     AND timestamp > now() - INTERVAL 7 DAY
@@ -69,11 +74,11 @@ export async function dashboardStats() {
         GROUP BY app ORDER BY n DESC LIMIT 8
       `),
     ]);
-    const [online, viewsToday, views7d, visitors7d, copies7d] = tiles[0];
+    const [viewsToday, views7d, visitors7d, copies7d, bestDay] = tiles[0];
     dashCache = {
       at: now,
       data: {
-        tiles: { online, viewsToday, views7d, visitors7d, copies7d },
+        tiles: { viewsToday, views7d, visitors7d, copies7d, bestDay },
         byDay: byDay.map(([d, views, visitors]) => ({ d, views, visitors })),
         pages: pages.map(([p, n]) => ({ p, n })),
         agents: agents.map(([a, n]) => ({ a, n })),
@@ -105,10 +110,10 @@ export async function siteStats() {
     });
     if (!res.ok) throw new Error(`posthog ${res.status}`);
     const body = await res.json();
-    const [online, viewsToday, views7d, visitors7d, copies7d] = body.results[0];
+    const [viewsToday, views7d, visitors7d, copies7d, bestDay] = body.results[0];
     cache = {
       at: now,
-      data: { online, viewsToday, views7d, visitors7d, copies7d },
+      data: { viewsToday, views7d, visitors7d, copies7d, bestDay },
     };
   } catch {
     // keep serving the stale value; retry after the TTL

@@ -8,7 +8,7 @@ const s = data?.tiles;
 
 const title = 'Site analytics — Can I Vibecode It?';
 const description =
-  'Live, public analytics for canivibecodeit.com: who is online, what gets viewed, and which prompts get copied into which AI coding agent.';
+  'Live, public analytics for canivibecodeit.com: what gets viewed and which prompts get copied into which AI coding agent.';
 ---
 
 <Base {title} {description}>
@@ -23,10 +23,10 @@ const description =
     </div>
 
     <div class="dash-tiles">
-      <div class="tile" title="Unique visitors with any activity in the last 5 minutes">
-        <span class="t-label"><i class="dot"></i>online now</span>
-        <span class="t-num" data-stat="online">{fmt(s?.online)}</span>
-        <span class="t-def">active in the last 5 min</span>
+      <div class="tile" title="Most page views in a single day, all time">
+        <span class="t-label">peak day</span>
+        <span class="t-num" data-stat="bestDay">{fmt(s?.bestDay)}</span>
+        <span class="t-def">most views in one day</span>
       </div>
       <div class="tile" title="Page views since midnight UTC">
         <span class="t-label">views today</span>

@@ -12,10 +12,10 @@ const fmt = (n) => (n == null ? '—' : Number(n).toLocaleString('en-US'));
       <span class="strip-note">first-party numbers, refreshed every minute</span>
     </span>
     <div class="tiles">
-      <div class="tile" title="Unique visitors with any activity in the last 5 minutes">
-        <span class="t-label"><i class="dot"></i>online now</span>
-        <span class="t-num" data-stat="online">{fmt(s?.online)}</span>
-        <span class="t-def">active in the last 5 min</span>
+      <div class="tile" title="Most page views in a single day, all time">
+        <span class="t-label">peak day</span>
+        <span class="t-num" data-stat="bestDay">{fmt(s?.bestDay)}</span>
+        <span class="t-def">most views in one day</span>
       </div>
       <div class="tile" title="Page views since midnight UTC">
         <span class="t-label">views today</span>
