@@ -5,15 +5,15 @@
   "category": "seo-marketing",
   "subcategory": "AI visibility audit and benchmark",
   "tagline": "Evidence-linked brand visibility benchmarks across OpenAI, Claude, Gemini, and Grok",
-  "priceMonthly": null,
+  "priceMonthly": 9,
   "pricing": {
     "plan": "First benchmark",
     "basis": "one-time per benchmark",
-    "native": "9 USD first benchmark; 15 USD standard single benchmark",
-    "source": "https://100questionsai.com/#pricing",
-    "checkedOn": "2026-07-30",
-    "confidence": "high",
-    "notes": "Official pricing section checked 2026-07-30. There is no subscription; multi-benchmark credit packs are also available."
+    "native": "9 USD",
+    "source": "https://100questionsai.com",
+    "checkedOn": "2026-07-31",
+    "confidence": "medium",
+    "notes": "Homepage lists $9/mo; filled during merge review."
   },
   "verdict": "kinda",
   "verdictConfidence": "high",
