@@ -1,0 +1,60 @@
+{
+  "slug": "mimestream",
+  "name": "Mimestream",
+  "domain": "mimestream.com",
+  "appURL": "https://mimestream.com",
+  "category": "email",
+  "subcategory": "email clients and hosted mail",
+  "tagline": "Build a native Mac Gmail client over standards-based APIs with local cache",
+  "priceMonthly": 4.99,
+  "pricing": {
+    "plan": "Individual",
+    "basis": "monthly",
+    "source": "https://mimestream.com/pricing",
+    "checkedOn": "2026-07-31",
+    "confidence": "high",
+    "notes": "Official Individual monthly price.",
+    "native": "4.99 USD",
+    "kind": "fixed",
+    "currency": "USD"
+  },
+  "verdict": "kinda",
+  "verdictConfidence": "medium",
+  "verdictSummary": "The core loop is buildable, but a dependable replacement becomes a real weekend or multi-day project. For Mimestream, build a native Mac Gmail client over standards-based APIs with local cache. The hard boundary is deep gmail api use, native macos polish, sync reliability, and support, plus mail infrastructure, integrations, and client polish.",
+  "coreLoopDIY": "connect an existing mailbox for build a native Mac Gmail client over standards-based APIs with local cache, index messages locally, provide a fast focused inbox, and send through the account's normal SMTP service",
+  "diyTimeEstimate": "multi-day",
+  "requirements": [
+    "existing IMAP and SMTP mailbox",
+    "OAuth client credentials where required",
+    "desktop keychain access",
+    "local disk space"
+  ],
+  "whatYouLose": [
+    "deep Gmail API use, native macOS polish, sync reliability, and support",
+    "mail hosting and deliverability",
+    "push on every platform",
+    "advanced team collaboration",
+    "provider-specific AI and search"
+  ],
+  "moatType": "mail infrastructure, integrations, and client polish",
+  "replacementScope": "personal desktop mail client",
+  "ongoingBurden": "IMAP quirks, OAuth, MIME, threading, search, attachments, offline sync, notifications, secure storage, and provider changes",
+  "whyPeopleStillPay": "People still pay for Mimestream because an email client can be rebuilt; operating a trusted mail service with excellent deliverability cannot. The recurring cost buys IMAP quirks, OAuth, MIME, threading, search, attachments, offline sync, notifications, secure storage, and provider changes, not just the visible interface.",
+  "priorArt": [
+    {
+      "name": "mailcow",
+      "url": "https://github.com/mailcow/mailcow-dockerized",
+      "desc": "Popular open-source mail-server suite that demonstrates the operational complexity of hosted mail."
+    }
+  ],
+  "relatedSlugs": [
+    "superhuman",
+    "front",
+    "fastmail"
+  ],
+  "pagePriority": 4,
+  "verifiedOneShot": false,
+  "notes": "Editorial comparison targets the Individual plan and a personal desktop mail client DIY substitute. Recheck price before merge.",
+  "prompt": "Build a personal replacement for Mimestream in an empty repository.\nUse Tauri 2, React, TypeScript, SQLite, IMAP, SMTP, and OAuth where available; do not offer alternative stacks.\nThe core loop is: connect an existing mailbox for build a native Mac Gmail client over standards-based APIs with local cache, index messages locally, provide a fast focused inbox, and send through the account's normal SMTP service\nMake the first run work locally with one documented command.\nStore all user data locally by default and make export straightforward.\nPut secrets in .env, ship .env.example, and never commit credentials.\nSupport one IMAP and SMTP account with credentials stored only in the OS keychain.\nIndex headers and message bodies locally with resumable sync and a visible status page.\nImplement standards-based threading, folders, labels, archive, snooze, drafts, and search.\nRender HTML email in a locked-down sandbox and block remote images by default.\nSend multipart messages with attachments and preserve a local copy of every draft.\nAdd export, local cache reset, account reconnect, diagnostics, and safe logging.\nInclude clear empty, loading, success, and recoverable error states.\nAdd input validation, safe filenames, and graceful handling of unavailable APIs.\nWrite focused tests for the core transformation and one end-to-end happy path.\nCreate a README with setup, architecture, permissions, data location, and backup steps.\nDo not add accounts, billing, telemetry, analytics, or a hosted control plane.\nDeliberately leave out running a public mail server.\nDeliberately leave out shared team inboxes and sales workflows.\nDeliberately leave out mobile push services and provider-scale spam filtering.\nFinish by running the tests and listing the exact commands used.",
+  "promptCurated": false
+}

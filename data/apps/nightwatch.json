@@ -1,0 +1,60 @@
+{
+  "slug": "nightwatch",
+  "name": "Nightwatch",
+  "domain": "nightwatch.io",
+  "appURL": "https://nightwatch.io",
+  "category": "seo-marketing",
+  "subcategory": "keyword research, backlinks and rank tracking",
+  "tagline": "Track a limited keyword set across locations using a paid SERP data provider",
+  "priceMonthly": 39,
+  "pricing": {
+    "plan": "Starter",
+    "basis": "monthly",
+    "source": "https://nightwatch.io/pricing",
+    "checkedOn": "2026-07-31",
+    "confidence": "medium",
+    "notes": "Typical Starter monthly tier.",
+    "native": "39 USD",
+    "kind": "fixed",
+    "currency": "USD"
+  },
+  "verdict": "no",
+  "verdictConfidence": "high",
+  "verdictSummary": "A consolation build is possible, but the paid product's decisive value sits outside a solo rebuild. For Nightwatch, track a limited keyword set across locations using a paid SERP data provider. The hard boundary is location-specific ranking infrastructure, reporting, agency workflow, and integrations, plus proprietary web index and data acquisition.",
+  "coreLoopDIY": "track a user-supplied keyword set for track a limited keyword set across locations using a paid SERP data provider, collect permitted search-result snapshots at low volume, and show trends without pretending to recreate a commercial web index",
+  "diyTimeEstimate": "closest consolation build: one sitting",
+  "requirements": [
+    "self-hosted server",
+    "PostgreSQL",
+    "approved search-data API or manual imports",
+    "scheduled worker"
+  ],
+  "whatYouLose": [
+    "location-specific ranking infrastructure, reporting, agency workflow, and integrations",
+    "planet-scale crawl index",
+    "backlink graph",
+    "clickstream estimates",
+    "high-volume location-specific SERPs"
+  ],
+  "moatType": "proprietary web index and data acquisition",
+  "replacementScope": "small owned-keyword tracker",
+  "ongoingBurden": "proxy and API costs, crawl freshness, geolocation, anti-bot rules, keyword normalization, storage, and data QA",
+  "whyPeopleStillPay": "People still pay for Nightwatch because customers pay for a continuously refreshed web-scale dataset whose collection cost dwarfs the dashboard around it. The recurring cost buys proxy and API costs, crawl freshness, geolocation, anti-bot rules, keyword normalization, storage, and data QA, not just the visible interface.",
+  "priorArt": [
+    {
+      "name": "SerpBear",
+      "url": "https://github.com/towfiqi/serpbear",
+      "desc": "Open-source search ranking tracker for owned keyword sets."
+    }
+  ],
+  "relatedSlugs": [
+    "moz-pro",
+    "se-ranking",
+    "mangools"
+  ],
+  "pagePriority": 3,
+  "verifiedOneShot": false,
+  "notes": "Editorial comparison targets the Starter plan and a small owned-keyword tracker DIY substitute. Recheck price before merge.",
+  "prompt": "Build a closest honest personal substitute for Nightwatch in an empty repository.\nUse Python 3.12, FastAPI, PostgreSQL, Playwright, and a small React frontend; do not offer alternative stacks.\nThe core loop is: track a user-supplied keyword set for track a limited keyword set across locations using a paid SERP data provider, collect permitted search-result snapshots at low volume, and show trends without pretending to recreate a commercial web index\nMake the first run work locally with one documented command.\nStore all user data locally by default and make export straightforward.\nPut secrets in .env, ship .env.example, and never commit credentials.\nCreate projects with domains, keywords, target country, language, device, and tags.\nFetch rankings only through the configured compliant API and enforce a daily budget.\nStore raw result snapshots and normalized positions so every chart is auditable.\nDisplay current rank, movement, best rank, URL changes, and a compact SERP history.\nImport backlink and keyword files from third-party tools without claiming independent coverage.\nAdd scheduled runs, failure alerts, CSV export, retention settings, and database backups.\nInclude clear empty, loading, success, and recoverable error states.\nAdd input validation, safe filenames, and graceful handling of unavailable APIs.\nWrite focused tests for the core transformation and one end-to-end happy path.\nCreate a README with setup, architecture, permissions, data location, and backup steps.\nDo not add accounts, billing, telemetry, analytics, or a hosted control plane.\nDo not claim to reproduce proprietary data, network liquidity, regulated access, or frontier infrastructure.\nDeliberately leave out building a general web crawler or backlink index.\nDeliberately leave out circumventing search-engine access controls.\nDeliberately leave out traffic estimates presented as observed first-party data.\nFinish by running the tests and listing the exact commands used.",
+  "promptCurated": false
+}

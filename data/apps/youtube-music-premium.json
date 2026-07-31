@@ -1,0 +1,60 @@
+{
+  "slug": "youtube-music-premium",
+  "name": "YouTube Music Premium",
+  "domain": "youtube.com",
+  "appURL": "https://youtube.com",
+  "category": "audio",
+  "subcategory": "music services and creator audio tools",
+  "tagline": "Organize and stream user-owned audio without accessing YouTube's licensed catalog",
+  "priceMonthly": 10.99,
+  "pricing": {
+    "plan": "Individual",
+    "basis": "monthly",
+    "source": "https://youtube.com/musicpremium",
+    "checkedOn": "2026-07-31",
+    "confidence": "medium",
+    "notes": "Typical US monthly Individual price; current package should be rechecked.",
+    "native": "10.99 USD",
+    "kind": "fixed",
+    "currency": "USD"
+  },
+  "verdict": "no",
+  "verdictConfidence": "high",
+  "verdictSummary": "A consolation build is possible, but the paid product's decisive value sits outside a solo rebuild. For YouTube Music Premium, organize and stream user-owned audio without accessing YouTube's licensed catalog. The hard boundary is youtube catalog, videos, rights, recommendations, identity, and global delivery, plus licensed content, rights, and distribution network.",
+  "coreLoopDIY": "organize legally owned audio or user-created tracks for organize and stream user-owned audio without accessing YouTube's licensed catalog, analyze local files, and provide a private playback or production workflow",
+  "diyTimeEstimate": "closest consolation build: one sitting",
+  "requirements": [
+    "legally owned local audio files",
+    "ffmpeg",
+    "local storage",
+    "optional audio-analysis models"
+  ],
+  "whatYouLose": [
+    "YouTube catalog, videos, rights, recommendations, identity, and global delivery",
+    "licensed music catalog",
+    "royalty and distribution relationships",
+    "global streaming infrastructure",
+    "artist network and recommendations"
+  ],
+  "moatType": "licensed content, rights, and distribution network",
+  "replacementScope": "personal library or creator utility",
+  "ongoingBurden": "catalog licensing, royalties, identity, content delivery, moderation, recommendations, payouts, codecs, and rights disputes",
+  "whyPeopleStillPay": "People still pay for YouTube Music Premium because the product is the catalog, rights chain, and distribution network; a player or processing tool is only the visible edge. The recurring cost buys catalog licensing, royalties, identity, content delivery, moderation, recommendations, payouts, codecs, and rights disputes, not just the visible interface.",
+  "priorArt": [
+    {
+      "name": "Navidrome",
+      "url": "https://github.com/navidrome/navidrome",
+      "desc": "Active open-source personal music server for legally owned libraries."
+    }
+  ],
+  "relatedSlugs": [
+    "spotify-premium",
+    "apple-music",
+    "audible-premium-plus"
+  ],
+  "pagePriority": 5,
+  "verifiedOneShot": false,
+  "notes": "Editorial comparison targets the Individual plan and a personal library or creator utility DIY substitute. Recheck price before merge.",
+  "prompt": "Build a closest honest personal substitute for YouTube Music Premium in an empty repository.\nUse Python 3.12, FastAPI, SQLite, ffmpeg, and a local web interface; do not offer alternative stacks.\nThe core loop is: organize legally owned audio or user-created tracks for organize and stream user-owned audio without accessing YouTube's licensed catalog, analyze local files, and provide a private playback or production workflow\nMake the first run work locally with one documented command.\nStore all user data locally by default and make export straightforward.\nPut secrets in .env, ship .env.example, and never commit credentials.\nIndex only user-selected folders and preserve source audio without modification.\nRead tags and artwork, calculate loudness and waveform data, and detect exact duplicates by hash.\nProvide albums, artists, playlists, search, queue, favorites, and resumable local playback.\nAdd optional creator tools for trim, normalize, split stems through a local model, and export new files.\nKeep all rights and source information attached to imported tracks and display it during export.\nDocument that the application does not provide music, licensing, distribution, or royalty collection.\nInclude clear empty, loading, success, and recoverable error states.\nAdd input validation, safe filenames, and graceful handling of unavailable APIs.\nWrite focused tests for the core transformation and one end-to-end happy path.\nCreate a README with setup, architecture, permissions, data location, and backup steps.\nDo not add accounts, billing, telemetry, analytics, or a hosted control plane.\nDo not claim to reproduce proprietary data, network liquidity, regulated access, or frontier infrastructure.\nDeliberately leave out copyrighted catalog acquisition or sharing.\nDeliberately leave out streaming-service circumvention.\nDeliberately leave out royalty accounting, label distribution, and global content delivery.\nFinish by running the tests and listing the exact commands used.",
+  "promptCurated": false
+}

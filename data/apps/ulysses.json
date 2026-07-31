@@ -1,0 +1,59 @@
+{
+  "slug": "ulysses",
+  "name": "Ulysses",
+  "domain": "ulysses.app",
+  "appURL": "https://ulysses.app",
+  "category": "writing-assistant",
+  "subcategory": "grammar, editing and long-form writing",
+  "tagline": "Write in a focused Markdown library, organize sheets, set goals, and export polished documents",
+  "priceMonthly": 5.99,
+  "pricing": {
+    "plan": "Personal",
+    "basis": "monthly",
+    "source": "https://ulysses.app/pricing",
+    "checkedOn": "2026-07-31",
+    "confidence": "high",
+    "notes": "Official monthly option; annual billing has a lower monthly equivalent.",
+    "native": "5.99 USD",
+    "kind": "fixed",
+    "currency": "USD"
+  },
+  "verdict": "yes",
+  "verdictConfidence": "high",
+  "verdictSummary": "The core loop is small enough for a capable coding agent to produce a useful local version in one sitting. For Ulysses, write in a focused Markdown library, organize sheets, set goals, and export polished documents. The hard boundary is native apple polish, icloud sync, mobile apps, and publishing integrations, plus polish, integrations, and proprietary language models.",
+  "coreLoopDIY": "open local text or Markdown, apply focused editing passes for write in a focused Markdown library, organize sheets, set goals, and export polished documents, show a diff, and save or export without uploading the document",
+  "diyTimeEstimate": "one sitting",
+  "requirements": [
+    "macOS, Windows, or Linux",
+    "local files",
+    "optional OpenAI or Anthropic API key for semantic rewrites"
+  ],
+  "whatYouLose": [
+    "native Apple polish, iCloud sync, mobile apps, and publishing integrations",
+    "cross-device sync",
+    "large proprietary style models",
+    "browser and office-suite extensions",
+    "team style guides"
+  ],
+  "moatType": "polish, integrations, and proprietary language models",
+  "replacementScope": "personal local editor",
+  "ongoingBurden": "model quality, extension compatibility, dictionaries, releases, and sync",
+  "whyPeopleStillPay": "People still pay for Ulysses because the paid tool is already present everywhere they write and its suggestions have been tuned across millions of documents. The recurring cost buys model quality, extension compatibility, dictionaries, releases, and sync, not just the visible interface.",
+  "priorArt": [
+    {
+      "name": "LanguageTool",
+      "url": "https://github.com/languagetool-org/languagetool",
+      "desc": "Mature open-source grammar and style checker with desktop and server components."
+    }
+  ],
+  "relatedSlugs": [
+    "sudowrite",
+    "prowritingaid",
+    "languagetool"
+  ],
+  "pagePriority": 4,
+  "verifiedOneShot": false,
+  "notes": "Editorial comparison targets the Personal plan and a personal local editor DIY substitute. Recheck price before merge.",
+  "prompt": "Build a personal replacement for Ulysses in an empty repository.\nUse Tauri 2, React, TypeScript, SQLite, and a small Rust filesystem layer; do not offer alternative stacks.\nThe core loop is: open local text or Markdown, apply focused editing passes for write in a focused Markdown library, organize sheets, set goals, and export polished documents, show a diff, and save or export without uploading the document\nMake the first run work locally with one documented command.\nStore all user data locally by default and make export straightforward.\nPut secrets in .env, ship .env.example, and never commit credentials.\nCreate a three-pane editor with source text, suggestion list, and accepted-result preview.\nImplement deterministic checks for repeated words, sentence length, passive constructions, and typography.\nAdd an optional API-backed rewrite action that sends only the selected passage.\nShow every change as an accept-or-reject diff and support undo.\nImport and export .txt and .md while preserving headings and lists.\nPersist user rules, ignored terms, and recent documents in SQLite.\nInclude clear empty, loading, success, and recoverable error states.\nAdd input validation, safe filenames, and graceful handling of unavailable APIs.\nWrite focused tests for the core transformation and one end-to-end happy path.\nCreate a README with setup, architecture, permissions, data location, and backup steps.\nDo not add accounts, billing, telemetry, analytics, or a hosted control plane.\nDeliberately leave out a browser extension.\nDeliberately leave out Office or Google Docs plugins.\nDeliberately leave out collaborative editing and cloud sync.\nFinish by running the tests and listing the exact commands used.",
+  "promptCurated": false
+}

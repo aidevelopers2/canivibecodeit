@@ -1,0 +1,59 @@
+{
+  "slug": "pocketsmith",
+  "name": "PocketSmith",
+  "domain": "pocketsmith.com",
+  "appURL": "https://pocketsmith.com",
+  "category": "personal-finance",
+  "subcategory": "budgeting, invoicing and small-business finance",
+  "tagline": "Import transactions, categorize them, and forecast cash flow on a calendar",
+  "priceMonthly": 9.95,
+  "pricing": {
+    "plan": "Foundation",
+    "basis": "monthly",
+    "source": "https://pocketsmith.com/plans",
+    "checkedOn": "2026-07-31",
+    "confidence": "medium",
+    "notes": "Typical Foundation monthly price.",
+    "native": "9.95 USD",
+    "kind": "fixed",
+    "currency": "USD"
+  },
+  "verdict": "kinda",
+  "verdictConfidence": "medium",
+  "verdictSummary": "The core loop is buildable, but a dependable replacement becomes a real weekend or multi-day project. For PocketSmith, import transactions, categorize them, and forecast cash flow on a calendar. The hard boundary is bank feeds, multi-currency data, forecasting depth, sync, and support, plus financial integrations, compliance, and trust.",
+  "coreLoopDIY": "import transactions or invoices for import transactions, categorize them, and forecast cash flow on a calendar, categorize them with transparent rules, reconcile balances, and export clean reports without moving money",
+  "diyTimeEstimate": "multi-day",
+  "requirements": [
+    "CSV or OFX exports from financial institutions",
+    "local encrypted storage",
+    "optional exchange-rate API key"
+  ],
+  "whatYouLose": [
+    "bank feeds, multi-currency data, forecasting depth, sync, and support",
+    "direct bank feeds",
+    "tax filing guarantees",
+    "payroll and payments",
+    "accountant ecosystem and support"
+  ],
+  "moatType": "financial integrations, compliance, and trust",
+  "replacementScope": "personal ledger or simple invoicing tool",
+  "ongoingBurden": "import normalization, reconciliation, rule drift, exchange rates, backups, audit trails, tax changes, bank APIs, and support",
+  "whyPeopleStillPay": "People still pay for PocketSmith because people pay because accurate money records and dependable institution connections are worth more than the visible charts. The recurring cost buys import normalization, reconciliation, rule drift, exchange rates, backups, audit trails, tax changes, bank APIs, and support, not just the visible interface.",
+  "priorArt": [
+    {
+      "name": "Actual Budget",
+      "url": "https://github.com/actualbudget/actual",
+      "desc": "Active local-first open-source personal finance application."
+    }
+  ],
+  "relatedSlugs": [
+    "rocket-money",
+    "quicken-simplifi",
+    "tiller-money"
+  ],
+  "pagePriority": 4,
+  "verifiedOneShot": false,
+  "notes": "Editorial comparison targets the Foundation plan and a personal ledger or simple invoicing tool DIY substitute. Recheck price before merge.",
+  "prompt": "Build a personal replacement for PocketSmith in an empty repository.\nUse Next.js 15, TypeScript, SQLite, Drizzle ORM, and local-first encryption; do not offer alternative stacks.\nThe core loop is: import transactions or invoices for import transactions, categorize them, and forecast cash flow on a calendar, categorize them with transparent rules, reconcile balances, and export clean reports without moving money\nMake the first run work locally with one documented command.\nStore all user data locally by default and make export straightforward.\nPut secrets in .env, ship .env.example, and never commit credentials.\nSupport CSV and OFX import with saved column mappings and duplicate detection.\nImplement accounts, transactions, transfers, categories, payees, notes, and split transactions.\nAdd deterministic categorization rules whose matches can be inspected and undone.\nProvide reconciliation, monthly budget, cash-flow, net-worth, and export views.\nKeep an immutable import log and require explicit confirmation before destructive changes.\nEncrypt local data, create automatic backups, and document restore on a fresh machine.\nInclude clear empty, loading, success, and recoverable error states.\nAdd input validation, safe filenames, and graceful handling of unavailable APIs.\nWrite focused tests for the core transformation and one end-to-end happy path.\nCreate a README with setup, architecture, permissions, data location, and backup steps.\nDo not add accounts, billing, telemetry, analytics, or a hosted control plane.\nDeliberately leave out initiating payments or moving money.\nDeliberately leave out tax, payroll, or accounting compliance guarantees.\nDeliberately leave out screen-scraped bank access and commercial institution aggregation.\nFinish by running the tests and listing the exact commands used.",
+  "promptCurated": false
+}

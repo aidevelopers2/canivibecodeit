@@ -1,0 +1,60 @@
+{
+  "slug": "screen-studio",
+  "name": "Screen Studio",
+  "domain": "screen.studio",
+  "appURL": "https://screen.studio",
+  "category": "screen-recording",
+  "subcategory": "screen recording, walkthroughs and product demos",
+  "tagline": "Record a Mac screen and automatically apply cursor zoom, padding, and smooth framing",
+  "priceMonthly": null,
+  "pricing": {
+    "plan": "Lifetime license",
+    "basis": "one-time",
+    "source": "https://screen.studio/pricing",
+    "checkedOn": "2026-07-31",
+    "confidence": "high",
+    "notes": "Sold primarily as a one-time license; priceMonthly is null by design.",
+    "native": "one-time",
+    "kind": "one-time",
+    "currency": "USD"
+  },
+  "verdict": "yes",
+  "verdictConfidence": "high",
+  "verdictSummary": "The core loop is small enough for a capable coding agent to produce a useful local version in one sitting. For Screen Studio, record a Mac screen and automatically apply cursor zoom, padding, and smooth framing. The hard boundary is exceptional macos capture polish, motion design, and ongoing compatibility, plus capture polish, hosting, and collaboration.",
+  "coreLoopDIY": "capture a screen or window with microphone audio, trim the result, annotate key moments for record a Mac screen and automatically apply cursor zoom, padding, and smooth framing, and export a shareable local video",
+  "diyTimeEstimate": "one sitting",
+  "requirements": [
+    "macOS or Windows screen-recording permission",
+    "microphone permission",
+    "ffmpeg",
+    "local disk space"
+  ],
+  "whatYouLose": [
+    "exceptional macOS capture polish, motion design, and ongoing compatibility",
+    "instant hosted sharing",
+    "viewer analytics",
+    "team libraries",
+    "cross-device capture"
+  ],
+  "moatType": "capture polish, hosting, and collaboration",
+  "replacementScope": "personal desktop recorder",
+  "ongoingBurden": "OS permissions, codecs, rendering performance, uploads, storage, links, and viewer analytics",
+  "whyPeopleStillPay": "People still pay for Screen Studio because the recording itself is easy; the subscription removes upload, transcoding, sharing, organization, and support work. The recurring cost buys OS permissions, codecs, rendering performance, uploads, storage, links, and viewer analytics, not just the visible interface.",
+  "priorArt": [
+    {
+      "name": "Cap",
+      "url": "https://github.com/CapSoftware/Cap",
+      "desc": "Open-source screen recording and sharing product with modern desktop architecture."
+    }
+  ],
+  "relatedSlugs": [
+    "cleanshot-x",
+    "scribe",
+    "vidyard"
+  ],
+  "pagePriority": 5,
+  "verifiedOneShot": false,
+  "notes": "Editorial comparison targets the Lifetime license plan and a personal desktop recorder DIY substitute. Recheck price before merge.",
+  "prompt": "Build a personal replacement for Screen Studio in an empty repository.\nUse Tauri 2, React, TypeScript, ffmpeg, and SQLite; do not offer alternative stacks.\nThe core loop is: capture a screen or window with microphone audio, trim the result, annotate key moments for record a Mac screen and automatically apply cursor zoom, padding, and smooth framing, and export a shareable local video\nMake the first run work locally with one documented command.\nStore all user data locally by default and make export straightforward.\nPut secrets in .env, ship .env.example, and never commit credentials.\nOffer screen, window, or region capture plus optional microphone audio.\nShow an always-visible recording timer and make stop available from the tray.\nCreate a non-destructive trim view with crop, zoom, cursor highlight, and text callouts.\nRender locally through ffmpeg with sensible H.264 and WebM presets.\nGenerate a poster frame, transcript, and Markdown summary beside each video.\nProvide copy-file-path and reveal-in-folder actions instead of mandatory cloud upload.\nInclude clear empty, loading, success, and recoverable error states.\nAdd input validation, safe filenames, and graceful handling of unavailable APIs.\nWrite focused tests for the core transformation and one end-to-end happy path.\nCreate a README with setup, architecture, permissions, data location, and backup steps.\nDo not add accounts, billing, telemetry, analytics, or a hosted control plane.\nDeliberately leave out public cloud hosting.\nDeliberately leave out viewer identity and engagement analytics.\nDeliberately leave out enterprise workspaces and SSO.\nFinish by running the tests and listing the exact commands used.",
+  "promptCurated": false
+}

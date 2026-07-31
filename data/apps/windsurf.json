@@ -1,0 +1,60 @@
+{
+  "slug": "windsurf",
+  "name": "Windsurf",
+  "domain": "windsurf.com",
+  "appURL": "https://windsurf.com",
+  "category": "dev-tools",
+  "subcategory": "AI coding agents and developer workspaces",
+  "tagline": "Build a VS Code extension that proposes and applies reviewed multi-file patches",
+  "priceMonthly": 15,
+  "pricing": {
+    "plan": "Pro",
+    "basis": "monthly",
+    "source": "https://windsurf.com/pricing",
+    "checkedOn": "2026-07-31",
+    "confidence": "medium",
+    "notes": "Typical Pro monthly tier; packaging can change rapidly.",
+    "native": "15 USD",
+    "kind": "fixed",
+    "currency": "USD"
+  },
+  "verdict": "no",
+  "verdictConfidence": "high",
+  "verdictSummary": "A consolation build is possible, but the paid product's decisive value sits outside a solo rebuild. For Windsurf, build a VS Code extension that proposes and applies reviewed multi-file patches. The hard boundary is proprietary coding models, agent context, ide integration, and hosted inference, plus frontier models, context infrastructure, and execution safety.",
+  "coreLoopDIY": "provide a bounded coding assistant for build a VS Code extension that proposes and applies reviewed multi-file patches, index the current repository, propose patches, run approved commands, and preserve an auditable session log",
+  "diyTimeEstimate": "closest consolation build: one sitting",
+  "requirements": [
+    "VS Code",
+    "OpenAI or Anthropic API key",
+    "Git repository",
+    "local command sandbox"
+  ],
+  "whatYouLose": [
+    "proprietary coding models, agent context, IDE integration, and hosted inference",
+    "frontier proprietary model",
+    "large-scale code retrieval",
+    "cloud sandbox fleet",
+    "enterprise policy and support"
+  ],
+  "moatType": "frontier models, context infrastructure, and execution safety",
+  "replacementScope": "single-repository coding assistant",
+  "ongoingBurden": "model changes, indexing, prompt injection, tool permissions, sandboxing, evaluation, telemetry choices, and IDE compatibility",
+  "whyPeopleStillPay": "People still pay for Windsurf because the UI can be copied, but high-quality code models, context ranking, safe execution, and constant evaluation are the product. The recurring cost buys model changes, indexing, prompt injection, tool permissions, sandboxing, evaluation, telemetry choices, and IDE compatibility, not just the visible interface.",
+  "priorArt": [
+    {
+      "name": "Continue",
+      "url": "https://github.com/continuedev/continue",
+      "desc": "Active open-source coding-assistant framework for IDEs and multiple model providers."
+    }
+  ],
+  "relatedSlugs": [
+    "replit",
+    "bolt-new",
+    "lovable"
+  ],
+  "pagePriority": 5,
+  "verifiedOneShot": false,
+  "notes": "Editorial comparison targets the Pro plan and a single-repository coding assistant DIY substitute. Recheck price before merge.",
+  "prompt": "Build a closest honest personal substitute for Windsurf in an empty repository.\nUse TypeScript, Node.js 22, a VS Code extension, SQLite, and one user-supplied model API; do not offer alternative stacks.\nThe core loop is: provide a bounded coding assistant for build a VS Code extension that proposes and applies reviewed multi-file patches, index the current repository, propose patches, run approved commands, and preserve an auditable session log\nMake the first run work locally with one documented command.\nStore all user data locally by default and make export straightforward.\nPut secrets in .env, ship .env.example, and never commit credentials.\nCreate a VS Code sidebar with chat, selected-code actions, repository search, and a patch preview.\nIndex only the open repository and respect .gitignore plus a separate assistant ignore file.\nRequire explicit approval before reading outside the workspace or running any command.\nRepresent edits as unified diffs with accept, reject, partial apply, undo, and Git status checks.\nCapture tool calls, model requests, command output, and patch decisions in a local session log.\nAdd token and cost estimates, provider errors, cancellation, tests, and an offline data-flow diagram.\nInclude clear empty, loading, success, and recoverable error states.\nAdd input validation, safe filenames, and graceful handling of unavailable APIs.\nWrite focused tests for the core transformation and one end-to-end happy path.\nCreate a README with setup, architecture, permissions, data location, and backup steps.\nDo not add accounts, billing, telemetry, analytics, or a hosted control plane.\nDo not claim to reproduce proprietary data, network liquidity, regulated access, or frontier infrastructure.\nDeliberately leave out training or reproducing a frontier coding model.\nDeliberately leave out unattended command execution outside a sandbox.\nDeliberately leave out cloud workspaces, team policy, and enterprise support.\nFinish by running the tests and listing the exact commands used.",
+  "promptCurated": false
+}

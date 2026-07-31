@@ -1,0 +1,59 @@
+{
+  "slug": "keyboard-maestro",
+  "name": "Keyboard Maestro",
+  "domain": "keyboardmaestro.com",
+  "appURL": "https://keyboardmaestro.com",
+  "category": "productivity-utilities",
+  "subcategory": "macOS automation and desktop utilities",
+  "tagline": "Create user-approved desktop macros from triggers and deterministic actions",
+  "priceMonthly": null,
+  "pricing": {
+    "plan": "Keyboard Maestro",
+    "basis": "one-time",
+    "source": "https://keyboardmaestro.com/main/",
+    "checkedOn": "2026-07-31",
+    "confidence": "high",
+    "notes": "Sold as a one-time Mac licence.",
+    "native": "one-time",
+    "kind": "one-time",
+    "currency": "USD"
+  },
+  "verdict": "yes",
+  "verdictConfidence": "high",
+  "verdictSummary": "The core loop is small enough for a capable coding agent to produce a useful local version in one sitting. For Keyboard Maestro, create user-approved desktop macros from triggers and deterministic actions. The hard boundary is deep macos automation, action library, reliability, and long-term compatibility, plus os integration polish and maintenance.",
+  "coreLoopDIY": "provide one focused macOS utility for create user-approved desktop macros from triggers and deterministic actions, expose keyboard-first controls, and store settings locally",
+  "diyTimeEstimate": "one sitting",
+  "requirements": [
+    "macOS 14 or later",
+    "Xcode",
+    "only the permissions required by the selected feature"
+  ],
+  "whatYouLose": [
+    "deep macOS automation, action library, reliability, and long-term compatibility",
+    "years of OS-version edge cases",
+    "large extension ecosystem",
+    "cross-device sync",
+    "commercial support and rapid compatibility fixes"
+  ],
+  "moatType": "OS integration polish and maintenance",
+  "replacementScope": "single-purpose local Mac app",
+  "ongoingBurden": "permissions, accessibility APIs, sandboxing, signing, notarization, OS regressions, updates, backups, and support",
+  "whyPeopleStillPay": "People still pay for Keyboard Maestro because small utilities are technically reproducible, but customers pay for polish and immediate fixes when an OS update breaks a daily habit. The recurring cost buys permissions, accessibility APIs, sandboxing, signing, notarization, OS regressions, updates, backups, and support, not just the visible interface.",
+  "priorArt": [
+    {
+      "name": "Espanso",
+      "url": "https://github.com/espanso/espanso",
+      "desc": "Active open-source cross-platform text expansion utility with system integration."
+    }
+  ],
+  "relatedSlugs": [
+    "alfred-powerpack",
+    "setapp",
+    "bartender"
+  ],
+  "pagePriority": 5,
+  "verifiedOneShot": false,
+  "notes": "Editorial comparison targets the Keyboard Maestro plan and a single-purpose local Mac app DIY substitute. Recheck price before merge.",
+  "prompt": "Build a personal replacement for Keyboard Maestro in an empty repository.\nUse Swift 6, SwiftUI, AppKit where necessary, SQLite, and the macOS Keychain; do not offer alternative stacks.\nThe core loop is: provide one focused macOS utility for create user-approved desktop macros from triggers and deterministic actions, expose keyboard-first controls, and store settings locally\nMake the first run work locally with one documented command.\nStore all user data locally by default and make export straightforward.\nPut secrets in .env, ship .env.example, and never commit credentials.\nCreate a menu-bar app with a searchable command window and global hotkey.\nImplement only the primary feature and one settings screen instead of a plugin platform.\nRequest permissions just in time and explain why each is needed before opening System Settings.\nStore configuration locally, support export or import, and never capture unrelated user content.\nAdd launch-at-login, update-check opt-in, diagnostics export, and a complete uninstall note.\nWrite unit tests for transformation logic and one UI test for the core keyboard workflow.\nInclude clear empty, loading, success, and recoverable error states.\nAdd input validation, safe filenames, and graceful handling of unavailable APIs.\nWrite focused tests for the core transformation and one end-to-end happy path.\nCreate a README with setup, architecture, permissions, data location, and backup steps.\nDo not add accounts, billing, telemetry, analytics, or a hosted control plane.\nDeliberately leave out a third-party extension marketplace.\nDeliberately leave out cloud accounts and cross-device sync.\nDeliberately leave out broad automation that executes untrusted scripts.\nFinish by running the tests and listing the exact commands used.",
+  "promptCurated": false
+}

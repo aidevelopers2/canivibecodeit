@@ -1,0 +1,60 @@
+{
+  "slug": "bigin",
+  "name": "Bigin",
+  "domain": "bigin.com",
+  "appURL": "https://bigin.com",
+  "category": "crm",
+  "subcategory": "contacts, relationships and sales pipelines",
+  "tagline": "Run a small-business pipeline with contacts, activities, and simple workflows",
+  "priceMonthly": 9,
+  "pricing": {
+    "plan": "Express",
+    "basis": "monthly per user",
+    "source": "https://bigin.com/pricing.html",
+    "checkedOn": "2026-07-31",
+    "confidence": "high",
+    "notes": "Official Express monthly seat price.",
+    "native": "9 USD",
+    "kind": "fixed",
+    "currency": "USD"
+  },
+  "verdict": "kinda",
+  "verdictConfidence": "medium",
+  "verdictSummary": "The core loop is buildable, but a dependable replacement becomes a real weekend or multi-day project. For Bigin, run a small-business pipeline with contacts, activities, and simple workflows. The hard boundary is zoho ecosystem, telephony, forms, integrations, and mobile apps, plus integrations, data quality, and workflow lock-in.",
+  "coreLoopDIY": "manage contacts and companies for run a small-business pipeline with contacts, activities, and simple workflows, move opportunities through a pipeline, log interactions, and surface the next action",
+  "diyTimeEstimate": "multi-day",
+  "requirements": [
+    "Docker",
+    "PostgreSQL",
+    "self-hosted server",
+    "optional email API credentials"
+  ],
+  "whatYouLose": [
+    "Zoho ecosystem, telephony, forms, integrations, and mobile apps",
+    "automatic email and calendar capture",
+    "data enrichment",
+    "large integration ecosystem",
+    "enterprise reporting"
+  ],
+  "moatType": "integrations, data quality, and workflow lock-in",
+  "replacementScope": "personal or very small-team CRM",
+  "ongoingBurden": "deduplication, permissions, imports, sync, enrichment, email capture, automations, backups, and audit history",
+  "whyPeopleStillPay": "People still pay for Bigin because CRM value compounds as the system becomes the shared memory of every customer interaction and embeds itself in the rest of the stack. The recurring cost buys deduplication, permissions, imports, sync, enrichment, email capture, automations, backups, and audit history, not just the visible interface.",
+  "priorArt": [
+    {
+      "name": "Twenty",
+      "url": "https://github.com/twentyhq/twenty",
+      "desc": "Active open-source modern CRM with extensible data models."
+    }
+  ],
+  "relatedSlugs": [
+    "pipedrive",
+    "close-crm",
+    "attio"
+  ],
+  "pagePriority": 3,
+  "verifiedOneShot": false,
+  "notes": "Editorial comparison targets the Express plan and a personal or very small-team CRM DIY substitute. Recheck price before merge.",
+  "prompt": "Build a personal replacement for Bigin in an empty repository.\nUse Next.js 15, TypeScript, PostgreSQL, Drizzle ORM, and Docker Compose; do not offer alternative stacks.\nThe core loop is: manage contacts and companies for run a small-business pipeline with contacts, activities, and simple workflows, move opportunities through a pipeline, log interactions, and surface the next action\nMake the first run work locally with one documented command.\nStore all user data locally by default and make export straightforward.\nPut secrets in .env, ship .env.example, and never commit credentials.\nCreate contacts, companies, opportunities, notes, tasks, and configurable pipeline stages.\nAdd fast global search, duplicate detection, merge, CSV import, and CSV export.\nProvide a chronological interaction timeline with manual email and meeting logging.\nImplement saved views, filters, owner assignment, and a next-action dashboard.\nAdd role-based access, an immutable activity log, backups, and a recovery command.\nSeed a realistic demo workspace and document field mapping for imports.\nInclude clear empty, loading, success, and recoverable error states.\nAdd input validation, safe filenames, and graceful handling of unavailable APIs.\nWrite focused tests for the core transformation and one end-to-end happy path.\nCreate a README with setup, architecture, permissions, data location, and backup steps.\nDo not add accounts, billing, telemetry, analytics, or a hosted control plane.\nDeliberately leave out automatic mailbox ingestion.\nDeliberately leave out commercial enrichment databases.\nDeliberately leave out enterprise forecasting, integrations, and compliance.\nFinish by running the tests and listing the exact commands used.",
+  "promptCurated": false
+}

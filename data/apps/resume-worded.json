@@ -1,0 +1,59 @@
+{
+  "slug": "resume-worded",
+  "name": "Resume Worded",
+  "domain": "resumeworded.com",
+  "appURL": "https://resumeworded.com",
+  "category": "career",
+  "subcategory": "resumes, job tracking and interview practice",
+  "tagline": "Score a resume against transparent rules and a user-supplied job description",
+  "priceMonthly": 49,
+  "pricing": {
+    "plan": "Pro",
+    "basis": "monthly",
+    "source": "https://resumeworded.com/pricing",
+    "checkedOn": "2026-07-31",
+    "confidence": "medium",
+    "notes": "Typical Pro monthly rate.",
+    "native": "49 USD",
+    "kind": "fixed",
+    "currency": "USD"
+  },
+  "verdict": "kinda",
+  "verdictConfidence": "medium",
+  "verdictSummary": "The core loop is buildable, but a dependable replacement becomes a real weekend or multi-day project. For Resume Worded, score a resume against transparent rules and a user-supplied job description. The hard boundary is proprietary benchmarks, recruiter-authored feedback, examples, and workflow, plus data, distribution, and coaching.",
+  "coreLoopDIY": "organize a job search for score a resume against transparent rules and a user-supplied job description, tailor user-authored materials against a supplied role, and keep every claim traceable to the user's own evidence",
+  "diyTimeEstimate": "one sitting",
+  "requirements": [
+    "local browser",
+    "resume and job-description files",
+    "optional OpenAI API key"
+  ],
+  "whatYouLose": [
+    "proprietary benchmarks, recruiter-authored feedback, examples, and workflow",
+    "proprietary recruiter data",
+    "job-board distribution",
+    "human coaching",
+    "automated application networks"
+  ],
+  "moatType": "data, distribution, and coaching",
+  "replacementScope": "personal job-search workspace",
+  "ongoingBurden": "document parsing, truthful claim handling, job-source changes, browser automation rules, privacy, model drift, and user review",
+  "whyPeopleStillPay": "People still pay for Resume Worded because people pay for convenience, curated guidance, and distribution; the personal tracking and drafting loop is highly buildable. The recurring cost buys document parsing, truthful claim handling, job-source changes, browser automation rules, privacy, model drift, and user review, not just the visible interface.",
+  "priorArt": [
+    {
+      "name": "Reactive Resume",
+      "url": "https://github.com/AmruthPillai/Reactive-Resume",
+      "desc": "Active open-source resume builder with structured data and PDF export."
+    }
+  ],
+  "relatedSlugs": [
+    "teal-plus",
+    "jobscan",
+    "huntr"
+  ],
+  "pagePriority": 4,
+  "verifiedOneShot": false,
+  "notes": "Editorial comparison targets the Pro plan and a personal job-search workspace DIY substitute. Recheck price before merge.",
+  "prompt": "Build a personal replacement for Resume Worded in an empty repository.\nUse Next.js 15, TypeScript, SQLite, Drizzle ORM, and an optional OpenAI API; do not offer alternative stacks.\nThe core loop is: organize a job search for score a resume against transparent rules and a user-supplied job description, tailor user-authored materials against a supplied role, and keep every claim traceable to the user's own evidence\nMake the first run work locally with one documented command.\nStore all user data locally by default and make export straightforward.\nPut secrets in .env, ship .env.example, and never commit credentials.\nCreate a structured evidence bank for roles, projects, skills, dates, metrics, and source notes.\nImport a job description and highlight requirements without inventing missing experience.\nGenerate a tailored resume variant only from approved evidence and show the source for each bullet.\nAdd application stages, contacts, tasks, dates, notes, documents, and a follow-up view.\nProvide interview-question practice with answer notes and a self-review rubric, not deceptive live assistance.\nExport resume data as JSON and PDF plus the application tracker as CSV.\nInclude clear empty, loading, success, and recoverable error states.\nAdd input validation, safe filenames, and graceful handling of unavailable APIs.\nWrite focused tests for the core transformation and one end-to-end happy path.\nCreate a README with setup, architecture, permissions, data location, and backup steps.\nDo not add accounts, billing, telemetry, analytics, or a hosted control plane.\nDeliberately leave out automatic mass application.\nDeliberately leave out fabricated qualifications or deceptive interview assistance.\nDeliberately leave out proprietary recruiter databases and guaranteed job outcomes.\nFinish by running the tests and listing the exact commands used.",
+  "promptCurated": false
+}

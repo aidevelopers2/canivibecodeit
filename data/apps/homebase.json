@@ -1,0 +1,60 @@
+{
+  "slug": "homebase",
+  "name": "Homebase",
+  "domain": "joinhomebase.com",
+  "appURL": "https://joinhomebase.com",
+  "category": "hr",
+  "subcategory": "HR, recruiting, payroll and workforce operations",
+  "tagline": "Build staff schedules and time-off workflows without payroll or hiring services",
+  "priceMonthly": 24.95,
+  "pricing": {
+    "plan": "Essentials",
+    "basis": "monthly per location",
+    "source": "https://joinhomebase.com/pricing",
+    "checkedOn": "2026-07-31",
+    "confidence": "high",
+    "notes": "Official Essentials monthly location price.",
+    "native": "24.95 USD",
+    "kind": "fixed",
+    "currency": "USD"
+  },
+  "verdict": "no",
+  "verdictConfidence": "high",
+  "verdictSummary": "A consolation build is possible, but the paid product's decisive value sits outside a solo rebuild. For Homebase, build staff schedules and time-off workflows without payroll or hiring services. The hard boundary is time clocks, payroll, messaging, labor-law tools, hiring, and support, plus compliance, payroll, and regulated integrations.",
+  "coreLoopDIY": "track non-sensitive people operations for build staff schedules and time-off workflows without payroll or hiring services, maintain approvals and records, and export data without calculating payroll or making employment decisions",
+  "diyTimeEstimate": "closest consolation build: one sitting",
+  "requirements": [
+    "PostgreSQL",
+    "private self-hosted deployment",
+    "strict admin access",
+    "documented retention policy"
+  ],
+  "whatYouLose": [
+    "time clocks, payroll, messaging, labor-law tools, hiring, and support",
+    "payroll rails",
+    "tax and labor-law compliance",
+    "benefits integrations",
+    "identity checks and global employment infrastructure"
+  ],
+  "moatType": "compliance, payroll, and regulated integrations",
+  "replacementScope": "internal records tracker without payroll",
+  "ongoingBurden": "sensitive data, access, retention, audit, payroll calculations, filings, benefits, employment law, incident response, and support",
+  "whyPeopleStillPay": "People still pay for Homebase because HR platforms survive because mistakes affect pay, benefits, immigration, and legal obligations, not because forms are difficult to render. The recurring cost buys sensitive data, access, retention, audit, payroll calculations, filings, benefits, employment law, incident response, and support, not just the visible interface.",
+  "priorArt": [
+    {
+      "name": "Frappe HR",
+      "url": "https://github.com/frappe/hrms",
+      "desc": "Active open-source human-resources and payroll application built on Frappe."
+    }
+  ],
+  "relatedSlugs": [
+    "gusto",
+    "rippling",
+    "deel"
+  ],
+  "pagePriority": 4,
+  "verifiedOneShot": false,
+  "notes": "Editorial comparison targets the Essentials plan and a internal records tracker without payroll DIY substitute. Recheck price before merge.",
+  "prompt": "Build a closest honest personal substitute for Homebase in an empty repository.\nUse Next.js 15, TypeScript, PostgreSQL, Drizzle ORM, and Docker Compose; do not offer alternative stacks.\nThe core loop is: track non-sensitive people operations for build staff schedules and time-off workflows without payroll or hiring services, maintain approvals and records, and export data without calculating payroll or making employment decisions\nMake the first run work locally with one documented command.\nStore all user data locally by default and make export straightforward.\nPut secrets in .env, ship .env.example, and never commit credentials.\nImplement employees, teams, roles, documents, leave requests, equipment, onboarding tasks, and acknowledgements.\nUse least-privilege roles and log every read or change to sensitive records.\nAdd approval workflows, expiry reminders, export, retention, deletion holds, and encrypted backups.\nKeep compensation fields optional and never calculate payroll, taxes, benefits, or statutory filings.\nProvide a data dictionary and explain which fields should not be stored without legal review.\nShip Docker Compose, health checks, disaster recovery, and an emergency-access procedure.\nInclude clear empty, loading, success, and recoverable error states.\nAdd input validation, safe filenames, and graceful handling of unavailable APIs.\nWrite focused tests for the core transformation and one end-to-end happy path.\nCreate a README with setup, architecture, permissions, data location, and backup steps.\nDo not add accounts, billing, telemetry, analytics, or a hosted control plane.\nDo not claim to reproduce proprietary data, network liquidity, regulated access, or frontier infrastructure.\nDeliberately leave out payroll calculation or money movement.\nDeliberately leave out automated hiring decisions or applicant scoring.\nDeliberately leave out tax, benefits, immigration, identity, and global-employment compliance.\nFinish by running the tests and listing the exact commands used.",
+  "promptCurated": false
+}

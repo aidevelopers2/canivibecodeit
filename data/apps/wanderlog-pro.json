@@ -1,0 +1,60 @@
+{
+  "slug": "wanderlog-pro",
+  "name": "Wanderlog Pro",
+  "domain": "wanderlog.com",
+  "appURL": "https://wanderlog.com",
+  "category": "travel",
+  "subcategory": "trip planning, navigation and travel intelligence",
+  "tagline": "Build a collaborative itinerary from user-entered places, notes, and reservations",
+  "priceMonthly": 5.99,
+  "pricing": {
+    "plan": "Pro",
+    "basis": "monthly",
+    "source": "https://wanderlog.com/pro",
+    "checkedOn": "2026-07-31",
+    "confidence": "medium",
+    "notes": "Typical monthly Pro subscription.",
+    "native": "5.99 USD",
+    "kind": "fixed",
+    "currency": "USD"
+  },
+  "verdict": "kinda",
+  "verdictConfidence": "medium",
+  "verdictSummary": "The core loop is buildable, but a dependable replacement becomes a real weekend or multi-day project. For Wanderlog Pro, build a collaborative itinerary from user-entered places, notes, and reservations. The hard boundary is maps, travel data, collaboration, offline access, route optimization, and mobile apps, plus proprietary live data and network coverage.",
+  "coreLoopDIY": "organize a trip for build a collaborative itinerary from user-entered places, notes, and reservations, map user-entered places and reservations, and keep an offline itinerary without claiming live proprietary availability",
+  "diyTimeEstimate": "closest consolation build: one sitting",
+  "requirements": [
+    "modern browser",
+    "MapTiler or compatible map key",
+    "user-entered reservations",
+    "optional public transit or weather API"
+  ],
+  "whatYouLose": [
+    "maps, travel data, collaboration, offline access, route optimization, and mobile apps",
+    "live fare and inventory data",
+    "global routing dataset",
+    "crowdsourced trail intelligence",
+    "booking, disruption support, and offline map fleet"
+  ],
+  "moatType": "proprietary live data and network coverage",
+  "replacementScope": "personal itinerary organizer",
+  "ongoingBurden": "map licensing, fare feeds, reservation access, route freshness, disruptions, geocoding, caching, offline data, and support",
+  "whyPeopleStillPay": "People still pay for Wanderlog Pro because travel subscriptions sell current data and confidence during disruption, not just an itinerary list. The recurring cost buys map licensing, fare feeds, reservation access, route freshness, disruptions, geocoding, caching, offline data, and support, not just the visible interface.",
+  "priorArt": [
+    {
+      "name": "Wanderer",
+      "url": "https://github.com/Flomp/wanderer",
+      "desc": "Open-source self-hosted trail database and route explorer using open map data."
+    }
+  ],
+  "relatedSlugs": [
+    "tripit-pro",
+    "alltrails-plus",
+    "flighty-pro"
+  ],
+  "pagePriority": 5,
+  "verifiedOneShot": false,
+  "notes": "Editorial comparison targets the Pro plan and a personal itinerary organizer DIY substitute. Recheck price before merge.",
+  "prompt": "Build a personal replacement for Wanderlog Pro in an empty repository.\nUse Next.js 15, TypeScript, SQLite, MapLibre GL, and user-supplied map and travel APIs; do not offer alternative stacks.\nThe core loop is: organize a trip for build a collaborative itinerary from user-entered places, notes, and reservations, map user-entered places and reservations, and keep an offline itinerary without claiming live proprietary availability\nMake the first run work locally with one documented command.\nStore all user data locally by default and make export straightforward.\nPut secrets in .env, ship .env.example, and never commit credentials.\nCreate trips, days, places, reservations, notes, documents, packing items, and emergency contacts.\nGeocode only user-entered places and display them through MapLibre with cached trip-area tiles where allowed.\nParse forwarded reservation text locally into editable fields without logging message content.\nBuild a day timeline, route overview, conflict warnings, timezone display, and offline printable itinerary.\nAllow manual updates for delays and reservations and label all external data with source and timestamp.\nExport a complete trip bundle as JSON, calendar file, Markdown, and PDF.\nInclude clear empty, loading, success, and recoverable error states.\nAdd input validation, safe filenames, and graceful handling of unavailable APIs.\nWrite focused tests for the core transformation and one end-to-end happy path.\nCreate a README with setup, architecture, permissions, data location, and backup steps.\nDo not add accounts, billing, telemetry, analytics, or a hosted control plane.\nDeliberately leave out live flight, hotel, award, or ticket inventory.\nDeliberately leave out commercial turn-by-turn navigation and global offline maps.\nDeliberately leave out booking guarantees, disruption rebooking, and traveler support.\nFinish by running the tests and listing the exact commands used.",
+  "promptCurated": false
+}

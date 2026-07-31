@@ -1,0 +1,60 @@
+{
+  "slug": "shortwave",
+  "name": "Shortwave",
+  "domain": "shortwave.com",
+  "appURL": "https://shortwave.com",
+  "category": "email",
+  "subcategory": "email clients and hosted mail",
+  "tagline": "Group Gmail conversations, add bundles and todos, and index mail locally",
+  "priceMonthly": 8.5,
+  "pricing": {
+    "plan": "Personal",
+    "basis": "annual-equivalent",
+    "source": "https://shortwave.com/pricing",
+    "checkedOn": "2026-07-31",
+    "confidence": "medium",
+    "notes": "Advertised annual-equivalent Personal price; monthly billing is higher.",
+    "native": "8.5 USD",
+    "kind": "fixed",
+    "currency": "USD"
+  },
+  "verdict": "kinda",
+  "verdictConfidence": "medium",
+  "verdictSummary": "The core loop is buildable, but a dependable replacement becomes a real weekend or multi-day project. For Shortwave, group Gmail conversations, add bundles and todos, and index mail locally. The hard boundary is deep gmail semantics, cloud search, ai, team features, and mobile sync, plus mail infrastructure, integrations, and client polish.",
+  "coreLoopDIY": "connect an existing mailbox for group Gmail conversations, add bundles and todos, and index mail locally, index messages locally, provide a fast focused inbox, and send through the account's normal SMTP service",
+  "diyTimeEstimate": "multi-day",
+  "requirements": [
+    "existing IMAP and SMTP mailbox",
+    "OAuth client credentials where required",
+    "desktop keychain access",
+    "local disk space"
+  ],
+  "whatYouLose": [
+    "deep Gmail semantics, cloud search, AI, team features, and mobile sync",
+    "mail hosting and deliverability",
+    "push on every platform",
+    "advanced team collaboration",
+    "provider-specific AI and search"
+  ],
+  "moatType": "mail infrastructure, integrations, and client polish",
+  "replacementScope": "personal desktop mail client",
+  "ongoingBurden": "IMAP quirks, OAuth, MIME, threading, search, attachments, offline sync, notifications, secure storage, and provider changes",
+  "whyPeopleStillPay": "People still pay for Shortwave because an email client can be rebuilt; operating a trusted mail service with excellent deliverability cannot. The recurring cost buys IMAP quirks, OAuth, MIME, threading, search, attachments, offline sync, notifications, secure storage, and provider changes, not just the visible interface.",
+  "priorArt": [
+    {
+      "name": "mailcow",
+      "url": "https://github.com/mailcow/mailcow-dockerized",
+      "desc": "Popular open-source mail-server suite that demonstrates the operational complexity of hosted mail."
+    }
+  ],
+  "relatedSlugs": [
+    "superhuman",
+    "front",
+    "fastmail"
+  ],
+  "pagePriority": 4,
+  "verifiedOneShot": false,
+  "notes": "Editorial comparison targets the Personal plan and a personal desktop mail client DIY substitute. Recheck price before merge.",
+  "prompt": "Build a personal replacement for Shortwave in an empty repository.\nUse Tauri 2, React, TypeScript, SQLite, IMAP, SMTP, and OAuth where available; do not offer alternative stacks.\nThe core loop is: connect an existing mailbox for group Gmail conversations, add bundles and todos, and index mail locally, index messages locally, provide a fast focused inbox, and send through the account's normal SMTP service\nMake the first run work locally with one documented command.\nStore all user data locally by default and make export straightforward.\nPut secrets in .env, ship .env.example, and never commit credentials.\nSupport one IMAP and SMTP account with credentials stored only in the OS keychain.\nIndex headers and message bodies locally with resumable sync and a visible status page.\nImplement standards-based threading, folders, labels, archive, snooze, drafts, and search.\nRender HTML email in a locked-down sandbox and block remote images by default.\nSend multipart messages with attachments and preserve a local copy of every draft.\nAdd export, local cache reset, account reconnect, diagnostics, and safe logging.\nInclude clear empty, loading, success, and recoverable error states.\nAdd input validation, safe filenames, and graceful handling of unavailable APIs.\nWrite focused tests for the core transformation and one end-to-end happy path.\nCreate a README with setup, architecture, permissions, data location, and backup steps.\nDo not add accounts, billing, telemetry, analytics, or a hosted control plane.\nDeliberately leave out running a public mail server.\nDeliberately leave out shared team inboxes and sales workflows.\nDeliberately leave out mobile push services and provider-scale spam filtering.\nFinish by running the tests and listing the exact commands used.",
+  "promptCurated": false
+}

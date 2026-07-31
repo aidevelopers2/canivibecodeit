@@ -1,0 +1,60 @@
+{
+  "slug": "flighty-pro",
+  "name": "Flighty Pro",
+  "domain": "flighty.com",
+  "appURL": "https://flighty.com",
+  "category": "travel",
+  "subcategory": "trip planning, navigation and travel intelligence",
+  "tagline": "Organize booked flights and display user-entered status updates offline",
+  "priceMonthly": null,
+  "pricing": {
+    "plan": "Pro",
+    "basis": "annual-equivalent",
+    "source": "https://flighty.com/pricing",
+    "checkedOn": "2026-07-31",
+    "confidence": "medium",
+    "notes": "Annual Pro price divided by 12; monthly and lifetime options may exist.",
+    "native": "4.08 USD",
+    "kind": "one-time",
+    "currency": "USD"
+  },
+  "verdict": "no",
+  "verdictConfidence": "high",
+  "verdictSummary": "A consolation build is possible, but the paid product's decisive value sits outside a solo rebuild. For Flighty Pro, organize booked flights and display user-entered status updates offline. The hard boundary is live aviation data, predictive alerts, apple integration, push infrastructure, and polish, plus proprietary live data and network coverage.",
+  "coreLoopDIY": "organize a trip for organize booked flights and display user-entered status updates offline, map user-entered places and reservations, and keep an offline itinerary without claiming live proprietary availability",
+  "diyTimeEstimate": "closest consolation build: one sitting",
+  "requirements": [
+    "modern browser",
+    "MapTiler or compatible map key",
+    "user-entered reservations",
+    "optional public transit or weather API"
+  ],
+  "whatYouLose": [
+    "live aviation data, predictive alerts, Apple integration, push infrastructure, and polish",
+    "live fare and inventory data",
+    "global routing dataset",
+    "crowdsourced trail intelligence",
+    "booking, disruption support, and offline map fleet"
+  ],
+  "moatType": "proprietary live data and network coverage",
+  "replacementScope": "personal itinerary organizer",
+  "ongoingBurden": "map licensing, fare feeds, reservation access, route freshness, disruptions, geocoding, caching, offline data, and support",
+  "whyPeopleStillPay": "People still pay for Flighty Pro because travel subscriptions sell current data and confidence during disruption, not just an itinerary list. The recurring cost buys map licensing, fare feeds, reservation access, route freshness, disruptions, geocoding, caching, offline data, and support, not just the visible interface.",
+  "priorArt": [
+    {
+      "name": "Wanderer",
+      "url": "https://github.com/Flomp/wanderer",
+      "desc": "Open-source self-hosted trail database and route explorer using open map data."
+    }
+  ],
+  "relatedSlugs": [
+    "tripit-pro",
+    "wanderlog-pro",
+    "alltrails-plus"
+  ],
+  "pagePriority": 5,
+  "verifiedOneShot": false,
+  "notes": "Editorial comparison targets the Pro plan and a personal itinerary organizer DIY substitute. Recheck price before merge.",
+  "prompt": "Build a closest honest personal substitute for Flighty Pro in an empty repository.\nUse Next.js 15, TypeScript, SQLite, MapLibre GL, and user-supplied map and travel APIs; do not offer alternative stacks.\nThe core loop is: organize a trip for organize booked flights and display user-entered status updates offline, map user-entered places and reservations, and keep an offline itinerary without claiming live proprietary availability\nMake the first run work locally with one documented command.\nStore all user data locally by default and make export straightforward.\nPut secrets in .env, ship .env.example, and never commit credentials.\nCreate trips, days, places, reservations, notes, documents, packing items, and emergency contacts.\nGeocode only user-entered places and display them through MapLibre with cached trip-area tiles where allowed.\nParse forwarded reservation text locally into editable fields without logging message content.\nBuild a day timeline, route overview, conflict warnings, timezone display, and offline printable itinerary.\nAllow manual updates for delays and reservations and label all external data with source and timestamp.\nExport a complete trip bundle as JSON, calendar file, Markdown, and PDF.\nInclude clear empty, loading, success, and recoverable error states.\nAdd input validation, safe filenames, and graceful handling of unavailable APIs.\nWrite focused tests for the core transformation and one end-to-end happy path.\nCreate a README with setup, architecture, permissions, data location, and backup steps.\nDo not add accounts, billing, telemetry, analytics, or a hosted control plane.\nDo not claim to reproduce proprietary data, network liquidity, regulated access, or frontier infrastructure.\nDeliberately leave out live flight, hotel, award, or ticket inventory.\nDeliberately leave out commercial turn-by-turn navigation and global offline maps.\nDeliberately leave out booking guarantees, disruption rebooking, and traveler support.\nFinish by running the tests and listing the exact commands used.",
+  "promptCurated": false
+}

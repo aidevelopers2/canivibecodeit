@@ -1,0 +1,61 @@
+{
+  "slug": "supabase-pro",
+  "name": "Supabase Pro",
+  "domain": "supabase.com",
+  "appURL": "https://supabase.com",
+  "category": "hosting",
+  "subcategory": "application hosting and backend platforms",
+  "tagline": "Self-host a Postgres backend with auth, storage, and a small API surface",
+  "priceMonthly": null,
+  "pricing": {
+    "plan": "Pro",
+    "basis": "monthly per project",
+    "source": "https://supabase.com/pricing",
+    "checkedOn": "2026-07-31",
+    "confidence": "high",
+    "notes": "Official Pro monthly project price before usage.",
+    "native": "25 USD",
+    "kind": "usage-based",
+    "currency": "USD"
+  },
+  "verdict": "kinda",
+  "verdictConfidence": "medium",
+  "verdictSummary": "The core loop is buildable, but a dependable replacement becomes a real weekend or multi-day project. For Supabase Pro, self-host a Postgres backend with auth, storage, and a small API surface. The hard boundary is managed postgres, backups, auth delivery, storage, edge functions, observability, and support, plus infrastructure scale, operations, and reliability.",
+  "coreLoopDIY": "deploy a few trusted containerized applications for self-host a Postgres backend with auth, storage, and a small API surface, route domains, retain logs, and perform backups on one user-owned server",
+  "diyTimeEstimate": "closest consolation build: multi-day",
+  "requirements": [
+    "Linux server",
+    "Docker",
+    "domain and DNS access",
+    "backup destination",
+    "basic systems administration"
+  ],
+  "whatYouLose": [
+    "managed Postgres, backups, auth delivery, storage, edge functions, observability, and support",
+    "global edge network",
+    "managed databases",
+    "autoscaling",
+    "DDoS protection, support, and compliance"
+  ],
+  "moatType": "infrastructure scale, operations, and reliability",
+  "replacementScope": "single-server personal platform",
+  "ongoingBurden": "patching, certificates, isolation, secrets, builds, deploys, logs, metrics, backups, capacity, incidents, and security response",
+  "whyPeopleStillPay": "People still pay for Supabase Pro because hosting products sell an operations team and failure-domain diversity, not merely a deploy button. The recurring cost buys patching, certificates, isolation, secrets, builds, deploys, logs, metrics, backups, capacity, incidents, and security response, not just the visible interface.",
+  "priorArt": [
+    {
+      "name": "Coolify",
+      "url": "https://github.com/coollabsio/coolify",
+      "desc": "Active open-source self-hosting platform for applications, databases, and services."
+    }
+  ],
+  "relatedSlugs": [
+    "vercel",
+    "railway",
+    "firebase-blaze"
+  ],
+  "pagePriority": 5,
+  "verifiedOneShot": false,
+  "notes": "Editorial comparison targets the Pro plan and a single-server personal platform DIY substitute. Recheck price before merge.",
+  "prompt": "Build a personal replacement for Supabase Pro in an empty repository.\nUse Docker Compose, Caddy, PostgreSQL, Redis, and a small Go control plane; do not offer alternative stacks.\nThe core loop is: deploy a few trusted containerized applications for self-host a Postgres backend with auth, storage, and a small API surface, route domains, retain logs, and perform backups on one user-owned server\nMake the first run work locally with one documented command.\nStore all user data locally by default and make export straightforward.\nPut secrets in .env, ship .env.example, and never commit credentials.\nAccept a Git repository or container image and one explicit Dockerfile-based build path.\nImplement applications, environments, secrets, domains, health checks, and rolling container replacement.\nUse Caddy for automatic TLS and route only to healthy local containers.\nCapture bounded build and runtime logs and expose restart, rollback, and redeploy actions.\nBack up PostgreSQL metadata and document backups for each deployed application's data volumes.\nAdd host metrics, disk alerts, update instructions, disaster recovery, and a prominent single-server warning.\nInclude clear empty, loading, success, and recoverable error states.\nAdd input validation, safe filenames, and graceful handling of unavailable APIs.\nWrite focused tests for the core transformation and one end-to-end happy path.\nCreate a README with setup, architecture, permissions, data location, and backup steps.\nDo not add accounts, billing, telemetry, analytics, or a hosted control plane.\nDeliberately leave out multi-region or serverless infrastructure.\nDeliberately leave out managed data stores and global edge delivery.\nDeliberately leave out DDoS response, compliance, and guaranteed uptime.\nFinish by running the tests and listing the exact commands used.",
+  "promptCurated": false
+}

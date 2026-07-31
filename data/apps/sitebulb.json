@@ -1,0 +1,60 @@
+{
+  "slug": "sitebulb",
+  "name": "Sitebulb",
+  "domain": "sitebulb.com",
+  "appURL": "https://sitebulb.com",
+  "category": "seo-marketing",
+  "subcategory": "technical audits and on-page optimization",
+  "tagline": "Crawl an owned site and turn technical findings into prioritized, evidenced hints",
+  "priceMonthly": 18,
+  "pricing": {
+    "plan": "Lite",
+    "basis": "monthly",
+    "source": "https://sitebulb.com/pricing",
+    "checkedOn": "2026-07-31",
+    "confidence": "medium",
+    "notes": "Typical Lite monthly subscription.",
+    "native": "18 USD",
+    "kind": "fixed",
+    "currency": "USD"
+  },
+  "verdict": "kinda",
+  "verdictConfidence": "medium",
+  "verdictSummary": "The core loop is buildable, but a dependable replacement becomes a real weekend or multi-day project. For Sitebulb, crawl an owned site and turn technical findings into prioritized, evidenced hints. The hard boundary is rule depth, visualization, reporting, javascript crawling, and agency workflow, plus crawl scale, rule depth, and operational polish.",
+  "coreLoopDIY": "crawl a user-owned site for crawl an owned site and turn technical findings into prioritized, evidenced hints, inspect HTML and rendered pages, explain prioritized issues, and export a reproducible audit",
+  "diyTimeEstimate": "multi-day",
+  "requirements": [
+    "Python 3.12",
+    "Playwright browsers",
+    "permission to crawl the target site",
+    "local disk space"
+  ],
+  "whatYouLose": [
+    "rule depth, visualization, reporting, JavaScript crawling, and agency workflow",
+    "massive hosted crawl capacity",
+    "proprietary scoring",
+    "continuous monitoring",
+    "agency reporting and support"
+  ],
+  "moatType": "crawl scale, rule depth, and operational polish",
+  "replacementScope": "single-site audit tool",
+  "ongoingBurden": "robots handling, rendering, canonicalization, deduplication, crawl traps, rule maintenance, scheduling, storage, and false positives",
+  "whyPeopleStillPay": "People still pay for Sitebulb because a crawler is buildable; professionals pay for years of edge-case handling and reports they can trust with clients. The recurring cost buys robots handling, rendering, canonicalization, deduplication, crawl traps, rule maintenance, scheduling, storage, and false positives, not just the visible interface.",
+  "priorArt": [
+    {
+      "name": "SEOnaut",
+      "url": "https://github.com/stjudewashere/seonaut",
+      "desc": "Open-source technical SEO auditing application."
+    }
+  ],
+  "relatedSlugs": [
+    "screaming-frog-seo-spider",
+    "contentking",
+    "clearscope"
+  ],
+  "pagePriority": 4,
+  "verifiedOneShot": false,
+  "notes": "Editorial comparison targets the Lite plan and a single-site audit tool DIY substitute. Recheck price before merge.",
+  "prompt": "Build a personal replacement for Sitebulb in an empty repository.\nUse Python 3.12, FastAPI, SQLite, Playwright, and an HTMX interface; do not offer alternative stacks.\nThe core loop is: crawl a user-owned site for crawl an owned site and turn technical findings into prioritized, evidenced hints, inspect HTML and rendered pages, explain prioritized issues, and export a reproducible audit\nMake the first run work locally with one documented command.\nStore all user data locally by default and make export straightforward.\nPut secrets in .env, ship .env.example, and never commit credentials.\nRequire an explicit ownership or permission acknowledgement before a crawl starts.\nRespect robots.txt, rate limits, canonical URLs, nofollow, redirects, and a configurable URL cap.\nCollect status, title, description, headings, canonical, robots, links, images, structured data, and rendered text.\nDetect duplicates, orphan candidates, broken links, redirect chains, missing metadata, and indexability conflicts.\nShow every issue with affected URLs, evidence, severity, and a concrete remediation note.\nExport crawl data and issues to CSV plus a self-contained HTML report.\nInclude clear empty, loading, success, and recoverable error states.\nAdd input validation, safe filenames, and graceful handling of unavailable APIs.\nWrite focused tests for the core transformation and one end-to-end happy path.\nCreate a README with setup, architecture, permissions, data location, and backup steps.\nDo not add accounts, billing, telemetry, analytics, or a hosted control plane.\nDeliberately leave out crawling sites without permission.\nDeliberately leave out web-scale backlink or keyword datasets.\nDeliberately leave out automated changes to production websites.\nFinish by running the tests and listing the exact commands used.",
+  "promptCurated": false
+}

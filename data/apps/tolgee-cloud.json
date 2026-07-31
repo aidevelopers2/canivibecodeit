@@ -1,0 +1,60 @@
+{
+  "slug": "tolgee-cloud",
+  "name": "Tolgee Cloud",
+  "domain": "tolgee.io",
+  "appURL": "https://tolgee.io",
+  "category": "localization",
+  "subcategory": "translation management and website localization",
+  "tagline": "Use a managed localization workspace instead of operating the open-source stack",
+  "priceMonthly": 25,
+  "pricing": {
+    "plan": "Starter",
+    "basis": "monthly",
+    "source": "https://tolgee.io/pricing",
+    "checkedOn": "2026-07-31",
+    "confidence": "medium",
+    "notes": "Typical Starter monthly cloud tier.",
+    "native": "25 USD",
+    "kind": "fixed",
+    "currency": "USD"
+  },
+  "verdict": "kinda",
+  "verdictConfidence": "medium",
+  "verdictSummary": "The core loop is buildable, but a dependable replacement becomes a real weekend or multi-day project. For Tolgee Cloud, use a managed localization workspace instead of operating the open-source stack. The hard boundary is managed hosting, backups, collaboration, machine translation, and support, plus translation memory, collaboration, and deployment integrations.",
+  "coreLoopDIY": "manage translation keys and review work for use a managed localization workspace instead of operating the open-source stack, preserve context, import and export standard files, and publish approved strings",
+  "diyTimeEstimate": "multi-day",
+  "requirements": [
+    "PostgreSQL",
+    "self-hosted deployment",
+    "source locale files",
+    "optional DeepL or OpenAI API key"
+  ],
+  "whatYouLose": [
+    "managed hosting, backups, collaboration, machine translation, and support",
+    "professional translator marketplace",
+    "advanced translation memory",
+    "website proxy network",
+    "enterprise workflows and integrations"
+  ],
+  "moatType": "translation memory, collaboration, and deployment integrations",
+  "replacementScope": "small-team string-management system",
+  "ongoingBurden": "file formats, placeholders, plural rules, screenshots, context, permissions, review, glossary, machine translation, sync, and backups",
+  "whyPeopleStillPay": "People still pay for Tolgee Cloud because localization teams pay because language context, review discipline, translators, and release integrations are the hard parts. The recurring cost buys file formats, placeholders, plural rules, screenshots, context, permissions, review, glossary, machine translation, sync, and backups, not just the visible interface.",
+  "priorArt": [
+    {
+      "name": "Tolgee",
+      "url": "https://github.com/tolgee/tolgee-platform",
+      "desc": "Active open-source localization platform with translation memory and in-context tooling."
+    }
+  ],
+  "relatedSlugs": [
+    "lokalise",
+    "crowdin",
+    "weglot"
+  ],
+  "pagePriority": 4,
+  "verifiedOneShot": false,
+  "notes": "Editorial comparison targets the Starter plan and a small-team string-management system DIY substitute. Recheck price before merge.",
+  "prompt": "Build a personal replacement for Tolgee Cloud in an empty repository.\nUse Next.js 15, TypeScript, PostgreSQL, Drizzle ORM, and one optional machine-translation API; do not offer alternative stacks.\nThe core loop is: manage translation keys and review work for use a managed localization workspace instead of operating the open-source stack, preserve context, import and export standard files, and publish approved strings\nMake the first run work locally with one documented command.\nStore all user data locally by default and make export straightforward.\nPut secrets in .env, ship .env.example, and never commit credentials.\nImplement projects, locales, keys, namespaces, descriptions, screenshots, translations, and review status.\nImport and export JSON, YAML, PO, and XLIFF while preserving placeholders and plural forms.\nAdd glossary checks, missing-string filters, translation memory, comments, and reviewer assignment.\nUse machine translation only on selected strings and show provider, cost, and source text before approval.\nProvide token-authenticated pull and push endpoints for CI with an immutable change log.\nAdd backups, locale deletion safeguards, and a pseudo-localization preview.\nInclude clear empty, loading, success, and recoverable error states.\nAdd input validation, safe filenames, and graceful handling of unavailable APIs.\nWrite focused tests for the core transformation and one end-to-end happy path.\nCreate a README with setup, architecture, permissions, data location, and backup steps.\nDo not add accounts, billing, telemetry, analytics, or a hosted control plane.\nDeliberately leave out a translator labor marketplace.\nDeliberately leave out a global website translation proxy.\nDeliberately leave out enterprise integrations, legal translation assurance, and round-the-clock support.\nFinish by running the tests and listing the exact commands used.",
+  "promptCurated": false
+}

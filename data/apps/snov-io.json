@@ -1,0 +1,61 @@
+{
+  "slug": "snov-io",
+  "name": "Snov.io",
+  "domain": "snov.io",
+  "appURL": "https://snov.io",
+  "category": "sales-outreach",
+  "subcategory": "lead discovery and outbound sequences",
+  "tagline": "Sequence permissioned contacts and enrich only through user-supplied providers",
+  "priceMonthly": 39,
+  "pricing": {
+    "plan": "Starter",
+    "basis": "monthly",
+    "source": "https://snov.io/pricing",
+    "checkedOn": "2026-07-31",
+    "confidence": "high",
+    "notes": "Official Starter monthly tier.",
+    "native": "39 USD",
+    "kind": "fixed",
+    "currency": "USD"
+  },
+  "verdict": "no",
+  "verdictConfidence": "high",
+  "verdictSummary": "A consolation build is possible, but the paid product's decisive value sits outside a solo rebuild. For Snov.io, sequence permissioned contacts and enrich only through user-supplied providers. The hard boundary is proprietary contact discovery, verification credits, warm-up, and sales tooling, plus proprietary data, deliverability, and network effects.",
+  "coreLoopDIY": "import a permissioned lead list, personalize a modest sequence for sequence permissioned contacts and enrich only through user-supplied providers, enforce sending limits, and track replies without supplying proprietary contact data",
+  "diyTimeEstimate": "closest consolation build: one sitting",
+  "requirements": [
+    "legally obtained contact list",
+    "sending-domain authentication",
+    "email provider credentials",
+    "PostgreSQL",
+    "public HTTPS endpoint"
+  ],
+  "whatYouLose": [
+    "proprietary contact discovery, verification credits, warm-up, and sales tooling",
+    "proprietary contact database",
+    "inbox warm-up network",
+    "deliverability reputation",
+    "large-scale enrichment and compliance tooling"
+  ],
+  "moatType": "proprietary data, deliverability, and network effects",
+  "replacementScope": "small permission-based outreach console",
+  "ongoingBurden": "consent records, suppression lists, DNS, bounces, reputation, abuse complaints, provider limits, and changing email rules",
+  "whyPeopleStillPay": "People still pay for Snov.io because the durable value is accurate contact data and deliverability infrastructure; a sequence editor alone is not the product. The recurring cost buys consent records, suppression lists, DNS, bounces, reputation, abuse complaints, provider limits, and changing email rules, not just the visible interface.",
+  "priorArt": [
+    {
+      "name": "Mautic",
+      "url": "https://github.com/mautic/mautic",
+      "desc": "Open-source marketing automation platform with campaigns, contacts, and email workflows."
+    }
+  ],
+  "relatedSlugs": [
+    "apollo-io",
+    "clay",
+    "lemlist"
+  ],
+  "pagePriority": 4,
+  "verifiedOneShot": false,
+  "notes": "Editorial comparison targets the Starter plan and a small permission-based outreach console DIY substitute. Recheck price before merge.",
+  "prompt": "Build a closest honest personal substitute for Snov.io in an empty repository.\nUse Next.js 15, TypeScript, PostgreSQL, Drizzle ORM, and a user-chosen transactional email provider; do not offer alternative stacks.\nThe core loop is: import a permissioned lead list, personalize a modest sequence for sequence permissioned contacts and enrich only through user-supplied providers, enforce sending limits, and track replies without supplying proprietary contact data\nMake the first run work locally with one documented command.\nStore all user data locally by default and make export straightforward.\nPut secrets in .env, ship .env.example, and never commit credentials.\nAccept CSV imports only after the user confirms lawful collection and records the source.\nProvide contact fields, tags, suppression status, consent notes, and a complete change history.\nBuild a short email sequence with delays, business-hour windows, and per-domain rate limits.\nUse the configured provider for sends and process delivery, bounce, complaint, and unsubscribe webhooks.\nStop sequences immediately on reply, bounce, complaint, suppression, or manual pause.\nShow deliverability warnings, daily send totals, and a mandatory preview before activation.\nInclude clear empty, loading, success, and recoverable error states.\nAdd input validation, safe filenames, and graceful handling of unavailable APIs.\nWrite focused tests for the core transformation and one end-to-end happy path.\nCreate a README with setup, architecture, permissions, data location, and backup steps.\nDo not add accounts, billing, telemetry, analytics, or a hosted control plane.\nDo not claim to reproduce proprietary data, network liquidity, regulated access, or frontier infrastructure.\nDeliberately leave out scraping protected platforms.\nDeliberately leave out buying or generating personal contact data.\nDeliberately leave out automated inbox warm-up networks and evasion of provider limits.\nFinish by running the tests and listing the exact commands used.",
+  "promptCurated": false
+}

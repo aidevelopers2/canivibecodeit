@@ -1,0 +1,60 @@
+{
+  "slug": "castmagic",
+  "name": "Castmagic",
+  "domain": "castmagic.io",
+  "appURL": "https://castmagic.io",
+  "category": "podcasting",
+  "subcategory": "podcast recording, cleanup and publishing",
+  "tagline": "Turn a recording into a transcript, summary, clips, quotes, and reusable content assets",
+  "priceMonthly": 39,
+  "pricing": {
+    "plan": "Hobby",
+    "basis": "monthly",
+    "source": "https://castmagic.io/pricing",
+    "checkedOn": "2026-07-31",
+    "confidence": "high",
+    "notes": "Official Hobby monthly tier.",
+    "native": "39 USD",
+    "kind": "fixed",
+    "currency": "USD"
+  },
+  "verdict": "kinda",
+  "verdictConfidence": "medium",
+  "verdictSummary": "The core loop is buildable, but a dependable replacement becomes a real weekend or multi-day project. For Castmagic, turn a recording into a transcript, summary, clips, quotes, and reusable content assets. The hard boundary is large prompt library, integrations, team workflow, and hosted processing, plus audio infrastructure, distribution, and production polish.",
+  "coreLoopDIY": "import spoken-word audio, perform practical cleanup for turn a recording into a transcript, summary, clips, quotes, and reusable content assets, assemble an episode, and export production files plus show notes",
+  "diyTimeEstimate": "multi-day",
+  "requirements": [
+    "ffmpeg",
+    "local audio files",
+    "optional transcription API key",
+    "sufficient disk space"
+  ],
+  "whatYouLose": [
+    "large prompt library, integrations, team workflow, and hosted processing",
+    "remote studio reliability",
+    "licensed music libraries",
+    "hosting distribution",
+    "advanced mastering and support"
+  ],
+  "moatType": "audio infrastructure, distribution, and production polish",
+  "replacementScope": "single-creator production tool",
+  "ongoingBurden": "codec support, loudness standards, transcription, storage, feeds, analytics, and deliverability to directories",
+  "whyPeopleStillPay": "People still pay for Castmagic because creators pay to remove fragile audio plumbing and publishing chores from a release schedule. The recurring cost buys codec support, loudness standards, transcription, storage, feeds, analytics, and deliverability to directories, not just the visible interface.",
+  "priorArt": [
+    {
+      "name": "Audacity",
+      "url": "https://github.com/audacity/audacity",
+      "desc": "Long-running open-source multitrack audio editor and useful implementation prior art."
+    }
+  ],
+  "relatedSlugs": [
+    "riverside",
+    "alitu",
+    "auphonic"
+  ],
+  "pagePriority": 4,
+  "verifiedOneShot": false,
+  "notes": "Editorial comparison targets the Hobby plan and a single-creator production tool DIY substitute. Recheck price before merge.",
+  "prompt": "Build a personal replacement for Castmagic in an empty repository.\nUse Python 3.12, FastAPI, ffmpeg, SQLite, and an HTMX interface; do not offer alternative stacks.\nThe core loop is: import spoken-word audio, perform practical cleanup for turn a recording into a transcript, summary, clips, quotes, and reusable content assets, assemble an episode, and export production files plus show notes\nMake the first run work locally with one documented command.\nStore all user data locally by default and make export straightforward.\nPut secrets in .env, ship .env.example, and never commit credentials.\nCreate an upload queue and preserve originals in a read-only media folder.\nGenerate waveforms and non-destructive edit markers instead of rewriting source files.\nImplement silence trimming, loudness normalization to -16 LUFS, fades, and noise-gate presets.\nAdd chapter markers, intro and outro slots, and a simple two-track timeline.\nProduce a transcript and draft title, description, chapters, and social excerpts.\nExport MP3, WAV, transcript, chapters JSON, and a complete project manifest.\nInclude clear empty, loading, success, and recoverable error states.\nAdd input validation, safe filenames, and graceful handling of unavailable APIs.\nWrite focused tests for the core transformation and one end-to-end happy path.\nCreate a README with setup, architecture, permissions, data location, and backup steps.\nDo not add accounts, billing, telemetry, analytics, or a hosted control plane.\nDeliberately leave out real-time remote recording.\nDeliberately leave out podcast hosting and directory analytics.\nDeliberately leave out licensed stock music and voice cloning.\nFinish by running the tests and listing the exact commands used.",
+  "promptCurated": false
+}

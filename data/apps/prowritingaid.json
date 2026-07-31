@@ -1,0 +1,59 @@
+{
+  "slug": "prowritingaid",
+  "name": "ProWritingAid",
+  "domain": "prowritingaid.com",
+  "appURL": "https://prowritingaid.com",
+  "category": "writing-assistant",
+  "subcategory": "grammar, editing and long-form writing",
+  "tagline": "Run deep style reports, manuscript checks, and guided rewrites for long-form prose",
+  "priceMonthly": null,
+  "pricing": {
+    "plan": "Premium",
+    "basis": "monthly",
+    "source": "https://prowritingaid.com/pricing",
+    "checkedOn": "2026-07-31",
+    "confidence": "medium",
+    "notes": "Monthly Premium rate; annual and lifetime options can lower the effective monthly cost.",
+    "native": "30 USD",
+    "kind": "one-time",
+    "currency": "USD"
+  },
+  "verdict": "yes",
+  "verdictConfidence": "high",
+  "verdictSummary": "The core loop is small enough for a capable coding agent to produce a useful local version in one sitting. For ProWritingAid, run deep style reports, manuscript checks, and guided rewrites for long-form prose. The hard boundary is its mature report library, integrations, and fiction-specific analysis, plus polish, integrations, and proprietary language models.",
+  "coreLoopDIY": "open local text or Markdown, apply focused editing passes for run deep style reports, manuscript checks, and guided rewrites for long-form prose, show a diff, and save or export without uploading the document",
+  "diyTimeEstimate": "one sitting",
+  "requirements": [
+    "macOS, Windows, or Linux",
+    "local files",
+    "optional OpenAI or Anthropic API key for semantic rewrites"
+  ],
+  "whatYouLose": [
+    "its mature report library, integrations, and fiction-specific analysis",
+    "cross-device sync",
+    "large proprietary style models",
+    "browser and office-suite extensions",
+    "team style guides"
+  ],
+  "moatType": "polish, integrations, and proprietary language models",
+  "replacementScope": "personal local editor",
+  "ongoingBurden": "model quality, extension compatibility, dictionaries, releases, and sync",
+  "whyPeopleStillPay": "People still pay for ProWritingAid because the paid tool is already present everywhere they write and its suggestions have been tuned across millions of documents. The recurring cost buys model quality, extension compatibility, dictionaries, releases, and sync, not just the visible interface.",
+  "priorArt": [
+    {
+      "name": "LanguageTool",
+      "url": "https://github.com/languagetool-org/languagetool",
+      "desc": "Mature open-source grammar and style checker with desktop and server components."
+    }
+  ],
+  "relatedSlugs": [
+    "sudowrite",
+    "languagetool",
+    "wordtune"
+  ],
+  "pagePriority": 4,
+  "verifiedOneShot": false,
+  "notes": "Editorial comparison targets the Premium plan and a personal local editor DIY substitute. Recheck price before merge.",
+  "prompt": "Build a personal replacement for ProWritingAid in an empty repository.\nUse Tauri 2, React, TypeScript, SQLite, and a small Rust filesystem layer; do not offer alternative stacks.\nThe core loop is: open local text or Markdown, apply focused editing passes for run deep style reports, manuscript checks, and guided rewrites for long-form prose, show a diff, and save or export without uploading the document\nMake the first run work locally with one documented command.\nStore all user data locally by default and make export straightforward.\nPut secrets in .env, ship .env.example, and never commit credentials.\nCreate a three-pane editor with source text, suggestion list, and accepted-result preview.\nImplement deterministic checks for repeated words, sentence length, passive constructions, and typography.\nAdd an optional API-backed rewrite action that sends only the selected passage.\nShow every change as an accept-or-reject diff and support undo.\nImport and export .txt and .md while preserving headings and lists.\nPersist user rules, ignored terms, and recent documents in SQLite.\nInclude clear empty, loading, success, and recoverable error states.\nAdd input validation, safe filenames, and graceful handling of unavailable APIs.\nWrite focused tests for the core transformation and one end-to-end happy path.\nCreate a README with setup, architecture, permissions, data location, and backup steps.\nDo not add accounts, billing, telemetry, analytics, or a hosted control plane.\nDeliberately leave out a browser extension.\nDeliberately leave out Office or Google Docs plugins.\nDeliberately leave out collaborative editing and cloud sync.\nFinish by running the tests and listing the exact commands used.",
+  "promptCurated": false
+}

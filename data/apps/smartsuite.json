@@ -1,0 +1,60 @@
+{
+  "slug": "smartsuite",
+  "name": "SmartSuite",
+  "domain": "smartsuite.com",
+  "appURL": "https://smartsuite.com",
+  "category": "databases",
+  "subcategory": "spreadsheet databases and operational data apps",
+  "tagline": "Configure records, views, automations, and dashboards for one team",
+  "priceMonthly": 12,
+  "pricing": {
+    "plan": "Team",
+    "basis": "monthly per user",
+    "source": "https://smartsuite.com/pricing",
+    "checkedOn": "2026-07-31",
+    "confidence": "medium",
+    "notes": "Typical Team monthly seat amount.",
+    "native": "12 USD",
+    "kind": "fixed",
+    "currency": "USD"
+  },
+  "verdict": "kinda",
+  "verdictConfidence": "medium",
+  "verdictSummary": "The core loop is buildable, but a dependable replacement becomes a real weekend or multi-day project. For SmartSuite, configure records, views, automations, and dashboards for one team. The hard boundary is template breadth, workflow, integrations, permissions, and hosted collaboration, plus data model flexibility, collaboration, and integrations.",
+  "coreLoopDIY": "model structured records for configure records, views, automations, and dashboards for one team, provide grid, form, kanban, and filtered views, and expose a documented API",
+  "diyTimeEstimate": "multi-day",
+  "requirements": [
+    "Docker",
+    "PostgreSQL",
+    "self-hosted server",
+    "optional object storage for attachments"
+  ],
+  "whatYouLose": [
+    "template breadth, workflow, integrations, permissions, and hosted collaboration",
+    "real-time multiplayer",
+    "automation and integration breadth",
+    "scale and formula depth",
+    "enterprise permissions"
+  ],
+  "moatType": "data model flexibility, collaboration, and integrations",
+  "replacementScope": "small-team structured database",
+  "ongoingBurden": "schema changes, formulas, permissions, imports, attachments, views, APIs, concurrency, backups, and migrations",
+  "whyPeopleStillPay": "People still pay for SmartSuite because teams pay when a flexible database becomes a shared operational system with integrations and years of accumulated business logic. The recurring cost buys schema changes, formulas, permissions, imports, attachments, views, APIs, concurrency, backups, and migrations, not just the visible interface.",
+  "priorArt": [
+    {
+      "name": "NocoDB",
+      "url": "https://github.com/nocodb/nocodb",
+      "desc": "Active open-source no-code database interface and Airtable alternative."
+    }
+  ],
+  "relatedSlugs": [
+    "baserow-cloud",
+    "nocodb-cloud",
+    "grist"
+  ],
+  "pagePriority": 3,
+  "verifiedOneShot": false,
+  "notes": "Editorial comparison targets the Team plan and a small-team structured database DIY substitute. Recheck price before merge.",
+  "prompt": "Build a personal replacement for SmartSuite in an empty repository.\nUse Next.js 15, TypeScript, PostgreSQL, Drizzle ORM, and Docker Compose; do not offer alternative stacks.\nThe core loop is: model structured records for configure records, views, automations, and dashboards for one team, provide grid, form, kanban, and filtered views, and expose a documented API\nMake the first run work locally with one documented command.\nStore all user data locally by default and make export straightforward.\nPut secrets in .env, ship .env.example, and never commit credentials.\nCreate workspaces, bases, tables, fields, records, attachments, relations, and saved views.\nSupport text, number, currency, date, boolean, select, formula-lite, and relation field types.\nBuild grid, form, kanban, and record-detail views from one canonical schema.\nAdd role-based permissions, optimistic concurrency checks, audit history, and trash restore.\nProvide CSV import or export and a token-authenticated REST API generated from the schema.\nShip migrations, seed data, backups, health checks, and a schema export format.\nInclude clear empty, loading, success, and recoverable error states.\nAdd input validation, safe filenames, and graceful handling of unavailable APIs.\nWrite focused tests for the core transformation and one end-to-end happy path.\nCreate a README with setup, architecture, permissions, data location, and backup steps.\nDo not add accounts, billing, telemetry, analytics, or a hosted control plane.\nDeliberately leave out full spreadsheet formula compatibility.\nDeliberately leave out hundreds of automations and integrations.\nDeliberately leave out large-enterprise governance and vendor-managed scale.\nFinish by running the tests and listing the exact commands used.",
+  "promptCurated": false
+}

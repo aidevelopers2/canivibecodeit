@@ -1,0 +1,60 @@
+{
+  "slug": "unicorn-platform",
+  "name": "Unicorn Platform",
+  "domain": "unicornplatform.com",
+  "appURL": "https://unicornplatform.com",
+  "category": "website-builder",
+  "subcategory": "websites and landing pages",
+  "tagline": "Assemble a startup landing page from constrained components and export static code",
+  "priceMonthly": 18,
+  "pricing": {
+    "plan": "Maker",
+    "basis": "monthly",
+    "source": "https://unicornplatform.com/pricing",
+    "checkedOn": "2026-07-31",
+    "confidence": "medium",
+    "notes": "Typical Maker monthly rate.",
+    "native": "18 USD",
+    "kind": "fixed",
+    "currency": "USD"
+  },
+  "verdict": "yes",
+  "verdictConfidence": "high",
+  "verdictSummary": "The core loop is small enough for a capable coding agent to produce a useful local version in one sitting. For Unicorn Platform, assemble a startup landing page from constrained components and export static code. The hard boundary is template polish, hosted publishing, forms, and ai copy convenience, plus editor polish, hosting, templates, and ecosystem.",
+  "coreLoopDIY": "assemble responsive sections for assemble a startup landing page from constrained components and export static code, edit copy and media, preview breakpoints, and publish a static site to a user-owned target",
+  "diyTimeEstimate": "multi-day",
+  "requirements": [
+    "Node.js 22",
+    "domain and deploy target",
+    "local images",
+    "optional form-email API key"
+  ],
+  "whatYouLose": [
+    "template polish, hosted publishing, forms, and AI copy convenience",
+    "large template marketplace",
+    "managed hosting and CDN",
+    "advanced CMS",
+    "commerce and agency workflows"
+  ],
+  "moatType": "editor polish, hosting, templates, and ecosystem",
+  "replacementScope": "single-site builder",
+  "ongoingBurden": "responsive rendering, forms, domains, certificates, deploys, backups, template maintenance, and browser regressions",
+  "whyPeopleStillPay": "People still pay for Unicorn Platform because the page renderer is reproducible, but customers pay to avoid becoming their own hosting and browser-compatibility team. The recurring cost buys responsive rendering, forms, domains, certificates, deploys, backups, template maintenance, and browser regressions, not just the visible interface.",
+  "priorArt": [
+    {
+      "name": "Webstudio",
+      "url": "https://github.com/webstudio-is/webstudio",
+      "desc": "Open-source visual website builder designed around web standards."
+    }
+  ],
+  "relatedSlugs": [
+    "duda",
+    "tilda",
+    "typedream"
+  ],
+  "pagePriority": 3,
+  "verifiedOneShot": false,
+  "notes": "Editorial comparison targets the Maker plan and a single-site builder DIY substitute. Recheck price before merge.",
+  "prompt": "Build a personal replacement for Unicorn Platform in an empty repository.\nUse Next.js 15, TypeScript, Tailwind CSS, SQLite, Drizzle ORM, and static export; do not offer alternative stacks.\nThe core loop is: assemble responsive sections for assemble a startup landing page from constrained components and export static code, edit copy and media, preview breakpoints, and publish a static site to a user-owned target\nMake the first run work locally with one documented command.\nStore all user data locally by default and make export straightforward.\nPut secrets in .env, ship .env.example, and never commit credentials.\nProvide a section library for hero, proof, features, pricing, FAQ, and footer blocks.\nUse a constrained design-token system rather than arbitrary CSS controls.\nAllow inline text editing and local image upload with responsive optimization.\nPreview desktop, tablet, and mobile widths and surface overflow errors.\nPersist projects in SQLite and support a portable JSON export.\nGenerate a clean static Next.js output and document deployment to one target.\nInclude clear empty, loading, success, and recoverable error states.\nAdd input validation, safe filenames, and graceful handling of unavailable APIs.\nWrite focused tests for the core transformation and one end-to-end happy path.\nCreate a README with setup, architecture, permissions, data location, and backup steps.\nDo not add accounts, billing, telemetry, analytics, or a hosted control plane.\nDeliberately leave out a plugin marketplace.\nDeliberately leave out multi-tenant managed hosting.\nDeliberately leave out advanced ecommerce, memberships, and agency billing.\nFinish by running the tests and listing the exact commands used.",
+  "promptCurated": false
+}

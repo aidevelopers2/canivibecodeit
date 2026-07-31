@@ -1,0 +1,59 @@
+{
+  "slug": "capacities",
+  "name": "Capacities",
+  "domain": "capacities.io",
+  "appURL": "https://capacities.io",
+  "category": "notes-knowledge",
+  "subcategory": "notes, wikis and personal knowledge bases",
+  "tagline": "Organize linked notes as typed objects such as people, books, meetings, and ideas",
+  "priceMonthly": 12,
+  "pricing": {
+    "plan": "Pro",
+    "basis": "monthly",
+    "source": "https://capacities.io/pricing",
+    "checkedOn": "2026-07-31",
+    "confidence": "medium",
+    "notes": "Typical Pro monthly rate.",
+    "native": "12 USD",
+    "kind": "fixed",
+    "currency": "USD"
+  },
+  "verdict": "yes",
+  "verdictConfidence": "high",
+  "verdictSummary": "The core loop is small enough for a capable coding agent to produce a useful local version in one sitting. For Capacities, organize linked notes as typed objects such as people, books, meetings, and ideas. The hard boundary is object-model polish, mobile capture, sync, calendar integration, and ai features, plus sync, collaboration, and capture polish.",
+  "coreLoopDIY": "capture linked notes for organize linked notes as typed objects such as people, books, meetings, and ideas, search them instantly, surface backlinks, and export a normal Markdown folder",
+  "diyTimeEstimate": "one sitting",
+  "requirements": [
+    "macOS, Windows, or Linux",
+    "local folder access",
+    "optional sync folder chosen by the user"
+  ],
+  "whatYouLose": [
+    "object-model polish, mobile capture, sync, calendar integration, and AI features",
+    "frictionless mobile capture",
+    "real-time team editing",
+    "hosted publishing",
+    "proprietary AI memory"
+  ],
+  "moatType": "sync, collaboration, and capture polish",
+  "replacementScope": "personal local knowledge base",
+  "ongoingBurden": "file watching, conflict handling, indexing, mobile apps, encryption, backups, and migrations",
+  "whyPeopleStillPay": "People still pay for Capacities because people keep paying when the note system is trusted across every device and disappears into their daily capture habits. The recurring cost buys file watching, conflict handling, indexing, mobile apps, encryption, backups, and migrations, not just the visible interface.",
+  "priorArt": [
+    {
+      "name": "AppFlowy",
+      "url": "https://github.com/AppFlowy-IO/AppFlowy",
+      "desc": "Active open-source workspace with local-first documents and databases."
+    }
+  ],
+  "relatedSlugs": [
+    "craft",
+    "slite",
+    "nuclino"
+  ],
+  "pagePriority": 4,
+  "verifiedOneShot": false,
+  "notes": "Editorial comparison targets the Pro plan and a personal local knowledge base DIY substitute. Recheck price before merge.",
+  "prompt": "Build a personal replacement for Capacities in an empty repository.\nUse Tauri 2, React, TypeScript, SQLite, and Markdown files as the source of truth; do not offer alternative stacks.\nThe core loop is: capture linked notes for organize linked notes as typed objects such as people, books, meetings, and ideas, search them instantly, surface backlinks, and export a normal Markdown folder\nMake the first run work locally with one documented command.\nStore all user data locally by default and make export straightforward.\nPut secrets in .env, ship .env.example, and never commit credentials.\nStore one Markdown file per note and a small SQLite index that can be rebuilt at any time.\nSupport wiki links, tags, backlinks, daily notes, pinned notes, and full-text search.\nAdd a fast command palette and keyboard-first create, rename, move, and link actions.\nRender Markdown with task lists, code blocks, tables, and local image attachments.\nDetect external file changes and show a safe conflict-resolution view.\nProvide full-folder export, import, and an index-rebuild command.\nInclude clear empty, loading, success, and recoverable error states.\nAdd input validation, safe filenames, and graceful handling of unavailable APIs.\nWrite focused tests for the core transformation and one end-to-end happy path.\nCreate a README with setup, architecture, permissions, data location, and backup steps.\nDo not add accounts, billing, telemetry, analytics, or a hosted control plane.\nDeliberately leave out proprietary sync servers.\nDeliberately leave out real-time multiplayer documents.\nDeliberately leave out a plugin marketplace and hosted public sites.\nFinish by running the tests and listing the exact commands used.",
+  "promptCurated": false
+}

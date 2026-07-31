@@ -1,0 +1,60 @@
+{
+  "slug": "gorgias",
+  "name": "Gorgias",
+  "domain": "gorgias.com",
+  "appURL": "https://gorgias.com",
+  "category": "customer-support",
+  "subcategory": "help desks, live chat and support knowledge",
+  "tagline": "Build a small ecommerce support inbox from email and store webhooks",
+  "priceMonthly": 60,
+  "pricing": {
+    "plan": "Basic",
+    "basis": "monthly",
+    "source": "https://gorgias.com/pricing",
+    "checkedOn": "2026-07-31",
+    "confidence": "high",
+    "notes": "Official Basic monthly package; ticket volume affects higher tiers.",
+    "native": "60 USD",
+    "kind": "fixed",
+    "currency": "USD"
+  },
+  "verdict": "no",
+  "verdictConfidence": "high",
+  "verdictSummary": "A consolation build is possible, but the paid product's decisive value sits outside a solo rebuild. For Gorgias, build a small ecommerce support inbox from email and store webhooks. The hard boundary is deep commerce integrations, order actions, automation, ai, and high-volume support operations, plus channel integrations and support operations.",
+  "coreLoopDIY": "receive customer messages for build a small ecommerce support inbox from email and store webhooks, route them into a shared inbox, reply from one place, and retain a searchable conversation history",
+  "diyTimeEstimate": "closest consolation build: one sitting",
+  "requirements": [
+    "Docker",
+    "PostgreSQL",
+    "public HTTPS deployment",
+    "email or chat channel credentials"
+  ],
+  "whatYouLose": [
+    "deep commerce integrations, order actions, automation, AI, and high-volume support operations",
+    "omnichannel integrations",
+    "large-scale deliverability",
+    "AI resolution tuning",
+    "enterprise routing and compliance"
+  ],
+  "moatType": "channel integrations and support operations",
+  "replacementScope": "small-team shared inbox",
+  "ongoingBurden": "message delivery, webhooks, threading, identity, permissions, attachments, notifications, spam, search, uptime, and retention",
+  "whyPeopleStillPay": "People still pay for Gorgias because support software survives because missing or misrouting one customer message is expensive and every channel behaves differently. The recurring cost buys message delivery, webhooks, threading, identity, permissions, attachments, notifications, spam, search, uptime, and retention, not just the visible interface.",
+  "priorArt": [
+    {
+      "name": "Chatwoot",
+      "url": "https://github.com/chatwoot/chatwoot",
+      "desc": "Mature open-source customer engagement and shared-inbox platform."
+    }
+  ],
+  "relatedSlugs": [
+    "intercom",
+    "zendesk",
+    "help-scout"
+  ],
+  "pagePriority": 5,
+  "verifiedOneShot": false,
+  "notes": "Editorial comparison targets the Basic plan and a small-team shared inbox DIY substitute. Recheck price before merge.",
+  "prompt": "Build a closest honest personal substitute for Gorgias in an empty repository.\nUse Next.js 15, TypeScript, PostgreSQL, Drizzle ORM, WebSockets, and Docker Compose; do not offer alternative stacks.\nThe core loop is: receive customer messages for build a small ecommerce support inbox from email and store webhooks, route them into a shared inbox, reply from one place, and retain a searchable conversation history\nMake the first run work locally with one documented command.\nStore all user data locally by default and make export straightforward.\nPut secrets in .env, ship .env.example, and never commit credentials.\nImplement one workspace, agents, contacts, inboxes, conversations, messages, labels, and assignment.\nProvide a website chat widget with reconnect, unread counts, file limits, and clear availability state.\nCreate a shared inbox with filters, collision warnings, notes, canned replies, and searchable history.\nAdd email notifications, browser notifications, and an immutable assignment and status log.\nImplement spam controls, attachment scanning hooks, retention settings, export, and contact deletion.\nShip Docker Compose, backups, health checks, migrations, and a documented admin recovery flow.\nInclude clear empty, loading, success, and recoverable error states.\nAdd input validation, safe filenames, and graceful handling of unavailable APIs.\nWrite focused tests for the core transformation and one end-to-end happy path.\nCreate a README with setup, architecture, permissions, data location, and backup steps.\nDo not add accounts, billing, telemetry, analytics, or a hosted control plane.\nDo not claim to reproduce proprietary data, network liquidity, regulated access, or frontier infrastructure.\nDeliberately leave out many social and messaging channels.\nDeliberately leave out AI agents trained on proprietary support data.\nDeliberately leave out enterprise workforce management, SSO, and compliance.\nFinish by running the tests and listing the exact commands used.",
+  "promptCurated": false
+}

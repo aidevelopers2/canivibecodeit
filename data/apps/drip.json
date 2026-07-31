@@ -1,0 +1,61 @@
+{
+  "slug": "drip",
+  "name": "Drip",
+  "domain": "drip.com",
+  "appURL": "https://drip.com",
+  "category": "newsletter",
+  "subcategory": "email newsletters and creator publishing",
+  "tagline": "Send event-triggered ecommerce email from a small user-owned event stream",
+  "priceMonthly": 39,
+  "pricing": {
+    "plan": "Email marketing",
+    "basis": "monthly",
+    "source": "https://drip.com/pricing",
+    "checkedOn": "2026-07-31",
+    "confidence": "high",
+    "notes": "Official starting monthly tier for a small contact count.",
+    "native": "39 USD",
+    "kind": "fixed",
+    "currency": "USD"
+  },
+  "verdict": "no",
+  "verdictConfidence": "high",
+  "verdictSummary": "A consolation build is possible, but the paid product's decisive value sits outside a solo rebuild. For Drip, send event-triggered ecommerce email from a small user-owned event stream. The hard boundary is commerce integrations, identity resolution, deliverability, segmentation, and revenue analytics, plus deliverability, growth network, and integrations.",
+  "coreLoopDIY": "collect subscribers for send event-triggered ecommerce email from a small user-owned event stream, compose and send compliant campaigns, publish a web archive, and report basic delivery and click events",
+  "diyTimeEstimate": "closest consolation build: one sitting",
+  "requirements": [
+    "Amazon SES account",
+    "verified sending domain",
+    "PostgreSQL",
+    "public HTTPS deploy target",
+    "DNS access"
+  ],
+  "whatYouLose": [
+    "commerce integrations, identity resolution, deliverability, segmentation, and revenue analytics",
+    "inbox-placement expertise",
+    "advanced automations",
+    "commerce integrations",
+    "recommendation and ad networks"
+  ],
+  "moatType": "deliverability, growth network, and integrations",
+  "replacementScope": "single-publication newsletter",
+  "ongoingBurden": "DNS authentication, reputation, bounces, complaints, unsubscribe compliance, templates, queues, analytics, backups, and support",
+  "whyPeopleStillPay": "People still pay for Drip because newsletter operators pay for inbox placement, growth mechanics, and operational confidence on publication day. The recurring cost buys DNS authentication, reputation, bounces, complaints, unsubscribe compliance, templates, queues, analytics, backups, and support, not just the visible interface.",
+  "priorArt": [
+    {
+      "name": "Listmonk",
+      "url": "https://github.com/knadh/listmonk",
+      "desc": "Mature open-source newsletter and mailing-list manager."
+    }
+  ],
+  "relatedSlugs": [
+    "substack",
+    "mailerlite",
+    "activecampaign"
+  ],
+  "pagePriority": 4,
+  "verifiedOneShot": false,
+  "notes": "Editorial comparison targets the Email marketing plan and a single-publication newsletter DIY substitute. Recheck price before merge.",
+  "prompt": "Build a closest honest personal substitute for Drip in an empty repository.\nUse Next.js 15, TypeScript, PostgreSQL, Drizzle ORM, and Amazon SES; do not offer alternative stacks.\nThe core loop is: collect subscribers for send event-triggered ecommerce email from a small user-owned event stream, compose and send compliant campaigns, publish a web archive, and report basic delivery and click events\nMake the first run work locally with one documented command.\nStore all user data locally by default and make export straightforward.\nPut secrets in .env, ship .env.example, and never commit credentials.\nImplement subscriber import, double opt-in, unsubscribe, suppression, tags, and consent timestamps.\nCreate a Markdown campaign editor with HTML and plain-text previews.\nQueue sends through SES with retries, rate limits, idempotency, and resumable batches.\nProcess delivery, bounce, complaint, open, and click webhooks without logging message content.\nPublish a simple issue archive and subscriber preference page.\nAdd test sends, seed-list checks, DNS setup guidance, exports, and backups.\nInclude clear empty, loading, success, and recoverable error states.\nAdd input validation, safe filenames, and graceful handling of unavailable APIs.\nWrite focused tests for the core transformation and one end-to-end happy path.\nCreate a README with setup, architecture, permissions, data location, and backup steps.\nDo not add accounts, billing, telemetry, analytics, or a hosted control plane.\nDo not claim to reproduce proprietary data, network liquidity, regulated access, or frontier infrastructure.\nDeliberately leave out a newsletter recommendation marketplace.\nDeliberately leave out ad sales and payment infrastructure.\nDeliberately leave out complex lifecycle automation and enterprise deliverability support.\nFinish by running the tests and listing the exact commands used.",
+  "promptCurated": false
+}

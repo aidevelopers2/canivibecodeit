@@ -1,0 +1,60 @@
+{
+  "slug": "copy-ai",
+  "name": "Copy.ai",
+  "domain": "copy.ai",
+  "appURL": "https://copy.ai",
+  "category": "ai-writing",
+  "subcategory": "AI drafting, research and content optimization",
+  "tagline": "Build repeatable go-to-market drafting workflows from approved company context",
+  "priceMonthly": null,
+  "pricing": {
+    "plan": "Chat",
+    "basis": "monthly",
+    "source": "https://copy.ai/pricing",
+    "checkedOn": "2026-07-31",
+    "confidence": "medium",
+    "notes": "Typical self-serve paid tier; plan names and included workflow credits can change.",
+    "native": "49 USD",
+    "kind": "usage-based",
+    "currency": "USD"
+  },
+  "verdict": "kinda",
+  "verdictConfidence": "medium",
+  "verdictSummary": "The core loop is buildable, but a dependable replacement becomes a real weekend or multi-day project. For Copy.ai, build repeatable go-to-market drafting workflows from approved company context. The hard boundary is workflow templates, account data, team collaboration, and model routing, plus workflow, data, and model tuning.",
+  "coreLoopDIY": "take a brief, gather user-supplied source material, generate a structured draft for build repeatable go-to-market drafting workflows from approved company context, and keep citations and revisions attached to each section",
+  "diyTimeEstimate": "multi-day",
+  "requirements": [
+    "OpenAI API key",
+    "Node.js 22",
+    "local or self-hosted deployment",
+    "user-supplied sources"
+  ],
+  "whatYouLose": [
+    "workflow templates, account data, team collaboration, and model routing",
+    "proprietary ranking data",
+    "brand-trained models",
+    "team workflows",
+    "large template libraries"
+  ],
+  "moatType": "workflow, data, and model tuning",
+  "replacementScope": "personal content workstation",
+  "ongoingBurden": "prompt maintenance, retrieval quality, source handling, provider changes, and editorial QA",
+  "whyPeopleStillPay": "People still pay for Copy.ai because the subscription bundles a refined workflow, proprietary signals, templates, and predictable output quality for a team. The recurring cost buys prompt maintenance, retrieval quality, source handling, provider changes, and editorial QA, not just the visible interface.",
+  "priorArt": [
+    {
+      "name": "Open WebUI",
+      "url": "https://github.com/open-webui/open-webui",
+      "desc": "Active open-source interface for local and API-backed language models with retrieval features."
+    }
+  ],
+  "relatedSlugs": [
+    "writesonic",
+    "anyword",
+    "jenni-ai"
+  ],
+  "pagePriority": 4,
+  "verifiedOneShot": false,
+  "notes": "Editorial comparison targets the Chat plan and a personal content workstation DIY substitute. Recheck price before merge.",
+  "prompt": "Build a personal replacement for Copy.ai in an empty repository.\nUse Next.js 15, TypeScript, Tailwind CSS, SQLite, Drizzle ORM, and the OpenAI Responses API; do not offer alternative stacks.\nThe core loop is: take a brief, gather user-supplied source material, generate a structured draft for build repeatable go-to-market drafting workflows from approved company context, and keep citations and revisions attached to each section\nMake the first run work locally with one documented command.\nStore all user data locally by default and make export straightforward.\nPut secrets in .env, ship .env.example, and never commit credentials.\nBuild a brief form with audience, objective, tone, source URLs, and prohibited claims.\nStore imported source text locally and chunk it for retrieval with SQLite FTS5.\nGenerate an outline first and require approval before drafting sections.\nAttach source references to generated paragraphs and flag unsupported claims.\nProvide rewrite controls for shorten, clarify, change tone, and add evidence.\nExport clean Markdown plus a JSON research bundle.\nInclude clear empty, loading, success, and recoverable error states.\nAdd input validation, safe filenames, and graceful handling of unavailable APIs.\nWrite focused tests for the core transformation and one end-to-end happy path.\nCreate a README with setup, architecture, permissions, data location, and backup steps.\nDo not add accounts, billing, telemetry, analytics, or a hosted control plane.\nDeliberately leave out live search-engine rank data.\nDeliberately leave out automatic publishing to third-party CMSs.\nDeliberately leave out multi-user approvals and brand governance.\nFinish by running the tests and listing the exact commands used.",
+  "promptCurated": false
+}

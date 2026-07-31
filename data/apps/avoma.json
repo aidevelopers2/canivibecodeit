@@ -1,0 +1,60 @@
+{
+  "slug": "avoma",
+  "name": "Avoma",
+  "domain": "avoma.com",
+  "appURL": "https://avoma.com",
+  "category": "meeting-notes",
+  "subcategory": "meeting transcription and AI notes",
+  "tagline": "Transcribe calls and maintain a lightweight coaching notebook from user-owned recordings",
+  "priceMonthly": 29,
+  "pricing": {
+    "plan": "Startup",
+    "basis": "annual-equivalent per user",
+    "source": "https://avoma.com/pricing",
+    "checkedOn": "2026-07-31",
+    "confidence": "medium",
+    "notes": "Advertised annual-equivalent startup seat price; monthly billing is higher.",
+    "native": "29 USD",
+    "kind": "fixed",
+    "currency": "USD"
+  },
+  "verdict": "no",
+  "verdictConfidence": "high",
+  "verdictSummary": "A consolation build is possible, but the paid product's decisive value sits outside a solo rebuild. For Avoma, transcribe calls and maintain a lightweight coaching notebook from user-owned recordings. The hard boundary is conversation intelligence, crm data, forecasting, coaching, and enterprise integrations, plus capture reliability, integrations, and collaboration.",
+  "coreLoopDIY": "record or import a meeting, transcribe it locally, identify speakers with manual correction, and generate structured notes for transcribe calls and maintain a lightweight coaching notebook from user-owned recordings",
+  "diyTimeEstimate": "closest consolation build: one sitting",
+  "requirements": [
+    "desktop microphone access",
+    "whisper.cpp model files",
+    "optional OpenAI or Anthropic API key",
+    "local storage"
+  ],
+  "whatYouLose": [
+    "conversation intelligence, CRM data, forecasting, coaching, and enterprise integrations",
+    "calendar auto-join",
+    "reliable speaker diarization",
+    "mobile capture",
+    "team search and sharing"
+  ],
+  "moatType": "capture reliability, integrations, and collaboration",
+  "replacementScope": "personal meeting notebook",
+  "ongoingBurden": "audio permissions, model updates, calendar APIs, storage, speaker correction, and sync",
+  "whyPeopleStillPay": "People still pay for Avoma because a meeting tool must capture every call without surprising anyone, then make the result searchable and shareable across a team. The recurring cost buys audio permissions, model updates, calendar APIs, storage, speaker correction, and sync, not just the visible interface.",
+  "priorArt": [
+    {
+      "name": "whisper.cpp",
+      "url": "https://github.com/ggerganov/whisper.cpp",
+      "desc": "Widely used local Whisper inference implementation suitable for private transcription."
+    }
+  ],
+  "relatedSlugs": [
+    "fathom-ai",
+    "read-ai",
+    "meetgeek"
+  ],
+  "pagePriority": 4,
+  "verifiedOneShot": false,
+  "notes": "Editorial comparison targets the Startup plan and a personal meeting notebook DIY substitute. Recheck price before merge.",
+  "prompt": "Build a closest honest personal substitute for Avoma in an empty repository.\nUse Python 3.12, FastAPI, SQLite, whisper.cpp, and a minimal HTMX interface; do not offer alternative stacks.\nThe core loop is: record or import a meeting, transcribe it locally, identify speakers with manual correction, and generate structured notes for transcribe calls and maintain a lightweight coaching notebook from user-owned recordings\nMake the first run work locally with one documented command.\nStore all user data locally by default and make export straightforward.\nPut secrets in .env, ship .env.example, and never commit credentials.\nAdd explicit start, pause, resume, and stop controls with a visible recording indicator.\nSupport importing WAV, MP3, M4A, and MP4 files through ffmpeg.\nRun transcription locally and display timestamped editable segments.\nLet the user rename speakers and propagate corrections through the transcript.\nGenerate decisions, action items, questions, and a concise summary from approved text.\nExport Markdown, plain text, and WebVTT beside the original recording.\nInclude clear empty, loading, success, and recoverable error states.\nAdd input validation, safe filenames, and graceful handling of unavailable APIs.\nWrite focused tests for the core transformation and one end-to-end happy path.\nCreate a README with setup, architecture, permissions, data location, and backup steps.\nDo not add accounts, billing, telemetry, analytics, or a hosted control plane.\nDo not claim to reproduce proprietary data, network liquidity, regulated access, or frontier infrastructure.\nDeliberately leave out silent background capture.\nDeliberately leave out automatic bot attendance in video meetings.\nDeliberately leave out team workspaces and enterprise retention controls.\nFinish by running the tests and listing the exact commands used.",
+  "promptCurated": false
+}

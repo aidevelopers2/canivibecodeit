@@ -1,0 +1,60 @@
+{
+  "slug": "deel",
+  "name": "Deel",
+  "domain": "deel.com",
+  "appURL": "https://deel.com",
+  "category": "hr",
+  "subcategory": "HR, recruiting, payroll and workforce operations",
+  "tagline": "Track contractor documents and approvals without employment, payroll, or payment services",
+  "priceMonthly": 49,
+  "pricing": {
+    "plan": "US Payroll",
+    "basis": "monthly per employee",
+    "source": "https://deel.com/pricing",
+    "checkedOn": "2026-07-31",
+    "confidence": "high",
+    "notes": "Official US Payroll monthly employee price; other products differ.",
+    "native": "49 USD",
+    "kind": "fixed",
+    "currency": "USD"
+  },
+  "verdict": "no",
+  "verdictConfidence": "high",
+  "verdictSummary": "A consolation build is possible, but the paid product's decisive value sits outside a solo rebuild. For Deel, track contractor documents and approvals without employment, payroll, or payment services. The hard boundary is global employment entities, contracts, payroll, compliance, payments, and immigration, plus compliance, payroll, and regulated integrations.",
+  "coreLoopDIY": "track non-sensitive people operations for track contractor documents and approvals without employment, payroll, or payment services, maintain approvals and records, and export data without calculating payroll or making employment decisions",
+  "diyTimeEstimate": "closest consolation build: one sitting",
+  "requirements": [
+    "PostgreSQL",
+    "private self-hosted deployment",
+    "strict admin access",
+    "documented retention policy"
+  ],
+  "whatYouLose": [
+    "global employment entities, contracts, payroll, compliance, payments, and immigration",
+    "payroll rails",
+    "tax and labor-law compliance",
+    "benefits integrations",
+    "identity checks and global employment infrastructure"
+  ],
+  "moatType": "compliance, payroll, and regulated integrations",
+  "replacementScope": "internal records tracker without payroll",
+  "ongoingBurden": "sensitive data, access, retention, audit, payroll calculations, filings, benefits, employment law, incident response, and support",
+  "whyPeopleStillPay": "People still pay for Deel because HR platforms survive because mistakes affect pay, benefits, immigration, and legal obligations, not because forms are difficult to render. The recurring cost buys sensitive data, access, retention, audit, payroll calculations, filings, benefits, employment law, incident response, and support, not just the visible interface.",
+  "priorArt": [
+    {
+      "name": "Frappe HR",
+      "url": "https://github.com/frappe/hrms",
+      "desc": "Active open-source human-resources and payroll application built on Frappe."
+    }
+  ],
+  "relatedSlugs": [
+    "gusto",
+    "rippling",
+    "remote-com"
+  ],
+  "pagePriority": 5,
+  "verifiedOneShot": false,
+  "notes": "Editorial comparison targets the US Payroll plan and a internal records tracker without payroll DIY substitute. Recheck price before merge.",
+  "prompt": "Build a closest honest personal substitute for Deel in an empty repository.\nUse Next.js 15, TypeScript, PostgreSQL, Drizzle ORM, and Docker Compose; do not offer alternative stacks.\nThe core loop is: track non-sensitive people operations for track contractor documents and approvals without employment, payroll, or payment services, maintain approvals and records, and export data without calculating payroll or making employment decisions\nMake the first run work locally with one documented command.\nStore all user data locally by default and make export straightforward.\nPut secrets in .env, ship .env.example, and never commit credentials.\nImplement employees, teams, roles, documents, leave requests, equipment, onboarding tasks, and acknowledgements.\nUse least-privilege roles and log every read or change to sensitive records.\nAdd approval workflows, expiry reminders, export, retention, deletion holds, and encrypted backups.\nKeep compensation fields optional and never calculate payroll, taxes, benefits, or statutory filings.\nProvide a data dictionary and explain which fields should not be stored without legal review.\nShip Docker Compose, health checks, disaster recovery, and an emergency-access procedure.\nInclude clear empty, loading, success, and recoverable error states.\nAdd input validation, safe filenames, and graceful handling of unavailable APIs.\nWrite focused tests for the core transformation and one end-to-end happy path.\nCreate a README with setup, architecture, permissions, data location, and backup steps.\nDo not add accounts, billing, telemetry, analytics, or a hosted control plane.\nDo not claim to reproduce proprietary data, network liquidity, regulated access, or frontier infrastructure.\nDeliberately leave out payroll calculation or money movement.\nDeliberately leave out automated hiring decisions or applicant scoring.\nDeliberately leave out tax, benefits, immigration, identity, and global-employment compliance.\nFinish by running the tests and listing the exact commands used.",
+  "promptCurated": false
+}

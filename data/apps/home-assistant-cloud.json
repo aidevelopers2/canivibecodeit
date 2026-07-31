@@ -1,0 +1,59 @@
+{
+  "slug": "home-assistant-cloud",
+  "name": "Home Assistant Cloud",
+  "domain": "nabucasa.com",
+  "appURL": "https://nabucasa.com",
+  "category": "home",
+  "subcategory": "family organization, recipes and household inventory",
+  "tagline": "Self-host smart-home control and use a user-owned remote-access tunnel",
+  "priceMonthly": 7.5,
+  "pricing": {
+    "plan": "Cloud",
+    "basis": "monthly",
+    "source": "https://nabucasa.com/pricing",
+    "checkedOn": "2026-07-31",
+    "confidence": "high",
+    "notes": "Official monthly subscription.",
+    "native": "7.5 USD",
+    "kind": "fixed",
+    "currency": "USD"
+  },
+  "verdict": "kinda",
+  "verdictConfidence": "medium",
+  "verdictSummary": "The core loop is buildable, but a dependable replacement becomes a real weekend or multi-day project. For Home Assistant Cloud, self-host smart-home control and use a user-owned remote-access tunnel. The hard boundary is managed remote access, voice integrations, funding for open source, and low-maintenance security, plus sync, integrations, and household adoption.",
+  "coreLoopDIY": "organize household information for self-host smart-home control and use a user-owned remote-access tunnel, share or print a simple plan, and keep data portable and owner-controlled",
+  "diyTimeEstimate": "one sitting",
+  "requirements": [
+    "modern browser",
+    "local or self-hosted storage",
+    "optional email notifications"
+  ],
+  "whatYouLose": [
+    "managed remote access, voice integrations, funding for open source, and low-maintenance security",
+    "frictionless family sync",
+    "retailer and smart-home integrations",
+    "large recipe or product database",
+    "mobile polish"
+  ],
+  "moatType": "sync, integrations, and household adoption",
+  "replacementScope": "single-household organizer",
+  "ongoingBurden": "multi-user conflicts, reminders, notifications, imports, barcode data, smart-home APIs, backups, and long-term maintenance",
+  "whyPeopleStillPay": "People still pay for Home Assistant Cloud because household apps survive when every family member actually uses them and the data stays current across devices. The recurring cost buys multi-user conflicts, reminders, notifications, imports, barcode data, smart-home APIs, backups, and long-term maintenance, not just the visible interface.",
+  "priorArt": [
+    {
+      "name": "Mealie",
+      "url": "https://github.com/mealie-recipes/mealie",
+      "desc": "Active open-source recipe manager and meal planner for households."
+    }
+  ],
+  "relatedSlugs": [
+    "paprika-recipe-manager",
+    "cozi-gold",
+    "anylist-complete"
+  ],
+  "pagePriority": 5,
+  "verifiedOneShot": false,
+  "notes": "Editorial comparison targets the Cloud plan and a single-household organizer DIY substitute. Recheck price before merge.",
+  "prompt": "Build a personal replacement for Home Assistant Cloud in an empty repository.\nUse Next.js 15, TypeScript, SQLite, Drizzle ORM, and a local-first PWA; do not offer alternative stacks.\nThe core loop is: organize household information for self-host smart-home control and use a user-owned remote-access tunnel, share or print a simple plan, and keep data portable and owner-controlled\nMake the first run work locally with one documented command.\nStore all user data locally by default and make export straightforward.\nPut secrets in .env, ship .env.example, and never commit credentials.\nCreate household members, shared lists, calendar items, recipes or inventory records, and assignments.\nProvide fast mobile-first capture with large controls, offline queueing, and conflict-safe sync to one server.\nSupport recurring chores or events, reminders, completion history, and printable views.\nAdd CSV or JSON import and export plus photo attachments with clear size limits.\nAllow private and shared items and make every change attributable and undoable.\nAdd backups, household export, member removal, and a simple invite code.\nInclude clear empty, loading, success, and recoverable error states.\nAdd input validation, safe filenames, and graceful handling of unavailable APIs.\nWrite focused tests for the core transformation and one end-to-end happy path.\nCreate a README with setup, architecture, permissions, data location, and backup steps.\nDo not add accounts, billing, telemetry, analytics, or a hosted control plane.\nDeliberately leave out retailer ordering and proprietary product catalogs.\nDeliberately leave out broad smart-home integrations.\nDeliberately leave out large public recipe libraries and polished native mobile clients.\nFinish by running the tests and listing the exact commands used.",
+  "promptCurated": false
+}

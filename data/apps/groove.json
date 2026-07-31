@@ -1,0 +1,60 @@
+{
+  "slug": "groove",
+  "name": "Groove",
+  "domain": "groovehq.com",
+  "appURL": "https://groovehq.com",
+  "category": "customer-support",
+  "subcategory": "help desks, live chat and support knowledge",
+  "tagline": "Turn one support mailbox into an assigned team inbox with a knowledge base",
+  "priceMonthly": 20,
+  "pricing": {
+    "plan": "Standard",
+    "basis": "monthly per user",
+    "source": "https://groovehq.com/pricing",
+    "checkedOn": "2026-07-31",
+    "confidence": "medium",
+    "notes": "Typical Standard monthly user rate.",
+    "native": "20 USD",
+    "kind": "fixed",
+    "currency": "USD"
+  },
+  "verdict": "kinda",
+  "verdictConfidence": "medium",
+  "verdictSummary": "The core loop is buildable, but a dependable replacement becomes a real weekend or multi-day project. For Groove, turn one support mailbox into an assigned team inbox with a knowledge base. The hard boundary is email reliability, reporting, rules, integrations, and mature simplicity, plus channel integrations and support operations.",
+  "coreLoopDIY": "receive customer messages for turn one support mailbox into an assigned team inbox with a knowledge base, route them into a shared inbox, reply from one place, and retain a searchable conversation history",
+  "diyTimeEstimate": "multi-day",
+  "requirements": [
+    "Docker",
+    "PostgreSQL",
+    "public HTTPS deployment",
+    "email or chat channel credentials"
+  ],
+  "whatYouLose": [
+    "email reliability, reporting, rules, integrations, and mature simplicity",
+    "omnichannel integrations",
+    "large-scale deliverability",
+    "AI resolution tuning",
+    "enterprise routing and compliance"
+  ],
+  "moatType": "channel integrations and support operations",
+  "replacementScope": "small-team shared inbox",
+  "ongoingBurden": "message delivery, webhooks, threading, identity, permissions, attachments, notifications, spam, search, uptime, and retention",
+  "whyPeopleStillPay": "People still pay for Groove because support software survives because missing or misrouting one customer message is expensive and every channel behaves differently. The recurring cost buys message delivery, webhooks, threading, identity, permissions, attachments, notifications, spam, search, uptime, and retention, not just the visible interface.",
+  "priorArt": [
+    {
+      "name": "Chatwoot",
+      "url": "https://github.com/chatwoot/chatwoot",
+      "desc": "Mature open-source customer engagement and shared-inbox platform."
+    }
+  ],
+  "relatedSlugs": [
+    "intercom",
+    "zendesk",
+    "help-scout"
+  ],
+  "pagePriority": 3,
+  "verifiedOneShot": false,
+  "notes": "Editorial comparison targets the Standard plan and a small-team shared inbox DIY substitute. Recheck price before merge.",
+  "prompt": "Build a personal replacement for Groove in an empty repository.\nUse Next.js 15, TypeScript, PostgreSQL, Drizzle ORM, WebSockets, and Docker Compose; do not offer alternative stacks.\nThe core loop is: receive customer messages for turn one support mailbox into an assigned team inbox with a knowledge base, route them into a shared inbox, reply from one place, and retain a searchable conversation history\nMake the first run work locally with one documented command.\nStore all user data locally by default and make export straightforward.\nPut secrets in .env, ship .env.example, and never commit credentials.\nImplement one workspace, agents, contacts, inboxes, conversations, messages, labels, and assignment.\nProvide a website chat widget with reconnect, unread counts, file limits, and clear availability state.\nCreate a shared inbox with filters, collision warnings, notes, canned replies, and searchable history.\nAdd email notifications, browser notifications, and an immutable assignment and status log.\nImplement spam controls, attachment scanning hooks, retention settings, export, and contact deletion.\nShip Docker Compose, backups, health checks, migrations, and a documented admin recovery flow.\nInclude clear empty, loading, success, and recoverable error states.\nAdd input validation, safe filenames, and graceful handling of unavailable APIs.\nWrite focused tests for the core transformation and one end-to-end happy path.\nCreate a README with setup, architecture, permissions, data location, and backup steps.\nDo not add accounts, billing, telemetry, analytics, or a hosted control plane.\nDeliberately leave out many social and messaging channels.\nDeliberately leave out AI agents trained on proprietary support data.\nDeliberately leave out enterprise workforce management, SSO, and compliance.\nFinish by running the tests and listing the exact commands used.",
+  "promptCurated": false
+}

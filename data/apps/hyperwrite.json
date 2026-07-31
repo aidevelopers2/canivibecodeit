@@ -1,0 +1,60 @@
+{
+  "slug": "hyperwrite",
+  "name": "HyperWrite",
+  "domain": "hyperwriteai.com",
+  "appURL": "https://hyperwriteai.com",
+  "category": "ai-writing",
+  "subcategory": "AI drafting, research and content optimization",
+  "tagline": "Draft, rewrite, and answer questions using user-selected context and personal templates",
+  "priceMonthly": null,
+  "pricing": {
+    "plan": "Premium",
+    "basis": "monthly",
+    "source": "https://hyperwriteai.com/plans",
+    "checkedOn": "2026-07-31",
+    "confidence": "medium",
+    "notes": "Typical Premium monthly rate; usage limits apply.",
+    "native": "19.99 USD",
+    "kind": "usage-based",
+    "currency": "USD"
+  },
+  "verdict": "yes",
+  "verdictConfidence": "high",
+  "verdictSummary": "The core loop is small enough for a capable coding agent to produce a useful local version in one sitting. For HyperWrite, draft, rewrite, and answer questions using user-selected context and personal templates. The hard boundary is browser presence, personalization history, and proprietary agent workflows, plus workflow, data, and model tuning.",
+  "coreLoopDIY": "take a brief, gather user-supplied source material, generate a structured draft for draft, rewrite, and answer questions using user-selected context and personal templates, and keep citations and revisions attached to each section",
+  "diyTimeEstimate": "multi-day",
+  "requirements": [
+    "OpenAI API key",
+    "Node.js 22",
+    "local or self-hosted deployment",
+    "user-supplied sources"
+  ],
+  "whatYouLose": [
+    "browser presence, personalization history, and proprietary agent workflows",
+    "proprietary ranking data",
+    "brand-trained models",
+    "team workflows",
+    "large template libraries"
+  ],
+  "moatType": "workflow, data, and model tuning",
+  "replacementScope": "personal content workstation",
+  "ongoingBurden": "prompt maintenance, retrieval quality, source handling, provider changes, and editorial QA",
+  "whyPeopleStillPay": "People still pay for HyperWrite because the subscription bundles a refined workflow, proprietary signals, templates, and predictable output quality for a team. The recurring cost buys prompt maintenance, retrieval quality, source handling, provider changes, and editorial QA, not just the visible interface.",
+  "priorArt": [
+    {
+      "name": "Open WebUI",
+      "url": "https://github.com/open-webui/open-webui",
+      "desc": "Active open-source interface for local and API-backed language models with retrieval features."
+    }
+  ],
+  "relatedSlugs": [
+    "writesonic",
+    "copy-ai",
+    "anyword"
+  ],
+  "pagePriority": 3,
+  "verifiedOneShot": false,
+  "notes": "Editorial comparison targets the Premium plan and a personal content workstation DIY substitute. Recheck price before merge.",
+  "prompt": "Build a personal replacement for HyperWrite in an empty repository.\nUse Next.js 15, TypeScript, Tailwind CSS, SQLite, Drizzle ORM, and the OpenAI Responses API; do not offer alternative stacks.\nThe core loop is: take a brief, gather user-supplied source material, generate a structured draft for draft, rewrite, and answer questions using user-selected context and personal templates, and keep citations and revisions attached to each section\nMake the first run work locally with one documented command.\nStore all user data locally by default and make export straightforward.\nPut secrets in .env, ship .env.example, and never commit credentials.\nBuild a brief form with audience, objective, tone, source URLs, and prohibited claims.\nStore imported source text locally and chunk it for retrieval with SQLite FTS5.\nGenerate an outline first and require approval before drafting sections.\nAttach source references to generated paragraphs and flag unsupported claims.\nProvide rewrite controls for shorten, clarify, change tone, and add evidence.\nExport clean Markdown plus a JSON research bundle.\nInclude clear empty, loading, success, and recoverable error states.\nAdd input validation, safe filenames, and graceful handling of unavailable APIs.\nWrite focused tests for the core transformation and one end-to-end happy path.\nCreate a README with setup, architecture, permissions, data location, and backup steps.\nDo not add accounts, billing, telemetry, analytics, or a hosted control plane.\nDeliberately leave out live search-engine rank data.\nDeliberately leave out automatic publishing to third-party CMSs.\nDeliberately leave out multi-user approvals and brand governance.\nFinish by running the tests and listing the exact commands used.",
+  "promptCurated": false
+}

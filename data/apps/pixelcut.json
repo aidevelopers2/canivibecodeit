@@ -1,0 +1,60 @@
+{
+  "slug": "pixelcut",
+  "name": "Pixelcut",
+  "domain": "pixelcut.ai",
+  "appURL": "https://pixelcut.ai",
+  "category": "generative-media",
+  "subcategory": "AI image and video generation",
+  "tagline": "Batch-remove backgrounds, resize product images, and apply simple local templates",
+  "priceMonthly": 9.99,
+  "pricing": {
+    "plan": "Pro",
+    "basis": "monthly",
+    "source": "https://pixelcut.ai/pricing",
+    "checkedOn": "2026-07-31",
+    "confidence": "medium",
+    "notes": "Typical Pro monthly rate.",
+    "native": "9.99 USD",
+    "kind": "fixed",
+    "currency": "USD"
+  },
+  "verdict": "kinda",
+  "verdictConfidence": "medium",
+  "verdictSummary": "The core loop is buildable, but a dependable replacement becomes a real weekend or multi-day project. For Pixelcut, batch-remove backgrounds, resize product images, and apply simple local templates. The hard boundary is mobile polish, hosted models, team assets, and api scale, plus frontier models, compute, and data.",
+  "coreLoopDIY": "organize prompts and local generation workflows for batch-remove backgrounds, resize product images, and apply simple local templates, submit jobs to a user-owned model server, and keep outputs reproducible",
+  "diyTimeEstimate": "closest consolation build: one sitting",
+  "requirements": [
+    "GPU-capable machine or user-supplied generation API",
+    "ComfyUI",
+    "model files with appropriate licenses",
+    "local storage"
+  ],
+  "whatYouLose": [
+    "mobile polish, hosted models, team assets, and API scale",
+    "frontier proprietary models",
+    "hosted GPU capacity",
+    "licensed training data",
+    "moderation and fast global delivery"
+  ],
+  "moatType": "frontier models, compute, and data",
+  "replacementScope": "local workflow manager, not a model replacement",
+  "ongoingBurden": "GPU procurement, model licensing, safety filters, queueing, storage, and rapid model replacement",
+  "whyPeopleStillPay": "People still pay for Pixelcut because the product value is the model and compute fleet, not the prompt box around it. The recurring cost buys GPU procurement, model licensing, safety filters, queueing, storage, and rapid model replacement, not just the visible interface.",
+  "priorArt": [
+    {
+      "name": "ComfyUI",
+      "url": "https://github.com/comfyanonymous/ComfyUI",
+      "desc": "Node-based open-source diffusion workflow engine with a large ecosystem."
+    }
+  ],
+  "relatedSlugs": [
+    "ideogram",
+    "recraft",
+    "photoroom"
+  ],
+  "pagePriority": 4,
+  "verifiedOneShot": false,
+  "notes": "Editorial comparison targets the Pro plan and a local workflow manager, not a model replacement DIY substitute. Recheck price before merge.",
+  "prompt": "Build a personal replacement for Pixelcut in an empty repository.\nUse Python 3.12, FastAPI, SQLite, ComfyUI as a local worker, and a small React frontend; do not offer alternative stacks.\nThe core loop is: organize prompts and local generation workflows for batch-remove backgrounds, resize product images, and apply simple local templates, submit jobs to a user-owned model server, and keep outputs reproducible\nMake the first run work locally with one documented command.\nStore all user data locally by default and make export straightforward.\nPut secrets in .env, ship .env.example, and never commit credentials.\nCreate prompt, negative-prompt, seed, dimensions, model, and workflow controls.\nSubmit jobs only to the local ComfyUI endpoint configured in .env.\nRecord exact generation parameters and workflow JSON beside every output.\nBuild a searchable contact sheet with compare, favorite, annotate, and rerun actions.\nSupport local image-to-image and mask inputs without uploading them elsewhere.\nShow estimated VRAM needs and fail clearly when a workflow or model is missing.\nInclude clear empty, loading, success, and recoverable error states.\nAdd input validation, safe filenames, and graceful handling of unavailable APIs.\nWrite focused tests for the core transformation and one end-to-end happy path.\nCreate a README with setup, architecture, permissions, data location, and backup steps.\nDo not add accounts, billing, telemetry, analytics, or a hosted control plane.\nDeliberately leave out training a new frontier model.\nDeliberately leave out copying a vendor's proprietary model or dataset.\nDeliberately leave out public generation hosting and moderation.\nFinish by running the tests and listing the exact commands used.",
+  "promptCurated": false
+}

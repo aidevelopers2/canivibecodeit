@@ -1,0 +1,61 @@
+{
+  "slug": "publer",
+  "name": "Publer",
+  "domain": "publer.io",
+  "appURL": "https://publer.io",
+  "category": "social-media",
+  "subcategory": "social scheduling and content repurposing",
+  "tagline": "Schedule posts across a small set of networks and maintain reusable media",
+  "priceMonthly": 12,
+  "pricing": {
+    "plan": "Professional",
+    "basis": "monthly",
+    "source": "https://publer.io/plans",
+    "checkedOn": "2026-07-31",
+    "confidence": "medium",
+    "notes": "Typical Professional starting monthly price; account count changes total.",
+    "native": "12 USD",
+    "kind": "fixed",
+    "currency": "USD"
+  },
+  "verdict": "kinda",
+  "verdictConfidence": "medium",
+  "verdictSummary": "The core loop is buildable, but a dependable replacement becomes a real weekend or multi-day project. For Publer, schedule posts across a small set of networks and maintain reusable media. The hard boundary is connector breadth, bulk workflows, analytics, collaboration, and hosted reliability, plus api access, connector upkeep, and collaboration.",
+  "coreLoopDIY": "draft and schedule posts for schedule posts across a small set of networks and maintain reusable media, preview them accurately, publish through one official API, and retain a searchable content calendar",
+  "diyTimeEstimate": "multi-day",
+  "requirements": [
+    "developer application for one social network",
+    "OAuth credentials",
+    "PostgreSQL",
+    "public HTTPS endpoint",
+    "background worker"
+  ],
+  "whatYouLose": [
+    "connector breadth, bulk workflows, analytics, collaboration, and hosted reliability",
+    "many maintained network APIs",
+    "inbox and moderation",
+    "deep analytics",
+    "team approvals and asset libraries"
+  ],
+  "moatType": "API access, connector upkeep, and collaboration",
+  "replacementScope": "single-network scheduler",
+  "ongoingBurden": "OAuth review, API policy changes, media limits, queues, retries, rate limits, webhooks, tokens, and moderation workflows",
+  "whyPeopleStillPay": "People still pay for Publer because the scheduler is easy; staying approved and correct across constantly changing social APIs is the subscription. The recurring cost buys OAuth review, API policy changes, media limits, queues, retries, rate limits, webhooks, tokens, and moderation workflows, not just the visible interface.",
+  "priorArt": [
+    {
+      "name": "Postiz",
+      "url": "https://github.com/gitroomhq/postiz-app",
+      "desc": "Active open-source social media scheduling platform."
+    }
+  ],
+  "relatedSlugs": [
+    "hootsuite",
+    "metricool",
+    "hypefury"
+  ],
+  "pagePriority": 4,
+  "verifiedOneShot": false,
+  "notes": "Editorial comparison targets the Professional plan and a single-network scheduler DIY substitute. Recheck price before merge.",
+  "prompt": "Build a personal replacement for Publer in an empty repository.\nUse Next.js 15, TypeScript, PostgreSQL, Drizzle ORM, and one official social-platform API; do not offer alternative stacks.\nThe core loop is: draft and schedule posts for schedule posts across a small set of networks and maintain reusable media, preview them accurately, publish through one official API, and retain a searchable content calendar\nMake the first run work locally with one documented command.\nStore all user data locally by default and make export straightforward.\nPut secrets in .env, ship .env.example, and never commit credentials.\nSupport drafts, scheduled times, queues, campaigns, tags, and a weekly calendar.\nConnect exactly one social network using its documented OAuth flow.\nValidate character, media, aspect-ratio, and file-size limits before scheduling.\nPublish through an idempotent background job with retries and clear failure states.\nStore platform post identifiers and refresh publication status without scraping.\nAdd reusable snippets, local media storage, CSV export, and a token reconnect flow.\nInclude clear empty, loading, success, and recoverable error states.\nAdd input validation, safe filenames, and graceful handling of unavailable APIs.\nWrite focused tests for the core transformation and one end-to-end happy path.\nCreate a README with setup, architecture, permissions, data location, and backup steps.\nDo not add accounts, billing, telemetry, analytics, or a hosted control plane.\nDeliberately leave out unofficial automation or scraping.\nDeliberately leave out multi-network inbox and social listening.\nDeliberately leave out agency approvals, white labelling, and enterprise reporting.\nFinish by running the tests and listing the exact commands used.",
+  "promptCurated": false
+}

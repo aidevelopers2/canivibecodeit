@@ -1,0 +1,60 @@
+{
+  "slug": "rize",
+  "name": "Rize",
+  "domain": "rize.io",
+  "appURL": "https://rize.io",
+  "category": "time-tracking",
+  "subcategory": "time tracking, focus and attention",
+  "tagline": "Track desktop activity categories and provide neutral focus and break reminders",
+  "priceMonthly": 16.99,
+  "pricing": {
+    "plan": "Rize",
+    "basis": "monthly",
+    "source": "https://rize.io/pricing",
+    "checkedOn": "2026-07-31",
+    "confidence": "high",
+    "notes": "Official monthly subscription.",
+    "native": "16.99 USD",
+    "kind": "fixed",
+    "currency": "USD"
+  },
+  "verdict": "yes",
+  "verdictConfidence": "high",
+  "verdictSummary": "The core loop is small enough for a capable coding agent to produce a useful local version in one sitting. For Rize, track desktop activity categories and provide neutral focus and break reminders. The hard boundary is cross-platform polish, automatic classification, coaching flow, and sync, plus ubiquitous capture, coaching, and team workflow.",
+  "coreLoopDIY": "track time and focused sessions for track desktop activity categories and provide neutral focus and break reminders, review patterns locally, and export a transparent activity record",
+  "diyTimeEstimate": "one sitting",
+  "requirements": [
+    "desktop OS",
+    "notification permission",
+    "optional accessibility permission for app-name tracking",
+    "local SQLite"
+  ],
+  "whatYouLose": [
+    "cross-platform polish, automatic classification, coaching flow, and sync",
+    "cross-device history",
+    "team timesheets and payroll",
+    "behavioral datasets",
+    "blocking across every platform"
+  ],
+  "moatType": "ubiquitous capture, coaching, and team workflow",
+  "replacementScope": "personal desktop tracker",
+  "ongoingBurden": "idle detection, permissions, app metadata, privacy, notifications, sync, reports, integrations, and backups",
+  "whyPeopleStillPay": "People still pay for Rize because the timer is simple, but people pay for frictionless capture and a history they trust enough to invoice or change habits from. The recurring cost buys idle detection, permissions, app metadata, privacy, notifications, sync, reports, integrations, and backups, not just the visible interface.",
+  "priorArt": [
+    {
+      "name": "Kimai",
+      "url": "https://github.com/kimai/kimai",
+      "desc": "Mature open-source time-tracking application with projects, reports, and exports."
+    }
+  ],
+  "relatedSlugs": [
+    "toggl-track",
+    "harvest",
+    "clockify"
+  ],
+  "pagePriority": 4,
+  "verifiedOneShot": false,
+  "notes": "Editorial comparison targets the Rize plan and a personal desktop tracker DIY substitute. Recheck price before merge.",
+  "prompt": "Build a personal replacement for Rize in an empty repository.\nUse Tauri 2, React, TypeScript, SQLite, and optional OS accessibility APIs; do not offer alternative stacks.\nThe core loop is: track time and focused sessions for track desktop activity categories and provide neutral focus and break reminders, review patterns locally, and export a transparent activity record\nMake the first run work locally with one documented command.\nStore all user data locally by default and make export straightforward.\nPut secrets in .env, ship .env.example, and never commit credentials.\nCreate one-click start and stop, manual entries, idle detection, tags, projects, and notes.\nKeep any application-name tracking opt-in and never record window contents or keystrokes.\nAdd Pomodoro-style focus sessions, break reminders, and an optional allowlist blocker.\nProvide daily, weekly, project, and category reports with editable corrections.\nExport CSV and JSON and make the underlying event log inspectable.\nAdd automatic local backups and a privacy screen explaining every collected field.\nInclude clear empty, loading, success, and recoverable error states.\nAdd input validation, safe filenames, and graceful handling of unavailable APIs.\nWrite focused tests for the core transformation and one end-to-end happy path.\nCreate a README with setup, architecture, permissions, data location, and backup steps.\nDo not add accounts, billing, telemetry, analytics, or a hosted control plane.\nDeliberately leave out employee surveillance.\nDeliberately leave out payroll and billing automation.\nDeliberately leave out cross-device blocking and behavioral coaching services.\nFinish by running the tests and listing the exact commands used.",
+  "promptCurated": false
+}

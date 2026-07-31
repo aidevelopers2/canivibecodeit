@@ -1,0 +1,59 @@
+{
+  "slug": "lingq-premium",
+  "name": "LingQ Premium",
+  "domain": "lingq.com",
+  "appURL": "https://lingq.com",
+  "category": "education",
+  "subcategory": "learning, flashcards and language practice",
+  "tagline": "Import permitted text and audio, mark known words, and review vocabulary in context",
+  "priceMonthly": 14.99,
+  "pricing": {
+    "plan": "Premium",
+    "basis": "monthly",
+    "source": "https://lingq.com/pricing",
+    "checkedOn": "2026-07-31",
+    "confidence": "high",
+    "notes": "Official Premium monthly tier.",
+    "native": "14.99 USD",
+    "kind": "fixed",
+    "currency": "USD"
+  },
+  "verdict": "kinda",
+  "verdictConfidence": "medium",
+  "verdictSummary": "The core loop is buildable, but a dependable replacement becomes a real weekend or multi-day project. For LingQ Premium, import permitted text and audio, mark known words, and review vocabulary in context. The hard boundary is content library, import pipeline, multi-device sync, community, tutors, and polish, plus content, pedagogy, and network.",
+  "coreLoopDIY": "turn user-supplied material into a study plan for import permitted text and audio, mark known words, and review vocabulary in context, schedule retrieval practice, and show progress without claiming accredited instruction",
+  "diyTimeEstimate": "multi-day",
+  "requirements": [
+    "modern browser",
+    "user-supplied study material",
+    "optional speech or language-model API key"
+  ],
+  "whatYouLose": [
+    "content library, import pipeline, multi-device sync, community, tutors, and polish",
+    "licensed course catalog",
+    "expert curriculum",
+    "human feedback",
+    "large learner network and certification"
+  ],
+  "moatType": "content, pedagogy, and network",
+  "replacementScope": "personal study companion",
+  "ongoingBurden": "curriculum quality, assessment validity, content rights, spaced-repetition tuning, speech models, sync, moderation, and support",
+  "whyPeopleStillPay": "People still pay for LingQ Premium because the learning loop is buildable, while trusted curriculum, instructors, feedback, credentials, and community are not. The recurring cost buys curriculum quality, assessment validity, content rights, spaced-repetition tuning, speech models, sync, moderation, and support, not just the visible interface.",
+  "priorArt": [
+    {
+      "name": "Moodle",
+      "url": "https://github.com/moodle/moodle",
+      "desc": "Long-running open-source learning platform with courses, assessments, and progress tracking."
+    }
+  ],
+  "relatedSlugs": [
+    "duolingo-super",
+    "brilliant",
+    "babbel"
+  ],
+  "pagePriority": 4,
+  "verifiedOneShot": false,
+  "notes": "Editorial comparison targets the Premium plan and a personal study companion DIY substitute. Recheck price before merge.",
+  "prompt": "Build a personal replacement for LingQ Premium in an empty repository.\nUse Next.js 15, TypeScript, SQLite, Drizzle ORM, and a service worker for offline use; do not offer alternative stacks.\nThe core loop is: turn user-supplied material into a study plan for import permitted text and audio, mark known words, and review vocabulary in context, schedule retrieval practice, and show progress without claiming accredited instruction\nMake the first run work locally with one documented command.\nStore all user data locally by default and make export straightforward.\nPut secrets in .env, ship .env.example, and never commit credentials.\nImport Markdown, text, or user-authored notes and split them into editable learning units.\nCreate flashcards and short quizzes only after showing the generated items for approval.\nImplement a transparent spaced-repetition schedule with due, again, hard, good, and easy actions.\nAdd goals, study sessions, streak-free progress charts, notes, and weak-topic review.\nFor language practice, record the learner and compare timing or pronunciation without presenting medical claims.\nSupport offline use, full export, reset, backup, and deletion of all learning data.\nInclude clear empty, loading, success, and recoverable error states.\nAdd input validation, safe filenames, and graceful handling of unavailable APIs.\nWrite focused tests for the core transformation and one end-to-end happy path.\nCreate a README with setup, architecture, permissions, data location, and backup steps.\nDo not add accounts, billing, telemetry, analytics, or a hosted control plane.\nDeliberately leave out licensed premium courses.\nDeliberately leave out accredited certificates and grading.\nDeliberately leave out live tutors, large classrooms, and a learner marketplace.\nFinish by running the tests and listing the exact commands used.",
+  "promptCurated": false
+}

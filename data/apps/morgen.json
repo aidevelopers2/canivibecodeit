@@ -1,0 +1,59 @@
+{
+  "slug": "morgen",
+  "name": "Morgen",
+  "domain": "morgen.so",
+  "appURL": "https://morgen.so",
+  "category": "tasks",
+  "subcategory": "personal tasks, routines and daily planning",
+  "tagline": "Unify calendars and tasks, create booking pages, and plan work across time zones",
+  "priceMonthly": 14,
+  "pricing": {
+    "plan": "Pro",
+    "basis": "monthly",
+    "source": "https://morgen.so/pricing",
+    "checkedOn": "2026-07-31",
+    "confidence": "medium",
+    "notes": "Typical Pro monthly rate; annual billing may be lower.",
+    "native": "14 USD",
+    "kind": "fixed",
+    "currency": "USD"
+  },
+  "verdict": "kinda",
+  "verdictConfidence": "medium",
+  "verdictSummary": "The core loop is buildable, but a dependable replacement becomes a real weekend or multi-day project. For Morgen, unify calendars and tasks, create booking pages, and plan work across time zones. The hard boundary is multiple calendar providers, task integrations, mobile apps, and sync reliability, plus cross-device reliability and workflow polish.",
+  "coreLoopDIY": "capture tasks for unify calendars and tasks, create booking pages, and plan work across time zones, schedule or repeat them, work from a focused today view, and keep history locally",
+  "diyTimeEstimate": "one sitting",
+  "requirements": [
+    "macOS, Windows, or Linux",
+    "notification permission",
+    "local SQLite database"
+  ],
+  "whatYouLose": [
+    "multiple calendar providers, task integrations, mobile apps, and sync reliability",
+    "perfect mobile sync",
+    "calendar and email integrations",
+    "shared workspaces",
+    "behavioral coaching polish"
+  ],
+  "moatType": "cross-device reliability and workflow polish",
+  "replacementScope": "personal desktop task manager",
+  "ongoingBurden": "recurrence edge cases, notifications, sync conflicts, calendar APIs, mobile capture, and backups",
+  "whyPeopleStillPay": "People still pay for Morgen because task software is sticky because trust, speed, and ubiquitous capture matter more than the database schema. The recurring cost buys recurrence edge cases, notifications, sync conflicts, calendar APIs, mobile capture, and backups, not just the visible interface.",
+  "priorArt": [
+    {
+      "name": "Vikunja",
+      "url": "https://github.com/go-vikunja/vikunja",
+      "desc": "Mature open-source task and project manager with lists, kanban, and recurring work."
+    }
+  ],
+  "relatedSlugs": [
+    "ticktick",
+    "things-3",
+    "routine"
+  ],
+  "pagePriority": 4,
+  "verifiedOneShot": false,
+  "notes": "Editorial comparison targets the Pro plan and a personal desktop task manager DIY substitute. Recheck price before merge.",
+  "prompt": "Build a personal replacement for Morgen in an empty repository.\nUse Tauri 2, React, TypeScript, SQLite, and desktop notifications; do not offer alternative stacks.\nThe core loop is: capture tasks for unify calendars and tasks, create booking pages, and plan work across time zones, schedule or repeat them, work from a focused today view, and keep history locally\nMake the first run work locally with one documented command.\nStore all user data locally by default and make export straightforward.\nPut secrets in .env, ship .env.example, and never commit credentials.\nCreate inbox, today, upcoming, someday, and completed views with fast keyboard capture.\nSupport projects, tags, due dates, start dates, priorities, notes, subtasks, and attachments.\nImplement robust daily, weekly, monthly, and custom recurring rules with tests.\nAdd a focus view with one active task, timer, and optional desktop notification.\nProvide search, saved filters, undo, and a completed-task archive.\nExport and import a documented JSON format and make automatic local backups.\nInclude clear empty, loading, success, and recoverable error states.\nAdd input validation, safe filenames, and graceful handling of unavailable APIs.\nWrite focused tests for the core transformation and one end-to-end happy path.\nCreate a README with setup, architecture, permissions, data location, and backup steps.\nDo not add accounts, billing, telemetry, analytics, or a hosted control plane.\nDeliberately leave out team assignment and comments.\nDeliberately leave out two-way calendar or email synchronization.\nDeliberately leave out native mobile apps and cloud accounts.\nFinish by running the tests and listing the exact commands used.",
+  "promptCurated": false
+}

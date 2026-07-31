@@ -1,0 +1,60 @@
+{
+  "slug": "naturalreader",
+  "name": "NaturalReader",
+  "domain": "naturalreaders.com",
+  "appURL": "https://naturalreaders.com",
+  "category": "voice-ai",
+  "subcategory": "synthetic voice, dubbing and AI avatars",
+  "tagline": "Read user-provided text and documents aloud with a small set of licensed or local voices",
+  "priceMonthly": 9.99,
+  "pricing": {
+    "plan": "Personal",
+    "basis": "monthly",
+    "source": "https://naturalreaders.com/online/",
+    "checkedOn": "2026-07-31",
+    "confidence": "medium",
+    "notes": "Typical Personal monthly rate.",
+    "native": "9.99 USD",
+    "kind": "fixed",
+    "currency": "USD"
+  },
+  "verdict": "kinda",
+  "verdictConfidence": "medium",
+  "verdictSummary": "The core loop is buildable, but a dependable replacement becomes a real weekend or multi-day project. For NaturalReader, read user-provided text and documents aloud with a small set of licensed or local voices. The hard boundary is voice catalog, ocr, document formats, mobile apps, and commercial licensing options, plus models, compute, rights, and safety operations.",
+  "coreLoopDIY": "turn user-authored text into clearly labeled synthetic media for read user-provided text and documents aloud with a small set of licensed or local voices, using a local model and retaining provenance for every output",
+  "diyTimeEstimate": "closest consolation build: one sitting",
+  "requirements": [
+    "local TTS model",
+    "ffmpeg",
+    "GPU recommended",
+    "voices the user has rights and consent to use"
+  ],
+  "whatYouLose": [
+    "voice catalog, OCR, document formats, mobile apps, and commercial licensing options",
+    "frontier voice or avatar model",
+    "licensed voice catalog",
+    "real-time rendering fleet",
+    "moderation, consent verification, and enterprise rights"
+  ],
+  "moatType": "models, compute, rights, and safety operations",
+  "replacementScope": "clearly labeled local synthetic-media tool",
+  "ongoingBurden": "model licensing, consent records, impersonation risk, watermarking, GPU queues, media storage, abuse response, and rapid model changes",
+  "whyPeopleStillPay": "People still pay for NaturalReader because customers pay for output quality, production speed, licensed voices, consent workflows, and a provider that carries the operational risk. The recurring cost buys model licensing, consent records, impersonation risk, watermarking, GPU queues, media storage, abuse response, and rapid model changes, not just the visible interface.",
+  "priorArt": [
+    {
+      "name": "Piper",
+      "url": "https://github.com/OHF-Voice/piper1-gpl",
+      "desc": "Active community continuation of the fast local Piper text-to-speech engine."
+    }
+  ],
+  "relatedSlugs": [
+    "speechify",
+    "synthesia",
+    "heygen"
+  ],
+  "pagePriority": 3,
+  "verifiedOneShot": false,
+  "notes": "Editorial comparison targets the Personal plan and a clearly labeled local synthetic-media tool DIY substitute. Recheck price before merge.",
+  "prompt": "Build a personal replacement for NaturalReader in an empty repository.\nUse Python 3.12, FastAPI, SQLite, ffmpeg, and a user-owned local TTS model; do not offer alternative stacks.\nThe core loop is: turn user-authored text into clearly labeled synthetic media for read user-provided text and documents aloud with a small set of licensed or local voices, using a local model and retaining provenance for every output\nMake the first run work locally with one documented command.\nStore all user data locally by default and make export straightforward.\nPut secrets in .env, ship .env.example, and never commit credentials.\nRequire a project-level rights and consent acknowledgement before generating audio.\nShip with no celebrity, public-figure, or scraped voice assets and accept only explicitly licensed models.\nGenerate speech from text with voice, speed, pause, pronunciation, and segment controls.\nCreate a timeline for audio, captions, uploaded visuals, and simple transitions.\nEmbed project metadata and a visible synthetic-media disclosure in exported assets.\nStore prompts, model identifiers, consent notes, and output hashes in a local provenance log.\nInclude clear empty, loading, success, and recoverable error states.\nAdd input validation, safe filenames, and graceful handling of unavailable APIs.\nWrite focused tests for the core transformation and one end-to-end happy path.\nCreate a README with setup, architecture, permissions, data location, and backup steps.\nDo not add accounts, billing, telemetry, analytics, or a hosted control plane.\nDeliberately leave out cloning a voice without clear consent.\nDeliberately leave out impersonation or deceptive unlabeled media.\nDeliberately leave out a frontier avatar model, public hosting, or enterprise rights clearance.\nFinish by running the tests and listing the exact commands used.",
+  "promptCurated": false
+}

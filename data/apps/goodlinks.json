@@ -1,0 +1,60 @@
+{
+  "slug": "goodlinks",
+  "name": "GoodLinks",
+  "domain": "goodlinks.app",
+  "appURL": "https://goodlinks.app",
+  "category": "reading",
+  "subcategory": "read-later, bookmarks and RSS",
+  "tagline": "Save readable pages locally across Apple devices with tags and highlights",
+  "priceMonthly": 0.83,
+  "pricing": {
+    "plan": "Premium",
+    "basis": "annual-equivalent",
+    "source": "https://goodlinks.app/premium",
+    "checkedOn": "2026-07-31",
+    "confidence": "medium",
+    "notes": "Approximate annual premium amount divided by 12; regional pricing varies.",
+    "native": "0.83 USD",
+    "kind": "fixed",
+    "currency": "USD"
+  },
+  "verdict": "yes",
+  "verdictConfidence": "high",
+  "verdictSummary": "The core loop is small enough for a capable coding agent to produce a useful local version in one sitting. For GoodLinks, save readable pages locally across Apple devices with tags and highlights. The hard boundary is native apple polish, icloud sync, shortcuts, and mobile capture, plus capture polish, sync, and content partnerships.",
+  "coreLoopDIY": "save permitted web pages or feeds for save readable pages locally across Apple devices with tags and highlights, extract readable text, tag and search the archive, and export it in open formats",
+  "diyTimeEstimate": "one sitting",
+  "requirements": [
+    "Node.js 22",
+    "local disk",
+    "optional browser bookmarklet",
+    "user-supplied RSS feeds"
+  ],
+  "whatYouLose": [
+    "native Apple polish, iCloud sync, Shortcuts, and mobile capture",
+    "publisher bypasses",
+    "cross-device mobile capture",
+    "high-quality recommendation graph",
+    "licensed full-text feeds"
+  ],
+  "moatType": "capture polish, sync, and content partnerships",
+  "replacementScope": "personal reading archive",
+  "ongoingBurden": "feed quirks, parsing, paywalls, canonical URLs, deduplication, images, search, sync, browser extensions, and publisher changes",
+  "whyPeopleStillPay": "People still pay for GoodLinks because people pay when capture works everywhere, reading state syncs instantly, and the archive remains clean without constant parser repairs. The recurring cost buys feed quirks, parsing, paywalls, canonical URLs, deduplication, images, search, sync, browser extensions, and publisher changes, not just the visible interface.",
+  "priorArt": [
+    {
+      "name": "FreshRSS",
+      "url": "https://github.com/FreshRSS/FreshRSS",
+      "desc": "Mature open-source RSS reader with feeds, filters, and self-hosting support."
+    }
+  ],
+  "relatedSlugs": [
+    "readwise",
+    "raindrop-io",
+    "inoreader"
+  ],
+  "pagePriority": 3,
+  "verifiedOneShot": false,
+  "notes": "Editorial comparison targets the Premium plan and a personal reading archive DIY substitute. Recheck price before merge.",
+  "prompt": "Build a personal replacement for GoodLinks in an empty repository.\nUse Next.js 15, TypeScript, SQLite, Drizzle ORM, Readability.js, and a local background worker; do not offer alternative stacks.\nThe core loop is: save permitted web pages or feeds for save readable pages locally across Apple devices with tags and highlights, extract readable text, tag and search the archive, and export it in open formats\nMake the first run work locally with one documented command.\nStore all user data locally by default and make export straightforward.\nPut secrets in .env, ship .env.example, and never commit credentials.\nSupport manual URL save, RSS or Atom subscriptions, OPML import, and a simple bookmarklet.\nFetch politely with a clear user agent, rate limits, conditional requests, and robots-aware behavior.\nExtract title, author, date, canonical URL, readable HTML, and selected images.\nProvide inbox, unread, archive, favorites, tags, highlights, notes, and full-text search.\nKeep the original URL prominent and never attempt to bypass authentication or paywalls.\nExport OPML, bookmarks HTML, Markdown, and a complete JSON backup.\nInclude clear empty, loading, success, and recoverable error states.\nAdd input validation, safe filenames, and graceful handling of unavailable APIs.\nWrite focused tests for the core transformation and one end-to-end happy path.\nCreate a README with setup, architecture, permissions, data location, and backup steps.\nDo not add accounts, billing, telemetry, analytics, or a hosted control plane.\nDeliberately leave out paywall circumvention.\nDeliberately leave out licensed publisher content and recommendation networks.\nDeliberately leave out native mobile clients and seamless commercial sync.\nFinish by running the tests and listing the exact commands used.",
+  "promptCurated": false
+}

@@ -1,0 +1,61 @@
+{
+  "slug": "activepieces-cloud",
+  "name": "Activepieces Cloud",
+  "domain": "activepieces.com",
+  "appURL": "https://activepieces.com",
+  "category": "automation",
+  "subcategory": "workflow automation and app integrations",
+  "tagline": "Use a managed open-source workflow runner instead of operating queues and upgrades",
+  "priceMonthly": null,
+  "pricing": {
+    "plan": "Plus",
+    "basis": "monthly",
+    "source": "https://activepieces.com/pricing",
+    "checkedOn": "2026-07-31",
+    "confidence": "medium",
+    "notes": "Typical Plus monthly tier; usage limits apply.",
+    "native": "25 USD",
+    "kind": "usage-based",
+    "currency": "USD"
+  },
+  "verdict": "kinda",
+  "verdictConfidence": "medium",
+  "verdictSummary": "The core loop is buildable, but a dependable replacement becomes a real weekend or multi-day project. For Activepieces Cloud, use a managed open-source workflow runner instead of operating queues and upgrades. The hard boundary is managed hosting, connector updates, execution capacity, support, and reliability, plus connector breadth and execution reliability.",
+  "coreLoopDIY": "connect two specific services for use a managed open-source workflow runner instead of operating queues and upgrades, execute a small durable workflow, expose retries and logs, and avoid claiming a general integration platform",
+  "diyTimeEstimate": "closest consolation build: multi-day",
+  "requirements": [
+    "OAuth or API credentials for two chosen services",
+    "PostgreSQL",
+    "Redis",
+    "public HTTPS endpoint",
+    "background worker"
+  ],
+  "whatYouLose": [
+    "managed hosting, connector updates, execution capacity, support, and reliability",
+    "thousands of connectors",
+    "maintained OAuth applications",
+    "schema-drift handling",
+    "high-scale durable execution and support"
+  ],
+  "moatType": "connector breadth and execution reliability",
+  "replacementScope": "two-service personal automation",
+  "ongoingBurden": "OAuth review, token refresh, webhooks, polling, schemas, retries, idempotency, queues, secrets, rate limits, observability, and upgrades",
+  "whyPeopleStillPay": "People still pay for Activepieces Cloud because one automation is easy; maintaining hundreds of connectors and making every run recoverable is the business. The recurring cost buys OAuth review, token refresh, webhooks, polling, schemas, retries, idempotency, queues, secrets, rate limits, observability, and upgrades, not just the visible interface.",
+  "priorArt": [
+    {
+      "name": "Activepieces",
+      "url": "https://github.com/activepieces/activepieces",
+      "desc": "Active open-source automation platform with connectors and durable workflow execution."
+    }
+  ],
+  "relatedSlugs": [
+    "pipedream",
+    "ifttt",
+    "relay-app"
+  ],
+  "pagePriority": 3,
+  "verifiedOneShot": false,
+  "notes": "Editorial comparison targets the Plus plan and a two-service personal automation DIY substitute. Recheck price before merge.",
+  "prompt": "Build a personal replacement for Activepieces Cloud in an empty repository.\nUse TypeScript, Node.js 22, PostgreSQL, Redis, BullMQ, and Docker Compose; do not offer alternative stacks.\nThe core loop is: connect two specific services for use a managed open-source workflow runner instead of operating queues and upgrades, execute a small durable workflow, expose retries and logs, and avoid claiming a general integration platform\nMake the first run work locally with one documented command.\nStore all user data locally by default and make export straightforward.\nPut secrets in .env, ship .env.example, and never commit credentials.\nImplement a fixed trigger, transform, condition, and action workflow model rather than a general visual language.\nConnect exactly two named services using documented APIs and encrypted credentials.\nStore every run, step input hash, output summary, retry, and final status in PostgreSQL.\nMake side effects idempotent and support retry from the failed step without repeating completed actions.\nAdd rate limits, backoff, dead-letter handling, manual replay, cancellation, and secret rotation.\nShip Docker Compose, health checks, sample workflows, tests, backups, and connector-limit documentation.\nInclude clear empty, loading, success, and recoverable error states.\nAdd input validation, safe filenames, and graceful handling of unavailable APIs.\nWrite focused tests for the core transformation and one end-to-end happy path.\nCreate a README with setup, architecture, permissions, data location, and backup steps.\nDo not add accounts, billing, telemetry, analytics, or a hosted control plane.\nDeliberately leave out a broad connector marketplace.\nDeliberately leave out unreviewed user code execution.\nDeliberately leave out enterprise governance, guaranteed execution, and vendor-operated OAuth apps.\nFinish by running the tests and listing the exact commands used.",
+  "promptCurated": false
+}

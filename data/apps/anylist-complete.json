@@ -1,0 +1,59 @@
+{
+  "slug": "anylist-complete",
+  "name": "AnyList Complete",
+  "domain": "anylist.com",
+  "appURL": "https://anylist.com",
+  "category": "home",
+  "subcategory": "family organization, recipes and household inventory",
+  "tagline": "Manage shared grocery lists, recipes, and meal plans with a simple household sync server",
+  "priceMonthly": 0.83,
+  "pricing": {
+    "plan": "Complete",
+    "basis": "annual-equivalent",
+    "source": "https://anylist.com/complete",
+    "checkedOn": "2026-07-31",
+    "confidence": "high",
+    "notes": "Annual individual subscription divided by 12.",
+    "native": "0.83 USD",
+    "kind": "fixed",
+    "currency": "USD"
+  },
+  "verdict": "yes",
+  "verdictConfidence": "high",
+  "verdictSummary": "The core loop is small enough for a capable coding agent to produce a useful local version in one sitting. For AnyList Complete, manage shared grocery lists, recipes, and meal plans with a simple household sync server. The hard boundary is excellent mobile capture, retailer integrations, voice assistants, and polished sharing, plus sync, integrations, and household adoption.",
+  "coreLoopDIY": "organize household information for manage shared grocery lists, recipes, and meal plans with a simple household sync server, share or print a simple plan, and keep data portable and owner-controlled",
+  "diyTimeEstimate": "one sitting",
+  "requirements": [
+    "modern browser",
+    "local or self-hosted storage",
+    "optional email notifications"
+  ],
+  "whatYouLose": [
+    "excellent mobile capture, retailer integrations, voice assistants, and polished sharing",
+    "frictionless family sync",
+    "retailer and smart-home integrations",
+    "large recipe or product database",
+    "mobile polish"
+  ],
+  "moatType": "sync, integrations, and household adoption",
+  "replacementScope": "single-household organizer",
+  "ongoingBurden": "multi-user conflicts, reminders, notifications, imports, barcode data, smart-home APIs, backups, and long-term maintenance",
+  "whyPeopleStillPay": "People still pay for AnyList Complete because household apps survive when every family member actually uses them and the data stays current across devices. The recurring cost buys multi-user conflicts, reminders, notifications, imports, barcode data, smart-home APIs, backups, and long-term maintenance, not just the visible interface.",
+  "priorArt": [
+    {
+      "name": "Mealie",
+      "url": "https://github.com/mealie-recipes/mealie",
+      "desc": "Active open-source recipe manager and meal planner for households."
+    }
+  ],
+  "relatedSlugs": [
+    "paprika-recipe-manager",
+    "home-assistant-cloud",
+    "cozi-gold"
+  ],
+  "pagePriority": 4,
+  "verifiedOneShot": false,
+  "notes": "Editorial comparison targets the Complete plan and a single-household organizer DIY substitute. Recheck price before merge.",
+  "prompt": "Build a personal replacement for AnyList Complete in an empty repository.\nUse Next.js 15, TypeScript, SQLite, Drizzle ORM, and a local-first PWA; do not offer alternative stacks.\nThe core loop is: organize household information for manage shared grocery lists, recipes, and meal plans with a simple household sync server, share or print a simple plan, and keep data portable and owner-controlled\nMake the first run work locally with one documented command.\nStore all user data locally by default and make export straightforward.\nPut secrets in .env, ship .env.example, and never commit credentials.\nCreate household members, shared lists, calendar items, recipes or inventory records, and assignments.\nProvide fast mobile-first capture with large controls, offline queueing, and conflict-safe sync to one server.\nSupport recurring chores or events, reminders, completion history, and printable views.\nAdd CSV or JSON import and export plus photo attachments with clear size limits.\nAllow private and shared items and make every change attributable and undoable.\nAdd backups, household export, member removal, and a simple invite code.\nInclude clear empty, loading, success, and recoverable error states.\nAdd input validation, safe filenames, and graceful handling of unavailable APIs.\nWrite focused tests for the core transformation and one end-to-end happy path.\nCreate a README with setup, architecture, permissions, data location, and backup steps.\nDo not add accounts, billing, telemetry, analytics, or a hosted control plane.\nDeliberately leave out retailer ordering and proprietary product catalogs.\nDeliberately leave out broad smart-home integrations.\nDeliberately leave out large public recipe libraries and polished native mobile clients.\nFinish by running the tests and listing the exact commands used.",
+  "promptCurated": false
+}

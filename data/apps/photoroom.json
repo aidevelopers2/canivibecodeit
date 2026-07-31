@@ -1,0 +1,60 @@
+{
+  "slug": "photoroom",
+  "name": "PhotoRoom",
+  "domain": "photoroom.com",
+  "appURL": "https://photoroom.com",
+  "category": "generative-media",
+  "subcategory": "AI image and video generation",
+  "tagline": "Remove or replace backgrounds and batch-export consistent product images",
+  "priceMonthly": 12.99,
+  "pricing": {
+    "plan": "Pro",
+    "basis": "monthly",
+    "source": "https://photoroom.com/pricing",
+    "checkedOn": "2026-07-31",
+    "confidence": "medium",
+    "notes": "Typical individual monthly price; platform and region can differ.",
+    "native": "12.99 USD",
+    "kind": "fixed",
+    "currency": "USD"
+  },
+  "verdict": "kinda",
+  "verdictConfidence": "medium",
+  "verdictSummary": "The core loop is buildable, but a dependable replacement becomes a real weekend or multi-day project. For PhotoRoom, remove or replace backgrounds and batch-export consistent product images. The hard boundary is specialized vision models, mobile capture, templates, and high-volume apis, plus frontier models, compute, and data.",
+  "coreLoopDIY": "organize prompts and local generation workflows for remove or replace backgrounds and batch-export consistent product images, submit jobs to a user-owned model server, and keep outputs reproducible",
+  "diyTimeEstimate": "closest consolation build: one sitting",
+  "requirements": [
+    "GPU-capable machine or user-supplied generation API",
+    "ComfyUI",
+    "model files with appropriate licenses",
+    "local storage"
+  ],
+  "whatYouLose": [
+    "specialized vision models, mobile capture, templates, and high-volume APIs",
+    "frontier proprietary models",
+    "hosted GPU capacity",
+    "licensed training data",
+    "moderation and fast global delivery"
+  ],
+  "moatType": "frontier models, compute, and data",
+  "replacementScope": "local workflow manager, not a model replacement",
+  "ongoingBurden": "GPU procurement, model licensing, safety filters, queueing, storage, and rapid model replacement",
+  "whyPeopleStillPay": "People still pay for PhotoRoom because the product value is the model and compute fleet, not the prompt box around it. The recurring cost buys GPU procurement, model licensing, safety filters, queueing, storage, and rapid model replacement, not just the visible interface.",
+  "priorArt": [
+    {
+      "name": "ComfyUI",
+      "url": "https://github.com/comfyanonymous/ComfyUI",
+      "desc": "Node-based open-source diffusion workflow engine with a large ecosystem."
+    }
+  ],
+  "relatedSlugs": [
+    "ideogram",
+    "recraft",
+    "leonardo-ai"
+  ],
+  "pagePriority": 5,
+  "verifiedOneShot": false,
+  "notes": "Editorial comparison targets the Pro plan and a local workflow manager, not a model replacement DIY substitute. Recheck price before merge.",
+  "prompt": "Build a personal replacement for PhotoRoom in an empty repository.\nUse Python 3.12, FastAPI, SQLite, ComfyUI as a local worker, and a small React frontend; do not offer alternative stacks.\nThe core loop is: organize prompts and local generation workflows for remove or replace backgrounds and batch-export consistent product images, submit jobs to a user-owned model server, and keep outputs reproducible\nMake the first run work locally with one documented command.\nStore all user data locally by default and make export straightforward.\nPut secrets in .env, ship .env.example, and never commit credentials.\nCreate prompt, negative-prompt, seed, dimensions, model, and workflow controls.\nSubmit jobs only to the local ComfyUI endpoint configured in .env.\nRecord exact generation parameters and workflow JSON beside every output.\nBuild a searchable contact sheet with compare, favorite, annotate, and rerun actions.\nSupport local image-to-image and mask inputs without uploading them elsewhere.\nShow estimated VRAM needs and fail clearly when a workflow or model is missing.\nInclude clear empty, loading, success, and recoverable error states.\nAdd input validation, safe filenames, and graceful handling of unavailable APIs.\nWrite focused tests for the core transformation and one end-to-end happy path.\nCreate a README with setup, architecture, permissions, data location, and backup steps.\nDo not add accounts, billing, telemetry, analytics, or a hosted control plane.\nDeliberately leave out training a new frontier model.\nDeliberately leave out copying a vendor's proprietary model or dataset.\nDeliberately leave out public generation hosting and moderation.\nFinish by running the tests and listing the exact commands used.",
+  "promptCurated": false
+}

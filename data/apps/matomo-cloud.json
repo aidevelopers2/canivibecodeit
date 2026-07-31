@@ -1,0 +1,61 @@
+{
+  "slug": "matomo-cloud",
+  "name": "Matomo Cloud",
+  "domain": "matomo.org",
+  "appURL": "https://matomo.org",
+  "category": "analytics",
+  "subcategory": "web and product analytics",
+  "tagline": "Run first-party web analytics with goals, campaigns, and user-owned data",
+  "priceMonthly": 26,
+  "pricing": {
+    "plan": "Essential",
+    "basis": "monthly starting",
+    "source": "https://matomo.org/pricing",
+    "checkedOn": "2026-07-31",
+    "confidence": "medium",
+    "notes": "Typical cloud starting price; traffic and currency can affect the amount.",
+    "native": "26 USD",
+    "kind": "fixed",
+    "currency": "USD"
+  },
+  "verdict": "kinda",
+  "verdictConfidence": "medium",
+  "verdictSummary": "The core loop is buildable, but a dependable replacement becomes a real weekend or multi-day project. For Matomo Cloud, run first-party web analytics with goals, campaigns, and user-owned data. The hard boundary is mature analytics depth, privacy controls, hosted operations, and premium plugins, plus data pipeline reliability and analytical depth.",
+  "coreLoopDIY": "collect privacy-conscious first-party events for run first-party web analytics with goals, campaigns, and user-owned data, answer a small set of product questions, and retain raw data under the owner's control",
+  "diyTimeEstimate": "multi-day",
+  "requirements": [
+    "Docker",
+    "ClickHouse",
+    "PostgreSQL",
+    "public HTTPS collector endpoint",
+    "site script access"
+  ],
+  "whatYouLose": [
+    "mature analytics depth, privacy controls, hosted operations, and premium plugins",
+    "identity stitching",
+    "session replay",
+    "warehouse connectors",
+    "high-volume global ingestion and support"
+  ],
+  "moatType": "data pipeline reliability and analytical depth",
+  "replacementScope": "single-product first-party analytics",
+  "ongoingBurden": "event schemas, bot filtering, identity, late data, retention, query cost, privacy, backups, and always-on ingestion",
+  "whyPeopleStillPay": "People still pay for Matomo Cloud because teams pay because analytics must keep collecting and remain trustworthy while the product changes underneath it. The recurring cost buys event schemas, bot filtering, identity, late data, retention, query cost, privacy, backups, and always-on ingestion, not just the visible interface.",
+  "priorArt": [
+    {
+      "name": "Umami",
+      "url": "https://github.com/umami-software/umami",
+      "desc": "Popular open-source privacy-focused web analytics platform."
+    }
+  ],
+  "relatedSlugs": [
+    "posthog",
+    "mixpanel",
+    "amplitude"
+  ],
+  "pagePriority": 5,
+  "verifiedOneShot": false,
+  "notes": "Editorial comparison targets the Essential plan and a single-product first-party analytics DIY substitute. Recheck price before merge.",
+  "prompt": "Build a personal replacement for Matomo Cloud in an empty repository.\nUse Next.js 15, TypeScript, ClickHouse, PostgreSQL, and Docker Compose; do not offer alternative stacks.\nThe core loop is: collect privacy-conscious first-party events for run first-party web analytics with goals, campaigns, and user-owned data, answer a small set of product questions, and retain raw data under the owner's control\nMake the first run work locally with one documented command.\nStore all user data locally by default and make export straightforward.\nPut secrets in .env, ship .env.example, and never commit credentials.\nShip a lightweight browser SDK for page views and explicit custom events.\nCreate projects, API keys, environments, event names, and a documented event schema.\nIngest idempotently, filter obvious bots, truncate IP data, and avoid fingerprinting.\nBuild dashboards for visitors, sessions, funnels, retention, sources, pages, and events.\nExpose filters by date, environment, device, country, referrer, and selected properties.\nAdd retention controls, raw-event export, deletion, health checks, and backup instructions.\nInclude clear empty, loading, success, and recoverable error states.\nAdd input validation, safe filenames, and graceful handling of unavailable APIs.\nWrite focused tests for the core transformation and one end-to-end happy path.\nCreate a README with setup, architecture, permissions, data location, and backup steps.\nDo not add accounts, billing, telemetry, analytics, or a hosted control plane.\nDeliberately leave out cross-site identity graphs.\nDeliberately leave out session replay and automatic DOM capture.\nDeliberately leave out warehouse-scale reverse ETL and enterprise governance.\nFinish by running the tests and listing the exact commands used.",
+  "promptCurated": false
+}

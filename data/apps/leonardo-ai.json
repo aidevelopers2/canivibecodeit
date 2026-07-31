@@ -1,0 +1,60 @@
+{
+  "slug": "leonardo-ai",
+  "name": "Leonardo AI",
+  "domain": "leonardo.ai",
+  "appURL": "https://leonardo.ai",
+  "category": "generative-media",
+  "subcategory": "AI image and video generation",
+  "tagline": "Organize local or API-backed image-generation workflows and retain parameters",
+  "priceMonthly": 12,
+  "pricing": {
+    "plan": "Apprentice",
+    "basis": "monthly",
+    "source": "https://leonardo.ai/pricing",
+    "checkedOn": "2026-07-31",
+    "confidence": "medium",
+    "notes": "Typical entry paid tier; token allowances can change.",
+    "native": "12 USD",
+    "kind": "fixed",
+    "currency": "USD"
+  },
+  "verdict": "no",
+  "verdictConfidence": "high",
+  "verdictSummary": "A consolation build is possible, but the paid product's decisive value sits outside a solo rebuild. For Leonardo AI, organize local or API-backed image-generation workflows and retain parameters. The hard boundary is proprietary models, hosted gpu capacity, training tools, and asset ecosystem, plus frontier models, compute, and data.",
+  "coreLoopDIY": "organize prompts and local generation workflows for organize local or API-backed image-generation workflows and retain parameters, submit jobs to a user-owned model server, and keep outputs reproducible",
+  "diyTimeEstimate": "closest consolation build: one sitting",
+  "requirements": [
+    "GPU-capable machine or user-supplied generation API",
+    "ComfyUI",
+    "model files with appropriate licenses",
+    "local storage"
+  ],
+  "whatYouLose": [
+    "proprietary models, hosted GPU capacity, training tools, and asset ecosystem",
+    "frontier proprietary models",
+    "hosted GPU capacity",
+    "licensed training data",
+    "moderation and fast global delivery"
+  ],
+  "moatType": "frontier models, compute, and data",
+  "replacementScope": "local workflow manager, not a model replacement",
+  "ongoingBurden": "GPU procurement, model licensing, safety filters, queueing, storage, and rapid model replacement",
+  "whyPeopleStillPay": "People still pay for Leonardo AI because the product value is the model and compute fleet, not the prompt box around it. The recurring cost buys GPU procurement, model licensing, safety filters, queueing, storage, and rapid model replacement, not just the visible interface.",
+  "priorArt": [
+    {
+      "name": "ComfyUI",
+      "url": "https://github.com/comfyanonymous/ComfyUI",
+      "desc": "Node-based open-source diffusion workflow engine with a large ecosystem."
+    }
+  ],
+  "relatedSlugs": [
+    "ideogram",
+    "recraft",
+    "photoroom"
+  ],
+  "pagePriority": 4,
+  "verifiedOneShot": false,
+  "notes": "Editorial comparison targets the Apprentice plan and a local workflow manager, not a model replacement DIY substitute. Recheck price before merge.",
+  "prompt": "Build a closest honest personal substitute for Leonardo AI in an empty repository.\nUse Python 3.12, FastAPI, SQLite, ComfyUI as a local worker, and a small React frontend; do not offer alternative stacks.\nThe core loop is: organize prompts and local generation workflows for organize local or API-backed image-generation workflows and retain parameters, submit jobs to a user-owned model server, and keep outputs reproducible\nMake the first run work locally with one documented command.\nStore all user data locally by default and make export straightforward.\nPut secrets in .env, ship .env.example, and never commit credentials.\nCreate prompt, negative-prompt, seed, dimensions, model, and workflow controls.\nSubmit jobs only to the local ComfyUI endpoint configured in .env.\nRecord exact generation parameters and workflow JSON beside every output.\nBuild a searchable contact sheet with compare, favorite, annotate, and rerun actions.\nSupport local image-to-image and mask inputs without uploading them elsewhere.\nShow estimated VRAM needs and fail clearly when a workflow or model is missing.\nInclude clear empty, loading, success, and recoverable error states.\nAdd input validation, safe filenames, and graceful handling of unavailable APIs.\nWrite focused tests for the core transformation and one end-to-end happy path.\nCreate a README with setup, architecture, permissions, data location, and backup steps.\nDo not add accounts, billing, telemetry, analytics, or a hosted control plane.\nDo not claim to reproduce proprietary data, network liquidity, regulated access, or frontier infrastructure.\nDeliberately leave out training a new frontier model.\nDeliberately leave out copying a vendor's proprietary model or dataset.\nDeliberately leave out public generation hosting and moderation.\nFinish by running the tests and listing the exact commands used.",
+  "promptCurated": false
+}

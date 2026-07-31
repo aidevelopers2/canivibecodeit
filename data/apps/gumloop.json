@@ -1,0 +1,61 @@
+{
+  "slug": "gumloop",
+  "name": "Gumloop",
+  "domain": "gumloop.com",
+  "appURL": "https://gumloop.com",
+  "category": "automation",
+  "subcategory": "workflow automation and app integrations",
+  "tagline": "Build one AI-assisted workflow from user-approved files and APIs",
+  "priceMonthly": null,
+  "pricing": {
+    "plan": "Starter",
+    "basis": "monthly",
+    "source": "https://gumloop.com/pricing",
+    "checkedOn": "2026-07-31",
+    "confidence": "medium",
+    "notes": "Typical Starter monthly tier; usage credits apply.",
+    "native": "97 USD",
+    "kind": "usage-based",
+    "currency": "USD"
+  },
+  "verdict": "no",
+  "verdictConfidence": "high",
+  "verdictSummary": "A consolation build is possible, but the paid product's decisive value sits outside a solo rebuild. For Gumloop, build one AI-assisted workflow from user-approved files and APIs. The hard boundary is hosted agent runtime, model routing, connectors, browser operations, and collaboration, plus connector breadth and execution reliability.",
+  "coreLoopDIY": "connect two specific services for build one AI-assisted workflow from user-approved files and APIs, execute a small durable workflow, expose retries and logs, and avoid claiming a general integration platform",
+  "diyTimeEstimate": "closest consolation build: one sitting",
+  "requirements": [
+    "OAuth or API credentials for two chosen services",
+    "PostgreSQL",
+    "Redis",
+    "public HTTPS endpoint",
+    "background worker"
+  ],
+  "whatYouLose": [
+    "hosted agent runtime, model routing, connectors, browser operations, and collaboration",
+    "thousands of connectors",
+    "maintained OAuth applications",
+    "schema-drift handling",
+    "high-scale durable execution and support"
+  ],
+  "moatType": "connector breadth and execution reliability",
+  "replacementScope": "two-service personal automation",
+  "ongoingBurden": "OAuth review, token refresh, webhooks, polling, schemas, retries, idempotency, queues, secrets, rate limits, observability, and upgrades",
+  "whyPeopleStillPay": "People still pay for Gumloop because one automation is easy; maintaining hundreds of connectors and making every run recoverable is the business. The recurring cost buys OAuth review, token refresh, webhooks, polling, schemas, retries, idempotency, queues, secrets, rate limits, observability, and upgrades, not just the visible interface.",
+  "priorArt": [
+    {
+      "name": "Activepieces",
+      "url": "https://github.com/activepieces/activepieces",
+      "desc": "Active open-source automation platform with connectors and durable workflow execution."
+    }
+  ],
+  "relatedSlugs": [
+    "pipedream",
+    "ifttt",
+    "relay-app"
+  ],
+  "pagePriority": 4,
+  "verifiedOneShot": false,
+  "notes": "Editorial comparison targets the Starter plan and a two-service personal automation DIY substitute. Recheck price before merge.",
+  "prompt": "Build a closest honest personal substitute for Gumloop in an empty repository.\nUse TypeScript, Node.js 22, PostgreSQL, Redis, BullMQ, and Docker Compose; do not offer alternative stacks.\nThe core loop is: connect two specific services for build one AI-assisted workflow from user-approved files and APIs, execute a small durable workflow, expose retries and logs, and avoid claiming a general integration platform\nMake the first run work locally with one documented command.\nStore all user data locally by default and make export straightforward.\nPut secrets in .env, ship .env.example, and never commit credentials.\nImplement a fixed trigger, transform, condition, and action workflow model rather than a general visual language.\nConnect exactly two named services using documented APIs and encrypted credentials.\nStore every run, step input hash, output summary, retry, and final status in PostgreSQL.\nMake side effects idempotent and support retry from the failed step without repeating completed actions.\nAdd rate limits, backoff, dead-letter handling, manual replay, cancellation, and secret rotation.\nShip Docker Compose, health checks, sample workflows, tests, backups, and connector-limit documentation.\nInclude clear empty, loading, success, and recoverable error states.\nAdd input validation, safe filenames, and graceful handling of unavailable APIs.\nWrite focused tests for the core transformation and one end-to-end happy path.\nCreate a README with setup, architecture, permissions, data location, and backup steps.\nDo not add accounts, billing, telemetry, analytics, or a hosted control plane.\nDo not claim to reproduce proprietary data, network liquidity, regulated access, or frontier infrastructure.\nDeliberately leave out a broad connector marketplace.\nDeliberately leave out unreviewed user code execution.\nDeliberately leave out enterprise governance, guaranteed execution, and vendor-operated OAuth apps.\nFinish by running the tests and listing the exact commands used.",
+  "promptCurated": false
+}

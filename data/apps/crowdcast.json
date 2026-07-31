@@ -1,0 +1,61 @@
+{
+  "slug": "crowdcast",
+  "name": "Crowdcast",
+  "domain": "crowdcast.io",
+  "appURL": "https://crowdcast.io",
+  "category": "video-conferencing",
+  "subcategory": "video meetings and webinars",
+  "tagline": "Host a small interactive live event and publish a replay",
+  "priceMonthly": 49,
+  "pricing": {
+    "plan": "Lite",
+    "basis": "monthly",
+    "source": "https://crowdcast.io/pricing",
+    "checkedOn": "2026-07-31",
+    "confidence": "high",
+    "notes": "Official Lite monthly tier.",
+    "native": "49 USD",
+    "kind": "fixed",
+    "currency": "USD"
+  },
+  "verdict": "no",
+  "verdictConfidence": "high",
+  "verdictSummary": "A consolation build is possible, but the paid product's decisive value sits outside a solo rebuild. For Crowdcast, host a small interactive live event and publish a replay. The hard boundary is live-event media, registration, chat, questions, analytics, and community audience, plus real-time media infrastructure and reliability.",
+  "coreLoopDIY": "host modest private video rooms for host a small interactive live event and publish a replay, issue signed room links, and keep recordings only when every participant is clearly informed",
+  "diyTimeEstimate": "closest consolation build: one sitting",
+  "requirements": [
+    "public server with strong bandwidth",
+    "domain and TLS",
+    "TURN server",
+    "Docker",
+    "explicit participant consent for recording"
+  ],
+  "whatYouLose": [
+    "live-event media, registration, chat, questions, analytics, and community audience",
+    "global low-latency media network",
+    "dial-in and telephony",
+    "large webinars",
+    "transcription, support, and compliance"
+  ],
+  "moatType": "real-time media infrastructure and reliability",
+  "replacementScope": "small private meeting service",
+  "ongoingBurden": "TURN capacity, codecs, browsers, packet loss, scaling, recording, consent, abuse, monitoring, and incident response",
+  "whyPeopleStillPay": "People still pay for Crowdcast because video products survive because real-time media quality and global reliability are infrastructure businesses, not weekend interface projects. The recurring cost buys TURN capacity, codecs, browsers, packet loss, scaling, recording, consent, abuse, monitoring, and incident response, not just the visible interface.",
+  "priorArt": [
+    {
+      "name": "Jitsi Meet",
+      "url": "https://github.com/jitsi/jitsi-meet",
+      "desc": "Widely deployed open-source video-conferencing platform."
+    }
+  ],
+  "relatedSlugs": [
+    "zoom-pro",
+    "google-workspace-business-starter",
+    "microsoft-teams-essentials"
+  ],
+  "pagePriority": 3,
+  "verifiedOneShot": false,
+  "notes": "Editorial comparison targets the Lite plan and a small private meeting service DIY substitute. Recheck price before merge.",
+  "prompt": "Build a closest honest personal substitute for Crowdcast in an empty repository.\nUse Docker Compose, Jitsi Meet, a small Next.js 15 control panel, PostgreSQL, and TURN; do not offer alternative stacks.\nThe core loop is: host modest private video rooms for host a small interactive live event and publish a replay, issue signed room links, and keep recordings only when every participant is clearly informed\nMake the first run work locally with one documented command.\nStore all user data locally by default and make export straightforward.\nPut secrets in .env, ship .env.example, and never commit credentials.\nDeploy Jitsi Meet through pinned Docker images and configure a dedicated TURN service.\nBuild an owner panel for rooms, signed invitations, expiry, lobby mode, and participant limits.\nShow connection diagnostics for camera, microphone, browser, bandwidth, and TURN reachability.\nMake recording disabled by default and require an on-screen consent state for every participant.\nStore room metadata and audit events, but do not store media unless explicitly enabled.\nAdd health checks, bandwidth dashboards, backup, restore, upgrade, and incident instructions.\nInclude clear empty, loading, success, and recoverable error states.\nAdd input validation, safe filenames, and graceful handling of unavailable APIs.\nWrite focused tests for the core transformation and one end-to-end happy path.\nCreate a README with setup, architecture, permissions, data location, and backup steps.\nDo not add accounts, billing, telemetry, analytics, or a hosted control plane.\nDo not claim to reproduce proprietary data, network liquidity, regulated access, or frontier infrastructure.\nDeliberately leave out a global media edge network.\nDeliberately leave out public webinar scale and telephony.\nDeliberately leave out regulated recording, enterprise compliance, and guaranteed support.\nFinish by running the tests and listing the exact commands used.",
+  "promptCurated": false
+}

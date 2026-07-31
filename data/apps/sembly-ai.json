@@ -1,0 +1,60 @@
+{
+  "slug": "sembly-ai",
+  "name": "Sembly AI",
+  "domain": "sembly.ai",
+  "appURL": "https://sembly.ai",
+  "category": "meeting-notes",
+  "subcategory": "meeting transcription and AI notes",
+  "tagline": "Transcribe a call and produce structured minutes, tasks, and searchable topics",
+  "priceMonthly": 15,
+  "pricing": {
+    "plan": "Professional",
+    "basis": "monthly",
+    "source": "https://sembly.ai/pricing",
+    "checkedOn": "2026-07-31",
+    "confidence": "medium",
+    "notes": "Typical Professional monthly rate.",
+    "native": "15 USD",
+    "kind": "fixed",
+    "currency": "USD"
+  },
+  "verdict": "kinda",
+  "verdictConfidence": "medium",
+  "verdictSummary": "The core loop is buildable, but a dependable replacement becomes a real weekend or multi-day project. For Sembly AI, transcribe a call and produce structured minutes, tasks, and searchable topics. The hard boundary is meeting bots, team collaboration, automations, and broad integrations, plus capture reliability, integrations, and collaboration.",
+  "coreLoopDIY": "record or import a meeting, transcribe it locally, identify speakers with manual correction, and generate structured notes for transcribe a call and produce structured minutes, tasks, and searchable topics",
+  "diyTimeEstimate": "multi-day",
+  "requirements": [
+    "desktop microphone access",
+    "whisper.cpp model files",
+    "optional OpenAI or Anthropic API key",
+    "local storage"
+  ],
+  "whatYouLose": [
+    "meeting bots, team collaboration, automations, and broad integrations",
+    "calendar auto-join",
+    "reliable speaker diarization",
+    "mobile capture",
+    "team search and sharing"
+  ],
+  "moatType": "capture reliability, integrations, and collaboration",
+  "replacementScope": "personal meeting notebook",
+  "ongoingBurden": "audio permissions, model updates, calendar APIs, storage, speaker correction, and sync",
+  "whyPeopleStillPay": "People still pay for Sembly AI because a meeting tool must capture every call without surprising anyone, then make the result searchable and shareable across a team. The recurring cost buys audio permissions, model updates, calendar APIs, storage, speaker correction, and sync, not just the visible interface.",
+  "priorArt": [
+    {
+      "name": "whisper.cpp",
+      "url": "https://github.com/ggerganov/whisper.cpp",
+      "desc": "Widely used local Whisper inference implementation suitable for private transcription."
+    }
+  ],
+  "relatedSlugs": [
+    "fathom-ai",
+    "read-ai",
+    "avoma"
+  ],
+  "pagePriority": 3,
+  "verifiedOneShot": false,
+  "notes": "Editorial comparison targets the Professional plan and a personal meeting notebook DIY substitute. Recheck price before merge.",
+  "prompt": "Build a personal replacement for Sembly AI in an empty repository.\nUse Python 3.12, FastAPI, SQLite, whisper.cpp, and a minimal HTMX interface; do not offer alternative stacks.\nThe core loop is: record or import a meeting, transcribe it locally, identify speakers with manual correction, and generate structured notes for transcribe a call and produce structured minutes, tasks, and searchable topics\nMake the first run work locally with one documented command.\nStore all user data locally by default and make export straightforward.\nPut secrets in .env, ship .env.example, and never commit credentials.\nAdd explicit start, pause, resume, and stop controls with a visible recording indicator.\nSupport importing WAV, MP3, M4A, and MP4 files through ffmpeg.\nRun transcription locally and display timestamped editable segments.\nLet the user rename speakers and propagate corrections through the transcript.\nGenerate decisions, action items, questions, and a concise summary from approved text.\nExport Markdown, plain text, and WebVTT beside the original recording.\nInclude clear empty, loading, success, and recoverable error states.\nAdd input validation, safe filenames, and graceful handling of unavailable APIs.\nWrite focused tests for the core transformation and one end-to-end happy path.\nCreate a README with setup, architecture, permissions, data location, and backup steps.\nDo not add accounts, billing, telemetry, analytics, or a hosted control plane.\nDeliberately leave out silent background capture.\nDeliberately leave out automatic bot attendance in video meetings.\nDeliberately leave out team workspaces and enterprise retention controls.\nFinish by running the tests and listing the exact commands used.",
+  "promptCurated": false
+}

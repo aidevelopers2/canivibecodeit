@@ -1,0 +1,60 @@
+{
+  "slug": "proton-pass-plus",
+  "name": "Proton Pass Plus",
+  "domain": "proton.me",
+  "appURL": "https://proton.me",
+  "category": "security",
+  "subcategory": "passwords, privacy and private networking",
+  "tagline": "Create a local password and alias vault with portable encrypted backup",
+  "priceMonthly": 4.99,
+  "pricing": {
+    "plan": "Pass Plus",
+    "basis": "monthly",
+    "source": "https://proton.me/pass/pricing",
+    "checkedOn": "2026-07-31",
+    "confidence": "high",
+    "notes": "Official Pass Plus monthly rate.",
+    "native": "4.99 USD",
+    "kind": "fixed",
+    "currency": "USD"
+  },
+  "verdict": "no",
+  "verdictConfidence": "high",
+  "verdictSummary": "A consolation build is possible, but the paid product's decisive value sits outside a solo rebuild. For Proton Pass Plus, create a local password and alias vault with portable encrypted backup. The hard boundary is proton identity, email alias infrastructure, audits, apps, recovery, and privacy operations, plus security assurance, infrastructure, and trust.",
+  "coreLoopDIY": "manage a narrow local security workflow for create a local password and alias vault with portable encrypted backup with strong encryption, explicit threat-model documentation, and no claim of replacing an audited service",
+  "diyTimeEstimate": "closest consolation build: one sitting",
+  "requirements": [
+    "desktop OS",
+    "secure backup location",
+    "modern cryptographic libraries",
+    "careful review before real-world use"
+  ],
+  "whatYouLose": [
+    "Proton identity, email alias infrastructure, audits, apps, recovery, and privacy operations",
+    "independent security audits",
+    "global relay infrastructure",
+    "breach monitoring data",
+    "account recovery and support"
+  ],
+  "moatType": "security assurance, infrastructure, and trust",
+  "replacementScope": "educational or low-risk personal utility",
+  "ongoingBurden": "cryptography, secure updates, key recovery, threat intelligence, relay capacity, abuse response, audits, and incident handling",
+  "whyPeopleStillPay": "People still pay for Proton Pass Plus because security products are paid for because expert review, infrastructure, and accountability matter more than recreating screens. The recurring cost buys cryptography, secure updates, key recovery, threat intelligence, relay capacity, abuse response, audits, and incident handling, not just the visible interface.",
+  "priorArt": [
+    {
+      "name": "Vaultwarden",
+      "url": "https://github.com/dani-garcia/vaultwarden",
+      "desc": "Widely used Bitwarden-compatible self-hosted password server implementation."
+    }
+  ],
+  "relatedSlugs": [
+    "bitwarden",
+    "deleteme",
+    "nordvpn"
+  ],
+  "pagePriority": 4,
+  "verifiedOneShot": false,
+  "notes": "Editorial comparison targets the Pass Plus plan and a educational or low-risk personal utility DIY substitute. Recheck price before merge.",
+  "prompt": "Build a closest honest personal substitute for Proton Pass Plus in an empty repository.\nUse Rust, Tauri 2, React, SQLite, Argon2id, and audited cryptographic libraries; do not offer alternative stacks.\nThe core loop is: manage a narrow local security workflow for create a local password and alias vault with portable encrypted backup with strong encryption, explicit threat-model documentation, and no claim of replacing an audited service\nMake the first run work locally with one documented command.\nStore all user data locally by default and make export straightforward.\nPut secrets in .env, ship .env.example, and never commit credentials.\nWrite a plain-language threat model before implementing any sensitive feature.\nKeep all vault data encrypted with a master key derived through Argon2id and a unique salt.\nUse authenticated encryption from a maintained library and never invent cryptographic primitives.\nImplement lock timeout, clipboard clearing, password generation, import, export, and encrypted backups.\nMake recovery-key creation explicit and test restore from a fresh installation.\nDisplay a persistent warning that the build has not received an independent security audit.\nInclude clear empty, loading, success, and recoverable error states.\nAdd input validation, safe filenames, and graceful handling of unavailable APIs.\nWrite focused tests for the core transformation and one end-to-end happy path.\nCreate a README with setup, architecture, permissions, data location, and backup steps.\nDo not add accounts, billing, telemetry, analytics, or a hosted control plane.\nDo not claim to reproduce proprietary data, network liquidity, regulated access, or frontier infrastructure.\nDeliberately leave out a production VPN or anonymity network.\nDeliberately leave out identity-protection monitoring and data-broker removal.\nDeliberately leave out enterprise security guarantees, audits, and emergency support.\nFinish by running the tests and listing the exact commands used.",
+  "promptCurated": false
+}

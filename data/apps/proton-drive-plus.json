@@ -1,0 +1,61 @@
+{
+  "slug": "proton-drive-plus",
+  "name": "Proton Drive Plus",
+  "domain": "proton.me",
+  "appURL": "https://proton.me",
+  "category": "cloud-storage",
+  "subcategory": "file sync, sharing and backup",
+  "tagline": "Back up files into an encrypted user-owned store and expose simple share links",
+  "priceMonthly": 4.99,
+  "pricing": {
+    "plan": "Drive Plus",
+    "basis": "monthly",
+    "source": "https://proton.me/drive/pricing",
+    "checkedOn": "2026-07-31",
+    "confidence": "high",
+    "notes": "Official Drive Plus monthly rate.",
+    "native": "4.99 USD",
+    "kind": "fixed",
+    "currency": "USD"
+  },
+  "verdict": "no",
+  "verdictConfidence": "high",
+  "verdictSummary": "A consolation build is possible, but the paid product's decisive value sits outside a solo rebuild. For Proton Drive Plus, back up files into an encrypted user-owned store and expose simple share links. The hard boundary is end-to-end encryption, proton identity, mobile apps, recovery, and privacy operations, plus reliability, durability, and cross-device sync.",
+  "coreLoopDIY": "back up selected folders for back up files into an encrypted user-owned store and expose simple share links, encrypt files client-side, track versions, and restore them from user-owned object storage",
+  "diyTimeEstimate": "closest consolation build: one sitting",
+  "requirements": [
+    "user-owned server or S3-compatible bucket",
+    "PostgreSQL",
+    "MinIO or object storage",
+    "desktop filesystem permissions",
+    "backup key stored offline"
+  ],
+  "whatYouLose": [
+    "end-to-end encryption, Proton identity, mobile apps, recovery, and privacy operations",
+    "global sync network",
+    "battle-tested conflict resolution",
+    "ransomware recovery guarantees",
+    "mobile clients and support"
+  ],
+  "moatType": "reliability, durability, and cross-device sync",
+  "replacementScope": "single-user encrypted backup",
+  "ongoingBurden": "chunking, encryption, conflict detection, versions, garbage collection, bandwidth, restore drills, monitoring, billing, and disaster recovery",
+  "whyPeopleStillPay": "People still pay for Proton Drive Plus because storage subscriptions sell confidence that files will still exist after a lost device, bad sync, or provider incident. The recurring cost buys chunking, encryption, conflict detection, versions, garbage collection, bandwidth, restore drills, monitoring, billing, and disaster recovery, not just the visible interface.",
+  "priorArt": [
+    {
+      "name": "Nextcloud",
+      "url": "https://github.com/nextcloud/server",
+      "desc": "Mature open-source file sync and collaboration server."
+    }
+  ],
+  "relatedSlugs": [
+    "dropbox-plus",
+    "google-one",
+    "icloud-plus"
+  ],
+  "pagePriority": 4,
+  "verifiedOneShot": false,
+  "notes": "Editorial comparison targets the Drive Plus plan and a single-user encrypted backup DIY substitute. Recheck price before merge.",
+  "prompt": "Build a closest honest personal substitute for Proton Drive Plus in an empty repository.\nUse Next.js 15, TypeScript, PostgreSQL, MinIO, and a Tauri 2 sync client; do not offer alternative stacks.\nThe core loop is: back up selected folders for back up files into an encrypted user-owned store and expose simple share links, encrypt files client-side, track versions, and restore them from user-owned object storage\nMake the first run work locally with one documented command.\nStore all user data locally by default and make export straightforward.\nPut secrets in .env, ship .env.example, and never commit credentials.\nBuild a desktop client that watches explicitly selected folders and ignores configured patterns.\nChunk, hash, compress, and encrypt files locally before uploading to the configured object store.\nStore version metadata, tombstones, device identifiers, and integrity checks in PostgreSQL.\nProvide upload and restore queues with pause, retry, bandwidth limits, and resumable transfers.\nAdd file history, point-in-time restore, key export, storage usage, and scheduled restore tests.\nDocument the failure model and make clear that one server is not a complete backup strategy.\nInclude clear empty, loading, success, and recoverable error states.\nAdd input validation, safe filenames, and graceful handling of unavailable APIs.\nWrite focused tests for the core transformation and one end-to-end happy path.\nCreate a README with setup, architecture, permissions, data location, and backup steps.\nDo not add accounts, billing, telemetry, analytics, or a hosted control plane.\nDo not claim to reproduce proprietary data, network liquidity, regulated access, or frontier infrastructure.\nDeliberately leave out multi-provider consumer sync at global scale.\nDeliberately leave out guaranteed durability or ransomware recovery.\nDeliberately leave out shared-drive administration, mobile apps, and enterprise compliance.\nFinish by running the tests and listing the exact commands used.",
+  "promptCurated": false
+}

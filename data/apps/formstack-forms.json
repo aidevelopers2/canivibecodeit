@@ -1,0 +1,59 @@
+{
+  "slug": "formstack-forms",
+  "name": "Formstack Forms",
+  "domain": "formstack.com",
+  "appURL": "https://formstack.com",
+  "category": "forms",
+  "subcategory": "forms, surveys and lead capture",
+  "tagline": "Build a secure low-volume form workflow with approvals and exports",
+  "priceMonthly": 99,
+  "pricing": {
+    "plan": "Forms",
+    "basis": "monthly",
+    "source": "https://formstack.com/products/forms/pricing",
+    "checkedOn": "2026-07-31",
+    "confidence": "medium",
+    "notes": "Typical entry Forms monthly package; enterprise packaging can vary.",
+    "native": "99 USD",
+    "kind": "fixed",
+    "currency": "USD"
+  },
+  "verdict": "no",
+  "verdictConfidence": "high",
+  "verdictSummary": "A consolation build is possible, but the paid product's decisive value sits outside a solo rebuild. For Formstack Forms, build a secure low-volume form workflow with approvals and exports. The hard boundary is enterprise compliance, workflow, integrations, support, and regulated deployments, plus integrations, deliverability, and workflow depth.",
+  "coreLoopDIY": "build a public form for build a secure low-volume form workflow with approvals and exports, validate submissions, notify the owner, and provide a private response table with CSV export",
+  "diyTimeEstimate": "closest consolation build: one sitting",
+  "requirements": [
+    "Node.js 22",
+    "Resend API key or SMTP credentials",
+    "self-hosted deploy target"
+  ],
+  "whatYouLose": [
+    "enterprise compliance, workflow, integrations, support, and regulated deployments",
+    "advanced branching",
+    "payment and CRM integrations",
+    "large template libraries",
+    "enterprise compliance"
+  ],
+  "moatType": "integrations, deliverability, and workflow depth",
+  "replacementScope": "single-owner form service",
+  "ongoingBurden": "spam control, email delivery, storage, exports, accessibility, conditional logic, and integrations",
+  "whyPeopleStillPay": "People still pay for Formstack Forms because a basic form is trivial; people pay when the form feeds a dependable business workflow and never loses a response. The recurring cost buys spam control, email delivery, storage, exports, accessibility, conditional logic, and integrations, not just the visible interface.",
+  "priorArt": [
+    {
+      "name": "Formbricks",
+      "url": "https://github.com/formbricks/formbricks",
+      "desc": "Active open-source survey and experience-management platform."
+    }
+  ],
+  "relatedSlugs": [
+    "surveymonkey",
+    "fillout",
+    "paperform"
+  ],
+  "pagePriority": 3,
+  "verifiedOneShot": false,
+  "notes": "Editorial comparison targets the Forms plan and a single-owner form service DIY substitute. Recheck price before merge.",
+  "prompt": "Build a closest honest personal substitute for Formstack Forms in an empty repository.\nUse Next.js 15, TypeScript, Tailwind CSS, SQLite, Drizzle ORM, and Resend; do not offer alternative stacks.\nThe core loop is: build a public form for build a secure low-volume form workflow with approvals and exports, validate submissions, notify the owner, and provide a private response table with CSV export\nMake the first run work locally with one documented command.\nStore all user data locally by default and make export straightforward.\nPut secrets in .env, ship .env.example, and never commit credentials.\nCreate a form builder with short text, long text, email, number, select, radio, checkbox, and file fields.\nPublish each form at a stable slug with server-side validation and accessible labels.\nAdd honeypot, rate limiting, submission-size limits, and a clear privacy notice.\nStore responses in SQLite and provide search, filters, detail view, and CSV export.\nSend an owner notification without placing submitted values in logs.\nSupport a thank-you screen and one simple conditional branch.\nInclude clear empty, loading, success, and recoverable error states.\nAdd input validation, safe filenames, and graceful handling of unavailable APIs.\nWrite focused tests for the core transformation and one end-to-end happy path.\nCreate a README with setup, architecture, permissions, data location, and backup steps.\nDo not add accounts, billing, telemetry, analytics, or a hosted control plane.\nDo not claim to reproduce proprietary data, network liquidity, regulated access, or frontier infrastructure.\nDeliberately leave out payment collection.\nDeliberately leave out hundreds of third-party integrations.\nDeliberately leave out multi-brand enterprise workspaces and compliance attestations.\nFinish by running the tests and listing the exact commands used.",
+  "promptCurated": false
+}

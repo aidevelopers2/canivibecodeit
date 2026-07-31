@@ -1,0 +1,59 @@
+{
+  "slug": "opinion-stage",
+  "name": "Opinion Stage",
+  "domain": "opinionstage.com",
+  "appURL": "https://opinionstage.com",
+  "category": "forms",
+  "subcategory": "forms, surveys and lead capture",
+  "tagline": "Create a poll, quiz, or survey and embed it with basic response analytics",
+  "priceMonthly": 25,
+  "pricing": {
+    "plan": "Starter",
+    "basis": "monthly",
+    "source": "https://opinionstage.com/pricing",
+    "checkedOn": "2026-07-31",
+    "confidence": "medium",
+    "notes": "Typical Starter monthly tier.",
+    "native": "25 USD",
+    "kind": "fixed",
+    "currency": "USD"
+  },
+  "verdict": "yes",
+  "verdictConfidence": "high",
+  "verdictSummary": "The core loop is small enough for a capable coding agent to produce a useful local version in one sitting. For Opinion Stage, create a poll, quiz, or survey and embed it with basic response analytics. The hard boundary is templates, hosted delivery, lead features, and engagement reporting, plus integrations, deliverability, and workflow depth.",
+  "coreLoopDIY": "build a public form for create a poll, quiz, or survey and embed it with basic response analytics, validate submissions, notify the owner, and provide a private response table with CSV export",
+  "diyTimeEstimate": "one sitting",
+  "requirements": [
+    "Node.js 22",
+    "Resend API key or SMTP credentials",
+    "self-hosted deploy target"
+  ],
+  "whatYouLose": [
+    "templates, hosted delivery, lead features, and engagement reporting",
+    "advanced branching",
+    "payment and CRM integrations",
+    "large template libraries",
+    "enterprise compliance"
+  ],
+  "moatType": "integrations, deliverability, and workflow depth",
+  "replacementScope": "single-owner form service",
+  "ongoingBurden": "spam control, email delivery, storage, exports, accessibility, conditional logic, and integrations",
+  "whyPeopleStillPay": "People still pay for Opinion Stage because a basic form is trivial; people pay when the form feeds a dependable business workflow and never loses a response. The recurring cost buys spam control, email delivery, storage, exports, accessibility, conditional logic, and integrations, not just the visible interface.",
+  "priorArt": [
+    {
+      "name": "Formbricks",
+      "url": "https://github.com/formbricks/formbricks",
+      "desc": "Active open-source survey and experience-management platform."
+    }
+  ],
+  "relatedSlugs": [
+    "surveymonkey",
+    "fillout",
+    "paperform"
+  ],
+  "pagePriority": 3,
+  "verifiedOneShot": false,
+  "notes": "Editorial comparison targets the Starter plan and a single-owner form service DIY substitute. Recheck price before merge.",
+  "prompt": "Build a personal replacement for Opinion Stage in an empty repository.\nUse Next.js 15, TypeScript, Tailwind CSS, SQLite, Drizzle ORM, and Resend; do not offer alternative stacks.\nThe core loop is: build a public form for create a poll, quiz, or survey and embed it with basic response analytics, validate submissions, notify the owner, and provide a private response table with CSV export\nMake the first run work locally with one documented command.\nStore all user data locally by default and make export straightforward.\nPut secrets in .env, ship .env.example, and never commit credentials.\nCreate a form builder with short text, long text, email, number, select, radio, checkbox, and file fields.\nPublish each form at a stable slug with server-side validation and accessible labels.\nAdd honeypot, rate limiting, submission-size limits, and a clear privacy notice.\nStore responses in SQLite and provide search, filters, detail view, and CSV export.\nSend an owner notification without placing submitted values in logs.\nSupport a thank-you screen and one simple conditional branch.\nInclude clear empty, loading, success, and recoverable error states.\nAdd input validation, safe filenames, and graceful handling of unavailable APIs.\nWrite focused tests for the core transformation and one end-to-end happy path.\nCreate a README with setup, architecture, permissions, data location, and backup steps.\nDo not add accounts, billing, telemetry, analytics, or a hosted control plane.\nDeliberately leave out payment collection.\nDeliberately leave out hundreds of third-party integrations.\nDeliberately leave out multi-brand enterprise workspaces and compliance attestations.\nFinish by running the tests and listing the exact commands used.",
+  "promptCurated": false
+}

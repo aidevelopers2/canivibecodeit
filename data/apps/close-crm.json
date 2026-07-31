@@ -1,0 +1,60 @@
+{
+  "slug": "close-crm",
+  "name": "Close",
+  "domain": "close.com",
+  "appURL": "https://close.com",
+  "category": "crm",
+  "subcategory": "contacts, relationships and sales pipelines",
+  "tagline": "Track deals and manually log communication in a focused sales workspace",
+  "priceMonthly": 59,
+  "pricing": {
+    "plan": "Startup",
+    "basis": "monthly per seat",
+    "source": "https://close.com/pricing",
+    "checkedOn": "2026-07-31",
+    "confidence": "high",
+    "notes": "Official Startup monthly seat price.",
+    "native": "59 USD",
+    "kind": "fixed",
+    "currency": "USD"
+  },
+  "verdict": "no",
+  "verdictConfidence": "high",
+  "verdictSummary": "A consolation build is possible, but the paid product's decisive value sits outside a solo rebuild. For Close, track deals and manually log communication in a focused sales workspace. The hard boundary is built-in email, calling, sms, power dialer, workflows, and sales reliability, plus integrations, data quality, and workflow lock-in.",
+  "coreLoopDIY": "manage contacts and companies for track deals and manually log communication in a focused sales workspace, move opportunities through a pipeline, log interactions, and surface the next action",
+  "diyTimeEstimate": "closest consolation build: one sitting",
+  "requirements": [
+    "Docker",
+    "PostgreSQL",
+    "self-hosted server",
+    "optional email API credentials"
+  ],
+  "whatYouLose": [
+    "built-in email, calling, SMS, power dialer, workflows, and sales reliability",
+    "automatic email and calendar capture",
+    "data enrichment",
+    "large integration ecosystem",
+    "enterprise reporting"
+  ],
+  "moatType": "integrations, data quality, and workflow lock-in",
+  "replacementScope": "personal or very small-team CRM",
+  "ongoingBurden": "deduplication, permissions, imports, sync, enrichment, email capture, automations, backups, and audit history",
+  "whyPeopleStillPay": "People still pay for Close because CRM value compounds as the system becomes the shared memory of every customer interaction and embeds itself in the rest of the stack. The recurring cost buys deduplication, permissions, imports, sync, enrichment, email capture, automations, backups, and audit history, not just the visible interface.",
+  "priorArt": [
+    {
+      "name": "Twenty",
+      "url": "https://github.com/twentyhq/twenty",
+      "desc": "Active open-source modern CRM with extensible data models."
+    }
+  ],
+  "relatedSlugs": [
+    "pipedrive",
+    "attio",
+    "zoho-crm"
+  ],
+  "pagePriority": 5,
+  "verifiedOneShot": false,
+  "notes": "Editorial comparison targets the Startup plan and a personal or very small-team CRM DIY substitute. Recheck price before merge.",
+  "prompt": "Build a closest honest personal substitute for Close in an empty repository.\nUse Next.js 15, TypeScript, PostgreSQL, Drizzle ORM, and Docker Compose; do not offer alternative stacks.\nThe core loop is: manage contacts and companies for track deals and manually log communication in a focused sales workspace, move opportunities through a pipeline, log interactions, and surface the next action\nMake the first run work locally with one documented command.\nStore all user data locally by default and make export straightforward.\nPut secrets in .env, ship .env.example, and never commit credentials.\nCreate contacts, companies, opportunities, notes, tasks, and configurable pipeline stages.\nAdd fast global search, duplicate detection, merge, CSV import, and CSV export.\nProvide a chronological interaction timeline with manual email and meeting logging.\nImplement saved views, filters, owner assignment, and a next-action dashboard.\nAdd role-based access, an immutable activity log, backups, and a recovery command.\nSeed a realistic demo workspace and document field mapping for imports.\nInclude clear empty, loading, success, and recoverable error states.\nAdd input validation, safe filenames, and graceful handling of unavailable APIs.\nWrite focused tests for the core transformation and one end-to-end happy path.\nCreate a README with setup, architecture, permissions, data location, and backup steps.\nDo not add accounts, billing, telemetry, analytics, or a hosted control plane.\nDo not claim to reproduce proprietary data, network liquidity, regulated access, or frontier infrastructure.\nDeliberately leave out automatic mailbox ingestion.\nDeliberately leave out commercial enrichment databases.\nDeliberately leave out enterprise forecasting, integrations, and compliance.\nFinish by running the tests and listing the exact commands used.",
+  "promptCurated": false
+}

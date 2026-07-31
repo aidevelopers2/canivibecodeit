@@ -1,0 +1,60 @@
+{
+  "slug": "tripit-pro",
+  "name": "TripIt Pro",
+  "domain": "tripit.com",
+  "appURL": "https://tripit.com",
+  "category": "travel",
+  "subcategory": "trip planning, navigation and travel intelligence",
+  "tagline": "Parse user-forwarded reservations into an offline itinerary and calendar",
+  "priceMonthly": 4.08,
+  "pricing": {
+    "plan": "Pro",
+    "basis": "annual-equivalent",
+    "source": "https://tripit.com/web/free-vs-pro/",
+    "checkedOn": "2026-07-31",
+    "confidence": "high",
+    "notes": "Annual Pro fee divided by 12.",
+    "native": "4.08 USD",
+    "kind": "fixed",
+    "currency": "USD"
+  },
+  "verdict": "no",
+  "verdictConfidence": "high",
+  "verdictSummary": "A consolation build is possible, but the paid product's decisive value sits outside a solo rebuild. For TripIt Pro, parse user-forwarded reservations into an offline itinerary and calendar. The hard boundary is live flight alerts, fare monitoring, seat tracking, account integrations, and disruption data, plus proprietary live data and network coverage.",
+  "coreLoopDIY": "organize a trip for parse user-forwarded reservations into an offline itinerary and calendar, map user-entered places and reservations, and keep an offline itinerary without claiming live proprietary availability",
+  "diyTimeEstimate": "closest consolation build: one sitting",
+  "requirements": [
+    "modern browser",
+    "MapTiler or compatible map key",
+    "user-entered reservations",
+    "optional public transit or weather API"
+  ],
+  "whatYouLose": [
+    "live flight alerts, fare monitoring, seat tracking, account integrations, and disruption data",
+    "live fare and inventory data",
+    "global routing dataset",
+    "crowdsourced trail intelligence",
+    "booking, disruption support, and offline map fleet"
+  ],
+  "moatType": "proprietary live data and network coverage",
+  "replacementScope": "personal itinerary organizer",
+  "ongoingBurden": "map licensing, fare feeds, reservation access, route freshness, disruptions, geocoding, caching, offline data, and support",
+  "whyPeopleStillPay": "People still pay for TripIt Pro because travel subscriptions sell current data and confidence during disruption, not just an itinerary list. The recurring cost buys map licensing, fare feeds, reservation access, route freshness, disruptions, geocoding, caching, offline data, and support, not just the visible interface.",
+  "priorArt": [
+    {
+      "name": "Wanderer",
+      "url": "https://github.com/Flomp/wanderer",
+      "desc": "Open-source self-hosted trail database and route explorer using open map data."
+    }
+  ],
+  "relatedSlugs": [
+    "wanderlog-pro",
+    "alltrails-plus",
+    "flighty-pro"
+  ],
+  "pagePriority": 5,
+  "verifiedOneShot": false,
+  "notes": "Editorial comparison targets the Pro plan and a personal itinerary organizer DIY substitute. Recheck price before merge.",
+  "prompt": "Build a closest honest personal substitute for TripIt Pro in an empty repository.\nUse Next.js 15, TypeScript, SQLite, MapLibre GL, and user-supplied map and travel APIs; do not offer alternative stacks.\nThe core loop is: organize a trip for parse user-forwarded reservations into an offline itinerary and calendar, map user-entered places and reservations, and keep an offline itinerary without claiming live proprietary availability\nMake the first run work locally with one documented command.\nStore all user data locally by default and make export straightforward.\nPut secrets in .env, ship .env.example, and never commit credentials.\nCreate trips, days, places, reservations, notes, documents, packing items, and emergency contacts.\nGeocode only user-entered places and display them through MapLibre with cached trip-area tiles where allowed.\nParse forwarded reservation text locally into editable fields without logging message content.\nBuild a day timeline, route overview, conflict warnings, timezone display, and offline printable itinerary.\nAllow manual updates for delays and reservations and label all external data with source and timestamp.\nExport a complete trip bundle as JSON, calendar file, Markdown, and PDF.\nInclude clear empty, loading, success, and recoverable error states.\nAdd input validation, safe filenames, and graceful handling of unavailable APIs.\nWrite focused tests for the core transformation and one end-to-end happy path.\nCreate a README with setup, architecture, permissions, data location, and backup steps.\nDo not add accounts, billing, telemetry, analytics, or a hosted control plane.\nDo not claim to reproduce proprietary data, network liquidity, regulated access, or frontier infrastructure.\nDeliberately leave out live flight, hotel, award, or ticket inventory.\nDeliberately leave out commercial turn-by-turn navigation and global offline maps.\nDeliberately leave out booking guarantees, disruption rebooking, and traveler support.\nFinish by running the tests and listing the exact commands used.",
+  "promptCurated": false
+}

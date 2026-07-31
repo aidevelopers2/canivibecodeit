@@ -1,0 +1,61 @@
+{
+  "slug": "nitro-pdf-pro",
+  "name": "Nitro PDF Pro",
+  "domain": "gonitro.com",
+  "appURL": "https://gonitro.com",
+  "category": "documents",
+  "subcategory": "PDF editing, document workflows and electronic signatures",
+  "tagline": "Edit, convert, combine, and sign ordinary business PDFs locally",
+  "priceMonthly": 17.69,
+  "pricing": {
+    "plan": "Nitro PDF Pro",
+    "basis": "annual-equivalent",
+    "source": "https://gonitro.com/pricing",
+    "checkedOn": "2026-07-31",
+    "confidence": "medium",
+    "notes": "Annual individual subscription converted to a monthly equivalent; verify current package.",
+    "native": "17.69 USD",
+    "kind": "fixed",
+    "currency": "USD"
+  },
+  "verdict": "kinda",
+  "verdictConfidence": "medium",
+  "verdictSummary": "The core loop is buildable, but a dependable replacement becomes a real weekend or multi-day project. For Nitro PDF Pro, edit, convert, combine, and sign ordinary business PDFs locally. The hard boundary is format fidelity, office integration, ocr, support, and enterprise deployment, plus document fidelity, identity, and compliance.",
+  "coreLoopDIY": "perform focused document work for edit, convert, combine, and sign ordinary business PDFs locally, preserve originals, generate auditable outputs, and keep files in a user-owned store",
+  "diyTimeEstimate": "multi-day",
+  "requirements": [
+    "Docker",
+    "PostgreSQL",
+    "LibreOffice headless",
+    "local or S3-compatible storage",
+    "public HTTPS for signature links"
+  ],
+  "whatYouLose": [
+    "format fidelity, Office integration, OCR, support, and enterprise deployment",
+    "pixel-perfect proprietary PDF engine",
+    "identity verification",
+    "qualified trust services",
+    "large template and integration ecosystem"
+  ],
+  "moatType": "document fidelity, identity, and compliance",
+  "replacementScope": "personal document tool or low-stakes signature flow",
+  "ongoingBurden": "format edge cases, fonts, rendering, encryption, signatures, evidence, retention, storage, backups, and legal requirements",
+  "whyPeopleStillPay": "People still pay for Nitro PDF Pro because the visible editor is reproducible, but reliable rendering and legally defensible signature workflows are not a casual side project. The recurring cost buys format edge cases, fonts, rendering, encryption, signatures, evidence, retention, storage, backups, and legal requirements, not just the visible interface.",
+  "priorArt": [
+    {
+      "name": "Stirling PDF",
+      "url": "https://github.com/Stirling-Tools/Stirling-PDF",
+      "desc": "Active open-source web application for a broad set of PDF operations."
+    }
+  ],
+  "relatedSlugs": [
+    "adobe-acrobat-pro",
+    "pdf-expert",
+    "smallpdf"
+  ],
+  "pagePriority": 4,
+  "verifiedOneShot": false,
+  "notes": "Editorial comparison targets the Nitro PDF Pro plan and a personal document tool or low-stakes signature flow DIY substitute. Recheck price before merge.",
+  "prompt": "Build a personal replacement for Nitro PDF Pro in an empty repository.\nUse Next.js 15, TypeScript, Python 3.12, FastAPI, pikepdf, LibreOffice headless, and PostgreSQL; do not offer alternative stacks.\nThe core loop is: perform focused document work for edit, convert, combine, and sign ordinary business PDFs locally, preserve originals, generate auditable outputs, and keep files in a user-owned store\nMake the first run work locally with one documented command.\nStore all user data locally by default and make export straightforward.\nPut secrets in .env, ship .env.example, and never commit credentials.\nKeep every original immutable and write each operation to a versioned output file.\nSupport merge, split, reorder, rotate, compress, watermark, redact, OCR, and Office-to-PDF conversion.\nRender page previews and warn when fonts, forms, signatures, or encryption may be altered.\nFor signature mode, place fields, invite signers, record consent, and seal a final PDF hash.\nMaintain an append-only event log with timestamps, document hashes, and delivery outcomes.\nAdd file expiry, download, deletion, backup, and a prominent low-stakes-use warning.\nInclude clear empty, loading, success, and recoverable error states.\nAdd input validation, safe filenames, and graceful handling of unavailable APIs.\nWrite focused tests for the core transformation and one end-to-end happy path.\nCreate a README with setup, architecture, permissions, data location, and backup steps.\nDo not add accounts, billing, telemetry, analytics, or a hosted control plane.\nDeliberately leave out qualified or regulated electronic signatures.\nDeliberately leave out government identity verification.\nDeliberately leave out full Acrobat-level editing and enterprise document governance.\nFinish by running the tests and listing the exact commands used.",
+  "promptCurated": false
+}

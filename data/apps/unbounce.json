@@ -1,0 +1,60 @@
+{
+  "slug": "unbounce",
+  "name": "Unbounce",
+  "domain": "unbounce.com",
+  "appURL": "https://unbounce.com",
+  "category": "website-builder",
+  "subcategory": "websites and landing pages",
+  "tagline": "Create a focused landing-page builder and run a small user-controlled A or B test",
+  "priceMonthly": 99,
+  "pricing": {
+    "plan": "Build",
+    "basis": "monthly",
+    "source": "https://unbounce.com/pricing",
+    "checkedOn": "2026-07-31",
+    "confidence": "medium",
+    "notes": "Typical entry monthly tier; packaging changes periodically.",
+    "native": "99 USD",
+    "kind": "fixed",
+    "currency": "USD"
+  },
+  "verdict": "no",
+  "verdictConfidence": "high",
+  "verdictSummary": "A consolation build is possible, but the paid product's decisive value sits outside a solo rebuild. For Unbounce, create a focused landing-page builder and run a small user-controlled A or B test. The hard boundary is managed traffic routing, experimentation, integrations, templates, and conversion intelligence, plus editor polish, hosting, templates, and ecosystem.",
+  "coreLoopDIY": "assemble responsive sections for create a focused landing-page builder and run a small user-controlled A or B test, edit copy and media, preview breakpoints, and publish a static site to a user-owned target",
+  "diyTimeEstimate": "closest consolation build: one sitting",
+  "requirements": [
+    "Node.js 22",
+    "domain and deploy target",
+    "local images",
+    "optional form-email API key"
+  ],
+  "whatYouLose": [
+    "managed traffic routing, experimentation, integrations, templates, and conversion intelligence",
+    "large template marketplace",
+    "managed hosting and CDN",
+    "advanced CMS",
+    "commerce and agency workflows"
+  ],
+  "moatType": "editor polish, hosting, templates, and ecosystem",
+  "replacementScope": "single-site builder",
+  "ongoingBurden": "responsive rendering, forms, domains, certificates, deploys, backups, template maintenance, and browser regressions",
+  "whyPeopleStillPay": "People still pay for Unbounce because the page renderer is reproducible, but customers pay to avoid becoming their own hosting and browser-compatibility team. The recurring cost buys responsive rendering, forms, domains, certificates, deploys, backups, template maintenance, and browser regressions, not just the visible interface.",
+  "priorArt": [
+    {
+      "name": "Webstudio",
+      "url": "https://github.com/webstudio-is/webstudio",
+      "desc": "Open-source visual website builder designed around web standards."
+    }
+  ],
+  "relatedSlugs": [
+    "duda",
+    "tilda",
+    "typedream"
+  ],
+  "pagePriority": 4,
+  "verifiedOneShot": false,
+  "notes": "Editorial comparison targets the Build plan and a single-site builder DIY substitute. Recheck price before merge.",
+  "prompt": "Build a closest honest personal substitute for Unbounce in an empty repository.\nUse Next.js 15, TypeScript, Tailwind CSS, SQLite, Drizzle ORM, and static export; do not offer alternative stacks.\nThe core loop is: assemble responsive sections for create a focused landing-page builder and run a small user-controlled A or B test, edit copy and media, preview breakpoints, and publish a static site to a user-owned target\nMake the first run work locally with one documented command.\nStore all user data locally by default and make export straightforward.\nPut secrets in .env, ship .env.example, and never commit credentials.\nProvide a section library for hero, proof, features, pricing, FAQ, and footer blocks.\nUse a constrained design-token system rather than arbitrary CSS controls.\nAllow inline text editing and local image upload with responsive optimization.\nPreview desktop, tablet, and mobile widths and surface overflow errors.\nPersist projects in SQLite and support a portable JSON export.\nGenerate a clean static Next.js output and document deployment to one target.\nInclude clear empty, loading, success, and recoverable error states.\nAdd input validation, safe filenames, and graceful handling of unavailable APIs.\nWrite focused tests for the core transformation and one end-to-end happy path.\nCreate a README with setup, architecture, permissions, data location, and backup steps.\nDo not add accounts, billing, telemetry, analytics, or a hosted control plane.\nDo not claim to reproduce proprietary data, network liquidity, regulated access, or frontier infrastructure.\nDeliberately leave out a plugin marketplace.\nDeliberately leave out multi-tenant managed hosting.\nDeliberately leave out advanced ecommerce, memberships, and agency billing.\nFinish by running the tests and listing the exact commands used.",
+  "promptCurated": false
+}

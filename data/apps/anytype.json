@@ -1,0 +1,59 @@
+{
+  "slug": "anytype",
+  "name": "Anytype",
+  "domain": "anytype.io",
+  "appURL": "https://anytype.io",
+  "category": "notes-knowledge",
+  "subcategory": "notes, wikis and personal knowledge bases",
+  "tagline": "Manage a local-first object graph with pages, collections, relations, and peer sync",
+  "priceMonthly": 8.25,
+  "pricing": {
+    "plan": "Builder",
+    "basis": "annual-equivalent",
+    "source": "https://anytype.io/pricing",
+    "checkedOn": "2026-07-31",
+    "confidence": "medium",
+    "notes": "Based on common annual Builder membership divided by 12; confirm current membership packaging.",
+    "native": "8.25 USD",
+    "kind": "fixed",
+    "currency": "USD"
+  },
+  "verdict": "kinda",
+  "verdictConfidence": "medium",
+  "verdictSummary": "The core loop is buildable, but a dependable replacement becomes a real weekend or multi-day project. For Anytype, manage a local-first object graph with pages, collections, relations, and peer sync. The hard boundary is local-first sync protocol, mobile apps, collaboration, and identity infrastructure, plus sync, collaboration, and capture polish.",
+  "coreLoopDIY": "capture linked notes for manage a local-first object graph with pages, collections, relations, and peer sync, search them instantly, surface backlinks, and export a normal Markdown folder",
+  "diyTimeEstimate": "one sitting",
+  "requirements": [
+    "macOS, Windows, or Linux",
+    "local folder access",
+    "optional sync folder chosen by the user"
+  ],
+  "whatYouLose": [
+    "local-first sync protocol, mobile apps, collaboration, and identity infrastructure",
+    "frictionless mobile capture",
+    "real-time team editing",
+    "hosted publishing",
+    "proprietary AI memory"
+  ],
+  "moatType": "sync, collaboration, and capture polish",
+  "replacementScope": "personal local knowledge base",
+  "ongoingBurden": "file watching, conflict handling, indexing, mobile apps, encryption, backups, and migrations",
+  "whyPeopleStillPay": "People still pay for Anytype because people keep paying when the note system is trusted across every device and disappears into their daily capture habits. The recurring cost buys file watching, conflict handling, indexing, mobile apps, encryption, backups, and migrations, not just the visible interface.",
+  "priorArt": [
+    {
+      "name": "AppFlowy",
+      "url": "https://github.com/AppFlowy-IO/AppFlowy",
+      "desc": "Active open-source workspace with local-first documents and databases."
+    }
+  ],
+  "relatedSlugs": [
+    "craft",
+    "slite",
+    "nuclino"
+  ],
+  "pagePriority": 4,
+  "verifiedOneShot": false,
+  "notes": "Editorial comparison targets the Builder plan and a personal local knowledge base DIY substitute. Recheck price before merge.",
+  "prompt": "Build a personal replacement for Anytype in an empty repository.\nUse Tauri 2, React, TypeScript, SQLite, and Markdown files as the source of truth; do not offer alternative stacks.\nThe core loop is: capture linked notes for manage a local-first object graph with pages, collections, relations, and peer sync, search them instantly, surface backlinks, and export a normal Markdown folder\nMake the first run work locally with one documented command.\nStore all user data locally by default and make export straightforward.\nPut secrets in .env, ship .env.example, and never commit credentials.\nStore one Markdown file per note and a small SQLite index that can be rebuilt at any time.\nSupport wiki links, tags, backlinks, daily notes, pinned notes, and full-text search.\nAdd a fast command palette and keyboard-first create, rename, move, and link actions.\nRender Markdown with task lists, code blocks, tables, and local image attachments.\nDetect external file changes and show a safe conflict-resolution view.\nProvide full-folder export, import, and an index-rebuild command.\nInclude clear empty, loading, success, and recoverable error states.\nAdd input validation, safe filenames, and graceful handling of unavailable APIs.\nWrite focused tests for the core transformation and one end-to-end happy path.\nCreate a README with setup, architecture, permissions, data location, and backup steps.\nDo not add accounts, billing, telemetry, analytics, or a hosted control plane.\nDeliberately leave out proprietary sync servers.\nDeliberately leave out real-time multiplayer documents.\nDeliberately leave out a plugin marketplace and hosted public sites.\nFinish by running the tests and listing the exact commands used.",
+  "promptCurated": false
+}

@@ -1,0 +1,61 @@
+{
+  "slug": "cal-com-teams",
+  "name": "Cal.com Teams",
+  "domain": "cal.com",
+  "appURL": "https://cal.com",
+  "category": "scheduling",
+  "subcategory": "booking links and calendar automation",
+  "tagline": "Self-host a team booking service with event types, availability, and routing",
+  "priceMonthly": 15,
+  "pricing": {
+    "plan": "Teams",
+    "basis": "monthly per user",
+    "source": "https://cal.com/pricing",
+    "checkedOn": "2026-07-31",
+    "confidence": "high",
+    "notes": "Official Teams monthly seat price.",
+    "native": "15 USD",
+    "kind": "fixed",
+    "currency": "USD"
+  },
+  "verdict": "kinda",
+  "verdictConfidence": "medium",
+  "verdictSummary": "The core loop is buildable, but a dependable replacement becomes a real weekend or multi-day project. For Cal.com Teams, self-host a team booking service with event types, availability, and routing. The hard boundary is managed hosting, connectors, upgrades, support, and enterprise controls, plus calendar integrations and reliability.",
+  "coreLoopDIY": "read one calendar, publish availability for self-host a team booking service with event types, availability, and routing, create conflict-safe bookings, and send confirmations and reminders",
+  "diyTimeEstimate": "multi-day",
+  "requirements": [
+    "Google Calendar OAuth credentials",
+    "PostgreSQL",
+    "public deploy target",
+    "Resend API key",
+    "domain with HTTPS"
+  ],
+  "whatYouLose": [
+    "managed hosting, connectors, upgrades, support, and enterprise controls",
+    "multiple calendar providers",
+    "team routing and round-robin",
+    "payments",
+    "timezone edge-case maturity"
+  ],
+  "moatType": "calendar integrations and reliability",
+  "replacementScope": "single-user booking service",
+  "ongoingBurden": "OAuth refresh, webhooks, timezone databases, race conditions, reminders, deliverability, privacy, and uptime",
+  "whyPeopleStillPay": "People still pay for Cal.com Teams because people pay because one double booking or missed invite can cost more than years of subscription fees. The recurring cost buys OAuth refresh, webhooks, timezone databases, race conditions, reminders, deliverability, privacy, and uptime, not just the visible interface.",
+  "priorArt": [
+    {
+      "name": "Cal.com",
+      "url": "https://github.com/calcom/cal.com",
+      "desc": "Mature open-source scheduling platform with calendar integrations and booking workflows."
+    }
+  ],
+  "relatedSlugs": [
+    "fantastical",
+    "tidycal",
+    "youcanbookme"
+  ],
+  "pagePriority": 5,
+  "verifiedOneShot": false,
+  "notes": "Editorial comparison targets the Teams plan and a single-user booking service DIY substitute. Recheck price before merge.",
+  "prompt": "Build a personal replacement for Cal.com Teams in an empty repository.\nUse Next.js 15, TypeScript, PostgreSQL, Drizzle ORM, Google Calendar OAuth, and Resend; do not offer alternative stacks.\nThe core loop is: read one calendar, publish availability for self-host a team booking service with event types, availability, and routing, create conflict-safe bookings, and send confirmations and reminders\nMake the first run work locally with one documented command.\nStore all user data locally by default and make export straightforward.\nPut secrets in .env, ship .env.example, and never commit credentials.\nImplement one account with configurable working hours, buffers, minimum notice, and booking horizon.\nConnect Google Calendar using OAuth and store refresh tokens encrypted at rest.\nCalculate availability in UTC and render it in the visitor's detected timezone.\nReserve slots transactionally, create calendar events, and prevent concurrent double booking.\nSend confirmation, cancellation, and reminder email with signed management links.\nAdd an admin booking list, event-type editor, audit log, and calendar reconnect flow.\nInclude clear empty, loading, success, and recoverable error states.\nAdd input validation, safe filenames, and graceful handling of unavailable APIs.\nWrite focused tests for the core transformation and one end-to-end happy path.\nCreate a README with setup, architecture, permissions, data location, and backup steps.\nDo not add accounts, billing, telemetry, analytics, or a hosted control plane.\nDeliberately leave out Microsoft and Apple calendar support.\nDeliberately leave out team round-robin routing.\nDeliberately leave out payments, CRM workflows, and enterprise controls.\nFinish by running the tests and listing the exact commands used.",
+  "promptCurated": false
+}

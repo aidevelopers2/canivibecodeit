@@ -1,0 +1,60 @@
+{
+  "slug": "checkly",
+  "name": "Checkly",
+  "domain": "checklyhq.com",
+  "appURL": "https://checklyhq.com",
+  "category": "monitoring",
+  "subcategory": "uptime, errors, logs and status pages",
+  "tagline": "Run scheduled API and browser checks from one independent worker",
+  "priceMonthly": 39,
+  "pricing": {
+    "plan": "Starter",
+    "basis": "monthly",
+    "source": "https://checklyhq.com/pricing",
+    "checkedOn": "2026-07-31",
+    "confidence": "high",
+    "notes": "Official Starter monthly tier.",
+    "native": "39 USD",
+    "kind": "fixed",
+    "currency": "USD"
+  },
+  "verdict": "kinda",
+  "verdictConfidence": "medium",
+  "verdictSummary": "The core loop is buildable, but a dependable replacement becomes a real weekend or multi-day project. For Checkly, run scheduled API and browser checks from one independent worker. The hard boundary is global browser fleet, playwright operations, alerting, ci integration, and support, plus independent infrastructure and reliable alerting.",
+  "coreLoopDIY": "run independent checks for run scheduled API and browser checks from one independent worker, receive bounded error or log events, alert through one channel, and publish an honest status page",
+  "diyTimeEstimate": "multi-day",
+  "requirements": [
+    "server outside the monitored failure domain",
+    "PostgreSQL",
+    "optional ClickHouse",
+    "email or webhook destination",
+    "public HTTPS"
+  ],
+  "whatYouLose": [
+    "global browser fleet, Playwright operations, alerting, CI integration, and support",
+    "global probe network",
+    "phone and SMS delivery",
+    "massive retention",
+    "advanced incident response and support"
+  ],
+  "moatType": "independent infrastructure and reliable alerting",
+  "replacementScope": "small independent monitoring service",
+  "ongoingBurden": "probe geography, clocks, retries, deduplication, sampling, storage, paging, notification delivery, on-call rules, and its own uptime",
+  "whyPeopleStillPay": "People still pay for Checkly because monitoring must continue working during the exact outage it reports, which makes independent infrastructure and alert delivery the real product. The recurring cost buys probe geography, clocks, retries, deduplication, sampling, storage, paging, notification delivery, on-call rules, and its own uptime, not just the visible interface.",
+  "priorArt": [
+    {
+      "name": "Uptime Kuma",
+      "url": "https://github.com/louislam/uptime-kuma",
+      "desc": "Popular open-source uptime monitoring dashboard with many check types."
+    }
+  ],
+  "relatedSlugs": [
+    "sentry",
+    "uptime"
+  ],
+  "pagePriority": 4,
+  "verifiedOneShot": false,
+  "notes": "Editorial comparison targets the Starter plan and a small independent monitoring service DIY substitute. Recheck price before merge.",
+  "prompt": "Build a personal replacement for Checkly in an empty repository.\nUse Go, PostgreSQL, ClickHouse, a Next.js 15 dashboard, and Docker Compose; do not offer alternative stacks.\nThe core loop is: run independent checks for run scheduled API and browser checks from one independent worker, receive bounded error or log events, alert through one channel, and publish an honest status page\nMake the first run work locally with one documented command.\nStore all user data locally by default and make export straightforward.\nPut secrets in .env, ship .env.example, and never commit credentials.\nImplement HTTP, TCP, DNS, TLS-expiry, and heartbeat checks with explicit timeout and retry policies.\nRun checks from one independently hosted worker and store raw results plus incident state transitions.\nSend deduplicated alerts to email or one webhook destination with recovery notifications.\nCreate services, maintenance windows, incidents, subscribers, and a public status page.\nAdd bounded event ingestion for application errors with sampling and sensitive-field scrubbing.\nProvide health checks, retention settings, exports, backups, and a test-alert function.\nInclude clear empty, loading, success, and recoverable error states.\nAdd input validation, safe filenames, and graceful handling of unavailable APIs.\nWrite focused tests for the core transformation and one end-to-end happy path.\nCreate a README with setup, architecture, permissions, data location, and backup steps.\nDo not add accounts, billing, telemetry, analytics, or a hosted control plane.\nDeliberately leave out a worldwide probe network.\nDeliberately leave out phone, SMS, and managed on-call escalation.\nDeliberately leave out unbounded logs, enterprise observability, and vendor-operated incident response.\nFinish by running the tests and listing the exact commands used.",
+  "promptCurated": false
+}

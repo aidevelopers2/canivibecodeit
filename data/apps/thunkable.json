@@ -1,0 +1,60 @@
+{
+  "slug": "thunkable",
+  "name": "Thunkable",
+  "domain": "thunkable.com",
+  "appURL": "https://thunkable.com",
+  "category": "no-code-apps",
+  "subcategory": "internal tools and application builders",
+  "tagline": "Prototype a mobile app with fixed components and local data",
+  "priceMonthly": 59,
+  "pricing": {
+    "plan": "Builder",
+    "basis": "monthly",
+    "source": "https://thunkable.com/pricing",
+    "checkedOn": "2026-07-31",
+    "confidence": "medium",
+    "notes": "Typical Builder monthly rate.",
+    "native": "59 USD",
+    "kind": "fixed",
+    "currency": "USD"
+  },
+  "verdict": "no",
+  "verdictConfidence": "high",
+  "verdictSummary": "A consolation build is possible, but the paid product's decisive value sits outside a solo rebuild. For Thunkable, prototype a mobile app with fixed components and local data. The hard boundary is native build infrastructure, device integrations, publishing pipeline, and education ecosystem, plus connectors, runtime reliability, and governance.",
+  "coreLoopDIY": "define tables and views, build a constrained CRUD interface for prototype a mobile app with fixed components and local data, connect one approved data source, and deploy it for a small trusted team",
+  "diyTimeEstimate": "closest consolation build: one sitting",
+  "requirements": [
+    "Docker",
+    "PostgreSQL",
+    "self-hosted deploy target",
+    "API credentials for one selected integration"
+  ],
+  "whatYouLose": [
+    "native build infrastructure, device integrations, publishing pipeline, and education ecosystem",
+    "hundreds of connectors",
+    "pixel-perfect app design",
+    "mobile app-store builds",
+    "enterprise permissions and scale"
+  ],
+  "moatType": "connectors, runtime reliability, and governance",
+  "replacementScope": "small-team internal app",
+  "ongoingBurden": "schema migration, auth, permissions, connector drift, queues, deployments, backups, and auditability",
+  "whyPeopleStillPay": "People still pay for Thunkable because the builder is only useful when its runtime, connectors, permissions, and deployments remain boring for years. The recurring cost buys schema migration, auth, permissions, connector drift, queues, deployments, backups, and auditability, not just the visible interface.",
+  "priorArt": [
+    {
+      "name": "Appsmith",
+      "url": "https://github.com/appsmithorg/appsmith",
+      "desc": "Large open-source low-code platform for internal applications and data sources."
+    }
+  ],
+  "relatedSlugs": [
+    "flutterflow",
+    "retool",
+    "weweb"
+  ],
+  "pagePriority": 3,
+  "verifiedOneShot": false,
+  "notes": "Editorial comparison targets the Builder plan and a small-team internal app DIY substitute. Recheck price before merge.",
+  "prompt": "Build a closest honest personal substitute for Thunkable in an empty repository.\nUse Next.js 15, TypeScript, Tailwind CSS, PostgreSQL, Drizzle ORM, and Docker Compose; do not offer alternative stacks.\nThe core loop is: define tables and views, build a constrained CRUD interface for prototype a mobile app with fixed components and local data, connect one approved data source, and deploy it for a small trusted team\nMake the first run work locally with one documented command.\nStore all user data locally by default and make export straightforward.\nPut secrets in .env, ship .env.example, and never commit credentials.\nCreate a schema editor for text, number, boolean, date, enum, and relation fields.\nGenerate list, detail, create, edit, and kanban views from the schema.\nImplement role-based read and write rules for admin and member roles.\nSupport one REST connector with encrypted credentials and explicit field mapping.\nAdd an activity log, CSV import or export, backups, and health checks.\nShip Docker Compose with migrations and a seeded example workspace.\nInclude clear empty, loading, success, and recoverable error states.\nAdd input validation, safe filenames, and graceful handling of unavailable APIs.\nWrite focused tests for the core transformation and one end-to-end happy path.\nCreate a README with setup, architecture, permissions, data location, and backup steps.\nDo not add accounts, billing, telemetry, analytics, or a hosted control plane.\nDo not claim to reproduce proprietary data, network liquidity, regulated access, or frontier infrastructure.\nDeliberately leave out arbitrary user-authored code execution.\nDeliberately leave out a broad integration marketplace.\nDeliberately leave out native mobile binaries and enterprise compliance.\nFinish by running the tests and listing the exact commands used.",
+  "promptCurated": false
+}

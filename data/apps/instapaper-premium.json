@@ -1,0 +1,60 @@
+{
+  "slug": "instapaper-premium",
+  "name": "Instapaper Premium",
+  "domain": "instapaper.com",
+  "appURL": "https://instapaper.com",
+  "category": "reading",
+  "subcategory": "read-later, bookmarks and RSS",
+  "tagline": "Save readable versions of permitted pages, highlight them, and search the archive",
+  "priceMonthly": 5.99,
+  "pricing": {
+    "plan": "Premium",
+    "basis": "monthly",
+    "source": "https://instapaper.com/premium",
+    "checkedOn": "2026-07-31",
+    "confidence": "high",
+    "notes": "Official monthly Premium price.",
+    "native": "5.99 USD",
+    "kind": "fixed",
+    "currency": "USD"
+  },
+  "verdict": "yes",
+  "verdictConfidence": "high",
+  "verdictSummary": "The core loop is small enough for a capable coding agent to produce a useful local version in one sitting. For Instapaper Premium, save readable versions of permitted pages, highlight them, and search the archive. The hard boundary is mobile capture, sync, text-to-speech, kindle integration, and parser maintenance, plus capture polish, sync, and content partnerships.",
+  "coreLoopDIY": "save permitted web pages or feeds for save readable versions of permitted pages, highlight them, and search the archive, extract readable text, tag and search the archive, and export it in open formats",
+  "diyTimeEstimate": "one sitting",
+  "requirements": [
+    "Node.js 22",
+    "local disk",
+    "optional browser bookmarklet",
+    "user-supplied RSS feeds"
+  ],
+  "whatYouLose": [
+    "mobile capture, sync, text-to-speech, Kindle integration, and parser maintenance",
+    "publisher bypasses",
+    "cross-device mobile capture",
+    "high-quality recommendation graph",
+    "licensed full-text feeds"
+  ],
+  "moatType": "capture polish, sync, and content partnerships",
+  "replacementScope": "personal reading archive",
+  "ongoingBurden": "feed quirks, parsing, paywalls, canonical URLs, deduplication, images, search, sync, browser extensions, and publisher changes",
+  "whyPeopleStillPay": "People still pay for Instapaper Premium because people pay when capture works everywhere, reading state syncs instantly, and the archive remains clean without constant parser repairs. The recurring cost buys feed quirks, parsing, paywalls, canonical URLs, deduplication, images, search, sync, browser extensions, and publisher changes, not just the visible interface.",
+  "priorArt": [
+    {
+      "name": "FreshRSS",
+      "url": "https://github.com/FreshRSS/FreshRSS",
+      "desc": "Mature open-source RSS reader with feeds, filters, and self-hosting support."
+    }
+  ],
+  "relatedSlugs": [
+    "readwise",
+    "raindrop-io",
+    "inoreader"
+  ],
+  "pagePriority": 4,
+  "verifiedOneShot": false,
+  "notes": "Editorial comparison targets the Premium plan and a personal reading archive DIY substitute. Recheck price before merge.",
+  "prompt": "Build a personal replacement for Instapaper Premium in an empty repository.\nUse Next.js 15, TypeScript, SQLite, Drizzle ORM, Readability.js, and a local background worker; do not offer alternative stacks.\nThe core loop is: save permitted web pages or feeds for save readable versions of permitted pages, highlight them, and search the archive, extract readable text, tag and search the archive, and export it in open formats\nMake the first run work locally with one documented command.\nStore all user data locally by default and make export straightforward.\nPut secrets in .env, ship .env.example, and never commit credentials.\nSupport manual URL save, RSS or Atom subscriptions, OPML import, and a simple bookmarklet.\nFetch politely with a clear user agent, rate limits, conditional requests, and robots-aware behavior.\nExtract title, author, date, canonical URL, readable HTML, and selected images.\nProvide inbox, unread, archive, favorites, tags, highlights, notes, and full-text search.\nKeep the original URL prominent and never attempt to bypass authentication or paywalls.\nExport OPML, bookmarks HTML, Markdown, and a complete JSON backup.\nInclude clear empty, loading, success, and recoverable error states.\nAdd input validation, safe filenames, and graceful handling of unavailable APIs.\nWrite focused tests for the core transformation and one end-to-end happy path.\nCreate a README with setup, architecture, permissions, data location, and backup steps.\nDo not add accounts, billing, telemetry, analytics, or a hosted control plane.\nDeliberately leave out paywall circumvention.\nDeliberately leave out licensed publisher content and recommendation networks.\nDeliberately leave out native mobile clients and seamless commercial sync.\nFinish by running the tests and listing the exact commands used.",
+  "promptCurated": false
+}
