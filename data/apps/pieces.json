@@ -1,0 +1,63 @@
+{
+  "slug": "pieces",
+  "name": "Pieces",
+  "domain": "pieces.app",
+  "appURL": "https://pieces.app",
+  "category": "dev-tools",
+  "subcategory": "developer memory + AI",
+  "tagline": "Local-first developer assistant that captures snippets, context, and workflows",
+  "priceMonthly": null,
+  "pricing": {
+    "plan": "Typical paid plan",
+    "kind": "unknown",
+    "basis": "paid plan; billing basis requires review",
+    "currency": "USD",
+    "native": "Public paid plan exists; amount not safely recovered",
+    "source": "https://pieces.app/pricing",
+    "checkedOn": "2026-07-31",
+    "confidence": "low",
+    "notes": "The official pricing URL is recorded, but a stable current amount was not safely recoverable in this pass. Do not publish a number until rechecked."
+  },
+  "verdict": "yes",
+  "verdictConfidence": "medium",
+  "verdictSummary": "Pieces's solo core is compact: build a repository-local developer memory + AI assistant that indexes one codebase, calls one model, proposes diffs, runs tests, and records every change. A competent builder can reach a useful personal version in one sitting, while the paid product mainly wins on model, context, integration.",
+  "coreLoopDIY": "Build a repository-local developer memory + AI assistant that indexes one codebase, calls one model, proposes diffs, runs tests, and records every change.",
+  "diyTimeEstimate": "one sitting",
+  "replacementScope": "personal replacement for the core loop",
+  "requirements": [
+    "Python 3.12",
+    "Git",
+    "OpenAI API key in .env"
+  ],
+  "whatYouLose": [
+    "large-context infrastructure",
+    "IDE-wide polish and latency",
+    "enterprise policy, telemetry, and support",
+    "frontier coding model quality"
+  ],
+  "moatType": "model/context/integration",
+  "whyPeopleStillPay": "Pieces: Developers pay for reliable context assembly, fast models, editor integration, evaluations, and safe handling of complex repositories.",
+  "ongoingBurden": "Maintain model adapters, token budgets, indexing, sandboxing, diff application, test runners, and editor integrations.",
+  "priorArt": [
+    {
+      "name": "Continue",
+      "url": "https://github.com/continuedev/continue",
+      "desc": "Open-source coding assistant for editors and terminals."
+    },
+    {
+      "name": "Aider",
+      "url": "https://github.com/Aider-AI/aider",
+      "desc": "Open-source terminal coding agent with repository-aware edits."
+    }
+  ],
+  "relatedSlugs": [
+    "warp",
+    "bito",
+    "gitlab-duo"
+  ],
+  "pagePriority": 3,
+  "verifiedOneShot": false,
+  "notes": "Strong page because Pieces separates a compact personal workflow from the value of long-term polish.",
+  "prompt": "Build a usable personal replacement for the core loop of Pieces.\nUse exactly this stack: Python 3.12 + Typer + SQLite.\nPrimary job: Build a repository-local developer memory + AI assistant that indexes one codebase, calls one model, proposes diffs, runs tests, and records every change.\nStart from an empty folder and create the complete working project.\nMake the default mode single-user and private.\nStore user data locally unless the core job requires the declared self-hosted database.\nDo not add analytics, telemetry, ads, or third-party accounts.\nPut every secret and external credential in .env and provide .env.example.\nUse realistic sample data that is clearly labelled and easy to delete.\nImplement the smallest polished interface that completes the core loop end to end.\nInclude clear empty, loading, validation, success, and failure states.\nAdd import and export so the user is not trapped in the app.\nUse accessible keyboard navigation, labels, focus states, and sensible contrast.\nValidate untrusted input and never log secrets or private file contents.\nDeliberately exclude these paid-product advantages: large-context infrastructure; IDE-wide polish and latency; enterprise policy, telemetry, and support.\nDo not fake integrations, network effects, proprietary data, model quality, compliance, or security claims.\nWhere an external API is optional, keep the app useful without it and explain the degraded mode.\nWrite focused unit tests for the data model and the most important workflow.\nAdd one end-to-end smoke test that proves the core loop works.\nCreate a README with setup, permissions, architecture, data location, backup, and limitations.\nAdd scripts for install, development, test, build, and a production-style local run.\nRun the tests and build before finishing, then fix errors rather than merely describing them.",
+  "promptCurated": false
+}

@@ -1,0 +1,64 @@
+{
+  "slug": "parsehub",
+  "name": "ParseHub",
+  "domain": "parsehub.com",
+  "appURL": "https://parsehub.com",
+  "category": "automation",
+  "subcategory": "visual web scraping",
+  "tagline": "Desktop scraper with selectors, pagination, scheduling, and cloud runs",
+  "priceMonthly": 189,
+  "pricing": {
+    "plan": "Standard",
+    "kind": "fixed",
+    "basis": "monthly automation plan",
+    "currency": "USD",
+    "native": "$189/month",
+    "source": "https://parsehub.com/pricing",
+    "checkedOn": "2026-07-31",
+    "confidence": "medium",
+    "notes": "Working normalization from the official public pricing structure. Recheck the source page immediately before publication."
+  },
+  "verdict": "kinda",
+  "verdictConfidence": "medium",
+  "verdictSummary": "The visible visual web scraping loop is buildable, but a credible replacement needs more than the first screen. ParseHub earns its keep through connectors, auth, reliability, so expect a weekend or multi-day build and a narrower personal scope.",
+  "coreLoopDIY": "Build one explicit visual web scraping workflow with a trigger, validated steps, retries, logs, and a manual replay button.",
+  "diyTimeEstimate": "weekend to multi-day",
+  "replacementScope": "narrow personal or very small-team substitute",
+  "requirements": [
+    "hosted PostgreSQL and Redis",
+    "API credentials for the two chosen services",
+    "Node.js 22"
+  ],
+  "whatYouLose": [
+    "durable execution at scale",
+    "schema drift handling and enterprise controls",
+    "calendar-provider edge cases and timezone correctness",
+    "hundreds of maintained connectors",
+    "OAuth app verification"
+  ],
+  "moatType": "connectors/auth/reliability",
+  "whyPeopleStillPay": "ParseHub: One automation is easy. Subscribers pay for maintained integrations, credentials, retries, observability, and someone else owning breakage.",
+  "ongoingBurden": "Maintain OAuth, rate limits, webhooks, retries, queues, idempotency, logs, secret rotation, and third-party API changes.",
+  "priorArt": [
+    {
+      "name": "Activepieces",
+      "url": "https://github.com/activepieces/activepieces",
+      "desc": "Open-source automation builder with connectors and self-hosting."
+    },
+    {
+      "name": "n8n",
+      "url": "https://github.com/n8n-io/n8n",
+      "desc": "Source-available workflow automation engine and connector reference."
+    }
+  ],
+  "relatedSlugs": [
+    "import-io",
+    "diffbot",
+    "octoparse"
+  ],
+  "pagePriority": 3,
+  "verifiedOneShot": false,
+  "notes": "Useful boundary case: the first 60 percent of ParseHub is approachable, but operating the last 40 percent is the real subscription.",
+  "prompt": "Build a deliberately narrow personal substitute for ParseHub, not a full clone.\nUse exactly this stack: Next.js 15 + TypeScript + PostgreSQL + BullMQ.\nPrimary job: Build one explicit visual web scraping workflow with a trigger, validated steps, retries, logs, and a manual replay button.\nStart from an empty folder and create the complete working project.\nMake the default mode single-user and private.\nStore user data locally unless the core job requires the declared self-hosted database.\nDo not add analytics, telemetry, ads, or third-party accounts.\nPut every secret and external credential in .env and provide .env.example.\nUse realistic sample data that is clearly labelled and easy to delete.\nImplement the smallest polished interface that completes the core loop end to end.\nInclude clear empty, loading, validation, success, and failure states.\nAdd import and export so the user is not trapped in the app.\nUse accessible keyboard navigation, labels, focus states, and sensible contrast.\nValidate untrusted input and never log secrets or private file contents.\nDeliberately exclude these paid-product advantages: durable execution at scale; schema drift handling and enterprise controls; calendar-provider edge cases and timezone correctness.\nDo not fake integrations, network effects, proprietary data, model quality, compliance, or security claims.\nWhere an external API is optional, keep the app useful without it and explain the degraded mode.\nWrite focused unit tests for the data model and the most important workflow.\nAdd one end-to-end smoke test that proves the core loop works.\nCreate a README with setup, permissions, architecture, data location, backup, and limitations.\nAdd scripts for install, development, test, build, and a production-style local run.\nRun the tests and build before finishing, then fix errors rather than merely describing them.",
+  "promptCurated": false
+}

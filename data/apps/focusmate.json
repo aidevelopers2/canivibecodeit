@@ -1,0 +1,60 @@
+{
+  "slug": "focusmate",
+  "name": "Focusmate",
+  "domain": "focusmate.com",
+  "appURL": "https://focusmate.com",
+  "category": "productivity-utilities",
+  "subcategory": "virtual coworking",
+  "tagline": "Scheduled one-to-one virtual coworking sessions for accountability",
+  "priceMonthly": 8,
+  "pricing": {
+    "plan": "Plus",
+    "kind": "fixed",
+    "basis": "per month billed annually",
+    "currency": "USD",
+    "native": "$8/month billed annually; $12 monthly",
+    "source": "https://focusmate.com/pricing",
+    "checkedOn": "2026-07-31",
+    "confidence": "high",
+    "notes": "Official pricing page reviewed; taxes, promotions, and regional pricing may differ."
+  },
+  "verdict": "no",
+  "verdictConfidence": "medium",
+  "verdictSummary": "Do not mistake the interface for the product. Focusmate's durable value is polish, OS integration, which a solo one-shot build cannot reproduce responsibly. The prompt therefore builds only the closest honest personal consolation tool.",
+  "coreLoopDIY": "Build a local desktop utility that captures the essential virtual coworking workflow with keyboard-first controls and local storage.",
+  "diyTimeEstimate": "not a true replacement; consolation build in one to two days",
+  "replacementScope": "consolation build only; the paid product's moat remains",
+  "requirements": [
+    "macOS, Windows, or Linux development machine",
+    "Node.js 22 and Rust toolchain",
+    "Local filesystem access and OS permissions",
+    "Explicit README warning that this is a consolation build, not a production replacement"
+  ],
+  "whatYouLose": [
+    "deep operating-system edge-case coverage",
+    "polished shortcuts and accessibility",
+    "vendor-maintained updates",
+    "bank, payment, tax, and reconciliation integrations",
+    "cross-device sync"
+  ],
+  "moatType": "polish/OS integration",
+  "whyPeopleStillPay": "Focusmate: People keep paying because a utility used dozens of times a day must be instant, predictable, and compatible with every OS update.",
+  "ongoingBurden": "Track OS permission changes, shortcut conflicts, packaging, code signing, and regressions after system updates.",
+  "priorArt": [
+    {
+      "name": "ActivityWatch",
+      "url": "https://github.com/ActivityWatch/activitywatch",
+      "desc": "Local-first automatic time tracking with an extensible event model."
+    }
+  ],
+  "relatedSlugs": [
+    "freedom",
+    "opal",
+    "rize"
+  ],
+  "pagePriority": 3,
+  "verifiedOneShot": false,
+  "notes": "Credibility row: Focusmate survives for a structural reason, not because its interface is difficult to copy.",
+  "prompt": "Build the closest honest consolation tool inspired by Focusmate; do not claim to replace its structural moat.\nUse exactly this stack: Tauri 2 + React + TypeScript + SQLite.\nPrimary job: Build a local desktop utility that captures the essential virtual coworking workflow with keyboard-first controls and local storage.\nStart from an empty folder and create the complete working project.\nMake the default mode single-user and private.\nStore user data locally unless the core job requires the declared self-hosted database.\nDo not add analytics, telemetry, ads, or third-party accounts.\nPut every secret and external credential in .env and provide .env.example.\nUse realistic sample data that is clearly labelled and easy to delete.\nImplement the smallest polished interface that completes the core loop end to end.\nInclude clear empty, loading, validation, success, and failure states.\nAdd import and export so the user is not trapped in the app.\nUse accessible keyboard navigation, labels, focus states, and sensible contrast.\nValidate untrusted input and never log secrets or private file contents.\nDeliberately exclude these paid-product advantages: deep operating-system edge-case coverage; polished shortcuts and accessibility; vendor-maintained updates.\nDo not fake integrations, network effects, proprietary data, model quality, compliance, or security claims.\nWhere an external API is optional, keep the app useful without it and explain the degraded mode.\nWrite focused unit tests for the data model and the most important workflow.\nAdd one end-to-end smoke test that proves the core loop works.\nCreate a README with setup, permissions, architecture, data location, backup, and limitations.\nAdd scripts for install, development, test, build, and a production-style local run.\nRun the tests and build before finishing, then fix errors rather than merely describing them.",
+  "promptCurated": false
+}

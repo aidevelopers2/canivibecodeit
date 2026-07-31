@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Brand Studio | Creative Production Platform</title>
+    <meta charset="UTF-8" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/bs-favicon-light.png"
+      media="(prefers-color-scheme: light)"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/bs-favicon-dark.png"
+      media="(prefers-color-scheme: dark)"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="preload"
+      href="/Inter.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <script type="module" crossorigin src="/assets/index-oC1XYR1o.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/rolldown-runtime-QTnfLwEv.js">
+    <link rel="modulepreload" crossorigin href="/assets/theme-66LOrhd_.js">
+    <link rel="modulepreload" crossorigin href="/assets/atom-CZcQjlfn.js">
+    <link rel="modulepreload" crossorigin href="/assets/eraser-CDIyOATG.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-CjLfoS4W.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

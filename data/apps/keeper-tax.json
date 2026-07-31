@@ -1,0 +1,64 @@
+{
+  "slug": "keeper-tax",
+  "name": "Keeper Tax",
+  "domain": "keepertax.com",
+  "appURL": "https://keepertax.com",
+  "category": "finance-accounting",
+  "subcategory": "tax filing + expense tracking",
+  "tagline": "Expense detection, tax help, write-off tracking, and filing for freelancers",
+  "priceMonthly": null,
+  "pricing": {
+    "plan": "Typical paid plan",
+    "kind": "unknown",
+    "basis": "paid plan; billing basis requires review",
+    "currency": "USD",
+    "native": "Public paid plan exists; amount not safely recovered",
+    "source": "https://keepertax.com/pricing",
+    "checkedOn": "2026-07-31",
+    "confidence": "low",
+    "notes": "The official pricing URL is recorded, but a stable current amount was not safely recoverable in this pass. Do not publish a number until rechecked."
+  },
+  "verdict": "no",
+  "verdictConfidence": "high",
+  "verdictSummary": "Do not mistake the interface for the product. Keeper Tax's durable value is banking, compliance, trust, which a solo one-shot build cannot reproduce responsibly. The prompt therefore builds only the closest honest personal consolation tool.",
+  "coreLoopDIY": "Build a private tax filing + expense tracking ledger that imports user-supplied CSV files, categorizes entries, reconciles balances, and exports reports.",
+  "diyTimeEstimate": "not a true replacement; consolation build in one to two days",
+  "replacementScope": "consolation build only; the paid product's moat remains",
+  "requirements": [
+    "Node.js 22",
+    "SQLite",
+    "CSV exports from the user's own accounts",
+    "Explicit README warning that this is a consolation build, not a production replacement"
+  ],
+  "whatYouLose": [
+    "audited security and recovery",
+    "multi-user controls and accountant workflows",
+    "live bank feeds and payment rails",
+    "tax and accounting rule updates"
+  ],
+  "moatType": "banking/compliance/trust",
+  "whyPeopleStillPay": "Keeper Tax: People pay because errors touch real money. Bank connections, reconciliation, tax changes, evidence, security, and support are the product.",
+  "ongoingBurden": "Own data integrity, backups, import mapping, reconciliation, security, audit logs, tax changes, and recovery.",
+  "priorArt": [
+    {
+      "name": "Actual Budget",
+      "url": "https://github.com/actualbudget/actual",
+      "desc": "Local-first open-source personal finance and envelope budgeting."
+    },
+    {
+      "name": "Invoice Ninja",
+      "url": "https://github.com/invoiceninja/invoiceninja",
+      "desc": "Open-source invoicing, payments, and client management."
+    }
+  ],
+  "relatedSlugs": [
+    "zoho-books",
+    "sage-accounting",
+    "hurdlr"
+  ],
+  "pagePriority": 3,
+  "verifiedOneShot": false,
+  "notes": "Credibility row: Keeper Tax survives for a structural reason, not because its interface is difficult to copy.",
+  "prompt": "Build the closest honest consolation tool inspired by Keeper Tax; do not claim to replace its structural moat.\nUse exactly this stack: Next.js 15 + TypeScript + SQLite.\nPrimary job: Build a private tax filing + expense tracking ledger that imports user-supplied CSV files, categorizes entries, reconciles balances, and exports reports.\nStart from an empty folder and create the complete working project.\nMake the default mode single-user and private.\nStore user data locally unless the core job requires the declared self-hosted database.\nDo not add analytics, telemetry, ads, or third-party accounts.\nPut every secret and external credential in .env and provide .env.example.\nUse realistic sample data that is clearly labelled and easy to delete.\nImplement the smallest polished interface that completes the core loop end to end.\nInclude clear empty, loading, validation, success, and failure states.\nAdd import and export so the user is not trapped in the app.\nUse accessible keyboard navigation, labels, focus states, and sensible contrast.\nValidate untrusted input and never log secrets or private file contents.\nDeliberately exclude these paid-product advantages: audited security and recovery; multi-user controls and accountant workflows; live bank feeds and payment rails.\nDo not fake integrations, network effects, proprietary data, model quality, compliance, or security claims.\nWhere an external API is optional, keep the app useful without it and explain the degraded mode.\nWrite focused unit tests for the data model and the most important workflow.\nAdd one end-to-end smoke test that proves the core loop works.\nCreate a README with setup, permissions, architecture, data location, backup, and limitations.\nAdd scripts for install, development, test, build, and a production-style local run.\nRun the tests and build before finishing, then fix errors rather than merely describing them.",
+  "promptCurated": false
+}

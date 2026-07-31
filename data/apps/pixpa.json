@@ -1,0 +1,63 @@
+{
+  "slug": "pixpa",
+  "name": "Pixpa",
+  "domain": "pixpa.com",
+  "appURL": "https://pixpa.com",
+  "category": "website-builder",
+  "subcategory": "portfolio website builder",
+  "tagline": "Portfolio websites, galleries, ecommerce, proofing, and client delivery",
+  "priceMonthly": null,
+  "pricing": {
+    "plan": "Typical paid plan",
+    "kind": "unknown",
+    "basis": "paid plan; billing basis requires review",
+    "currency": "USD",
+    "native": "Public paid plan exists; amount not safely recovered",
+    "source": "https://pixpa.com/pricing",
+    "checkedOn": "2026-07-31",
+    "confidence": "low",
+    "notes": "The official pricing URL is recorded, but a stable current amount was not safely recoverable in this pass. Do not publish a number until rechecked."
+  },
+  "verdict": "kinda",
+  "verdictConfidence": "medium",
+  "verdictSummary": "The visible portfolio website builder loop is buildable, but a credible replacement needs more than the first screen. Pixpa earns its keep through editor, CMS, hosting, polish, so expect a weekend or multi-day build and a narrower personal scope.",
+  "coreLoopDIY": "Build a focused portfolio website builder generator that edits structured page sections, previews responsive layouts, and publishes static files.",
+  "diyTimeEstimate": "weekend to multi-day",
+  "replacementScope": "narrow personal or very small-team substitute",
+  "requirements": [
+    "Node.js 22",
+    "deploy target or static hosting",
+    "user-owned domain for publishing"
+  ],
+  "whatYouLose": [
+    "CMS collaboration and client handoff",
+    "managed hosting, forms, and analytics",
+    "general-purpose visual editing",
+    "large template and component libraries"
+  ],
+  "moatType": "editor/CMS/hosting/polish",
+  "whyPeopleStillPay": "Pixpa: A single site is easy to code. People pay for safe ongoing edits, templates, publishing, domains, collaboration, and no-maintenance hosting.",
+  "ongoingBurden": "Maintain responsive rendering, browser compatibility, deployment, domains, forms, spam protection, backups, and editor migrations.",
+  "priorArt": [
+    {
+      "name": "Webstudio",
+      "url": "https://github.com/webstudio-is/webstudio",
+      "desc": "Open-source visual website builder."
+    },
+    {
+      "name": "GrapesJS",
+      "url": "https://github.com/GrapesJS/grapesjs",
+      "desc": "Open-source web-builder framework."
+    }
+  ],
+  "relatedSlugs": [
+    "format",
+    "carbonmade",
+    "simvoly"
+  ],
+  "pagePriority": 3,
+  "verifiedOneShot": false,
+  "notes": "Useful boundary case: the first 60 percent of Pixpa is approachable, but operating the last 40 percent is the real subscription.",
+  "prompt": "Build a deliberately narrow personal substitute for Pixpa, not a full clone.\nUse exactly this stack: Next.js 15 + TypeScript + SQLite.\nPrimary job: Build a focused portfolio website builder generator that edits structured page sections, previews responsive layouts, and publishes static files.\nStart from an empty folder and create the complete working project.\nMake the default mode single-user and private.\nStore user data locally unless the core job requires the declared self-hosted database.\nDo not add analytics, telemetry, ads, or third-party accounts.\nPut every secret and external credential in .env and provide .env.example.\nUse realistic sample data that is clearly labelled and easy to delete.\nImplement the smallest polished interface that completes the core loop end to end.\nInclude clear empty, loading, validation, success, and failure states.\nAdd import and export so the user is not trapped in the app.\nUse accessible keyboard navigation, labels, focus states, and sensible contrast.\nValidate untrusted input and never log secrets or private file contents.\nDeliberately exclude these paid-product advantages: CMS collaboration and client handoff; managed hosting, forms, and analytics; general-purpose visual editing.\nDo not fake integrations, network effects, proprietary data, model quality, compliance, or security claims.\nWhere an external API is optional, keep the app useful without it and explain the degraded mode.\nWrite focused unit tests for the data model and the most important workflow.\nAdd one end-to-end smoke test that proves the core loop works.\nCreate a README with setup, permissions, architecture, data location, backup, and limitations.\nAdd scripts for install, development, test, build, and a production-style local run.\nRun the tests and build before finishing, then fix errors rather than merely describing them.",
+  "promptCurated": false
+}

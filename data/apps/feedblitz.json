@@ -1,0 +1,65 @@
+{
+  "slug": "feedblitz",
+  "name": "FeedBlitz",
+  "domain": "feedblitz.com",
+  "appURL": "https://feedblitz.com",
+  "category": "newsletter",
+  "subcategory": "email + RSS publishing",
+  "tagline": "Email newsletters, RSS-to-email, automations, and monetization tools",
+  "priceMonthly": null,
+  "pricing": {
+    "plan": "Typical paid plan",
+    "kind": "unknown",
+    "basis": "paid plan; billing basis requires review",
+    "currency": "USD",
+    "native": "Public paid plan exists; amount not safely recovered",
+    "source": "https://feedblitz.com/pricing",
+    "checkedOn": "2026-07-31",
+    "confidence": "low",
+    "notes": "The official pricing URL is recorded, but a stable current amount was not safely recoverable in this pass. Do not publish a number until rechecked."
+  },
+  "verdict": "kinda",
+  "verdictConfidence": "medium",
+  "verdictSummary": "The visible email + RSS publishing loop is buildable, but a credible replacement needs more than the first screen. FeedBlitz earns its keep through deliverability, reputation, network, so expect a weekend or multi-day build and a narrower personal scope.",
+  "coreLoopDIY": "Build a small email + RSS publishing editor and subscriber database that exports clean HTML and sends only through a reputable user-supplied email provider.",
+  "diyTimeEstimate": "multi-day",
+  "replacementScope": "narrow personal or very small-team substitute",
+  "requirements": [
+    "Node.js 22",
+    "PostgreSQL",
+    "transactional or bulk email provider key in .env",
+    "verified sending domain"
+  ],
+  "whatYouLose": [
+    "large-scale segmentation and automation",
+    "payments, recommendations, and audience network",
+    "resilient polling of malformed and rate-limited feeds",
+    "sender reputation and deliverability operations",
+    "bounce, complaint, and suppression handling"
+  ],
+  "moatType": "deliverability/reputation/network",
+  "whyPeopleStillPay": "FeedBlitz: The editor is trivial compared with inbox placement, compliance, reputation, unsubscribe handling, analytics, and audience growth infrastructure.",
+  "ongoingBurden": "Own consent records, suppression lists, bounces, complaints, DNS, templates, accessibility, segmentation, and privacy requests.",
+  "priorArt": [
+    {
+      "name": "listmonk",
+      "url": "https://github.com/knadh/listmonk",
+      "desc": "High-performance self-hosted newsletter and mailing-list manager."
+    },
+    {
+      "name": "Mautic",
+      "url": "https://github.com/mautic/mautic",
+      "desc": "Open-source marketing automation platform."
+    }
+  ],
+  "relatedSlugs": [
+    "sendfox",
+    "mailcoach-cloud",
+    "audienceful"
+  ],
+  "pagePriority": 3,
+  "verifiedOneShot": false,
+  "notes": "Useful boundary case: the first 60 percent of FeedBlitz is approachable, but operating the last 40 percent is the real subscription.",
+  "prompt": "Build a deliberately narrow personal substitute for FeedBlitz, not a full clone.\nUse exactly this stack: Next.js 15 + TypeScript + PostgreSQL.\nPrimary job: Build a small email + RSS publishing editor and subscriber database that exports clean HTML and sends only through a reputable user-supplied email provider.\nStart from an empty folder and create the complete working project.\nMake the default mode single-user and private.\nStore user data locally unless the core job requires the declared self-hosted database.\nDo not add analytics, telemetry, ads, or third-party accounts.\nPut every secret and external credential in .env and provide .env.example.\nUse realistic sample data that is clearly labelled and easy to delete.\nImplement the smallest polished interface that completes the core loop end to end.\nInclude clear empty, loading, validation, success, and failure states.\nAdd import and export so the user is not trapped in the app.\nUse accessible keyboard navigation, labels, focus states, and sensible contrast.\nValidate untrusted input and never log secrets or private file contents.\nDeliberately exclude these paid-product advantages: large-scale segmentation and automation; payments, recommendations, and audience network; resilient polling of malformed and rate-limited feeds.\nDo not fake integrations, network effects, proprietary data, model quality, compliance, or security claims.\nWhere an external API is optional, keep the app useful without it and explain the degraded mode.\nWrite focused unit tests for the data model and the most important workflow.\nAdd one end-to-end smoke test that proves the core loop works.\nCreate a README with setup, permissions, architecture, data location, backup, and limitations.\nAdd scripts for install, development, test, build, and a production-style local run.\nRun the tests and build before finishing, then fix errors rather than merely describing them.",
+  "promptCurated": false
+}

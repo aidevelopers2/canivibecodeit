@@ -1,0 +1,64 @@
+{
+  "slug": "crazy-egg",
+  "name": "Crazy Egg",
+  "domain": "crazyegg.com",
+  "appURL": "https://crazyegg.com",
+  "category": "analytics",
+  "subcategory": "heatmaps + testing",
+  "tagline": "Heatmaps, recordings, surveys, traffic analysis, and A/B testing",
+  "priceMonthly": 29,
+  "pricing": {
+    "plan": "Basic",
+    "kind": "fixed",
+    "basis": "annual-equivalent analytics plan",
+    "currency": "USD",
+    "native": "$29/month billed annually",
+    "source": "https://crazyegg.com/pricing",
+    "checkedOn": "2026-07-31",
+    "confidence": "medium",
+    "notes": "Working normalization from the official public pricing structure. Recheck the source page immediately before publication."
+  },
+  "verdict": "no",
+  "verdictConfidence": "medium",
+  "verdictSummary": "Do not mistake the interface for the product. Crazy Egg's durable value is ingestion, storage, reliability, which a solo one-shot build cannot reproduce responsibly. The prompt therefore builds only the closest honest personal consolation tool.",
+  "coreLoopDIY": "Build a narrow heatmaps + testing collector for one site or app, ingest first-party events, and show a small set of decision-ready reports.",
+  "diyTimeEstimate": "not a true replacement; consolation build in one to two days",
+  "replacementScope": "consolation build only; the paid product's moat remains",
+  "requirements": [
+    "deploy target",
+    "ClickHouse or SQLite for low volume",
+    "first-party tracking script",
+    "Explicit README warning that this is a consolation build, not a production replacement"
+  ],
+  "whatYouLose": [
+    "bot and identity resolution",
+    "session replay privacy tooling",
+    "enterprise governance and integrations",
+    "high-volume ingestion and retention"
+  ],
+  "moatType": "ingestion/storage/reliability",
+  "whyPeopleStillPay": "Crazy Egg: Customers pay for trusted numbers, retention, privacy controls, and a pipeline that remains accurate while traffic and schemas change.",
+  "ongoingBurden": "Own event schemas, ingestion, storage growth, sampling, bot filtering, identity, privacy requests, backups, and uptime.",
+  "priorArt": [
+    {
+      "name": "Matomo",
+      "url": "https://github.com/matomo-org/matomo",
+      "desc": "Mature self-hosted web analytics platform."
+    },
+    {
+      "name": "PostHog",
+      "url": "https://github.com/PostHog/posthog",
+      "desc": "Open-source product analytics, feature flags, and session replay."
+    }
+  ],
+  "relatedSlugs": [
+    "smartlook",
+    "logrocket",
+    "lucky-orange"
+  ],
+  "pagePriority": 3,
+  "verifiedOneShot": false,
+  "notes": "Credibility row: Crazy Egg survives for a structural reason, not because its interface is difficult to copy.",
+  "prompt": "Build the closest honest consolation tool inspired by Crazy Egg; do not claim to replace its structural moat.\nUse exactly this stack: Next.js 15 + TypeScript + ClickHouse + PostgreSQL.\nPrimary job: Build a narrow heatmaps + testing collector for one site or app, ingest first-party events, and show a small set of decision-ready reports.\nStart from an empty folder and create the complete working project.\nMake the default mode single-user and private.\nStore user data locally unless the core job requires the declared self-hosted database.\nDo not add analytics, telemetry, ads, or third-party accounts.\nPut every secret and external credential in .env and provide .env.example.\nUse realistic sample data that is clearly labelled and easy to delete.\nImplement the smallest polished interface that completes the core loop end to end.\nInclude clear empty, loading, validation, success, and failure states.\nAdd import and export so the user is not trapped in the app.\nUse accessible keyboard navigation, labels, focus states, and sensible contrast.\nValidate untrusted input and never log secrets or private file contents.\nDeliberately exclude these paid-product advantages: bot and identity resolution; session replay privacy tooling; enterprise governance and integrations.\nDo not fake integrations, network effects, proprietary data, model quality, compliance, or security claims.\nWhere an external API is optional, keep the app useful without it and explain the degraded mode.\nWrite focused unit tests for the data model and the most important workflow.\nAdd one end-to-end smoke test that proves the core loop works.\nCreate a README with setup, permissions, architecture, data location, backup, and limitations.\nAdd scripts for install, development, test, build, and a production-style local run.\nRun the tests and build before finishing, then fix errors rather than merely describing them.",
+  "promptCurated": false
+}

@@ -1,0 +1,63 @@
+{
+  "slug": "baremetrics",
+  "name": "Baremetrics",
+  "domain": "baremetrics.com",
+  "appURL": "https://baremetrics.com",
+  "category": "analytics",
+  "subcategory": "subscription analytics",
+  "tagline": "MRR, churn, forecasting, cohorts, and SaaS financial analytics",
+  "priceMonthly": 129,
+  "pricing": {
+    "plan": "Metrics",
+    "kind": "fixed",
+    "basis": "starting monthly subscription",
+    "currency": "USD",
+    "native": "Starts at $129/month",
+    "source": "https://baremetrics.com/pricing",
+    "checkedOn": "2026-07-31",
+    "confidence": "medium",
+    "notes": "Working normalization from the official public pricing structure. Recheck the source page immediately before publication."
+  },
+  "verdict": "kinda",
+  "verdictConfidence": "medium",
+  "verdictSummary": "The visible subscription analytics loop is buildable, but a credible replacement needs more than the first screen. Baremetrics earns its keep through ingestion, storage, reliability, so expect a weekend or multi-day build and a narrower personal scope.",
+  "coreLoopDIY": "Build a narrow subscription analytics collector for one site or app, ingest first-party events, and show a small set of decision-ready reports.",
+  "diyTimeEstimate": "weekend to multi-day",
+  "replacementScope": "narrow personal or very small-team substitute",
+  "requirements": [
+    "deploy target",
+    "ClickHouse or SQLite for low volume",
+    "first-party tracking script"
+  ],
+  "whatYouLose": [
+    "bot and identity resolution",
+    "session replay privacy tooling",
+    "enterprise governance and integrations",
+    "high-volume ingestion and retention"
+  ],
+  "moatType": "ingestion/storage/reliability",
+  "whyPeopleStillPay": "Baremetrics: Customers pay for trusted numbers, retention, privacy controls, and a pipeline that remains accurate while traffic and schemas change.",
+  "ongoingBurden": "Own event schemas, ingestion, storage growth, sampling, bot filtering, identity, privacy requests, backups, and uptime.",
+  "priorArt": [
+    {
+      "name": "Matomo",
+      "url": "https://github.com/matomo-org/matomo",
+      "desc": "Mature self-hosted web analytics platform."
+    },
+    {
+      "name": "PostHog",
+      "url": "https://github.com/PostHog/posthog",
+      "desc": "Open-source product analytics, feature flags, and session replay."
+    }
+  ],
+  "relatedSlugs": [
+    "usermaven",
+    "piwik-pro",
+    "chartmogul"
+  ],
+  "pagePriority": 3,
+  "verifiedOneShot": false,
+  "notes": "Useful boundary case: the first 60 percent of Baremetrics is approachable, but operating the last 40 percent is the real subscription.",
+  "prompt": "Build a deliberately narrow personal substitute for Baremetrics, not a full clone.\nUse exactly this stack: Next.js 15 + TypeScript + ClickHouse + PostgreSQL.\nPrimary job: Build a narrow subscription analytics collector for one site or app, ingest first-party events, and show a small set of decision-ready reports.\nStart from an empty folder and create the complete working project.\nMake the default mode single-user and private.\nStore user data locally unless the core job requires the declared self-hosted database.\nDo not add analytics, telemetry, ads, or third-party accounts.\nPut every secret and external credential in .env and provide .env.example.\nUse realistic sample data that is clearly labelled and easy to delete.\nImplement the smallest polished interface that completes the core loop end to end.\nInclude clear empty, loading, validation, success, and failure states.\nAdd import and export so the user is not trapped in the app.\nUse accessible keyboard navigation, labels, focus states, and sensible contrast.\nValidate untrusted input and never log secrets or private file contents.\nDeliberately exclude these paid-product advantages: bot and identity resolution; session replay privacy tooling; enterprise governance and integrations.\nDo not fake integrations, network effects, proprietary data, model quality, compliance, or security claims.\nWhere an external API is optional, keep the app useful without it and explain the degraded mode.\nWrite focused unit tests for the data model and the most important workflow.\nAdd one end-to-end smoke test that proves the core loop works.\nCreate a README with setup, permissions, architecture, data location, backup, and limitations.\nAdd scripts for install, development, test, build, and a production-style local run.\nRun the tests and build before finishing, then fix errors rather than merely describing them.",
+  "promptCurated": false
+}

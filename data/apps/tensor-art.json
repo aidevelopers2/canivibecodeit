@@ -1,0 +1,65 @@
+{
+  "slug": "tensor-art",
+  "name": "Tensor.Art",
+  "domain": "tensor.art",
+  "appURL": "https://tensor.art",
+  "category": "ai-image",
+  "subcategory": "AI model community",
+  "tagline": "Hosted image generation, model sharing, workflows, and training",
+  "priceMonthly": null,
+  "pricing": {
+    "plan": "Typical paid plan",
+    "kind": "unknown",
+    "basis": "paid plan; billing basis requires review",
+    "currency": "USD",
+    "native": "Public paid plan exists; amount not safely recovered",
+    "source": "https://tensor.art/pricing",
+    "checkedOn": "2026-07-31",
+    "confidence": "low",
+    "notes": "The official pricing URL is recorded, but a stable current amount was not safely recoverable in this pass. Do not publish a number until rechecked."
+  },
+  "verdict": "no",
+  "verdictConfidence": "high",
+  "verdictSummary": "Do not mistake the interface for the product. Tensor.Art's durable value is proprietary model, inference, which a solo one-shot build cannot reproduce responsibly. The prompt therefore builds only the closest honest personal consolation tool.",
+  "coreLoopDIY": "Build the closest honest personal AI model community console around a locally available image model, with prompt history and file export.",
+  "diyTimeEstimate": "not a true replacement; consolation build in one to two days",
+  "replacementScope": "consolation build only; the paid product's moat remains",
+  "requirements": [
+    "GPU-capable machine or user-provided inference API",
+    "Python 3.12",
+    "model weights obtained under their own licence",
+    "Explicit README warning that this is a consolation build, not a production replacement"
+  ],
+  "whatYouLose": [
+    "safety, moderation, and mobile distribution",
+    "high-fidelity color, format, and export handling",
+    "the vendor's proprietary model quality",
+    "licensed training data and style tuning",
+    "fast elastic inference"
+  ],
+  "moatType": "proprietary model/inference",
+  "whyPeopleStillPay": "Tensor.Art: The interface is replaceable. The subscription buys the model, aesthetic tuning, inference fleet, safety work, and rapid improvement.",
+  "ongoingBurden": "Own model downloads, GPU compatibility, queueing, safety choices, storage, and changing model licences.",
+  "priorArt": [
+    {
+      "name": "ComfyUI",
+      "url": "https://github.com/Comfy-Org/ComfyUI",
+      "desc": "Node-based open-source generative image workflow engine."
+    },
+    {
+      "name": "Stable Diffusion WebUI",
+      "url": "https://github.com/AUTOMATIC1111/stable-diffusion-webui",
+      "desc": "Widely used local Stable Diffusion interface and extension ecosystem."
+    }
+  ],
+  "relatedSlugs": [
+    "imagineart",
+    "dezgo",
+    "seaart"
+  ],
+  "pagePriority": 4,
+  "verifiedOneShot": false,
+  "notes": "Credibility row: Tensor.Art survives for a structural reason, not because its interface is difficult to copy.",
+  "prompt": "Build the closest honest consolation tool inspired by Tensor.Art; do not claim to replace its structural moat.\nUse exactly this stack: Python 3.12 + FastAPI + ComfyUI API + React.\nPrimary job: Build the closest honest personal AI model community console around a locally available image model, with prompt history and file export.\nStart from an empty folder and create the complete working project.\nMake the default mode single-user and private.\nStore user data locally unless the core job requires the declared self-hosted database.\nDo not add analytics, telemetry, ads, or third-party accounts.\nPut every secret and external credential in .env and provide .env.example.\nUse realistic sample data that is clearly labelled and easy to delete.\nImplement the smallest polished interface that completes the core loop end to end.\nInclude clear empty, loading, validation, success, and failure states.\nAdd import and export so the user is not trapped in the app.\nUse accessible keyboard navigation, labels, focus states, and sensible contrast.\nValidate untrusted input and never log secrets or private file contents.\nDeliberately exclude these paid-product advantages: safety, moderation, and mobile distribution; high-fidelity color, format, and export handling; the vendor's proprietary model quality.\nDo not fake integrations, network effects, proprietary data, model quality, compliance, or security claims.\nWhere an external API is optional, keep the app useful without it and explain the degraded mode.\nWrite focused unit tests for the data model and the most important workflow.\nAdd one end-to-end smoke test that proves the core loop works.\nCreate a README with setup, permissions, architecture, data location, backup, and limitations.\nAdd scripts for install, development, test, build, and a production-style local run.\nRun the tests and build before finishing, then fix errors rather than merely describing them.",
+  "promptCurated": false
+}

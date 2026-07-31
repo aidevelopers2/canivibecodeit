@@ -1,0 +1,64 @@
+{
+  "slug": "woorank",
+  "name": "WooRank",
+  "domain": "woorank.com",
+  "appURL": "https://woorank.com",
+  "category": "seo-marketing",
+  "subcategory": "SEO auditing",
+  "tagline": "Website reviews, crawling, keyword tracking, competitive analysis, and reporting",
+  "priceMonthly": 99.99,
+  "pricing": {
+    "plan": "Pro",
+    "kind": "fixed",
+    "basis": "monthly SEO plan",
+    "currency": "USD",
+    "native": "$99.99/month",
+    "source": "https://woorank.com/pricing",
+    "checkedOn": "2026-07-31",
+    "confidence": "medium",
+    "notes": "Working normalization from the official public pricing structure. Recheck the source page immediately before publication."
+  },
+  "verdict": "kinda",
+  "verdictConfidence": "medium",
+  "verdictSummary": "The visible SEO auditing loop is buildable, but a credible replacement needs more than the first screen. WooRank earns its keep through proprietary data, index, crawl scale, so expect a weekend or multi-day build and a narrower personal scope.",
+  "coreLoopDIY": "Build a focused SEO auditing audit for user-owned sites that crawls pages, records technical signals, and exports a prioritized CSV and HTML report.",
+  "diyTimeEstimate": "multi-day",
+  "replacementScope": "narrow personal or very small-team substitute",
+  "requirements": [
+    "Python 3.12",
+    "Playwright browsers",
+    "permission to crawl the target site"
+  ],
+  "whatYouLose": [
+    "historical competitor datasets and support",
+    "fresh proprietary keyword, backlink, or ranking data",
+    "proprietary web and keyword indexes",
+    "fresh rank and clickstream data",
+    "large-scale crawling infrastructure"
+  ],
+  "moatType": "proprietary data/index/crawl scale",
+  "whyPeopleStillPay": "WooRank: The dashboard is reproducible; the expensive part is continuously collecting, cleaning, storing, and defending a useful index of the web.",
+  "ongoingBurden": "Maintain crawling etiquette, parsers, rendering, rate limits, search-engine changes, data freshness, storage, and reporting logic.",
+  "priorArt": [
+    {
+      "name": "Lighthouse",
+      "url": "https://github.com/GoogleChrome/lighthouse",
+      "desc": "Open-source automated auditing for performance, accessibility, and SEO."
+    },
+    {
+      "name": "Unlighthouse",
+      "url": "https://github.com/harlan-zw/unlighthouse",
+      "desc": "Open-source site-wide Lighthouse crawler and dashboard."
+    }
+  ],
+  "relatedSlugs": [
+    "rank-math-pro",
+    "yoast-seo-premium",
+    "seobility"
+  ],
+  "pagePriority": 3,
+  "verifiedOneShot": false,
+  "notes": "Useful boundary case: the first 60 percent of WooRank is approachable, but operating the last 40 percent is the real subscription.",
+  "prompt": "Build a deliberately narrow personal substitute for WooRank, not a full clone.\nUse exactly this stack: Python 3.12 + Typer + SQLite + Playwright.\nPrimary job: Build a focused SEO auditing audit for user-owned sites that crawls pages, records technical signals, and exports a prioritized CSV and HTML report.\nStart from an empty folder and create the complete working project.\nMake the default mode single-user and private.\nStore user data locally unless the core job requires the declared self-hosted database.\nDo not add analytics, telemetry, ads, or third-party accounts.\nPut every secret and external credential in .env and provide .env.example.\nUse realistic sample data that is clearly labelled and easy to delete.\nImplement the smallest polished interface that completes the core loop end to end.\nInclude clear empty, loading, validation, success, and failure states.\nAdd import and export so the user is not trapped in the app.\nUse accessible keyboard navigation, labels, focus states, and sensible contrast.\nValidate untrusted input and never log secrets or private file contents.\nDeliberately exclude these paid-product advantages: historical competitor datasets and support; fresh proprietary keyword, backlink, or ranking data; proprietary web and keyword indexes.\nDo not fake integrations, network effects, proprietary data, model quality, compliance, or security claims.\nWhere an external API is optional, keep the app useful without it and explain the degraded mode.\nWrite focused unit tests for the data model and the most important workflow.\nAdd one end-to-end smoke test that proves the core loop works.\nCreate a README with setup, permissions, architecture, data location, backup, and limitations.\nAdd scripts for install, development, test, build, and a production-style local run.\nRun the tests and build before finishing, then fix errors rather than merely describing them.",
+  "promptCurated": false
+}

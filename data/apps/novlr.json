@@ -1,0 +1,63 @@
+{
+  "slug": "novlr",
+  "name": "Novlr",
+  "domain": "novlr.org",
+  "appURL": "https://novlr.org",
+  "category": "notes-knowledge",
+  "subcategory": "novel writing",
+  "tagline": "Browser-based writing studio with goals, analytics, and cloud backup",
+  "priceMonthly": null,
+  "pricing": {
+    "plan": "Typical paid plan",
+    "kind": "unknown",
+    "basis": "paid plan; billing basis requires review",
+    "currency": "USD",
+    "native": "Public paid plan exists; amount not safely recovered",
+    "source": "https://novlr.org/pricing",
+    "checkedOn": "2026-07-31",
+    "confidence": "low",
+    "notes": "The official pricing URL is recorded, but a stable current amount was not safely recoverable in this pass. Do not publish a number until rechecked."
+  },
+  "verdict": "yes",
+  "verdictConfidence": "medium",
+  "verdictSummary": "Novlr's solo core is compact: build a local-first novel writing app with fast capture, full-text search, backlinks, tags, and Markdown export. A competent builder can reach a useful personal version in one sitting, while the paid product mainly wins on polish, sync, importers.",
+  "coreLoopDIY": "Build a local-first novel writing app with fast capture, full-text search, backlinks, tags, and Markdown export.",
+  "diyTimeEstimate": "one sitting",
+  "replacementScope": "personal replacement for the core loop",
+  "requirements": [
+    "desktop development machine",
+    "Node.js 22 and Rust toolchain",
+    "local filesystem access"
+  ],
+  "whatYouLose": [
+    "conflict-safe multi-device sync",
+    "mature importers and exporters",
+    "collaborative editing and sharing",
+    "native mobile clients"
+  ],
+  "moatType": "polish/sync/importers",
+  "whyPeopleStillPay": "Novlr: People pay for a writing surface they trust for years, plus migration tools, sync, and tiny interaction details that disappear into habit.",
+  "ongoingBurden": "Own schema migrations, backups, sync conflicts, export compatibility, and long-term file readability.",
+  "priorArt": [
+    {
+      "name": "AppFlowy",
+      "url": "https://github.com/AppFlowy-IO/AppFlowy",
+      "desc": "Local-first open-source workspace with documents and databases."
+    },
+    {
+      "name": "Logseq",
+      "url": "https://github.com/logseq/logseq",
+      "desc": "Open-source local knowledge graph and outliner."
+    }
+  ],
+  "relatedSlugs": [
+    "craft",
+    "ulysses",
+    "dabble"
+  ],
+  "pagePriority": 3,
+  "verifiedOneShot": false,
+  "notes": "Strong page because Novlr separates a compact personal workflow from the value of long-term polish.",
+  "prompt": "Build a usable personal replacement for the core loop of Novlr.\nUse exactly this stack: Tauri 2 + React + TypeScript + SQLite.\nPrimary job: Build a local-first novel writing app with fast capture, full-text search, backlinks, tags, and Markdown export.\nStart from an empty folder and create the complete working project.\nMake the default mode single-user and private.\nStore user data locally unless the core job requires the declared self-hosted database.\nDo not add analytics, telemetry, ads, or third-party accounts.\nPut every secret and external credential in .env and provide .env.example.\nUse realistic sample data that is clearly labelled and easy to delete.\nImplement the smallest polished interface that completes the core loop end to end.\nInclude clear empty, loading, validation, success, and failure states.\nAdd import and export so the user is not trapped in the app.\nUse accessible keyboard navigation, labels, focus states, and sensible contrast.\nValidate untrusted input and never log secrets or private file contents.\nDeliberately exclude these paid-product advantages: conflict-safe multi-device sync; mature importers and exporters; collaborative editing and sharing.\nDo not fake integrations, network effects, proprietary data, model quality, compliance, or security claims.\nWhere an external API is optional, keep the app useful without it and explain the degraded mode.\nWrite focused unit tests for the data model and the most important workflow.\nAdd one end-to-end smoke test that proves the core loop works.\nCreate a README with setup, permissions, architecture, data location, backup, and limitations.\nAdd scripts for install, development, test, build, and a production-style local run.\nRun the tests and build before finishing, then fix errors rather than merely describing them.",
+  "promptCurated": false
+}

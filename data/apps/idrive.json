@@ -1,0 +1,64 @@
+{
+  "slug": "idrive",
+  "name": "IDrive",
+  "domain": "idrive.com",
+  "appURL": "https://idrive.com",
+  "category": "security",
+  "subcategory": "cloud backup",
+  "tagline": "Multi-device backup, sync, snapshots, and business data protection",
+  "priceMonthly": null,
+  "pricing": {
+    "plan": "Personal",
+    "kind": "annual-only",
+    "basis": "annual storage subscription",
+    "currency": "USD",
+    "native": "Annual storage plan with frequent promotions",
+    "source": "https://idrive.com/pricing",
+    "checkedOn": "2026-07-31",
+    "confidence": "low",
+    "notes": "The pricing model is not safely comparable as one fixed monthly USD amount. Review the official source before publication."
+  },
+  "verdict": "no",
+  "verdictConfidence": "high",
+  "verdictSummary": "Do not mistake the interface for the product. IDrive's durable value is security, infrastructure, trust, which a solo one-shot build cannot reproduce responsibly. The prompt therefore builds only the closest honest personal consolation tool.",
+  "coreLoopDIY": "Build a local diagnostic or backup companion for cloud backup; do not claim to replace audited security, identity, VPN, or cloud-storage infrastructure.",
+  "diyTimeEstimate": "not a true replacement; consolation build in one to two days",
+  "replacementScope": "consolation build only; the paid product's moat remains",
+  "requirements": [
+    "desktop development machine",
+    "user-controlled storage target",
+    "documented threat-model limits",
+    "Explicit README warning that this is a consolation build, not a production replacement"
+  ],
+  "whatYouLose": [
+    "recovery guarantees and regulated trust",
+    "audited cryptography and incident response",
+    "global network or redundant storage infrastructure",
+    "identity, credit, or broker-removal operations"
+  ],
+  "moatType": "security/infrastructure/trust",
+  "whyPeopleStillPay": "IDrive: Security subscriptions buy professional operations, audits, response capacity, redundancy, and accountability when something goes wrong.",
+  "ongoingBurden": "Own threat modelling, key management, patching, backups, restore tests, incident response, privacy requests, and dependency security.",
+  "priorArt": [
+    {
+      "name": "restic",
+      "url": "https://github.com/restic/restic",
+      "desc": "Encrypted, deduplicated backup program."
+    },
+    {
+      "name": "Duplicati",
+      "url": "https://github.com/duplicati/duplicati",
+      "desc": "Encrypted backup client for local and cloud targets."
+    }
+  ],
+  "relatedSlugs": [
+    "arq-premium",
+    "malwarebytes",
+    "backblaze-personal-backup"
+  ],
+  "pagePriority": 4,
+  "verifiedOneShot": false,
+  "notes": "Credibility row: IDrive survives for a structural reason, not because its interface is difficult to copy.",
+  "prompt": "Build the closest honest consolation tool inspired by IDrive; do not claim to replace its structural moat.\nUse exactly this stack: Go 1.24 + SQLite.\nPrimary job: Build a local diagnostic or backup companion for cloud backup; do not claim to replace audited security, identity, VPN, or cloud-storage infrastructure.\nStart from an empty folder and create the complete working project.\nMake the default mode single-user and private.\nStore user data locally unless the core job requires the declared self-hosted database.\nDo not add analytics, telemetry, ads, or third-party accounts.\nPut every secret and external credential in .env and provide .env.example.\nUse realistic sample data that is clearly labelled and easy to delete.\nImplement the smallest polished interface that completes the core loop end to end.\nInclude clear empty, loading, validation, success, and failure states.\nAdd import and export so the user is not trapped in the app.\nUse accessible keyboard navigation, labels, focus states, and sensible contrast.\nValidate untrusted input and never log secrets or private file contents.\nDeliberately exclude these paid-product advantages: recovery guarantees and regulated trust; audited cryptography and incident response; global network or redundant storage infrastructure.\nDo not fake integrations, network effects, proprietary data, model quality, compliance, or security claims.\nWhere an external API is optional, keep the app useful without it and explain the degraded mode.\nWrite focused unit tests for the data model and the most important workflow.\nAdd one end-to-end smoke test that proves the core loop works.\nCreate a README with setup, permissions, architecture, data location, backup, and limitations.\nAdd scripts for install, development, test, build, and a production-style local run.\nRun the tests and build before finishing, then fix errors rather than merely describing them.",
+  "promptCurated": false
+}

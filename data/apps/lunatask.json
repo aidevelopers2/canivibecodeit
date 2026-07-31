@@ -1,0 +1,58 @@
+{
+  "slug": "lunatask",
+  "name": "Lunatask",
+  "domain": "lunatask.app",
+  "appURL": "https://lunatask.app",
+  "category": "productivity-utilities",
+  "subcategory": "private task planner",
+  "tagline": "Encrypted task manager with habits, journaling, and relationship notes",
+  "priceMonthly": 6,
+  "pricing": {
+    "plan": "Premium",
+    "kind": "fixed",
+    "basis": "per month billed annually",
+    "currency": "USD",
+    "native": "$6/month billed annually; $8 monthly",
+    "source": "https://lunatask.app/pricing",
+    "checkedOn": "2026-07-31",
+    "confidence": "high",
+    "notes": "Official pricing page reviewed; taxes, promotions, and regional pricing may differ."
+  },
+  "verdict": "yes",
+  "verdictConfidence": "medium",
+  "verdictSummary": "Lunatask's solo core is compact: build a local desktop utility that captures the essential private task planner workflow with keyboard-first controls and local storage. A competent builder can reach a useful personal version in one sitting, while the paid product mainly wins on polish, OS integration.",
+  "coreLoopDIY": "Build a local desktop utility that captures the essential private task planner workflow with keyboard-first controls and local storage.",
+  "diyTimeEstimate": "one sitting",
+  "replacementScope": "personal replacement for the core loop",
+  "requirements": [
+    "macOS, Windows, or Linux development machine",
+    "Node.js 22 and Rust toolchain",
+    "Local filesystem access and OS permissions"
+  ],
+  "whatYouLose": [
+    "vendor-maintained updates",
+    "cross-device sync",
+    "deep operating-system edge-case coverage",
+    "polished shortcuts and accessibility"
+  ],
+  "moatType": "polish/OS integration",
+  "whyPeopleStillPay": "Lunatask: People keep paying because a utility used dozens of times a day must be instant, predictable, and compatible with every OS update.",
+  "ongoingBurden": "Track OS permission changes, shortcut conflicts, packaging, code signing, and regressions after system updates.",
+  "priorArt": [
+    {
+      "name": "ActivityWatch",
+      "url": "https://github.com/ActivityWatch/activitywatch",
+      "desc": "Local-first automatic time tracking with an extensible event model."
+    }
+  ],
+  "relatedSlugs": [
+    "skedpal",
+    "timehero",
+    "amazing-marvin"
+  ],
+  "pagePriority": 3,
+  "verifiedOneShot": false,
+  "notes": "Strong page because Lunatask separates a compact personal workflow from the value of long-term polish.",
+  "prompt": "Build a usable personal replacement for the core loop of Lunatask.\nUse exactly this stack: Tauri 2 + React + TypeScript + SQLite.\nPrimary job: Build a local desktop utility that captures the essential private task planner workflow with keyboard-first controls and local storage.\nStart from an empty folder and create the complete working project.\nMake the default mode single-user and private.\nStore user data locally unless the core job requires the declared self-hosted database.\nDo not add analytics, telemetry, ads, or third-party accounts.\nPut every secret and external credential in .env and provide .env.example.\nUse realistic sample data that is clearly labelled and easy to delete.\nImplement the smallest polished interface that completes the core loop end to end.\nInclude clear empty, loading, validation, success, and failure states.\nAdd import and export so the user is not trapped in the app.\nUse accessible keyboard navigation, labels, focus states, and sensible contrast.\nValidate untrusted input and never log secrets or private file contents.\nDeliberately exclude these paid-product advantages: vendor-maintained updates; cross-device sync; deep operating-system edge-case coverage.\nDo not fake integrations, network effects, proprietary data, model quality, compliance, or security claims.\nWhere an external API is optional, keep the app useful without it and explain the degraded mode.\nWrite focused unit tests for the data model and the most important workflow.\nAdd one end-to-end smoke test that proves the core loop works.\nCreate a README with setup, permissions, architecture, data location, backup, and limitations.\nAdd scripts for install, development, test, build, and a production-style local run.\nRun the tests and build before finishing, then fix errors rather than merely describing them.",
+  "promptCurated": false
+}

@@ -1,0 +1,63 @@
+{
+  "slug": "chartmogul",
+  "name": "ChartMogul",
+  "domain": "chartmogul.com",
+  "appURL": "https://chartmogul.com",
+  "category": "analytics",
+  "subcategory": "subscription analytics",
+  "tagline": "Subscription metrics, revenue reporting, segmentation, and billing data",
+  "priceMonthly": null,
+  "pricing": {
+    "plan": "Scale",
+    "kind": "usage-based",
+    "basis": "tracked MRR",
+    "currency": "USD",
+    "native": "Price varies with monthly recurring revenue",
+    "source": "https://chartmogul.com/pricing",
+    "checkedOn": "2026-07-31",
+    "confidence": "high",
+    "notes": "The pricing model is not safely comparable as one fixed monthly USD amount. Review the official source before publication."
+  },
+  "verdict": "kinda",
+  "verdictConfidence": "medium",
+  "verdictSummary": "The visible subscription analytics loop is buildable, but a credible replacement needs more than the first screen. ChartMogul earns its keep through ingestion, storage, reliability, so expect a weekend or multi-day build and a narrower personal scope.",
+  "coreLoopDIY": "Build a narrow subscription analytics collector for one site or app, ingest first-party events, and show a small set of decision-ready reports.",
+  "diyTimeEstimate": "weekend to multi-day",
+  "replacementScope": "narrow personal or very small-team substitute",
+  "requirements": [
+    "deploy target",
+    "ClickHouse or SQLite for low volume",
+    "first-party tracking script"
+  ],
+  "whatYouLose": [
+    "session replay privacy tooling",
+    "enterprise governance and integrations",
+    "high-volume ingestion and retention",
+    "bot and identity resolution"
+  ],
+  "moatType": "ingestion/storage/reliability",
+  "whyPeopleStillPay": "ChartMogul: Customers pay for trusted numbers, retention, privacy controls, and a pipeline that remains accurate while traffic and schemas change.",
+  "ongoingBurden": "Own event schemas, ingestion, storage growth, sampling, bot filtering, identity, privacy requests, backups, and uptime.",
+  "priorArt": [
+    {
+      "name": "Matomo",
+      "url": "https://github.com/matomo-org/matomo",
+      "desc": "Mature self-hosted web analytics platform."
+    },
+    {
+      "name": "PostHog",
+      "url": "https://github.com/PostHog/posthog",
+      "desc": "Open-source product analytics, feature flags, and session replay."
+    }
+  ],
+  "relatedSlugs": [
+    "baremetrics",
+    "usermaven",
+    "june"
+  ],
+  "pagePriority": 3,
+  "verifiedOneShot": false,
+  "notes": "Useful boundary case: the first 60 percent of ChartMogul is approachable, but operating the last 40 percent is the real subscription.",
+  "prompt": "Build a deliberately narrow personal substitute for ChartMogul, not a full clone.\nUse exactly this stack: Next.js 15 + TypeScript + ClickHouse + PostgreSQL.\nPrimary job: Build a narrow subscription analytics collector for one site or app, ingest first-party events, and show a small set of decision-ready reports.\nStart from an empty folder and create the complete working project.\nMake the default mode single-user and private.\nStore user data locally unless the core job requires the declared self-hosted database.\nDo not add analytics, telemetry, ads, or third-party accounts.\nPut every secret and external credential in .env and provide .env.example.\nUse realistic sample data that is clearly labelled and easy to delete.\nImplement the smallest polished interface that completes the core loop end to end.\nInclude clear empty, loading, validation, success, and failure states.\nAdd import and export so the user is not trapped in the app.\nUse accessible keyboard navigation, labels, focus states, and sensible contrast.\nValidate untrusted input and never log secrets or private file contents.\nDeliberately exclude these paid-product advantages: session replay privacy tooling; enterprise governance and integrations; high-volume ingestion and retention.\nDo not fake integrations, network effects, proprietary data, model quality, compliance, or security claims.\nWhere an external API is optional, keep the app useful without it and explain the degraded mode.\nWrite focused unit tests for the data model and the most important workflow.\nAdd one end-to-end smoke test that proves the core loop works.\nCreate a README with setup, permissions, architecture, data location, backup, and limitations.\nAdd scripts for install, development, test, build, and a production-style local run.\nRun the tests and build before finishing, then fix errors rather than merely describing them.",
+  "promptCurated": false
+}

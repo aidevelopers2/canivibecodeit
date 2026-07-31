@@ -173,7 +173,28 @@ function siteCard() {
   ]);
 }
 
-await render(homeCard(mrr), 'home.png');
-for (const app of apps) await render(appCard(app), `${app.slug}.png`);
-await render(siteCard(), 'vibecode-this-site.png');
-console.log('done:', apps.length + 2, 'images');
+// satori/resvg leak native memory per render, so a single process rendering the
+// whole catalog OOMs small machines. The parent renders the two singleton cards,
+// then re-invokes itself per slice of apps; each child's memory dies with it.
+const range = process.env.OG_RANGE;
+if (range) {
+  const [start, end] = range.split(':').map(Number);
+  for (const app of apps.slice(start, end)) await render(appCard(app), `${app.slug}.png`);
+} else {
+  await render(homeCard(mrr), 'home.png');
+  await render(siteCard(), 'vibecode-this-site.png');
+  const { spawnSync } = await import('node:child_process');
+  const self = new URL(import.meta.url).pathname;
+  const CHUNK = 100;
+  for (let i = 0; i < apps.length; i += CHUNK) {
+    const r = spawnSync(process.execPath, [self], {
+      stdio: 'inherit',
+      env: { ...process.env, OG_RANGE: `${i}:${i + CHUNK}` },
+    });
+    if (r.status !== 0) {
+      console.error(`og chunk ${i}:${i + CHUNK} failed (exit ${r.status})`);
+      process.exit(1);
+    }
+  }
+  console.log('done:', apps.length + 2, 'images');
+}

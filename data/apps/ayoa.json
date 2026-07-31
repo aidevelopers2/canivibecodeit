@@ -1,0 +1,63 @@
+{
+  "slug": "ayoa",
+  "name": "Ayoa",
+  "domain": "ayoa.com",
+  "appURL": "https://ayoa.com",
+  "category": "diagrams",
+  "subcategory": "mind mapping + tasks",
+  "tagline": "Mind maps, whiteboards, tasks, and team collaboration",
+  "priceMonthly": null,
+  "pricing": {
+    "plan": "Typical paid plan",
+    "kind": "unknown",
+    "basis": "paid plan; billing basis requires review",
+    "currency": "USD",
+    "native": "Public paid plan exists; amount not safely recovered",
+    "source": "https://ayoa.com/pricing",
+    "checkedOn": "2026-07-31",
+    "confidence": "low",
+    "notes": "The official pricing URL is recorded, but a stable current amount was not safely recoverable in this pass. Do not publish a number until rechecked."
+  },
+  "verdict": "kinda",
+  "verdictConfidence": "medium",
+  "verdictSummary": "The visible mind mapping + tasks loop is buildable, but a credible replacement needs more than the first screen. Ayoa earns its keep through interaction polish, collaboration, so expect a weekend or multi-day build and a narrower personal scope.",
+  "coreLoopDIY": "Build a browser-based mind mapping + tasks editor with drag, resize, connect, keyboard shortcuts, autosave, and SVG or PNG export.",
+  "diyTimeEstimate": "multi-day",
+  "replacementScope": "narrow personal or very small-team substitute",
+  "requirements": [
+    "Node.js 22",
+    "modern browser",
+    "no account required"
+  ],
+  "whatYouLose": [
+    "high-fidelity import and export",
+    "presentation and enterprise controls",
+    "multiplayer cursors and comments",
+    "large template libraries"
+  ],
+  "moatType": "interaction polish/collaboration",
+  "whyPeopleStillPay": "Ayoa: The shapes are easy; customers pay for low-friction editing, reliable exports, collaboration, and a canvas that never fights them.",
+  "ongoingBurden": "Own geometry, selection behavior, undo, clipboard interoperability, export fidelity, accessibility, and browser performance.",
+  "priorArt": [
+    {
+      "name": "Excalidraw",
+      "url": "https://github.com/excalidraw/excalidraw",
+      "desc": "Open-source diagram canvas with an approachable interaction model."
+    },
+    {
+      "name": "tldraw",
+      "url": "https://github.com/tldraw/tldraw",
+      "desc": "Open-source infinite-canvas SDK and whiteboard."
+    }
+  ],
+  "relatedSlugs": [
+    "mindnode",
+    "simplemind",
+    "xmind"
+  ],
+  "pagePriority": 3,
+  "verifiedOneShot": false,
+  "notes": "Useful boundary case: the first 60 percent of Ayoa is approachable, but operating the last 40 percent is the real subscription.",
+  "prompt": "Build a deliberately narrow personal substitute for Ayoa, not a full clone.\nUse exactly this stack: React + TypeScript + Vite + IndexedDB.\nPrimary job: Build a browser-based mind mapping + tasks editor with drag, resize, connect, keyboard shortcuts, autosave, and SVG or PNG export.\nStart from an empty folder and create the complete working project.\nMake the default mode single-user and private.\nStore user data locally unless the core job requires the declared self-hosted database.\nDo not add analytics, telemetry, ads, or third-party accounts.\nPut every secret and external credential in .env and provide .env.example.\nUse realistic sample data that is clearly labelled and easy to delete.\nImplement the smallest polished interface that completes the core loop end to end.\nInclude clear empty, loading, validation, success, and failure states.\nAdd import and export so the user is not trapped in the app.\nUse accessible keyboard navigation, labels, focus states, and sensible contrast.\nValidate untrusted input and never log secrets or private file contents.\nDeliberately exclude these paid-product advantages: high-fidelity import and export; presentation and enterprise controls; multiplayer cursors and comments.\nDo not fake integrations, network effects, proprietary data, model quality, compliance, or security claims.\nWhere an external API is optional, keep the app useful without it and explain the degraded mode.\nWrite focused unit tests for the data model and the most important workflow.\nAdd one end-to-end smoke test that proves the core loop works.\nCreate a README with setup, permissions, architecture, data location, backup, and limitations.\nAdd scripts for install, development, test, build, and a production-style local run.\nRun the tests and build before finishing, then fix errors rather than merely describing them.",
+  "promptCurated": false
+}
