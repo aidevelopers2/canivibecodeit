@@ -39,7 +39,7 @@
     {
       "name": "Penpot",
       "url": "https://github.com/penpot/penpot",
-      "desc": "open-source design tool \u2014 the serious alternative"
+      "desc": "open-source design tool — the serious alternative"
     },
     {
       "name": "Excalidraw",
@@ -54,7 +54,7 @@
   ],
   "pagePriority": 5,
   "verifiedOneShot": false,
-  "notes": "The credibility entry. Figma's value is multiplayer CRDTs, a decade of canvas engineering, and everyone else being on it. You can't one-shot a moat \u2014 and network effects are the strongest moat there is.",
-  "prompt": "Honest answer: don't. Figma's core value is multiplayer editing on a\nhigh-performance canvas plus the fact that your whole team already lives there.\nA one-shot clone gives you a worse Excalidraw and none of the network.\n\nIf what you actually need is single-player vector editing, run Penpot\n(open source, self-hostable) or Excalidraw instead \u00b7 links in prior art.\n\nIf you still want to scratch the itch, here's the weekend version:\n\n- A canvas editor: rectangles, ellipses, text, and frames; select, move,\n  resize with handles; fill/stroke/corner-radius controls in a right panel.\n- Layers list with drag-reorder, and export of the selection as SVG and PNG.\n- Local-first: documents persist to IndexedDB, import/export as JSON.\n- Vanilla JS or Svelte on a single canvas element; no backend at all.\n\nWhat you will NOT have: multiplayer, comments, components, auto-layout,\nplugins, or anyone to collaborate with. That gap is the product.",
+  "notes": "The credibility entry. Figma's value is multiplayer CRDTs, a decade of canvas engineering, and everyone else being on it. You can't one-shot a moat — and network effects are the strongest moat there is.",
+  "prompt": "Build me a single-player vector canvas editor, a weekend sketch of Figma's core\ncanvas. Requirements:\n\n- A canvas editor with rectangles, ellipses, text, and frames; select, move,\n  and resize with handles; fill, stroke, and corner-radius controls in a right\n  panel.\n- A layers list with drag-reorder.\n- Export the current selection as SVG and PNG.\n- Local-first: documents persist to IndexedDB, with import and export as JSON.\n- Vanilla JS or Svelte on a single canvas element, pick the simpler to ship; no\n  backend at all.\n- No accounts, no telemetry, everything stays in the browser on my machine.\n- Out of scope: multiplayer, comments, components, auto-layout, and plugins.\n  Do not build any collaboration or sync layer.\n- README: state that this is not a Figma replacement, the moat is real-time\n  multiplayer plus the network of people already on it, and point to Penpot or\n  Excalidraw for serious single-player use.",
   "promptCurated": true
 }
