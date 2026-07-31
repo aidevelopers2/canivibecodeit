@@ -1470,9 +1470,9 @@ a.row:hover .badge {
   }
 }
 
-/* ---------- waitlist ---------- */
+/* ---------- digest signup ---------- */
 
-.waitlist {
+.digest-card {
   margin-top: 72px;
   background: var(--surface);
   border: 1px solid var(--border);
@@ -1485,23 +1485,74 @@ a.row:hover .badge {
   text-align: center;
 }
 
-.waitlist h2 {
-  font-size: clamp(20px, 3vw, 26px);
+.digest-card h2 {
+  font-size: clamp(20px, 3vw, 28px);
 }
 
-.waitlist .sub {
-  font-size: 13.5px;
+.digest-card .sub {
+  font: 14px/1.7 var(--font-mono);
   color: var(--muted);
 }
 
-.waitlist form {
+.digest-card .chip-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding-top: 4px;
+}
+
+.digest-card .chip-row .more {
+  font: 12px var(--font-mono);
+  color: var(--muted);
+}
+
+.verdict-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 6px 13px;
+  font: 12px var(--font-mono);
+  color: var(--fg);
+}
+
+.verdict-chip i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: var(--muted);
+}
+
+.verdict-chip.yes i {
+  background: var(--primary);
+}
+
+.verdict-chip.kinda i {
+  background: var(--kinda-bg);
+}
+
+.verdict-chip.no i {
+  background: var(--no-bg);
+}
+
+.digest-card form,
+.digest-reveal form {
   display: flex;
   gap: 10px;
+}
+
+.digest-card form {
   margin-top: 8px;
   width: min(480px, 100%);
 }
 
-.waitlist input[type='email'] {
+.digest-card input[type='email'],
+.digest-reveal input[type='email'] {
   flex: 1;
   min-width: 0;
   background: var(--bg);
@@ -1514,10 +1565,183 @@ a.row:hover .badge {
   transition: border-color 0.15s ease;
 }
 
-.waitlist input[type='email']:focus {
+.digest-card input[type='email']:focus,
+.digest-reveal input[type='email']:focus {
   outline: none;
   border-color: var(--primary);
 }
+
+.digest-card .fine {
+  font: 11.5px/1.6 var(--font-mono);
+  color: var(--muted);
+}
+
+/* post-copy reveal — plain card, no accent border: the ask stays quiet */
+
+.digest-reveal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 18px 20px;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.35s var(--ease-out), transform 0.35s var(--ease-out);
+}
+
+.digest-reveal[hidden] {
+  display: none;
+}
+
+.digest-reveal.in {
+  opacity: 1;
+  transform: none;
+}
+
+.digest-reveal .dr-head {
+  font: 500 13px/1.5 var(--font-mono);
+  color: var(--fg);
+}
+
+.digest-reveal .dr-sub {
+  font: 12px/1.6 var(--font-mono);
+  color: var(--muted);
+}
+
+.digest-reveal form {
+  flex: 1;
+  min-width: min(340px, 100%);
+  max-width: 420px;
+}
+
+.digest-reveal input[type='email'] {
+  padding: 10px 14px;
+  font-size: 13px;
+}
+
+.digest-reveal .btn.primary {
+  font-size: 13px;
+  padding: 10px 16px;
+  white-space: nowrap;
+}
+
+.dr-close {
+  flex-shrink: 0;
+  width: 34px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  border-radius: 7px;
+  color: var(--muted);
+  font-size: 13px;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.dr-close:hover {
+  border-color: var(--muted);
+  color: var(--fg);
+}
+
+/* scroll-in bar — overlays the page bottom, never reserves layout space.
+   visibility (not just the transform) keeps the hidden form out of tab order. */
+
+.digest-bar {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  z-index: 90;
+  width: min(800px, calc(100vw - 32px));
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-bottom: none;
+  border-radius: 14px 14px 0 0;
+  padding: 12px 16px;
+  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.45);
+  transform: translate(-50%, 110%);
+  visibility: hidden;
+  transition: transform 0.3s var(--ease-out), visibility 0.3s;
+}
+
+[data-theme='light'] .digest-bar {
+  box-shadow: 0 -10px 30px rgba(40, 36, 24, 0.12);
+}
+
+.digest-bar.show {
+  transform: translate(-50%, 0);
+  visibility: visible;
+}
+
+.db-label {
+  font: 13px var(--font-mono);
+  color: var(--fg);
+  white-space: nowrap;
+}
+
+.db-label i {
+  color: var(--primary);
+  font-style: normal;
+  padding-right: 8px;
+}
+
+.digest-bar form {
+  display: flex;
+  gap: 8px;
+  flex: 1;
+  min-width: 0;
+}
+
+.digest-bar input[type='email'] {
+  flex: 1;
+  min-width: 0;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  padding: 10px 14px;
+  color: var(--fg);
+  font: inherit;
+  font-size: 13px;
+  transition: border-color 0.15s ease;
+}
+
+.digest-bar input[type='email']:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.digest-bar .btn.primary {
+  font-size: 13px;
+  padding: 10px 16px;
+  white-space: nowrap;
+}
+
+.db-close {
+  flex-shrink: 0;
+  width: 34px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  border-radius: 7px;
+  color: var(--muted);
+  font-size: 13px;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.db-close:hover {
+  border-color: var(--muted);
+  color: var(--fg);
+}
+
+/* the bar owns the bottom edge while it's up — lift the toast clear of it */
+.digest-bar.show ~ .toast {
+  bottom: 92px;
+}
+
 
 /* honeypot — visually gone, present for bots */
 .hp {
@@ -1690,7 +1914,9 @@ a.row:hover .badge {
 
   /* iOS zooms into any focused input with font-size below 16px */
   .search input,
-  .waitlist input[type='email'] {
+  .digest-card input[type='email'],
+  .digest-reveal input[type='email'],
+  .digest-bar input[type='email'] {
     font-size: 16px;
   }
 
@@ -1699,8 +1925,35 @@ a.row:hover .badge {
     grid-template-columns: 1fr;
   }
 
-  .waitlist form {
+  .digest-card form {
     flex-direction: column;
+  }
+
+  .digest-reveal form {
+    flex-wrap: wrap;
+  }
+
+  .digest-reveal input[type='email'] {
+    flex-basis: 100%;
+  }
+
+  .digest-reveal .btn.primary {
+    flex: 1;
+    justify-content: center;
+  }
+
+  .digest-bar {
+    width: calc(100vw - 16px);
+    gap: 0;
+    padding: 10px 10px;
+  }
+
+  .db-label {
+    display: none;
+  }
+
+  .digest-bar .btn.primary {
+    padding: 10px 12px;
   }
 
   .actions .tweet {

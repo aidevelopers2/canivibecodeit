@@ -1,0 +1,25 @@
+---
+const { source } = Astro.props;
+---
+
+<section class="digest-reveal" id="digest-reveal" hidden>
+  <div class="dr-text">
+    <p class="dr-head">prompt copied. want to know what dies next week?</p>
+    <p class="dr-sub">new verdicts + top votes, weekly. free. one-click out.</p>
+  </div>
+  <form method="post" action="/api/waitlist" data-digest>
+    <label class="hp" aria-hidden="true">
+      Leave this empty <input type="text" name="website" tabindex="-1" autocomplete="off" />
+    </label>
+    <input type="hidden" name="source" value={source} />
+    <input
+      type="email"
+      name="email"
+      required
+      placeholder="you@wherever.com"
+      aria-label="Email address"
+    />
+    <button class="btn primary" type="submit">yes, weekly</button>
+    <button class="dr-close" type="button" data-digest-dismiss aria-label="dismiss">✕</button>
+  </form>
+</section>

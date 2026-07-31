@@ -5,8 +5,10 @@
 HANDOFF.md
 *HANDOFF*
 
-# private business planning — never committed (public repo)
+# private business planning + working conventions — never committed (public repo)
 planning/
+CLAUDE.md
+.claude/
 
 # private user data (also lives outside the repo tree on the server)
 data/private/
@@ -18,6 +20,7 @@ data/private/
 logs/
 
 # deps & build output
+src/generated/
 node_modules/
 dist/
 .astro/

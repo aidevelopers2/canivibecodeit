@@ -304,6 +304,29 @@
     }, 1800);
   };
 
+  /* The ask lands after the value: the reveal only appears once the prompt is
+     in someone's clipboard, and never again after a signup or a dismissal. */
+  const reveal = $('#digest-reveal');
+  // Storage throws outright in blocked-cookie contexts and in-app webviews.
+  const remembered = (key) => {
+    try {
+      return !!localStorage.getItem(key);
+    } catch {
+      return false;
+    }
+  };
+  const remember = (key) => {
+    try {
+      localStorage.setItem(key, '1');
+    } catch {}
+  };
+  const showReveal = () => {
+    if (!reveal) return;
+    if (remembered('digest_dismissed') || remembered('digest_subscribed')) return;
+    reveal.hidden = false;
+    requestAnimationFrame(() => reveal.classList.add('in'));
+  };
+
   $$('.copy-group').forEach((group) => {
     const slug = group.dataset.slug;
     group.addEventListener('click', async (e) => {
@@ -312,13 +335,15 @@
       const prompt = $('#prompt-text')?.textContent || '';
 
       if (btn.dataset.agent === 'raw') {
-        if (await copyText(prompt)) {
+        const copied = await copyText(prompt);
+        track('copy_prompt', { app: slug, agent: 'raw' });
+        if (copied) {
           flashCopied(btn);
           toast('prompt copied · paste it into any agent');
+          showReveal();
         } else {
           toast('copy failed · select the text manually');
         }
-        track('copy_prompt', { app: slug, agent: 'raw' });
         return;
       }
 
@@ -330,6 +355,7 @@
       if (agent.newTab) window.open(url, '_blank', 'noopener');
       else window.location.href = url;
       track('copy_prompt', { app: slug, agent: btn.dataset.agent });
+      showReveal();
     });
   });
 
@@ -383,8 +409,23 @@
     a.addEventListener('click', () => track('share', { app: a.dataset.share }))
   );
 
-  /* ---------- waitlist ---------- */
-  $$('form[data-waitlist]').forEach((form) => {
+  /* ---------- digest signup ---------- */
+  const bar = $('#digest-bar');
+
+  // Dismissing or signing up has to be permanent for the session: without this
+  // the next scroll event is past the show threshold and puts the bar straight
+  // back. The flag covers browsers that ignore the listener's abort signal.
+  const barScroll = new AbortController();
+  let barOff = false;
+  const killBar = (hide = true) => {
+    barOff = true;
+    barScroll.abort();
+    // Signup from the bar: let the "you're in ✓" land, then slide away.
+    if (hide) bar?.classList.remove('show');
+    else setTimeout(() => bar?.classList.remove('show'), 2500);
+  };
+
+  $$('form[data-digest]').forEach((form) => {
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
       const btn = $('button', form);
@@ -397,12 +438,48 @@
         btn.textContent = "you're in ✓";
         btn.disabled = true;
         form.querySelector('input[type=email]').disabled = true;
-        toast("on the list — you'll hear about the scanner first");
-        track('waitlist_signup');
+        toast('in. verdicts arrive weekly.');
+        track('waitlist_signup', { placement: form.querySelector('[name=source]')?.value });
+        remember('digest_subscribed');
+        if (reveal && !reveal.contains(form)) reveal.hidden = true;
+        // A signup from the bar itself keeps its "you're in ✓" on screen.
+        if (bar) killBar(!bar.contains(form));
       } else {
         toast(res?.status === 429 ? 'slow down a little' : 'that email looks off');
       }
     });
+  });
+
+  $('[data-digest-dismiss]')?.addEventListener('click', () => {
+    if (reveal) reveal.hidden = true;
+    remember('digest_dismissed');
+  });
+
+  /* The bar arrives once someone is past the first screen and leaves again at
+     the top. Dismissed or subscribed → the listener is never attached. */
+  if (bar && !remembered('digest_bar_dismissed') && !remembered('digest_subscribed')) {
+    let queued = false;
+    const syncBar = () => {
+      queued = false;
+      if (barOff) return;
+      const y = window.scrollY;
+      if (y > window.innerHeight * 0.8) bar.classList.add('show');
+      else if (y < 200) bar.classList.remove('show');
+    };
+    window.addEventListener(
+      'scroll',
+      () => {
+        if (barOff || queued) return;
+        queued = true;
+        requestAnimationFrame(syncBar);
+      },
+      { passive: true, signal: barScroll.signal }
+    );
+  }
+
+  $('[data-digest-bar-dismiss]')?.addEventListener('click', () => {
+    killBar();
+    remember('digest_bar_dismissed');
   });
 
   /* ---------- reveal on scroll ---------- */

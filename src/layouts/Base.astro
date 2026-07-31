@@ -2,6 +2,7 @@
 import '@fontsource-variable/space-grotesk';
 import '@fontsource-variable/jetbrains-mono';
 import '../styles/global.css';
+import DigestBar from '../components/DigestBar.astro';
 
 const {
   title,
@@ -108,6 +109,8 @@ const blocks = [orgLd, ...jsonld];
       </span>
       </div>
     </footer>
+
+    <DigestBar />
 
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
     <script src={`/js/app.js?v=${__BUILD_ID__}`} defer></script>

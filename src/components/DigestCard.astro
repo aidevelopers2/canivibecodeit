@@ -1,0 +1,51 @@
+---
+import { VERDICTS } from '../lib/apps.js';
+
+const { source } = Astro.props;
+
+// Written by scripts/recent-verdicts.mjs at build time. Glob, not import, so a
+// missing file (fresh checkout, no git) degrades to an empty chip row.
+const generated = import.meta.glob('../generated/recent*.json', { eager: true, import: 'default' });
+const recent = Object.values(generated)[0] ?? [];
+// An unrecognised verdict (bad PR, future value) drops out rather than
+// rendering a chip with a dangling dash.
+const known = recent.filter((r) => Object.hasOwn(VERDICTS, r.verdict));
+const chips = known.slice(0, 3);
+const more = known.length - chips.length;
+---
+
+<section class="digest-card wrap reveal" id="digest">
+  <h2>Every week, more subscriptions die.</h2>
+  <p class="sub">
+    New verdicts, new prompts, the week's most-doomed apps.<br />
+    One email. Unsubscribe in one click.
+  </p>
+  {
+    chips.length > 0 && (
+      <div class="chip-row">
+        <span class="microlabel">last week:</span>
+        {chips.map((c) => (
+          <span class={`verdict-chip ${c.verdict}`}>
+            <i></i>{c.name} — {VERDICTS[c.verdict].label}
+          </span>
+        ))}
+        {more > 0 && <span class="more">+{more} more</span>}
+      </div>
+    )
+  }
+  <form method="post" action="/api/waitlist" data-digest>
+    <label class="hp" aria-hidden="true">
+      Leave this empty <input type="text" name="website" tabindex="-1" autocomplete="off" />
+    </label>
+    <input type="hidden" name="source" value={source} />
+    <input
+      type="email"
+      name="email"
+      required
+      placeholder="you@wherever.com"
+      aria-label="Email address"
+    />
+    <button class="btn primary" type="submit">get the digest</button>
+  </form>
+  <p class="fine">free forever · no scanner spam · the prompt stays on the site, the deaths come to you</p>
+</section>

@@ -3,7 +3,7 @@ import Base from '../layouts/Base.astro';
 import Ticker from '../components/Ticker.astro';
 import AppRow from '../components/AppRow.astro';
 import StatsStrip from '../components/StatsStrip.astro';
-import Waitlist from '../components/Waitlist.astro';
+import DigestCard from '../components/DigestCard.astro';
 import { allApps, topCategories } from '../lib/apps.js';
 import { voteCounts } from '../lib/db.js';
 
@@ -116,5 +116,5 @@ const jsonld = [
     </div>
   </main>
 
-  <Waitlist />
+  <DigestCard source="home" />
 </Base>

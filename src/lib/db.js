@@ -12,6 +12,7 @@ const SCHEMA_SQLITE = `
   );
   CREATE TABLE IF NOT EXISTS waitlist (
     email TEXT PRIMARY KEY,
+    source TEXT,
     created_at TEXT NOT NULL DEFAULT (datetime('now'))
   );
   CREATE TABLE IF NOT EXISTS sponsors (
@@ -34,6 +35,7 @@ const SCHEMA_PG = `
   );
   CREATE TABLE IF NOT EXISTS waitlist (
     email TEXT PRIMARY KEY,
+    source TEXT,
     created_at TIMESTAMPTZ NOT NULL DEFAULT now()
   );
   CREATE TABLE IF NOT EXISTS sponsors (
@@ -55,6 +57,9 @@ async function pgDriver() {
   const { default: pg } = await import('pg');
   const pool = new pg.Pool({ connectionString: PG_URL, max: 5 });
   await pool.query(SCHEMA_PG);
+  // A NULL source means the row predates per-placement tracking: scanner era.
+  await pool.query('ALTER TABLE waitlist ADD COLUMN IF NOT EXISTS source TEXT');
+  await pool.query("UPDATE waitlist SET source = 'scanner' WHERE source IS NULL");
   return {
     async voteCount(slug) {
       const r = await pool.query('SELECT count FROM votes WHERE slug = $1', [slug]);
@@ -83,10 +88,10 @@ async function pgDriver() {
     async clearRateLimit(key) {
       await pool.query('DELETE FROM rate_limits WHERE key = $1', [key]);
     },
-    async addEmail(email) {
+    async addEmail(email, source) {
       const r = await pool.query(
-        'INSERT INTO waitlist (email) VALUES ($1) ON CONFLICT DO NOTHING',
-        [email]
+        'INSERT INTO waitlist (email, source) VALUES ($1, $2) ON CONFLICT DO NOTHING',
+        [email, source]
       );
       return r.rowCount > 0;
     },
@@ -124,6 +129,13 @@ async function sqliteDriver() {
   const db = new Database(path.join(dir, 'site.db'));
   db.pragma('journal_mode = WAL');
   db.exec(SCHEMA_SQLITE);
+  // A NULL source means the row predates per-placement tracking: scanner era.
+  try {
+    db.exec('ALTER TABLE waitlist ADD COLUMN source TEXT');
+  } catch (err) {
+    if (!/duplicate column/i.test(err.message)) throw err;
+  }
+  db.exec("UPDATE waitlist SET source = 'scanner' WHERE source IS NULL");
   const stmts = {
     getVote: db.prepare('SELECT count FROM votes WHERE slug = ?'),
     allVotes: db.prepare('SELECT slug, count FROM votes'),
@@ -131,7 +143,7 @@ async function sqliteDriver() {
       INSERT INTO votes (slug, count) VALUES (?, 1)
       ON CONFLICT(slug) DO UPDATE SET count = count + 1
     `),
-    addEmail: db.prepare('INSERT OR IGNORE INTO waitlist (email) VALUES (?)'),
+    addEmail: db.prepare('INSERT OR IGNORE INTO waitlist (email, source) VALUES (?, ?)'),
     addSponsor: db.prepare('INSERT INTO sponsors (email, message) VALUES (?, ?)'),
     getLimit: db.prepare('SELECT count, window_start FROM rate_limits WHERE key = ?'),
     setLimit: db.prepare(`
@@ -158,8 +170,8 @@ async function sqliteDriver() {
     async clearRateLimit(key) {
       db.prepare('DELETE FROM rate_limits WHERE key = ?').run(key);
     },
-    async addEmail(email) {
-      return stmts.addEmail.run(email).changes > 0;
+    async addEmail(email, source) {
+      return stmts.addEmail.run(email, source).changes > 0;
     },
     async addSponsor(email, message) {
       stmts.addSponsor.run(email, message);
@@ -205,8 +217,8 @@ export async function clearRateLimit(key) {
   return (await getDriver()).clearRateLimit(key);
 }
 
-export async function addToWaitlist(email) {
-  return (await getDriver()).addEmail(email);
+export async function addToWaitlist(email, source) {
+  return (await getDriver()).addEmail(email, source);
 }
 
 export async function addSponsorInquiry(email, message) {
