@@ -1,0 +1,56 @@
+{
+  "slug": "gojo",
+  "name": "Gojo",
+  "domain": "gojo.rohoswagger.com",
+  "category": "productivity-utilities",
+  "subcategory": "MacBook notch utility",
+  "tagline": "Five everyday Mac tools tucked into the MacBook notch",
+  "priceMonthly": 4.99,
+  "pricing": {
+    "plan": "Monthly",
+    "basis": "monthly for up to 3 Macs",
+    "native": "4.99 USD",
+    "source": "https://gojo.rohoswagger.com/#pricing",
+    "checkedOn": "2026-07-30",
+    "confidence": "high",
+    "notes": "Checked on the official site on 2026-07-30. Gojo also offers a three-day trial and a $19.99 lifetime license."
+  },
+  "verdict": "kinda",
+  "verdictConfidence": "high",
+  "verdictSummary": "A weekend is enough for the useful part: a notch panel with clipboard history, a file shelf, music controls, window snapping, and screen warmth. Getting it ready for daily use takes longer because macOS permissions, dictation, multiple displays, and tiny UI details add up fast.",
+  "coreLoopDIY": "Open a small panel from the MacBook notch and jump between clipboard history, a file shelf, music controls, window snapping, and screen warmth.",
+  "diyTimeEstimate": "multi-day",
+  "requirements": [
+    "macOS 14 or later",
+    "Xcode 16",
+    "Accessibility permission for window control",
+    "Apple Events permission for media control",
+    "local storage"
+  ],
+  "whatYouLose": [
+    "signed and notarized builds with automatic updates",
+    "smooth notch behavior across multiple displays",
+    "on-device dictation and its safety checks",
+    "built-in calendar, reminders, webcam, and battery tools",
+    "fixes when a macOS update breaks something"
+  ],
+  "moatType": "macOS polish and maintenance",
+  "whyPeopleStillPay": "People pay to skip the maintenance. Install Gojo, approve the permissions, and get back to work.",
+  "priorArt": [
+    {
+      "name": "Gojo source",
+      "url": "https://github.com/rohoswagger/gojo",
+      "desc": "The full GPL-3.0 codebase for the native app",
+      "status": "alive"
+    }
+  ],
+  "relatedSlugs": [
+    "raycast-pro",
+    "superwhisper"
+  ],
+  "pagePriority": 4,
+  "verifiedOneShot": false,
+  "notes": "Submitted by Gojo's maker. The packaged app is paid and the GPL-3.0 source is public.",
+  "prompt": "Build a small macOS notch app inspired by Gojo. Keep v1 to five tabs:\n\n- Use Swift 6, SwiftUI, and AppKit on macOS 14. Generate an Xcode project and skip\n  third-party packages.\n- Make it an accessory app with no Dock icon. Find the built-in display notch and\n  anchor a borderless floating panel right below it.\n- Open the panel after the pointer rests at the notch for 200 ms. Close it on an\n  outside click or Escape. Add Music, Windows, Clipboard, Shelf, and Display tabs.\n- Clipboard: poll NSPasteboard, save the latest 100 text items in Application Support,\n  add search, and copy a picked item back. Skip transient and concealed pasteboard\n  types, plus apps listed in a configurable denylist.\n- Shelf: accept dropped files, save security-scoped bookmarks, show file icons, and\n  support dragging files into another app. Add remove and clear-all actions.\n- Music: control Apple Music or Spotify through AppleScript. Show the active app and\n  track title, with play/pause, previous, and next controls.\n- Windows: list visible app windows through the Accessibility API. Add left half,\n  right half, and maximize actions.\n- Display: save each screen's gamma table, apply blackbody RGB multipliers with\n  CGSetDisplayTransferByTable, and restore the original table on disable or exit.\n- Save settings in UserDefaults. Leave out accounts, sync, telemetry, calendar,\n  camera, dictation, battery widgets, and automatic updates.\n- On first launch, walk through the permissions. Give every tab a useful empty state.\n- Test clipboard deduplication, shelf persistence, and snap-frame math.\n- Document setup, privacy, Accessibility and Automation permissions, and the macOS\n  APIs most likely to change.",
+  "promptCurated": true
+}
