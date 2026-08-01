@@ -2009,7 +2009,7 @@ button.sp-banner {
   /* Tall enough for a full 60-character tagline: 154px of inner width at 12px
      mono is 21 characters a line, and real taglines wrap to four of them.
      Every variant shares this height — a rail whose cards differ looks broken. */
-  height: 151px;
+  height: 153px;
   padding: 14px;
   border-radius: 6px;
   overflow: hidden;
@@ -2064,10 +2064,15 @@ button.sp-banner {
 .sp-card .sp-name {
   display: block;
   padding-top: 8px;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 700;
-  line-height: 17px;
+  line-height: 19px;
   color: var(--fg);
+  /* Always exactly one line. A 40-character name wraps to three at this size,
+     which would push the tagline out of a fixed-height card. */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .sp-card .sp-tag {
@@ -2193,9 +2198,12 @@ button.sp-banner {
 
 .sp-banner .sp-name {
   display: block;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 700;
   color: var(--fg);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .sp-banner .sp-tag {
