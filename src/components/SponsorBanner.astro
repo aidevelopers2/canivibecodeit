@@ -2,13 +2,18 @@
 import { faviconUrl, getBoard, shortDate, tintChannels, usd, withUtm } from '../lib/sponsors.js';
 
 // The rails don't render below 1560px; these sit between list rows instead.
-// `index` cycles the live sponsors so each banner shows a different one.
+// `index` cycles every live sponsor once, then every open slot once (cheapest
+// first) — below 1560px these banners are the only place a buyer can see that
+// slots are for sale, so the rotation must include them.
 const { index = 0 } = Astro.props;
 const board = await getBoard();
-const slot = board.live.length ? board.live[index % board.live.length] : null;
-const cheapest = board.open.length
-  ? board.open.reduce((a, b) => (b.priceCents < a.priceCents ? b : a))
-  : null;
+const rotation = [
+  ...board.live.map((s) => ({ live: s })),
+  ...[...board.open].sort((a, b) => a.priceCents - b.priceCents).map((s) => ({ open: s })),
+];
+const pick = rotation.length ? rotation[index % rotation.length] : {};
+const slot = pick.live ?? null;
+const openSlot = pick.open ?? null;
 const sponsor = slot?.sponsor;
 const icon = sponsor ? sponsor.logoUrl || faviconUrl(sponsor.url) : '';
 ---
@@ -33,18 +38,18 @@ const icon = sponsor ? sponsor.logoUrl || faviconUrl(sponsor.url) : '';
       </span>
       <span class="sp-arrow">→</span>
     </a>
-  ) : cheapest ? (
+  ) : openSlot ? (
     <form class="sp-checkout-form" method="post" action="/api/sponsor/checkout" data-checkout>
-      <input type="hidden" name="slot" value={cheapest.id} />
+      <input type="hidden" name="slot" value={openSlot.id} />
       <button
         class="sp-banner open"
         type="submit"
-        data-slot={cheapest.id}
+        data-slot={openSlot.id}
         data-state="open"
-        data-price={cheapest.priceCents}
+        data-price={openSlot.priceCents}
       >
         <span class="sp-text">
-          <span class="sp-name">your product here — {usd(cheapest.priceCents)}/30 days</span>
+          <span class="sp-name">your product here — {usd(openSlot.priceCents)}/30 days</span>
           <span class="sp-tag">read by people cancelling subscriptions all day</span>
         </span>
         <span class="sp-arrow">→</span>
