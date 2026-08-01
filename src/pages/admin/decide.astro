@@ -1,0 +1,67 @@
+---
+import Base from '../../layouts/Base.astro';
+import { purchaseById } from '../../lib/db.js';
+import { faviconUrl, shortDate, tintChannels, usd, verifyAction, withUtm } from '../../lib/sponsors.js';
+
+/* Mail clients and link scanners fetch every URL in an email before a human sees
+   it, so an emailed link can only ever open a page. The decision itself is a
+   POST from the button below. */
+const id = Astro.url.searchParams.get('id') || '';
+const action = Astro.url.searchParams.get('action') || '';
+const sig = Astro.url.searchParams.get('sig') || '';
+const msg = Astro.url.searchParams.get('msg') || '';
+
+if (!['approve', 'reject'].includes(action) || !verifyAction(id, action, sig)) {
+  return new Response(null, { status: 404 });
+}
+
+const purchase = await purchaseById(id);
+if (!purchase) return new Response(null, { status: 404 });
+
+const pending = action === 'approve' ? purchase.status === 'submitted' : ['submitted', 'paid', 'reject_failed'].includes(purchase.status);
+const icon = purchase.logo_url || (purchase.url ? faviconUrl(purchase.url) : '');
+const returnTo = `/admin/decide?id=${encodeURIComponent(id)}&action=${action}&sig=${sig}`;
+---
+
+<Base title="decide" description="" ogImage="/og/home.png">
+  <main class="wrap admin">
+    <div class="list-head">
+      <h2>{action === 'approve' ? 'Approve this placement?' : 'Reject and refund?'}</h2>
+      <span class="note">{purchase.slot_id} · {usd(purchase.amount_cents)} · {purchase.status}</span>
+    </div>
+
+    {msg && <p class="admin-msg">{msg}</p>}
+
+    <div class="sp-preview">
+      <span class="sp-card live" style={`--tint: ${tintChannels(purchase.tint)}; --i: 0`}>
+        <span class="sp-icon">{icon && <img src={icon} alt="" width="26" height="26" />}</span>
+        <span class="sp-name">{purchase.name ?? '—'}</span>
+        <span class="sp-tag">{purchase.tagline ?? '—'}</span>
+      </span>
+    </div>
+
+    <p class="admin-sub" style="padding-top: 16px;">
+      {purchase.email ?? 'no email'} ·{' '}
+      {purchase.url ? <a href={withUtm(purchase.url)}>{purchase.url}</a> : 'no link'}
+    </p>
+
+    {
+      pending ? (
+        <form method="post" action="/api/sponsor/admin" style="padding-top: 22px;">
+          <input type="hidden" name="id" value={id} />
+          <input type="hidden" name="action" value={action} />
+          <input type="hidden" name="sig" value={sig} />
+          <input type="hidden" name="return_to" value={returnTo} />
+          <button class={`btn ${action === 'approve' ? 'primary' : 'ghost'}`} type="submit">
+            {action === 'approve' ? 'yes — put it live for 30 days' : 'yes — reject and refund in full'}
+          </button>
+        </form>
+      ) : (
+        <p class="admin-sub" style="padding-top: 22px;">
+          Nothing to do: this one is <b>{purchase.status}</b>
+          {purchase.ends_at ? ` until ${shortDate(purchase.ends_at)}` : ''}.
+        </p>
+      )
+    }
+  </main>
+</Base>

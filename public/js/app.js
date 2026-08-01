@@ -9,7 +9,9 @@
   $$('a[href]').forEach((a) => {
     if (/^https?:/.test(a.href) && a.hostname !== location.hostname) {
       a.target = '_blank';
-      a.rel = 'noopener';
+      // Append rather than assign: sponsor cards ship rel="sponsored", and
+      // dropping that turns a paid link into an SEO problem.
+      if (!a.rel.includes('noopener')) a.rel = `${a.rel} noopener`.trim();
     }
   });
 
@@ -53,6 +55,12 @@
     if (miss) miss.classList.toggle('show', shown === 0 && (q.length > 0 || !!activeCat || !!activeVerdict));
     const count = $('#filter-count');
     if (count) count.textContent = shown === rows.length ? '' : `${shown} of ${rows.length}`;
+    // Someone mid-search is looking for one app; an ad wedged into the results
+    // is just noise. The banners come back when the filter clears.
+    const filtering = !!q || !!activeCat || !!activeVerdict;
+    $$('.sp-banner').forEach((b) => {
+      b.style.display = filtering ? 'none' : '';
+    });
   };
 
   $('#verdict-filter')?.addEventListener('click', (e) => {
@@ -408,6 +416,59 @@
   $$('[data-share]').forEach((a) =>
     a.addEventListener('click', () => track('share', { app: a.dataset.share }))
   );
+
+  /* ---------- sponsors ---------- */
+  $$('.sp-card, .sp-banner').forEach((el) =>
+    el.addEventListener('click', () =>
+      track('sponsor_slot_click', { slot: el.dataset.slot || 'none', state: el.dataset.state })
+    )
+  );
+
+  // The form submits natively so it works without JS; this tracks the click and
+  // shows that something is happening while Stripe answers.
+  $$('form[data-checkout]').forEach((form) => {
+    form.addEventListener('submit', (e) => {
+      // A second click would create a second hold on the same slot.
+      if (form.dataset.loading === '1') {
+        e.preventDefault();
+        return;
+      }
+      form.dataset.loading = '1';
+      const btn = $('button', form);
+      track('sponsor_checkout_start', {
+        slot: $('[name=slot]', form)?.value,
+        price: Number(btn?.dataset.price) || null,
+      });
+      if (!btn) return;
+      btn.classList.add('is-loading');
+      // Swap the one line that can change without moving anything: the card and
+      // banner have fixed heights, so the geometry is identical either way.
+      const label = $('.sp-cta', btn) || $('.sp-tag', btn) || btn;
+      if (label.dataset.spLabel === undefined) label.dataset.spLabel = label.textContent;
+      label.textContent = 'opening checkout…';
+      // Disabling inside the submit event can cancel the submission in some
+      // browsers; a tick later still beats a second click.
+      setTimeout(() => {
+        btn.disabled = true;
+      }, 0);
+    });
+  });
+
+  /* Coming back from Stripe with the back button restores this page from the
+     bfcache exactly as it was left — mid-submit, so the card would sit on
+     "opening checkout…" forever. Put every checkout card back how it started. */
+  window.addEventListener('pageshow', (e) => {
+    if (!e.persisted) return;
+    $$('form[data-checkout]').forEach((form) => {
+      delete form.dataset.loading;
+      const btn = $('button', form);
+      if (!btn) return;
+      btn.disabled = false;
+      btn.classList.remove('is-loading');
+      const label = $('.sp-cta', btn) || $('.sp-tag', btn) || btn;
+      if (label.dataset.spLabel !== undefined) label.textContent = label.dataset.spLabel;
+    });
+  });
 
   /* ---------- digest signup ---------- */
   const bar = $('#digest-bar');

@@ -1,0 +1,78 @@
+---
+import { faviconUrl, shortDate, tintChannels, usd, withUtm } from '../lib/sponsors.js';
+
+// Three variants, one fixed size — every state renders at the same dimensions.
+const { slot = null, soldOut = false, nextOpen = null, index = 0 } = Astro.props;
+const state = soldOut ? 'soldout' : slot.state;
+const sponsor = slot?.sponsor;
+const icon = sponsor ? sponsor.logoUrl || faviconUrl(sponsor.url) : '';
+---
+
+{
+  state === 'live' && (
+    <a
+      class="sp-card live"
+      href={withUtm(sponsor.url)}
+      target="_blank"
+      rel="sponsored noopener"
+      style={`--tint: ${tintChannels(sponsor.tint)}; --i: ${index}`}
+      data-slot={slot.id}
+      data-state="live"
+    >
+      <span class="sp-icon">
+        {icon && <img src={icon} alt="" width="26" height="26" loading="lazy" />}
+      </span>
+      <span class="sp-name">{sponsor.name}</span>
+      <span class="sp-tag">{sponsor.tagline}</span>
+    </a>
+  )
+}
+
+{
+  /* Straight to Stripe: a plain form post, so it works without JS and skips the
+     /sponsor detour. The classes and data attributes stay on the button so the
+     styling and the analytics hooks are unchanged. */
+  state === 'open' && (
+    <form class="sp-checkout-form" method="post" action="/api/sponsor/checkout" data-checkout>
+      <input type="hidden" name="slot" value={slot.id} />
+      <button
+        class="sp-card open"
+        type="submit"
+        data-slot={slot.id}
+        data-state="open"
+        data-price={slot.priceCents}
+      >
+        <span class="sp-label">OPEN SLOT</span>
+        <span class="sp-price">
+          {usd(slot.priceCents)}
+          <span class="sp-per">/30 days</span>
+        </span>
+        <span class="sp-cta">put your product here →</span>
+      </button>
+    </form>
+  )
+}
+
+{
+  /* Held or paid-but-not-approved. It still renders a card: a gap in the rail
+     reads as a bug, and "reserved" is the honest answer. */
+  state === 'reserved' && (
+    <a class="sp-card reserved" href="/sponsor" data-slot={slot.id} data-state="reserved">
+      <span class="sp-label">RESERVED</span>
+      <span class="sp-cta">someone's grabbing this slot — check back soon</span>
+    </a>
+  )
+}
+
+{
+  state === 'soldout' && (
+    <a class="sp-card soldout" href="/sponsor#notify" data-state="soldout">
+      <span class="sp-label">6/6 SLOTS TAKEN</span>
+      <span class="sp-cta">
+        {nextOpen
+          ? `next opens ${shortDate(nextOpen.at)} at ${usd(nextOpen.priceCents)} — get notified →`
+          : 'tell me when one opens →'}
+      </span>
+    </a>
+  )
+}

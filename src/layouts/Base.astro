@@ -3,6 +3,7 @@ import '@fontsource-variable/space-grotesk';
 import '@fontsource-variable/jetbrains-mono';
 import '../styles/global.css';
 import DigestBar from '../components/DigestBar.astro';
+import SponsorRails from '../components/SponsorRails.astro';
 
 const {
   title,
@@ -12,6 +13,13 @@ const {
 } = Astro.props;
 
 const canonical = new URL(Astro.url.pathname, 'https://canivibecodeit.com').href;
+// Pages whose URL carries a token: they stay out of the index, and out of
+// analytics, because $current_url would otherwise record the token. Any URL
+// carrying a token counts, including the 404s a case-variant path produces.
+const isPrivate =
+  Astro.url.pathname.startsWith('/admin') ||
+  Astro.url.pathname.startsWith('/sponsor/details') ||
+  Astro.url.search.includes('token=');
 // Version query = cache-buster: OG images are regenerated in place, and a
 // cached miss (or stale card) at any edge must never outlive a deploy.
 const ogUrl = new URL(`${ogImage}?v=${__BUILD_ID__}`, 'https://canivibecodeit.com').href;
@@ -35,6 +43,7 @@ const blocks = [orgLd, ...jsonld];
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
+    {isPrivate && <meta name="robots" content="noindex, nofollow" />}
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/logo-512.png" />
     <meta name="theme-color" content="#0b0d0b" />
@@ -61,7 +70,7 @@ const blocks = [orgLd, ...jsonld];
         document.documentElement.dataset.theme = theme;
       })();
     </script>
-    <script is:inline src="/analytics.js" defer></script>
+    {!isPrivate && <script is:inline src="/analytics.js" defer></script>}
   </head>
   <body>
     <header class="site-header">
@@ -78,7 +87,7 @@ const blocks = [orgLd, ...jsonld];
           <a href="/#death-list">the death list</a>
           <a href="/stats">stats</a>
           <a href="https://github.com/canivibecodeit/canivibecodeit/blob/main/CONTRIBUTING.md">submit an app</a>
-          <a href="mailto:hello@canivibecodeit.com?subject=Sponsoring%20canivibecodeit.com">sponsor</a>
+          <a href="/sponsor">sponsor</a>
           <button
             class="theme-toggle"
             aria-label="Toggle light or dark theme"
@@ -94,6 +103,8 @@ const blocks = [orgLd, ...jsonld];
 
     <slot />
 
+    <SponsorRails />
+
     <footer class="site-footer">
       <div class="inner">
       <span>
@@ -105,7 +116,7 @@ const blocks = [orgLd, ...jsonld];
       </span>
       <span>
         MIT · no third-party trackers ·
-        <a href="mailto:hello@canivibecodeit.com?subject=Sponsoring%20canivibecodeit.com">sponsor ↗</a>
+        <a href="/sponsor">sponsor</a>
       </span>
       </div>
     </footer>

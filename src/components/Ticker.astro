@@ -11,15 +11,22 @@ const tapeItems = apps
   .map((a) => `${a.name.toUpperCase()} −$${a.priceMonthly}/mo`)
   .join(' · ');
 const reel = [...Array(10).keys()];
+
+/* The tape scrolls one full copy of itself per cycle, so a fixed duration means
+   the speed depends on how many apps are on the list — every new verdict sped it
+   up. Mono type gives a reliable px-per-character, so the duration is derived
+   from the string's rendered width instead and the tape moves at ~60px/s
+   whatever the list does. */
+const tapeDur = Math.max(20, Math.round((tapeItems.length * 7.9 + 48) / 60));
 ---
 
 <div class="ticker" id="ticker" data-total={total}>
-  <div class="tape" aria-hidden="true">
+  <div class="tape" aria-hidden="true" style={`--tape-dur: ${tapeDur}s`}>
     <span>{tapeItems} · </span>
     <span>{tapeItems} · </span>
   </div>
   <div class="main">
-    <span class="label">collective MRR<br />destroyed</span>
+    <span class="label">SaaS bills<br />saved</span>
     <span class="odometer" aria-label={`$${total.toLocaleString('en-US')} per month`}>
       {
         chars.map((ch) =>

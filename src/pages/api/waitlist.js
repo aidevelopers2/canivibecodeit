@@ -1,7 +1,7 @@
 import { addToWaitlist, rateLimit } from '../../lib/db.js';
 import { clientIp, json, readBody, validEmail } from '../../lib/request.js';
 
-const SOURCES = ['home', 'app', 'app_copy', 'category', '404', 'bar'];
+const SOURCES = ['home', 'app', 'app_copy', 'category', '404', 'bar', 'sponsor'];
 
 // Inert until the Resend vars are set: the site is the source of truth, the
 // audience is a mirror. Never blocks or fails the signup.

@@ -1,0 +1,23 @@
+---
+import SponsorCard from './SponsorCard.astro';
+import { getBoard } from '../lib/sponsors.js';
+
+const board = await getBoard();
+// Every slot renders a card in every state — a rail with holes in it reads as
+// broken, and each state has something honest to say.
+const left = board.left;
+const right = board.right;
+// Only an all-running board gets the extra sold-out card; anything held shows a
+// reserved card instead, so the rails already carry something clickable.
+const metaSide = board.allLive ? (left.length < right.length ? 'left' : 'right') : null;
+---
+
+<aside class="sp-rail sp-left" aria-label="Sponsors, left">
+  {left.map((slot, i) => <SponsorCard {slot} index={i} />)}
+  {metaSide === 'left' && <SponsorCard soldOut nextOpen={board.nextOpen} index={left.length} />}
+</aside>
+
+<aside class="sp-rail sp-right" aria-label="Sponsors, right">
+  {right.map((slot, i) => <SponsorCard {slot} index={i + 3} />)}
+  {metaSide === 'right' && <SponsorCard soldOut nextOpen={board.nextOpen} index={right.length + 3} />}
+</aside>

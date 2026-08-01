@@ -15,12 +15,14 @@
   --kinda-fg: #1a1200;
   --no-bg: #ff4444;
   --no-fg: #ffffff;
-  --ticker: #ff5c33;
-  --ticker-dim: #a05a3f;
-  --ticker-label: #ff8a5c;
-  --ticker-bg: #120d0a;
-  --ticker-cell: #1f1210;
-  --ticker-cell-border: #43241a;
+  /* The ticker counts money people kept, not money destroyed — so it's green.
+     Red stays reserved for NOT REALLY verdicts. */
+  --ticker: #33e667;
+  --ticker-dim: #4f8a63;
+  --ticker-label: #6fe08f;
+  --ticker-bg: #0a140e;
+  --ticker-cell: #10211a;
+  --ticker-cell-border: #1e4230;
   --lose-bg: #2a1414;
   --lose-border: #4a2020;
   --shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
@@ -35,10 +37,11 @@
 }
 
 [data-theme='light'] {
-  /* light — paper terminal */
-  --bg: #f4f3ed;
-  --surface: #fdfcf9;
-  --surface-2: #eceae1;
+  /* light — paper terminal. White canvas, white cards with borders; the warm
+     grey only survives in wells and hovers so the page doesn't grey-wash. */
+  --bg: #ffffff;
+  --surface: #ffffff;
+  --surface-2: #f4f2ea;
   --border: #ddd9cc;
   --fg: #171a17;
   --muted: #6c7268;
@@ -49,15 +52,15 @@
   --kinda-fg: #241800;
   --no-bg: #e03131;
   --no-fg: #ffffff;
-  --ticker: #d64518;
-  --ticker-dim: #b4785f;
-  --ticker-label: #b4552f;
-  --ticker-bg: #f7e9e0;
-  --ticker-cell: #fff6f0;
-  --ticker-cell-border: #ecc4ad;
+  --ticker: #0e9c47;
+  --ticker-dim: #628a70;
+  --ticker-label: #2f8a52;
+  --ticker-bg: #e7f3ea;
+  --ticker-cell: #f4fbf6;
+  --ticker-cell-border: #bcdcc7;
   --lose-bg: #fbe3e3;
   --lose-border: #eebbbb;
-  --shadow: 0 8px 32px rgba(40, 36, 24, 0.1);
+  --shadow: 0 8px 32px rgba(40, 36, 24, 0.14);
 
   color-scheme: light;
 }
@@ -487,10 +490,13 @@ h3 {
 
 /* no overflow:hidden here — the MRR tooltip must escape the band; the tape
    clips itself */
+/* Capped to the content column so the sponsor rails have clean space beside it. */
 .ticker {
   background: var(--ticker-bg);
   border-top: 2px solid var(--ticker);
   border-bottom: 2px solid var(--ticker);
+  max-width: 1120px;
+  margin: 0 auto;
 }
 
 .tape {
@@ -506,10 +512,12 @@ h3 {
   mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
 }
 
+/* Duration is computed per render from the tape's own length (Ticker.astro), so
+   the scroll speed stays constant as the list grows. */
 .tape > span {
   display: inline-block;
   padding-right: 48px;
-  animation: tape 40s linear infinite;
+  animation: tape var(--tape-dur, 40s) linear infinite;
 }
 
 @keyframes tape {
@@ -1959,6 +1967,686 @@ a.row:hover .badge {
   .actions .tweet {
     display: none;
   }
+}
+
+/* ---------- sponsor cards ---------- */
+
+/* An open card is a submit button, not a link — it posts straight to checkout.
+   These resets make it render identically to the anchor variants. */
+.sp-checkout-form {
+  display: block;
+}
+
+button.sp-card,
+button.sp-banner {
+  appearance: none;
+  -webkit-appearance: none;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+/* Stripe takes a moment to answer. The label swaps in place and the geometry is
+   untouched, so nothing on the page moves while it waits. */
+.sp-card.is-loading,
+.sp-banner.is-loading {
+  cursor: progress;
+  animation: sp-loading 1.2s ease-in-out infinite;
+}
+
+@keyframes sp-loading {
+  50% {
+    opacity: 0.55;
+  }
+}
+
+/* --tint arrives as "r, g, b" from the sponsor's icon, validated server-side.
+   Every state renders at the same fixed size. */
+.sp-card {
+  display: block;
+  width: 184px;
+  /* Tall enough for a full 60-character tagline: 154px of inner width at 12px
+     mono is 21 characters a line, and real taglines wrap to four of them.
+     Every variant shares this height — a rail whose cards differ looks broken. */
+  height: 151px;
+  padding: 14px;
+  border-radius: 6px;
+  overflow: hidden;
+  background: rgba(var(--tint, 51, 230, 103), 0.1);
+  border: 1px solid rgba(var(--tint, 51, 230, 103), 0.35);
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.sp-card:hover {
+  border-color: rgba(var(--tint, 51, 230, 103), 0.65);
+  background: rgba(var(--tint, 51, 230, 103), 0.15);
+}
+
+.sp-card.open,
+.sp-card.soldout,
+.sp-card.reserved {
+  background: var(--surface);
+  border: 1px dashed var(--border);
+}
+
+.sp-card.open:hover,
+.sp-card.soldout:hover,
+.sp-card.reserved:hover {
+  background: var(--surface-2);
+  border-color: var(--muted);
+}
+
+.sp-icon {
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  overflow: hidden;
+  background: rgba(var(--tint, 51, 230, 103), 0.18);
+  animation: sp-breathe 3s ease-in-out infinite;
+  animation-delay: calc(var(--i, 0) * 0.4s);
+}
+
+/* Hovering means they're already looking — stop asking for attention. */
+.sp-card:hover .sp-icon,
+.sp-banner:hover .sp-icon {
+  animation-play-state: paused;
+}
+
+@keyframes sp-breathe {
+  50% {
+    transform: scale(1.06);
+  }
+}
+
+.sp-card .sp-name {
+  display: block;
+  padding-top: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 17px;
+  color: var(--fg);
+}
+
+.sp-card .sp-tag {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  overflow: hidden;
+  /* A single unbreakable word longer than the line would otherwise spill. */
+  overflow-wrap: break-word;
+  padding-top: 2px;
+  font-size: 12px;
+  line-height: 17px;
+  color: var(--muted);
+}
+
+.sp-card .sp-label {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  color: var(--muted);
+}
+
+.sp-card .sp-price {
+  display: block;
+  padding-top: 12px;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.sp-card .sp-per {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--muted);
+}
+
+.sp-card .sp-cta {
+  display: block;
+  padding-top: 8px;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--fg);
+}
+
+/* ---------- sponsor rails ---------- */
+
+/* Rails need room beside the 1120px column; narrower viewports use the
+   in-list banners instead. */
+.sp-rail {
+  display: none;
+}
+
+@media (min-width: 1560px) {
+  .sp-rail {
+    display: flex;
+    flex-direction: column;
+    /* 10px not 12px: keeps the all-taken case (3 cards + the sold-out card)
+       inside an 800px-tall viewport now the cards are taller. */
+    gap: 10px;
+    position: fixed;
+    top: 76px;
+    width: 184px;
+    z-index: 40;
+  }
+
+  .sp-left {
+    left: 16px;
+  }
+
+  .sp-right {
+    right: 16px;
+  }
+
+  .sp-banner {
+    display: none !important;
+  }
+}
+
+/* ---------- sponsor banners ---------- */
+
+.sp-banner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 64px;
+  padding: 0 14px;
+  margin: 10px 0;
+  border-radius: 6px;
+  background: rgba(var(--tint, 51, 230, 103), 0.1);
+  border: 1px solid rgba(var(--tint, 51, 230, 103), 0.35);
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.sp-banner:hover {
+  border-color: rgba(var(--tint, 51, 230, 103), 0.65);
+}
+
+.sp-banner.open,
+.sp-banner.soldout,
+.sp-banner.reserved {
+  background: var(--surface);
+  border: 1px dashed var(--border);
+}
+
+.sp-banner.open:hover,
+.sp-banner.soldout:hover,
+.sp-banner.reserved:hover {
+  border-color: var(--muted);
+}
+
+.sp-banner .sp-icon {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+}
+
+.sp-banner .sp-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.sp-banner .sp-name {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--fg);
+}
+
+.sp-banner .sp-tag {
+  display: block;
+  font-size: 11px;
+  line-height: 16px;
+  color: var(--muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sp-banner .sp-arrow {
+  color: var(--muted);
+  flex-shrink: 0;
+}
+
+/* ---------- /sponsor ---------- */
+
+.sponsor-page {
+  padding-bottom: 90px;
+}
+
+.sp-hero {
+  padding-top: 54px;
+}
+
+.sp-hero h1 {
+  font-size: clamp(32px, 6vw, 52px);
+}
+
+.sp-hero .sub {
+  padding-top: 16px;
+  max-width: 62ch;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.sp-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  padding-top: 24px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.sp-stats b {
+  color: var(--fg);
+}
+
+.sp-notice {
+  margin-top: 22px;
+  border: 1px solid var(--border);
+  border-left: 2px solid var(--kinda-bg);
+  border-radius: 8px;
+  background: var(--surface);
+  padding: 12px 16px;
+  font-size: 13px;
+}
+
+.sp-board,
+.sp-how {
+  padding-top: 48px;
+}
+
+.sp-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  padding-top: 18px;
+}
+
+.sp-slot {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  height: 148px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface);
+  padding: 16px 18px;
+}
+
+.sp-slot.open {
+  border-color: var(--primary-dim);
+}
+
+.sp-slot-price {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.sp-slot .sp-per {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--muted);
+}
+
+.sp-slot-taken {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.sp-slot-note {
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.sp-slot form {
+  margin-top: auto;
+}
+
+.sp-slot .btn {
+  width: 100%;
+  justify-content: center;
+  padding: 11px 14px;
+  font-size: 13.5px;
+}
+
+.sp-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  padding-top: 18px;
+}
+
+.sp-step {
+  border-left: 2px solid var(--primary);
+  padding-left: 16px;
+}
+
+.sp-step-n {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  color: var(--primary);
+}
+
+.sp-step-head {
+  display: block;
+  padding-top: 8px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.sp-step p {
+  padding-top: 8px;
+  font-size: 13px;
+  line-height: 1.75;
+  color: var(--muted);
+}
+
+.sp-notify {
+  padding-top: 56px;
+}
+
+.sp-notify .sub {
+  padding-top: 10px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.sp-notify form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding-top: 16px;
+  width: min(520px, 100%);
+}
+
+.sp-terms {
+  padding-top: 52px;
+}
+
+.sp-terms p {
+  padding-top: 10px;
+  max-width: 76ch;
+  font-size: 12.5px;
+  line-height: 1.85;
+  color: var(--muted);
+}
+
+.sp-terms a {
+  color: var(--primary);
+}
+
+/* ---------- /sponsor/details ---------- */
+
+.sp-form-wrap {
+  padding-top: 30px;
+}
+
+.sp-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: min(520px, 100%);
+}
+
+.sp-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.sp-form .sp-count {
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.sp-form input[type='text'],
+.sp-form input[type='url'],
+.sp-notify input[type='email'],
+.admin input[type='text'],
+.admin input[type='url'],
+.admin input[type='number'] {
+  flex: 1;
+  min-width: 0;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  padding: 12px 16px;
+  color: var(--fg);
+  font: inherit;
+  font-size: 13.5px;
+  transition: border-color 0.15s ease;
+}
+
+.sp-form input:focus,
+.sp-notify input:focus,
+.admin input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+/* Chrome paints autofilled fields its own pale blue and ignores `background`
+   entirely; a huge inset shadow is the only thing that covers it. var(--bg)
+   keeps it identical to a normal field in both themes. */
+.sp-form input:-webkit-autofill,
+.sp-form input:-webkit-autofill:hover,
+.sp-form input:-webkit-autofill:focus,
+.sp-notify input:-webkit-autofill,
+.sp-notify input:-webkit-autofill:hover,
+.sp-notify input:-webkit-autofill:focus,
+.admin input:-webkit-autofill,
+.admin input:-webkit-autofill:hover,
+.admin input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px var(--bg) inset;
+  box-shadow: 0 0 0 1000px var(--bg) inset;
+  -webkit-text-fill-color: var(--fg);
+  caret-color: var(--fg);
+}
+
+.sp-color-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sp-form input[type='color'] {
+  width: 46px;
+  height: 34px;
+  flex: 0 0 auto;
+  padding: 3px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.sp-color-hint {
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.sp-preview-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sp-preview .sp-card {
+  cursor: default;
+}
+
+/* The decide page puts the card straight under its heading. */
+.admin .sp-preview {
+  padding-top: 16px;
+}
+
+.sp-form-msg {
+  font-size: 13px;
+  min-height: 20px;
+}
+
+.sp-form-msg.ok {
+  color: var(--primary);
+}
+
+.sp-form-msg.bad {
+  color: var(--no-bg);
+}
+
+.sp-form .btn {
+  align-self: flex-start;
+}
+
+.sp-form .fine {
+  font: 11.5px/1.6 var(--font-mono);
+  color: var(--muted);
+}
+
+/* ---------- sponsor admin (phone-first: Rob approves from a train) ---------- */
+
+.admin {
+  padding-top: 30px;
+  padding-bottom: 90px;
+}
+
+.admin-msg {
+  margin-top: 16px;
+  border: 1px solid var(--primary-dim);
+  border-radius: 8px;
+  background: var(--surface);
+  padding: 12px 16px;
+  font-size: 13px;
+}
+
+.admin-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+  padding: 18px 0 14px;
+}
+
+.admin-card,
+.admin-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface);
+  padding: 14px 16px;
+}
+
+.admin-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 18px;
+}
+
+.admin-strong {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.admin-sub {
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--muted);
+  word-break: break-word;
+}
+
+.admin-card form,
+.admin-edit {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.admin-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding-top: 4px;
+}
+
+.admin .btn {
+  padding: 11px 16px;
+  font-size: 13.5px;
+}
+
+.admin input {
+  width: 100%;
+}
+
+@media (min-width: 560px) {
+  .admin-card input[type='number'] {
+    width: 110px;
+  }
+
+  .admin-edit input {
+    width: auto;
+  }
+}
+
+@media (max-width: 760px) {
+  .sp-grid,
+  .sp-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .sp-slot {
+    height: auto;
+    min-height: 132px;
+  }
+
+  .sp-notify input[type='email'] {
+    flex-basis: 100%;
+  }
+
+  .sp-notify .btn.primary {
+    flex: 1;
+    justify-content: center;
+  }
+}
+
+/* ---------- light mode: white canvas ---------- */
+
+/* With bg and surface both white, hovers need the well tone instead. */
+[data-theme='light'] a.row:hover {
+  background: var(--surface-2);
+}
+
+/* Controls get a solid white face and a hairline shadow so they read as
+   raised buttons rather than outlines drawn on the page. */
+[data-theme='light'] .site-nav .gh,
+[data-theme='light'] .theme-toggle,
+[data-theme='light'] .chip:not(.active),
+[data-theme='light'] .vchip:not(.active),
+[data-theme='light'] .btn.ghost {
+  background: #ffffff;
+  box-shadow: 0 1px 2px rgba(23, 26, 23, 0.06);
+}
+
+/* Elevated overlays sit on a white page — never darker than the canvas. */
+[data-theme='light'] .toast,
+[data-theme='light'] .chart-tip,
+[data-theme='light'] .digest-bar {
+  background: #ffffff;
 }
 
 @media (prefers-reduced-motion: reduce) {

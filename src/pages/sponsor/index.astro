@@ -1,0 +1,145 @@
+---
+import Base from '../../layouts/Base.astro';
+import { allApps } from '../../lib/apps.js';
+import { getBoard, RUN_DAYS, shortDate, usd } from '../../lib/sponsors.js';
+
+const board = await getBoard();
+const apps = allApps();
+const notice = Astro.url.searchParams.get('error') || Astro.url.searchParams.get('msg') || '';
+
+const title = 'Sponsor canivibecodeit — six slots, one price, no sales call';
+const description =
+  'Six sponsor slots on the death list. Buy 30 days in one click, no contract, no account manager. Sponsorship never touches a verdict.';
+
+const steps = [
+  {
+    head: 'pick a slot and pay',
+    body: 'one click to Stripe. no account, no call, no contract. the slot is held while you check out.',
+  },
+  {
+    head: 'tell us who you are',
+    body: `name, one line, and your link — straight after payment. takes a minute. we grab your icon automatically.`,
+  },
+  {
+    head: 'we approve it, then it runs',
+    body: `${RUN_DAYS} days from the moment it goes live, not from the moment you paid. rejected? full refund, same day.`,
+  },
+];
+---
+
+<Base {title} {description}>
+  <main class="wrap sponsor-page">
+    <section class="sp-hero">
+      <h1>Sponsor canivibecodeit.</h1>
+      <p class="sub">
+        Six slots. People land here to cancel something — which makes it a strange and
+        very good place to be the thing they keep.
+      </p>
+      <div class="sp-stats">
+        <span><b>15,000</b> pageviews in the first 15 hours</span>
+        <span><b>{apps.length}</b> apps on the list</span>
+        <span><b>devs & founders</b> — people who buy tools</span>
+        <span><b>{board.openCount}/6</b> slots open</span>
+      </div>
+    </section>
+
+    {notice && <p class="sp-notice">{notice}</p>}
+
+    <section class="sp-board" id="slots">
+      <div class="list-head">
+        <h2>The slots</h2>
+        <span class="note">prices differ per slot · they change between months</span>
+      </div>
+      <div class="sp-grid">
+        {
+          board.slots.map((slot) => (
+            <div class={`sp-slot ${slot.state}`} data-slot={slot.id}>
+              <span class="microlabel">
+                slot {slot.id} · {slot.side} rail
+              </span>
+              {slot.state === 'open' ? (
+                <>
+                  <span class="sp-slot-price">
+                    {usd(slot.priceCents)}
+                    <span class="sp-per">/{RUN_DAYS} days</span>
+                  </span>
+                  <form method="post" action="/api/sponsor/checkout" data-checkout>
+                    <input type="hidden" name="slot" value={slot.id} />
+                    <button class="btn primary" type="submit" data-price={slot.priceCents}>
+                      take this slot →
+                    </button>
+                  </form>
+                </>
+              ) : slot.state === 'live' ? (
+                <>
+                  <span class="sp-slot-taken">{slot.sponsor.name}</span>
+                  <span class="sp-slot-note">taken until {shortDate(slot.endsAt)}</span>
+                </>
+              ) : (
+                <>
+                  <span class="sp-slot-taken">reserved</span>
+                  <span class="sp-slot-note">someone is mid-checkout or waiting on approval</span>
+                </>
+              )}
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="sp-how">
+      <div class="list-head">
+        <h2>How it works</h2>
+        <span class="note">about four minutes, end to end</span>
+      </div>
+      <div class="sp-steps">
+        {
+          steps.map((s, i) => (
+            <div class="sp-step">
+              <span class="sp-step-n">0{i + 1}</span>
+              <span class="sp-step-head">{s.head}</span>
+              <p>{s.body}</p>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="sp-notify" id="notify">
+      <h2>Nothing open?</h2>
+      <p class="sub">
+        Leave your email — slot openings land in the weekly digest, along with the week's
+        verdicts. One-click unsubscribe.
+      </p>
+      <form method="post" action="/api/waitlist" data-digest>
+        <label class="hp" aria-hidden="true">
+          Leave this empty <input type="text" name="website" tabindex="-1" autocomplete="off" />
+        </label>
+        <input type="hidden" name="source" value="sponsor" />
+        <input
+          type="email"
+          name="email"
+          required
+          placeholder="you@yourcompany.com"
+          aria-label="Email address"
+        />
+        <button class="btn primary" type="submit">tell me when one opens</button>
+      </form>
+    </section>
+
+    <section class="sp-terms">
+      <span class="microlabel">the boring part</span>
+      <p>
+        What you're buying is one month of placement, bought once — {RUN_DAYS} days in one slot,
+        starting when the placement is approved. It is not a subscription and it does not
+        renew itself; when it ends, it ends, and you're welcome to buy it again at whatever
+        the price is then. Prices are set per slot and change between months.
+        Sponsorship never touches a verdict, a ranking, or a prompt — not yours, not your
+        competitor's, and the answer to "can I vibecode it" stays whatever it was.
+        Every placement is approved by hand, so anything we won't run gets a full refund,
+        usually the same day. Questions, or something weird:
+        <a href="mailto:hello@canivibecodeit.com?subject=Sponsoring%20canivibecodeit.com">hello@canivibecodeit.com</a>.
+      </p>
+    </section>
+  </main>
+</Base>

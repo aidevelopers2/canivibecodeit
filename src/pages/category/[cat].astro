@@ -2,7 +2,9 @@
 import Base from '../../layouts/Base.astro';
 import AppRow from '../../components/AppRow.astro';
 import DigestCard from '../../components/DigestCard.astro';
+import SponsorBanner from '../../components/SponsorBanner.astro';
 import { appsByCategory, categoriesInUse, CATEGORIES } from '../../lib/apps.js';
+import { bannerSlots } from '../../lib/sponsors.js';
 import { voteCounts } from '../../lib/db.js';
 
 const { cat } = Astro.params;
@@ -14,6 +16,7 @@ const apps = appsByCategory(cat).sort((a, b) => votes(b.slug) - votes(a.slug));
 if (apps.length === 0) return new Response(null, { status: 404 });
 
 const cats = categoriesInUse();
+const banners = bannerSlots(apps.length);
 const title = `Vibecode your ${meta.label.toLowerCase()} subscription — Can I Vibecode It?`;
 const description = `${meta.label} apps ranked by how replaceable they are with one AI prompt: ${apps
   .map((a) => a.name)
@@ -72,7 +75,14 @@ const jsonld = [
       <span class="c-votes">replaced it</span>
     </div>
     <div id="rows">
-      {apps.map((app, i) => <AppRow {app} rank={i + 1} votes={votes(app.slug)} />)}
+      {
+        apps.map((app, i) => (
+          <Fragment>
+            <AppRow {app} rank={i + 1} votes={votes(app.slug)} />
+            {banners.has(i) && <SponsorBanner index={banners.get(i)} />}
+          </Fragment>
+        ))
+      }
     </div>
   </main>
 

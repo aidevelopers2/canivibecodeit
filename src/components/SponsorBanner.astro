@@ -1,0 +1,74 @@
+---
+import { faviconUrl, getBoard, shortDate, tintChannels, usd, withUtm } from '../lib/sponsors.js';
+
+// The rails don't render below 1560px; these sit between list rows instead.
+// `index` cycles the live sponsors so each banner shows a different one.
+const { index = 0 } = Astro.props;
+const board = await getBoard();
+const slot = board.live.length ? board.live[index % board.live.length] : null;
+const cheapest = board.open.length
+  ? board.open.reduce((a, b) => (b.priceCents < a.priceCents ? b : a))
+  : null;
+const sponsor = slot?.sponsor;
+const icon = sponsor ? sponsor.logoUrl || faviconUrl(sponsor.url) : '';
+---
+
+{
+  sponsor ? (
+    <a
+      class="sp-banner live"
+      href={withUtm(sponsor.url)}
+      target="_blank"
+      rel="sponsored noopener"
+      style={`--tint: ${tintChannels(sponsor.tint)}; --i: ${index}`}
+      data-slot={slot.id}
+      data-state="live"
+    >
+      <span class="sp-icon">
+        {icon && <img src={icon} alt="" width="28" height="28" loading="lazy" />}
+      </span>
+      <span class="sp-text">
+        <span class="sp-name">{sponsor.name}</span>
+        <span class="sp-tag">{sponsor.tagline}</span>
+      </span>
+      <span class="sp-arrow">→</span>
+    </a>
+  ) : cheapest ? (
+    <form class="sp-checkout-form" method="post" action="/api/sponsor/checkout" data-checkout>
+      <input type="hidden" name="slot" value={cheapest.id} />
+      <button
+        class="sp-banner open"
+        type="submit"
+        data-slot={cheapest.id}
+        data-state="open"
+        data-price={cheapest.priceCents}
+      >
+        <span class="sp-text">
+          <span class="sp-name">your product here — {usd(cheapest.priceCents)}/30 days</span>
+          <span class="sp-tag">read by people cancelling subscriptions all day</span>
+        </span>
+        <span class="sp-arrow">→</span>
+      </button>
+    </form>
+  ) : board.reserved.length > 0 ? (
+    <a class="sp-banner reserved" href="/sponsor" data-state="reserved">
+      <span class="sp-text">
+        <span class="sp-name">sponsor slots reserved</span>
+        <span class="sp-tag">someone's grabbing them — check back soon</span>
+      </span>
+      <span class="sp-arrow">→</span>
+    </a>
+  ) : (
+    <a class="sp-banner soldout" href="/sponsor#notify" data-state="soldout">
+      <span class="sp-text">
+        <span class="sp-name">6/6 sponsor slots taken</span>
+        <span class="sp-tag">
+          {board.nextOpen
+            ? `next opens ${shortDate(board.nextOpen.at)} at ${usd(board.nextOpen.priceCents)} — get notified`
+            : 'get told when one opens'}
+        </span>
+      </span>
+      <span class="sp-arrow">→</span>
+    </a>
+  )
+}
