@@ -4,7 +4,7 @@ import VerdictBadge from '../components/VerdictBadge.astro';
 import DigestCard from '../components/DigestCard.astro';
 import DigestReveal from '../components/DigestReveal.astro';
 import SponsorBanner from '../components/SponsorBanner.astro';
-import { getApp, relatedApps, yearlySaving, CATEGORIES, VERDICTS, MOAT_TAGS } from '../lib/apps.js';
+import { getApp, relatedApps, yearlySaving, CATEGORIES, VERDICTS, MOAT_TAGS, MOAT_TAG_EMOJI } from '../lib/apps.js';
 import { voteCount, voteCounts } from '../lib/db.js';
 
 const { slug } = Astro.params;
@@ -17,10 +17,9 @@ const cat = CATEGORIES[app.category];
 const v = VERDICTS[app.verdict];
 const saving = yearlySaving(app);
 
-const moat = (app.moatTags ?? [])
-  .map((t) => MOAT_TAGS[t])
-  .filter(Boolean)
-  .join(' · ');
+const moats = (app.moatTags ?? [])
+  .filter((t) => MOAT_TAGS[t])
+  .map((t) => ({ tag: t, label: MOAT_TAGS[t], emoji: MOAT_TAG_EMOJI[t] }));
 
 const verdictWord = { yes: 'YES', kinda: 'KINDA', no: 'NOT REALLY' }[app.verdict];
 const priceLine =
@@ -119,6 +118,19 @@ const tweet = encodeURIComponent(
     </div>
 
     {
+      moats.length > 0 && (
+        <nav class="moat-chips chips" aria-label="Moats">
+          <span class="microlabel">moat</span>
+          {moats.map((m) => (
+            <a class="chip" href={`/moat/${m.tag}`}>
+              {m.emoji} {m.label}
+            </a>
+          ))}
+        </nav>
+      )
+    }
+
+    {
       app.verdictSummary && (
         <p style="padding-top: 22px; font-size: 14.5px; line-height: 1.7; color: var(--muted); max-width: 76ch;">
           {app.verdictSummary}
@@ -185,9 +197,7 @@ const tweet = encodeURIComponent(
     {
       app.whyPeopleStillPay && (
         <section style="padding-top: 44px;">
-          <span class="microlabel">
-            why people still pay{moat ? ` · moat: ${moat}` : ''}
-          </span>
+          <span class="microlabel">why people still pay</span>
           <p style="padding-top: 12px; font-size: 14px; line-height: 1.7; color: var(--fg); max-width: 76ch;">
             {app.whyPeopleStillPay}
           </p>
@@ -275,3 +285,15 @@ const tweet = encodeURIComponent(
 
   <DigestCard source="app" />
 </Base>
+
+<style>
+  .moat-chips {
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 18px;
+  }
+
+  .moat-chips .microlabel {
+    margin-right: 3px;
+  }
+</style>

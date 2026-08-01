@@ -1,0 +1,206 @@
+---
+import Base from '../layouts/Base.astro';
+import { allApps, moatsInUse, MOAT_TAG_DESCS } from '../lib/apps.js';
+
+const moats = moatsInUse();
+const apps = allApps();
+const total = apps.length;
+const polish = apps.filter((a) => (a.moatTags ?? []).includes('execution-polish')).length;
+const onlyPolish = apps.filter(
+  (a) => (a.moatTags ?? []).length === 1 && a.moatTags[0] === 'execution-polish'
+).length;
+const pct = (n) => Math.round((n / total) * 100);
+
+const title = 'Moats — why the surviving apps survive — Can I Vibecode It?';
+const description = `What actually defends ${total} subscription apps against one AI prompt: ${polish} of them lean on execution polish, the moat AI erodes, and ${onlyPolish} have nothing structural left at all.`;
+
+const jsonld = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'The Death List', item: 'https://canivibecodeit.com/' },
+      { '@type': 'ListItem', position: 2, name: 'Moats', item: 'https://canivibecodeit.com/moats' },
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Moats — why SaaS apps survive one AI prompt',
+    itemListElement: moats.map((m, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: m.label,
+      url: `https://canivibecodeit.com/moat/${m.tag}`,
+    })),
+  },
+];
+---
+
+<Base {title} {description} {jsonld}>
+  <main class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="/">the death list</a> / <span class="here">moats</span>
+    </nav>
+
+    <div class="list-head" style="padding-top: 20px;">
+      <h2>🏰 Moats</h2>
+      <span class="note">{total} apps · {moats.length} moats</span>
+    </div>
+
+    <p class="moat-intro">
+      Code stopped being a moat. Every app here is tagged with what's left holding it
+      up — 1 to 3 tags, strongest first.
+    </p>
+
+    <div class="moat-stat">
+      <div class="ms-fig">
+        <span class="ms-num">{polish}</span>
+        <span class="ms-def">
+          of {total} apps ({pct(polish)}%) lean on execution polish — the moat AI erodes
+        </span>
+      </div>
+      <div class="ms-fig">
+        <span class="ms-num">{onlyPolish}</span>
+        <span class="ms-def">
+          ({pct(onlyPolish)}%) have nothing else: polish is the entire defence
+        </span>
+      </div>
+    </div>
+
+    <div class="moat-list">
+      {
+        moats.map((m) => (
+          <a class="moat-row" href={`/moat/${m.tag}`}>
+            <span class="mr-name">{m.emoji} {m.label}</span>
+            <span class="mr-def">{MOAT_TAG_DESCS[m.tag]}</span>
+            <span class="mr-meta">{m.count} {m.count === 1 ? 'app' : 'apps'} →</span>
+          </a>
+        ))
+      }
+    </div>
+
+    <p class="moat-foot">
+      Tags are part of the dataset, so they get argued about in public ·
+      <a href="https://github.com/canivibecodeit/canivibecodeit/blob/main/CONTRIBUTING.md">
+        the definitions live in the repo ↗
+      </a>
+    </p>
+  </main>
+</Base>
+
+<style>
+  .moat-intro {
+    padding-top: 14px;
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: var(--muted);
+    max-width: 76ch;
+  }
+
+  .moat-stat {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    padding-top: 24px;
+  }
+
+  .ms-fig {
+    flex: 1 1 260px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 18px;
+    background: var(--surface);
+  }
+
+  .ms-num {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 30px;
+    color: var(--primary);
+  }
+
+  .ms-def {
+    display: block;
+    padding-top: 6px;
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--muted);
+  }
+
+  .moat-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 28px;
+  }
+
+  .moat-row {
+    display: grid;
+    grid-template-columns: 220px 1fr auto;
+    align-items: baseline;
+    gap: 16px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 16px;
+    transition: border-color 0.15s ease, transform 0.15s var(--ease-out),
+      box-shadow 0.2s ease;
+  }
+
+  .moat-row:hover {
+    border-color: var(--muted);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+  }
+
+  .mr-name {
+    font-size: 14.5px;
+    font-weight: 500;
+  }
+
+  .mr-def {
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--muted);
+  }
+
+  .mr-meta {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+
+  .moat-row:hover .mr-meta {
+    color: var(--primary);
+  }
+
+  .moat-foot {
+    padding: 34px 0 0;
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  .moat-foot a {
+    color: var(--primary);
+  }
+
+  @media (max-width: 760px) {
+    .moat-row {
+      grid-template-columns: 1fr auto;
+      gap: 6px 12px;
+    }
+
+    .mr-name {
+      grid-column: 1;
+    }
+
+    .mr-meta {
+      grid-column: 2;
+    }
+
+    .mr-def {
+      grid-column: 1 / -1;
+    }
+  }
+</style>

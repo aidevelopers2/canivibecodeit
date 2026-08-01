@@ -1,4 +1,4 @@
-import { allApps, categoriesInUse } from '../lib/apps.js';
+import { allApps, categoriesInUse, moatsInUse } from '../lib/apps.js';
 
 export async function GET() {
   const base = 'https://canivibecodeit.com';
@@ -7,6 +7,8 @@ export async function GET() {
     ...allApps().map((a) => `${base}/${a.slug}`),
     ...categoriesInUse().map((c) => `${base}/category/${c.slug}`),
     `${base}/categories`,
+    ...moatsInUse().map((m) => `${base}/moat/${m.tag}`),
+    `${base}/moats`,
     `${base}/stats`,
     `${base}/vibecode-this-site`,
   ];

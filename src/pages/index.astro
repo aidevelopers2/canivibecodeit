@@ -55,7 +55,9 @@ const jsonld = [
 <Base {title} {description} {jsonld}>
   <section class="hero">
     <h1>Can I vibecode <span class="blank">___</span>?</h1>
-    <p class="sub">Some subscriptions are businesses. Some are just a prompt.</p>
+    <p class="sub">
+      {apps.length} apps. One question each: can AI replace it, or does a real moat keep it alive?
+    </p>
     <div class="search-wrap">
       <div class="search">
         <span class="chevron">&gt;</span>
@@ -78,15 +80,20 @@ const jsonld = [
       <a href="https://github.com/canivibecodeit/canivibecodeit/blob/main/CONTRIBUTING.md">submit it as a PR ↗</a>
       <span class="miss-note">verdicts are added daily · thousands more on the way</span>
     </p>
-    <nav class="chips" id="chips" aria-label="Categories">
-      <a class="chip active" href="/" data-cat="">⚡ all</a>
-      {
-        cats.map((c) => (
-          <a class="chip" href={`/category/${c.slug}`} data-cat={c.slug}>
-            {c.emoji} {c.label.toLowerCase()}
-          </a>
-        ))
-      }
+    <nav class="chips" aria-label="Categories">
+      {/* #chips holds only the filtering chips: clicks inside it filter in place
+          instead of navigating, so the links out sit outside the group. */}
+      <span id="chips" style="display: contents;">
+        <a class="chip active" href="/" data-cat="">⚡ all</a>
+        {
+          cats.map((c) => (
+            <a class="chip" href={`/category/${c.slug}`} data-cat={c.slug}>
+              {c.emoji} {c.label.toLowerCase()}
+            </a>
+          ))
+        }
+      </span>
+      <a class="chip" href="/moats">🏰 moats</a>
       <a class="chip" href="/categories">all categories →</a>
     </nav>
   </section>

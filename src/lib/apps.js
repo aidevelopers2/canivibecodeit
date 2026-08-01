@@ -101,6 +101,72 @@ export const MOAT_TAGS = {
   'execution-polish': 'execution polish',
 };
 
+// One icon per moat tag, the way categories have one. No per-tag colours —
+// colour on this site means verdict.
+export const MOAT_TAG_EMOJI = {
+  'network-effects': '🕸️',
+  'marketplace-liquidity': '🏪',
+  'proprietary-data': '💎',
+  'proprietary-models': '🧠',
+  'switching-costs': '⛓️',
+  'integrations': '🔌',
+  'compliance-regulatory': '🏛️',
+  'brand-trust': '🛡️',
+  'scale-infra': '🏗️',
+  'hardware': '🔩',
+  'collaboration': '👥',
+  'content-rights': '🎟️',
+  'execution-polish': '💅',
+};
+
+// What the tag means, in one line. Adapted from the definitions in
+// CONTRIBUTING.md, which stay the contributor-facing source.
+export const MOAT_TAG_DESCS = {
+  'network-effects': "It's better because other people are already on it: graphs, communities, audiences.",
+  'marketplace-liquidity': 'Two sides that need each other, and both of them showed up.',
+  'proprietary-data': "Data you can't rebuild: indexes, crawls, live feeds, archives, maps.",
+  'proprietary-models': 'Custom-trained or frontier models, plus the compute and inference behind them.',
+  'switching-costs': 'Your own accumulated history, config and habits make leaving painful.',
+  'integrations': 'Connector breadth, and the endless upkeep that keeps every connector working.',
+  'compliance-regulatory': 'Regulated ground: licensing, payroll, tax, KYC, HIPAA, real legal exposure.',
+  'brand-trust': "People pay because it's this vendor, and nobody got fired for that.",
+  'scale-infra': "Infrastructure one person can't match: global hosting, deliverability, uptime, media pipelines.",
+  'hardware': "Physical devices, or data only the vendor's hardware produces.",
+  'collaboration': 'It only pays off once the whole team is in it: shared editing, presence, permissions.',
+  'content-rights': 'Licensed content, media rights, curriculum, template and asset libraries.',
+  'execution-polish': 'Polish, reliability, sync quality, import fidelity — execution, not structure.',
+};
+
+// "Want this moat? build here" — one line per tag, for the tag pages.
+export const MOAT_TAG_BUILD_NOTES = {
+  'network-effects':
+    'Brutal to start and brutal to kill: nobody wants the empty room, but once it fills nobody catches you by shipping features faster.',
+  'marketplace-liquidity':
+    'The hardest cold start there is — you need both sides at once, which is exactly why so few tools ever get here.',
+  'proprietary-data':
+    "Go get data nobody else has, by collecting it or licensing it, because no model hallucinates a dataset into existence.",
+  'proprietary-models':
+    "Capital-intensive and mostly not yours to win: build on top of someone else's models rather than trying to out-train them.",
+  'switching-costs':
+    'Be where the history piles up — the export button matters less than the year of habits nobody wants to redo.',
+  'integrations':
+    'Boring, maintenance-heavy, durable: every connector you own is one more thing a weekend clone has to build and then keep alive.',
+  'compliance-regulatory':
+    "The paperwork is the product — licences, audits and liability don't care how fast you can generate code.",
+  'brand-trust':
+    "Takes years and can't be prompted, which is why the boring vendor keeps winning the deal.",
+  'scale-infra':
+    "Worth it only when the hard part is genuinely operational — deliverability, uptime, media pipelines — otherwise you're reselling AWS at a markup.",
+  'hardware':
+    "Atoms don't autocomplete: the moat is real, and manufacturing is the entry fee.",
+  'collaboration':
+    'Build for the team, not the person — one user can walk, a whole team almost never does at once.',
+  'content-rights':
+    'The licence is the moat, not the player around it, so go negotiate for the catalogue or pick another fight.',
+  'execution-polish':
+    "Don't build here: polish is what people pay for, and it's the thing AI now does for free.",
+};
+
 export const VERDICTS = {
   yes: { label: 'YES', sub: 'one-shottable', color: 'yes' },
   kinda: { label: 'KINDA', sub: 'weekend project', color: 'kinda' },
@@ -138,6 +204,21 @@ export function categoriesInUse() {
   return Object.entries(CATEGORIES)
     .filter(([slug]) => counts.has(slug))
     .map(([slug, meta]) => ({ slug, ...meta, count: counts.get(slug) }));
+}
+
+export function appsByMoat(tag) {
+  return allApps().filter((a) => (a.moatTags ?? []).includes(tag));
+}
+
+export function moatsInUse() {
+  const counts = new Map();
+  for (const a of allApps()) {
+    for (const t of a.moatTags ?? []) counts.set(t, (counts.get(t) ?? 0) + 1);
+  }
+  return Object.entries(MOAT_TAGS)
+    .filter(([tag]) => counts.has(tag))
+    .map(([tag, label]) => ({ tag, label, emoji: MOAT_TAG_EMOJI[tag], count: counts.get(tag) }))
+    .sort((a, b) => b.count - a.count);
 }
 
 export function topCategories(n = 11) {
