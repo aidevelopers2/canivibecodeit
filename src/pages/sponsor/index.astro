@@ -7,9 +7,9 @@ const board = await getBoard();
 const apps = allApps();
 const notice = Astro.url.searchParams.get('error') || Astro.url.searchParams.get('msg') || '';
 
-const title = 'Sponsor canivibecodeit — six slots, one price, no sales call';
+const title = 'Sponsor canivibecodeit — a few slots, one payment, no sales call';
 const description =
-  'Six sponsor slots on the death list. Buy 30 days in one click, no contract, no account manager. Sponsorship never touches a verdict.';
+  'Sponsor slots on the death list. Buy 30 days in one click, no contract, no account manager. Sponsorship never touches a verdict.';
 
 const steps = [
   {
@@ -32,15 +32,20 @@ const steps = [
     <section class="sp-hero">
       <h1>Sponsor canivibecodeit.</h1>
       <p class="sub">
-        Six slots. People land here to cancel something — which makes it a strange and
-        very good place to be the thing they keep.
+        {board.slots.length} slots. People land here to cancel something — which makes it a
+        strange and very good place to be the thing they keep.
       </p>
       <div class="sp-stats">
-        <span><b>15,000</b> pageviews in the first 15 hours</span>
+        <span><b>60,000+</b> views in the launch surge</span>
+        <span><b>15,000+</b> unique visitors in 72 hours</span>
         <span><b>{apps.length}</b> apps on the list</span>
         <span><b>devs & founders</b> — people who buy tools</span>
-        <span><b>{board.openCount}/6</b> slots open</span>
+        <span><b>{board.openCount}/{board.slots.length}</b> slots open</span>
       </div>
+      <p class="note sp-stats-note">
+        conservative reconstruction — our tracker dropped mid-surge, so the public
+        dashboard undercounts the launch. what it caught since: still climbing.
+      </p>
     </section>
 
     {notice && <p class="sp-notice">{notice}</p>}
