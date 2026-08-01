@@ -59,6 +59,13 @@ export async function createCheckoutSession({
     client_reference_id: purchaseId,
     metadata: { purchase_id: purchaseId, slot_id: slotId },
     payment_intent_data: { metadata: { purchase_id: purchaseId, slot_id: slotId } },
+    // Sponsors buy as businesses: let them enter a VAT/tax ID and company name,
+    // and have Stripe email a proper invoice PDF after payment (0.4% capped at
+    // $2 per invoice). The tax ID needs a Customer to live on.
+    tax_id_collection: { enabled: true },
+    billing_address_collection: 'required',
+    customer_creation: 'always',
+    invoice_creation: { enabled: true },
     line_items: [
       {
         quantity: 1,
