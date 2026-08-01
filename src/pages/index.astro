@@ -4,9 +4,7 @@ import Ticker from '../components/Ticker.astro';
 import AppRow from '../components/AppRow.astro';
 import StatsStrip from '../components/StatsStrip.astro';
 import DigestCard from '../components/DigestCard.astro';
-import SponsorBanner from '../components/SponsorBanner.astro';
 import { allApps, topCategories } from '../lib/apps.js';
-import { bannerSlots } from '../lib/sponsors.js';
 import { voteCounts } from '../lib/db.js';
 
 const votes = await voteCounts();
@@ -17,7 +15,6 @@ const apps = allApps().sort(
     a.name.localeCompare(b.name)
 );
 const cats = topCategories();
-const banners = bannerSlots(apps.length);
 
 const title = 'Can I Vibecode It? — Which subscriptions are one prompt away from free';
 const description =
@@ -142,7 +139,6 @@ const jsonld = [
         apps.map((app, i) => (
           <Fragment>
             <AppRow {app} rank={i + 1} votes={votes(app.slug)} />
-            {banners.has(i) && <SponsorBanner index={banners.get(i)} />}
             {i === 9 && <StatsStrip />}
           </Fragment>
         ))

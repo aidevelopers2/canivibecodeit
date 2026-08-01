@@ -3,7 +3,7 @@ import '@fontsource-variable/space-grotesk';
 import '@fontsource-variable/jetbrains-mono';
 import '../styles/global.css';
 import DigestBar from '../components/DigestBar.astro';
-import SponsorRails from '../components/SponsorRails.astro';
+import SponsorTape from '../components/SponsorTape.astro';
 
 const {
   title,
@@ -73,6 +73,7 @@ const blocks = [orgLd, ...jsonld];
     {!isPrivate && <script is:inline src="/analytics.js" defer></script>}
   </head>
   <body>
+    <SponsorTape side="left" />
     <header class="site-header">
       <div class="inner">
         <a class="brand" href="/" aria-label="Can I Vibecode It? home">
@@ -103,8 +104,6 @@ const blocks = [orgLd, ...jsonld];
 
     <slot />
 
-    <SponsorRails />
-
     <footer class="site-footer">
       <div class="inner">
       <span>
@@ -121,6 +120,8 @@ const blocks = [orgLd, ...jsonld];
       </div>
     </footer>
 
+    <div class="sp-tape-spacer"></div>
+    <SponsorTape side="right" />
     <DigestBar />
 
     <div class="toast" id="toast" role="status" aria-live="polite"></div>

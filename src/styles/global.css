@@ -1659,7 +1659,8 @@ a.row:hover .badge {
 
 .digest-bar {
   position: fixed;
-  bottom: 0;
+  /* Sits above the fixed bottom sponsor tape. */
+  bottom: 52px;
   left: 50%;
   z-index: 90;
   width: min(800px, calc(100vw - 32px));
@@ -2668,5 +2669,83 @@ button.sp-banner {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+/* ---------- sponsor tapes (top + bottom marquees) ---------- */
+
+.sp-tape {
+  overflow: hidden;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+
+.sp-tape.bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 60;
+  border-top: 1px solid var(--border);
+  border-bottom: none;
+}
+
+.sp-tape-track {
+  display: flex;
+  width: max-content;
+  animation: sp-tape-slide 70s linear infinite;
+}
+
+.sp-tape:hover .sp-tape-track {
+  animation-play-state: paused;
+}
+
+.sp-tape-half {
+  display: flex;
+}
+
+.sp-tape-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 22px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  white-space: nowrap;
+  color: var(--fg);
+  text-decoration: none;
+}
+
+.sp-tape-item img {
+  border-radius: 4px;
+}
+
+.sp-tape-item.open,
+.sp-tape-item.reserved {
+  color: var(--muted);
+}
+
+.sp-tape-item:hover span {
+  text-decoration: underline;
+}
+
+/* Keeps the fixed bottom tape off the footer. */
+.sp-tape-spacer {
+  height: 46px;
+}
+
+@keyframes sp-tape-slide {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sp-tape-track {
+    animation: none;
+  }
+
+  .sp-tape {
+    overflow-x: auto;
   }
 }

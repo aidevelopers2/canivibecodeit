@@ -1,0 +1,53 @@
+---
+import { faviconUrl, getBoard, usd, withUtm } from '../lib/sponsors.js';
+
+// Sponsor tape: a slow infinite marquee of icon + name, one at the top of the
+// page and one fixed at the bottom. Top tape carries the left-rail slots,
+// bottom tape the right-rail slots. Pure CSS: the track holds two identical
+// halves and slides -50%, so the loop never shows a seam.
+const { side = 'left' } = Astro.props;
+const board = await getBoard();
+const slots = side === 'left' ? board.left : board.right;
+// Enough copies per half that the tape outruns any viewport width.
+const half = Array.from({ length: 3 }, () => slots).flat();
+const pos = side === 'left' ? 'top' : 'bottom';
+---
+
+<aside class={`sp-tape ${pos}`} aria-label="Sponsors">
+  <div class="sp-tape-track">
+    {
+      [0, 1].map((copy) => (
+        <div class="sp-tape-half" aria-hidden={copy === 1 ? 'true' : undefined}>
+          {half.map((s) =>
+            s.state === 'live' ? (
+              <a
+                class="sp-tape-item live"
+                href={withUtm(s.sponsor.url)}
+                target="_blank"
+                rel="sponsored noopener"
+                data-slot={s.id}
+              >
+                <img
+                  src={s.sponsor.logoUrl || faviconUrl(s.sponsor.url)}
+                  alt=""
+                  width="20"
+                  height="20"
+                  loading="lazy"
+                />
+                <span>{s.sponsor.name}</span>
+              </a>
+            ) : s.state === 'open' ? (
+              <a class="sp-tape-item open" href="/sponsor" data-slot={s.id}>
+                <span>+ your product — {usd(s.priceCents)}/30 days</span>
+              </a>
+            ) : (
+              <a class="sp-tape-item reserved" href="/sponsor" data-slot={s.id}>
+                <span>reserved</span>
+              </a>
+            )
+          )}
+        </div>
+      ))
+    }
+  </div>
+</aside>
