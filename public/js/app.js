@@ -55,10 +55,10 @@
     if (miss) miss.classList.toggle('show', shown === 0 && (q.length > 0 || !!activeCat || !!activeVerdict));
     const count = $('#filter-count');
     if (count) count.textContent = shown === rows.length ? '' : `${shown} of ${rows.length}`;
-    // Someone mid-search is looking for one app; an ad wedged into the results
-    // is just noise. The banners come back when the filter clears.
+    // Someone mid-search is looking for one app; an ad or a stats panel wedged
+    // into the results is just noise. Both come back when the filter clears.
     const filtering = !!q || !!activeCat || !!activeVerdict;
-    $$('.sp-banner').forEach((b) => {
+    $$('.sp-banner, #stats-strip').forEach((b) => {
       b.style.display = filtering ? 'none' : '';
     });
   };

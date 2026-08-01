@@ -99,7 +99,6 @@ const jsonld = [
   </section>
 
   <Ticker />
-  <StatsStrip />
 
   <main class="wrap" id="death-list">
     <div class="list-head">
@@ -140,6 +139,7 @@ const jsonld = [
           <Fragment>
             <AppRow {app} rank={i + 1} votes={votes(app.slug)} />
             {banners.has(i) && <SponsorBanner index={banners.get(i)} />}
+            {i === 9 && <StatsStrip />}
           </Fragment>
         ))
       }

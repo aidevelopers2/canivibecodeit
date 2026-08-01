@@ -137,35 +137,6 @@ export const MOAT_TAG_DESCS = {
   'execution-polish': 'Polish, reliability, sync quality, import fidelity — execution, not structure.',
 };
 
-// "Want this moat? build here" — one line per tag, for the tag pages.
-export const MOAT_TAG_BUILD_NOTES = {
-  'network-effects':
-    'Brutal to start and brutal to kill: nobody wants the empty room, but once it fills nobody catches you by shipping features faster.',
-  'marketplace-liquidity':
-    'The hardest cold start there is — you need both sides at once, which is exactly why so few tools ever get here.',
-  'proprietary-data':
-    "Go get data nobody else has, by collecting it or licensing it, because no model hallucinates a dataset into existence.",
-  'proprietary-models':
-    "Capital-intensive and mostly not yours to win: build on top of someone else's models rather than trying to out-train them.",
-  'switching-costs':
-    'Be where the history piles up — the export button matters less than the year of habits nobody wants to redo.',
-  'integrations':
-    'Boring, maintenance-heavy, durable: every connector you own is one more thing a weekend clone has to build and then keep alive.',
-  'compliance-regulatory':
-    "The paperwork is the product — licences, audits and liability don't care how fast you can generate code.",
-  'brand-trust':
-    "Takes years and can't be prompted, which is why the boring vendor keeps winning the deal.",
-  'scale-infra':
-    "Worth it only when the hard part is genuinely operational — deliverability, uptime, media pipelines — otherwise you're reselling AWS at a markup.",
-  'hardware':
-    "Atoms don't autocomplete: the moat is real, and manufacturing is the entry fee.",
-  'collaboration':
-    'Build for the team, not the person — one user can walk, a whole team almost never does at once.',
-  'content-rights':
-    'The licence is the moat, not the player around it, so go negotiate for the catalogue or pick another fight.',
-  'execution-polish':
-    "Don't build here: polish is what people pay for, and it's the thing AI now does for free.",
-};
 
 export const VERDICTS = {
   yes: { label: 'YES', sub: 'one-shottable', color: 'yes' },

@@ -9,7 +9,6 @@ import {
   MOAT_TAGS,
   MOAT_TAG_EMOJI,
   MOAT_TAG_DESCS,
-  MOAT_TAG_BUILD_NOTES,
 } from '../../lib/apps.js';
 import { bannerSlots } from '../../lib/sponsors.js';
 import { voteCounts } from '../../lib/db.js';
@@ -63,10 +62,6 @@ const jsonld = [
     </div>
 
     <p class="moat-def">{MOAT_TAG_DESCS[tag]}</p>
-    <p class="moat-build">
-      <span class="microlabel">want this moat?</span>
-      {MOAT_TAG_BUILD_NOTES[tag]}
-    </p>
 
     <nav class="chips" style="justify-content: flex-start; padding-top: 18px;" aria-label="Moats">
       <a class="chip" href="/moats">🏰 all moats</a>
@@ -110,15 +105,4 @@ const jsonld = [
     max-width: 76ch;
   }
 
-  .moat-build {
-    padding-top: 10px;
-    font-size: 14.5px;
-    line-height: 1.7;
-    color: var(--fg);
-    max-width: 76ch;
-  }
-
-  .moat-build .microlabel {
-    margin-right: 8px;
-  }
 </style>
