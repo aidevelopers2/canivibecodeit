@@ -112,17 +112,21 @@ const jsonld = [
       <button class="vchip kinda" data-verdict="kinda">KINDA</button>
       <button class="vchip no" data-verdict="no">NOT REALLY</button>
       <span class="microlabel team-label">team of</span>
-      <input
-        type="number"
-        id="team-size"
-        class="team-size"
-        value="1"
-        min="1"
-        max="999"
-        step="1"
-        inputmode="numeric"
-        aria-label="Team size, recalculates per-seat prices"
-      />
+      <span class="team-stepper">
+        <button type="button" class="team-step" data-step="-1" aria-label="Smaller team">−</button>
+        <input
+          type="number"
+          id="team-size"
+          class="team-size"
+          value="1"
+          min="1"
+          max="999"
+          step="1"
+          inputmode="numeric"
+          aria-label="Team size, recalculates per-seat prices"
+        />
+        <button type="button" class="team-step" data-step="1" aria-label="Bigger team">+</button>
+      </span>
       <button class="vchip all" id="sort-toggle" data-sort="votes">sort: votes</button>
       <span class="note" id="filter-count"></span>
     </div>
@@ -154,28 +158,74 @@ const jsonld = [
     margin-left: 6px;
   }
 
+  /* The native number-input spinners don't match anything else on the page,
+     so the stepper owns the border and ships its own −/+ buttons. */
+  .team-stepper {
+    display: inline-flex;
+    align-items: stretch;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    overflow: hidden;
+    transition: border-color 0.15s ease;
+  }
+
+  .team-stepper:focus-within {
+    border-color: var(--primary);
+  }
+
+  .team-step {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 700;
+    width: 26px;
+    padding: 6px 0;
+    color: var(--muted);
+    transition: color 0.15s ease, background-color 0.15s ease;
+  }
+
+  .team-step:hover {
+    color: var(--fg);
+  }
+
+  .team-step:active {
+    transform: scale(0.9);
+  }
+
   .team-size {
     font-family: var(--font-mono);
     font-size: 12px;
-    width: 52px;
-    padding: 6px 8px;
-    border: 1px solid var(--border);
-    border-radius: 5px;
+    width: 34px;
+    padding: 6px 0;
+    border: 0;
+    border-left: 1px solid var(--border);
+    border-right: 1px solid var(--border);
     background: transparent;
     color: var(--fg);
     text-align: center;
+    appearance: textfield;
+    -moz-appearance: textfield;
+  }
+
+  .team-size::-webkit-outer-spin-button,
+  .team-size::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
   }
 
   .team-size:focus {
     outline: none;
-    border-color: var(--primary);
   }
 
   @media (max-width: 760px) {
     /* iOS zooms into any focused input with font-size below 16px */
     .team-size {
       font-size: 16px;
-      width: 62px;
+      width: 44px;
+    }
+
+    /* A finger needs more than 26px */
+    .team-step {
+      width: 34px;
     }
   }
 </style>

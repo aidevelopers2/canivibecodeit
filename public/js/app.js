@@ -139,6 +139,15 @@
       if (sortMode === 'spend') applySort();
     });
     teamInput.addEventListener('change', () => track('team_size', { size: teamSize() }));
+    // The −/+ buttons replace the native spinners; going through the input's
+    // own events keeps the price and sort listeners above as the only wiring.
+    $$('.team-step').forEach((btn) =>
+      btn.addEventListener('click', () => {
+        teamInput.value = String(Math.min(999, Math.max(1, teamSize() + Number(btn.dataset.step))));
+        teamInput.dispatchEvent(new Event('input'));
+        teamInput.dispatchEvent(new Event('change'));
+      })
+    );
   }
 
   sortBtn?.addEventListener('click', () => {
