@@ -143,10 +143,12 @@ const BANNER_EVERY = 8;
 const BANNER_MAX = 8;
 
 // row index → banner index, so the caller can cycle through the live sponsors.
+// The first banner sits after row 3: below 1560px the rails are hidden and the
+// in-list banners are the only sponsor surface, so one has to be above the fold.
 export function bannerSlots(rowCount) {
   const map = new Map();
   for (let n = 1; n <= BANNER_MAX; n++) {
-    const after = n * BANNER_EVERY - 1;
+    const after = (n - 1) * BANNER_EVERY + 2;
     if (after >= rowCount - 1) break;
     map.set(after, n - 1);
   }
