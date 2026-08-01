@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Creator",
     "basis": "monthly",
+    "unit": "flat",
     "native": "29 EUR",
     "source": "https://postfa.st/pricing",
     "checkedOn": "2026-07-31",
@@ -35,7 +36,11 @@
     "analytics, follower history, approval workflows, and per-client workspaces",
     "the hosted API, MCP server, and n8n/Zapier/Make integrations that let an agent post for you"
   ],
-  "moatType": "platform app review + video pipeline + integration upkeep",
+  "moatTags": [
+    "integrations",
+    "scale-infra"
+  ],
+  "moatNotes": "platform app review + video pipeline + integration upkeep",
   "whyPeopleStillPay": "Connecting Instagram or TikTok here is one click because the OAuth app behind it already passed Meta App Review, TikTok's audit, and Google's business verification, a process that takes weeks and that a solo builder often cannot qualify for at all. Video is the other half of the bill: each platform enforces its own container, codec, aspect ratio, duration, and size rules, so a working scheduler runs a real transcode pipeline with async jobs, retries, and honest failure states rather than one hopeful upload call. The subscription also absorbs the work that never finishes: tokens expiring, per-platform media rules changing, endpoints deprecating on someone else's schedule. Above that sits the part a rebuild would not reach anyway, which is cross-account analytics and follower history, approvals and workspaces for running client accounts, and an API plus MCP server so your agent schedules through it instead of you maintaining a poster forever.",
   "priorArt": [
     {

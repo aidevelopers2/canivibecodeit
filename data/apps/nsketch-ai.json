@@ -10,6 +10,7 @@
   "pricing": {
     "plan": "Starter",
     "basis": "monthly",
+    "unit": "flat",
     "source": "https://nsketch.ai/pricing",
     "checkedOn": "2026-07-31",
     "confidence": "high",
@@ -37,7 +38,12 @@
     "ready-made viral templates, editing utilities, and creator workflows",
     "production moderation, consent controls, support, and commercial operations"
   ],
-  "moatType": "model aggregation, workflow breadth, and managed inference operations",
+  "moatTags": [
+    "integrations",
+    "scale-infra",
+    "execution-polish"
+  ],
+  "moatNotes": "model aggregation, workflow breadth, and managed inference operations",
   "replacementScope": "private single-provider image and video workbench",
   "ongoingBurden": "provider API changes, model churn, cost tracking, failed jobs, media storage, safety controls, and output licensing",
   "whyPeopleStillPay": "People pay for Nsketch AI because one subscription turns many changing model providers into a coherent creator workflow. The recurring cost buys maintained integrations, predictable credits, queues, templates, storage, retries, safety work, and support, not just the prompt box.",

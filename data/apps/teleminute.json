@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Starter",
     "basis": "monthly",
+    "unit": "flat",
     "native": "4.99 USD",
     "source": "https://teleminute.com/pricing",
     "checkedOn": "2026-07-31",
@@ -33,7 +34,10 @@
     "lead-capture form builder",
     "analytics"
   ],
-  "moatType": "hosted convenience/nontechnical UX",
+  "moatTags": [
+    "execution-polish"
+  ],
+  "moatNotes": "hosted convenience/nontechnical UX",
   "whyPeopleStillPay": "They pay because the target user is a cafe or gym owner who will never open a terminal, and TeleMinute gives them a working bot in minutes from a phone.",
   "priorArt": [
     {
@@ -47,7 +51,9 @@
     "chatwoot-cloud",
     "livechat"
   ],
+  "pagePriority": 3,
   "verifiedOneShot": false,
+  "notes": "The bot itself is an afternoon; the product is that a cafe owner never has to see a terminal.",
   "prompt": "Build me a personal Telegram bot for one business, replacing TeleMinute. Requirements:\n\n- Node 22 + grammY + better-sqlite3, one small project, no build step; data\n  lives in data/bot.db.\n- Long polling, not webhooks, so it runs anywhere with just BOT_TOKEN in\n  .env (create the bot with @BotFather first).\n- Commands are defined in commands.yaml: name, reply text, optional image\n  path, optional inline URL buttons. Hot-reload the file on change.\n- Keyword auto-replies in the same file: trigger words like \"price\" or\n  \"hours\" mapped to reply text.\n- /start sends a greeting listing the available commands.\n- Lead capture: /contact walks the user through name, phone, and message as\n  a short conversation, saves it to a leads table, and notifies me\n  (OWNER_CHAT_ID) immediately.\n- Owner-only /broadcast <text>: send to every chat that has messaged the\n  bot, throttled under Telegram rate limits, then report sent and failed\n  counts.\n- Owner-only /stats: total users, messages per day for the last 14 days,\n  top 5 commands.\n- README: BotFather setup, .env keys (BOT_TOKEN, OWNER_CHAT_ID), and how to\n  keep it running with pm2.\n- Out of scope: multi-bot management, a web dashboard, scheduled\n  broadcasts, and mobile apps; that is what the hosted product is for.",
   "promptCurated": true
 }

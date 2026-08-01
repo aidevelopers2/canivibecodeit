@@ -10,6 +10,7 @@
   "pricing": {
     "plan": "Standard",
     "basis": "monthly",
+    "unit": "flat",
     "source": "https://www.chatbase.co/pricing",
     "checkedOn": "2026-08-01",
     "confidence": "high",
@@ -36,7 +37,12 @@
     "the action and procedure builder: server, client, button, and custom widget actions with testing, permissions, and integration-specific behavior",
     "the production layer: topic and sentiment analytics, review workflows, abuse controls, delivery retries, observability, data governance, compliance, and support"
   ],
-  "moatType": "integrated multi-channel support operations and managed agent control plane",
+  "moatTags": [
+    "integrations",
+    "scale-infra",
+    "execution-polish"
+  ],
+  "moatNotes": "integrated multi-channel support operations and managed agent control plane",
   "replacementScope": "one source-grounded website support agent",
   "ongoingBurden": "crawling and document parsing, retraining, retrieval quality, prompt-injection defenses, model regressions, action authorization, widget compatibility, handoff delivery, rate limits, privacy requests, uptime, and evaluation",
   "whyPeopleStillPay": "The chat bubble and one RAG route are only the visible edge. The subscription buys the control plane around them: continuously managed sources, safe actions, customer identity, channel adapters, a human inbox, analytics, and someone else owning delivery and model regressions. Building is reasonable when one web agent and full data control are enough; paying is reasonable when the agent is part of a real support operation.",

@@ -10,6 +10,7 @@
   "pricing": {
     "plan": "10 profiles",
     "basis": "monthly",
+    "unit": "flat",
     "source": "https://dailygram.me/#pricing",
     "checkedOn": "2026-07-31",
     "confidence": "high",
@@ -35,7 +36,11 @@
     "automatic profile discovery and source setup",
     "managed email delivery and monitoring"
   ],
-  "moatType": "social data access, connector upkeep, and delivery reliability",
+  "moatTags": [
+    "scale-infra",
+    "integrations"
+  ],
+  "moatNotes": "social data access, connector upkeep, and delivery reliability",
   "replacementScope": "bring-your-own-feed personal social digest",
   "ongoingBurden": "Source breakage, blocked requests, schema drift, deduplication edge cases, scheduling, retries, LLM costs, and email deliverability.",
   "whyPeopleStillPay": "People pay for Dailygram because the digest UI is the easy part. The subscription keeps public-profile ingestion working across hostile and frequently changing platforms, then runs summarization and email delivery without asking the user to maintain feeds, workers, or retries.",

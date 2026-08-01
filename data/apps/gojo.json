@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Monthly",
     "basis": "monthly for up to 3 Macs",
+    "unit": "flat",
     "native": "4.99 USD",
     "source": "https://gojo.rohoswagger.com/#pricing",
     "checkedOn": "2026-07-30",
@@ -34,7 +35,10 @@
     "built-in calendar, reminders, webcam, and battery tools",
     "fixes when a macOS update breaks something"
   ],
-  "moatType": "macOS polish and maintenance",
+  "moatTags": [
+    "execution-polish"
+  ],
+  "moatNotes": "macOS polish and maintenance",
   "whyPeopleStillPay": "People pay to skip the maintenance. Install Gojo, approve the permissions, and get back to work.",
   "priorArt": [
     {

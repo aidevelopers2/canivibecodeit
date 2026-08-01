@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Plus",
     "basis": "monthly",
+    "unit": "flat",
     "native": "3.00 USD",
     "source": "https://auritrack.com",
     "checkedOn": "2026-08-01",
@@ -34,7 +35,10 @@
     "predictive spending forecasts",
     "polished AI-written financial reports"
   ],
-  "moatType": "AI pipeline robustness/convenience",
+  "moatTags": [
+    "execution-polish"
+  ],
+  "moatNotes": "AI pipeline robustness/convenience",
   "whyPeopleStillPay": "They pay because a hardened parsing pipeline, mobile apps, and chat-anywhere logging remove all friction, and $3/mo is cheaper than maintaining your own LLM plumbing.",
   "priorArt": [
     {

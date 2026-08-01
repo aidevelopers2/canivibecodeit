@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Founder",
     "basis": "monthly",
+    "unit": "flat",
     "native": "19 USD",
     "source": "https://www.ideafast.pro/#pricing",
     "checkedOn": "2026-08-01",
@@ -33,7 +34,11 @@
     "cost control, naive LLM classification of a busy subreddit gets expensive fast",
     "the idea generation and validation layer on top of the raw clusters"
   ],
-  "moatType": "ingestion pipeline + cost control, not data ownership",
+  "moatTags": [
+    "scale-infra",
+    "execution-polish"
+  ],
+  "moatNotes": "ingestion pipeline + cost control, not data ownership",
   "whyPeopleStillPay": "The clustering is not the hard part, the boring infrastructure around it is. Reddit throttles aggressive clients, so a real corpus takes patient background ingestion rather than a scan you kick off and watch. People pay to skip the warm-up and the API bill, not because the data is secret. It is all public.",
   "priorArt": [
     {

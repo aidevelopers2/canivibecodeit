@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Founding Pro",
     "basis": "monthly",
+    "unit": "flat",
     "source": "https://proofling.com/pricing",
     "checkedOn": "2026-07-31",
     "confidence": "high",
@@ -32,7 +33,12 @@
     "guided video capture, processing, captions, and retention controls",
     "long-lived consent history, proof exports, and referral workflows"
   ],
-  "moatType": "automation/integrations/deliverability",
+  "moatTags": [
+    "integrations",
+    "scale-infra",
+    "execution-polish"
+  ],
+  "moatNotes": "automation/integrations/deliverability",
   "whyPeopleStillPay": "They pay to avoid operating the unglamorous parts: verified webhooks, timed sends, email delivery, retries, consent records, media handling, and integrations. The wall itself is easy; making customer requests arrive reliably and safely is the service.",
   "priorArt": [],
   "relatedSlugs": [
