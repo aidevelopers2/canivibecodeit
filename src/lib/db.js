@@ -121,6 +121,9 @@ const SLOT_SEED = [
   // existing slot prices set from the admin are never overwritten.
   ['L4', 119900],
   ['R4', 149900],
+  // 10 slots (launch night +2, $999 cleared within the hour):
+  ['L5', 149900],
+  ['R5', 149900],
 ];
 
 // Everything the slot-blocked predicate and the board care about. Anything else

@@ -8,7 +8,7 @@
 import crypto from 'node:crypto';
 import { activePurchases, sponsorSlots } from './db.js';
 
-export const SLOT_IDS = ['L1', 'L2', 'L3', 'L4', 'R1', 'R2', 'R3', 'R4'];
+export const SLOT_IDS = ['L1', 'L2', 'L3', 'L4', 'L5', 'R1', 'R2', 'R3', 'R4', 'R5'];
 
 /* Stripe's minimum session lifetime is 30 minutes; the hold row outlives it by
    five so it is never marked stale while its session is still payable. Neither
