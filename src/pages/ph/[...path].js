@@ -14,6 +14,17 @@ async function proxy({ params, request, clientAddress }) {
   const headers = new Headers(request.headers);
   headers.set('Host', new URL(upstreamBase).host);
   headers.delete('cookie');
+  // Upstream is itself behind Cloudflare, which rejects requests carrying
+  // another Cloudflare's edge headers (error 1000 on the assets host) — so
+  // drop everything our own edge injected before re-fetching.
+  for (const name of [...headers.keys()]) {
+    if (name.startsWith('cf-') || name.startsWith('x-railway-')) headers.delete(name);
+  }
+  headers.delete('cdn-loop');
+  headers.delete('x-forwarded-host');
+  headers.delete('x-forwarded-proto');
+  headers.delete('x-forwarded-for');
+  headers.delete('x-real-ip');
   const ip =
     request.headers.get('cf-connecting-ip') ||
     request.headers.get('x-forwarded-for')?.split(',')[0].trim() ||
