@@ -11,7 +11,7 @@
     "basis": "monthly",
     "unit": "flat",
     "native": "4.99 USD",
-    "source": "https://teleminute.com/pricing",
+    "source": "https://teleminute.com",
     "checkedOn": "2026-07-31",
     "confidence": "high",
     "notes": "Starter is $4.99/month for up to 2 bots; Pro is $9.99/month with unlimited bots, broadcasts to all bot users, and detailed analytics. A free tier exists."

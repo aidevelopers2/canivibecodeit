@@ -49,11 +49,6 @@
   "whyPeopleStillPay": "People pay for Nsketch AI because one subscription turns many changing model providers into a coherent creator workflow. The recurring cost buys maintained integrations, predictable credits, queues, templates, storage, retries, safety work, and support, not just the prompt box.",
   "priorArt": [
     {
-      "name": "Nsketch AI source",
-      "url": "https://github.com/sayedraminh/nsketchai",
-      "desc": "MIT-licensed source for the Nsketch AI web product and CLI."
-    },
-    {
       "name": "ComfyUI",
       "url": "https://github.com/Comfy-Org/ComfyUI",
       "desc": "Open-source node-based workflows for local and hosted generative media models."
