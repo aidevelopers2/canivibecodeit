@@ -11,6 +11,7 @@
     "plan": "Paid plan",
     "kind": "usage-based",
     "basis": "credits and usage",
+    "unit": "usage",
     "currency": "USD",
     "native": "Subscription plus generation credits",
     "source": "https://scenario.com/pricing",
@@ -36,7 +37,11 @@
     "fast elastic inference",
     "safety, moderation, and mobile distribution"
   ],
-  "moatType": "proprietary model/inference",
+  "moatTags": [
+    "proprietary-models",
+    "scale-infra"
+  ],
+  "moatNotes": "proprietary model/inference",
   "whyPeopleStillPay": "Scenario: The interface is replaceable. The subscription buys the model, aesthetic tuning, inference fleet, safety work, and rapid improvement.",
   "ongoingBurden": "Own model downloads, GPU compatibility, queueing, safety choices, storage, and changing model licences.",
   "priorArt": [

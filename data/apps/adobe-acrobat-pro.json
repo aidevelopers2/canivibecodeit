@@ -10,6 +10,7 @@
   "pricing": {
     "plan": "Acrobat Pro",
     "basis": "monthly",
+    "unit": "flat",
     "source": "https://adobe.com/acrobat/pricing.html",
     "checkedOn": "2026-07-31",
     "confidence": "high",
@@ -37,7 +38,12 @@
     "qualified trust services",
     "large template and integration ecosystem"
   ],
-  "moatType": "document fidelity, identity, and compliance",
+  "moatTags": [
+    "execution-polish",
+    "compliance-regulatory",
+    "brand-trust"
+  ],
+  "moatNotes": "document fidelity, identity, and compliance",
   "replacementScope": "personal document tool or low-stakes signature flow",
   "ongoingBurden": "format edge cases, fonts, rendering, encryption, signatures, evidence, retention, storage, backups, and legal requirements",
   "whyPeopleStillPay": "People still pay for Adobe Acrobat Pro because the visible editor is reproducible, but reliable rendering and legally defensible signature workflows are not a casual side project. The recurring cost buys format edge cases, fonts, rendering, encryption, signatures, evidence, retention, storage, backups, and legal requirements, not just the visible interface.",

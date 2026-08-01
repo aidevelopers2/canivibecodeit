@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Business Voice",
     "basis": "monthly",
+    "unit": "flat",
     "native": "38 USD per seat",
     "source": "https://superscribe.io",
     "checkedOn": "2026-07-30",
@@ -33,7 +34,12 @@
     "the workspace around the transcripts: semantic search, invoice-ready PDF reports, CRM note drafts, a public API, and an MCP server",
     "Windows parity and signed, notarized auto-updating installers"
   ],
-  "moatType": "telephony infrastructure/integrated workspace breadth",
+  "moatTags": [
+    "scale-infra",
+    "integrations",
+    "execution-polish"
+  ],
+  "moatNotes": "telephony infrastructure/integrated workspace breadth",
   "whyPeopleStillPay": "They pay for the phone rail (answer calls normally on the number they already have, no bot, no second device) and for everything downstream arriving pre-filed: transcripts semantically matched to the right client and project using their own GitHub activity as context, then turned into searchable history, invoices, and CRM drafts.",
   "priorArt": [
     {
@@ -61,7 +67,12 @@
       "status": "alive"
     }
   ],
-  "relatedSlugs": ["superwhisper", "wispr-flow", "otter-ai", "granola"],
+  "relatedSlugs": [
+    "superwhisper",
+    "wispr-flow",
+    "otter-ai",
+    "granola"
+  ],
   "pagePriority": 2,
   "verifiedOneShot": false,
   "notes": "Half of it is a superwhisper-shaped yes; the existing-number phone rail drags the whole product to kinda.",

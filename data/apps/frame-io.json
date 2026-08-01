@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Team",
     "basis": "monthly per member",
+    "unit": "per-seat",
     "native": "25 USD",
     "source": "https://frame.io/pricing",
     "checkedOn": "2026-07-30",
@@ -35,7 +36,12 @@
     "the iPad and mobile review apps clients actually use",
     "storage, transfer tooling, and uptime bundled into the seat price"
   ],
-  "moatType": "infrastructure/NLE integration/trust",
+  "moatTags": [
+    "scale-infra",
+    "integrations",
+    "brand-trust"
+  ],
+  "moatNotes": "infrastructure/NLE integration/trust",
   "whyPeopleStillPay": "They pay so the client link never buffers and the note never gets lost. A director opens a Frame.io link on a phone in a car and it plays; the editor opens the Premiere panel and the same notes land on the timeline as markers. That round trip, plus a transcode and delivery layer nobody has to think about, is the product. The comment box was never the expensive part.",
   "priorArt": [
     {

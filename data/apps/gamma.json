@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Plus",
     "basis": "monthly per seat",
+    "unit": "per-seat",
     "native": "12 USD",
     "source": "https://gamma.app/pricing",
     "checkedOn": "2026-07-30",
@@ -37,7 +38,11 @@
     "template quality",
     "collaboration"
   ],
-  "moatType": "editor/templates/hosting",
+  "moatTags": [
+    "execution-polish",
+    "content-rights"
+  ],
+  "moatNotes": "editor/templates/hosting",
   "whyPeopleStillPay": "They pay because the output looks acceptable without wrestling with PowerPoint.",
   "priorArt": [
     {

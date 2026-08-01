@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Basic site",
     "basis": "monthly",
+    "unit": "flat",
     "native": "25 USD",
     "source": "https://webflow.com/pricing",
     "checkedOn": "2026-07-30",
@@ -38,7 +39,12 @@
     "forms",
     "SEO tooling"
   ],
-  "moatType": "editor/CMS/hosting",
+  "moatTags": [
+    "execution-polish",
+    "scale-infra",
+    "content-rights"
+  ],
+  "moatNotes": "editor/CMS/hosting",
   "whyPeopleStillPay": "They pay because a designer can ship and maintain a production site without engineering every component.",
   "priorArt": [
     {

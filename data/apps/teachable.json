@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Starter",
     "basis": "monthly",
+    "unit": "flat",
     "native": "39 USD",
     "source": "https://www.teachable.com/pricing",
     "checkedOn": "2026-07-30",
@@ -37,7 +38,12 @@
     "support",
     "course compliance features"
   ],
-  "moatType": "payments/content hosting/mobile distribution",
+  "moatTags": [
+    "compliance-regulatory",
+    "scale-infra",
+    "execution-polish"
+  ],
+  "moatNotes": "payments/content hosting/mobile distribution",
   "whyPeopleStillPay": "They pay because course businesses need checkout, access, progress, and support to just work.",
   "priorArt": [
     {

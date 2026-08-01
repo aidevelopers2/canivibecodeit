@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Early",
     "basis": "monthly",
+    "unit": "flat",
     "native": "25 USD",
     "source": "https://www.xero.com/us/pricing-plans/",
     "checkedOn": "2026-07-30",
@@ -36,7 +37,12 @@
     "audit history",
     "compliance support"
   ],
-  "moatType": "banking/compliance/accounting ecosystem",
+  "moatTags": [
+    "compliance-regulatory",
+    "integrations",
+    "network-effects"
+  ],
+  "moatNotes": "banking/compliance/accounting ecosystem",
   "whyPeopleStillPay": "They pay because businesses need dependable books, not just a ledger UI.",
   "priorArt": [
     {

@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Starter",
     "basis": "monthly",
+    "unit": "flat",
     "native": "32 USD",
     "source": "https://bubble.io/pricing",
     "checkedOn": "2026-07-30",
@@ -36,7 +37,12 @@
     "nondeveloper maintenance",
     "templates"
   ],
-  "moatType": "no-code platform/ecosystem",
+  "moatTags": [
+    "execution-polish",
+    "integrations",
+    "scale-infra"
+  ],
+  "moatNotes": "no-code platform/ecosystem",
   "whyPeopleStillPay": "They pay because future changes can be made visually without owning a codebase.",
   "priorArt": [
     {

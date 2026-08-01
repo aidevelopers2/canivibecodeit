@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Personal",
     "basis": "monthly per person",
+    "unit": "per-seat",
     "native": "25 USD",
     "source": "https://sunsama.com/pricing",
     "checkedOn": "2026-07-30",
@@ -35,7 +36,11 @@
     "analytics",
     "reliability"
   ],
-  "moatType": "integrations/workflow design",
+  "moatTags": [
+    "integrations",
+    "execution-polish"
+  ],
+  "moatNotes": "integrations/workflow design",
   "whyPeopleStillPay": "They pay for a planning habit that survives across tools, not a new to-do list.",
   "priorArt": [
     {

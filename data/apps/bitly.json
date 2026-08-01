@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Growth",
     "basis": "monthly",
+    "unit": "flat",
     "native": "35 USD",
     "source": "https://bitly.com/pages/pricing",
     "checkedOn": "2026-07-30",
@@ -32,7 +33,11 @@
     "city-level and device-level analytics rollups without building them",
     "an SLA and someone to call"
   ],
-  "moatType": "link permanence",
+  "moatTags": [
+    "brand-trust",
+    "scale-infra"
+  ],
+  "moatNotes": "link permanence",
   "whyPeopleStillPay": "Bitly's actual product is a promise about the future: that a link printed on a box in 2019 still resolves today. No amount of code buys that, only an institution that intends to keep existing. Teams also pay for shared workspaces, SSO, and the audit trail, and marketing departments pay because the alternative is asking engineering for a redirect and waiting two weeks.",
   "priorArt": [
     {

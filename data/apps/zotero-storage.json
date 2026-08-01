@@ -11,6 +11,7 @@
     "plan": "2 GB storage",
     "kind": "fixed",
     "basis": "annual storage subscription",
+    "unit": "flat",
     "currency": "USD",
     "native": "Official amount not exposed in parsed page",
     "source": "https://www.zotero.org/storage",
@@ -35,7 +36,11 @@
     "team libraries and institutional access",
     "licensed scholarly metadata"
   ],
-  "moatType": "data/import reliability",
+  "moatTags": [
+    "execution-polish",
+    "proprietary-data"
+  ],
+  "moatNotes": "data/import reliability",
   "whyPeopleStillPay": "Zotero Storage: Researchers pay for correct metadata, resilient importers, citation coverage, and workflows that survive publisher and browser changes.",
   "ongoingBurden": "Maintain parsers, deduplication, PDF extraction, citation styles, and legal access boundaries.",
   "priorArt": [

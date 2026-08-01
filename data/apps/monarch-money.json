@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Core",
     "basis": "monthly",
+    "unit": "flat",
     "native": "14.99 USD",
     "source": "https://www.monarch.com/pricing",
     "checkedOn": "2026-07-30",
@@ -36,7 +37,12 @@
     "support",
     "data security posture"
   ],
-  "moatType": "bank data/security/convenience",
+  "moatTags": [
+    "integrations",
+    "brand-trust",
+    "collaboration"
+  ],
+  "moatNotes": "bank data/security/convenience",
   "whyPeopleStillPay": "They pay because personal finance apps are only valuable when data arrives automatically and safely.",
   "priorArt": [
     {

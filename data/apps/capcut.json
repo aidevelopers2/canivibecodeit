@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Pro",
     "basis": "monthly",
+    "unit": "flat",
     "native": "19.99 USD",
     "source": "https://www.capcut.com/resource/capcut-standard-vs-pro",
     "checkedOn": "2026-07-30",
@@ -36,7 +37,12 @@
     "platform integrations",
     "rendering performance"
   ],
-  "moatType": "media pipeline/templates/platform ecosystem",
+  "moatTags": [
+    "execution-polish",
+    "content-rights",
+    "integrations"
+  ],
+  "moatNotes": "media pipeline/templates/platform ecosystem",
   "whyPeopleStillPay": "They pay because short-form editing is fast on a phone and full of reusable trends/effects.",
   "priorArt": [
     {

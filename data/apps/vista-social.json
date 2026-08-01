@@ -10,6 +10,7 @@
   "pricing": {
     "plan": "Pro",
     "basis": "monthly",
+    "unit": "flat",
     "source": "https://vistasocial.com/pricing",
     "checkedOn": "2026-07-31",
     "confidence": "medium",
@@ -37,7 +38,12 @@
     "deep analytics",
     "team approvals and asset libraries"
   ],
-  "moatType": "API access, connector upkeep, and collaboration",
+  "moatTags": [
+    "integrations",
+    "collaboration",
+    "execution-polish"
+  ],
+  "moatNotes": "API access, connector upkeep, and collaboration",
   "replacementScope": "single-network scheduler",
   "ongoingBurden": "OAuth review, API policy changes, media limits, queues, retries, rate limits, webhooks, tokens, and moderation workflows",
   "whyPeopleStillPay": "People still pay for Vista Social because the scheduler is easy; staying approved and correct across constantly changing social APIs is the subscription. The recurring cost buys OAuth review, API policy changes, media limits, queues, retries, rate limits, webhooks, tokens, and moderation workflows, not just the visible interface.",

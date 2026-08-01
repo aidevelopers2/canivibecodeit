@@ -11,6 +11,7 @@
     "plan": "Standard",
     "kind": "fixed",
     "basis": "per user per month",
+    "unit": "per-seat",
     "currency": "USD",
     "native": "$249/user/month",
     "source": "https://sproutsocial.com/pricing",
@@ -37,7 +38,11 @@
     "team approvals and asset workflows",
     "protection from API and policy changes"
   ],
-  "moatType": "platform APIs/distribution",
+  "moatTags": [
+    "integrations",
+    "collaboration"
+  ],
+  "moatNotes": "platform APIs/distribution",
   "whyPeopleStillPay": "Sprout Social: Social tools survive because networks change APIs, permissions, formats, and anti-spam rules constantly.",
   "ongoingBurden": "Maintain OAuth, token refresh, media constraints, rate limits, scheduling, webhooks, retries, and platform policy compliance.",
   "priorArt": [

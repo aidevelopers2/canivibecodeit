@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Starter",
     "basis": "monthly",
+    "unit": "flat",
     "native": "49 USD",
     "source": "https://www.frase.io/pricing",
     "checkedOn": "2026-07-30",
@@ -36,7 +37,11 @@
     "editor polish",
     "reporting"
   ],
-  "moatType": "data access/workflow/model wrapper",
+  "moatTags": [
+    "proprietary-data",
+    "execution-polish"
+  ],
+  "moatNotes": "data access/workflow/model wrapper",
   "whyPeopleStillPay": "They pay because writers need a repeatable research/editor workflow, not a pile of scraped pages.",
   "priorArt": [
     {

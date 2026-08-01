@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "125K messages",
     "basis": "monthly capacity",
+    "unit": "usage",
     "native": "15 USD",
     "source": "https://wabery.com/pricing",
     "checkedOn": "2026-07-30",
@@ -34,7 +35,11 @@
     "WhatsApp Flows builder, encryption, and data-exchange hosting",
     "hosted functions, MCP tooling, and a production team inbox"
   ],
-  "moatType": "Meta approval/compliance/managed infrastructure",
+  "moatTags": [
+    "integrations",
+    "scale-infra"
+  ],
+  "moatNotes": "Meta approval/compliance/managed infrastructure",
   "whyPeopleStillPay": "The REST endpoints are the easy part. Wabery packages Meta onboarding, secure multi-tenant infrastructure, durable event delivery, Flows plumbing, monitoring, and ongoing API and policy changes into a service that is ready for production. A DIY gateway is reasonable for one business; becoming an approved and reliable provider for other businesses is a company, not a weekend project.",
   "priorArt": [
     {

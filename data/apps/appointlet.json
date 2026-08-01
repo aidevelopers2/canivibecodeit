@@ -11,6 +11,7 @@
     "plan": "Premium",
     "kind": "fixed",
     "basis": "per member per month",
+    "unit": "per-seat",
     "currency": "USD",
     "native": "$12/member/month",
     "source": "https://appointlet.com/pricing",
@@ -36,7 +37,11 @@
     "multi-calendar conflict handling",
     "race-free booking under load"
   ],
-  "moatType": "OAuth/calendar reliability",
+  "moatTags": [
+    "integrations",
+    "execution-polish"
+  ],
+  "moatNotes": "OAuth/calendar reliability",
   "whyPeopleStillPay": "Appointlet: People pay because a booking tool must never double-book them, leak private events, or send the wrong time to a client.",
   "ongoingBurden": "Maintain OAuth, timezone data, webhooks, idempotency, reminders, calendar-provider quirks, and uptime.",
   "priorArt": [

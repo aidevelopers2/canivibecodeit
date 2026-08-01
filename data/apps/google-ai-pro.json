@@ -10,6 +10,7 @@
   "pricing": {
     "plan": "Google AI Pro",
     "basis": "monthly",
+    "unit": "flat",
     "source": "https://one.google.com/about/google-ai-plans",
     "checkedOn": "2026-07-31",
     "confidence": "high",
@@ -36,7 +37,12 @@
     "cloud sandbox fleet",
     "enterprise policy and support"
   ],
-  "moatType": "frontier models, context infrastructure, and execution safety",
+  "moatTags": [
+    "proprietary-models",
+    "scale-infra",
+    "integrations"
+  ],
+  "moatNotes": "frontier models, context infrastructure, and execution safety",
   "replacementScope": "single-repository coding assistant",
   "ongoingBurden": "model changes, indexing, prompt injection, tool permissions, sandboxing, evaluation, telemetry choices, and IDE compatibility",
   "whyPeopleStillPay": "People still pay for Google AI Pro because the UI can be copied, but high-quality code models, context ranking, safe execution, and constant evaluation are the product. The recurring cost buys model changes, indexing, prompt injection, tool permissions, sandboxing, evaluation, telemetry choices, and IDE compatibility, not just the visible interface.",

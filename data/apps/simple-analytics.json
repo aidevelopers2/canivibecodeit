@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Starter",
     "basis": "monthly",
+    "unit": "flat",
     "native": "20 USD",
     "source": "https://www.simpleanalytics.com/pricing",
     "checkedOn": "2026-07-30",
@@ -36,7 +37,12 @@
     "uptime",
     "support"
   ],
-  "moatType": "hosting/compliance positioning",
+  "moatTags": [
+    "compliance-regulatory",
+    "scale-infra",
+    "execution-polish"
+  ],
+  "moatNotes": "hosting/compliance positioning",
   "whyPeopleStillPay": "They pay for low-maintenance analytics they can put in a privacy policy with confidence.",
   "priorArt": [
     {

@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Starter",
     "basis": "monthly flat fee",
+    "unit": "flat",
     "native": "49 USD",
     "source": "https://maintenease.com/pricing",
     "checkedOn": "2026-07-30",
@@ -34,7 +35,12 @@
     "integrations, API, and SSO",
     "onboarding and data-import support"
   ],
-  "moatType": "operations/data/history",
+  "moatTags": [
+    "switching-costs",
+    "collaboration",
+    "scale-infra"
+  ],
+  "moatNotes": "operations/data/history",
   "whyPeopleStillPay": "They pay for a dependable shared system that keeps technicians, schedules, evidence, and years of asset history available without maintaining the infrastructure themselves.",
   "priorArt": [
     {

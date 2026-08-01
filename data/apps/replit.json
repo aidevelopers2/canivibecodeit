@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Core",
     "basis": "monthly",
+    "unit": "flat",
     "native": "25 USD",
     "source": "https://replit.com/pricing",
     "checkedOn": "2026-07-30",
@@ -36,7 +37,11 @@
     "deployments",
     "education/community workflows"
   ],
-  "moatType": "cloud platform/deployment",
+  "moatTags": [
+    "scale-infra",
+    "execution-polish"
+  ],
+  "moatNotes": "cloud platform/deployment",
   "whyPeopleStillPay": "They pay because code runs in the browser immediately without local environment drama.",
   "priorArt": [
     {

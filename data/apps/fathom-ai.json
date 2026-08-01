@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Premium",
     "basis": "monthly per user",
+    "unit": "per-seat",
     "native": "20 USD",
     "source": "https://www.fathom.ai/pricing",
     "checkedOn": "2026-07-30",
@@ -34,7 +35,11 @@
     "polished clips",
     "permissions and admin"
   ],
-  "moatType": "integrations/collaboration",
+  "moatTags": [
+    "integrations",
+    "collaboration"
+  ],
+  "moatNotes": "integrations/collaboration",
   "whyPeopleStillPay": "They pay for workflow certainty: after every call, the right people and systems have the notes without manual effort.",
   "priorArt": [
     {

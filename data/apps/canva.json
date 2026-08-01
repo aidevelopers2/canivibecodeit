@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Pro",
     "basis": "monthly",
+    "unit": "flat",
     "native": "18 USD",
     "source": "https://www.canva.com/en_in/pricing/",
     "checkedOn": "2026-07-30",
@@ -36,7 +37,12 @@
     "print/social integrations",
     "mobile apps"
   ],
-  "moatType": "licensed assets/templates/collaboration",
+  "moatTags": [
+    "content-rights",
+    "collaboration",
+    "execution-polish"
+  ],
+  "moatNotes": "licensed assets/templates/collaboration",
   "whyPeopleStillPay": "They pay because design work is mostly choosing from a huge polished library and collaborating without breaking layouts.",
   "priorArt": [
     {

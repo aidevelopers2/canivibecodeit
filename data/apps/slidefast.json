@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Starter",
     "basis": "monthly",
+    "unit": "flat",
     "native": "7 EUR",
     "source": "https://slidefast.io/pricing",
     "checkedOn": "2026-07-31",
@@ -33,7 +34,11 @@
     "multi-channel publishing workflow",
     "hosted storage and sharing"
   ],
-  "moatType": "editor polish/templates/export workflow",
+  "moatTags": [
+    "execution-polish",
+    "integrations"
+  ],
+  "moatNotes": "editor polish/templates/export workflow",
   "whyPeopleStillPay": "They pay to skip the fragile parts between an AI draft and a consistently branded carousel that is actually ready to publish.",
   "priorArt": [
     {

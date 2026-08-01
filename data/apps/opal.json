@@ -11,6 +11,7 @@
     "plan": "Pro",
     "kind": "fixed",
     "basis": "annual-equivalent individual subscription",
+    "unit": "flat",
     "currency": "USD",
     "native": "$99.99/year; $19.99 monthly option",
     "source": "https://opal.so/pricing",
@@ -35,7 +36,10 @@
     "polished shortcuts and accessibility",
     "vendor-maintained updates"
   ],
-  "moatType": "polish/OS integration",
+  "moatTags": [
+    "execution-polish"
+  ],
+  "moatNotes": "polish/OS integration",
   "whyPeopleStillPay": "Opal: People keep paying because a utility used dozens of times a day must be instant, predictable, and compatible with every OS update.",
   "ongoingBurden": "Track OS permission changes, shortcut conflicts, packaging, code signing, and regressions after system updates.",
   "priorArt": [

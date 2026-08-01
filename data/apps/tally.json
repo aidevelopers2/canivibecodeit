@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Pro",
     "basis": "monthly per workspace",
+    "unit": "flat",
     "native": "29 USD",
     "source": "https://tally.so/pricing",
     "checkedOn": "2026-07-30",
@@ -36,7 +37,11 @@
     "team workspaces",
     "anti-spam"
   ],
-  "moatType": "polish/integrations",
+  "moatTags": [
+    "execution-polish",
+    "integrations"
+  ],
+  "moatNotes": "polish/integrations",
   "whyPeopleStillPay": "They pay for low-friction forms, branding removal, and integrations.",
   "priorArt": [
     {

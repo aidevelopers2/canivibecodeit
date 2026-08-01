@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Google AI Pro",
     "basis": "monthly",
+    "unit": "flat",
     "native": "19.99 USD",
     "source": "https://gemini.google/subscriptions/",
     "checkedOn": "2026-07-30",
@@ -34,7 +35,12 @@
     "multimodal stack",
     "reliability"
   ],
-  "moatType": "frontier model/platform ecosystem",
+  "moatTags": [
+    "proprietary-models",
+    "integrations",
+    "scale-infra"
+  ],
+  "moatNotes": "frontier model/platform ecosystem",
   "whyPeopleStillPay": "They pay for model access and Google-native placement, not because chat UIs are hard.",
   "priorArt": [
     {

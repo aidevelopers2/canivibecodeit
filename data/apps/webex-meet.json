@@ -10,6 +10,7 @@
   "pricing": {
     "plan": "Meet",
     "basis": "monthly per license",
+    "unit": "per-seat",
     "source": "https://webex.com/pricing/index.html",
     "checkedOn": "2026-07-31",
     "confidence": "medium",
@@ -37,7 +38,11 @@
     "large webinars",
     "transcription, support, and compliance"
   ],
-  "moatType": "real-time media infrastructure and reliability",
+  "moatTags": [
+    "scale-infra",
+    "execution-polish"
+  ],
+  "moatNotes": "real-time media infrastructure and reliability",
   "replacementScope": "small private meeting service",
   "ongoingBurden": "TURN capacity, codecs, browsers, packet loss, scaling, recording, consent, abuse, monitoring, and incident response",
   "whyPeopleStillPay": "People still pay for Webex Meet because video products survive because real-time media quality and global reliability are infrastructure businesses, not weekend interface projects. The recurring cost buys TURN capacity, codecs, browsers, packet loss, scaling, recording, consent, abuse, monitoring, and incident response, not just the visible interface.",

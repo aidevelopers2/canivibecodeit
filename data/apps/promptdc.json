@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Pro",
     "basis": "monthly per user",
+    "unit": "per-seat",
     "source": "https://promptdc.com/pricing",
     "checkedOn": "2026-07-30",
     "confidence": "high",
@@ -31,7 +32,10 @@
     "Cloud accounts, usage credits, profile sync, and a managed billing flow",
     "Polished mode controls, error recovery, ongoing compatibility updates, and support"
   ],
-  "moatType": "Polish, site compatibility, and maintained rewrite profiles",
+  "moatTags": [
+    "execution-polish"
+  ],
+  "moatNotes": "Polish, site compatibility, and maintained rewrite profiles",
   "whyPeopleStillPay": "People pay for confidence that rewriting works across the sites and editors they use every day, plus maintained profiles, a polished interface, account features, and fixes when web apps change. A personal BYOK clone covers the basic loop well, but keeping rich editors reliable is continuing product work.",
   "priorArt": [],
   "relatedSlugs": [],

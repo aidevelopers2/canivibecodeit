@@ -10,6 +10,7 @@
   "pricing": {
     "plan": "Starter",
     "basis": "monthly per seat",
+    "unit": "per-seat",
     "source": "https://front.com/pricing",
     "checkedOn": "2026-07-31",
     "confidence": "high",
@@ -36,7 +37,12 @@
     "AI resolution tuning",
     "enterprise routing and compliance"
   ],
-  "moatType": "channel integrations and support operations",
+  "moatTags": [
+    "integrations",
+    "scale-infra",
+    "execution-polish"
+  ],
+  "moatNotes": "channel integrations and support operations",
   "replacementScope": "small-team shared inbox",
   "ongoingBurden": "message delivery, webhooks, threading, identity, permissions, attachments, notifications, spam, search, uptime, and retention",
   "whyPeopleStillPay": "People still pay for Front because support software survives because missing or misrouting one customer message is expensive and every channel behaves differently. The recurring cost buys message delivery, webhooks, threading, identity, permissions, attachments, notifications, spam, search, uptime, and retention, not just the visible interface.",

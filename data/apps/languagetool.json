@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Premium Monthly",
     "basis": "monthly EUR list",
+    "unit": "flat",
     "native": "19.9 EUR",
     "source": "https://languagetool.org/premium",
     "checkedOn": "2026-07-30",
@@ -33,7 +34,10 @@
     "team/admin options",
     "support"
   ],
-  "moatType": "open-source core/hosted convenience",
+  "moatTags": [
+    "execution-polish"
+  ],
+  "moatNotes": "open-source core/hosted convenience",
   "whyPeopleStillPay": "They pay for hosted convenience, premium rules, and cross-device setup.",
   "priorArt": [
     {

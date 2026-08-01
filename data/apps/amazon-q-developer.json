@@ -11,6 +11,7 @@
     "plan": "Pro",
     "kind": "fixed",
     "basis": "per user per month",
+    "unit": "per-seat",
     "currency": "USD",
     "native": "$19/user/month",
     "source": "https://aws.amazon.com/q/developer/pricing/",
@@ -36,7 +37,11 @@
     "large-context infrastructure",
     "IDE-wide polish and latency"
   ],
-  "moatType": "model/context/integration",
+  "moatTags": [
+    "proprietary-models",
+    "scale-infra"
+  ],
+  "moatNotes": "model/context/integration",
   "whyPeopleStillPay": "Amazon Q Developer: Developers pay for reliable context assembly, fast models, editor integration, evaluations, and safe handling of complex repositories.",
   "ongoingBurden": "Maintain model adapters, token budgets, indexing, sandboxing, diff application, test runners, and editor integrations.",
   "priorArt": [

@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Professional/Starter",
     "basis": "monthly",
+    "unit": "flat",
     "native": "29.99 USD",
     "source": "https://zapier.com/pricing",
     "checkedOn": "2026-07-30",
@@ -35,7 +36,11 @@
     "app triggers/actions",
     "uptime"
   ],
-  "moatType": "integration network/reliability",
+  "moatTags": [
+    "integrations",
+    "scale-infra"
+  ],
+  "moatNotes": "integration network/reliability",
   "whyPeopleStillPay": "They pay because every new app connection is already packaged and maintained.",
   "priorArt": [
     {

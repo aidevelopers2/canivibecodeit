@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Starter",
     "basis": "monthly",
+    "unit": "flat",
     "native": "9 EUR",
     "source": "https://lnkflow.io/pricing",
     "checkedOn": "2026-07-30",
@@ -32,7 +33,11 @@
     "TLS on a customer's branded domain (Cloudflare for SaaS and 90-day DCV renewals, not one DNS record)",
     "per-creator performance and commission reporting"
   ],
-  "moatType": "ad-platform integration upkeep",
+  "moatTags": [
+    "integrations",
+    "scale-infra"
+  ],
+  "moatNotes": "ad-platform integration upkeep",
   "whyPeopleStillPay": "The redirect is commodity and nobody should pay much for it. What is not commodity is staying current with Meta and Google as they change conversion endpoints, identifier formats, and consent requirements, which they do continuously and without waiting for you. Paying outsources that upkeep plus the attribution store that connects a click to a sale days later on a different device. Agencies pay for a second reason: issuing and renewing TLS for a client's branded domain is a genuinely different problem from pointing your own DNS record at a worker.",
   "priorArt": [
     {

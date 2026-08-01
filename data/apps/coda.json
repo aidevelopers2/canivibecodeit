@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Pro Doc Maker",
     "basis": "monthly per Doc Maker",
+    "unit": "per-seat",
     "native": "12 USD",
     "source": "https://coda.io/pricing",
     "checkedOn": "2026-07-30",
@@ -37,7 +38,12 @@
     "collaboration",
     "doc-app UX"
   ],
-  "moatType": "editor/formula/integrations",
+  "moatTags": [
+    "execution-polish",
+    "collaboration",
+    "integrations"
+  ],
+  "moatNotes": "editor/formula/integrations",
   "whyPeopleStillPay": "They pay because docs become tools that teammates can understand and maintain.",
   "priorArt": [
     {

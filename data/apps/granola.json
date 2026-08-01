@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Business",
     "basis": "monthly per user",
+    "unit": "per-seat",
     "native": "14 USD",
     "source": "https://www.granola.ai/pricing",
     "checkedOn": "2026-07-30",
@@ -31,7 +32,11 @@
     "automatic calendar joins",
     "someone else's servers & support"
   ],
-  "moatType": "polish/sync/collaboration",
+  "moatTags": [
+    "execution-polish",
+    "integrations"
+  ],
+  "moatNotes": "polish/sync/collaboration",
   "whyPeopleStillPay": "They pay because it is always on, nicely integrated with calendar/work calls, and trustworthy enough not to lose meeting history.",
   "priorArt": [
     {
@@ -52,7 +57,7 @@
   ],
   "pagePriority": 5,
   "verifiedOneShot": false,
-  "notes": "The trend's poster child. Local audio capture, Whisper transcription, an LLM summary into a markdown folder \u2014 the core loop is one prompt.",
-  "prompt": "Build me a local meeting-notes app like Granola for macOS. Requirements:\n\n- A menu bar app (Swift or an Electron tray app \u00b7 pick the simpler to ship) with\n  Start/Stop Recording. Record system audio + mic (use whatever screen-audio capture\n  permission approach is standard).\n- On stop: transcribe the audio locally with whisper.cpp (medium model), or via\n  OpenAI/Groq Whisper API if a key is present in .env.\n- Send the transcript to an LLM (key from .env) with a prompt that produces: a\n  5-bullet summary, decisions made, and action items with owners.\n- Save to ~/MeetingNotes/YYYY-MM-DD-HHMM.md: summary at top, full transcript below\n  a divider. Keep the audio file next to it.\n- No accounts, no cloud storage, no telemetry. Everything stays on my machine except\n  the API calls, and work fully offline if whisper.cpp + a local model are available.\n- Include a README with the permissions I need to grant and how to install deps.",
+  "notes": "The trend's poster child. Local audio capture, Whisper transcription, an LLM summary into a markdown folder — the core loop is one prompt.",
+  "prompt": "Build me a local meeting-notes app like Granola for macOS. Requirements:\n\n- A menu bar app (Swift or an Electron tray app · pick the simpler to ship) with\n  Start/Stop Recording. Record system audio + mic (use whatever screen-audio capture\n  permission approach is standard).\n- On stop: transcribe the audio locally with whisper.cpp (medium model), or via\n  OpenAI/Groq Whisper API if a key is present in .env.\n- Send the transcript to an LLM (key from .env) with a prompt that produces: a\n  5-bullet summary, decisions made, and action items with owners.\n- Save to ~/MeetingNotes/YYYY-MM-DD-HHMM.md: summary at top, full transcript below\n  a divider. Keep the audio file next to it.\n- No accounts, no cloud storage, no telemetry. Everything stays on my machine except\n  the API calls, and work fully offline if whisper.cpp + a local model are available.\n- Include a README with the permissions I need to grant and how to install deps.",
   "promptCurated": true
 }

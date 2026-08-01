@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Starter",
     "basis": "monthly",
+    "unit": "flat",
     "native": "29 USD",
     "source": "https://marketmaster.dev/pricing",
     "checkedOn": "2026-07-30",
@@ -33,7 +34,11 @@
     "scheduled publishing and delivery history",
     "maintained ad-pattern and platform-limit references"
   ],
-  "moatType": "workflow/research/integrations/quality control",
+  "moatTags": [
+    "integrations",
+    "execution-polish"
+  ],
+  "moatNotes": "workflow/research/integrations/quality control",
   "whyPeopleStillPay": "They pay to move from a website to a coordinated, reviewable, publish-ready campaign without maintaining research, media, validation, integration, and delivery infrastructure themselves.",
   "priorArt": [],
   "relatedSlugs": [

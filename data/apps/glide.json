@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Maker",
     "basis": "monthly",
+    "unit": "flat",
     "native": "60 USD",
     "source": "https://www.glideapps.com/pricing",
     "checkedOn": "2026-07-30",
@@ -37,7 +38,11 @@
     "publishing",
     "integrations"
   ],
-  "moatType": "no-code builder/platform",
+  "moatTags": [
+    "execution-polish",
+    "integrations"
+  ],
+  "moatNotes": "no-code builder/platform",
   "whyPeopleStillPay": "They pay because building one app is easier than becoming the developer for every future app change.",
   "priorArt": [
     {

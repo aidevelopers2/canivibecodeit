@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Lifetime license",
     "basis": "one-time",
+    "unit": "one-time",
     "native": "19 USD",
     "source": "https://uncircle.app/pricing",
     "checkedOn": "2026-07-30",
@@ -27,7 +28,10 @@
     "agent presets (Claude Code, Codex, Cursor, goose, Aider) and clickable localhost pills",
     "the built-in file editor, diff view, and command palette"
   ],
-  "moatType": "native polish + process-management edge cases",
+  "moatTags": [
+    "execution-polish"
+  ],
+  "moatNotes": "native polish + process-management edge cases",
   "whyPeopleStillPay": "It is $19 once with a free tier that covers 3 projects, so the honest calculus is not subscription math · it is whether an evening of vibe coding beats a lifetime license. People pay for the parts that are tedious to get right: clean shutdown of whole process trees, restart backoff that does not flap, native notifications when an agent finishes or crashes, and updates they never think about.",
   "priorArt": [
     {

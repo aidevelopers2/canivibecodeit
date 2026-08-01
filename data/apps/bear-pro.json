@@ -10,6 +10,7 @@
   "pricing": {
     "plan": "Pro",
     "basis": "monthly",
+    "unit": "flat",
     "source": "https://bear.app/faq/Subscriptions-and-Pricing/",
     "checkedOn": "2026-07-31",
     "confidence": "high",
@@ -35,7 +36,10 @@
     "hosted publishing",
     "proprietary AI memory"
   ],
-  "moatType": "sync, collaboration, and capture polish",
+  "moatTags": [
+    "execution-polish"
+  ],
+  "moatNotes": "sync, collaboration, and capture polish",
   "replacementScope": "personal local knowledge base",
   "ongoingBurden": "file watching, conflict handling, indexing, mobile apps, encryption, backups, and migrations",
   "whyPeopleStillPay": "People still pay for Bear Pro because people keep paying when the note system is trusted across every device and disappears into their daily capture habits. The recurring cost buys file watching, conflict handling, indexing, mobile apps, encryption, backups, and migrations, not just the visible interface.",

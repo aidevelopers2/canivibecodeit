@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Starter",
     "basis": "monthly",
+    "unit": "flat",
     "native": "24.99 USD",
     "source": "https://sleek.design/pricing",
     "checkedOn": "2026-07-30",
@@ -31,7 +32,10 @@
     "sketch input · photograph a hand-drawn screen and get it back as a design",
     "share links, project history, and team seats"
   ],
-  "moatType": "output quality + editing UX",
+  "moatTags": [
+    "execution-polish"
+  ],
+  "moatNotes": "output quality + editing UX",
   "whyPeopleStillPay": "Nobody pays for one screen, and that is the honest read on this category: the single-screen version got free the day coding agents got good. What is left is thinner than it looks. There is no network here, no proprietary dataset, no integration treadmill, and the Figma converter that used to be the hard part is MIT on npm. What is left is real work all the same. The prompt below is one call to one model; the product is a chain of them, each step routed to whichever model is the right trade of quality against speed for that step, with the prompts behind each layer rewritten over months of iteration. None of that shows up on screen one. It shows up on screen nine, and in how many re-prompts it took to get there. The other thing money buys is a canvas, where a change is a click instead of a whole file re-prompted. Neither is a moat, and the prompt below is the honest test of what they are worth to you.",
   "priorArt": [
     {

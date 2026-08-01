@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Plus",
     "basis": "monthly per seat",
+    "unit": "per-seat",
     "native": "12 USD",
     "source": "https://www.notion.com/pricing",
     "checkedOn": "2026-07-30",
@@ -37,7 +38,12 @@
     "integrations",
     "AI workspace context"
   ],
-  "moatType": "collaboration/sync/editor depth",
+  "moatTags": [
+    "collaboration",
+    "execution-polish",
+    "integrations"
+  ],
+  "moatNotes": "collaboration/sync/editor depth",
   "whyPeopleStillPay": "They pay for a shared workspace that nontechnical teammates can trust and understand.",
   "priorArt": [
     {

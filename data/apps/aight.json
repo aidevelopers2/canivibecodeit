@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Pro",
     "basis": "monthly",
+    "unit": "flat",
     "native": "4.99 USD",
     "source": "https://aight.cool/#pricing",
     "checkedOn": "2026-07-31",
@@ -36,7 +37,12 @@
     "pre-built agent/team templates and community skill browsing",
     "multi-device sync and App Store polish"
   ],
-  "moatType": "native polish/agent integrations/secure relay",
+  "moatTags": [
+    "execution-polish",
+    "integrations",
+    "scale-infra"
+  ],
+  "moatNotes": "native polish/agent integrations/secure relay",
   "whyPeopleStillPay": "They pay for one polished client that safely reaches several agent backends from anywhere, keeps sessions in sync, and handles notifications, voice, and approvals without maintaining a custom mobile integration.",
   "priorArt": [
     {

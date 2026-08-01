@@ -11,6 +11,7 @@
     "plan": "Standard",
     "kind": "fixed",
     "basis": "monthly individual plan",
+    "unit": "flat",
     "currency": "USD",
     "native": "$9.99/month",
     "source": "https://www.adobe.com/products/firefly/plans.html",
@@ -37,7 +38,12 @@
     "fast elastic inference",
     "safety, moderation, and mobile distribution"
   ],
-  "moatType": "proprietary model/inference",
+  "moatTags": [
+    "proprietary-models",
+    "scale-infra",
+    "content-rights"
+  ],
+  "moatNotes": "proprietary model/inference",
   "whyPeopleStillPay": "Adobe Firefly: The interface is replaceable. The subscription buys the model, aesthetic tuning, inference fleet, safety work, and rapid improvement.",
   "ongoingBurden": "Own model downloads, GPU compatibility, queueing, safety choices, storage, and changing model licences.",
   "priorArt": [

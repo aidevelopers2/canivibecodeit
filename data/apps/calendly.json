@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Standard",
     "basis": "monthly per seat",
+    "unit": "per-seat",
     "native": "12 USD",
     "source": "https://calendly.com/pricing",
     "checkedOn": "2026-07-30",
@@ -33,13 +34,17 @@
     "SMS reminders",
     "the integrations directory"
   ],
-  "moatType": "calendar integration/reliability",
+  "moatTags": [
+    "integrations",
+    "execution-polish"
+  ],
+  "moatNotes": "calendar integration/reliability",
   "whyPeopleStillPay": "They pay because double-booking or missed meeting invites is costly.",
   "priorArt": [
     {
       "name": "cal.com",
       "url": "https://github.com/calcom/cal.com",
-      "desc": "open-source Calendly \u2014 self-host and skip the OAuth pain"
+      "desc": "open-source Calendly — self-host and skip the OAuth pain"
     }
   ],
   "relatedSlugs": [
@@ -49,7 +54,7 @@
   ],
   "pagePriority": 5,
   "verifiedOneShot": false,
-  "notes": "The booking page is easy. Calendar-sync OAuth is where weekends go to die \u2014 be honest with yourself about that before starting.",
-  "prompt": "Build me a personal booking page like Calendly. Requirements:\n\n- A public /book page showing my available slots for the next 14 days; visitors\n  pick one, enter name + email + note, and get a confirmation page.\n- Availability = weekly rules in a config file (e.g. Mon\u2013Fri 10:00\u201317:00,\n  30-min slots, 15-min buffer between meetings, my timezone) minus existing\n  bookings, rendered in the visitor's local timezone.\n- Google Calendar sync via OAuth (credentials in .env): busy events block slots,\n  and confirmed bookings are created in my calendar with the visitor invited and\n  a Google Meet link attached. Warn me in the README: this OAuth app setup is\n  the fiddly part \u00b7 budget an hour for the Google Cloud console alone.\n- Email confirmations to both sides via SMTP creds in .env.\n- Cancel/reschedule links with a signed token in the email.\n- SQLite storage, one Node process, no accounts, no framework lock-in.",
+  "notes": "The booking page is easy. Calendar-sync OAuth is where weekends go to die — be honest with yourself about that before starting.",
+  "prompt": "Build me a personal booking page like Calendly. Requirements:\n\n- A public /book page showing my available slots for the next 14 days; visitors\n  pick one, enter name + email + note, and get a confirmation page.\n- Availability = weekly rules in a config file (e.g. Mon–Fri 10:00–17:00,\n  30-min slots, 15-min buffer between meetings, my timezone) minus existing\n  bookings, rendered in the visitor's local timezone.\n- Google Calendar sync via OAuth (credentials in .env): busy events block slots,\n  and confirmed bookings are created in my calendar with the visitor invited and\n  a Google Meet link attached. Warn me in the README: this OAuth app setup is\n  the fiddly part · budget an hour for the Google Cloud console alone.\n- Email confirmations to both sides via SMTP creds in .env.\n- Cancel/reschedule links with a signed token in the email.\n- SQLite storage, one Node process, no accounts, no framework lock-in.",
   "promptCurated": true
 }

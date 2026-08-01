@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Pro",
     "basis": "monthly",
+    "unit": "flat",
     "native": "69 USD",
     "source": "https://www.jasper.ai/pricing",
     "checkedOn": "2026-07-30",
@@ -35,7 +36,11 @@
     "integrations",
     "tuned UX for marketers"
   ],
-  "moatType": "workflow/governance/model wrapper",
+  "moatTags": [
+    "execution-polish",
+    "collaboration"
+  ],
+  "moatNotes": "workflow/governance/model wrapper",
   "whyPeopleStillPay": "They pay to scale marketing output while keeping brand consistency and approval workflows.",
   "priorArt": [
     {

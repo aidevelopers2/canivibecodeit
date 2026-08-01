@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Build",
     "basis": "usage based per call minute",
+    "unit": "usage",
     "native": "0.05 USD per call minute",
     "source": "https://vapi.ai/pricing",
     "checkedOn": "2026-07-31",
@@ -33,7 +34,11 @@
     "hosted simulations, evaluations, call logs, recordings, analytics, and retention controls",
     "enterprise SLAs, compliance add-ons, role controls, and data-residency options"
   ],
-  "moatType": "managed realtime and telephony operations plus control plane",
+  "moatTags": [
+    "scale-infra",
+    "integrations"
+  ],
+  "moatNotes": "managed realtime and telephony operations plus control plane",
   "whyPeopleStillPay": "They pay to move from a working voice demo to dependable production calling without operating SIP, RTP, WebRTC, agent workers, provider fallbacks, observability, and capacity themselves.",
   "priorArt": [
     {

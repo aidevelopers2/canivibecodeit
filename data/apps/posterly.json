@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Pro",
     "basis": "monthly",
+    "unit": "flat",
     "native": "15 USD",
     "source": "https://www.poster.ly/pricing",
     "checkedOn": "2026-07-30",
@@ -35,7 +36,12 @@
     "per-platform video/image transcoding tuned to each network's limits",
     "a hosted MCP server + REST API built for agents, not bolted on after the fact"
   ],
-  "moatType": "agent-native API/MCP surface + learned brand voice + platform upkeep",
+  "moatTags": [
+    "integrations",
+    "switching-costs",
+    "collaboration"
+  ],
+  "moatNotes": "agent-native API/MCP surface + learned brand voice + platform upkeep",
   "whyPeopleStillPay": "Anyone can wire an LLM to a caption box; keeping a voice model current against real engagement data, holding pre-approved OAuth apps for the platforms that gate access behind business verification, and exposing a stable MCP/API surface an agent can drive reliably are all ongoing work, not a one-time build. Agencies additionally pay for the client-review layer, which needs its own auth and approval state machine.",
   "priorArt": [
     {

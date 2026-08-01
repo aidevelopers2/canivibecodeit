@@ -11,6 +11,7 @@
     "plan": "Typical paid plan",
     "kind": "unknown",
     "basis": "paid plan; billing basis requires review",
+    "unit": "flat",
     "currency": "USD",
     "native": "Public paid plan exists; amount not safely recovered",
     "source": "https://feedhive.com/pricing",
@@ -36,7 +37,11 @@
     "calendar-provider edge cases and timezone correctness",
     "reliable direct publishing across networks"
   ],
-  "moatType": "platform APIs/distribution",
+  "moatTags": [
+    "integrations",
+    "collaboration"
+  ],
+  "moatNotes": "platform APIs/distribution",
   "whyPeopleStillPay": "FeedHive: Social tools survive because networks change APIs, permissions, formats, and anti-spam rules constantly.",
   "ongoingBurden": "Maintain OAuth, token refresh, media constraints, rate limits, scheduling, webhooks, retries, and platform policy compliance.",
   "priorArt": [

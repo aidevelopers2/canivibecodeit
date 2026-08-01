@@ -10,6 +10,7 @@
   "pricing": {
     "plan": "Hobby",
     "basis": "monthly",
+    "unit": "flat",
     "source": "https://swellai.com/pricing",
     "checkedOn": "2026-07-31",
     "confidence": "medium",
@@ -36,7 +37,11 @@
     "hosting distribution",
     "advanced mastering and support"
   ],
-  "moatType": "audio infrastructure, distribution, and production polish",
+  "moatTags": [
+    "scale-infra",
+    "execution-polish"
+  ],
+  "moatNotes": "audio infrastructure, distribution, and production polish",
   "replacementScope": "single-creator production tool",
   "ongoingBurden": "codec support, loudness standards, transcription, storage, feeds, analytics, and deliverability to directories",
   "whyPeopleStillPay": "People still pay for Swell AI because creators pay to remove fragile audio plumbing and publishing chores from a release schedule. The recurring cost buys codec support, loudness standards, transcription, storage, feeds, analytics, and deliverability to directories, not just the visible interface.",

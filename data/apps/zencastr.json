@@ -11,6 +11,7 @@
     "plan": "Grow",
     "kind": "fixed",
     "basis": "monthly creator plan",
+    "unit": "flat",
     "currency": "USD",
     "native": "$20/month",
     "source": "https://zencastr.com/pricing",
@@ -37,7 +38,11 @@
     "large-scale rendering",
     "distribution and podcast hosting"
   ],
-  "moatType": "media pipeline/hosting/distribution",
+  "moatTags": [
+    "scale-infra",
+    "execution-polish"
+  ],
+  "moatNotes": "media pipeline/hosting/distribution",
   "whyPeopleStillPay": "Zencastr: People pay to avoid codec failures, upload limits, rendering surprises, lost recordings, and distribution chores.",
   "ongoingBurden": "Maintain codecs, media probing, resumable processing, storage cleanup, exports, device permissions, and performance.",
   "priorArt": [

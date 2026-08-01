@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Starter",
     "basis": "monthly per seat",
+    "unit": "per-seat",
     "native": "10 USD",
     "source": "https://miro.com/pricing/",
     "checkedOn": "2026-07-30",
@@ -36,7 +37,12 @@
     "permissions",
     "enterprise controls"
   ],
-  "moatType": "collaboration/performance/templates",
+  "moatTags": [
+    "collaboration",
+    "execution-polish",
+    "integrations"
+  ],
+  "moatNotes": "collaboration/performance/templates",
   "whyPeopleStillPay": "They pay for workshops where dozens of people can join and everything still works.",
   "priorArt": [
     {

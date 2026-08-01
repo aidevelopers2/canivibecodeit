@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Business",
     "basis": "monthly per user",
+    "unit": "per-seat",
     "native": "18 USD",
     "source": "https://www.loom.com/pricing",
     "checkedOn": "2026-07-30",
@@ -36,7 +37,12 @@
     "workspace libraries",
     "browser extensions"
   ],
-  "moatType": "hosting/collaboration",
+  "moatTags": [
+    "scale-infra",
+    "collaboration",
+    "execution-polish"
+  ],
+  "moatNotes": "hosting/collaboration",
   "whyPeopleStillPay": "They pay because a Loom link works everywhere and preserves context for the team.",
   "priorArt": [
     {

@@ -11,6 +11,7 @@
     "plan": "Business",
     "kind": "custom",
     "basis": "custom quote",
+    "unit": "custom",
     "currency": "USD",
     "native": "Contact sales",
     "source": "https://workato.com/pricing",
@@ -36,7 +37,11 @@
     "OAuth app verification",
     "durable execution at scale"
   ],
-  "moatType": "connectors/auth/reliability",
+  "moatTags": [
+    "integrations",
+    "scale-infra"
+  ],
+  "moatNotes": "connectors/auth/reliability",
   "whyPeopleStillPay": "Workato: One automation is easy. Subscribers pay for maintained integrations, credentials, retries, observability, and someone else owning breakage.",
   "ongoingBurden": "Maintain OAuth, rate limits, webhooks, retries, queues, idempotency, logs, secret rotation, and third-party API changes.",
   "priorArt": [

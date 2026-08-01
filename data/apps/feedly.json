@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Pro",
     "basis": "monthly",
+    "unit": "flat",
     "native": "7 USD",
     "source": "https://docs.feedly.com/pricing",
     "checkedOn": "2026-07-30",
@@ -35,7 +36,12 @@
     "uptime",
     "polished reading UX"
   ],
-  "moatType": "data ingestion/polish",
+  "moatTags": [
+    "execution-polish",
+    "scale-infra",
+    "integrations"
+  ],
+  "moatNotes": "data ingestion/polish",
   "whyPeopleStillPay": "They pay to avoid maintaining hundreds of feeds and reader apps across devices.",
   "priorArt": [
     {

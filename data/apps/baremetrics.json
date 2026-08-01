@@ -11,6 +11,7 @@
     "plan": "Metrics",
     "kind": "fixed",
     "basis": "starting monthly subscription",
+    "unit": "flat",
     "currency": "USD",
     "native": "Starts at $129/month",
     "source": "https://baremetrics.com/pricing",
@@ -35,7 +36,11 @@
     "enterprise governance and integrations",
     "high-volume ingestion and retention"
   ],
-  "moatType": "ingestion/storage/reliability",
+  "moatTags": [
+    "scale-infra",
+    "execution-polish"
+  ],
+  "moatNotes": "ingestion/storage/reliability",
   "whyPeopleStillPay": "Baremetrics: Customers pay for trusted numbers, retention, privacy controls, and a pipeline that remains accurate while traffic and schemas change.",
   "ongoingBurden": "Own event schemas, ingestion, storage growth, sampling, bot filtering, identity, privacy requests, backups, and uptime.",
   "priorArt": [

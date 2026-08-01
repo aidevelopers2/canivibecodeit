@@ -10,6 +10,7 @@
   "pricing": {
     "plan": "Basic",
     "basis": "monthly",
+    "unit": "flat",
     "source": "https://planable.io/pricing",
     "checkedOn": "2026-07-31",
     "confidence": "high",
@@ -37,7 +38,11 @@
     "deep analytics",
     "team approvals and asset libraries"
   ],
-  "moatType": "API access, connector upkeep, and collaboration",
+  "moatTags": [
+    "integrations",
+    "collaboration"
+  ],
+  "moatNotes": "API access, connector upkeep, and collaboration",
   "replacementScope": "single-network scheduler",
   "ongoingBurden": "OAuth review, API policy changes, media limits, queues, retries, rate limits, webhooks, tokens, and moderation workflows",
   "whyPeopleStillPay": "People still pay for Planable because the scheduler is easy; staying approved and correct across constantly changing social APIs is the subscription. The recurring cost buys OAuth review, API policy changes, media limits, queues, retries, rate limits, webhooks, tokens, and moderation workflows, not just the visible interface.",

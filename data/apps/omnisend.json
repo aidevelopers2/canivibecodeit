@@ -11,6 +11,7 @@
     "plan": "Standard",
     "kind": "fixed",
     "basis": "starting monthly plan",
+    "unit": "flat",
     "currency": "USD",
     "native": "Starts at $16/month",
     "source": "https://omnisend.com/pricing",
@@ -37,7 +38,11 @@
     "payments, recommendations, and audience network",
     "sender reputation, deliverability, and suppression handling"
   ],
-  "moatType": "deliverability/reputation/network",
+  "moatTags": [
+    "scale-infra",
+    "execution-polish"
+  ],
+  "moatNotes": "deliverability/reputation/network",
   "whyPeopleStillPay": "Omnisend: The editor is trivial compared with inbox placement, compliance, reputation, unsubscribe handling, analytics, and audience growth infrastructure.",
   "ongoingBurden": "Own consent records, suppression lists, bounces, complaints, DNS, templates, accessibility, segmentation, and privacy requests.",
   "priorArt": [

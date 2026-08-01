@@ -11,6 +11,7 @@
     "plan": "Discover",
     "kind": "fixed",
     "basis": "monthly creator plan",
+    "unit": "flat",
     "currency": "USD",
     "native": "$49/month",
     "source": "https://tweethunter.io/pricing",
@@ -37,7 +38,11 @@
     "team approvals and asset workflows",
     "protection from API and policy changes"
   ],
-  "moatType": "platform APIs/distribution",
+  "moatTags": [
+    "integrations",
+    "execution-polish"
+  ],
+  "moatNotes": "platform APIs/distribution",
   "whyPeopleStillPay": "Tweet Hunter: Social tools survive because networks change APIs, permissions, formats, and anti-spam rules constantly.",
   "ongoingBurden": "Maintain OAuth, token refresh, media constraints, rate limits, scheduling, webhooks, retries, and platform policy compliance.",
   "priorArt": [

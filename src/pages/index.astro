@@ -105,6 +105,19 @@ const jsonld = [
       <button class="vchip yes" data-verdict="yes">YES</button>
       <button class="vchip kinda" data-verdict="kinda">KINDA</button>
       <button class="vchip no" data-verdict="no">NOT REALLY</button>
+      <span class="microlabel team-label">team of</span>
+      <input
+        type="number"
+        id="team-size"
+        class="team-size"
+        value="1"
+        min="1"
+        max="999"
+        step="1"
+        inputmode="numeric"
+        aria-label="Team size, recalculates per-seat prices"
+      />
+      <button class="vchip all" id="sort-toggle" data-sort="votes">sort: votes</button>
       <span class="note" id="filter-count"></span>
     </div>
     <div class="thead microlabel">
@@ -128,3 +141,34 @@ const jsonld = [
 
   <DigestCard source="home" />
 </Base>
+
+<style>
+  .team-label {
+    margin-left: 6px;
+  }
+
+  .team-size {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    width: 52px;
+    padding: 6px 8px;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    background: transparent;
+    color: var(--fg);
+    text-align: center;
+  }
+
+  .team-size:focus {
+    outline: none;
+    border-color: var(--primary);
+  }
+
+  @media (max-width: 760px) {
+    /* iOS zooms into any focused input with font-size below 16px */
+    .team-size {
+      font-size: 16px;
+      width: 62px;
+    }
+  }
+</style>

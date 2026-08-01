@@ -11,6 +11,7 @@
     "plan": "Typical paid plan",
     "kind": "unknown",
     "basis": "paid plan; billing basis requires review",
+    "unit": "flat",
     "currency": "USD",
     "native": "Public paid plan exists; amount not safely recovered",
     "source": "https://simplybook.me/en/pricing",
@@ -35,7 +36,11 @@
     "team routing and round robin",
     "reliable reminders and timezone edge cases"
   ],
-  "moatType": "OAuth/calendar reliability",
+  "moatTags": [
+    "integrations",
+    "execution-polish"
+  ],
+  "moatNotes": "OAuth/calendar reliability",
   "whyPeopleStillPay": "SimplyBook.me: People pay because a booking tool must never double-book them, leak private events, or send the wrong time to a client.",
   "ongoingBurden": "Maintain OAuth, timezone data, webhooks, idempotency, reminders, calendar-provider quirks, and uptime.",
   "priorArt": [

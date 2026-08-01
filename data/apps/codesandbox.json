@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Pro",
     "basis": "monthly",
+    "unit": "flat",
     "native": "12 USD",
     "source": "https://codesandbox.io/pricing",
     "checkedOn": "2026-07-30",
@@ -35,7 +36,11 @@
     "managed infrastructure",
     "integration polish"
   ],
-  "moatType": "cloud platform/collaboration",
+  "moatTags": [
+    "scale-infra",
+    "collaboration"
+  ],
+  "moatNotes": "cloud platform/collaboration",
   "whyPeopleStillPay": "They pay to avoid managing dev machines for experiments and previews.",
   "priorArt": [
     {

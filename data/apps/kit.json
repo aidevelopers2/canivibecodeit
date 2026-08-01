@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Creator",
     "basis": "monthly at 1k subscribers",
+    "unit": "flat",
     "native": "39 USD",
     "source": "https://kit.com/pricing",
     "checkedOn": "2026-07-30",
@@ -36,7 +37,12 @@
     "migrations",
     "support"
   ],
-  "moatType": "deliverability/growth/integrations",
+  "moatTags": [
+    "scale-infra",
+    "network-effects",
+    "integrations"
+  ],
+  "moatNotes": "deliverability/growth/integrations",
   "whyPeopleStillPay": "They pay because email marketing is part deliverability and part business workflow.",
   "priorArt": [
     {

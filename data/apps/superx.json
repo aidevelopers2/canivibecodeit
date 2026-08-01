@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Pro",
     "basis": "monthly",
+    "unit": "flat",
     "native": "49 USD",
     "source": "https://superx.so/pricing",
     "checkedOn": "2026-07-30",
@@ -33,7 +34,11 @@
     "the in-feed Chrome extension analytics",
     "multi-account management"
   ],
-  "moatType": "proprietary data + platform API costs",
+  "moatTags": [
+    "proprietary-data",
+    "integrations"
+  ],
+  "moatNotes": "proprietary data + platform API costs",
   "whyPeopleStillPay": "The X API meters every write before your first post, so the DIY version starts at a monthly API bill with none of the product. The parts that grow an account (knowing what performs in your niche, when to post it, and which conversations are worth joining) come from data SuperX has been collecting and modelling for years, not from code you can regenerate.",
   "priorArt": [
     {
@@ -42,7 +47,11 @@
       "desc": "open-source social scheduling, the nearest self-host starting point"
     }
   ],
-  "relatedSlugs": ["typefully", "buffer", "postiz"],
+  "relatedSlugs": [
+    "typefully",
+    "buffer",
+    "postiz"
+  ],
   "pagePriority": 4,
   "verifiedOneShot": false,
   "notes": "The site owner's own product. Listed at community request, judged by the same rubric as everything else.",

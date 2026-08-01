@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Files · Teams",
     "basis": "monthly, flat",
+    "unit": "flat",
     "native": "797 USD",
     "source": "https://www.cinesend.com/pricing",
     "checkedOn": "2026-07-30",
@@ -35,7 +36,12 @@
     "branded Apple TV, Roku, Fire TV, and smart TV apps for the screening room",
     "the audit trail and chain of custody a distribution contract asks for"
   ],
-  "moatType": "licensed DRM/forensic watermarking/rights holder trust",
+  "moatTags": [
+    "brand-trust",
+    "compliance-regulatory",
+    "scale-infra"
+  ],
+  "moatNotes": "licensed DRM/forensic watermarking/rights holder trust",
   "whyPeopleStillPay": "They pay to be allowed to hold the file. A distributor's security requirements are a contract term, not a preference, and the accepted vendor list is short on purpose. When a screener leaks, forensic watermarking turns a catastrophe into a phone call to one person, and that single capability justifies the whole line item. Nobody is paying 797 dollars a month for a download page.",
   "priorArt": [
     {

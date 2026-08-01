@@ -11,6 +11,7 @@
     "plan": "Personal",
     "kind": "annual-only",
     "basis": "annual storage subscription",
+    "unit": "flat",
     "currency": "USD",
     "native": "Annual storage plan with frequent promotions",
     "source": "https://idrive.com/pricing",
@@ -36,7 +37,11 @@
     "global network or redundant storage infrastructure",
     "identity, credit, or broker-removal operations"
   ],
-  "moatType": "security/infrastructure/trust",
+  "moatTags": [
+    "scale-infra",
+    "brand-trust"
+  ],
+  "moatNotes": "security/infrastructure/trust",
   "whyPeopleStillPay": "IDrive: Security subscriptions buy professional operations, audits, response capacity, redundancy, and accountability when something goes wrong.",
   "ongoingBurden": "Own threat modelling, key management, patching, backups, restore tests, incident response, privacy requests, and dependency security.",
   "priorArt": [

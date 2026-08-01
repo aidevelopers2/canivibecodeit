@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Starter",
     "basis": "monthly, per site (29 EUR converted)",
+    "unit": "flat",
     "native": "29 EUR",
     "source": "https://animam.ai/pricing",
     "checkedOn": "2026-07-30",
@@ -35,7 +36,11 @@
     "Email deliverability · a warmed sending domain is not something you prompt into existence",
     "The evening the model provider changes a default and your widget starts making things up"
   ],
-  "moatType": "operations/compliance/deliverability",
+  "moatTags": [
+    "scale-infra",
+    "execution-polish"
+  ],
+  "moatNotes": "operations/compliance/deliverability",
   "whyPeopleStillPay": "Because the demo is the easy half. A chat that answers is a weekend; a chat you can leave in front of customers for a year is an operations job · someone watches deliverability, re-crawls the site, keeps the model from inventing a price, and is there the day it breaks. People pay for the second half, and they are right to.",
   "priorArt": [
     {

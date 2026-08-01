@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Standard",
     "basis": "monthly",
+    "unit": "flat",
     "native": "29 USD",
     "source": "https://postiz.com/pricing",
     "checkedOn": "2026-07-30",
@@ -34,7 +35,11 @@
     "team approvals and collaboration",
     "AI content assistance"
   ],
-  "moatType": "social API/integration upkeep",
+  "moatTags": [
+    "integrations",
+    "collaboration"
+  ],
+  "moatNotes": "social API/integration upkeep",
   "whyPeopleStillPay": "The hosted version ships with platform-approved OAuth apps, so connecting Instagram, LinkedIn, or TikTok is a click instead of a developer-app review process. Social APIs break and change terms constantly; paying outsources that upkeep plus analytics, teams, and AI features.",
   "priorArt": [
     {

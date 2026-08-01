@@ -10,6 +10,7 @@
   "pricing": {
     "plan": "Essentials",
     "basis": "custom",
+    "unit": "custom",
     "source": "https://uservoice.com/plans",
     "checkedOn": "2026-07-31",
     "confidence": "high",
@@ -36,7 +37,12 @@
     "advanced research repository",
     "enterprise governance"
   ],
-  "moatType": "participant network, synthesis workflow, and collaboration",
+  "moatTags": [
+    "network-effects",
+    "collaboration",
+    "execution-polish"
+  ],
+  "moatNotes": "participant network, synthesis workflow, and collaboration",
   "replacementScope": "small-team feedback repository",
   "ongoingBurden": "recruitment, consent, scheduling, media storage, transcription, tagging consistency, notifications, search, and retention",
   "whyPeopleStillPay": "People still pay for UserVoice because people pay either for access to participants or for a research repository that keeps evidence usable across an organization. The recurring cost buys recruitment, consent, scheduling, media storage, transcription, tagging consistency, notifications, search, and retention, not just the visible interface.",

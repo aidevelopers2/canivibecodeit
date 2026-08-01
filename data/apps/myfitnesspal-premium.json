@@ -10,6 +10,7 @@
   "pricing": {
     "plan": "Premium",
     "basis": "monthly",
+    "unit": "flat",
     "source": "https://myfitnesspal.com/premium",
     "checkedOn": "2026-07-31",
     "confidence": "medium",
@@ -35,7 +36,12 @@
     "clinical validation",
     "large content library and social network"
   ],
-  "moatType": "hardware data, content, coaching, and trust",
+  "moatTags": [
+    "proprietary-data",
+    "integrations",
+    "execution-polish"
+  ],
+  "moatNotes": "hardware data, content, coaching, and trust",
   "replacementScope": "personal general-wellbeing tracker",
   "ongoingBurden": "sensor permissions, data quality, notifications, safety language, accessibility, sync, privacy, content review, and support",
   "whyPeopleStillPay": "People still pay for MyFitnessPal Premium because people pay for polished mobile capture, trusted content, hardware integration, and coaching rather than the basic logbook. The recurring cost buys sensor permissions, data quality, notifications, safety language, accessibility, sync, privacy, content review, and support, not just the visible interface.",

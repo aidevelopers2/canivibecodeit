@@ -10,6 +10,7 @@
   "pricing": {
     "plan": "Pro",
     "basis": "monthly",
+    "unit": "flat",
     "source": "https://recraft.ai/pricing",
     "checkedOn": "2026-07-31",
     "confidence": "medium",
@@ -36,7 +37,11 @@
     "licensed training data",
     "moderation and fast global delivery"
   ],
-  "moatType": "frontier models, compute, and data",
+  "moatTags": [
+    "proprietary-models",
+    "scale-infra"
+  ],
+  "moatNotes": "frontier models, compute, and data",
   "replacementScope": "local workflow manager, not a model replacement",
   "ongoingBurden": "GPU procurement, model licensing, safety filters, queueing, storage, and rapid model replacement",
   "whyPeopleStillPay": "People still pay for Recraft because the product value is the model and compute fleet, not the prompt box around it. The recurring cost buys GPU procurement, model licensing, safety filters, queueing, storage, and rapid model replacement, not just the visible interface.",

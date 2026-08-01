@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Pro",
     "basis": "monthly",
+    "unit": "flat",
     "native": "7 USD",
     "source": "https://todoist.com/pricing",
     "checkedOn": "2026-07-30",
@@ -34,7 +35,11 @@
     "integrations",
     "years of UX polish"
   ],
-  "moatType": "sync/polish",
+  "moatTags": [
+    "execution-polish",
+    "integrations"
+  ],
+  "moatNotes": "sync/polish",
   "whyPeopleStillPay": "They pay because task capture must be fast everywhere and reminders cannot miss.",
   "priorArt": [
     {

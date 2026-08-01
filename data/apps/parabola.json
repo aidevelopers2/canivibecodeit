@@ -11,6 +11,7 @@
     "plan": "Typical paid plan",
     "kind": "usage-based",
     "basis": "usage or capacity based",
+    "unit": "usage",
     "currency": "USD",
     "native": "Usage or capacity pricing; exact monthly cost varies",
     "source": "https://parabola.io/pricing",
@@ -35,7 +36,11 @@
     "hundreds of maintained connectors",
     "OAuth app verification"
   ],
-  "moatType": "connectors/auth/reliability",
+  "moatTags": [
+    "integrations",
+    "scale-infra"
+  ],
+  "moatNotes": "connectors/auth/reliability",
   "whyPeopleStillPay": "Parabola: One automation is easy. Subscribers pay for maintained integrations, credentials, retries, observability, and someone else owning breakage.",
   "ongoingBurden": "Maintain OAuth, rate limits, webhooks, retries, queues, idempotency, logs, secret rotation, and third-party API changes.",
   "priorArt": [

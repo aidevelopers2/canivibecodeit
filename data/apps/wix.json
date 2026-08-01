@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Core",
     "basis": "annual effective per month",
+    "unit": "flat",
     "native": "29 USD",
     "source": "https://www.wix.com/plans",
     "checkedOn": "2026-07-30",
@@ -36,7 +37,12 @@
     "support",
     "mobile apps"
   ],
-  "moatType": "templates/platform/hosting",
+  "moatTags": [
+    "scale-infra",
+    "execution-polish",
+    "content-rights"
+  ],
+  "moatNotes": "templates/platform/hosting",
   "whyPeopleStillPay": "They pay because one website project tends to become ten maintenance requests.",
   "priorArt": [
     {

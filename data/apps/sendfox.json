@@ -11,6 +11,7 @@
     "plan": "Lifetime licence",
     "kind": "one-time",
     "basis": "one-time",
+    "unit": "one-time",
     "currency": "USD",
     "native": "One-time lifetime offers vary",
     "source": "https://sendfox.com/pricing",
@@ -37,7 +38,11 @@
     "bounce, complaint, and suppression handling",
     "large-scale segmentation and automation"
   ],
-  "moatType": "deliverability/reputation/network",
+  "moatTags": [
+    "scale-infra",
+    "network-effects"
+  ],
+  "moatNotes": "deliverability/reputation/network",
   "whyPeopleStillPay": "SendFox: The editor is trivial compared with inbox placement, compliance, reputation, unsubscribe handling, analytics, and audience growth infrastructure.",
   "ongoingBurden": "Own consent records, suppression lists, bounces, complaints, DNS, templates, accessibility, segmentation, and privacy requests.",
   "priorArt": [

@@ -10,6 +10,7 @@
   "pricing": {
     "plan": "Builder",
     "basis": "monthly",
+    "unit": "flat",
     "source": "https://thunkable.com/pricing",
     "checkedOn": "2026-07-31",
     "confidence": "medium",
@@ -36,7 +37,12 @@
     "mobile app-store builds",
     "enterprise permissions and scale"
   ],
-  "moatType": "connectors, runtime reliability, and governance",
+  "moatTags": [
+    "integrations",
+    "scale-infra",
+    "execution-polish"
+  ],
+  "moatNotes": "connectors, runtime reliability, and governance",
   "replacementScope": "small-team internal app",
   "ongoingBurden": "schema migration, auth, permissions, connector drift, queues, deployments, backups, and auditability",
   "whyPeopleStillPay": "People still pay for Thunkable because the builder is only useful when its runtime, connectors, permissions, and deployments remain boring for years. The recurring cost buys schema migration, auth, permissions, connector drift, queues, deployments, backups, and auditability, not just the visible interface.",

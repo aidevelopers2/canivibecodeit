@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Launch",
     "basis": "annual effective per month",
+    "unit": "flat",
     "native": "79.17 USD",
     "source": "https://www.mightynetworks.com/",
     "checkedOn": "2026-07-30",
@@ -36,7 +37,11 @@
     "branded-app upgrade path",
     "support"
   ],
-  "moatType": "community/platform/mobile distribution",
+  "moatTags": [
+    "network-effects",
+    "execution-polish"
+  ],
+  "moatNotes": "community/platform/mobile distribution",
   "whyPeopleStillPay": "They pay because successful communities require ongoing admin, engagement, and mobile access.",
   "priorArt": [
     {

@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Standard",
     "basis": "monthly at 500 contacts",
+    "unit": "usage",
     "native": "20 USD",
     "source": "https://mailchimp.com/pricing/marketing/",
     "checkedOn": "2026-07-30",
@@ -37,7 +38,12 @@
     "compliance",
     "support"
   ],
-  "moatType": "deliverability/compliance/integrations",
+  "moatTags": [
+    "scale-infra",
+    "integrations",
+    "compliance-regulatory"
+  ],
+  "moatNotes": "deliverability/compliance/integrations",
   "whyPeopleStillPay": "They pay because email is business-critical and deliverability problems are expensive.",
   "priorArt": [
     {

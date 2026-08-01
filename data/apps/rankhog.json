@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Standard",
     "basis": "monthly per product",
+    "unit": "flat",
     "native": "99 USD",
     "source": "https://rankhog.com/#pricing",
     "checkedOn": "2026-07-30",
@@ -33,7 +34,11 @@
     "per-subreddit rule knowledge and pacing judgment",
     "shared accounts across a team, and the managed service"
   ],
-  "moatType": "account trust/platform enforcement",
+  "moatTags": [
+    "brand-trust",
+    "execution-polish"
+  ],
+  "moatNotes": "account trust/platform enforcement",
   "whyPeopleStillPay": "Because the failure mode is invisible and expensive. Getting a product mentioned on Reddit needs an account people and moderators already trust, and building one is weeks of participation before the first mention. People pay to skip the warm-up, to have posting happen through a real browser session instead of an API that gets flagged, and to have someone else carry the ban risk.",
   "priorArt": [
     {

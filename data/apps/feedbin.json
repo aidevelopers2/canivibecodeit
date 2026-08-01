@@ -11,6 +11,7 @@
     "plan": "Standard",
     "kind": "fixed",
     "basis": "monthly subscription",
+    "unit": "flat",
     "currency": "USD",
     "native": "$7/month",
     "source": "https://feedbin.com/",
@@ -36,7 +37,11 @@
     "resilient polling of malformed and rate-limited feeds",
     "licensed scholarly metadata"
   ],
-  "moatType": "data/import reliability",
+  "moatTags": [
+    "proprietary-data",
+    "execution-polish"
+  ],
+  "moatNotes": "data/import reliability",
   "whyPeopleStillPay": "Feedbin: Researchers pay for correct metadata, resilient importers, citation coverage, and workflows that survive publisher and browser changes.",
   "ongoingBurden": "Maintain parsers, deduplication, PDF extraction, citation styles, and legal access boundaries.",
   "priorArt": [

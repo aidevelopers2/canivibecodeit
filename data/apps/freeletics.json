@@ -10,6 +10,7 @@
   "pricing": {
     "plan": "Coach",
     "basis": "monthly equivalent",
+    "unit": "flat",
     "source": "https://freeletics.com/en/training/coach/get/",
     "checkedOn": "2026-07-31",
     "confidence": "low",
@@ -35,7 +36,11 @@
     "clinical validation",
     "large content library and social network"
   ],
-  "moatType": "hardware data, content, coaching, and trust",
+  "moatTags": [
+    "content-rights",
+    "execution-polish"
+  ],
+  "moatNotes": "hardware data, content, coaching, and trust",
   "replacementScope": "personal general-wellbeing tracker",
   "ongoingBurden": "sensor permissions, data quality, notifications, safety language, accessibility, sync, privacy, content review, and support",
   "whyPeopleStillPay": "People still pay for Freeletics because people pay for polished mobile capture, trusted content, hardware integration, and coaching rather than the basic logbook. The recurring cost buys sensor permissions, data quality, notifications, safety language, accessibility, sync, privacy, content review, and support, not just the visible interface.",

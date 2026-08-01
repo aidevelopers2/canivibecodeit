@@ -11,6 +11,7 @@
     "plan": "Mail Plus",
     "kind": "fixed",
     "basis": "monthly individual subscription",
+    "unit": "flat",
     "currency": "USD",
     "native": "$4.99/month",
     "source": "https://proton.me/mail/pricing",
@@ -37,7 +38,11 @@
     "team routing and shared inbox rules",
     "abuse response and security operations"
   ],
-  "moatType": "deliverability/security/integration",
+  "moatTags": [
+    "scale-infra",
+    "brand-trust"
+  ],
+  "moatNotes": "deliverability/security/integration",
   "whyPeopleStillPay": "Proton Mail Plus: Email is infrastructure. Customers pay to avoid lost messages, broken auth, spam problems, and the reputational cost of a flaky inbox.",
   "ongoingBurden": "Own OAuth refresh, IMAP quirks, encryption, spam handling, notification delivery, and provider policy changes.",
   "priorArt": [

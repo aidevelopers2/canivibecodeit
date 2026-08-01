@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Starter",
     "basis": "monthly",
+    "unit": "flat",
     "native": "24 USD",
     "source": "https://wireflow.ai/pricing",
     "checkedOn": "2026-07-31",
@@ -33,7 +34,12 @@
     "paid steps that never fire by accident, and jobs that survive a closed tab",
     "a library of ready-made pipelines to fork, and boards you can share"
   ],
-  "moatType": "collaborative editor depth and execution reliability",
+  "moatTags": [
+    "execution-polish",
+    "collaboration",
+    "integrations"
+  ],
+  "moatNotes": "collaborative editor depth and execution reliability",
   "whyPeopleStillPay": "Nobody vibecodes a keyframe timeline in a weekend. And the DIY failure mode is not that it breaks, it is that it keeps running while double-charging a call that 404'd or losing a render you already paid for.",
   "priorArt": [
     {
@@ -52,7 +58,11 @@
       "desc": "drag-and-drop LLM chains, self-hosted"
     }
   ],
-  "relatedSlugs": ["n8n-cloud", "krea", "runway"],
+  "relatedSlugs": [
+    "n8n-cloud",
+    "krea",
+    "runway"
+  ],
   "pagePriority": 3,
   "verifiedOneShot": false,
   "notes": "The graph is a weekend. The editor and the multiplayer are not · try ComfyUI first, and know that credits carry a margin over what the models cost at the provider.",

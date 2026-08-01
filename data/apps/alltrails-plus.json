@@ -10,6 +10,7 @@
   "pricing": {
     "plan": "Plus",
     "basis": "annual-equivalent",
+    "unit": "flat",
     "source": "https://alltrails.com/plus",
     "checkedOn": "2026-07-31",
     "confidence": "high",
@@ -36,7 +37,12 @@
     "crowdsourced trail intelligence",
     "booking, disruption support, and offline map fleet"
   ],
-  "moatType": "proprietary live data and network coverage",
+  "moatTags": [
+    "proprietary-data",
+    "network-effects",
+    "scale-infra"
+  ],
+  "moatNotes": "proprietary live data and network coverage",
   "replacementScope": "personal itinerary organizer",
   "ongoingBurden": "map licensing, fare feeds, reservation access, route freshness, disruptions, geocoding, caching, offline data, and support",
   "whyPeopleStillPay": "People still pay for AllTrails Plus because travel subscriptions sell current data and confidence during disruption, not just an itinerary list. The recurring cost buys map licensing, fare feeds, reservation access, route freshness, disruptions, geocoding, caching, offline data, and support, not just the visible interface.",

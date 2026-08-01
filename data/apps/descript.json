@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Hobbyist",
     "basis": "monthly",
+    "unit": "flat",
     "native": "24 USD",
     "source": "https://www.descript.com/pricing",
     "checkedOn": "2026-07-30",
@@ -35,7 +36,12 @@
     "cloud collaboration",
     "rendering reliability"
   ],
-  "moatType": "media pipeline/collaboration",
+  "moatTags": [
+    "execution-polish",
+    "proprietary-models",
+    "collaboration"
+  ],
+  "moatNotes": "media pipeline/collaboration",
   "whyPeopleStillPay": "They pay to avoid building and babysitting a media editor, not just for transcription.",
   "priorArt": [
     {

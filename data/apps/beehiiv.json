@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Scale",
     "basis": "monthly",
+    "unit": "flat",
     "native": "49 USD",
     "source": "https://www.beehiiv.com/pricing",
     "checkedOn": "2026-07-30",
@@ -37,7 +38,11 @@
     "paid newsletter tooling",
     "migrations"
   ],
-  "moatType": "deliverability/network/monetization",
+  "moatTags": [
+    "scale-infra",
+    "network-effects"
+  ],
+  "moatNotes": "deliverability/network/monetization",
   "whyPeopleStillPay": "They pay because audience growth and email reliability are harder than writing and sending HTML.",
   "priorArt": [
     {

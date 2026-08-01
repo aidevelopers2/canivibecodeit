@@ -11,6 +11,7 @@
     "plan": "Free storefront",
     "kind": "revenue-share",
     "basis": "fees per transaction and fulfilment",
+    "unit": "usage",
     "currency": "USD",
     "native": "No monthly fee; product and payment fees apply",
     "source": "https://fourthwall.com/pricing",
@@ -36,7 +37,12 @@
     "native apps and community moderation",
     "fulfilment, email, and affiliate ecosystems"
   ],
-  "moatType": "payments/network/compliance",
+  "moatTags": [
+    "compliance-regulatory",
+    "marketplace-liquidity",
+    "brand-trust"
+  ],
+  "moatNotes": "payments/network/compliance",
   "whyPeopleStillPay": "Fourthwall: Creators pay to outsource payments, tax complexity, disputes, deliverability, moderation, and the trust needed to convert strangers.",
   "ongoingBurden": "Own payments, webhooks, refunds, tax records, fraud, access control, file delivery, moderation, backups, and support.",
   "priorArt": [

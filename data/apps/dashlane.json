@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Premium",
     "basis": "annual effective per month",
+    "unit": "flat",
     "native": "4.99 USD",
     "source": "https://www.dashlane.com/pricing",
     "checkedOn": "2026-07-30",
@@ -36,7 +37,11 @@
     "sharing",
     "support"
   ],
-  "moatType": "security/trust/cross-platform",
+  "moatTags": [
+    "brand-trust",
+    "execution-polish"
+  ],
+  "moatNotes": "security/trust/cross-platform",
   "whyPeopleStillPay": "They pay for low-friction secure autofill and confidence that the vault will not be lost.",
   "priorArt": [
     {

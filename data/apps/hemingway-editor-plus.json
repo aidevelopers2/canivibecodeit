@@ -10,6 +10,7 @@
   "pricing": {
     "plan": "Plus 5K",
     "basis": "monthly",
+    "unit": "flat",
     "source": "https://hemingwayapp.com/plus",
     "checkedOn": "2026-07-31",
     "confidence": "medium",
@@ -35,7 +36,12 @@
     "browser and office-suite extensions",
     "team style guides"
   ],
-  "moatType": "polish, integrations, and proprietary language models",
+  "moatTags": [
+    "execution-polish",
+    "proprietary-models",
+    "integrations"
+  ],
+  "moatNotes": "polish, integrations, and proprietary language models",
   "replacementScope": "personal local editor",
   "ongoingBurden": "model quality, extension compatibility, dictionaries, releases, and sync",
   "whyPeopleStillPay": "People still pay for Hemingway Editor Plus because the paid tool is already present everywhere they write and its suggestions have been tuned across millions of documents. The recurring cost buys model quality, extension compatibility, dictionaries, releases, and sync, not just the visible interface.",

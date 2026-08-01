@@ -10,6 +10,7 @@
   "pricing": {
     "plan": "Pro",
     "basis": "annual-equivalent",
+    "unit": "flat",
     "source": "https://canarymail.io/pricing",
     "checkedOn": "2026-07-31",
     "confidence": "medium",
@@ -36,7 +37,11 @@
     "advanced team collaboration",
     "provider-specific AI and search"
   ],
-  "moatType": "mail infrastructure, integrations, and client polish",
+  "moatTags": [
+    "execution-polish",
+    "integrations"
+  ],
+  "moatNotes": "mail infrastructure, integrations, and client polish",
   "replacementScope": "personal desktop mail client",
   "ongoingBurden": "IMAP quirks, OAuth, MIME, threading, search, attachments, offline sync, notifications, secure storage, and provider changes",
   "whyPeopleStillPay": "People still pay for Canary Mail because an email client can be rebuilt; operating a trusted mail service with excellent deliverability cannot. The recurring cost buys IMAP quirks, OAuth, MIME, threading, search, attachments, offline sync, notifications, secure storage, and provider changes, not just the visible interface.",

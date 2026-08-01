@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Standard",
     "basis": "monthly",
+    "unit": "flat",
     "native": "15 USD",
     "source": "https://usefathom.com/pricing",
     "checkedOn": "2026-07-30",
@@ -36,7 +37,11 @@
     "support",
     "billing"
   ],
-  "moatType": "hosting/compliance positioning",
+  "moatTags": [
+    "scale-infra",
+    "brand-trust"
+  ],
+  "moatNotes": "hosting/compliance positioning",
   "whyPeopleStillPay": "They pay to avoid maintaining analytics infrastructure and privacy copy themselves.",
   "priorArt": [
     {

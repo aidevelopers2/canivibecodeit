@@ -11,6 +11,7 @@
     "plan": "Plus",
     "kind": "fixed",
     "basis": "per month billed annually",
+    "unit": "flat",
     "currency": "USD",
     "native": "$8/month billed annually; $12 monthly",
     "source": "https://focusmate.com/pricing",
@@ -37,7 +38,11 @@
     "bank, payment, tax, and reconciliation integrations",
     "cross-device sync"
   ],
-  "moatType": "polish/OS integration",
+  "moatTags": [
+    "network-effects",
+    "execution-polish"
+  ],
+  "moatNotes": "polish/OS integration",
   "whyPeopleStillPay": "Focusmate: People keep paying because a utility used dozens of times a day must be instant, predictable, and compatible with every OS update.",
   "ongoingBurden": "Track OS permission changes, shortcut conflicts, packaging, code signing, and regressions after system updates.",
   "priorArt": [

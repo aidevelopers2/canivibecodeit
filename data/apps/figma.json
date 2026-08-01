@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Professional Full seat",
     "basis": "monthly per seat",
+    "unit": "per-seat",
     "native": "20 USD",
     "source": "https://www.figma.com/pricing/",
     "checkedOn": "2026-07-30",
@@ -33,7 +34,12 @@
     "the plugin ecosystem",
     "ten years of canvas performance engineering"
   ],
-  "moatType": "collaboration/ecosystem/performance",
+  "moatTags": [
+    "collaboration",
+    "network-effects",
+    "execution-polish"
+  ],
+  "moatNotes": "collaboration/ecosystem/performance",
   "whyPeopleStillPay": "They pay because entire product/design teams coordinate inside the file, not because drawing rectangles is hard.",
   "priorArt": [
     {

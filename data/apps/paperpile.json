@@ -11,6 +11,7 @@
     "plan": "Regular",
     "kind": "annual-only",
     "basis": "annual individual licence",
+    "unit": "flat",
     "currency": "USD",
     "native": "Annual price is dynamically rendered",
     "source": "https://paperpile.com/pricing",
@@ -36,7 +37,12 @@
     "licensed scholarly metadata",
     "publisher-specific import reliability"
   ],
-  "moatType": "data/import reliability",
+  "moatTags": [
+    "proprietary-data",
+    "execution-polish",
+    "integrations"
+  ],
+  "moatNotes": "data/import reliability",
   "whyPeopleStillPay": "Paperpile: Researchers pay for correct metadata, resilient importers, citation coverage, and workflows that survive publisher and browser changes.",
   "ongoingBurden": "Maintain parsers, deduplication, PDF extraction, citation styles, and legal access boundaries.",
   "priorArt": [

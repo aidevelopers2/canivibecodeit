@@ -4,6 +4,7 @@
   "pricing": {
     "plan": null,
     "basis": "monthly",
+    "unit": "flat",
     "native": null,
     "source": null,
     "checkedOn": "2026-07-29",
@@ -11,11 +12,15 @@
     "notes": null
   },
   "verdictConfidence": "high",
-  "verdictSummary": "Email capture with a referral counter. This site's waitlist was built exactly this way \u2014 it took one prompt.",
+  "verdictSummary": "Email capture with a referral counter. This site's waitlist was built exactly this way — it took one prompt.",
   "coreLoopDIY": null,
   "diyTimeEstimate": "one sitting",
   "requirements": [],
-  "moatType": null,
+  "moatTags": [
+    "execution-polish",
+    "scale-infra"
+  ],
+  "moatNotes": null,
   "whyPeopleStillPay": null,
   "relatedSlugs": [],
   "pagePriority": 5,
@@ -27,12 +32,12 @@
   "category": "waitlists",
   "priceMonthly": 15,
   "verdict": "yes",
-  "notes": "Email capture with a referral counter. This site's waitlist was built exactly this way \u2014 it took one prompt.",
+  "notes": "Email capture with a referral counter. This site's waitlist was built exactly this way — it took one prompt.",
   "whatYouLose": [
     "their referral-widget templates",
     "built-in email blasts to the list",
     "spam filtering you didn't tune yourself"
   ],
   "priorArt": [],
-  "prompt": "Build me a waitlist signup system like GetWaitlist. Requirements:\n\n- A drop-in signup form (one HTML snippet I can paste into any landing page):\n  email field + submit, posting to /api/waitlist.\n- Server stores emails in SQLite with created_at, referral_code (short unique\n  slug per signup), and referred_by. Dedupe by email, honeypot field for bots,\n  rate-limit by IP.\n- After signup, show the user their position in line and a personal referral\n  link (?ref=CODE). Each signup arriving via their link moves them up 5 spots \u00b7\n  recompute position as base_position minus 5 \u00d7 referrals.\n- A /admin page (basic-auth from .env): count, growth chart drawn with a tiny\n  inline SVG (no chart libraries), CSV export, delete button per row.\n- No third-party services, no client-side JS frameworks. Node or Python, one\n  process, deploy instructions for a VPS behind a reverse proxy."
+  "prompt": "Build me a waitlist signup system like GetWaitlist. Requirements:\n\n- A drop-in signup form (one HTML snippet I can paste into any landing page):\n  email field + submit, posting to /api/waitlist.\n- Server stores emails in SQLite with created_at, referral_code (short unique\n  slug per signup), and referred_by. Dedupe by email, honeypot field for bots,\n  rate-limit by IP.\n- After signup, show the user their position in line and a personal referral\n  link (?ref=CODE). Each signup arriving via their link moves them up 5 spots ·\n  recompute position as base_position minus 5 × referrals.\n- A /admin page (basic-auth from .env): count, growth chart drawn with a tiny\n  inline SVG (no chart libraries), CSV export, delete button per row.\n- No third-party services, no client-side JS frameworks. Node or Python, one\n  process, deploy instructions for a VPS behind a reverse proxy."
 }

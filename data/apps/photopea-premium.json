@@ -11,6 +11,7 @@
     "plan": "Premium",
     "kind": "fixed",
     "basis": "monthly individual plan",
+    "unit": "flat",
     "currency": "USD",
     "native": "$5/month",
     "source": "https://photopea.com/premium",
@@ -36,7 +37,10 @@
     "cloud collaboration and mobile apps",
     "high-fidelity color, format, and export handling"
   ],
-  "moatType": "editor polish/assets/algorithms",
+  "moatTags": [
+    "execution-polish"
+  ],
+  "moatNotes": "editor polish/assets/algorithms",
   "whyPeopleStillPay": "Photopea Premium: Creative users pay for speed, output fidelity, nondestructive editing, and years of edge-case work hidden behind direct manipulation.",
   "ongoingBurden": "Maintain file-format compatibility, GPU and canvas performance, undo history, export quality, and platform-specific rendering.",
   "priorArt": [

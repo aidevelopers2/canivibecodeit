@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Starter",
     "basis": "monthly",
+    "unit": "flat",
     "native": "25 USD",
     "source": "https://later.com/pricing/",
     "checkedOn": "2026-07-30",
@@ -36,7 +37,11 @@
     "approvals",
     "mobile app"
   ],
-  "moatType": "social API/integration upkeep",
+  "moatTags": [
+    "integrations",
+    "execution-polish"
+  ],
+  "moatNotes": "social API/integration upkeep",
   "whyPeopleStillPay": "They pay because publishing workflows and API permissions are a moving target.",
   "priorArt": [
     {

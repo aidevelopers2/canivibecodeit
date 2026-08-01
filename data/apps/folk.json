@@ -10,6 +10,7 @@
   "pricing": {
     "plan": "Premium",
     "basis": "monthly per member",
+    "unit": "per-seat",
     "source": "https://folk.app/pricing",
     "checkedOn": "2026-07-31",
     "confidence": "high",
@@ -36,7 +37,12 @@
     "large integration ecosystem",
     "enterprise reporting"
   ],
-  "moatType": "integrations, data quality, and workflow lock-in",
+  "moatTags": [
+    "switching-costs",
+    "integrations",
+    "collaboration"
+  ],
+  "moatNotes": "integrations, data quality, and workflow lock-in",
   "replacementScope": "personal or very small-team CRM",
   "ongoingBurden": "deduplication, permissions, imports, sync, enrichment, email capture, automations, backups, and audit history",
   "whyPeopleStillPay": "People still pay for Folk because CRM value compounds as the system becomes the shared memory of every customer interaction and embeds itself in the rest of the stack. The recurring cost buys deduplication, permissions, imports, sync, enrichment, email capture, automations, backups, and audit history, not just the visible interface.",

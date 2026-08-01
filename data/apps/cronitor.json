@@ -4,6 +4,7 @@
   "pricing": {
     "plan": null,
     "basis": "monthly",
+    "unit": "flat",
     "native": null,
     "source": null,
     "checkedOn": "2026-07-29",
@@ -15,7 +16,11 @@
   "coreLoopDIY": null,
   "diyTimeEstimate": "one sitting",
   "requirements": [],
-  "moatType": null,
+  "moatTags": [
+    "scale-infra",
+    "integrations"
+  ],
+  "moatNotes": null,
   "whyPeopleStillPay": null,
   "relatedSlugs": [],
   "pagePriority": 5,
@@ -40,5 +45,5 @@
       "desc": "excellent open-source cron monitoring"
     }
   ],
-  "prompt": "Build me a cron-job monitor like Cronitor / Healthchecks. Requirements:\n\n- Each monitored job gets a unique ping URL (/ping/:uuid). The job's crontab\n  line just appends `&& curl -fsS <url>` \u00b7 document this.\n- Define jobs in SQLite via a basic-auth /admin page: name, expected period\n  (e.g. every 60 min) and grace time. Store every ping with timestamp.\n- A scheduler loop checks each job: if now > last_ping + period + grace, the job\n  is LATE \u2192 send one alert webhook (Discord/Slack/Telegram, URL in .env) with\n  the job name and how late it is. Alert again on recovery. No alert spam \u00b7\n  one per state change.\n- /admin dashboard: each job as a row with green/amber/red status dot, last ping\n  time (\"7 min ago\"), and a 24h ping histogram as inline SVG.\n- Support /ping/:uuid/fail for explicit failure reports with an optional body\n  shown in the alert.\n- Python or Node, single process, systemd unit included."
+  "prompt": "Build me a cron-job monitor like Cronitor / Healthchecks. Requirements:\n\n- Each monitored job gets a unique ping URL (/ping/:uuid). The job's crontab\n  line just appends `&& curl -fsS <url>` · document this.\n- Define jobs in SQLite via a basic-auth /admin page: name, expected period\n  (e.g. every 60 min) and grace time. Store every ping with timestamp.\n- A scheduler loop checks each job: if now > last_ping + period + grace, the job\n  is LATE → send one alert webhook (Discord/Slack/Telegram, URL in .env) with\n  the job name and how late it is. Alert again on recovery. No alert spam ·\n  one per state change.\n- /admin dashboard: each job as a row with green/amber/red status dot, last ping\n  time (\"7 min ago\"), and a 24h ping histogram as inline SVG.\n- Support /ping/:uuid/fail for explicit failure reports with an optional body\n  shown in the alert.\n- Python or Node, single process, systemd unit included."
 }

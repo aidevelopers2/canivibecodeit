@@ -83,6 +83,24 @@ export const CATEGORIES = {
   'writing-assistant': { label: 'Writing tools', emoji: '🖋️' },
 };
 
+// Why the original survives, structurally. 1–3 per app; the label is what the
+// site renders. Single source of truth for rendering and the validator.
+export const MOAT_TAGS = {
+  'network-effects': 'network effects',
+  'marketplace-liquidity': 'marketplace liquidity',
+  'proprietary-data': 'proprietary data',
+  'proprietary-models': 'proprietary models',
+  'switching-costs': 'switching costs',
+  'integrations': 'integrations',
+  'compliance-regulatory': 'compliance & regulation',
+  'brand-trust': 'brand & trust',
+  'scale-infra': 'infrastructure scale',
+  'hardware': 'hardware',
+  'collaboration': 'collaboration',
+  'content-rights': 'content & rights',
+  'execution-polish': 'execution polish',
+};
+
 export const VERDICTS = {
   yes: { label: 'YES', sub: 'one-shottable', color: 'yes' },
   kinda: { label: 'KINDA', sub: 'weekend project', color: 'kinda' },

@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Essentials",
     "basis": "monthly per channel",
+    "unit": "flat",
     "native": "6 USD",
     "source": "https://buffer.com/pricing",
     "checkedOn": "2026-07-30",
@@ -36,7 +37,11 @@
     "team queues",
     "platform policy changes"
   ],
-  "moatType": "social API/integration upkeep",
+  "moatTags": [
+    "integrations",
+    "execution-polish"
+  ],
+  "moatNotes": "social API/integration upkeep",
   "whyPeopleStillPay": "They pay because social APIs break and scheduling must be reliable.",
   "priorArt": [
     {

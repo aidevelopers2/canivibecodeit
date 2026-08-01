@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Core",
     "basis": "monthly",
+    "unit": "flat",
     "native": "12 USD",
     "source": "https://www.make.com/en/pricing",
     "checkedOn": "2026-07-30",
@@ -35,7 +36,11 @@
     "error handling",
     "team governance"
   ],
-  "moatType": "integrations/workflow engine",
+  "moatTags": [
+    "integrations",
+    "execution-polish"
+  ],
+  "moatNotes": "integrations/workflow engine",
   "whyPeopleStillPay": "They pay because workflows evolve and break; a maintained builder reduces the upkeep.",
   "priorArt": [
     {

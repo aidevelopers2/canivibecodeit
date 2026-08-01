@@ -11,6 +11,7 @@
     "plan": "Typical paid plan",
     "kind": "unknown",
     "basis": "paid plan; billing basis requires review",
+    "unit": "flat",
     "currency": "USD",
     "native": "Public paid plan exists; amount not safely recovered",
     "source": "https://letterdrop.com/pricing",
@@ -37,7 +38,11 @@
     "sender reputation and deliverability operations",
     "bounce, complaint, and suppression handling"
   ],
-  "moatType": "deliverability/reputation/network",
+  "moatTags": [
+    "scale-infra",
+    "network-effects"
+  ],
+  "moatNotes": "deliverability/reputation/network",
   "whyPeopleStillPay": "Letterdrop: The editor is trivial compared with inbox placement, compliance, reputation, unsubscribe handling, analytics, and audience growth infrastructure.",
   "ongoingBurden": "Own consent records, suppression lists, bounces, complaints, DNS, templates, accessibility, segmentation, and privacy requests.",
   "priorArt": [

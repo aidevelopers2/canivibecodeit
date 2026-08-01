@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Pro",
     "basis": "monthly per member",
+    "unit": "per-seat",
     "native": "20 USD",
     "source": "https://vercel.com/pricing",
     "checkedOn": "2026-07-30",
@@ -38,7 +39,11 @@
     "team workflows",
     "Next.js integration"
   ],
-  "moatType": "hosting/infrastructure",
+  "moatTags": [
+    "scale-infra",
+    "execution-polish"
+  ],
+  "moatNotes": "hosting/infrastructure",
   "whyPeopleStillPay": "They pay because deploys and previews are boring infrastructure that must not break.",
   "priorArt": [
     {

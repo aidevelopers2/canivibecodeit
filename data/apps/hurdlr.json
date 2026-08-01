@@ -11,6 +11,7 @@
     "plan": "Typical paid plan",
     "kind": "unknown",
     "basis": "paid plan; billing basis requires review",
+    "unit": "flat",
     "currency": "USD",
     "native": "Public paid plan exists; amount not safely recovered",
     "source": "https://hurdlr.com/pricing",
@@ -37,7 +38,12 @@
     "bank, payment, tax, and reconciliation integrations",
     "live bank feeds and payment rails"
   ],
-  "moatType": "banking/compliance/trust",
+  "moatTags": [
+    "compliance-regulatory",
+    "integrations",
+    "brand-trust"
+  ],
+  "moatNotes": "banking/compliance/trust",
   "whyPeopleStillPay": "Hurdlr: People pay because errors touch real money. Bank connections, reconciliation, tax changes, evidence, security, and support are the product.",
   "ongoingBurden": "Own data integrity, backups, import mapping, reconciliation, security, audit logs, tax changes, and recovery.",
   "priorArt": [

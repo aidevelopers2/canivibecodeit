@@ -11,6 +11,7 @@
     "plan": "Typical paid plan",
     "kind": "unknown",
     "basis": "paid plan; billing basis requires review",
+    "unit": "flat",
     "currency": "USD",
     "native": "Public paid plan exists; amount not safely recovered",
     "source": "https://boomerangapp.com/pricing",
@@ -36,7 +37,11 @@
     "provider-grade deliverability",
     "push reliability across devices"
   ],
-  "moatType": "deliverability/security/integration",
+  "moatTags": [
+    "integrations",
+    "scale-infra"
+  ],
+  "moatNotes": "deliverability/security/integration",
   "whyPeopleStillPay": "Boomerang for Gmail: Email is infrastructure. Customers pay to avoid lost messages, broken auth, spam problems, and the reputational cost of a flaky inbox.",
   "ongoingBurden": "Own OAuth refresh, IMAP quirks, encryption, spam handling, notification delivery, and provider policy changes.",
   "priorArt": [

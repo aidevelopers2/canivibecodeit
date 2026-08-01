@@ -11,6 +11,7 @@
     "plan": "Basic",
     "kind": "fixed",
     "basis": "monthly individual plan",
+    "unit": "flat",
     "currency": "USD",
     "native": "$5/month; lower annual-equivalent option",
     "source": "https://timehero.com/pricing",
@@ -35,7 +36,10 @@
     "vendor-maintained updates",
     "cross-device sync"
   ],
-  "moatType": "polish/OS integration",
+  "moatTags": [
+    "execution-polish"
+  ],
+  "moatNotes": "polish/OS integration",
   "whyPeopleStillPay": "TimeHero: People keep paying because a utility used dozens of times a day must be instant, predictable, and compatible with every OS update.",
   "ongoingBurden": "Track OS permission changes, shortcut conflicts, packaging, code signing, and regressions after system updates.",
   "priorArt": [

@@ -11,6 +11,7 @@
     "plan": "Pro",
     "kind": "fixed",
     "basis": "monthly form plan",
+    "unit": "flat",
     "currency": "USD",
     "native": "$19/month",
     "source": "https://cognitoforms.com/pricing",
@@ -35,7 +36,12 @@
     "spam and abuse defense at scale",
     "large integration and template catalog"
   ],
-  "moatType": "delivery/integrations/compliance",
+  "moatTags": [
+    "scale-infra",
+    "integrations",
+    "compliance-regulatory"
+  ],
+  "moatNotes": "delivery/integrations/compliance",
   "whyPeopleStillPay": "Cognito Forms: Customers pay for dependable collection, spam control, notifications, integrations, and confidence that responses will not disappear.",
   "ongoingBurden": "Own storage, webhooks, email delivery, spam, file uploads, privacy requests, schema changes, and uptime.",
   "priorArt": [

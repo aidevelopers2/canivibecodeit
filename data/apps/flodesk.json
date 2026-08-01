@@ -11,6 +11,7 @@
     "plan": "Email",
     "kind": "fixed",
     "basis": "monthly newsletter plan",
+    "unit": "flat",
     "currency": "USD",
     "native": "$38/month",
     "source": "https://flodesk.com/pricing",
@@ -37,7 +38,11 @@
     "bounce, complaint, and suppression handling",
     "large-scale segmentation and automation"
   ],
-  "moatType": "deliverability/reputation/network",
+  "moatTags": [
+    "scale-infra",
+    "network-effects"
+  ],
+  "moatNotes": "deliverability/reputation/network",
   "whyPeopleStillPay": "Flodesk: The editor is trivial compared with inbox placement, compliance, reputation, unsubscribe handling, analytics, and audience growth infrastructure.",
   "ongoingBurden": "Own consent records, suppression lists, bounces, complaints, DNS, templates, accessibility, segmentation, and privacy requests.",
   "priorArt": [

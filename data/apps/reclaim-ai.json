@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Starter",
     "basis": "monthly per seat",
+    "unit": "per-seat",
     "native": "12 USD",
     "source": "https://reclaim.ai/pricing",
     "checkedOn": "2026-07-30",
@@ -34,7 +35,11 @@
     "calendar edge cases",
     "uptime"
   ],
-  "moatType": "calendar integration/reliability",
+  "moatTags": [
+    "integrations",
+    "execution-polish"
+  ],
+  "moatNotes": "calendar integration/reliability",
   "whyPeopleStillPay": "They pay because calendar automation is only valuable if it never makes embarrassing mistakes.",
   "priorArt": [
     {

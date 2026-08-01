@@ -10,6 +10,7 @@
   "pricing": {
     "plan": "Teams Essentials",
     "basis": "monthly per user",
+    "unit": "per-seat",
     "source": "https://microsoft.com/microsoft-teams/compare-microsoft-teams-options",
     "checkedOn": "2026-07-31",
     "confidence": "high",
@@ -37,7 +38,10 @@
     "large webinars",
     "transcription, support, and compliance"
   ],
-  "moatType": "real-time media infrastructure and reliability",
+  "moatTags": [
+    "scale-infra"
+  ],
+  "moatNotes": "real-time media infrastructure and reliability",
   "replacementScope": "small private meeting service",
   "ongoingBurden": "TURN capacity, codecs, browsers, packet loss, scaling, recording, consent, abuse, monitoring, and incident response",
   "whyPeopleStillPay": "People still pay for Microsoft Teams Essentials because video products survive because real-time media quality and global reliability are infrastructure businesses, not weekend interface projects. The recurring cost buys TURN capacity, codecs, browsers, packet loss, scaling, recording, consent, abuse, monitoring, and incident response, not just the visible interface.",

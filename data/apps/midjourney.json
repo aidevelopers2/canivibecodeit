@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Basic",
     "basis": "monthly",
+    "unit": "flat",
     "native": "10 USD",
     "source": "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans",
     "checkedOn": "2026-07-30",
@@ -34,7 +35,11 @@
     "community/distribution",
     "model updates"
   ],
-  "moatType": "frontier model/compute/community",
+  "moatTags": [
+    "proprietary-models",
+    "network-effects"
+  ],
+  "moatNotes": "frontier model/compute/community",
   "whyPeopleStillPay": "They pay for the model and taste layer, not the chat box around it.",
   "priorArt": [
     {

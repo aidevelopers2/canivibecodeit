@@ -10,6 +10,7 @@
   "pricing": {
     "plan": "Creator",
     "basis": "monthly",
+    "unit": "flat",
     "source": "https://murf.ai/pricing",
     "checkedOn": "2026-07-31",
     "confidence": "medium",
@@ -36,7 +37,11 @@
     "real-time rendering fleet",
     "moderation, consent verification, and enterprise rights"
   ],
-  "moatType": "models, compute, rights, and safety operations",
+  "moatTags": [
+    "proprietary-models",
+    "content-rights"
+  ],
+  "moatNotes": "models, compute, rights, and safety operations",
   "replacementScope": "clearly labeled local synthetic-media tool",
   "ongoingBurden": "model licensing, consent records, impersonation risk, watermarking, GPU queues, media storage, abuse response, and rapid model changes",
   "whyPeopleStillPay": "People still pay for Murf because customers pay for output quality, production speed, licensed voices, consent workflows, and a provider that carries the operational risk. The recurring cost buys model licensing, consent records, impersonation risk, watermarking, GPU queues, media storage, abuse response, and rapid model changes, not just the visible interface.",

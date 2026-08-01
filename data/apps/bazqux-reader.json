@@ -11,6 +11,7 @@
     "plan": "Standard",
     "kind": "fixed",
     "basis": "annual-equivalent subscription",
+    "unit": "flat",
     "currency": "USD",
     "native": "$30/year",
     "source": "https://bazqux.com/",
@@ -36,7 +37,10 @@
     "publisher-specific import reliability",
     "citation graph scale"
   ],
-  "moatType": "data/import reliability",
+  "moatTags": [
+    "execution-polish"
+  ],
+  "moatNotes": "data/import reliability",
   "whyPeopleStillPay": "BazQux Reader: Researchers pay for correct metadata, resilient importers, citation coverage, and workflows that survive publisher and browser changes.",
   "ongoingBurden": "Maintain parsers, deduplication, PDF extraction, citation styles, and legal access boundaries.",
   "priorArt": [

@@ -10,6 +10,7 @@
   "pricing": {
     "plan": "Merchant of record",
     "basis": "transaction-based",
+    "unit": "usage",
     "source": "https://paddle.com/pricing",
     "checkedOn": "2026-07-31",
     "confidence": "high",
@@ -37,7 +38,11 @@
     "fraud operations",
     "advanced course and community tooling"
   ],
-  "moatType": "payments, tax, distribution, and operations",
+  "moatTags": [
+    "compliance-regulatory",
+    "brand-trust"
+  ],
+  "moatNotes": "payments, tax, distribution, and operations",
   "replacementScope": "single-creator storefront",
   "ongoingBurden": "checkout, webhooks, tax, refunds, fraud, entitlements, storage, email, accessibility, backups, and customer support",
   "whyPeopleStillPay": "People still pay for Paddle because creators pay to outsource the dangerous and tedious parts around money, delivery, tax, and customer access. The recurring cost buys checkout, webhooks, tax, refunds, fraud, entitlements, storage, email, accessibility, backups, and customer support, not just the visible interface.",

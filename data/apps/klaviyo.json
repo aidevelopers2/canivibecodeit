@@ -11,6 +11,7 @@
     "plan": "Email plan",
     "kind": "usage-based",
     "basis": "contact and send volume",
+    "unit": "usage",
     "currency": "USD",
     "native": "Price varies by active profiles and sending volume",
     "source": "https://klaviyo.com/pricing",
@@ -37,7 +38,11 @@
     "sender reputation, deliverability, and suppression handling",
     "sender reputation and deliverability operations"
   ],
-  "moatType": "deliverability/reputation/network",
+  "moatTags": [
+    "scale-infra",
+    "network-effects"
+  ],
+  "moatNotes": "deliverability/reputation/network",
   "whyPeopleStillPay": "Klaviyo: The editor is trivial compared with inbox placement, compliance, reputation, unsubscribe handling, analytics, and audience growth infrastructure.",
   "ongoingBurden": "Own consent records, suppression lists, bounces, complaints, DNS, templates, accessibility, segmentation, and privacy requests.",
   "priorArt": [

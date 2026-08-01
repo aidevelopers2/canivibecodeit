@@ -11,6 +11,7 @@
     "plan": "Typical paid plan",
     "kind": "usage-based",
     "basis": "usage or capacity based",
+    "unit": "usage",
     "currency": "USD",
     "native": "Usage or capacity pricing; exact monthly cost varies",
     "source": "https://gosquared.com/pricing",
@@ -35,7 +36,11 @@
     "bot and identity resolution",
     "session replay privacy tooling"
   ],
-  "moatType": "ingestion/storage/reliability",
+  "moatTags": [
+    "scale-infra",
+    "execution-polish"
+  ],
+  "moatNotes": "ingestion/storage/reliability",
   "whyPeopleStillPay": "GoSquared: Customers pay for trusted numbers, retention, privacy controls, and a pipeline that remains accurate while traffic and schemas change.",
   "ongoingBurden": "Own event schemas, ingestion, storage growth, sampling, bot filtering, identity, privacy requests, backups, and uptime.",
   "priorArt": [

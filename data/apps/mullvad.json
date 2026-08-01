@@ -11,6 +11,7 @@
     "plan": "Mullvad VPN",
     "kind": "fixed",
     "basis": "monthly VPN plan",
+    "unit": "flat",
     "currency": "EUR",
     "native": "€5/month",
     "source": "https://mullvad.net/en/pricing",
@@ -37,7 +38,11 @@
     "bank, payment, tax, and reconciliation integrations",
     "audited cryptography and incident response"
   ],
-  "moatType": "security/infrastructure/trust",
+  "moatTags": [
+    "brand-trust",
+    "scale-infra"
+  ],
+  "moatNotes": "security/infrastructure/trust",
   "whyPeopleStillPay": "Mullvad: Security subscriptions buy professional operations, audits, response capacity, redundancy, and accountability when something goes wrong.",
   "ongoingBurden": "Own threat modelling, key management, patching, backups, restore tests, incident response, privacy requests, and dependency security.",
   "priorArt": [],

@@ -11,6 +11,7 @@
     "plan": "Typical paid plan",
     "kind": "unknown",
     "basis": "paid plan; billing basis requires review",
+    "unit": "flat",
     "currency": "USD",
     "native": "Public paid plan exists; amount not safely recovered",
     "source": "https://missinglettr.com/pricing",
@@ -36,7 +37,10 @@
     "direct publishing reliability as platform APIs change",
     "reliable direct publishing across networks"
   ],
-  "moatType": "platform APIs/distribution",
+  "moatTags": [
+    "integrations"
+  ],
+  "moatNotes": "platform APIs/distribution",
   "whyPeopleStillPay": "Missinglettr: Social tools survive because networks change APIs, permissions, formats, and anti-spam rules constantly.",
   "ongoingBurden": "Maintain OAuth, token refresh, media constraints, rate limits, scheduling, webhooks, retries, and platform policy compliance.",
   "priorArt": [

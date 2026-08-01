@@ -11,6 +11,7 @@
     "plan": "Startup",
     "kind": "usage-based",
     "basis": "API usage",
+    "unit": "usage",
     "currency": "USD",
     "native": "API credits and knowledge-graph usage",
     "source": "https://diffbot.com/pricing",
@@ -36,7 +37,12 @@
     "hundreds of maintained connectors",
     "OAuth app verification"
   ],
-  "moatType": "connectors/auth/reliability",
+  "moatTags": [
+    "proprietary-data",
+    "scale-infra",
+    "integrations"
+  ],
+  "moatNotes": "connectors/auth/reliability",
   "whyPeopleStillPay": "Diffbot: One automation is easy. Subscribers pay for maintained integrations, credentials, retries, observability, and someone else owning breakage.",
   "ongoingBurden": "Maintain OAuth, rate limits, webhooks, retries, queues, idempotency, logs, secret rotation, and third-party API changes.",
   "priorArt": [

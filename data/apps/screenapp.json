@@ -11,6 +11,7 @@
     "plan": "Typical paid plan",
     "kind": "unknown",
     "basis": "paid plan; billing basis requires review",
+    "unit": "flat",
     "currency": "USD",
     "native": "Public paid plan exists; amount not safely recovered",
     "source": "https://screenapp.io/pricing",
@@ -35,7 +36,11 @@
     "cross-call team analytics",
     "meeting-bot auto-join"
   ],
-  "moatType": "capture/integrations/reliability",
+  "moatTags": [
+    "integrations",
+    "execution-polish"
+  ],
+  "moatNotes": "capture/integrations/reliability",
   "whyPeopleStillPay": "ScreenApp: Customers pay for automatic capture, dependable speaker handling, search across calls, and notes arriving without manual file wrangling.",
   "ongoingBurden": "Own audio capture permissions, diarization quality, model downloads, storage, privacy, and integrations.",
   "priorArt": [

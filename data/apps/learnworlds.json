@@ -11,6 +11,7 @@
     "plan": "Starter",
     "kind": "fixed",
     "basis": "monthly course plan plus transaction fee",
+    "unit": "usage",
     "currency": "USD",
     "native": "$29/month plus fee",
     "source": "https://learnworlds.com/pricing",
@@ -37,7 +38,12 @@
     "production codecs, rendering speed, and media templates",
     "marketplace discovery and buyer trust"
   ],
-  "moatType": "payments/network/compliance",
+  "moatTags": [
+    "compliance-regulatory",
+    "scale-infra",
+    "network-effects"
+  ],
+  "moatNotes": "payments/network/compliance",
   "whyPeopleStillPay": "LearnWorlds: Creators pay to outsource payments, tax complexity, disputes, deliverability, moderation, and the trust needed to convert strangers.",
   "ongoingBurden": "Own payments, webhooks, refunds, tax records, fraud, access control, file delivery, moderation, backups, and support.",
   "priorArt": [

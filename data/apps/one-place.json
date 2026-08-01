@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Pro",
     "basis": "monthly",
+    "unit": "flat",
     "native": "39 EUR + VAT",
     "source": "https://one-place.com/pricing",
     "checkedOn": "2026-07-31",
@@ -34,7 +35,11 @@
     "geo/POI enrichment and currency/unit normalization",
     "hosted boards, lead pipeline, sharing, and agentic search"
   ],
-  "moatType": "proprietary data/crawler scale/AI extraction pipeline",
+  "moatTags": [
+    "proprietary-data",
+    "scale-infra"
+  ],
+  "moatNotes": "proprietary data/crawler scale/AI extraction pipeline",
   "whyPeopleStillPay": "They pay because property search is a moving data pipeline: portals block scrapers, listing HTML changes, duplicates multiply, and the useful part is having the whole market normalized and searchable before a deal disappears.",
   "priorArt": [],
   "relatedSlugs": [

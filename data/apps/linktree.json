@@ -4,6 +4,7 @@
   "pricing": {
     "plan": null,
     "basis": "monthly",
+    "unit": "flat",
     "native": null,
     "source": null,
     "checkedOn": "2026-07-29",
@@ -15,7 +16,10 @@
   "coreLoopDIY": null,
   "diyTimeEstimate": "one sitting",
   "requirements": [],
-  "moatType": null,
+  "moatTags": [
+    "execution-polish"
+  ],
+  "moatNotes": null,
   "whyPeopleStillPay": null,
   "relatedSlugs": [],
   "pagePriority": 5,
@@ -41,5 +45,5 @@
       "desc": "open-source link page, 100+ branded buttons"
     }
   ],
-  "prompt": "Build me a link-in-bio page to replace Linktree. Requirements:\n\n- A single static page: avatar, name, short bio, and a list of link buttons defined\n  in one links.json file (title, url, optional emoji). Editing the JSON is the CMS.\n- Clean mobile-first design, dark mode via prefers-color-scheme, subtle hover states.\n  No framework needed \u00b7 one HTML file with embedded CSS is fine, or Astro if you must.\n- Add click tracking with zero third parties: each link goes through a /go/:slug\n  redirect that appends a line to a local clicks.log (or a SQLite row) then 302s.\n  Add a /stats page (basic-auth from .env) showing clicks per link.\n- Proper OG tags + generated OG image so the page previews well when shared.\n- Include deploy instructions for a plain VPS with Caddy or nginx."
+  "prompt": "Build me a link-in-bio page to replace Linktree. Requirements:\n\n- A single static page: avatar, name, short bio, and a list of link buttons defined\n  in one links.json file (title, url, optional emoji). Editing the JSON is the CMS.\n- Clean mobile-first design, dark mode via prefers-color-scheme, subtle hover states.\n  No framework needed · one HTML file with embedded CSS is fine, or Astro if you must.\n- Add click tracking with zero third parties: each link goes through a /go/:slug\n  redirect that appends a line to a local clicks.log (or a SQLite row) then 302s.\n  Add a /stats page (basic-auth from .env) showing clicks per link.\n- Proper OG tags + generated OG image so the page previews well when shared.\n- Include deploy instructions for a plain VPS with Caddy or nginx."
 }

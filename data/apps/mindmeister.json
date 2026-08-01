@@ -11,6 +11,7 @@
     "plan": "Typical paid plan",
     "kind": "unknown",
     "basis": "paid plan; billing basis requires review",
+    "unit": "flat",
     "currency": "USD",
     "native": "Public paid plan exists; amount not safely recovered",
     "source": "https://mindmeister.com/pricing",
@@ -35,7 +36,11 @@
     "presentation and enterprise controls",
     "multiplayer cursors and comments"
   ],
-  "moatType": "interaction polish/collaboration",
+  "moatTags": [
+    "execution-polish",
+    "collaboration"
+  ],
+  "moatNotes": "interaction polish/collaboration",
   "whyPeopleStillPay": "MindMeister: The shapes are easy; customers pay for low-friction editing, reliable exports, collaboration, and a canvas that never fights them.",
   "ongoingBurden": "Own geometry, selection behavior, undo, clipboard interoperability, export fidelity, accessibility, and browser performance.",
   "priorArt": [

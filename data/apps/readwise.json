@@ -10,6 +10,7 @@
   "pricing": {
     "plan": "Readwise Full",
     "basis": "monthly",
+    "unit": "flat",
     "source": "https://readwise.io/pricing",
     "checkedOn": "2026-07-31",
     "confidence": "high",
@@ -36,7 +37,12 @@
     "high-quality recommendation graph",
     "licensed full-text feeds"
   ],
-  "moatType": "capture polish, sync, and content partnerships",
+  "moatTags": [
+    "integrations",
+    "execution-polish",
+    "content-rights"
+  ],
+  "moatNotes": "capture polish, sync, and content partnerships",
   "replacementScope": "personal reading archive",
   "ongoingBurden": "feed quirks, parsing, paywalls, canonical URLs, deduplication, images, search, sync, browser extensions, and publisher changes",
   "whyPeopleStillPay": "People still pay for Readwise because people pay when capture works everywhere, reading state syncs instantly, and the archive remains clean without constant parser repairs. The recurring cost buys feed quirks, parsing, paywalls, canonical URLs, deduplication, images, search, sync, browser extensions, and publisher changes, not just the visible interface.",

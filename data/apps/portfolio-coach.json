@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "AI credits",
     "basis": "usage-based top-up",
+    "unit": "usage",
     "native": "minimum 5 GBP top-up",
     "source": "https://portfoliocoach.co.uk",
     "checkedOn": "2026-07-31",
@@ -33,7 +34,12 @@
     "maintained UK tax and estate-planning assumptions",
     "hosted AI reviews with current web context"
   ],
-  "moatType": "financial data correctness + maintained UK rules + hosted convenience",
+  "moatTags": [
+    "proprietary-data",
+    "compliance-regulatory",
+    "execution-polish"
+  ],
+  "moatNotes": "financial data correctness + maintained UK rules + hosted convenience",
   "whyPeopleStillPay": "The core tracker is free to start. Paid AI credits cover the convenient part: a hosted coach already connected to the household's live holdings, while the product maintains pricing, imports, security boundaries, and UK planning logic.",
   "priorArt": [
     {

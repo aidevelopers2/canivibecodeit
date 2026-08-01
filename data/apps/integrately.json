@@ -10,6 +10,7 @@
   "pricing": {
     "plan": "Starter",
     "basis": "monthly",
+    "unit": "flat",
     "source": "https://integrately.com/pricing",
     "checkedOn": "2026-07-31",
     "confidence": "high",
@@ -37,7 +38,11 @@
     "schema-drift handling",
     "high-scale durable execution and support"
   ],
-  "moatType": "connector breadth and execution reliability",
+  "moatTags": [
+    "integrations",
+    "scale-infra"
+  ],
+  "moatNotes": "connector breadth and execution reliability",
   "replacementScope": "two-service personal automation",
   "ongoingBurden": "OAuth review, token refresh, webhooks, polling, schemas, retries, idempotency, queues, secrets, rate limits, observability, and upgrades",
   "whyPeopleStillPay": "People still pay for Integrately because one automation is easy; maintaining hundreds of connectors and making every run recoverable is the business. The recurring cost buys OAuth review, token refresh, webhooks, polling, schemas, retries, idempotency, queues, secrets, rate limits, observability, and upgrades, not just the visible interface.",

@@ -10,6 +10,7 @@
   "pricing": {
     "plan": "Launch",
     "basis": "monthly",
+    "unit": "flat",
     "source": "https://clay.com/pricing",
     "checkedOn": "2026-07-31",
     "confidence": "medium",
@@ -37,7 +38,12 @@
     "deliverability reputation",
     "large-scale enrichment and compliance tooling"
   ],
-  "moatType": "proprietary data, deliverability, and network effects",
+  "moatTags": [
+    "proprietary-data",
+    "scale-infra",
+    "network-effects"
+  ],
+  "moatNotes": "proprietary data, deliverability, and network effects",
   "replacementScope": "small permission-based outreach console",
   "ongoingBurden": "consent records, suppression lists, DNS, bounces, reputation, abuse complaints, provider limits, and changing email rules",
   "whyPeopleStillPay": "People still pay for Clay because the durable value is accurate contact data and deliverability infrastructure; a sequence editor alone is not the product. The recurring cost buys consent records, suppression lists, DNS, bounces, reputation, abuse complaints, provider limits, and changing email rules, not just the visible interface.",

@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "SEO Pro",
     "basis": "monthly",
+    "unit": "flat",
     "native": "139.95 USD",
     "source": "https://www.semrush.com/pricing/seo-ai-search/",
     "checkedOn": "2026-07-30",
@@ -37,7 +38,11 @@
     "integrations",
     "data freshness"
   ],
-  "moatType": "proprietary data/crawler scale",
+  "moatTags": [
+    "proprietary-data",
+    "scale-infra"
+  ],
+  "moatNotes": "proprietary data/crawler scale",
   "whyPeopleStillPay": "They pay for market data and competitive intelligence that a solo builder cannot cheaply recreate.",
   "priorArt": [
     {

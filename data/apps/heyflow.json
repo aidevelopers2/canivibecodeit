@@ -11,6 +11,7 @@
     "plan": "Basic",
     "kind": "fixed",
     "basis": "monthly interactive-form plan",
+    "unit": "flat",
     "currency": "USD",
     "native": "$45/month",
     "source": "https://heyflow.com/pricing",
@@ -35,7 +36,12 @@
     "enterprise workflow logic",
     "spam and abuse defense at scale"
   ],
-  "moatType": "delivery/integrations/compliance",
+  "moatTags": [
+    "scale-infra",
+    "integrations",
+    "compliance-regulatory"
+  ],
+  "moatNotes": "delivery/integrations/compliance",
   "whyPeopleStillPay": "Heyflow: Customers pay for dependable collection, spam control, notifications, integrations, and confidence that responses will not disappear.",
   "ongoingBurden": "Own storage, webhooks, email delivery, spam, file uploads, privacy requests, schema changes, and uptime.",
   "priorArt": [

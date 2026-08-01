@@ -11,6 +11,7 @@
     "plan": "Essentials",
     "kind": "fixed",
     "basis": "monthly social plan",
+    "unit": "flat",
     "currency": "USD",
     "native": "$30/month",
     "source": "https://socialpilot.co/plans",
@@ -37,7 +38,11 @@
     "calendar-provider edge cases and timezone correctness",
     "reliable direct publishing across networks"
   ],
-  "moatType": "platform APIs/distribution",
+  "moatTags": [
+    "integrations",
+    "collaboration"
+  ],
+  "moatNotes": "platform APIs/distribution",
   "whyPeopleStillPay": "SocialPilot: Social tools survive because networks change APIs, permissions, formats, and anti-spam rules constantly.",
   "ongoingBurden": "Maintain OAuth, token refresh, media constraints, rate limits, scheduling, webhooks, retries, and platform policy compliance.",
   "priorArt": [

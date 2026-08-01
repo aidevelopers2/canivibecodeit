@@ -10,6 +10,7 @@
   "pricing": {
     "plan": "Capture One Pro",
     "basis": "monthly",
+    "unit": "flat",
     "source": "https://captureone.com/pricing",
     "checkedOn": "2026-07-31",
     "confidence": "medium",
@@ -36,7 +37,11 @@
     "large AI models",
     "camera and print ecosystem"
   ],
-  "moatType": "image pipeline quality, models, and workflow polish",
+  "moatTags": [
+    "execution-polish",
+    "proprietary-models"
+  ],
+  "moatNotes": "image pipeline quality, models, and workflow polish",
   "replacementScope": "personal local photo catalog",
   "ongoingBurden": "raw codecs, color management, metadata, previews, face models, GPU support, storage, backups, sync, and export fidelity",
   "whyPeopleStillPay": "People still pay for Capture One because photographers pay because image quality, catalog safety, and fast handling of huge libraries matter more than cloning sliders. The recurring cost buys raw codecs, color management, metadata, previews, face models, GPU support, storage, backups, sync, and export fidelity, not just the visible interface.",

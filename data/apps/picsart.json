@@ -11,6 +11,7 @@
     "plan": "Plus",
     "kind": "fixed",
     "basis": "monthly individual plan",
+    "unit": "flat",
     "currency": "USD",
     "native": "$13/month",
     "source": "https://picsart.com/pricing",
@@ -37,7 +38,10 @@
     "the vendor's proprietary model quality",
     "licensed training data and style tuning"
   ],
-  "moatType": "proprietary model/inference",
+  "moatTags": [
+    "proprietary-models"
+  ],
+  "moatNotes": "proprietary model/inference",
   "whyPeopleStillPay": "Picsart: The interface is replaceable. The subscription buys the model, aesthetic tuning, inference fleet, safety work, and rapid improvement.",
   "ongoingBurden": "Own model downloads, GPU compatibility, queueing, safety choices, storage, and changing model licences.",
   "priorArt": [

@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Pro",
     "basis": "monthly",
+    "unit": "flat",
     "native": "39 USD",
     "source": "https://verifieddr.com/pricing",
     "checkedOn": "2026-07-30",
@@ -34,7 +35,12 @@
     "managed refresh jobs and alerts",
     "traffic estimates and competitor data"
   ],
-  "moatType": "data access/network/operations",
+  "moatTags": [
+    "proprietary-data",
+    "network-effects",
+    "integrations"
+  ],
+  "moatNotes": "data access/network/operations",
   "whyPeopleStillPay": "They pay for verified backlink and traffic data, cross-model checks, historical monitoring, and a partner network without maintaining API integrations and scheduled jobs.",
   "priorArt": [],
   "relatedSlugs": [

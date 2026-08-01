@@ -11,6 +11,7 @@
     "plan": "Enterprise",
     "kind": "custom",
     "basis": "custom quote",
+    "unit": "custom",
     "currency": "USD",
     "native": "Contact sales",
     "source": "https://tray.ai/pricing",
@@ -36,7 +37,11 @@
     "schema drift handling and enterprise controls",
     "hundreds of maintained connectors"
   ],
-  "moatType": "connectors/auth/reliability",
+  "moatTags": [
+    "integrations",
+    "scale-infra"
+  ],
+  "moatNotes": "connectors/auth/reliability",
   "whyPeopleStillPay": "Tray.io: One automation is easy. Subscribers pay for maintained integrations, credentials, retries, observability, and someone else owning breakage.",
   "ongoingBurden": "Maintain OAuth, rate limits, webhooks, retries, queues, idempotency, logs, secret rotation, and third-party API changes.",
   "priorArt": [

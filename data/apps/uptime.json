@@ -4,6 +4,7 @@
   "pricing": {
     "plan": null,
     "basis": "monthly",
+    "unit": "flat",
     "native": null,
     "source": null,
     "checkedOn": "2026-07-29",
@@ -15,7 +16,11 @@
   "coreLoopDIY": null,
   "diyTimeEstimate": "one sitting",
   "requirements": [],
-  "moatType": null,
+  "moatTags": [
+    "scale-infra",
+    "execution-polish"
+  ],
+  "moatNotes": null,
   "whyPeopleStillPay": null,
   "relatedSlugs": [],
   "pagePriority": 5,

@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Readwise Full",
     "basis": "monthly",
+    "unit": "flat",
     "native": "12.99 USD",
     "source": "https://readwise.io/pricing/reader",
     "checkedOn": "2026-07-30",
@@ -36,7 +37,12 @@
     "spaced repetition",
     "exports"
   ],
-  "moatType": "capture/sync/integrations",
+  "moatTags": [
+    "integrations",
+    "execution-polish",
+    "switching-costs"
+  ],
+  "moatNotes": "capture/sync/integrations",
   "whyPeopleStillPay": "They pay because all reading inputs flow into one durable highlight system.",
   "priorArt": [
     {

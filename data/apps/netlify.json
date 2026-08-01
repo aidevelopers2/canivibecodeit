@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Pro",
     "basis": "monthly",
+    "unit": "flat",
     "native": "20 USD",
     "source": "https://www.netlify.com/pricing/",
     "checkedOn": "2026-07-30",
@@ -36,7 +37,11 @@
     "team workflows",
     "uptime/support"
   ],
-  "moatType": "hosting/infrastructure",
+  "moatTags": [
+    "scale-infra",
+    "execution-polish"
+  ],
+  "moatNotes": "hosting/infrastructure",
   "whyPeopleStillPay": "They pay because simple sites still need dependable CI/CD, routing, and previews.",
   "priorArt": [
     {

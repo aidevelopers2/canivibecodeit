@@ -11,6 +11,7 @@
     "plan": "Premium",
     "kind": "fixed",
     "basis": "annual-equivalent WordPress licence",
+    "unit": "flat",
     "currency": "USD",
     "native": "$99/year",
     "source": "https://yoast.com/wordpress/plugins/seo-premium/",
@@ -36,7 +37,11 @@
     "fresh rank and clickstream data",
     "large-scale crawling infrastructure"
   ],
-  "moatType": "proprietary data/index/crawl scale",
+  "moatTags": [
+    "proprietary-data",
+    "execution-polish"
+  ],
+  "moatNotes": "proprietary data/index/crawl scale",
   "whyPeopleStillPay": "Yoast SEO Premium: The dashboard is reproducible; the expensive part is continuously collecting, cleaning, storing, and defending a useful index of the web.",
   "ongoingBurden": "Maintain crawling etiquette, parsers, rendering, rate limits, search-engine changes, data freshness, storage, and reporting logic.",
   "priorArt": [

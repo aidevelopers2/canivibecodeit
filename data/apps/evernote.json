@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Starter",
     "basis": "monthly",
+    "unit": "flat",
     "native": "14.99 USD",
     "source": "https://evernote.com/compare-plans",
     "checkedOn": "2026-07-30",
@@ -35,7 +36,11 @@
     "import/export edge cases",
     "long-term reliability"
   ],
-  "moatType": "sync/capture ecosystem",
+  "moatTags": [
+    "switching-costs",
+    "execution-polish"
+  ],
+  "moatNotes": "sync/capture ecosystem",
   "whyPeopleStillPay": "They pay because all old notes, attachments, scans, and clipped pages are already there.",
   "priorArt": [
     {

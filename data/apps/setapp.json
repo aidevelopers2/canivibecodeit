@@ -10,6 +10,7 @@
   "pricing": {
     "plan": "Mac",
     "basis": "monthly",
+    "unit": "flat",
     "source": "https://setapp.com/pricing",
     "checkedOn": "2026-07-31",
     "confidence": "high",
@@ -35,7 +36,11 @@
     "cross-device sync",
     "commercial support and rapid compatibility fixes"
   ],
-  "moatType": "OS integration polish and maintenance",
+  "moatTags": [
+    "content-rights",
+    "execution-polish"
+  ],
+  "moatNotes": "OS integration polish and maintenance",
   "replacementScope": "single-purpose local Mac app",
   "ongoingBurden": "permissions, accessibility APIs, sandboxing, signing, notarization, OS regressions, updates, backups, and support",
   "whyPeopleStillPay": "People still pay for Setapp because small utilities are technically reproducible, but customers pay for polish and immediate fixes when an OS update breaks a daily habit. The recurring cost buys permissions, accessibility APIs, sandboxing, signing, notarization, OS regressions, updates, backups, and support, not just the visible interface.",

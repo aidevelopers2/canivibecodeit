@@ -11,6 +11,7 @@
     "plan": "PRO",
     "kind": "fixed",
     "basis": "annual-equivalent WordPress licence",
+    "unit": "flat",
     "currency": "USD",
     "native": "About $6.99/month billed annually",
     "source": "https://rankmath.com/pricing",
@@ -36,7 +37,11 @@
     "historical competitor datasets and support",
     "fresh proprietary keyword, backlink, or ranking data"
   ],
-  "moatType": "proprietary data/index/crawl scale",
+  "moatTags": [
+    "proprietary-data",
+    "scale-infra"
+  ],
+  "moatNotes": "proprietary data/index/crawl scale",
   "whyPeopleStillPay": "Rank Math PRO: The dashboard is reproducible; the expensive part is continuously collecting, cleaning, storing, and defending a useful index of the web.",
   "ongoingBurden": "Maintain crawling etiquette, parsers, rendering, rate limits, search-engine changes, data freshness, storage, and reporting logic.",
   "priorArt": [

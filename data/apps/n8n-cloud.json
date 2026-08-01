@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Starter",
     "basis": "monthly",
+    "unit": "flat",
     "native": "24 USD estimate / EUR source",
     "source": "https://n8n.io/pricing/",
     "checkedOn": "2026-07-30",
@@ -36,7 +37,10 @@
     "reduced ops burden",
     "team/admin features"
   ],
-  "moatType": "open-source core/hosting",
+  "moatTags": [
+    "scale-infra"
+  ],
+  "moatNotes": "open-source core/hosting",
   "whyPeopleStillPay": "They pay to avoid maintaining an automation server that their business workflows depend on.",
   "priorArt": [
     {

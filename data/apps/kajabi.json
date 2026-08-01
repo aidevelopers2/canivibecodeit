@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Basic",
     "basis": "monthly",
+    "unit": "flat",
     "native": "179 USD",
     "source": "https://www.kajabi.com/pricing",
     "checkedOn": "2026-07-30",
@@ -38,7 +39,11 @@
     "analytics",
     "customer support"
   ],
-  "moatType": "all-in-one workflow/payments",
+  "moatTags": [
+    "execution-polish",
+    "integrations"
+  ],
+  "moatNotes": "all-in-one workflow/payments",
   "whyPeopleStillPay": "They pay to avoid stitching and maintaining a dozen creator-business tools.",
   "priorArt": [
     {

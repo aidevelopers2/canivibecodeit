@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Credits",
     "basis": "pay as you go",
+    "unit": "usage",
     "source": "https://thumblifyai.com/#pricing",
     "checkedOn": "2026-07-30",
     "confidence": "high",
@@ -31,7 +32,11 @@
     "creator-focused workflow and UI/UX",
     "thumbnail inspiration system"
   ],
-  "moatType": "AI workflows/prompt systems/domain expertise/creator data",
+  "moatTags": [
+    "execution-polish",
+    "proprietary-models"
+  ],
+  "moatNotes": "AI workflows/prompt systems/domain expertise/creator data",
   "whyPeopleStillPay": "Creators are not only paying for AI image generation. The biggest value is creating high-quality thumbnails without needing to become prompt experts. ThumblifyAI's tuned prompts and workflows, and generation process are tuned specifically for creating catchy YouTube thumbnails. Users get a faster and more consistent path from video idea to thumbnail instead of spending hours experimenting with prompts, styles, and settings.",
   "priorArt": [],
   "relatedSlugs": [],

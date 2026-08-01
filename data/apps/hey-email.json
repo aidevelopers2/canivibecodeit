@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Personal address",
     "basis": "annual effective per month",
+    "unit": "flat",
     "native": "8.25 USD",
     "source": "https://www.hey.com/pricing/",
     "checkedOn": "2026-07-30",
@@ -34,7 +35,11 @@
     "identity/reputation",
     "support"
   ],
-  "moatType": "deliverability/compliance/infrastructure",
+  "moatTags": [
+    "scale-infra",
+    "brand-trust"
+  ],
+  "moatNotes": "deliverability/compliance/infrastructure",
   "whyPeopleStillPay": "They pay because email is infrastructure; deliverability and trust are the product.",
   "priorArt": [
     {

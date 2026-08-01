@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Bronze",
     "basis": "monthly",
+    "unit": "flat",
     "native": "39 USD",
     "source": "https://www.jotform.com/pricing/",
     "checkedOn": "2026-07-30",
@@ -37,7 +38,11 @@
     "compliance options",
     "templates"
   ],
-  "moatType": "workflow breadth/integrations",
+  "moatTags": [
+    "integrations",
+    "execution-polish"
+  ],
+  "moatNotes": "workflow breadth/integrations",
   "whyPeopleStillPay": "They pay because forms become mini business processes without custom coding.",
   "priorArt": [
     {

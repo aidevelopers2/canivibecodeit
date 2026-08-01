@@ -11,6 +11,7 @@
     "plan": "Starter",
     "kind": "fixed",
     "basis": "monthly business plan",
+    "unit": "flat",
     "currency": "USD",
     "native": "$20/month",
     "source": "https://dubsado.com/pricing",
@@ -37,7 +38,11 @@
     "live bank feeds and payment rails",
     "tax and accounting rule updates"
   ],
-  "moatType": "banking/compliance/trust",
+  "moatTags": [
+    "compliance-regulatory",
+    "integrations"
+  ],
+  "moatNotes": "banking/compliance/trust",
   "whyPeopleStillPay": "Dubsado: People pay because errors touch real money. Bank connections, reconciliation, tax changes, evidence, security, and support are the product.",
   "ongoingBurden": "Own data integrity, backups, import mapping, reconciliation, security, audit logs, tax changes, and recovery.",
   "priorArt": [

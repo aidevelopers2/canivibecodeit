@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Pro",
     "basis": "monthly per seat",
+    "unit": "per-seat",
     "native": "18 USD",
     "source": "https://fireflies.ai/pricing",
     "checkedOn": "2026-07-30",
@@ -34,7 +35,12 @@
     "shared topic tracking",
     "compliance controls"
   ],
-  "moatType": "integrations/collaboration",
+  "moatTags": [
+    "integrations",
+    "collaboration",
+    "execution-polish"
+  ],
+  "moatNotes": "integrations/collaboration",
   "whyPeopleStillPay": "They pay because the bot reliably appears, captures, files, and shares notes across the whole team.",
   "priorArt": [
     {

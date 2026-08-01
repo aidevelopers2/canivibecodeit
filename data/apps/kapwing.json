@@ -11,6 +11,7 @@
     "plan": "Pro",
     "kind": "fixed",
     "basis": "monthly creator plan",
+    "unit": "flat",
     "currency": "USD",
     "native": "$24/month",
     "source": "https://kapwing.com/pricing",
@@ -37,7 +38,12 @@
     "hosted recording reliability",
     "large-scale rendering"
   ],
-  "moatType": "media pipeline/hosting/distribution",
+  "moatTags": [
+    "scale-infra",
+    "execution-polish",
+    "collaboration"
+  ],
+  "moatNotes": "media pipeline/hosting/distribution",
   "whyPeopleStillPay": "Kapwing: People pay to avoid codec failures, upload limits, rendering surprises, lost recordings, and distribution chores.",
   "ongoingBurden": "Maintain codecs, media probing, resumable processing, storage cleanup, exports, device permissions, and performance.",
   "priorArt": [

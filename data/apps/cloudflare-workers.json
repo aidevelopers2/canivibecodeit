@@ -11,6 +11,7 @@
     "plan": "Workers Paid",
     "kind": "usage-based",
     "basis": "requests and compute",
+    "unit": "usage",
     "currency": "USD",
     "native": "Monthly platform fee plus request and compute usage",
     "source": "https://cloudflare.com/plans/developer-platform/",
@@ -36,7 +37,10 @@
     "multi-region failover",
     "DDoS protection and compliance"
   ],
-  "moatType": "infrastructure/uptime/operations",
+  "moatTags": [
+    "scale-infra"
+  ],
+  "moatNotes": "infrastructure/uptime/operations",
   "whyPeopleStillPay": "Cloudflare Workers: Managed hosting sells a failure domain, on-call team, network, backups, and capacity planning, not merely a deploy button.",
   "ongoingBurden": "Own patching, secrets, TLS, backups, monitoring, capacity, incidents, abuse, networking, and data recovery.",
   "priorArt": [

@@ -11,6 +11,7 @@
     "plan": "Content Marketer",
     "kind": "fixed",
     "basis": "monthly automation plan",
+    "unit": "flat",
     "currency": "USD",
     "native": "$35/month",
     "source": "https://repurpose.io/pricing",
@@ -37,7 +38,11 @@
     "reliable direct publishing across networks",
     "analytics history and attribution"
   ],
-  "moatType": "platform APIs/distribution",
+  "moatTags": [
+    "integrations",
+    "scale-infra"
+  ],
+  "moatNotes": "platform APIs/distribution",
   "whyPeopleStillPay": "Repurpose.io: Social tools survive because networks change APIs, permissions, formats, and anti-spam rules constantly.",
   "ongoingBurden": "Maintain OAuth, token refresh, media constraints, rate limits, scheduling, webhooks, retries, and platform policy compliance.",
   "priorArt": [

@@ -11,6 +11,7 @@
     "plan": "Scale",
     "kind": "usage-based",
     "basis": "tracked MRR",
+    "unit": "usage",
     "currency": "USD",
     "native": "Price varies with monthly recurring revenue",
     "source": "https://chartmogul.com/pricing",
@@ -35,7 +36,11 @@
     "high-volume ingestion and retention",
     "bot and identity resolution"
   ],
-  "moatType": "ingestion/storage/reliability",
+  "moatTags": [
+    "scale-infra",
+    "integrations"
+  ],
+  "moatNotes": "ingestion/storage/reliability",
   "whyPeopleStillPay": "ChartMogul: Customers pay for trusted numbers, retention, privacy controls, and a pipeline that remains accurate while traffic and schemas change.",
   "ongoingBurden": "Own event schemas, ingestion, storage growth, sampling, bot filtering, identity, privacy requests, backups, and uptime.",
   "priorArt": [

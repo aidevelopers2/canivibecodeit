@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Pro",
     "basis": "monthly per project",
+    "unit": "flat",
     "source": "https://showtrust.to",
     "checkedOn": "2026-07-31",
     "confidence": "high",
@@ -31,10 +32,15 @@
     "did-it-work data · impression and CTA-click tracking with click-through rate and which domains your wall is actually being viewed on",
     "X-verified testimonials · an OAuth flow that reads X's own verified state, so the quote is provably tied to a real handle and avatar"
   ],
-  "moatType": "free tier/polish",
+  "moatTags": [
+    "execution-polish"
+  ],
+  "moatNotes": "free tier/polish",
   "whyPeopleStillPay": "For one site, they don't · it's free, uncapped, and nothing is feature-gated, so the paid tier only exists to add a second project. What you actually trade away by self-hosting is smaller and more boring than money: the layout and styling controls are a real chunk of fiddly frontend work, and the impression tracking tells you whether the wall is doing anything at all, which a hand-rolled version silently won't. One honest mark against the hosted option · the collection page carries a 'Powered by ShowTrustTo' line on every tier, paid included, and there's no switch to remove it. If that badge on a page you send to customers bothers you, that alone is a legitimate reason to build your own.",
   "priorArt": [],
-  "relatedSlugs": ["testimonial-to"],
+  "relatedSlugs": [
+    "testimonial-to"
+  ],
   "pagePriority": 5,
   "verifiedOneShot": false,
   "notes": "Free and uncapped for one site, so the build is a hobby rather than a saving · the badge on the collection page is the one real reason to self-host.",

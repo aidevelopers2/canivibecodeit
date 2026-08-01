@@ -11,6 +11,7 @@
     "plan": "Individual",
     "kind": "fixed",
     "basis": "annual-equivalent individual subscription",
+    "unit": "flat",
     "currency": "USD",
     "native": "$9/month billed annually",
     "source": "https://lucid.co/pricing/lucidchart",
@@ -35,7 +36,11 @@
     "large template libraries",
     "high-fidelity import and export"
   ],
-  "moatType": "interaction polish/collaboration",
+  "moatTags": [
+    "execution-polish",
+    "collaboration"
+  ],
+  "moatNotes": "interaction polish/collaboration",
   "whyPeopleStillPay": "Lucidchart: The shapes are easy; customers pay for low-friction editing, reliable exports, collaboration, and a canvas that never fights them.",
   "ongoingBurden": "Own geometry, selection behavior, undo, clipboard interoperability, export fidelity, accessibility, and browser performance.",
   "priorArt": [

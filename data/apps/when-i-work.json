@@ -10,6 +10,7 @@
   "pricing": {
     "plan": "Essentials",
     "basis": "monthly per user",
+    "unit": "per-seat",
     "source": "https://wheniwork.com/pricing",
     "checkedOn": "2026-07-31",
     "confidence": "high",
@@ -36,7 +37,12 @@
     "benefits integrations",
     "identity checks and global employment infrastructure"
   ],
-  "moatType": "compliance, payroll, and regulated integrations",
+  "moatTags": [
+    "compliance-regulatory",
+    "integrations",
+    "execution-polish"
+  ],
+  "moatNotes": "compliance, payroll, and regulated integrations",
   "replacementScope": "internal records tracker without payroll",
   "ongoingBurden": "sensitive data, access, retention, audit, payroll calculations, filings, benefits, employment law, incident response, and support",
   "whyPeopleStillPay": "People still pay for When I Work because HR platforms survive because mistakes affect pay, benefits, immigration, and legal obligations, not because forms are difficult to render. The recurring cost buys sensitive data, access, retention, audit, payroll calculations, filings, benefits, employment law, incident response, and support, not just the visible interface.",

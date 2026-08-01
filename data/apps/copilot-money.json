@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Monthly subscription",
     "basis": "monthly",
+    "unit": "flat",
     "native": "13 USD",
     "source": "https://apps.apple.com/us/app/copilot-track-budget-money/id1447330651",
     "checkedOn": "2026-07-30",
@@ -35,7 +36,11 @@
     "mobile notifications",
     "security posture"
   ],
-  "moatType": "bank data/native app/security",
+  "moatTags": [
+    "integrations",
+    "execution-polish"
+  ],
+  "moatNotes": "bank data/native app/security",
   "whyPeopleStillPay": "They pay because the app feels native and current financial data appears automatically.",
   "priorArt": [
     {

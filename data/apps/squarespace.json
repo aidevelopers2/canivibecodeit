@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Basic",
     "basis": "monthly",
+    "unit": "flat",
     "native": "25 USD",
     "source": "https://www.squarespace.com/pricing",
     "checkedOn": "2026-07-30",
@@ -36,7 +37,12 @@
     "mobile-responsive polish",
     "support"
   ],
-  "moatType": "templates/hosting/editor",
+  "moatTags": [
+    "execution-polish",
+    "scale-infra",
+    "content-rights"
+  ],
+  "moatNotes": "templates/hosting/editor",
   "whyPeopleStillPay": "They pay because it removes design, hosting, and maintenance from the website project.",
   "priorArt": [
     {

@@ -10,6 +10,7 @@
   "pricing": {
     "plan": "Pro",
     "basis": "monthly",
+    "unit": "flat",
     "source": "https://read.ai/plans-pricing",
     "checkedOn": "2026-07-31",
     "confidence": "medium",
@@ -36,7 +37,11 @@
     "mobile capture",
     "team search and sharing"
   ],
-  "moatType": "capture reliability, integrations, and collaboration",
+  "moatTags": [
+    "integrations",
+    "collaboration"
+  ],
+  "moatNotes": "capture reliability, integrations, and collaboration",
   "replacementScope": "personal meeting notebook",
   "ongoingBurden": "audio permissions, model updates, calendar APIs, storage, speaker correction, and sync",
   "whyPeopleStillPay": "People still pay for Read AI because a meeting tool must capture every call without surprising anyone, then make the result searchable and shareable across a team. The recurring cost buys audio permissions, model updates, calendar APIs, storage, speaker correction, and sync, not just the visible interface.",

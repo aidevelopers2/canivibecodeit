@@ -10,6 +10,7 @@
   "pricing": {
     "plan": "Pro",
     "basis": "monthly",
+    "unit": "flat",
     "source": "https://amie.so/pricing",
     "checkedOn": "2026-07-31",
     "confidence": "medium",
@@ -37,7 +38,11 @@
     "payments",
     "timezone edge-case maturity"
   ],
-  "moatType": "calendar integrations and reliability",
+  "moatTags": [
+    "integrations",
+    "execution-polish"
+  ],
+  "moatNotes": "calendar integrations and reliability",
   "replacementScope": "single-user booking service",
   "ongoingBurden": "OAuth refresh, webhooks, timezone databases, race conditions, reminders, deliverability, privacy, and uptime",
   "whyPeopleStillPay": "People still pay for Amie because people pay because one double booking or missed invite can cost more than years of subscription fees. The recurring cost buys OAuth refresh, webhooks, timezone databases, race conditions, reminders, deliverability, privacy, and uptime, not just the visible interface.",

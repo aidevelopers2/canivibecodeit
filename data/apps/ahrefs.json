@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Starter",
     "basis": "monthly",
+    "unit": "flat",
     "native": "29 USD",
     "source": "https://ahrefs.com/pricing",
     "checkedOn": "2026-07-30",
@@ -37,7 +38,11 @@
     "competitive research",
     "AI-search data"
   ],
-  "moatType": "proprietary data/crawler scale",
+  "moatTags": [
+    "proprietary-data",
+    "scale-infra"
+  ],
+  "moatNotes": "proprietary data/crawler scale",
   "whyPeopleStillPay": "They pay for the dataset, not the dashboard.",
   "priorArt": [
     {

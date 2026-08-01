@@ -11,6 +11,7 @@
     "plan": "Unlimited",
     "kind": "fixed",
     "basis": "monthly individual plan",
+    "unit": "flat",
     "currency": "USD",
     "native": "$12.99/month",
     "source": "https://proton.me/pricing",
@@ -37,7 +38,11 @@
     "identity, credit, or broker-removal operations",
     "recovery guarantees and regulated trust"
   ],
-  "moatType": "security/infrastructure/trust",
+  "moatTags": [
+    "brand-trust",
+    "scale-infra"
+  ],
+  "moatNotes": "security/infrastructure/trust",
   "whyPeopleStillPay": "Proton Unlimited: Security subscriptions buy professional operations, audits, response capacity, redundancy, and accountability when something goes wrong.",
   "ongoingBurden": "Own threat modelling, key management, patching, backups, restore tests, incident response, privacy requests, and dependency security.",
   "priorArt": [

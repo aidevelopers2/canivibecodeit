@@ -11,6 +11,7 @@
     "plan": "Professional",
     "kind": "usage-based",
     "basis": "usage",
+    "unit": "usage",
     "currency": "USD",
     "native": "Base plan plus function, bandwidth, and storage usage",
     "source": "https://convex.dev/pricing",
@@ -36,7 +37,10 @@
     "multi-region failover",
     "DDoS protection and compliance"
   ],
-  "moatType": "infrastructure/uptime/operations",
+  "moatTags": [
+    "scale-infra"
+  ],
+  "moatNotes": "infrastructure/uptime/operations",
   "whyPeopleStillPay": "Convex: Managed hosting sells a failure domain, on-call team, network, backups, and capacity planning, not merely a deploy button.",
   "ongoingBurden": "Own patching, secrets, TLS, backups, monitoring, capacity, incidents, abuse, networking, and data recovery.",
   "priorArt": [

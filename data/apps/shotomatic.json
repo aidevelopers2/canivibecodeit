@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Pro Monthly",
     "basis": "monthly for up to 3 Macs",
+    "unit": "flat",
     "native": "7.99 USD",
     "source": "https://www.shotomatic.com/pricing",
     "checkedOn": "2026-07-30",
@@ -33,7 +34,10 @@
     "batch website capture with per-URL settings",
     "integrated PDF, ZIP, and MP4 export workflows"
   ],
-  "moatType": "native polish/permissions/workflow breadth",
+  "moatTags": [
+    "execution-polish"
+  ],
+  "moatNotes": "native polish/permissions/workflow breadth",
   "whyPeopleStillPay": "They want repeatable capture across Mac apps without maintaining native permission handling, automation edge cases, session history, and several export pipelines themselves.",
   "priorArt": [
     {

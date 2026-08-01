@@ -11,6 +11,7 @@
     "plan": "Create",
     "kind": "fixed",
     "basis": "monthly landing-page plan",
+    "unit": "flat",
     "currency": "USD",
     "native": "$99/month",
     "source": "https://instapage.com/plans",
@@ -35,7 +36,12 @@
     "CMS collaboration and client handoff",
     "managed hosting, forms, and analytics"
   ],
-  "moatType": "editor/CMS/hosting/polish",
+  "moatTags": [
+    "execution-polish",
+    "scale-infra",
+    "collaboration"
+  ],
+  "moatNotes": "editor/CMS/hosting/polish",
   "whyPeopleStillPay": "Instapage: A single site is easy to code. People pay for safe ongoing edits, templates, publishing, domains, collaboration, and no-maintenance hosting.",
   "ongoingBurden": "Maintain responsive rendering, browser compatibility, deployment, domains, forms, spam protection, backups, and editor migrations.",
   "priorArt": [

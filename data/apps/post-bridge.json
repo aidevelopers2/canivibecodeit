@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Creator",
     "basis": "monthly",
+    "unit": "flat",
     "native": "29 USD",
     "source": "https://www.post-bridge.com/pricing",
     "checkedOn": "2026-07-30",
@@ -33,7 +34,10 @@
     "token-refresh babysitting as platforms expire and change policies",
     "the hosted API and MCP server that lets a coding agent post for you"
   ],
-  "moatType": "platform-approved OAuth apps + integration upkeep",
+  "moatTags": [
+    "integrations"
+  ],
+  "moatNotes": "platform-approved OAuth apps + integration upkeep",
   "whyPeopleStillPay": "The hosted product ships with OAuth apps that Meta, TikTok, YouTube, Pinterest, and Google have already put through business verification and app review, so connecting Instagram or TikTok is a click instead of a multi-week developer-app process you may not qualify for solo. It also absorbs constant API and policy churn, per-platform video specs, and token expiry, and exposes an API plus MCP server so your coding agent can schedule posts through it rather than you rebuilding and maintaining the poster yourself.",
   "priorArt": [
     {

@@ -11,6 +11,7 @@
     "plan": "Pro",
     "kind": "fixed",
     "basis": "monthly form plan",
+    "unit": "flat",
     "currency": "USD",
     "native": "$29/month",
     "source": "https://youform.com/pricing",
@@ -35,7 +36,12 @@
     "compliance controls and guaranteed delivery",
     "enterprise workflow logic"
   ],
-  "moatType": "delivery/integrations/compliance",
+  "moatTags": [
+    "scale-infra",
+    "integrations",
+    "execution-polish"
+  ],
+  "moatNotes": "delivery/integrations/compliance",
   "whyPeopleStillPay": "Youform: Customers pay for dependable collection, spam control, notifications, integrations, and confidence that responses will not disappear.",
   "ongoingBurden": "Own storage, webhooks, email delivery, spam, file uploads, privacy requests, schema changes, and uptime.",
   "priorArt": [

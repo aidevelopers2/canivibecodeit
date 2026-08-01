@@ -10,6 +10,7 @@
   "pricing": {
     "plan": "Personal",
     "basis": "monthly",
+    "unit": "flat",
     "source": "https://timeular.com/pricing",
     "checkedOn": "2026-07-31",
     "confidence": "medium",
@@ -36,7 +37,11 @@
     "behavioral datasets",
     "blocking across every platform"
   ],
-  "moatType": "ubiquitous capture, coaching, and team workflow",
+  "moatTags": [
+    "execution-polish",
+    "hardware"
+  ],
+  "moatNotes": "ubiquitous capture, coaching, and team workflow",
   "replacementScope": "personal desktop tracker",
   "ongoingBurden": "idle detection, permissions, app metadata, privacy, notifications, sync, reports, integrations, and backups",
   "whyPeopleStillPay": "People still pay for Timeular because the timer is simple, but people pay for frictionless capture and a history they trust enough to invoice or change habits from. The recurring cost buys idle detection, permissions, app metadata, privacy, notifications, sync, reports, integrations, and backups, not just the visible interface.",

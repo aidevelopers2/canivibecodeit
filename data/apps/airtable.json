@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Team",
     "basis": "monthly per collaborator",
+    "unit": "per-seat",
     "native": "24 USD",
     "source": "https://airtable.com/pricing",
     "checkedOn": "2026-07-30",
@@ -37,7 +38,12 @@
     "permissions",
     "scalability"
   ],
-  "moatType": "database/editor/integrations",
+  "moatTags": [
+    "execution-polish",
+    "integrations",
+    "collaboration"
+  ],
+  "moatNotes": "database/editor/integrations",
   "whyPeopleStillPay": "They pay because non-engineers can turn data into workflows without asking for a custom app.",
   "priorArt": [
     {

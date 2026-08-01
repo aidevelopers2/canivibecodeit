@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Pro",
     "basis": "monthly",
+    "unit": "flat",
     "native": "20 USD",
     "source": "https://cursor.com/pricing",
     "checkedOn": "2026-07-30",
@@ -35,7 +36,11 @@
     "extensions compatibility",
     "team features"
   ],
-  "moatType": "editor integration/model routing",
+  "moatTags": [
+    "execution-polish",
+    "proprietary-models"
+  ],
+  "moatNotes": "editor integration/model routing",
   "whyPeopleStillPay": "They pay for speed: the agent is already in the editor with defaults that work.",
   "priorArt": [
     {

@@ -11,6 +11,7 @@
     "plan": "Typical paid plan",
     "kind": "unknown",
     "basis": "paid plan; billing basis requires review",
+    "unit": "flat",
     "currency": "USD",
     "native": "Public paid plan exists; amount not safely recovered",
     "source": "https://outseta.com/pricing",
@@ -37,7 +38,12 @@
     "marketplace discovery and buyer trust",
     "tax, disputes, payouts, and fraud operations"
   ],
-  "moatType": "payments/network/compliance",
+  "moatTags": [
+    "compliance-regulatory",
+    "brand-trust",
+    "scale-infra"
+  ],
+  "moatNotes": "payments/network/compliance",
   "whyPeopleStillPay": "Outseta: Creators pay to outsource payments, tax complexity, disputes, deliverability, moderation, and the trust needed to convert strangers.",
   "ongoingBurden": "Own payments, webhooks, refunds, tax records, fraud, access control, file delivery, moderation, backups, and support.",
   "priorArt": [

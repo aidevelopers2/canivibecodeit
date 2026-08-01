@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Creator",
     "basis": "annual effective per month",
+    "unit": "flat",
     "native": "12.5 USD",
     "source": "https://typefully.com/pricing",
     "checkedOn": "2026-07-30",
@@ -33,7 +34,11 @@
     "analytics on published posts",
     "AI rewrite suggestions"
   ],
-  "moatType": "social API/polish",
+  "moatTags": [
+    "integrations",
+    "execution-polish"
+  ],
+  "moatNotes": "social API/polish",
   "whyPeopleStillPay": "They pay because the editor reduces friction and posting works without API babysitting.",
   "priorArt": [
     {
@@ -50,7 +55,7 @@
   ],
   "pagePriority": 5,
   "verifiedOneShot": false,
-  "notes": "The composer and queue are easy. The catch is X's API pricing \u2014 the write tier costs more than Typefully does. That's the moat: not code, a paywall.",
-  "prompt": "Build me a tweet composer and scheduler like Typefully. Requirements:\n\n- A local web app: compose posts and threads with live character count per\n  post, split threads with \"---\", drag to reorder, image attachments, and a\n  clean distraction-free writing view with drafts autosaved to SQLite.\n- A queue: pick a time or \"next free slot\" (slots defined in a config file,\n  e.g. weekdays 9:00 and 16:00). Calendar-style queue view grouped by day.\n- Publishing via the X API v2 (keys in .env) \u00b7 with an honest README section:\n  the free API tier is read-only; posting needs the paid tier, which costs\n  more than Typefully. Include a fallback \"copy thread to clipboard\" button\n  and a browser-notification reminder at slot time so the tool stays useful\n  without paying X anything.\n- A cron-style loop in the same process publishes due queue items and marks\n  results (posted / failed with error).\n- Single Node process, no accounts, runs on localhost or a VPS.",
+  "notes": "The composer and queue are easy. The catch is X's API pricing — the write tier costs more than Typefully does. That's the moat: not code, a paywall.",
+  "prompt": "Build me a tweet composer and scheduler like Typefully. Requirements:\n\n- A local web app: compose posts and threads with live character count per\n  post, split threads with \"---\", drag to reorder, image attachments, and a\n  clean distraction-free writing view with drafts autosaved to SQLite.\n- A queue: pick a time or \"next free slot\" (slots defined in a config file,\n  e.g. weekdays 9:00 and 16:00). Calendar-style queue view grouped by day.\n- Publishing via the X API v2 (keys in .env) · with an honest README section:\n  the free API tier is read-only; posting needs the paid tier, which costs\n  more than Typefully. Include a fallback \"copy thread to clipboard\" button\n  and a browser-notification reminder at slot time so the tool stays useful\n  without paying X anything.\n- A cron-style loop in the same process publishes due queue items and marks\n  results (posted / failed with error).\n- Single Node process, no accounts, runs on localhost or a VPS.",
   "promptCurated": true
 }

@@ -64,12 +64,90 @@
   };
 
   $('#verdict-filter')?.addEventListener('click', (e) => {
-    const chip = e.target.closest('.vchip');
+    // Verdict chips only: the sort toggle is a .vchip in the same row, and it
+    // owns its own active state.
+    const chip = e.target.closest('.vchip[data-verdict]');
     if (!chip) return;
     activeVerdict = chip.dataset.verdict || '';
-    $$('.vchip').forEach((c) => c.classList.toggle('active', c === chip));
+    $$('.vchip[data-verdict]').forEach((c) => c.classList.toggle('active', c === chip));
     applyFilter();
     track('verdict_filter', { verdict: activeVerdict || 'all' });
+  });
+
+  /* ---------- team size + sort by spend ----------
+     A seat price is a lie at team scale: 12 people on a $14/user tool is $168
+     a month, and that is the number worth comparing against a weekend build. */
+  const rowsBox = $('#rows');
+  const teamInput = $('#team-size');
+  const sortBtn = $('#sort-toggle');
+  const startOrder = rowsBox ? [...rowsBox.children] : [];
+  let sortMode = 'votes';
+
+  const teamSize = () => Math.min(999, Math.max(1, Math.floor(Number(teamInput?.value) || 1)));
+  const money = (v) => `$${v.toLocaleString('en-US')}`;
+  const priceOf = (r) => (r.dataset.price === '' ? null : Number(r.dataset.price));
+
+  // What N people actually pay per month. Usage and custom pricing can't be
+  // multiplied honestly, and neither can "varies" — those sort last.
+  const spendOf = (r, n) => {
+    const p = priceOf(r);
+    if (p == null || Number.isNaN(p)) return -1;
+    if (r.dataset.unit === 'per-seat') return p * n;
+    if (r.dataset.unit === 'usage' || r.dataset.unit === 'custom') return -1;
+    return p;
+  };
+
+  const applyTeamSize = () => {
+    const n = teamSize();
+    rows.forEach((r) => {
+      if (r.dataset.unit !== 'per-seat') return;
+      const cell = $('.c-price', r);
+      const p = priceOf(r);
+      if (!cell || p == null || Number.isNaN(p)) return;
+      if (cell.dataset.base === undefined) cell.dataset.base = cell.textContent;
+      if (n > 1) {
+        cell.textContent = `${money(p * n)}/mo`;
+        cell.title = `${n} × $${p}/user/mo`;
+      } else {
+        cell.textContent = cell.dataset.base;
+        cell.removeAttribute('title');
+      }
+    });
+  };
+
+  // Sponsor banners keep their slots: only the rows move between them.
+  const applySort = () => {
+    if (!rowsBox) return;
+    let ordered = startOrder;
+    if (sortMode === 'spend') {
+      const n = teamSize();
+      const sorted = startOrder
+        .filter((el) => el.classList.contains('row'))
+        .sort((a, b) => spendOf(b, n) - spendOf(a, n));
+      let i = 0;
+      ordered = startOrder.map((el) => (el.classList.contains('row') ? sorted[i++] : el));
+    }
+    const frag = document.createDocumentFragment();
+    ordered.forEach((el) => frag.appendChild(el));
+    rowsBox.appendChild(frag);
+  };
+
+  if (teamInput) {
+    applyTeamSize(); // a reload can restore a team size the page didn't render with
+    teamInput.addEventListener('input', () => {
+      applyTeamSize();
+      if (sortMode === 'spend') applySort();
+    });
+    teamInput.addEventListener('change', () => track('team_size', { size: teamSize() }));
+  }
+
+  sortBtn?.addEventListener('click', () => {
+    sortMode = sortMode === 'votes' ? 'spend' : 'votes';
+    sortBtn.dataset.sort = sortMode;
+    sortBtn.textContent = `sort: ${sortMode}`;
+    sortBtn.classList.toggle('active', sortMode === 'spend');
+    applySort();
+    track('list_sort', { sort: sortMode });
   });
 
   /* Command-palette dropdown: instant results pinned to the search box, so

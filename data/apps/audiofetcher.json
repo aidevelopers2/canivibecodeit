@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Pro",
     "basis": "monthly",
+    "unit": "flat",
     "native": "6 USD",
     "source": "https://audiofetcher.com",
     "checkedOn": "2026-07-30",
@@ -33,7 +34,10 @@
     "someone else fighting YouTube bot checks, PO tokens, and geo blocks",
     "email magic-link Pro auth and fair multi-user queueing"
   ],
-  "moatType": "YouTube anti-bot upkeep / hosted convenience",
+  "moatTags": [
+    "execution-polish"
+  ],
+  "moatNotes": "YouTube anti-bot upkeep / hosted convenience",
   "whyPeopleStillPay": "Power users already run yt-dlp. Everyone else pays to paste a link in a browser and get an MP3 without installing tools or debugging LOGIN_REQUIRED. The money is convenience plus the permanent maintenance of staying ahead of YouTube client checks, not a novel audio algorithm.",
   "priorArt": [
     {
@@ -55,7 +59,11 @@
       "status": "alive"
     }
   ],
-  "relatedSlugs": ["descript", "capcut", "elevenlabs"],
+  "relatedSlugs": [
+    "descript",
+    "capcut",
+    "elevenlabs"
+  ],
   "pagePriority": 3,
   "verifiedOneShot": false,
   "notes": "Submitted by the maker. Honest split: personal CLI is a yes; public hosted converter with Pro queue is the kinda.",

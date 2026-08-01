@@ -10,6 +10,7 @@
   "pricing": {
     "plan": "SEO Spider licence",
     "basis": "annual-equivalent",
+    "unit": "flat",
     "source": "https://screamingfrog.co.uk/seo-spider/pricing/",
     "checkedOn": "2026-07-31",
     "confidence": "high",
@@ -36,7 +37,10 @@
     "continuous monitoring",
     "agency reporting and support"
   ],
-  "moatType": "crawl scale, rule depth, and operational polish",
+  "moatTags": [
+    "execution-polish"
+  ],
+  "moatNotes": "crawl scale, rule depth, and operational polish",
   "replacementScope": "single-site audit tool",
   "ongoingBurden": "robots handling, rendering, canonicalization, deduplication, crawl traps, rule maintenance, scheduling, storage, and false positives",
   "whyPeopleStillPay": "People still pay for Screaming Frog SEO Spider because a crawler is buildable; professionals pay for years of edge-case handling and reports they can trust with clients. The recurring cost buys robots handling, rendering, canonicalization, deduplication, crawl traps, rule maintenance, scheduling, storage, and false positives, not just the visible interface.",

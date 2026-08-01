@@ -11,6 +11,7 @@
     "plan": "Typical paid plan",
     "kind": "unknown",
     "basis": "paid plan; billing basis requires review",
+    "unit": "flat",
     "currency": "USD",
     "native": "Public paid plan exists; amount not safely recovered",
     "source": "https://hypotenuse.ai/pricing",
@@ -37,7 +38,11 @@
     "team governance and integrations",
     "vendor-managed prompt and quality tuning"
   ],
-  "moatType": "model/data/workflow",
+  "moatTags": [
+    "proprietary-models",
+    "execution-polish"
+  ],
+  "moatNotes": "model/data/workflow",
   "whyPeopleStillPay": "Hypotenuse AI: Customers pay for tuned workflows, predictable quality, governance, and a product team absorbing model churn rather than for the text box alone.",
   "ongoingBurden": "Maintain prompts, model migrations, cost controls, evaluations, privacy, and failure handling.",
   "priorArt": [

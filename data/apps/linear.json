@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Basic",
     "basis": "monthly per user, billed yearly",
+    "unit": "per-seat",
     "native": "10 USD",
     "source": "https://linear.app/pricing",
     "checkedOn": "2026-07-30",
@@ -32,7 +33,12 @@
     "Triage, Insights, and Linear Asks",
     "the interaction polish that makes people actually file the issue"
   ],
-  "moatType": "collaboration/sync/integrations",
+  "moatTags": [
+    "collaboration",
+    "execution-polish",
+    "integrations"
+  ],
+  "moatNotes": "collaboration/sync/integrations",
   "whyPeopleStillPay": "An issue tracker is only worth anything when everyone uses it, and people only use one that never makes them wait. Linear sells speed and shared context, not features: the whole team sees the same board update instantly, GitHub PRs close issues on merge, and the roadmap stays honest because filing is faster than complaining. A solo copy tracks your own work fine and settles no arguments.",
   "priorArt": [
     {

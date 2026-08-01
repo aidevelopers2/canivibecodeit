@@ -10,6 +10,7 @@
   "pricing": {
     "plan": "Pro",
     "basis": "monthly",
+    "unit": "flat",
     "source": "https://structured.app/pricing",
     "checkedOn": "2026-07-31",
     "confidence": "medium",
@@ -35,7 +36,10 @@
     "shared workspaces",
     "behavioral coaching polish"
   ],
-  "moatType": "cross-device reliability and workflow polish",
+  "moatTags": [
+    "execution-polish"
+  ],
+  "moatNotes": "cross-device reliability and workflow polish",
   "replacementScope": "personal desktop task manager",
   "ongoingBurden": "recurrence edge cases, notifications, sync conflicts, calendar APIs, mobile capture, and backups",
   "whyPeopleStillPay": "People still pay for Structured because task software is sticky because trust, speed, and ubiquitous capture matter more than the database schema. The recurring cost buys recurrence edge cases, notifications, sync conflicts, calendar APIs, mobile capture, and backups, not just the visible interface.",

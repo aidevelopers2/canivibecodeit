@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Personal",
     "basis": "monthly per user",
+    "unit": "per-seat",
     "native": "5 USD",
     "source": "https://wholana.com/pricing",
     "checkedOn": "2026-07-31",
@@ -36,7 +37,11 @@
     "creator equity and track-record views",
     "someone else absorbing the scrape cost and keeping it running"
   ],
-  "moatType": "accumulated corpus + labeling pipeline",
+  "moatTags": [
+    "proprietary-data",
+    "scale-infra"
+  ],
+  "moatNotes": "accumulated corpus + labeling pipeline",
   "whyPeopleStillPay": "The arithmetic is free, the data is not. A personal build only ever knows about the creators you thought to add, and you pay the scraper bill every month to keep even that fresh. The subscription is renting a corpus that was already collected and labeled, plus the discovery that only exists once videos from creators you have never heard of are sitting in the same index.",
   "priorArt": [
     {

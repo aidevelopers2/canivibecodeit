@@ -10,6 +10,7 @@
   "pricing": {
     "plan": "Team",
     "basis": "monthly",
+    "unit": "flat",
     "source": "https://logrocket.com/pricing",
     "checkedOn": "2026-07-31",
     "confidence": "medium",
@@ -37,7 +38,10 @@
     "massive retention",
     "advanced incident response and support"
   ],
-  "moatType": "independent infrastructure and reliable alerting",
+  "moatTags": [
+    "scale-infra"
+  ],
+  "moatNotes": "independent infrastructure and reliable alerting",
   "replacementScope": "small independent monitoring service",
   "ongoingBurden": "probe geography, clocks, retries, deduplication, sampling, storage, paging, notification delivery, on-call rules, and its own uptime",
   "whyPeopleStillPay": "People still pay for LogRocket because monitoring must continue working during the exact outage it reports, which makes independent infrastructure and alert delivery the real product. The recurring cost buys probe geography, clocks, retries, deduplication, sampling, storage, paging, notification delivery, on-call rules, and its own uptime, not just the visible interface.",

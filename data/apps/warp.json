@@ -11,6 +11,7 @@
     "plan": "Pro",
     "kind": "fixed",
     "basis": "per user per month",
+    "unit": "per-seat",
     "currency": "USD",
     "native": "$18/user/month",
     "source": "https://warp.dev/pricing",
@@ -36,7 +37,11 @@
     "frontier coding model quality",
     "large-context infrastructure"
   ],
-  "moatType": "model/context/integration",
+  "moatTags": [
+    "proprietary-models",
+    "execution-polish"
+  ],
+  "moatNotes": "model/context/integration",
   "whyPeopleStillPay": "Warp: Developers pay for reliable context assembly, fast models, editor integration, evaluations, and safe handling of complex repositories.",
   "ongoingBurden": "Maintain model adapters, token budgets, indexing, sandboxing, diff application, test runners, and editor integrations.",
   "priorArt": [

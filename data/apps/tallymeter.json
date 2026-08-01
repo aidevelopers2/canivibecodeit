@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Pro",
     "basis": "monthly per user",
+    "unit": "per-seat",
     "native": "9 EUR",
     "source": "https://tallymeter.com/#pricing",
     "checkedOn": "2026-07-31",
@@ -33,7 +34,11 @@
     "shared team workspaces and per-member unbilled totals",
     "managed hosting, nightly backups and a phone-sized UI for starting a timer away from your desk"
   ],
-  "moatType": "integrations + hosted agent access",
+  "moatTags": [
+    "integrations",
+    "execution-polish"
+  ],
+  "moatNotes": "integrations + hosted agent access",
   "whyPeopleStillPay": "The timer is a weekend. The failure modes are not. Uninvoiced time that silently double-counts against a Jira worklog, an invoice sequence with a gap in it, or a laptop that was asleep when the agent tried to log its hours are all problems you discover on invoice day, in front of a client. A business billing real money for hours generally decides that maintaining the thing that produces its invoices is not the hobby it wants.",
   "priorArt": [
     {
@@ -49,7 +54,11 @@
       "status": "alive"
     }
   ],
-  "relatedSlugs": ["clockify", "freshbooks", "invoice-ninja"],
+  "relatedSlugs": [
+    "clockify",
+    "freshbooks",
+    "invoice-ninja"
+  ],
   "pagePriority": 2,
   "verifiedOneShot": false,
   "notes": "Submitted by its own builder, judged by the same rubric · the solo core really is a weekend.",

@@ -11,6 +11,7 @@
     "plan": "Typical paid plan",
     "kind": "unknown",
     "basis": "paid plan; billing basis requires review",
+    "unit": "flat",
     "currency": "USD",
     "native": "Public paid plan exists; amount not safely recovered",
     "source": "https://plutio.com/pricing",
@@ -37,7 +38,11 @@
     "tax and accounting rule updates",
     "audited security and recovery"
   ],
-  "moatType": "banking/compliance/trust",
+  "moatTags": [
+    "compliance-regulatory",
+    "integrations"
+  ],
+  "moatNotes": "banking/compliance/trust",
   "whyPeopleStillPay": "Plutio: People pay because errors touch real money. Bank connections, reconciliation, tax changes, evidence, security, and support are the product.",
   "ongoingBurden": "Own data integrity, backups, import mapping, reconciliation, security, audit logs, tax changes, and recovery.",
   "priorArt": [

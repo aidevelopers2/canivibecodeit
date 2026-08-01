@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Base",
     "basis": "monthly + usage",
+    "unit": "usage",
     "native": "19 USD",
     "source": "https://outstand.so",
     "checkedOn": "2026-07-30",
@@ -34,7 +35,10 @@
     "cross-platform analytics in one shape",
     "the MCP server that hands all of it to an AI agent"
   ],
-  "moatType": "platform app review + integration upkeep",
+  "moatTags": [
+    "integrations"
+  ],
+  "moatNotes": "platform app review + integration upkeep",
   "whyPeopleStillPay": "Every network you actually want is gated by someone else's approval queue. Getting an Instagram or TikTok app cleared to post takes review cycles and a real business case, and that is before you own token refresh, per-platform media specs, and rate limits for eleven APIs forever. Paying converts an approval problem and permanent maintenance into a bearer token, which is exactly the trade a developer shipping a product wants to make.",
   "priorArt": [
     {
@@ -50,7 +54,11 @@
       "status": "alive"
     }
   ],
-  "relatedSlugs": ["post-bridge", "postiz", "buffer"],
+  "relatedSlugs": [
+    "post-bridge",
+    "postiz",
+    "buffer"
+  ],
   "pagePriority": 3,
   "verifiedOneShot": false,
   "notes": "The rare entry where the moat is paperwork · the code is a weekend, the platform approvals are not.",

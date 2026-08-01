@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Premium",
     "basis": "monthly",
+    "unit": "flat",
     "native": "19.95 USD",
     "source": "https://quillbot.com/upgrade",
     "checkedOn": "2026-07-30",
@@ -33,7 +34,11 @@
     "polish",
     "account sync"
   ],
-  "moatType": "polish/extensions",
+  "moatTags": [
+    "execution-polish",
+    "integrations"
+  ],
+  "moatNotes": "polish/extensions",
   "whyPeopleStillPay": "They pay because it is available where they write and has purpose-built controls.",
   "priorArt": [
     {

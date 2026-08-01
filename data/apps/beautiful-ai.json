@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Pro monthly",
     "basis": "monthly",
+    "unit": "flat",
     "native": "45 USD",
     "source": "https://www.beautiful.ai/pricing",
     "checkedOn": "2026-07-30",
@@ -35,7 +36,12 @@
     "collaboration",
     "viewer analytics"
   ],
-  "moatType": "templates/editor depth/collaboration",
+  "moatTags": [
+    "execution-polish",
+    "content-rights",
+    "collaboration"
+  ],
+  "moatNotes": "templates/editor depth/collaboration",
   "whyPeopleStillPay": "They pay for slides that stay designed as content changes.",
   "priorArt": [
     {

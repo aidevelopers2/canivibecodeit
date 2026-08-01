@@ -11,6 +11,7 @@
     "plan": "Personal",
     "kind": "fixed",
     "basis": "per month billed annually",
+    "unit": "flat",
     "currency": "USD",
     "native": "$4/month billed annually",
     "source": "https://sereneapp.com/pricing",
@@ -35,7 +36,10 @@
     "cross-device sync",
     "deep operating-system edge-case coverage"
   ],
-  "moatType": "polish/OS integration",
+  "moatTags": [
+    "execution-polish"
+  ],
+  "moatNotes": "polish/OS integration",
   "whyPeopleStillPay": "Serene: People keep paying because a utility used dozens of times a day must be instant, predictable, and compatible with every OS update.",
   "ongoingBurden": "Track OS permission changes, shortcut conflicts, packaging, code signing, and regressions after system updates.",
   "priorArt": [

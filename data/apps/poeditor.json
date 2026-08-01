@@ -10,6 +10,7 @@
   "pricing": {
     "plan": "Start",
     "basis": "monthly",
+    "unit": "flat",
     "source": "https://poeditor.com/pricing",
     "checkedOn": "2026-07-31",
     "confidence": "high",
@@ -36,7 +37,12 @@
     "website proxy network",
     "enterprise workflows and integrations"
   ],
-  "moatType": "translation memory, collaboration, and deployment integrations",
+  "moatTags": [
+    "collaboration",
+    "integrations",
+    "switching-costs"
+  ],
+  "moatNotes": "translation memory, collaboration, and deployment integrations",
   "replacementScope": "small-team string-management system",
   "ongoingBurden": "file formats, placeholders, plural rules, screenshots, context, permissions, review, glossary, machine translation, sync, and backups",
   "whyPeopleStillPay": "People still pay for POEditor because localization teams pay because language context, review discipline, translators, and release integrations are the hard parts. The recurring cost buys file formats, placeholders, plural rules, screenshots, context, permissions, review, glossary, machine translation, sync, and backups, not just the visible interface.",

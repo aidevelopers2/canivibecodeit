@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Basic",
     "basis": "annual effective per month",
+    "unit": "flat",
     "native": "10 USD",
     "source": "https://www.framer.com/pricing",
     "checkedOn": "2026-07-30",
@@ -37,7 +38,12 @@
     "preview/publish flow",
     "forms"
   ],
-  "moatType": "editor/templates/hosting",
+  "moatTags": [
+    "execution-polish",
+    "scale-infra",
+    "content-rights"
+  ],
+  "moatNotes": "editor/templates/hosting",
   "whyPeopleStillPay": "They pay because polished landing pages ship quickly with minimal design-engineering friction.",
   "priorArt": [
     {

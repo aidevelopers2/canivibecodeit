@@ -12,6 +12,8 @@ const cat = CATEGORIES[app.category];
   data-name={app.name.toLowerCase()}
   data-category={app.category}
   data-verdict={app.verdict}
+  data-price={app.priceMonthly ?? ''}
+  data-unit={app.pricing?.unit ?? ''}
 >
   <span class="c-app">
     <span class="rank">{String(rank).padStart(2, '0')}</span>

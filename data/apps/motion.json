@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Individual",
     "basis": "monthly",
+    "unit": "flat",
     "native": "34 USD",
     "source": "https://www.usemotion.com/pricing",
     "checkedOn": "2026-07-30",
@@ -35,7 +36,11 @@
     "polished rescheduling",
     "support"
   ],
-  "moatType": "algorithm/integrations",
+  "moatTags": [
+    "execution-polish",
+    "integrations"
+  ],
+  "moatNotes": "algorithm/integrations",
   "whyPeopleStillPay": "They pay because the calendar stays organized without manual drag-and-drop.",
   "priorArt": [
     {

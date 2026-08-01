@@ -11,6 +11,7 @@
     "plan": "Basic",
     "kind": "fixed",
     "basis": "annual-equivalent analytics plan",
+    "unit": "flat",
     "currency": "USD",
     "native": "$29/month billed annually",
     "source": "https://crazyegg.com/pricing",
@@ -36,7 +37,10 @@
     "enterprise governance and integrations",
     "high-volume ingestion and retention"
   ],
-  "moatType": "ingestion/storage/reliability",
+  "moatTags": [
+    "scale-infra"
+  ],
+  "moatNotes": "ingestion/storage/reliability",
   "whyPeopleStillPay": "Crazy Egg: Customers pay for trusted numbers, retention, privacy controls, and a pipeline that remains accurate while traffic and schemas change.",
   "ongoingBurden": "Own event schemas, ingestion, storage growth, sampling, bot filtering, identity, privacy requests, backups, and uptime.",
   "priorArt": [

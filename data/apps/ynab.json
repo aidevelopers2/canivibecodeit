@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Monthly Plan",
     "basis": "monthly",
+    "unit": "flat",
     "native": "14.99 USD",
     "source": "https://www.ynab.com/pricing",
     "checkedOn": "2026-07-30",
@@ -36,7 +37,12 @@
     "support",
     "habit design"
   ],
-  "moatType": "bank data/convenience/habit system",
+  "moatTags": [
+    "integrations",
+    "content-rights",
+    "execution-polish"
+  ],
+  "moatNotes": "bank data/convenience/habit system",
   "whyPeopleStillPay": "They pay because the method and mobile/bank-sync habit are easier to follow than a spreadsheet.",
   "priorArt": [
     {

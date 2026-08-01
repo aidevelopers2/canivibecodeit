@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Pro",
     "basis": "monthly per editor",
+    "unit": "per-seat",
     "native": "12 USD",
     "source": "https://whimsical.com/pricing",
     "checkedOn": "2026-07-30",
@@ -34,7 +35,11 @@
     "comments",
     "sharing permissions"
   ],
-  "moatType": "polish/collaboration",
+  "moatTags": [
+    "execution-polish",
+    "collaboration"
+  ],
+  "moatNotes": "polish/collaboration",
   "whyPeopleStillPay": "They pay for speed and tidy diagrams that teammates can edit without setup.",
   "priorArt": [
     {

@@ -10,6 +10,7 @@
   "pricing": {
     "plan": "Essentials",
     "basis": "monthly",
+    "unit": "flat",
     "source": "https://paperform.co/pricing",
     "checkedOn": "2026-07-31",
     "confidence": "high",
@@ -35,7 +36,11 @@
     "large template libraries",
     "enterprise compliance"
   ],
-  "moatType": "integrations, deliverability, and workflow depth",
+  "moatTags": [
+    "execution-polish",
+    "integrations"
+  ],
+  "moatNotes": "integrations, deliverability, and workflow depth",
   "replacementScope": "single-owner form service",
   "ongoingBurden": "spam control, email delivery, storage, exports, accessibility, conditional logic, and integrations",
   "whyPeopleStillPay": "People still pay for Paperform because a basic form is trivial; people pay when the form feeds a dependable business workflow and never loses a response. The recurring cost buys spam control, email delivery, storage, exports, accessibility, conditional logic, and integrations, not just the visible interface.",

@@ -11,6 +11,7 @@
     "plan": "Emerging",
     "kind": "fixed",
     "basis": "monthly business plan",
+    "unit": "flat",
     "currency": "USD",
     "native": "$20/month",
     "source": "https://acuityscheduling.com/pricing",
@@ -36,7 +37,11 @@
     "calendar-provider edge cases and timezone correctness",
     "multi-calendar conflict handling"
   ],
-  "moatType": "OAuth/calendar reliability",
+  "moatTags": [
+    "integrations",
+    "execution-polish"
+  ],
+  "moatNotes": "OAuth/calendar reliability",
   "whyPeopleStillPay": "Acuity Scheduling: People pay because a booking tool must never double-book them, leak private events, or send the wrong time to a client.",
   "ongoingBurden": "Maintain OAuth, timezone data, webhooks, idempotency, reminders, calendar-provider quirks, and uptime.",
   "priorArt": [

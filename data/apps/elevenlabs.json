@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Creator",
     "basis": "monthly",
+    "unit": "flat",
     "native": "22 USD",
     "source": "https://elevenlabs.io/pricing",
     "checkedOn": "2026-07-30",
@@ -35,7 +36,11 @@
     "rights/licensing",
     "model updates"
   ],
-  "moatType": "frontier model/safety/licensing",
+  "moatTags": [
+    "proprietary-models",
+    "content-rights"
+  ],
+  "moatNotes": "frontier model/safety/licensing",
   "whyPeopleStillPay": "They pay for convincing voices, controls, and commercial workflow reliability.",
   "priorArt": [
     {

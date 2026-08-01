@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Standard",
     "basis": "monthly",
+    "unit": "flat",
     "native": "41 USD",
     "source": "https://vimeo.com/upgrade",
     "checkedOn": "2026-07-30",
@@ -35,7 +36,11 @@
     "a player QA'd against every browser, smart TV, and embed surface",
     "traffic spikes absorbed by someone else's bandwidth bill"
   ],
-  "moatType": "delivery infrastructure/player QA",
+  "moatTags": [
+    "scale-infra",
+    "execution-polish"
+  ],
+  "moatNotes": "delivery infrastructure/player QA",
   "whyPeopleStillPay": "They pay so the embed on the homepage never buffers on launch day. Video is the one file type where the difference between a good and a bad host is visible to every single viewer within two seconds, and the failure mode is silent: people just leave. Vimeo also stays cheaper than self-hosting the moment traffic is uneven, because you are buying a smoothed average of someone else's egress instead of your own worst month.",
   "priorArt": [
     {

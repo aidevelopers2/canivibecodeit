@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Lite",
     "basis": "monthly",
+    "unit": "flat",
     "native": "23 USD",
     "source": "https://www.freshbooks.com/pricing",
     "checkedOn": "2026-07-30",
@@ -37,7 +38,12 @@
     "tax workflows",
     "support"
   ],
-  "moatType": "payments/accounting workflow",
+  "moatTags": [
+    "compliance-regulatory",
+    "integrations",
+    "execution-polish"
+  ],
+  "moatNotes": "payments/accounting workflow",
   "whyPeopleStillPay": "They pay because client billing needs to look professional and survive audit/accountant handoff.",
   "priorArt": [
     {

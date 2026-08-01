@@ -11,6 +11,7 @@
     "plan": "Typical paid plan",
     "kind": "unknown",
     "basis": "paid plan; billing basis requires review",
+    "unit": "flat",
     "currency": "USD",
     "native": "Public paid plan exists; amount not safely recovered",
     "source": "https://getimg.ai/pricing",
@@ -37,7 +38,11 @@
     "licensed training data and style tuning",
     "fast elastic inference"
   ],
-  "moatType": "proprietary model/inference",
+  "moatTags": [
+    "proprietary-models",
+    "scale-infra"
+  ],
+  "moatNotes": "proprietary model/inference",
   "whyPeopleStillPay": "getimg.ai: The interface is replaceable. The subscription buys the model, aesthetic tuning, inference fleet, safety work, and rapid improvement.",
   "ongoingBurden": "Own model downloads, GPU compatibility, queueing, safety choices, storage, and changing model licences.",
   "priorArt": [

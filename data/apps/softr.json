@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Basic",
     "basis": "monthly",
+    "unit": "flat",
     "native": "59 USD",
     "source": "https://www.softr.io/pricing",
     "checkedOn": "2026-07-30",
@@ -36,7 +37,12 @@
     "memberships",
     "hosting"
   ],
-  "moatType": "no-code builder/auth/integrations",
+  "moatTags": [
+    "execution-polish",
+    "integrations",
+    "scale-infra"
+  ],
+  "moatNotes": "no-code builder/auth/integrations",
   "whyPeopleStillPay": "They pay so non-engineers can launch portals without hiring a developer.",
   "priorArt": [
     {

@@ -11,6 +11,7 @@
     "plan": "Typical paid plan",
     "kind": "unknown",
     "basis": "paid plan; billing basis requires review",
+    "unit": "flat",
     "currency": "USD",
     "native": "Public paid plan exists; amount not safely recovered",
     "source": "https://zenkit.com/en/pricing",
@@ -35,7 +36,12 @@
     "mobile capture and notifications",
     "real-time multiplayer"
   ],
-  "moatType": "collaboration/integrations/polish",
+  "moatTags": [
+    "collaboration",
+    "integrations",
+    "execution-polish"
+  ],
+  "moatNotes": "collaboration/integrations/polish",
   "whyPeopleStillPay": "Zenkit: Teams pay because shared state, notifications, permissions, and migrations are harder than the visible board or list.",
   "ongoingBurden": "Maintain notifications, recurring-date logic, importers, permissions, backups, and collaboration conflict handling.",
   "priorArt": [

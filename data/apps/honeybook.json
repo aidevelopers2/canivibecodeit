@@ -11,6 +11,7 @@
     "plan": "Starter",
     "kind": "fixed",
     "basis": "monthly business plan",
+    "unit": "flat",
     "currency": "USD",
     "native": "$29/month",
     "source": "https://honeybook.com/pricing",
@@ -37,7 +38,12 @@
     "tax and accounting rule updates",
     "audited security and recovery"
   ],
-  "moatType": "banking/compliance/trust",
+  "moatTags": [
+    "compliance-regulatory",
+    "integrations",
+    "brand-trust"
+  ],
+  "moatNotes": "banking/compliance/trust",
   "whyPeopleStillPay": "HoneyBook: People pay because errors touch real money. Bank connections, reconciliation, tax changes, evidence, security, and support are the product.",
   "ongoingBurden": "Own data integrity, backups, import mapping, reconciliation, security, audit logs, tax changes, and recovery.",
   "priorArt": [

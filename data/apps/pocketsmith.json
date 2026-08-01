@@ -10,6 +10,7 @@
   "pricing": {
     "plan": "Foundation",
     "basis": "monthly",
+    "unit": "flat",
     "source": "https://pocketsmith.com/plans",
     "checkedOn": "2026-07-31",
     "confidence": "medium",
@@ -35,7 +36,11 @@
     "payroll and payments",
     "accountant ecosystem and support"
   ],
-  "moatType": "financial integrations, compliance, and trust",
+  "moatTags": [
+    "integrations",
+    "compliance-regulatory"
+  ],
+  "moatNotes": "financial integrations, compliance, and trust",
   "replacementScope": "personal ledger or simple invoicing tool",
   "ongoingBurden": "import normalization, reconciliation, rule drift, exchange rates, backups, audit trails, tax changes, bank APIs, and support",
   "whyPeopleStillPay": "People still pay for PocketSmith because people pay because accurate money records and dependable institution connections are worth more than the visible charts. The recurring cost buys import normalization, reconciliation, rule drift, exchange rates, backups, audit trails, tax changes, bank APIs, and support, not just the visible interface.",

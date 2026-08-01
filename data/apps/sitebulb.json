@@ -10,6 +10,7 @@
   "pricing": {
     "plan": "Lite",
     "basis": "monthly",
+    "unit": "flat",
     "source": "https://sitebulb.com/pricing",
     "checkedOn": "2026-07-31",
     "confidence": "medium",
@@ -36,7 +37,11 @@
     "continuous monitoring",
     "agency reporting and support"
   ],
-  "moatType": "crawl scale, rule depth, and operational polish",
+  "moatTags": [
+    "scale-infra",
+    "execution-polish"
+  ],
+  "moatNotes": "crawl scale, rule depth, and operational polish",
   "replacementScope": "single-site audit tool",
   "ongoingBurden": "robots handling, rendering, canonicalization, deduplication, crawl traps, rule maintenance, scheduling, storage, and false positives",
   "whyPeopleStillPay": "People still pay for Sitebulb because a crawler is buildable; professionals pay for years of edge-case handling and reports they can trust with clients. The recurring cost buys robots handling, rendering, canonicalization, deduplication, crawl traps, rule maintenance, scheduling, storage, and false positives, not just the visible interface.",

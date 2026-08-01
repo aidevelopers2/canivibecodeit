@@ -11,6 +11,7 @@
     "plan": "Lifetime licence",
     "kind": "one-time",
     "basis": "one-time",
+    "unit": "one-time",
     "currency": "USD",
     "native": "One-time licence; offer can change",
     "source": "https://thrivecart.com/pricing",
@@ -36,7 +37,12 @@
     "native apps and community moderation",
     "fulfilment, email, and affiliate ecosystems"
   ],
-  "moatType": "payments/network/compliance",
+  "moatTags": [
+    "compliance-regulatory",
+    "network-effects",
+    "brand-trust"
+  ],
+  "moatNotes": "payments/network/compliance",
   "whyPeopleStillPay": "ThriveCart: Creators pay to outsource payments, tax complexity, disputes, deliverability, moderation, and the trust needed to convert strangers.",
   "ongoingBurden": "Own payments, webhooks, refunds, tax records, fraud, access control, file delivery, moderation, backups, and support.",
   "priorArt": [

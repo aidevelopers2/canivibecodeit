@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Pro",
     "basis": "monthly",
+    "unit": "flat",
     "native": "39 USD monthly; 199 USD yearly",
     "source": "https://www.vernigo.com/",
     "checkedOn": "2026-07-30",
@@ -35,7 +36,11 @@
     "ranking quality improved by accumulated usage data",
     "coverage and freshness without managing YouTube API quotas"
   ],
-  "moatType": "proprietary dataset + usage signals",
+  "moatTags": [
+    "proprietary-data",
+    "network-effects"
+  ],
+  "moatNotes": "proprietary dataset + usage signals",
   "whyPeopleStillPay": "The useful result is not calculating views divided by a channel average. It is having enough current video and channel history to discover outliers and undersupplied niches before you already know where to look. Building the dashboard is straightforward; collecting, refreshing, and ranking that market-wide dataset is the product.",
   "priorArt": [],
   "relatedSlugs": [],

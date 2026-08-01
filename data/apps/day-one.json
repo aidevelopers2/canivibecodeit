@@ -11,6 +11,7 @@
     "plan": "Silver",
     "kind": "fixed",
     "basis": "annual-equivalent individual subscription",
+    "unit": "flat",
     "currency": "USD",
     "native": "$49.99/year",
     "source": "https://dayoneapp.com/pricing",
@@ -35,7 +36,10 @@
     "collaborative editing and sharing",
     "native mobile clients"
   ],
-  "moatType": "polish/sync/importers",
+  "moatTags": [
+    "execution-polish"
+  ],
+  "moatNotes": "polish/sync/importers",
   "whyPeopleStillPay": "Day One: People pay for a writing surface they trust for years, plus migration tools, sync, and tiny interaction details that disappear into habit.",
   "ongoingBurden": "Own schema migrations, backups, sync conflicts, export compatibility, and long-term file readability.",
   "priorArt": [

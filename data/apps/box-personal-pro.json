@@ -10,6 +10,7 @@
   "pricing": {
     "plan": "Personal Pro",
     "basis": "monthly",
+    "unit": "flat",
     "source": "https://box.com/pricing/individual",
     "checkedOn": "2026-07-31",
     "confidence": "high",
@@ -37,7 +38,11 @@
     "ransomware recovery guarantees",
     "mobile clients and support"
   ],
-  "moatType": "reliability, durability, and cross-device sync",
+  "moatTags": [
+    "scale-infra",
+    "execution-polish"
+  ],
+  "moatNotes": "reliability, durability, and cross-device sync",
   "replacementScope": "single-user encrypted backup",
   "ongoingBurden": "chunking, encryption, conflict detection, versions, garbage collection, bandwidth, restore drills, monitoring, billing, and disaster recovery",
   "whyPeopleStillPay": "People still pay for Box Personal Pro because storage subscriptions sell confidence that files will still exist after a lost device, bad sync, or provider incident. The recurring cost buys chunking, encryption, conflict detection, versions, garbage collection, bandwidth, restore drills, monitoring, billing, and disaster recovery, not just the visible interface.",

@@ -11,6 +11,7 @@
     "plan": "Essentials",
     "kind": "fixed",
     "basis": "annual-equivalent individual subscription",
+    "unit": "flat",
     "currency": "USD",
     "native": "$65/year; $7 monthly",
     "source": "https://papersapp.com/pricing",
@@ -36,7 +37,11 @@
     "publisher-specific import reliability",
     "citation graph scale"
   ],
-  "moatType": "data/import reliability",
+  "moatTags": [
+    "proprietary-data",
+    "execution-polish"
+  ],
+  "moatNotes": "data/import reliability",
   "whyPeopleStillPay": "ReadCube Papers: Researchers pay for correct metadata, resilient importers, citation coverage, and workflows that survive publisher and browser changes.",
   "ongoingBurden": "Maintain parsers, deduplication, PDF extraction, citation styles, and legal access boundaries.",
   "priorArt": [

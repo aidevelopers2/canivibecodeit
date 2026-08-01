@@ -11,6 +11,7 @@
     "plan": "AI Creator",
     "kind": "usage-based",
     "basis": "credits per month",
+    "unit": "usage",
     "currency": "USD",
     "native": "Credit subscription and top-ups",
     "source": "https://nightcafe.studio/pricing",
@@ -36,7 +37,11 @@
     "safety, moderation, and mobile distribution",
     "the vendor's proprietary model quality"
   ],
-  "moatType": "proprietary model/inference",
+  "moatTags": [
+    "proprietary-models",
+    "network-effects"
+  ],
+  "moatNotes": "proprietary model/inference",
   "whyPeopleStillPay": "NightCafe: The interface is replaceable. The subscription buys the model, aesthetic tuning, inference fleet, safety work, and rapid improvement.",
   "ongoingBurden": "Own model downloads, GPU compatibility, queueing, safety choices, storage, and changing model licences.",
   "priorArt": [

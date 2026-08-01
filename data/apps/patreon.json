@@ -11,6 +11,7 @@
     "plan": "Platform plan",
     "kind": "revenue-share",
     "basis": "revenue share",
+    "unit": "usage",
     "currency": "USD",
     "native": "Percentage of creator income plus processing",
     "source": "https://patreon.com/pricing",
@@ -36,7 +37,12 @@
     "fulfilment, email, and affiliate ecosystems",
     "marketplace discovery and buyer trust"
   ],
-  "moatType": "payments/network/compliance",
+  "moatTags": [
+    "compliance-regulatory",
+    "network-effects",
+    "brand-trust"
+  ],
+  "moatNotes": "payments/network/compliance",
   "whyPeopleStillPay": "Patreon: Creators pay to outsource payments, tax complexity, disputes, deliverability, moderation, and the trust needed to convert strangers.",
   "ongoingBurden": "Own payments, webhooks, refunds, tax records, fraud, access control, file delivery, moderation, backups, and support.",
   "priorArt": [

@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Pro",
     "basis": "monthly",
+    "unit": "flat",
     "native": "8.49 USD",
     "source": "https://superwhisper.com/docs/get-started/sw-pro",
     "checkedOn": "2026-07-30",
@@ -33,7 +34,10 @@
     "app-wide polish",
     "support"
   ],
-  "moatType": "polish/native integration",
+  "moatTags": [
+    "execution-polish"
+  ],
+  "moatNotes": "polish/native integration",
   "whyPeopleStillPay": "They pay for the low-friction menu-bar experience and dictation profiles.",
   "priorArt": [
     {

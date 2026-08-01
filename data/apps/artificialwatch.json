@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "The Call",
     "basis": "monthly",
+    "unit": "flat",
     "native": "19.99 USD",
     "source": "https://artificialwatch.com/#pricing",
     "checkedOn": "2026-07-30",
@@ -32,7 +33,11 @@
     "debounce and alias filtering tuned so dated snapshots and -preview ids do not fire false alarms",
     "someone else owning the uptime · your poller sleeps when your machine does"
   ],
-  "moatType": "coverage breadth + telephony + always-on uptime",
+  "moatTags": [
+    "scale-infra",
+    "execution-polish"
+  ],
+  "moatNotes": "coverage breadth + telephony + always-on uptime",
   "whyPeopleStillPay": "Because the failure mode is asymmetric. A launch alerter that works 95% of the time is not 95% as good, it is worthless on the one morning it matters, and that is exactly the morning your VPS got rate limited or your ntfy topic was muted. Paying moves the pager duty to someone else, buys the labs you have no account with, and buys a phone that rings instead of a notification that stacks under forty others. At $19.99 it is priced against the AI subscriptions it watches, which is the comparison buyers actually make.",
   "priorArt": [
     {

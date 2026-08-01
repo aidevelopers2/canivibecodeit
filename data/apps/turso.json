@@ -11,6 +11,7 @@
     "plan": "Scaler",
     "kind": "usage-based",
     "basis": "usage and plan limits",
+    "unit": "usage",
     "currency": "USD",
     "native": "Rows read, storage, and database limits",
     "source": "https://turso.tech/pricing",
@@ -36,7 +37,10 @@
     "24-hour operations and support",
     "managed global infrastructure"
   ],
-  "moatType": "infrastructure/uptime/operations",
+  "moatTags": [
+    "scale-infra"
+  ],
+  "moatNotes": "infrastructure/uptime/operations",
   "whyPeopleStillPay": "Turso: Managed hosting sells a failure domain, on-call team, network, backups, and capacity planning, not merely a deploy button.",
   "ongoingBurden": "Own patching, secrets, TLS, backups, monitoring, capacity, incidents, abuse, networking, and data recovery.",
   "priorArt": [

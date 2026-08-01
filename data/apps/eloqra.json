@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Pro",
     "basis": "monthly per project slot",
+    "unit": "flat",
     "source": "https://eloqra.app/pricing",
     "checkedOn": "2026-07-31",
     "confidence": "high",
@@ -32,7 +33,11 @@
     "everything that isn't the happy path · socket reconnects, duplicate sends, message ordering on flaky mobile networks, Telegram rate limits and retry queues, bot token rotation",
     "always-on hosting · your widget is dead whenever your box, your TLS cert, or your websocket is, and a chat that silently stops connecting reads to visitors as you ignoring them"
   ],
-  "moatType": "free tier/platform friction/hosting",
+  "moatTags": [
+    "scale-infra",
+    "execution-polish"
+  ],
+  "moatNotes": "free tier/platform friction/hosting",
   "whyPeopleStillPay": "Mostly they don't · for one website there is nothing to pay. Free is forever, with unlimited conversations, the full Telegram inbox and mini-app, and every widget option; 4.99 buys an extra project slot for a second site and nothing more, and the 'powered by' badge appears on paid tiers too. So the usual death-list logic inverts here. You aren't weighing a weekend against a subscription, you're weighing a weekend plus a VPS, TLS renewals, reconnect logic, and Telegram retry handling against zero. Live chat is also a promise that someone is actually there, which makes it a bad thing to hang off a box you maintain between other work. The one honest reason to build your own: you want visitor conversations on your own hardware instead of someone else's. That is the entire argument, and it isn't a financial one.",
   "priorArt": [
     {

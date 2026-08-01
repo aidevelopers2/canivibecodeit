@@ -9,7 +9,8 @@
     "build": "node scripts/recent-verdicts.mjs && node scripts/generate-og.mjs && astro build",
     "preview": "astro preview",
     "start": "node ./dist/server/entry.mjs",
-    "og": "node scripts/generate-og.mjs"
+    "og": "node scripts/generate-og.mjs",
+    "validate": "node scripts/validate-apps.mjs"
   },
   "engines": {
     "node": ">=22.12.0"

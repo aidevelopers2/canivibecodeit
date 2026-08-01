@@ -10,6 +10,7 @@
   "pricing": {
     "plan": "Individual",
     "basis": "monthly",
+    "unit": "flat",
     "source": "https://apple.com/apple-music/",
     "checkedOn": "2026-07-31",
     "confidence": "high",
@@ -36,7 +37,11 @@
     "global streaming infrastructure",
     "artist network and recommendations"
   ],
-  "moatType": "licensed content, rights, and distribution network",
+  "moatTags": [
+    "content-rights",
+    "scale-infra"
+  ],
+  "moatNotes": "licensed content, rights, and distribution network",
   "replacementScope": "personal library or creator utility",
   "ongoingBurden": "catalog licensing, royalties, identity, content delivery, moderation, recommendations, payouts, codecs, and rights disputes",
   "whyPeopleStillPay": "People still pay for Apple Music because the product is the catalog, rights chain, and distribution network; a player or processing tool is only the visible edge. The recurring cost buys catalog licensing, royalties, identity, content delivery, moderation, recommendations, payouts, codecs, and rights disputes, not just the visible interface.",

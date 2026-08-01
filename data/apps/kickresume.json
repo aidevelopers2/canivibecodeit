@@ -10,6 +10,7 @@
   "pricing": {
     "plan": "Premium",
     "basis": "monthly",
+    "unit": "flat",
     "source": "https://kickresume.com/pricing",
     "checkedOn": "2026-07-31",
     "confidence": "medium",
@@ -35,7 +36,11 @@
     "human coaching",
     "automated application networks"
   ],
-  "moatType": "data, distribution, and coaching",
+  "moatTags": [
+    "execution-polish",
+    "content-rights"
+  ],
+  "moatNotes": "data, distribution, and coaching",
   "replacementScope": "personal job-search workspace",
   "ongoingBurden": "document parsing, truthful claim handling, job-source changes, browser automation rules, privacy, model drift, and user review",
   "whyPeopleStillPay": "People still pay for Kickresume because people pay for convenience, curated guidance, and distribution; the personal tracking and drafting loop is highly buildable. The recurring cost buys document parsing, truthful claim handling, job-source changes, browser automation rules, privacy, model drift, and user review, not just the visible interface.",

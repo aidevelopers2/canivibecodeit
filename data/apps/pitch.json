@@ -10,6 +10,7 @@
   "pricing": {
     "plan": "Plus",
     "basis": "annual-equivalent per seat",
+    "unit": "per-seat",
     "source": "https://pitch.com/pricing",
     "checkedOn": "2026-07-31",
     "confidence": "medium",
@@ -35,7 +36,11 @@
     "brand governance",
     "professional print workflows"
   ],
-  "moatType": "editor polish, assets, collaboration, and distribution",
+  "moatTags": [
+    "collaboration",
+    "execution-polish"
+  ],
+  "moatNotes": "editor polish, assets, collaboration, and distribution",
   "replacementScope": "personal design canvas",
   "ongoingBurden": "canvas correctness, fonts, exports, templates, asset rights, multiplayer state, and accessibility",
   "whyPeopleStillPay": "People still pay for Pitch because people pay for a vast ready-made design system and a collaboration surface that behaves predictably under deadline. The recurring cost buys canvas correctness, fonts, exports, templates, asset rights, multiplayer state, and accessibility, not just the visible interface.",

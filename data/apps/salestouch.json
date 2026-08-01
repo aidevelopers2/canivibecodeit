@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Monthly",
     "basis": "monthly per LinkedIn account",
+    "unit": "flat",
     "native": "49 USD",
     "source": "https://www.salestouch.io/pricing",
     "checkedOn": "2026-07-30",
@@ -32,7 +33,11 @@
     "human-paced queues, limits, cooldowns, and account safety controls",
     "multi-account orchestration, activity logs, and analytics"
   ],
-  "moatType": "LinkedIn access infrastructure + account safety",
+  "moatTags": [
+    "integrations",
+    "scale-infra"
+  ],
+  "moatNotes": "LinkedIn access infrastructure + account safety",
   "whyPeopleStillPay": "They pay for the execution layer, not the dashboard. SalesTouch keeps authenticated LinkedIn sessions alive, turns private network data into agent tools, schedules actions within safety rules, and absorbs the maintenance when LinkedIn changes behavior. Rebuilding the screens is easy; operating the connection reliably without endangering an account is the product.",
   "priorArt": [],
   "relatedSlugs": [

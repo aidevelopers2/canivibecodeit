@@ -4,6 +4,7 @@
   "pricing": {
     "plan": null,
     "basis": "monthly",
+    "unit": "flat",
     "native": null,
     "source": null,
     "checkedOn": "2026-07-29",
@@ -15,7 +16,10 @@
   "coreLoopDIY": null,
   "diyTimeEstimate": "one sitting",
   "requirements": [],
-  "moatType": null,
+  "moatTags": [
+    "execution-polish"
+  ],
+  "moatNotes": null,
   "whyPeopleStillPay": null,
   "relatedSlugs": [],
   "pagePriority": 5,
@@ -35,5 +39,5 @@
     "a hosted collection URL that isn't yours"
   ],
   "priorArt": [],
-  "prompt": "Build me a testimonial collection and display tool like Senja. Requirements:\n\n- A public /submit page: name, role/company, avatar upload (or auto-fetch from a\n  provided URL), star rating, and the testimonial text. Store submissions in SQLite\n  with an approved flag defaulting to false.\n- An /admin page (basic-auth from .env) listing submissions with approve/delete\n  buttons \u00b7 nothing shows publicly until approved.\n- A public /wall page: masonry grid of approved testimonials, clean cards with\n  avatar, name, stars, and text. Mobile-friendly, dark mode support.\n- An embeddable widget: /embed.js renders the wall into any page via one script\n  tag + a div, iframe-free, styled to inherit the host page's font.\n- Image uploads resized server-side to 128px avatars, stored on disk.\n- Node or Python, single small server, deploy instructions for a VPS."
+  "prompt": "Build me a testimonial collection and display tool like Senja. Requirements:\n\n- A public /submit page: name, role/company, avatar upload (or auto-fetch from a\n  provided URL), star rating, and the testimonial text. Store submissions in SQLite\n  with an approved flag defaulting to false.\n- An /admin page (basic-auth from .env) listing submissions with approve/delete\n  buttons · nothing shows publicly until approved.\n- A public /wall page: masonry grid of approved testimonials, clean cards with\n  avatar, name, stars, and text. Mobile-friendly, dark mode support.\n- An embeddable widget: /embed.js renders the wall into any page via one script\n  tag + a div, iframe-free, styled to inherit the host page's font.\n- Image uploads resized server-side to 128px avatars, stored on disk.\n- Node or Python, single small server, deploy instructions for a VPS."
 }

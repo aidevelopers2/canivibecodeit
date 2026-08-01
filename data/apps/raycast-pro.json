@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Pro",
     "basis": "monthly",
+    "unit": "flat",
     "native": "10 USD",
     "source": "https://www.raycast.com/pricing",
     "checkedOn": "2026-07-30",
@@ -35,7 +36,11 @@
     "team/shared snippets",
     "polished AI commands"
   ],
-  "moatType": "native integration/ecosystem",
+  "moatTags": [
+    "integrations",
+    "execution-polish"
+  ],
+  "moatNotes": "native integration/ecosystem",
   "whyPeopleStillPay": "They pay because the launcher is a daily OS layer; latency and polish matter a lot.",
   "priorArt": [
     {

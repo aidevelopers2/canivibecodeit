@@ -10,6 +10,7 @@
   "pricing": {
     "plan": "Monthly",
     "basis": "monthly",
+    "unit": "flat",
     "source": "https://vidnotes.app/#pricing",
     "checkedOn": "2026-07-31",
     "confidence": "high",
@@ -35,7 +36,12 @@
     "30+ language polish and prebuilt flashcards, quizzes, and chat",
     "hosted web, API, CLI, and MCP access for agents"
   ],
-  "moatType": "source adapters/mobile distribution/agent platform/hosted processing",
+  "moatTags": [
+    "integrations",
+    "scale-infra",
+    "execution-polish"
+  ],
+  "moatNotes": "source adapters/mobile distribution/agent platform/hosted processing",
   "whyPeopleStillPay": "People pay for the maintained system around transcription: source adapters that keep working, long-job processing and retries, consistent results across native apps, web, and the extension, synced account state, and stable API, CLI, and MCP access for agents. The recurring value is avoiding integration breakage and operations work, not just getting speech-to-text.",
   "priorArt": [
     {

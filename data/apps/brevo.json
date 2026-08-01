@@ -10,6 +10,7 @@
   "pricing": {
     "plan": "Starter",
     "basis": "monthly",
+    "unit": "flat",
     "source": "https://brevo.com/pricing",
     "checkedOn": "2026-07-31",
     "confidence": "high",
@@ -37,7 +38,12 @@
     "commerce integrations",
     "recommendation and ad networks"
   ],
-  "moatType": "deliverability, growth network, and integrations",
+  "moatTags": [
+    "scale-infra",
+    "integrations",
+    "network-effects"
+  ],
+  "moatNotes": "deliverability, growth network, and integrations",
   "replacementScope": "single-publication newsletter",
   "ongoingBurden": "DNS authentication, reputation, bounces, complaints, unsubscribe compliance, templates, queues, analytics, backups, and support",
   "whyPeopleStillPay": "People still pay for Brevo because newsletter operators pay for inbox placement, growth mechanics, and operational confidence on publication day. The recurring cost buys DNS authentication, reputation, bounces, complaints, unsubscribe compliance, templates, queues, analytics, backups, and support, not just the visible interface.",

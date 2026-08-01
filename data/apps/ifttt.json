@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Pro",
     "basis": "monthly",
+    "unit": "flat",
     "native": "2.99 USD",
     "source": "https://ifttt.com/plans",
     "checkedOn": "2026-07-30",
@@ -33,7 +34,11 @@
     "easy UI",
     "maintenance when APIs change"
   ],
-  "moatType": "integration network/convenience",
+  "moatTags": [
+    "integrations",
+    "execution-polish"
+  ],
+  "moatNotes": "integration network/convenience",
   "whyPeopleStillPay": "They pay because the applet is easier to click together than to maintain.",
   "priorArt": [
     {

@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Mover",
     "basis": "monthly",
+    "unit": "flat",
     "native": "49 USD",
     "source": "https://www.podia.com/pricing",
     "checkedOn": "2026-07-30",
@@ -37,7 +38,12 @@
     "tax/payment details",
     "support"
   ],
-  "moatType": "payments/content hosting/marketing",
+  "moatTags": [
+    "compliance-regulatory",
+    "scale-infra",
+    "execution-polish"
+  ],
+  "moatNotes": "payments/content hosting/marketing",
   "whyPeopleStillPay": "They pay because commerce plus content delivery has lots of edge cases.",
   "priorArt": [
     {

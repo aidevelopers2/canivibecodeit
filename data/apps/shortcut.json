@@ -10,6 +10,7 @@
   "pricing": {
     "plan": "Team",
     "basis": "monthly per user",
+    "unit": "per-seat",
     "source": "https://shortcut.com/pricing",
     "checkedOn": "2026-07-31",
     "confidence": "high",
@@ -36,7 +37,12 @@
     "large-scale reporting",
     "battle-tested notifications and mobile apps"
   ],
-  "moatType": "collaboration, integrations, and organizational trust",
+  "moatTags": [
+    "collaboration",
+    "integrations",
+    "switching-costs"
+  ],
+  "moatNotes": "collaboration, integrations, and organizational trust",
   "replacementScope": "small-team tracker",
   "ongoingBurden": "auth, permissions, notifications, search, migrations, audit history, integrations, backups, and uptime",
   "whyPeopleStillPay": "People still pay for Shortcut because teams pay because project state has to remain authoritative through staff changes, outages, and years of accumulated workflow exceptions. The recurring cost buys auth, permissions, notifications, search, migrations, audit history, integrations, backups, and uptime, not just the visible interface.",

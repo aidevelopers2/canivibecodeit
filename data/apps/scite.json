@@ -11,6 +11,7 @@
     "plan": "Typical paid plan",
     "kind": "unknown",
     "basis": "paid plan; billing basis requires review",
+    "unit": "flat",
     "currency": "USD",
     "native": "Public paid plan exists; amount not safely recovered",
     "source": "https://scite.ai/pricing",
@@ -36,7 +37,10 @@
     "citation graph scale",
     "team libraries and institutional access"
   ],
-  "moatType": "data/import reliability",
+  "moatTags": [
+    "proprietary-data"
+  ],
+  "moatNotes": "data/import reliability",
   "whyPeopleStillPay": "Scite: Researchers pay for correct metadata, resilient importers, citation coverage, and workflows that survive publisher and browser changes.",
   "ongoingBurden": "Maintain parsers, deduplication, PDF extraction, citation styles, and legal access boundaries.",
   "priorArt": [

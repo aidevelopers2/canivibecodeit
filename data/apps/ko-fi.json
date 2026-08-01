@@ -11,6 +11,7 @@
     "plan": "Ko-fi Gold or platform fee",
     "kind": "revenue-share",
     "basis": "monthly or transaction fee",
+    "unit": "usage",
     "currency": "USD",
     "native": "Free tier with platform fees; paid option varies",
     "source": "https://ko-fi.com/gold",
@@ -36,7 +37,12 @@
     "marketplace discovery and buyer trust",
     "tax, disputes, payouts, and fraud operations"
   ],
-  "moatType": "payments/network/compliance",
+  "moatTags": [
+    "compliance-regulatory",
+    "network-effects",
+    "brand-trust"
+  ],
+  "moatNotes": "payments/network/compliance",
   "whyPeopleStillPay": "Ko-fi: Creators pay to outsource payments, tax complexity, disputes, deliverability, moderation, and the trust needed to convert strangers.",
   "ongoingBurden": "Own payments, webhooks, refunds, tax records, fraud, access control, file delivery, moderation, backups, and support.",
   "priorArt": [

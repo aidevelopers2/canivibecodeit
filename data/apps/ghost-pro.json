@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Publisher",
     "basis": "monthly",
+    "unit": "flat",
     "native": "35 USD",
     "source": "https://ghost.org/pricing/",
     "checkedOn": "2026-07-30",
@@ -36,7 +37,11 @@
     "support",
     "easy scaling"
   ],
-  "moatType": "open-source core/hosting/deliverability",
+  "moatTags": [
+    "scale-infra",
+    "execution-polish"
+  ],
+  "moatNotes": "open-source core/hosting/deliverability",
   "whyPeopleStillPay": "They pay because publishing should not turn into server administration.",
   "priorArt": [
     {

@@ -11,6 +11,7 @@
     "plan": "Standard",
     "kind": "fixed",
     "basis": "monthly automation plan",
+    "unit": "flat",
     "currency": "USD",
     "native": "$119/month",
     "source": "https://octoparse.com/pricing",
@@ -35,7 +36,11 @@
     "durable execution at scale",
     "schema drift handling and enterprise controls"
   ],
-  "moatType": "connectors/auth/reliability",
+  "moatTags": [
+    "integrations",
+    "scale-infra"
+  ],
+  "moatNotes": "connectors/auth/reliability",
   "whyPeopleStillPay": "Octoparse: One automation is easy. Subscribers pay for maintained integrations, credentials, retries, observability, and someone else owning breakage.",
   "ongoingBurden": "Maintain OAuth, rate limits, webhooks, retries, queues, idempotency, logs, secret rotation, and third-party API changes.",
   "priorArt": [

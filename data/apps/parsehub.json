@@ -11,6 +11,7 @@
     "plan": "Standard",
     "kind": "fixed",
     "basis": "monthly automation plan",
+    "unit": "flat",
     "currency": "USD",
     "native": "$189/month",
     "source": "https://parsehub.com/pricing",
@@ -36,7 +37,11 @@
     "hundreds of maintained connectors",
     "OAuth app verification"
   ],
-  "moatType": "connectors/auth/reliability",
+  "moatTags": [
+    "scale-infra",
+    "execution-polish"
+  ],
+  "moatNotes": "connectors/auth/reliability",
   "whyPeopleStillPay": "ParseHub: One automation is easy. Subscribers pay for maintained integrations, credentials, retries, observability, and someone else owning breakage.",
   "ongoingBurden": "Maintain OAuth, rate limits, webhooks, retries, queues, idempotency, logs, secret rotation, and third-party API changes.",
   "priorArt": [

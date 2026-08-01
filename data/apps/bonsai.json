@@ -11,6 +11,7 @@
     "plan": "Essentials",
     "kind": "fixed",
     "basis": "per user per month",
+    "unit": "per-seat",
     "currency": "USD",
     "native": "$25/user/month",
     "source": "https://hellobonsai.com/pricing",
@@ -36,7 +37,12 @@
     "audited security and recovery",
     "multi-user controls and accountant workflows"
   ],
-  "moatType": "banking/compliance/trust",
+  "moatTags": [
+    "compliance-regulatory",
+    "integrations",
+    "brand-trust"
+  ],
+  "moatNotes": "banking/compliance/trust",
   "whyPeopleStillPay": "Bonsai: People pay because errors touch real money. Bank connections, reconciliation, tax changes, evidence, security, and support are the product.",
   "ongoingBurden": "Own data integrity, backups, import mapping, reconciliation, security, audit logs, tax changes, and recovery.",
   "priorArt": [

@@ -11,6 +11,7 @@
     "plan": "Typical paid plan",
     "kind": "usage-based",
     "basis": "usage or capacity based",
+    "unit": "usage",
     "currency": "USD",
     "native": "Usage or capacity pricing; exact monthly cost varies",
     "source": "https://lindy.ai/pricing",
@@ -36,7 +37,11 @@
     "OAuth app verification",
     "durable execution at scale"
   ],
-  "moatType": "connectors/auth/reliability",
+  "moatTags": [
+    "integrations",
+    "scale-infra"
+  ],
+  "moatNotes": "connectors/auth/reliability",
   "whyPeopleStillPay": "Lindy: One automation is easy. Subscribers pay for maintained integrations, credentials, retries, observability, and someone else owning breakage.",
   "ongoingBurden": "Maintain OAuth, rate limits, webhooks, retries, queues, idempotency, logs, secret rotation, and third-party API changes.",
   "priorArt": [

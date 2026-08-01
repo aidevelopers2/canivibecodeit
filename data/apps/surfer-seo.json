@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Essential/Standard",
     "basis": "monthly",
+    "unit": "flat",
     "native": "99 USD",
     "source": "https://surferseo.com/pricing/",
     "checkedOn": "2026-07-30",
@@ -37,7 +38,12 @@
     "audits",
     "support"
   ],
-  "moatType": "data access/workflow/model wrapper",
+  "moatTags": [
+    "proprietary-data",
+    "execution-polish",
+    "integrations"
+  ],
+  "moatNotes": "data access/workflow/model wrapper",
   "whyPeopleStillPay": "They pay because content optimization needs repeatable data and an editor that writers will use.",
   "priorArt": [
     {

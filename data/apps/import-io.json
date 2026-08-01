@@ -11,6 +11,7 @@
     "plan": "Enterprise",
     "kind": "custom",
     "basis": "custom quote",
+    "unit": "custom",
     "currency": "USD",
     "native": "Contact sales",
     "source": "https://import.io/pricing",
@@ -35,7 +36,11 @@
     "durable execution at scale",
     "schema drift handling and enterprise controls"
   ],
-  "moatType": "connectors/auth/reliability",
+  "moatTags": [
+    "integrations",
+    "execution-polish"
+  ],
+  "moatNotes": "connectors/auth/reliability",
   "whyPeopleStillPay": "Import.io: One automation is easy. Subscribers pay for maintained integrations, credentials, retries, observability, and someone else owning breakage.",
   "ongoingBurden": "Maintain OAuth, rate limits, webhooks, retries, queues, idempotency, logs, secret rotation, and third-party API changes.",
   "priorArt": [

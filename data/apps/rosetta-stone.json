@@ -10,6 +10,7 @@
   "pricing": {
     "plan": "Single language",
     "basis": "monthly",
+    "unit": "flat",
     "source": "https://rosettastone.com/buy",
     "checkedOn": "2026-07-31",
     "confidence": "medium",
@@ -35,7 +36,11 @@
     "human feedback",
     "large learner network and certification"
   ],
-  "moatType": "content, pedagogy, and network",
+  "moatTags": [
+    "content-rights",
+    "network-effects"
+  ],
+  "moatNotes": "content, pedagogy, and network",
   "replacementScope": "personal study companion",
   "ongoingBurden": "curriculum quality, assessment validity, content rights, spaced-repetition tuning, speech models, sync, moderation, and support",
   "whyPeopleStillPay": "People still pay for Rosetta Stone because the learning loop is buildable, while trusted curriculum, instructors, feedback, credentials, and community are not. The recurring cost buys curriculum quality, assessment validity, content rights, spaced-repetition tuning, speech models, sync, moderation, and support, not just the visible interface.",

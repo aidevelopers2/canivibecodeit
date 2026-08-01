@@ -10,6 +10,7 @@
   "pricing": {
     "plan": "Pro",
     "basis": "monthly per creator",
+    "unit": "per-seat",
     "source": "https://guidde.com/pricing",
     "checkedOn": "2026-07-31",
     "confidence": "medium",
@@ -36,7 +37,12 @@
     "team libraries",
     "cross-device capture"
   ],
-  "moatType": "capture polish, hosting, and collaboration",
+  "moatTags": [
+    "execution-polish",
+    "scale-infra",
+    "collaboration"
+  ],
+  "moatNotes": "capture polish, hosting, and collaboration",
   "replacementScope": "personal desktop recorder",
   "ongoingBurden": "OS permissions, codecs, rendering performance, uploads, storage, links, and viewer analytics",
   "whyPeopleStillPay": "People still pay for Guidde because the recording itself is easy; the subscription removes upload, transcoding, sharing, organization, and support work. The recurring cost buys OS permissions, codecs, rendering performance, uploads, storage, links, and viewer analytics, not just the visible interface.",

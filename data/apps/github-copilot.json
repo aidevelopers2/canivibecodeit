@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Pro",
     "basis": "monthly",
+    "unit": "flat",
     "native": "10 USD",
     "source": "https://docs.github.com/en/copilot/get-started/plans-for-github-copilot",
     "checkedOn": "2026-07-30",
@@ -34,7 +35,11 @@
     "managed billing",
     "team controls"
   ],
-  "moatType": "model/platform/editor integration",
+  "moatTags": [
+    "proprietary-models",
+    "integrations"
+  ],
+  "moatNotes": "model/platform/editor integration",
   "whyPeopleStillPay": "They pay because low-latency completion and repo-aware coding are available in their editor without setup.",
   "priorArt": [
     {

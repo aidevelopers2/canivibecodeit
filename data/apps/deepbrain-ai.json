@@ -11,6 +11,7 @@
     "plan": "Typical paid plan",
     "kind": "unknown",
     "basis": "paid plan; billing basis requires review",
+    "unit": "flat",
     "currency": "USD",
     "native": "Public paid plan exists; amount not safely recovered",
     "source": "https://aistudios.com/pricing",
@@ -37,7 +38,12 @@
     "low-latency inference infrastructure",
     "licensed data, avatars, and production templates"
   ],
-  "moatType": "proprietary model/inference/safety",
+  "moatTags": [
+    "proprietary-models",
+    "scale-infra",
+    "content-rights"
+  ],
+  "moatNotes": "proprietary model/inference/safety",
   "whyPeopleStillPay": "DeepBrain AI: The visible editor is small; the value sits in the model, inference capacity, safety controls, and production-quality outputs.",
   "ongoingBurden": "Own compute costs, queueing, model and codec changes, consent controls, moderation, storage, and failed jobs.",
   "priorArt": [

@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Sync",
     "basis": "monthly per user",
+    "unit": "per-seat",
     "native": "5 USD",
     "source": "https://obsidian.md/pricing",
     "checkedOn": "2026-07-30",
@@ -32,7 +33,10 @@
     "encrypted vault workflow",
     "Obsidian support"
   ],
-  "moatType": "sync/polish",
+  "moatTags": [
+    "execution-polish"
+  ],
+  "moatNotes": "sync/polish",
   "whyPeopleStillPay": "They pay for no-drama sync across devices while keeping Obsidian's local-first model.",
   "priorArt": [
     {

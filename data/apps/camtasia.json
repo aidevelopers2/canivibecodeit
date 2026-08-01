@@ -11,6 +11,7 @@
     "plan": "Typical paid plan",
     "kind": "unknown",
     "basis": "paid plan; billing basis requires review",
+    "unit": "flat",
     "currency": "USD",
     "native": "Public paid plan exists; amount not safely recovered",
     "source": "https://techsmith.com/camtasia/pricing",
@@ -36,7 +37,11 @@
     "distribution and podcast hosting",
     "professional codecs, effects, and collaboration"
   ],
-  "moatType": "media pipeline/hosting/distribution",
+  "moatTags": [
+    "execution-polish",
+    "scale-infra"
+  ],
+  "moatNotes": "media pipeline/hosting/distribution",
   "whyPeopleStillPay": "Camtasia: People pay to avoid codec failures, upload limits, rendering surprises, lost recordings, and distribution chores.",
   "ongoingBurden": "Maintain codecs, media probing, resumable processing, storage cleanup, exports, device permissions, and performance.",
   "priorArt": [

@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Pro",
     "basis": "monthly",
+    "unit": "flat",
     "native": "20 USD",
     "source": "https://claude.com/pricing",
     "checkedOn": "2026-07-30",
@@ -35,7 +36,11 @@
     "reliability",
     "continuous model upgrades"
   ],
-  "moatType": "frontier model/platform",
+  "moatTags": [
+    "proprietary-models",
+    "scale-infra"
+  ],
+  "moatNotes": "frontier model/platform",
   "whyPeopleStillPay": "They pay because the quality sits in the model and product platform, not the wrapper.",
   "priorArt": [
     {

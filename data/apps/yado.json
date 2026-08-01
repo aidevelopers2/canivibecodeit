@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Yado Pro",
     "basis": "monthly, Apple in-app purchase",
+    "unit": "flat",
     "native": "9.99 USD",
     "source": "https://apps.apple.com/app/id6757281931",
     "checkedOn": "2026-07-30",
@@ -33,7 +34,11 @@
     "diffs you can read on a small screen · screenshots you can paste in · a live preview of the app you are building",
     "isolation · one box means everything on it can reach everything else on it"
   ],
-  "moatType": "hosting/upkeep/polish",
+  "moatTags": [
+    "scale-infra",
+    "execution-polish"
+  ],
+  "moatNotes": "hosting/upkeep/polish",
   "whyPeopleStillPay": "Because the weekend build is a pet. You keep the box alive, you keep the proxy alive, you patch it every time Claude Code shifts under you, and you pay for a machine that idles all week. Some people like pets, and if that's you, keep it. Yado is the version where none of that is yours. It wakes when you open the app and costs nothing the rest of the time, signing in is one tap instead of an SSH session, and when Claude Code moves, that's my problem now. You still bring your own Claude account. You're paying me for the boring half.",
   "priorArt": [
     {
@@ -49,7 +54,11 @@
       "status": "alive"
     }
   ],
-  "relatedSlugs": ["cursor", "claude", "replit"],
+  "relatedSlugs": [
+    "cursor",
+    "claude",
+    "replit"
+  ],
   "pagePriority": 4,
   "verifiedOneShot": false,
   "notes": "The moat is the boring half: upkeep, a box that sleeps at zero, and a login that works without a terminal.",

@@ -11,6 +11,7 @@
     "plan": "Typical paid plan",
     "kind": "unknown",
     "basis": "paid plan; billing basis requires review",
+    "unit": "flat",
     "currency": "USD",
     "native": "Public paid plan exists; amount not safely recovered",
     "source": "https://pictory.ai/pricing",
@@ -37,7 +38,11 @@
     "hosted recording reliability",
     "large-scale rendering"
   ],
-  "moatType": "media pipeline/hosting/distribution",
+  "moatTags": [
+    "scale-infra",
+    "execution-polish"
+  ],
+  "moatNotes": "media pipeline/hosting/distribution",
   "whyPeopleStillPay": "Pictory: People pay to avoid codec failures, upload limits, rendering surprises, lost recordings, and distribution chores.",
   "ongoingBurden": "Maintain codecs, media probing, resumable processing, storage cleanup, exports, device permissions, and performance.",
   "priorArt": [

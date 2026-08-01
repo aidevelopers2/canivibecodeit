@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Standard",
     "basis": "monthly",
+    "unit": "flat",
     "native": "15 USD",
     "source": "https://runwayml.com/pricing",
     "checkedOn": "2026-07-30",
@@ -35,7 +36,11 @@
     "commercial rights workflows",
     "editing polish"
   ],
-  "moatType": "frontier model/compute",
+  "moatTags": [
+    "proprietary-models",
+    "scale-infra"
+  ],
+  "moatNotes": "frontier model/compute",
   "whyPeopleStillPay": "They pay because generative video quality and inference infrastructure are the product.",
   "priorArt": [
     {

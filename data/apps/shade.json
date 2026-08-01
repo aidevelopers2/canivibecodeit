@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Growth",
     "basis": "monthly per seat",
+    "unit": "per-seat",
     "native": "35 USD",
     "source": "https://shade.inc/pricing",
     "checkedOn": "2026-07-30",
@@ -35,7 +36,12 @@
     "team sync, so everyone searches the same index",
     "the NLE plugins and Slack integration"
   ],
-  "moatType": "cloud streaming/collaboration/model pipeline",
+  "moatTags": [
+    "collaboration",
+    "scale-infra",
+    "proprietary-models"
+  ],
+  "moatNotes": "cloud streaming/collaboration/model pipeline",
   "whyPeopleStillPay": "They pay because the search only matters if the whole team gets it. A local index that only lives on the editor's machine solves the editor's problem and nobody else's, and the person who most needs to find the clip is usually the one furthest from the storage. Shade sells the index plus the delivery of what the index found, and the second half is the expensive one.",
   "priorArt": [
     {

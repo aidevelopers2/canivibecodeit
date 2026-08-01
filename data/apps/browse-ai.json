@@ -11,6 +11,7 @@
     "plan": "Starter",
     "kind": "fixed",
     "basis": "monthly automation plan",
+    "unit": "flat",
     "currency": "USD",
     "native": "$19/month",
     "source": "https://browse.ai/pricing",
@@ -35,7 +36,11 @@
     "schema drift handling and enterprise controls",
     "hundreds of maintained connectors"
   ],
-  "moatType": "connectors/auth/reliability",
+  "moatTags": [
+    "integrations",
+    "scale-infra"
+  ],
+  "moatNotes": "connectors/auth/reliability",
   "whyPeopleStillPay": "Browse AI: One automation is easy. Subscribers pay for maintained integrations, credentials, retries, observability, and someone else owning breakage.",
   "ongoingBurden": "Maintain OAuth, rate limits, webhooks, retries, queues, idempotency, logs, secret rotation, and third-party API changes.",
   "priorArt": [

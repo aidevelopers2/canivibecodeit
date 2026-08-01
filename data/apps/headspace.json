@@ -10,6 +10,7 @@
   "pricing": {
     "plan": "Headspace",
     "basis": "monthly",
+    "unit": "flat",
     "source": "https://headspace.com/subscription",
     "checkedOn": "2026-07-31",
     "confidence": "high",
@@ -35,7 +36,12 @@
     "clinical validation",
     "large content library and social network"
   ],
-  "moatType": "hardware data, content, coaching, and trust",
+  "moatTags": [
+    "content-rights",
+    "brand-trust",
+    "execution-polish"
+  ],
+  "moatNotes": "hardware data, content, coaching, and trust",
   "replacementScope": "personal general-wellbeing tracker",
   "ongoingBurden": "sensor permissions, data quality, notifications, safety language, accessibility, sync, privacy, content review, and support",
   "whyPeopleStillPay": "People still pay for Headspace because people pay for polished mobile capture, trusted content, hardware integration, and coaching rather than the basic logbook. The recurring cost buys sensor permissions, data quality, notifications, safety language, accessibility, sync, privacy, content review, and support, not just the visible interface.",

@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "First benchmark",
     "basis": "one-time per benchmark",
+    "unit": "one-time",
     "native": "9 USD",
     "source": "https://100questionsai.com",
     "checkedOn": "2026-07-31",
@@ -34,7 +35,11 @@
     "stored point-in-time reports and comparisons",
     "polished exports and action recommendations"
   ],
-  "moatType": "workflow/reliability/evidence normalization",
+  "moatTags": [
+    "execution-polish",
+    "integrations"
+  ],
+  "moatNotes": "workflow/reliability/evidence normalization",
   "whyPeopleStillPay": "They pay for a repeatable, frozen benchmark with provider failures handled, citations normalized, every metric tied to evidence, and a report that is ready to act on.",
   "priorArt": [],
   "relatedSlugs": [

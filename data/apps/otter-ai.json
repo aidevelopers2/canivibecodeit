@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Pro",
     "basis": "monthly",
+    "unit": "flat",
     "native": "16.99 USD",
     "source": "https://otter.ai/pricing",
     "checkedOn": "2026-07-30",
@@ -33,7 +34,12 @@
     "searchable account history",
     "integrations"
   ],
-  "moatType": "integrations/sync/collaboration",
+  "moatTags": [
+    "integrations",
+    "collaboration",
+    "execution-polish"
+  ],
+  "moatNotes": "integrations/sync/collaboration",
   "whyPeopleStillPay": "They pay for capture reliability and shared searchable meeting memory, not just the transcript file.",
   "priorArt": [
     {

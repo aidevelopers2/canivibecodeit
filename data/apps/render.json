@@ -10,6 +10,7 @@
   "pricing": {
     "plan": "Starter Web Service",
     "basis": "monthly per service",
+    "unit": "flat",
     "source": "https://render.com/pricing",
     "checkedOn": "2026-07-31",
     "confidence": "high",
@@ -37,7 +38,10 @@
     "autoscaling",
     "DDoS protection, support, and compliance"
   ],
-  "moatType": "infrastructure scale, operations, and reliability",
+  "moatTags": [
+    "scale-infra"
+  ],
+  "moatNotes": "infrastructure scale, operations, and reliability",
   "replacementScope": "single-server personal platform",
   "ongoingBurden": "patching, certificates, isolation, secrets, builds, deploys, logs, metrics, backups, capacity, incidents, and security response",
   "whyPeopleStillPay": "People still pay for Render because hosting products sell an operations team and failure-domain diversity, not merely a deploy button. The recurring cost buys patching, certificates, isolation, secrets, builds, deploys, logs, metrics, backups, capacity, incidents, and security response, not just the visible interface.",

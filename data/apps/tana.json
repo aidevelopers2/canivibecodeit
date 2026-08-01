@@ -11,6 +11,7 @@
     "plan": "Plus",
     "kind": "fixed",
     "basis": "monthly individual subscription",
+    "unit": "flat",
     "currency": "USD",
     "native": "$10/month",
     "source": "https://tana.inc/pricing",
@@ -35,7 +36,11 @@
     "mature importers and exporters",
     "collaborative editing and sharing"
   ],
-  "moatType": "polish/sync/importers",
+  "moatTags": [
+    "execution-polish",
+    "collaboration"
+  ],
+  "moatNotes": "polish/sync/importers",
   "whyPeopleStillPay": "Tana: People pay for a writing surface they trust for years, plus migration tools, sync, and tiny interaction details that disappear into habit.",
   "ongoingBurden": "Own schema migrations, backups, sync conflicts, export compatibility, and long-term file readability.",
   "priorArt": [

@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Pro",
     "basis": "monthly per seat",
+    "unit": "per-seat",
     "native": "29 USD",
     "source": "https://tldv.io/app/pricing/",
     "checkedOn": "2026-07-30",
@@ -34,7 +35,12 @@
     "admin controls",
     "polished clip sharing"
   ],
-  "moatType": "integrations/media/collaboration",
+  "moatTags": [
+    "collaboration",
+    "integrations",
+    "execution-polish"
+  ],
+  "moatNotes": "integrations/media/collaboration",
   "whyPeopleStillPay": "They pay for repeatable team-wide capture and distribution, not because summaries are hard.",
   "priorArt": [
     {

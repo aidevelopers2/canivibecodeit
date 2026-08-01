@@ -11,6 +11,7 @@
     "plan": "Pay as you go",
     "kind": "usage-based",
     "basis": "contacts and sends",
+    "unit": "usage",
     "currency": "USD",
     "native": "Subscriber and send-volume pricing",
     "source": "https://mailcoach.app/cloud",
@@ -37,7 +38,11 @@
     "bounce, complaint, and suppression handling",
     "large-scale segmentation and automation"
   ],
-  "moatType": "deliverability/reputation/network",
+  "moatTags": [
+    "scale-infra",
+    "network-effects"
+  ],
+  "moatNotes": "deliverability/reputation/network",
   "whyPeopleStillPay": "Mailcoach Cloud: The editor is trivial compared with inbox placement, compliance, reputation, unsubscribe handling, analytics, and audience growth infrastructure.",
   "ongoingBurden": "Own consent records, suppression lists, bounces, complaints, DNS, templates, accessibility, segmentation, and privacy requests.",
   "priorArt": [

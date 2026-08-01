@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Starter",
     "basis": "flat monthly, 3 active programs and 25k sends",
+    "unit": "usage",
     "native": "99 USD",
     "source": "https://hiremara.com/pricing",
     "checkedOn": "2026-07-30",
@@ -34,7 +35,11 @@
     "outcome tracking wired back to the copy that caused it",
     "the maintenance nobody does, which is the actual reason lifecycle programs rot"
   ],
-  "moatType": "deliverability/iteration loop/operations",
+  "moatTags": [
+    "scale-infra",
+    "execution-polish"
+  ],
+  "moatNotes": "deliverability/iteration loop/operations",
   "whyPeopleStillPay": "Lifecycle email is not a build problem, it is an upkeep problem. The DIY version works the week you build it and then sits at whatever quality your first draft happened to have, because nobody goes back to rewrite the activation email that quietly stopped working. Founders pay for the part that keeps happening after launch week: something reading the outcomes, rewriting the losers, and handling the replies without being asked.",
   "priorArt": [
     {
@@ -56,7 +61,11 @@
       "status": "alive"
     }
   ],
-  "relatedSlugs": ["kit", "mailchimp", "beehiiv"],
+  "relatedSlugs": [
+    "kit",
+    "mailchimp",
+    "beehiiv"
+  ],
   "pagePriority": 3,
   "verifiedOneShot": false,
   "notes": "Submitted by the maker. The honest split: the sender is a weekend, the loop that keeps rewriting it is not.",

@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Starter",
     "basis": "monthly per user",
+    "unit": "per-seat",
     "native": "20 USD",
     "source": "https://www.getinboxzero.com/pricing",
     "checkedOn": "2026-07-30",
@@ -33,7 +34,11 @@
     "Slack and Telegram chat, mobile access, meeting briefs, and attachment filing",
     "hosted security, compliance, team administration, monitoring, and support"
   ],
-  "moatType": "open-source product/managed hosting/OAuth/integrations/reliability",
+  "moatTags": [
+    "integrations",
+    "execution-polish"
+  ],
+  "moatNotes": "open-source product/managed hosting/OAuth/integrations/reliability",
   "whyPeopleStillPay": "They pay for the two-click setup and the confidence that a security-sensitive inbox integration will stay synced, recover from provider failures, and keep its integrations working. People who prefer to own the infrastructure can self-host the official open-source product instead of maintaining a smaller rewrite.",
   "priorArt": [
     {

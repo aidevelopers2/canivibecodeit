@@ -11,6 +11,7 @@
     "plan": "Dedicated or serverless",
     "kind": "usage-based",
     "basis": "resource usage",
+    "unit": "usage",
     "currency": "USD",
     "native": "Cloud database resources and transfer",
     "source": "https://mongodb.com/pricing",
@@ -36,7 +37,10 @@
     "DDoS protection and compliance",
     "24-hour operations and support"
   ],
-  "moatType": "infrastructure/uptime/operations",
+  "moatTags": [
+    "scale-infra"
+  ],
+  "moatNotes": "infrastructure/uptime/operations",
   "whyPeopleStillPay": "MongoDB Atlas: Managed hosting sells a failure domain, on-call team, network, backups, and capacity planning, not merely a deploy button.",
   "ongoingBurden": "Own patching, secrets, TLS, backups, monitoring, capacity, incidents, abuse, networking, and data recovery.",
   "priorArt": [

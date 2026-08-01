@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Basic",
     "basis": "monthly",
+    "unit": "flat",
     "native": "9 USD",
     "source": "https://umami.is/docs/cloud",
     "checkedOn": "2026-07-30",
@@ -34,7 +35,10 @@
     "team/billing convenience",
     "support"
   ],
-  "moatType": "open-source core/hosting",
+  "moatTags": [
+    "scale-infra"
+  ],
+  "moatNotes": "open-source core/hosting",
   "whyPeopleStillPay": "They pay because analytics is not worth waking up to fix.",
   "priorArt": [
     {

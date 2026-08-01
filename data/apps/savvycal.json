@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Basic",
     "basis": "monthly",
+    "unit": "flat",
     "native": "12 USD",
     "source": "https://savvycal.com/pricing",
     "checkedOn": "2026-07-30",
@@ -35,7 +36,11 @@
     "reminders",
     "support"
   ],
-  "moatType": "calendar integration/polish",
+  "moatTags": [
+    "integrations",
+    "execution-polish"
+  ],
+  "moatNotes": "calendar integration/polish",
   "whyPeopleStillPay": "They pay for a nicer, reliable scheduling experience that avoids friction with guests.",
   "priorArt": [
     {

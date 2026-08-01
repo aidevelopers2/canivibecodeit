@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Pro",
     "basis": "monthly",
+    "unit": "flat",
     "native": "9.99 USD",
     "source": "https://www.inoreader.com/pricing",
     "checkedOn": "2026-07-30",
@@ -35,7 +36,12 @@
     "polished search",
     "support"
   ],
-  "moatType": "data ingestion/integrations",
+  "moatTags": [
+    "scale-infra",
+    "integrations",
+    "execution-polish"
+  ],
+  "moatNotes": "data ingestion/integrations",
   "whyPeopleStillPay": "They pay for reliability and a power-user rules engine that keeps working while feeds break.",
   "priorArt": [
     {

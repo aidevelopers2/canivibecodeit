@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Pro",
     "basis": "monthly",
+    "unit": "flat",
     "native": "14 USD",
     "source": "https://invoiceninja.com/pricing-plans/",
     "checkedOn": "2026-07-30",
@@ -36,7 +37,11 @@
     "payment setup convenience",
     "reduced ops risk"
   ],
-  "moatType": "open-source core/hosting/payments",
+  "moatTags": [
+    "scale-infra",
+    "execution-polish"
+  ],
+  "moatNotes": "open-source core/hosting/payments",
   "whyPeopleStillPay": "They pay because billing software is boring and should not break on invoice day.",
   "priorArt": [
     {

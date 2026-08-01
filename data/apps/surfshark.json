@@ -11,6 +11,7 @@
     "plan": "Starter",
     "kind": "fixed",
     "basis": "monthly VPN plan",
+    "unit": "flat",
     "currency": "USD",
     "native": "$15.45/month",
     "source": "https://surfshark.com/pricing",
@@ -36,7 +37,12 @@
     "recovery guarantees and regulated trust",
     "audited cryptography and incident response"
   ],
-  "moatType": "security/infrastructure/trust",
+  "moatTags": [
+    "scale-infra",
+    "brand-trust",
+    "compliance-regulatory"
+  ],
+  "moatNotes": "security/infrastructure/trust",
   "whyPeopleStillPay": "Surfshark: Security subscriptions buy professional operations, audits, response capacity, redundancy, and accountability when something goes wrong.",
   "ongoingBurden": "Own threat modelling, key management, patching, backups, restore tests, incident response, privacy requests, and dependency security.",
   "priorArt": [],

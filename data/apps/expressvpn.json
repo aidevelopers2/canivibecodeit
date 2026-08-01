@@ -11,6 +11,7 @@
     "plan": "Basic",
     "kind": "fixed",
     "basis": "monthly VPN plan",
+    "unit": "flat",
     "currency": "USD",
     "native": "$12.95/month",
     "source": "https://expressvpn.com/order",
@@ -36,7 +37,11 @@
     "audited cryptography and incident response",
     "global network or redundant storage infrastructure"
   ],
-  "moatType": "security/infrastructure/trust",
+  "moatTags": [
+    "scale-infra",
+    "brand-trust"
+  ],
+  "moatNotes": "security/infrastructure/trust",
   "whyPeopleStillPay": "ExpressVPN: Security subscriptions buy professional operations, audits, response capacity, redundancy, and accountability when something goes wrong.",
   "ongoingBurden": "Own threat modelling, key management, patching, backups, restore tests, incident response, privacy requests, and dependency security.",
   "priorArt": [],

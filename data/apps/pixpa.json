@@ -11,6 +11,7 @@
     "plan": "Typical paid plan",
     "kind": "unknown",
     "basis": "paid plan; billing basis requires review",
+    "unit": "flat",
     "currency": "USD",
     "native": "Public paid plan exists; amount not safely recovered",
     "source": "https://pixpa.com/pricing",
@@ -35,7 +36,12 @@
     "general-purpose visual editing",
     "large template and component libraries"
   ],
-  "moatType": "editor/CMS/hosting/polish",
+  "moatTags": [
+    "execution-polish",
+    "scale-infra",
+    "content-rights"
+  ],
+  "moatNotes": "editor/CMS/hosting/polish",
   "whyPeopleStillPay": "Pixpa: A single site is easy to code. People pay for safe ongoing edits, templates, publishing, domains, collaboration, and no-maintenance hosting.",
   "ongoingBurden": "Maintain responsive rendering, browser compatibility, deployment, domains, forms, spam protection, backups, and editor migrations.",
   "priorArt": [

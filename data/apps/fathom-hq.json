@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Starter",
     "basis": "monthly",
+    "unit": "flat",
     "native": "53 USD",
     "source": "https://www.fathomhq.com/pricing",
     "checkedOn": "2026-07-30",
@@ -37,7 +38,11 @@
     "advisor workflows",
     "reliability"
   ],
-  "moatType": "financial integrations/reporting templates",
+  "moatTags": [
+    "integrations",
+    "execution-polish"
+  ],
+  "moatNotes": "financial integrations/reporting templates",
   "whyPeopleStillPay": "They pay because board/advisor reporting needs accuracy, comparability, and presentable output.",
   "priorArt": [
     {

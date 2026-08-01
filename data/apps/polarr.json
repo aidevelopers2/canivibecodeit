@@ -11,6 +11,7 @@
     "plan": "Typical paid plan",
     "kind": "unknown",
     "basis": "paid plan; billing basis requires review",
+    "unit": "flat",
     "currency": "USD",
     "native": "Public paid plan exists; amount not safely recovered",
     "source": "https://polarr.com/pricing",
@@ -36,7 +37,11 @@
     "cloud collaboration and mobile apps",
     "high-fidelity color, format, and export handling"
   ],
-  "moatType": "editor polish/assets/algorithms",
+  "moatTags": [
+    "execution-polish",
+    "content-rights"
+  ],
+  "moatNotes": "editor polish/assets/algorithms",
   "whyPeopleStillPay": "Polarr: Creative users pay for speed, output fidelity, nondestructive editing, and years of edge-case work hidden behind direct manipulation.",
   "ongoingBurden": "Maintain file-format compatibility, GPU and canvas performance, undo history, export quality, and platform-specific rendering.",
   "priorArt": [

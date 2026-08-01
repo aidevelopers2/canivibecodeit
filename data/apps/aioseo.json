@@ -11,6 +11,7 @@
     "plan": "Typical paid plan",
     "kind": "unknown",
     "basis": "paid plan; billing basis requires review",
+    "unit": "flat",
     "currency": "USD",
     "native": "Public paid plan exists; amount not safely recovered",
     "source": "https://aioseo.com/pricing",
@@ -36,7 +37,11 @@
     "large-scale crawling infrastructure",
     "historical competitor datasets and support"
   ],
-  "moatType": "proprietary data/index/crawl scale",
+  "moatTags": [
+    "proprietary-data",
+    "scale-infra"
+  ],
+  "moatNotes": "proprietary data/index/crawl scale",
   "whyPeopleStillPay": "AIOSEO: The dashboard is reproducible; the expensive part is continuously collecting, cleaning, storing, and defending a useful index of the web.",
   "ongoingBurden": "Maintain crawling etiquette, parsers, rendering, rate limits, search-engine changes, data freshness, storage, and reporting logic.",
   "priorArt": [

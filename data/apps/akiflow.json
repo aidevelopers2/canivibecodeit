@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Pro Monthly",
     "basis": "monthly",
+    "unit": "flat",
     "native": "34 USD",
     "source": "https://akiflow.com/pricing",
     "checkedOn": "2026-07-30",
@@ -34,7 +35,11 @@
     "mobile/desktop apps",
     "support for API breakage"
   ],
-  "moatType": "integrations/sync",
+  "moatTags": [
+    "integrations",
+    "execution-polish"
+  ],
+  "moatNotes": "integrations/sync",
   "whyPeopleStillPay": "They pay to stop context-switching between task apps and calendars.",
   "priorArt": [
     {

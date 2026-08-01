@@ -11,6 +11,7 @@
     "plan": "Collect",
     "kind": "fixed",
     "basis": "per member per month",
+    "unit": "per-seat",
     "currency": "USD",
     "native": "$5/member/month",
     "source": "https://expensify.com/pricing",
@@ -37,7 +38,11 @@
     "bank, payment, tax, and reconciliation integrations",
     "live bank feeds and payment rails"
   ],
-  "moatType": "banking/compliance/trust",
+  "moatTags": [
+    "compliance-regulatory",
+    "integrations"
+  ],
+  "moatNotes": "banking/compliance/trust",
   "whyPeopleStillPay": "Expensify: People pay because errors touch real money. Bank connections, reconciliation, tax changes, evidence, security, and support are the product.",
   "ongoingBurden": "Own data integrity, backups, import mapping, reconciliation, security, audit logs, tax changes, and recovery.",
   "priorArt": [

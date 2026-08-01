@@ -10,6 +10,7 @@
   "pricing": {
     "plan": "Extended",
     "basis": "monthly",
+    "unit": "flat",
     "source": "https://optery.com/plans",
     "checkedOn": "2026-07-31",
     "confidence": "medium",
@@ -36,7 +37,11 @@
     "breach monitoring data",
     "account recovery and support"
   ],
-  "moatType": "security assurance, infrastructure, and trust",
+  "moatTags": [
+    "proprietary-data",
+    "brand-trust"
+  ],
+  "moatNotes": "security assurance, infrastructure, and trust",
   "replacementScope": "educational or low-risk personal utility",
   "ongoingBurden": "cryptography, secure updates, key recovery, threat intelligence, relay capacity, abuse response, audits, and incident handling",
   "whyPeopleStillPay": "People still pay for Optery because security products are paid for because expert review, infrastructure, and accountability matter more than recreating screens. The recurring cost buys cryptography, secure updates, key recovery, threat intelligence, relay capacity, abuse response, audits, and incident handling, not just the visible interface.",

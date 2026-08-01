@@ -11,6 +11,7 @@
     "plan": "Launch",
     "kind": "fixed",
     "basis": "monthly commerce plan",
+    "unit": "flat",
     "currency": "USD",
     "native": "$79/month",
     "source": "https://samcart.com/pricing",
@@ -36,7 +37,11 @@
     "tax, disputes, payouts, and fraud operations",
     "native apps and community moderation"
   ],
-  "moatType": "payments/network/compliance",
+  "moatTags": [
+    "compliance-regulatory",
+    "brand-trust"
+  ],
+  "moatNotes": "payments/network/compliance",
   "whyPeopleStillPay": "SamCart: Creators pay to outsource payments, tax complexity, disputes, deliverability, moderation, and the trust needed to convert strangers.",
   "ongoingBurden": "Own payments, webhooks, refunds, tax records, fraud, access control, file delivery, moderation, backups, and support.",
   "priorArt": [

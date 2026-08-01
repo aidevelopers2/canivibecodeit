@@ -9,11 +9,12 @@
   "pricing": {
     "plan": "Light",
     "basis": "yearly per user",
+    "unit": "per-seat",
     "native": "9.90 EUR",
     "source": "https://meetergo.com/en/pricing",
     "checkedOn": "2026-07-30",
     "confidence": "high",
-    "notes": "Official pricing checked 2026-07-30; Light is \u20ac9.90 per user/month billed yearly, about $11 at the ECB reference rate. It includes unlocked scheduling, unlimited meetergo Connect video calls, HubSpot and Pipedrive sync, up to three workflows, a client portal, REST API, and webhooks."
+    "notes": "Official pricing checked 2026-07-30; Light is €9.90 per user/month billed yearly, about $11 at the ECB reference rate. It includes unlocked scheduling, unlimited meetergo Connect video calls, HubSpot and Pipedrive sync, up to three workflows, a client portal, REST API, and webhooks."
   },
   "verdict": "kinda",
   "verdictConfidence": "high",
@@ -34,7 +35,12 @@
     "shared CRM context, client portals, e-signatures, invoicing, meeting notes, and the built-in AI assistant",
     "EU hosting, support, integration maintenance, and compliance operations"
   ],
-  "moatType": "integration reliability/workflow depth/EU compliance operations",
+  "moatTags": [
+    "integrations",
+    "execution-polish",
+    "compliance-regulatory"
+  ],
+  "moatNotes": "integration reliability/workflow depth/EU compliance operations",
   "whyPeopleStillPay": "They pay because meetergo bundles what would otherwise be a stack of separate tools. Calendar reliability, routing, reminders, video, payments, CRM context, signed documents, and client follow-up share the same customer and meeting record, while EU hosting and ongoing integration maintenance remove operational risk. A DIY booking page can save a solo user money; a team pays to avoid rebuilding and operating the system around every customer meeting.",
   "priorArt": [
     {

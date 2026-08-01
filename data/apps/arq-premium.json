@@ -11,6 +11,7 @@
     "plan": "Premium",
     "kind": "fixed",
     "basis": "annual-equivalent backup plan",
+    "unit": "flat",
     "currency": "USD",
     "native": "$59.99/year",
     "source": "https://arqbackup.com/pricing",
@@ -36,7 +37,11 @@
     "identity, credit, or broker-removal operations",
     "recovery guarantees and regulated trust"
   ],
-  "moatType": "security/infrastructure/trust",
+  "moatTags": [
+    "brand-trust",
+    "scale-infra"
+  ],
+  "moatNotes": "security/infrastructure/trust",
   "whyPeopleStillPay": "Arq Premium: Security subscriptions buy professional operations, audits, response capacity, redundancy, and accountability when something goes wrong.",
   "ongoingBurden": "Own threat modelling, key management, patching, backups, restore tests, incident response, privacy requests, and dependency security.",
   "priorArt": [

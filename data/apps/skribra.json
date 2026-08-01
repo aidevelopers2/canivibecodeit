@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Starter",
     "basis": "monthly",
+    "unit": "flat",
     "source": "https://skribra.com/#pricing",
     "checkedOn": "2026-07-31",
     "confidence": "high",
@@ -33,7 +34,11 @@
     "a pipeline that survives its own failures · every stage retried and resumable, stuck jobs requeued after a deploy kills a worker, and a breaker that trips before the API call so a runaway loop costs zero tokens",
     "the tuned prompt library and the checks around it · dozens of purpose-built prompts, title coherence and uniqueness gates, and cannibalisation detection so post 20 doesn't quietly compete with post 3"
   ],
-  "moatType": "platform approvals/data access/ongoing maintenance",
+  "moatTags": [
+    "integrations",
+    "execution-polish"
+  ],
+  "moatNotes": "platform approvals/data access/ongoing maintenance",
   "whyPeopleStillPay": "Two reasons, and neither is that the writing is difficult. First, the integrations aren't a coding problem · publishing to Shopify or Webflow means shipping an app through their review, and you can write perfect code and still be three weeks from a published article. Second, the DIY version has its own bill: every article is a stack of paid LLM calls and useful keyword data is a paid API, so this isn't a weekend versus a subscription, it's a weekend plus a metered cost versus a subscription. What's left after that is maintenance nobody enjoys owning · deciding what to write next, not writing the same thing twice, and going back to old posts when the numbers move.",
   "priorArt": [],
   "relatedSlugs": [

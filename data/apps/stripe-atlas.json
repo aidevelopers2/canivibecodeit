@@ -10,6 +10,7 @@
   "pricing": {
     "plan": "Atlas",
     "basis": "one-time",
+    "unit": "one-time",
     "source": "https://stripe.com/atlas",
     "checkedOn": "2026-07-31",
     "confidence": "high",
@@ -36,7 +37,11 @@
     "filing and registered-agent network",
     "continuous regulatory monitoring and liability"
   ],
-  "moatType": "expert judgment, compliance, and regulated services",
+  "moatTags": [
+    "compliance-regulatory",
+    "brand-trust"
+  ],
+  "moatNotes": "expert judgment, compliance, and regulated services",
   "replacementScope": "internal questionnaire and template tracker",
   "ongoingBurden": "law changes, jurisdiction, template provenance, access, signatures, filings, deadlines, evidence, retention, security, and professional liability",
   "whyPeopleStillPay": "People still pay for Stripe Atlas because the durable value is expert accountability and regulated execution; document generation alone cannot supply either. The recurring cost buys law changes, jurisdiction, template provenance, access, signatures, filings, deadlines, evidence, retention, security, and professional liability, not just the visible interface.",

@@ -11,6 +11,7 @@
     "plan": "Core",
     "kind": "fixed",
     "basis": "per month billed annually",
+    "unit": "flat",
     "currency": "USD",
     "native": "$9.95/month billed annually",
     "source": "https://skedpal.com/pricing",
@@ -36,7 +37,11 @@
     "polished shortcuts and accessibility",
     "vendor-maintained updates"
   ],
-  "moatType": "polish/OS integration",
+  "moatTags": [
+    "execution-polish",
+    "integrations"
+  ],
+  "moatNotes": "polish/OS integration",
   "whyPeopleStillPay": "SkedPal: People keep paying because a utility used dozens of times a day must be instant, predictable, and compatible with every OS update.",
   "ongoingBurden": "Track OS permission changes, shortcut conflicts, packaging, code signing, and regressions after system updates.",
   "priorArt": [

@@ -10,6 +10,7 @@
   "pricing": {
     "plan": "Unlimited",
     "basis": "monthly",
+    "unit": "flat",
     "source": "https://jenni.ai/pricing",
     "checkedOn": "2026-07-31",
     "confidence": "medium",
@@ -36,7 +37,11 @@
     "team workflows",
     "large template libraries"
   ],
-  "moatType": "workflow, data, and model tuning",
+  "moatTags": [
+    "execution-polish",
+    "proprietary-data"
+  ],
+  "moatNotes": "workflow, data, and model tuning",
   "replacementScope": "personal content workstation",
   "ongoingBurden": "prompt maintenance, retrieval quality, source handling, provider changes, and editorial QA",
   "whyPeopleStillPay": "People still pay for Jenni AI because the subscription bundles a refined workflow, proprietary signals, templates, and predictable output quality for a team. The recurring cost buys prompt maintenance, retrieval quality, source handling, provider changes, and editorial QA, not just the visible interface.",

@@ -11,6 +11,7 @@
     "plan": "Standard",
     "kind": "fixed",
     "basis": "per editor per month",
+    "unit": "per-seat",
     "currency": "USD",
     "native": "$12/editor/month",
     "source": "https://sketch.com/pricing",
@@ -35,7 +36,12 @@
     "pixel-perfect professional tooling",
     "large template and asset libraries"
   ],
-  "moatType": "editor polish/assets/algorithms",
+  "moatTags": [
+    "execution-polish",
+    "content-rights",
+    "collaboration"
+  ],
+  "moatNotes": "editor polish/assets/algorithms",
   "whyPeopleStillPay": "Sketch: Creative users pay for speed, output fidelity, nondestructive editing, and years of edge-case work hidden behind direct manipulation.",
   "ongoingBurden": "Maintain file-format compatibility, GPU and canvas performance, undo history, export quality, and platform-specific rendering.",
   "priorArt": [

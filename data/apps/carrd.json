@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Pro Standard",
     "basis": "annual effective per month",
+    "unit": "flat",
     "native": "1.58 USD",
     "source": "https://carrd.co/pro",
     "checkedOn": "2026-07-30",
@@ -33,7 +34,11 @@
     "their template gallery",
     "not having to think about hosting"
   ],
-  "moatType": "price/polish/hosting",
+  "moatTags": [
+    "execution-polish",
+    "scale-infra"
+  ],
+  "moatNotes": "price/polish/hosting",
   "whyPeopleStillPay": "They pay because the product costs almost nothing and removes all hosting/domain friction.",
   "priorArt": [
     {

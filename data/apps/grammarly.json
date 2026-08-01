@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Pro",
     "basis": "monthly",
+    "unit": "flat",
     "native": "30 USD",
     "source": "https://www.grammarly.com/plans",
     "checkedOn": "2026-07-30",
@@ -34,7 +35,12 @@
     "enterprise admin",
     "polished false-positive handling"
   ],
-  "moatType": "cross-app integration/model quality",
+  "moatTags": [
+    "integrations",
+    "proprietary-models",
+    "execution-polish"
+  ],
+  "moatNotes": "cross-app integration/model quality",
   "whyPeopleStillPay": "They pay because suggestions appear inside the apps where writing actually happens.",
   "priorArt": [
     {

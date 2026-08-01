@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Pro",
     "basis": "monthly",
+    "unit": "flat",
     "native": "20 USD",
     "source": "https://www.perplexity.ai/pro",
     "checkedOn": "2026-07-30",
@@ -35,7 +36,12 @@
     "publisher integrations",
     "speed"
   ],
-  "moatType": "search/data/model routing",
+  "moatTags": [
+    "proprietary-data",
+    "proprietary-models",
+    "execution-polish"
+  ],
+  "moatNotes": "search/data/model routing",
   "whyPeopleStillPay": "They pay because answers arrive fast with sources and fewer query-building chores.",
   "priorArt": [
     {

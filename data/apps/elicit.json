@@ -11,6 +11,7 @@
     "plan": "Plus",
     "kind": "fixed",
     "basis": "per user per month, billed annually",
+    "unit": "per-seat",
     "currency": "USD",
     "native": "$132/year",
     "source": "https://elicit.com/pricing",
@@ -36,7 +37,11 @@
     "licensed scholarly metadata",
     "publisher-specific import reliability"
   ],
-  "moatType": "data/import reliability",
+  "moatTags": [
+    "proprietary-data",
+    "execution-polish"
+  ],
+  "moatNotes": "data/import reliability",
   "whyPeopleStillPay": "Elicit: Researchers pay for correct metadata, resilient importers, citation coverage, and workflows that survive publisher and browser changes.",
   "ongoingBurden": "Maintain parsers, deduplication, PDF extraction, citation styles, and legal access boundaries.",
   "priorArt": [

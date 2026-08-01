@@ -10,6 +10,7 @@
   "pricing": {
     "plan": "Standard",
     "basis": "annual-equivalent",
+    "unit": "flat",
     "source": "https://point.me/pricing",
     "checkedOn": "2026-07-31",
     "confidence": "medium",
@@ -36,7 +37,11 @@
     "crowdsourced trail intelligence",
     "booking, disruption support, and offline map fleet"
   ],
-  "moatType": "proprietary live data and network coverage",
+  "moatTags": [
+    "proprietary-data",
+    "integrations"
+  ],
+  "moatNotes": "proprietary live data and network coverage",
   "replacementScope": "personal itinerary organizer",
   "ongoingBurden": "map licensing, fare feeds, reservation access, route freshness, disruptions, geocoding, caching, offline data, and support",
   "whyPeopleStillPay": "People still pay for Point.me because travel subscriptions sell current data and confidence during disruption, not just an itinerary list. The recurring cost buys map licensing, fare feeds, reservation access, route freshness, disruptions, geocoding, caching, offline data, and support, not just the visible interface.",

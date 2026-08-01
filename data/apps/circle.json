@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Professional/Pro",
     "basis": "monthly",
+    "unit": "flat",
     "native": "99 USD",
     "source": "https://circle.so/pricing",
     "checkedOn": "2026-07-30",
@@ -37,7 +38,11 @@
     "migrations",
     "community admin"
   ],
-  "moatType": "community/network/payments",
+  "moatTags": [
+    "network-effects",
+    "execution-polish"
+  ],
+  "moatNotes": "community/network/payments",
   "whyPeopleStillPay": "They pay because communities need engagement mechanics and member operations, not just threads.",
   "priorArt": [
     {

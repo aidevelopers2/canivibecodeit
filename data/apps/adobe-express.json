@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Premium",
     "basis": "monthly",
+    "unit": "flat",
     "native": "9.99 USD",
     "source": "https://www.adobe.com/express/pricing",
     "checkedOn": "2026-07-30",
@@ -35,7 +36,11 @@
     "mobile apps",
     "licensing coverage"
   ],
-  "moatType": "licensed assets/ecosystem",
+  "moatTags": [
+    "content-rights",
+    "integrations"
+  ],
+  "moatNotes": "licensed assets/ecosystem",
   "whyPeopleStillPay": "They pay because the content and export ecosystem is already there.",
   "priorArt": [
     {

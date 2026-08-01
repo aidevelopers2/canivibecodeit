@@ -11,6 +11,7 @@
     "plan": "Duo Pro",
     "kind": "fixed",
     "basis": "per user per month",
+    "unit": "per-seat",
     "currency": "USD",
     "native": "$19/user/month",
     "source": "https://gitlab.com/gitlab-duo/",
@@ -36,7 +37,12 @@
     "IDE-wide polish and latency",
     "enterprise policy, telemetry, and support"
   ],
-  "moatType": "model/context/integration",
+  "moatTags": [
+    "proprietary-models",
+    "integrations",
+    "execution-polish"
+  ],
+  "moatNotes": "model/context/integration",
   "whyPeopleStillPay": "GitLab Duo: Developers pay for reliable context assembly, fast models, editor integration, evaluations, and safe handling of complex repositories.",
   "ongoingBurden": "Maintain model adapters, token budgets, indexing, sandboxing, diff application, test runners, and editor integrations.",
   "priorArt": [

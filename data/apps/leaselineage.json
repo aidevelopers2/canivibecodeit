@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Pro",
     "basis": "monthly",
+    "unit": "flat",
     "native": "79 USD",
     "source": "https://app.leaselineage.com/pricing",
     "checkedOn": "2026-07-30",
@@ -35,7 +36,12 @@
     "custom sending domains",
     "hosted compliance and suppression operations"
   ],
-  "moatType": "data/integrations/deliverability/compliance",
+  "moatTags": [
+    "proprietary-data",
+    "integrations",
+    "scale-infra"
+  ],
+  "moatNotes": "data/integrations/deliverability/compliance",
   "whyPeopleStillPay": "They pay to keep contact discovery, inbox connections, reply attribution, sending controls, suppression, reporting, and team access working while they focus on brokerage.",
   "priorArt": [
     {

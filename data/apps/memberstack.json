@@ -11,6 +11,7 @@
     "plan": "Basic",
     "kind": "fixed",
     "basis": "monthly membership plan",
+    "unit": "flat",
     "currency": "USD",
     "native": "$29/month",
     "source": "https://memberstack.com/pricing",
@@ -36,7 +37,11 @@
     "marketplace discovery and buyer trust",
     "tax, disputes, payouts, and fraud operations"
   ],
-  "moatType": "payments/network/compliance",
+  "moatTags": [
+    "compliance-regulatory",
+    "brand-trust"
+  ],
+  "moatNotes": "payments/network/compliance",
   "whyPeopleStillPay": "Memberstack: Creators pay to outsource payments, tax complexity, disputes, deliverability, moderation, and the trust needed to convert strangers.",
   "ongoingBurden": "Own payments, webhooks, refunds, tax records, fraud, access control, file delivery, moderation, backups, and support.",
   "priorArt": [

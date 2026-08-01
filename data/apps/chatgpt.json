@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Plus",
     "basis": "monthly",
+    "unit": "flat",
     "native": "20 USD",
     "source": "https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus",
     "checkedOn": "2026-07-30",
@@ -36,7 +37,11 @@
     "product updates",
     "mobile apps"
   ],
-  "moatType": "frontier model/platform",
+  "moatTags": [
+    "proprietary-models",
+    "scale-infra"
+  ],
+  "moatNotes": "frontier model/platform",
   "whyPeopleStillPay": "They pay for access to a continuously improving platform, not a textarea and send button.",
   "priorArt": [
     {

@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Starter · Standard User",
     "basis": "monthly per user",
+    "unit": "per-seat",
     "native": "65 USD",
     "source": "https://www.iconik.io/pricing",
     "checkedOn": "2026-07-30",
@@ -35,7 +36,12 @@
     "shared collections and review for clients who never see your storage",
     "archive and restore lifecycle out to deep cloud storage"
   ],
-  "moatType": "storage federation/permissions/scale",
+  "moatTags": [
+    "scale-infra",
+    "integrations",
+    "collaboration"
+  ],
+  "moatNotes": "storage federation/permissions/scale",
   "whyPeopleStillPay": "They pay because the alternative is an intern and a spreadsheet, and because the asset you cannot find is functionally deleted. A facility's media outlives its staff, its NLE versions, and usually its storage vendor. Iconik's actual product is being the index that survives all three, with permissions solid enough to put a client in front of and an audit trail solid enough to put in a contract.",
   "priorArt": [
     {

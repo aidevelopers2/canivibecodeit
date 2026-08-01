@@ -11,6 +11,7 @@
     "plan": "Creator",
     "kind": "fixed",
     "basis": "monthly creator plan",
+    "unit": "flat",
     "currency": "USD",
     "native": "$29/month",
     "source": "https://stan.store/pricing",
@@ -36,7 +37,12 @@
     "native apps and community moderation",
     "fulfilment, email, and affiliate ecosystems"
   ],
-  "moatType": "payments/network/compliance",
+  "moatTags": [
+    "compliance-regulatory",
+    "network-effects",
+    "brand-trust"
+  ],
+  "moatNotes": "payments/network/compliance",
   "whyPeopleStillPay": "Stan Store: Creators pay to outsource payments, tax complexity, disputes, deliverability, moderation, and the trust needed to convert strangers.",
   "ongoingBurden": "Own payments, webhooks, refunds, tax records, fraud, access control, file delivery, moderation, backups, and support.",
   "priorArt": [

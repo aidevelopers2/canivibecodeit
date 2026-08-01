@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Simple Start",
     "basis": "monthly",
+    "unit": "flat",
     "native": "38 USD",
     "source": "https://quickbooks.intuit.com/pricing/",
     "checkedOn": "2026-07-30",
@@ -37,7 +38,12 @@
     "support",
     "compliance expectations"
   ],
-  "moatType": "banking/compliance/accounting ecosystem",
+  "moatTags": [
+    "compliance-regulatory",
+    "integrations",
+    "network-effects"
+  ],
+  "moatNotes": "banking/compliance/accounting ecosystem",
   "whyPeopleStillPay": "They pay because accounting mistakes and tax messes cost more than the subscription.",
   "priorArt": [
     {
