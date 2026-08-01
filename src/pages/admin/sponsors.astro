@@ -69,7 +69,7 @@ const ACTIONS = {
         purchases.map((p) => (
           <div class="admin-row" data-status={p.status}>
             <span class="microlabel">
-              {p.slot_id} · {p.status} · {usd(p.amount_cents)} · {shortDate(p.created_at)}
+              {p.slot_id} · {p.status} · {usd(p.amount_cents)}{Number(p.months) > 1 ? ` · ${Number(p.months)} months` : ''} · {shortDate(p.created_at)}
             </span>
             <span class="admin-strong">{p.name ?? '—'}</span>
             <span class="admin-sub">{p.tagline ?? 'no details submitted yet'}</span>

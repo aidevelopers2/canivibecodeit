@@ -52,7 +52,8 @@ const SCHEMA_SQLITE = `
     starts_at INTEGER,
     ends_at INTEGER,
     reminder_details_at INTEGER,
-    reminder_renew_at INTEGER
+    reminder_renew_at INTEGER,
+    months INTEGER
   );
   CREATE INDEX IF NOT EXISTS sponsor_purchases_status ON sponsor_purchases (status);
 `;
@@ -104,7 +105,8 @@ const SCHEMA_PG = `
     starts_at BIGINT,
     ends_at BIGINT,
     reminder_details_at BIGINT,
-    reminder_renew_at BIGINT
+    reminder_renew_at BIGINT,
+    months INTEGER
   );
   CREATE INDEX IF NOT EXISTS sponsor_purchases_status ON sponsor_purchases (status);
 `;
@@ -136,12 +138,12 @@ const PURCHASE_FIELDS = [
   'slot_id', 'status', 'stripe_session_id', 'stripe_payment_intent', 'amount_cents',
   'email', 'name', 'tagline', 'url', 'logo_url', 'tint', 'hold_expires_at', 'paid_at',
   'submitted_at', 'approved_at', 'starts_at', 'ends_at', 'reminder_details_at',
-  'reminder_renew_at',
+  'reminder_renew_at', 'months',
 ];
 
 const NUMERIC_COLUMNS = [
   'amount_cents', 'created_at', 'hold_expires_at', 'paid_at', 'submitted_at',
-  'approved_at', 'starts_at', 'ends_at', 'reminder_details_at', 'reminder_renew_at',
+  'approved_at', 'starts_at', 'ends_at', 'reminder_details_at', 'reminder_renew_at', 'months',
 ];
 
 // Postgres hands BIGINT back as a string; the rest of the code does date maths.
@@ -166,6 +168,8 @@ async function pgDriver() {
   await pool.query(SCHEMA_PG);
   // A NULL source means the row predates per-placement tracking: scanner era.
   await pool.query('ALTER TABLE waitlist ADD COLUMN IF NOT EXISTS source TEXT');
+  // Quarter deals: how many 30-day runs one payment covers (NULL = 1).
+  await pool.query('ALTER TABLE sponsor_purchases ADD COLUMN IF NOT EXISTS months INTEGER');
   await pool.query("UPDATE waitlist SET source = 'scanner' WHERE source IS NULL");
   for (const [id, cents] of SLOT_SEED) {
     await pool.query(
@@ -241,9 +245,9 @@ async function pgDriver() {
     async insertPurchase(p) {
       await pool.query(
         `INSERT INTO sponsor_purchases
-           (id, slot_id, status, amount_cents, details_token, created_at, hold_expires_at)
-         VALUES ($1, $2, $3, $4, $5, $6, $7)`,
-        [p.id, p.slot_id, p.status, p.amount_cents, p.details_token, p.created_at, p.hold_expires_at]
+           (id, slot_id, status, amount_cents, months, details_token, created_at, hold_expires_at)
+         VALUES ($1, $2, $3, $4, $5, $6, $7, $8)`,
+        [p.id, p.slot_id, p.status, p.amount_cents, p.months ?? 1, p.details_token, p.created_at, p.hold_expires_at]
       );
     },
     async activePurchases() {
@@ -290,6 +294,12 @@ async function sqliteDriver() {
   // A NULL source means the row predates per-placement tracking: scanner era.
   try {
     db.exec('ALTER TABLE waitlist ADD COLUMN source TEXT');
+  } catch (err) {
+    if (!/duplicate column/i.test(err.message)) throw err;
+  }
+  // Quarter deals: how many 30-day runs one payment covers (NULL = 1).
+  try {
+    db.exec('ALTER TABLE sponsor_purchases ADD COLUMN months INTEGER');
   } catch (err) {
     if (!/duplicate column/i.test(err.message)) throw err;
   }
@@ -356,9 +366,9 @@ async function sqliteDriver() {
     async insertPurchase(p) {
       db.prepare(
         `INSERT INTO sponsor_purchases
-           (id, slot_id, status, amount_cents, details_token, created_at, hold_expires_at)
-         VALUES (?, ?, ?, ?, ?, ?, ?)`
-      ).run(p.id, p.slot_id, p.status, p.amount_cents, p.details_token, p.created_at, p.hold_expires_at);
+           (id, slot_id, status, amount_cents, months, details_token, created_at, hold_expires_at)
+         VALUES (?, ?, ?, ?, ?, ?, ?, ?)`
+      ).run(p.id, p.slot_id, p.status, p.amount_cents, p.months ?? 1, p.details_token, p.created_at, p.hold_expires_at);
     },
     async activePurchases() {
       const marks = ACTIVE_STATUSES.map(() => '?').join(', ');

@@ -6,7 +6,7 @@ import { clientIp, json, readBody } from '../../../lib/request.js';
 // No clearCache here: holds never appear on the board, so creating or expiring
 // one cannot change what the rails render.
 import {
-  blocksSlot, HOLD_TTL_MS, newToken, SESSION_TTL_MS, siteUrl, SLOT_IDS,
+  blocksSlot, HOLD_TTL_MS, newToken, QUARTER_MIN_CENTS, QUARTER_MONTHS, SESSION_TTL_MS, siteUrl, SLOT_IDS,
 } from '../../../lib/sponsors.js';
 import { createCheckoutSession } from '../../../lib/stripe.js';
 
@@ -30,11 +30,16 @@ export async function POST({ request, clientAddress }) {
 
   const slotId = String(body.slot ?? '').trim().toUpperCase();
   if (!SLOT_IDS.includes(slotId)) return fail(wantsJson, 'unknown slot', 400);
+  const months = String(body.months ?? '1').trim() === String(QUARTER_MONTHS) ? QUARTER_MONTHS : 1;
 
   const now = Date.now();
   const slots = await sponsorSlots();
   const slot = slots.find((s) => s.id === slotId);
   if (!slot) return fail(wantsJson, 'unknown slot', 400);
+  // The quarter lock is a big-slot deal only.
+  if (months > 1 && slot.price_cents < QUARTER_MIN_CENTS) {
+    return fail(wantsJson, 'not on this slot', 400);
+  }
 
   // Only money closes a slot. Another open checkout session is not a reason to
   // turn anyone away — several people racing for the same slot is the design.
@@ -49,7 +54,8 @@ export async function POST({ request, clientAddress }) {
     id: crypto.randomUUID(),
     slot_id: slotId,
     status: 'hold',
-    amount_cents: slot.price_cents,
+    amount_cents: slot.price_cents * months,
+    months,
     details_token: newToken(),
     created_at: now,
     hold_expires_at: now + HOLD_TTL_MS,
@@ -61,7 +67,8 @@ export async function POST({ request, clientAddress }) {
     session = await createCheckoutSession({
       purchaseId: purchase.id,
       slotId,
-      priceCents: slot.price_cents,
+      priceCents: slot.price_cents * months,
+      months,
       successUrl: `${siteUrl('/sponsor/details')}?t=${purchase.details_token}&session_id={CHECKOUT_SESSION_ID}`,
       cancelUrl: siteUrl('/sponsor'),
       expiresAt: now + SESSION_TTL_MS,

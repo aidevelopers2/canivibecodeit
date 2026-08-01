@@ -48,7 +48,7 @@ export async function stripeFetch(pathname, params, method = 'POST', idempotency
 }
 
 export async function createCheckoutSession({
-  purchaseId, slotId, priceCents, successUrl, cancelUrl, expiresAt,
+  purchaseId, slotId, priceCents, successUrl, cancelUrl, expiresAt, months = 1,
 }) {
   return stripeFetch('/v1/checkout/sessions', {
     mode: 'payment',
@@ -57,8 +57,8 @@ export async function createCheckoutSession({
     cancel_url: cancelUrl,
     expires_at: Math.floor(expiresAt / 1000),
     client_reference_id: purchaseId,
-    metadata: { purchase_id: purchaseId, slot_id: slotId },
-    payment_intent_data: { metadata: { purchase_id: purchaseId, slot_id: slotId } },
+    metadata: { purchase_id: purchaseId, slot_id: slotId, months },
+    payment_intent_data: { metadata: { purchase_id: purchaseId, slot_id: slotId, months } },
     // Sponsors buy as businesses: let them enter a VAT/tax ID and company name,
     // and have Stripe email a proper invoice PDF after payment (0.4% capped at
     // $2 per invoice). The tax ID needs a Customer to live on.
@@ -73,10 +73,11 @@ export async function createCheckoutSession({
           currency: 'usd',
           unit_amount: priceCents,
           product_data: {
-            name: 'canivibecodeit.com — sponsor slot (30 days)',
+            name: `canivibecodeit.com — sponsor slot (${30 * months} days)`,
             description:
-              'Your product on every page of canivibecodeit.com for 30 days: icon, name,'
-              + ' tagline and link, plus the sponsor board.',
+              `Your product on every page of canivibecodeit.com for ${30 * months} days: icon, name,`
+              + ' tagline and link, plus the sponsor board.'
+              + (months > 1 ? ' Price locked for the full run.' : ''),
           },
         },
       },

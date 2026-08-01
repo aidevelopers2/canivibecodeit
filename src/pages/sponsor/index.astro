@@ -1,7 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import { allApps } from '../../lib/apps.js';
-import { getBoard, RUN_DAYS, shortDate, usd } from '../../lib/sponsors.js';
+import { getBoard, QUARTER_MIN_CENTS, QUARTER_MONTHS, RUN_DAYS, shortDate, usd } from '../../lib/sponsors.js';
 
 const board = await getBoard();
 const apps = allApps();
@@ -69,6 +69,15 @@ const steps = [
                       take this slot →
                     </button>
                   </form>
+                  {slot.priceCents >= QUARTER_MIN_CENTS && (
+                    <form method="post" action="/api/sponsor/checkout" data-checkout>
+                      <input type="hidden" name="slot" value={slot.id} />
+                      <input type="hidden" name="months" value={QUARTER_MONTHS} />
+                      <button class="sp-quarter" type="submit" data-price={slot.priceCents * QUARTER_MONTHS}>
+                        or lock {QUARTER_MONTHS} months at this price — {usd(slot.priceCents * QUARTER_MONTHS)}
+                      </button>
+                    </form>
+                  )}
                 </>
               ) : slot.state === 'live' ? (
                 <>
@@ -130,8 +139,8 @@ const steps = [
     <section class="sp-terms">
       <span class="microlabel">the boring part</span>
       <p>
-        What you're buying is one month of placement, bought once — {RUN_DAYS} days in one slot,
-        starting when the placement is approved. It is not a subscription and it does not
+        What you're buying is placement bought once — {RUN_DAYS} days in one slot (or {RUN_DAYS * QUARTER_MONTHS}
+        days on the big slots, price locked, still one payment), starting when the placement is approved. It is not a subscription and it does not
         renew itself; when it ends, it ends, and you're welcome to buy it again at whatever
         the price is then. Prices are set per slot and change between months.
         Sponsorship never touches a verdict, a ranking, or a prompt — not yours, not your

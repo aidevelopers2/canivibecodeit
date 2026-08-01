@@ -65,7 +65,7 @@ export async function POST({ request }) {
 
   if (action === 'approve') {
     const now = Date.now();
-    const endsAt = now + RUN_MS;
+    const endsAt = now + RUN_MS * (Number(purchase.months) || 1);
 
     /* Last line of defence for the payment race. The rivals check refunds the
        loser automatically, but its paid_at is read before the UPDATE commits, so
@@ -91,7 +91,7 @@ export async function POST({ request }) {
       subject: `you're live on canivibecodeit until ${shortDate(endsAt)}`,
       html: shell(
         `<p><b>${esc(purchase.name)}</b> is live in slot ${esc(purchase.slot_id)} right now, and`
-        + ` runs until ${esc(shortDate(endsAt))} (${RUN_DAYS} days).</p>`
+        + ` runs until ${esc(shortDate(endsAt))} (${RUN_DAYS * (Number(purchase.months) || 1)} days).</p>`
         + `<p>Your link carries campaign tags, so the traffic shows up in your analytics as`
         + ` canivibecodeit / referral.</p>`
         + `<p>We'll email you a few days before it ends. Replying to this email reaches a human.</p>`

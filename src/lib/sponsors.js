@@ -17,6 +17,11 @@ export const SLOT_IDS = ['L1', 'L2', 'L3', 'L4', 'L5', 'R1', 'R2', 'R3', 'R4', '
 export const SESSION_TTL_MS = 30 * 60 * 1000;
 export const HOLD_TTL_MS = 35 * 60 * 1000;
 export const RUN_DAYS = 30;
+
+// Big slots can be locked for a quarter: three 30-day runs, paid upfront,
+// price frozen for the whole run. Only offered above this price.
+export const QUARTER_MONTHS = 3;
+export const QUARTER_MIN_CENTS = 100000;
 export const RUN_MS = RUN_DAYS * 24 * 60 * 60 * 1000;
 
 // Used until a real icon colour is extracted, and when the sponsor's favicon is
