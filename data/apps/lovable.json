@@ -5,7 +5,7 @@
   "appURL": "https://lovable.dev",
   "category": "dev-tools",
   "subcategory": "AI coding agents and developer workspaces",
-  "tagline": "Turn a brief into a small local React app with reviewed file changes and previews",
+  "tagline": "Prompt a full web app into existence, with hosted previews and one-click deploy",
   "priceMonthly": 25,
   "pricing": {
     "plan": "Pro",
@@ -21,35 +21,43 @@
   },
   "verdict": "no",
   "verdictConfidence": "high",
-  "verdictSummary": "A consolation build is possible, but the paid product's decisive value sits outside a solo rebuild. For Lovable, turn a brief into a small local React app with reviewed file changes and previews. The hard boundary is model orchestration, hosted preview, supabase integration, collaboration, and rapid product tuning, plus frontier models, context infrastructure, and execution safety.",
-  "coreLoopDIY": "Turn a brief into a small local React app with a bounded coding assistant that indexes the repository, proposes reviewable patches with previews, runs approved commands, and preserves an auditable session log.",
+  "verdictSummary": "The wrapper is easy: a CLI that sends your brief to a model, writes the files, and starts the dev server is one sitting of work. The model doing the writing is the actual product, and you cannot rebuild that. Everything Lovable puts around it, the hosted preview, the deploy, the database wired up for you, and a non-developer being able to use any of it, goes with the subscription.",
+  "coreLoopDIY": "Send a plain-language brief to a model API, have it write a small React app into a local folder, run it, and keep iterating in the same conversation.",
   "diyTimeEstimate": "closest consolation build: one sitting",
   "requirements": [
-    "VS Code",
-    "OpenAI or Anthropic API key",
-    "Git repository",
-    "local command sandbox"
+    "Node 22",
+    "Anthropic or OpenAI API key",
+    "git"
   ],
   "whatYouLose": [
-    "model orchestration, hosted preview, Supabase integration, collaboration, and rapid product tuning",
-    "frontier proprietary model",
-    "large-scale code retrieval",
-    "cloud sandbox fleet",
-    "enterprise policy and support"
+    "the frontier model, which is the actual product",
+    "hosted preview URLs and one-click deploy",
+    "a database and auth wired up for you",
+    "a non-developer being able to ship anything at all"
   ],
   "moatTags": [
     "proprietary-models",
     "scale-infra"
   ],
   "moatNotes": "frontier models, context infrastructure, and execution safety",
-  "replacementScope": "single-repository coding assistant",
-  "ongoingBurden": "model changes, indexing, prompt injection, tool permissions, sandboxing, evaluation, telemetry choices, and IDE compatibility",
-  "whyPeopleStillPay": "People still pay for Lovable because the UI can be copied, but high-quality code models, context ranking, safe execution, and constant evaluation are the product. The recurring cost buys model changes, indexing, prompt injection, tool permissions, sandboxing, evaluation, telemetry choices, and IDE compatibility, not just the visible interface.",
+  "replacementScope": "local brief-to-app generator",
+  "ongoingBurden": "model drift, prompt injection, tool permissions, sandboxing, evaluation, and your own API bill",
+  "whyPeopleStillPay": "People pay because the model is the product and the wrapper is the delivery, and because Lovable turns a brief into a deployed app with a database behind it without anyone opening a terminal. The subscription buys model access, safe execution, and hosting that makes the result shareable.",
   "priorArt": [
+    {
+      "name": "bolt.diy",
+      "url": "https://github.com/stackblitz-labs/bolt.diy",
+      "desc": "Open-source prompt-to-app builder, bring your own model."
+    },
+    {
+      "name": "Aider",
+      "url": "https://github.com/Aider-AI/aider",
+      "desc": "Terminal coding agent that commits its own diffs."
+    },
     {
       "name": "Continue",
       "url": "https://github.com/continuedev/continue",
-      "desc": "Active open-source coding-assistant framework for IDEs and multiple model providers."
+      "desc": "Open-source coding agent for IDEs and multiple model providers."
     }
   ],
   "relatedSlugs": [
@@ -59,7 +67,7 @@
   ],
   "pagePriority": 5,
   "verifiedOneShot": false,
-  "notes": "Editorial comparison targets the Pro plan and a single-repository coding assistant DIY substitute. Recheck price before merge.",
-  "prompt": "Build a closest honest personal substitute for Lovable in an empty repository.\nUse TypeScript, Node.js 22, a VS Code extension, SQLite, and one user-supplied model API; do not offer alternative stacks.\nThe core loop is: turn a brief into a small local React app with a bounded coding assistant that indexes the repository, proposes reviewable patches with previews, runs approved commands, and preserves an auditable session log.\nMake the first run work locally with one documented command.\nStore all user data locally by default and make export straightforward.\nPut secrets in .env, ship .env.example, and never commit credentials.\nCreate a VS Code sidebar with chat, selected-code actions, repository search, and a patch preview.\nIndex only the open repository and respect .gitignore plus a separate assistant ignore file.\nRequire explicit approval before reading outside the workspace or running any command.\nRepresent edits as unified diffs with accept, reject, partial apply, undo, and Git status checks.\nCapture tool calls, model requests, command output, and patch decisions in a local session log.\nAdd token and cost estimates, provider errors, cancellation, tests, and an offline data-flow diagram.\nInclude clear empty, loading, success, and recoverable error states.\nAdd input validation, safe filenames, and graceful handling of unavailable APIs.\nWrite focused tests for the core transformation and one end-to-end happy path.\nCreate a README with setup, architecture, permissions, data location, and backup steps.\nDo not add accounts, billing, telemetry, analytics, or a hosted control plane.\nDo not claim to reproduce proprietary data, network liquidity, regulated access, or frontier infrastructure.\nDeliberately leave out training or reproducing a frontier coding model.\nDeliberately leave out unattended command execution outside a sandbox.\nDeliberately leave out cloud workspaces, team policy, and enterprise support.\nFinish by running the tests and listing the exact commands used.",
-  "promptCurated": false
+  "notes": "The wrapper is a weekend. The model inside it is not, and neither is handing a working URL to someone who has never opened a terminal.",
+  "prompt": "Build me a local brief-to-app generator to replace Lovable. Requirements:\n\n- A Node 22 CLI: `vibe new \"a habit tracker with a weekly grid\"` scaffolds a Vite +\n  React + TypeScript app into ./apps/<slug>, then edits it in a loop. Generated apps\n  persist to plain JSON or SQLite via better-sqlite3.\n- Call the Anthropic or OpenAI API with the key from .env and ask for whole files\n  back as JSON, path plus contents, never prose I have to dig out of a code fence.\n- Every round is a git commit on a branch and prints the diff first. `vibe undo` is\n  a git revert, so nothing the model does is unrecoverable.\n- After each round run `npm run build` and `tsc --noEmit`, feed failures back, retry\n  three times, then stop and show me the error instead of looping.\n- `vibe preview` runs the Vite dev server on localhost:5173. No accounts, no\n  telemetry, nothing leaves my machine except the model calls.\n- Keep the transcript, file tree, and last diff in .vibe/session.json inside the app,\n  resend only the files I named, and print tokens and cost per round.\n- Out of scope: hosted previews, one-click deploy, and team collaboration. Do not\n  build a web UI, the terminal is the interface.\n- README: which key to set, what a typical app costs, and the honest warning that the\n  output is only as good as the model behind it.",
+  "promptCurated": true
 }
