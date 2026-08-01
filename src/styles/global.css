@@ -2138,6 +2138,10 @@ button.sp-banner {
     top: 76px;
     width: 200px;
     z-index: 40;
+    /* 4 cards a side now: on short viewports the rail scrolls instead of
+       clipping the bottom card. */
+    max-height: calc(100vh - 90px);
+    overflow-y: auto;
   }
 
   .sp-left {

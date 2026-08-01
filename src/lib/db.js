@@ -117,6 +117,10 @@ const SLOT_SEED = [
   ['R2', 59900],
   ['L3', 69900],
   ['R3', 79900],
+  // Added at 8 slots (2026-08-01, launch night): seeds only apply to NEW rows —
+  // existing slot prices set from the admin are never overwritten.
+  ['L4', 119900],
+  ['R4', 149900],
 ];
 
 // Everything the slot-blocked predicate and the board care about. Anything else
