@@ -3,6 +3,7 @@ import '@fontsource-variable/space-grotesk';
 import '@fontsource-variable/jetbrains-mono';
 import '../styles/global.css';
 import DigestBar from '../components/DigestBar.astro';
+import SponsorRails from '../components/SponsorRails.astro';
 import SponsorTape from '../components/SponsorTape.astro';
 
 const {
@@ -103,6 +104,8 @@ const blocks = [orgLd, ...jsonld];
     </header>
 
     <slot />
+
+    <SponsorRails />
 
     <footer class="site-footer">
       <div class="inner">

@@ -1659,8 +1659,7 @@ a.row:hover .badge {
 
 .digest-bar {
   position: fixed;
-  /* Sits above the fixed bottom sponsor tape. */
-  bottom: 52px;
+  bottom: 0;
   left: 50%;
   z-index: 90;
   width: min(800px, calc(100vw - 32px));
@@ -2672,12 +2671,37 @@ button.sp-banner {
   }
 }
 
-/* ---------- sponsor tapes (top + bottom marquees) ---------- */
+/* ---------- sponsor tapes (top + bottom marquees, MOBILE ONLY) ----------
+   Desktop and tablet keep the side rails; the tapes are the phone treatment.
+   Top tape is sticky so it never scrolls away; the sticky site header parks
+   just below it. */
 
 .sp-tape {
+  display: none;
   overflow: hidden;
+  height: 46px;
   background: var(--bg);
   border-bottom: 1px solid var(--border);
+}
+
+@media (max-width: 767px) {
+  .sp-tape {
+    display: block;
+  }
+
+  .sp-tape.top {
+    position: sticky;
+    top: 0;
+    z-index: 55;
+  }
+
+  .site-header {
+    top: 46px;
+  }
+
+  .digest-bar {
+    bottom: 52px;
+  }
 }
 
 .sp-tape.bottom {
@@ -2708,7 +2732,7 @@ button.sp-banner {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 12px 22px;
+  padding: 13px 22px;
   font-family: var(--font-mono);
   font-size: 13px;
   white-space: nowrap;
@@ -2729,9 +2753,16 @@ button.sp-banner {
   text-decoration: underline;
 }
 
-/* Keeps the fixed bottom tape off the footer. */
+/* Keeps the fixed bottom tape off the footer (mobile only, like the tapes). */
 .sp-tape-spacer {
+  display: none;
   height: 46px;
+}
+
+@media (max-width: 767px) {
+  .sp-tape-spacer {
+    display: block;
+  }
 }
 
 @keyframes sp-tape-slide {
