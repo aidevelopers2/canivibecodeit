@@ -2122,7 +2122,7 @@ button.sp-banner {
 /* ---------- sponsor rails ---------- */
 
 /* Rails need room beside the 1120px column; narrower viewports use the
-   in-list banners instead. */
+   top/bottom tapes instead. */
 .sp-rail {
   display: none;
 }
@@ -2671,8 +2671,10 @@ button.sp-banner {
   }
 }
 
-/* ---------- sponsor tapes (top + bottom marquees, MOBILE ONLY) ----------
-   Desktop and tablet keep the side rails; the tapes are the phone treatment.
+/* ---------- sponsor tapes (top + bottom marquees) ----------
+   The tapes cover every viewport too narrow for the side rails (<1560px) —
+   phones, tablets, and laptops alike. Most MacBooks are 1440–1512px, so
+   without this range the sponsors would be invisible on them entirely.
    Top tape is sticky so it never scrolls away; the sticky site header parks
    just below it. */
 
@@ -2684,7 +2686,7 @@ button.sp-banner {
   border-bottom: 1px solid var(--border);
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1559px) {
   .sp-tape {
     display: block;
   }
@@ -2753,13 +2755,13 @@ button.sp-banner {
   text-decoration: underline;
 }
 
-/* Keeps the fixed bottom tape off the footer (mobile only, like the tapes). */
+/* Keeps the fixed bottom tape off the footer (same range as the tapes). */
 .sp-tape-spacer {
   display: none;
   height: 46px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1559px) {
   .sp-tape-spacer {
     display: block;
   }
