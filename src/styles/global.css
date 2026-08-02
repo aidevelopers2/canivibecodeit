@@ -1844,7 +1844,9 @@ a.row:hover .badge {
 /* ---------- responsive ---------- */
 
 @media (max-width: 760px) {
-  .site-nav a:not(.gh) {
+  /* The sponsor link stays: it's the one nav item that makes money, and a
+     buyer on a phone otherwise has no way to find the board. */
+  .site-nav a:not(.gh):not([href='/sponsor']) {
     display: none;
   }
 
