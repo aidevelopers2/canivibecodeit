@@ -56,6 +56,14 @@ const SCHEMA_SQLITE = `
     months INTEGER
   );
   CREATE INDEX IF NOT EXISTS sponsor_purchases_status ON sponsor_purchases (status);
+  CREATE TABLE IF NOT EXISTS sponsor_clicks (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    slot_id TEXT NOT NULL,
+    surface TEXT,
+    country TEXT,
+    created_at INTEGER NOT NULL
+  );
+  CREATE INDEX IF NOT EXISTS sponsor_clicks_slot ON sponsor_clicks (slot_id, created_at);
 `;
 
 const SCHEMA_PG = `
@@ -109,6 +117,14 @@ const SCHEMA_PG = `
     months INTEGER
   );
   CREATE INDEX IF NOT EXISTS sponsor_purchases_status ON sponsor_purchases (status);
+  CREATE TABLE IF NOT EXISTS sponsor_clicks (
+    id SERIAL PRIMARY KEY,
+    slot_id TEXT NOT NULL,
+    surface TEXT,
+    country TEXT,
+    created_at BIGINT NOT NULL
+  );
+  CREATE INDEX IF NOT EXISTS sponsor_clicks_slot ON sponsor_clicks (slot_id, created_at);
 `;
 
 /* Six fixed slots, three per rail side. Seed prices only — editable at runtime. */
@@ -279,6 +295,20 @@ async function pgDriver() {
       );
       return r.rows.map(purchaseRow);
     },
+    async addSponsorClick(slotId, surface, country, ts) {
+      await pool.query(
+        'INSERT INTO sponsor_clicks (slot_id, surface, country, created_at) VALUES ($1, $2, $3, $4)',
+        [slotId, surface, country, ts]
+      );
+    },
+    async sponsorClickRows(sinceMs) {
+      const r = await pool.query(
+        `SELECT slot_id, surface, country, created_at FROM sponsor_clicks
+         WHERE created_at >= $1 ORDER BY created_at DESC`,
+        [sinceMs]
+      );
+      return r.rows.map((x) => ({ ...x, created_at: Number(x.created_at) }));
+    },
   };
 }
 
@@ -396,6 +426,19 @@ async function sqliteDriver() {
         .all(limit)
         .map(purchaseRow);
     },
+    async addSponsorClick(slotId, surface, country, ts) {
+      db.prepare(
+        'INSERT INTO sponsor_clicks (slot_id, surface, country, created_at) VALUES (?, ?, ?, ?)'
+      ).run(slotId, surface, country, ts);
+    },
+    async sponsorClickRows(sinceMs) {
+      return db
+        .prepare(
+          `SELECT slot_id, surface, country, created_at FROM sponsor_clicks
+           WHERE created_at >= ? ORDER BY created_at DESC`
+        )
+        .all(sinceMs);
+    },
   };
 }
 
@@ -471,6 +514,14 @@ export async function purchaseByToken(token) {
    webhook gets 0 and does nothing. */
 export async function updatePurchase(id, fields, whereStatusIn) {
   return (await getDriver()).updatePurchase(id, fields, whereStatusIn);
+}
+
+export async function addSponsorClick(slotId, surface, country, ts = Date.now()) {
+  return (await getDriver()).addSponsorClick(slotId, surface, country, ts);
+}
+
+export async function sponsorClickRows(sinceMs = 0) {
+  return (await getDriver()).sponsorClickRows(sinceMs);
 }
 
 export async function purchasesForAdmin(limit = 60) {

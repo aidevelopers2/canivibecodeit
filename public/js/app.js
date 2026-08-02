@@ -505,10 +505,21 @@
   );
 
   /* ---------- sponsors ---------- */
-  $$('.sp-card, .sp-banner').forEach((el) =>
-    el.addEventListener('click', () =>
-      track('sponsor_slot_click', { slot: el.dataset.slot || 'none', state: el.dataset.state })
-    )
+  $$('.sp-card, .sp-banner, .sp-tape-item').forEach((el) =>
+    el.addEventListener('click', () => {
+      const slot = el.dataset.slot || 'none';
+      const surface = el.classList.contains('sp-card')
+        ? 'rail'
+        : el.classList.contains('sp-tape-item')
+          ? 'tape'
+          : 'banner';
+      track('sponsor_slot_click', { slot, state: el.dataset.state, surface });
+      // First-party copy of live-placement clicks (slot + surface + country),
+      // logged server-side for the private admin stats.
+      if (el.classList.contains('live') && navigator.sendBeacon) {
+        navigator.sendBeacon('/api/spot', JSON.stringify({ slot, surface }));
+      }
+    })
   );
 
   // The form submits natively so it works without JS; this tracks the click and

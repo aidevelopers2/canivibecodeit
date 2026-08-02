@@ -1,13 +1,34 @@
 ---
 import Base from '../../layouts/Base.astro';
-import { purchasesForAdmin } from '../../lib/db.js';
+import { purchasesForAdmin, sponsorClickRows } from '../../lib/db.js';
 import { getBoard, isAdmin, shortDate, usd } from '../../lib/sponsors.js';
 
 const token = Astro.url.searchParams.get('token') || '';
 // Wrong or missing token looks exactly like a page that doesn't exist.
 if (!isAdmin(token)) return new Response(null, { status: 404 });
 
-const [board, purchases] = await Promise.all([getBoard(), purchasesForAdmin(60)]);
+const [board, purchases, clicks] = await Promise.all([
+  getBoard(),
+  purchasesForAdmin(60),
+  sponsorClickRows(0),
+]);
+
+// Private placement stats: per-slot clicks (total / 7d) and top countries.
+const weekAgo = Date.now() - 7 * 24 * 60 * 60 * 1000;
+const clickStats = new Map();
+const countryTotals = new Map();
+for (const c of clicks) {
+  const st = clickStats.get(c.slot_id) ?? { total: 0, week: 0, countries: new Map() };
+  st.total += 1;
+  if (c.created_at >= weekAgo) st.week += 1;
+  const co = c.country || '??';
+  st.countries.set(co, (st.countries.get(co) ?? 0) + 1);
+  clickStats.set(c.slot_id, st);
+  countryTotals.set(co, (countryTotals.get(co) ?? 0) + 1);
+}
+const topCountries = (m, n) =>
+  [...m.entries()].sort((a, b) => b[1] - a[1]).slice(0, n)
+    .map(([co, k]) => `${co} ${k}`).join(' · ');
 const msg = Astro.url.searchParams.get('msg') || '';
 const returnTo = `/admin/sponsors?token=${encodeURIComponent(token)}`;
 
@@ -24,10 +45,28 @@ const ACTIONS = {
   <main class="wrap admin">
     <div class="list-head">
       <h2>Sponsor slots</h2>
-      <span class="note">{board.openCount}/6 open</span>
+      <span class="note">{board.openCount}/{board.slots.length} open</span>
     </div>
 
     {msg && <p class="admin-msg">{msg}</p>}
+
+    <div class="list-head" style="padding-top: 26px;">
+      <h2>Placement clicks</h2>
+      <span class="note">first-party log, private · all-time {clicks.length} · countries: {topCountries(countryTotals, 8) || 'none yet'}</span>
+    </div>
+    <div class="admin-clicks">
+      {
+        board.slots.map((slot) => {
+          const st = clickStats.get(slot.id);
+          return (
+            <span class="microlabel">
+              {slot.id} ({slot.state}): <b>{st?.total ?? 0}</b> clicks · {st?.week ?? 0} in 7d
+              {st ? ` · ${topCountries(st.countries, 3)}` : ''}
+            </span>
+          );
+        })
+      }
+    </div>
 
     <div class="admin-grid">
       {
