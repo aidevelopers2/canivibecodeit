@@ -66,7 +66,7 @@ const icon = sponsor ? sponsor.logoUrl || faviconUrl(sponsor.url) : '';
   ) : (
     <a class="sp-banner soldout" href="/sponsor#notify" data-state="soldout">
       <span class="sp-text">
-        <span class="sp-name">6/6 sponsor slots taken</span>
+        <span class="sp-name">{board.slots.length}/{board.slots.length} sponsor slots taken</span>
         <span class="sp-tag">
           {board.nextOpen
             ? `next opens ${shortDate(board.nextOpen.at)} at ${usd(board.nextOpen.priceCents)} — get notified`

@@ -2042,6 +2042,13 @@ button.sp-banner {
   border: 1px dashed var(--border);
 }
 
+/* The sold-out meta card sits at the bottom of BOTH rails: a notice, not a
+   placement, so it stays short instead of crowding paid cards off-screen. */
+.sp-card.soldout {
+  height: auto;
+  padding: 10px 14px 12px;
+}
+
 .sp-card.open:hover,
 .sp-card.soldout:hover,
 .sp-card.reserved:hover {
