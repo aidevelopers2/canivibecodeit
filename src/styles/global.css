@@ -2716,7 +2716,7 @@ button.sp-banner {
   border-bottom: 1px solid var(--border);
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 1279px) {
   .sp-tape {
     display: block;
   }
@@ -2791,14 +2791,14 @@ button.sp-banner {
   height: 46px;
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 1279px) {
   .sp-tape-spacer {
     display: block;
   }
 }
 
 /* In-list banners: the 821-1279px band only — tapes below it, rails above it. */
-@media (max-width: 1023px) {
+@media (max-width: 1279px) {
   .sp-banner {
     display: none !important;
   }
