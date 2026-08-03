@@ -47,20 +47,17 @@
     {
       "name": "PostHog",
       "url": "https://github.com/PostHog/posthog",
-      "desc": "Open source and self-hostable, with revenue analytics and channel attribution already built",
-      "status": "alive"
+      "desc": "Open source and self-hostable, with revenue analytics and channel attribution already built"
     },
     {
       "name": "Plausible",
       "url": "https://github.com/plausible/analytics",
-      "desc": "Open source analytics with goals and revenue goals; the Stripe join is still yours to write",
-      "status": "alive"
+      "desc": "Open source analytics with goals and revenue goals; the Stripe join is still yours to write"
     },
     {
       "name": "Umami",
       "url": "https://github.com/umami-software/umami",
-      "desc": "Lightweight self-hosted analytics with UTM tracking and no revenue side at all",
-      "status": "alive"
+      "desc": "Lightweight self-hosted analytics with UTM tracking and no revenue side at all"
     }
   ],
   "relatedSlugs": [

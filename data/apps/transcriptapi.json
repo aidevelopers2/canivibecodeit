@@ -9,6 +9,7 @@
   "pricing": {
     "plan": "Starter",
     "basis": "monthly subscription, credit-based",
+    "unit": "usage",
     "source": "https://transcriptapi.com/pricing",
     "checkedOn": "2026-07-31",
     "confidence": "high",
@@ -30,7 +31,11 @@
     "reliability at bulk volume",
     "an SLA and support when YouTube changes something"
   ],
-  "moatType": "anti-blocking infrastructure",
+  "moatTags": [
+    "scale-infra",
+    "execution-polish"
+  ],
+  "moatNotes": "rotating proxy fleet and anti-blocking operations at volume",
   "whyPeopleStillPay": "The parse was never the hard part. Holding a durable, unblocked pipe into YouTube captions at volume is an operations problem that costs real money to run, and buying it for 5 USD a month is cheaper than renting proxies and babysitting them.",
   "priorArt": [
     {

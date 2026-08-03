@@ -45,14 +45,12 @@
     {
       "name": "google-play-scraper",
       "url": "https://github.com/facundoolano/google-play-scraper",
-      "desc": "Node library for public Play Store listing metadata; does not provide ad-status or creatives",
-      "status": "alive"
+      "desc": "Node library for public Play Store listing metadata; does not provide ad-status or creatives"
     },
     {
       "name": "app-store-scraper",
       "url": "https://github.com/facundoolano/app-store-scraper",
-      "desc": "Node library for public App Store listing metadata; same consolation-layer limits",
-      "status": "alive"
+      "desc": "Node library for public App Store listing metadata; same consolation-layer limits"
     }
   ],
   "relatedSlugs": [

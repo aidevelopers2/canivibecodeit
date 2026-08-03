@@ -35,11 +35,10 @@
     "Usage limits, billing, and support handled for you"
   ],
   "moatTags": [
-    "proprietary-models",
     "integrations",
-    "scale-infra"
+    "execution-polish"
   ],
-  "moatNotes": "model access/provider routing/billing",
+  "moatNotes": "bundled model access, catalog upkeep, and billing under one subscription",
   "whyPeopleStillPay": "They pay for one bill and one interface instead of managing several provider accounts, API keys, model IDs, and usage limits. The comparison grid is easy to copy; keeping model access and the account, billing, and storage layer working is the service.",
   "priorArt": [
     {
@@ -61,6 +60,6 @@
   "pagePriority": 4,
   "verifiedOneShot": false,
   "notes": "The interface is easy to reproduce; the useful question is whether the API bill and missing provider features still work for you.",
-  "prompt": "Build me a local multi-model chat app inspired by Admix. Keep the comparison workflow and do not claim to recreate proprietary models.\nUse exactly Node 22, Vite, React, TypeScript, Express, and better-sqlite3.\nStart from an empty folder and create a complete working project.\nRead OPENROUTER_API_KEY from .env and keep it server-side.\nAdd a model picker that loads OpenRouter models and lets the user select up to four.\nSend one prompt to the selected models and stream each reply into a responsive side-by-side grid.\nShow the model name, provider, elapsed time, token usage when available, and clear errors.\nSupport Markdown, fenced code blocks, copy buttons, and a new thread action.\nSave threads, prompts, model IDs, replies, and timestamps in SQLite.\nAdd search across saved threads and export one thread as Markdown.\nAdd a usage summary with estimated token cost from OpenRouter usage fields.\nBind to localhost only, with no account, telemetry, analytics, or background jobs.\nExplain in the README that prompts and replies leave the machine for OpenRouter, and list permissions.\nAdd .env.example, clear loading/empty/error states, keyboard-accessible UI, and a responsive layout.\nTest model request handling with mocked streaming responses, SQLite persistence, and one browser smoke test.\nAdd npm scripts for dev, build, test, and start; run the build and tests before finishing.\nLeave out auth, billing, mobile apps, image generation, hosted sync, provider-specific tools, and any 100+ model guarantee.\n",
+  "prompt": "Build me a local multi-model comparison chat to replace Admix. Requirements:\n\n- Node 22 + Express + better-sqlite3, a server-rendered shell with a little vanilla\n  JS for streaming; no frontend framework, no build step.\n- One OpenRouter key in .env, kept server-side; the server proxies all model calls.\n- A model picker fed from OpenRouter's /models endpoint; select up to four models.\n- One prompt fans out to the selected models and streams each reply into a\n  side-by-side grid with model name, elapsed time, and token usage when reported;\n  a failed model shows its error in its own column without killing the others.\n- Markdown rendering with fenced code blocks and a copy button per reply.\n- Threads, prompts, model ids, replies, and timestamps in SQLite; full-text search\n  across saved threads; export a thread as Markdown.\n- A running cost estimate per thread from OpenRouter's usage and pricing fields.\n- Binds to localhost only. No accounts, no telemetry; prompts and replies leave the\n  machine only for OpenRouter, and the README says so.\n- Out of scope: auth, billing, mobile apps, image generation, hosted sync, and\n  provider-specific tools like web search or file upload.\n- README: setup, .env.example, and how to add a model id by hand if the catalog\n  fetch fails.",
   "promptCurated": true
 }
