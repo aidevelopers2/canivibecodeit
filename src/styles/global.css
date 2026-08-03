@@ -2147,6 +2147,17 @@ button.sp-banner {
 }
 
 @media (min-width: 1280px) {
+  /* Full-bleed sections must respect the rails too: the ticker and the hero's
+     chip row otherwise run underneath the cards. */
+  .ticker {
+    max-width: min(1120px, calc(100vw - 456px));
+  }
+
+  .hero {
+    padding-left: 228px;
+    padding-right: 228px;
+  }
+
   .sp-rail {
     display: flex;
     flex-direction: column;
