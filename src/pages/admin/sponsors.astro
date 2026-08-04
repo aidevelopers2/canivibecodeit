@@ -32,6 +32,11 @@ const topCountries = (m, n) =>
 const msg = Astro.url.searchParams.get('msg') || '';
 const returnTo = `/admin/sponsors?token=${encodeURIComponent(token)}`;
 
+const NEXT_STATES = ['pending', 'open', 'reserved'];
+// Default term for a minted link: the first of next month.
+const nowD = new Date();
+const nextTerm = `${nowD.getUTCFullYear() + (nowD.getUTCMonth() === 11 ? 1 : 0)}-${String(((nowD.getUTCMonth() + 1) % 12) + 1).padStart(2, '0')}`;
+
 const ACTIONS = {
   hold: [['clear_hold', 'clear hold']],
   paid: [['reject', 'reject + refund']],
@@ -92,11 +97,55 @@ const ACTIONS = {
               />
               <button class="btn ghost" type="submit">set price</button>
             </form>
+            <span class="microlabel">next run: {slot.nextTaken ? 'taken' : slot.nextState}</span>
+            {!slot.nextTaken && (
+              <div class="admin-actions">
+                {NEXT_STATES.filter((s) => s !== slot.nextState).map((s) => (
+                  <form method="post" action="/api/sponsor/admin">
+                    <input type="hidden" name="token" value={token} />
+                    <input type="hidden" name="return_to" value={returnTo} />
+                    <input type="hidden" name="action" value="next_state" />
+                    <input type="hidden" name="slot" value={slot.id} />
+                    <input type="hidden" name="state" value={s} />
+                    <button class="btn ghost" type="submit">{s}</button>
+                  </form>
+                ))}
+              </div>
+            )}
           </div>
         ))
       }
     </div>
     <p class="fine">Keep open-slot prices staggered.</p>
+
+    <div class="list-head" style="padding-top: 36px;">
+      <h2>Mint a payment link</h2>
+      <span class="note">for a slot's next run · paste the result into a DM</span>
+    </div>
+    <form method="post" action="/api/sponsor/admin" class="admin-mint">
+      <input type="hidden" name="token" value={token} />
+      <input type="hidden" name="return_to" value={returnTo} />
+      <input type="hidden" name="action" value="payment_link" />
+      <select name="slot" aria-label="Slot">
+        {board.slots.map((s) => <option value={s.id}>{s.id}</option>)}
+      </select>
+      <select name="kind" aria-label="Kind">
+        <option value="renewal">renewal (card carries over)</option>
+        <option value="public">public (new sponsor)</option>
+      </select>
+      <input type="number" name="price" min="1" step="1" placeholder="total $" aria-label="Total price in dollars" required />
+      <select name="months" aria-label="Runs">
+        <option value="1">1 × 30 days</option>
+        <option value="3">3 × 30 days</option>
+      </select>
+      <input type="text" name="term" value={nextTerm} pattern="\d{4}-\d{2}" aria-label="Term start month (YYYY-MM)" required />
+      <input type="text" name="sponsor" placeholder="sponsor name (optional)" aria-label="Sponsor name" />
+      <button class="btn primary" type="submit">mint link</button>
+    </form>
+    <p class="fine">
+      The price is the TOTAL charged. The link works exactly once and never
+      expires; the term starts on the 1st of the month given.
+    </p>
 
     <div class="list-head" style="padding-top: 36px;">
       <h2>Purchases</h2>
@@ -148,3 +197,50 @@ const ACTIONS = {
     </div>
   </main>
 </Base>
+
+<style>
+  .admin-mint {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: stretch;
+    margin-top: 14px;
+    padding: 14px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--surface);
+  }
+
+  .admin-mint select,
+  .admin-mint input {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    padding: 10px 12px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--bg);
+    color: var(--fg);
+    min-width: 0;
+  }
+
+  .admin-mint input[name='price'] {
+    width: 110px;
+  }
+
+  .admin-mint input[name='term'] {
+    width: 110px;
+  }
+
+  .admin-mint input[name='sponsor'] {
+    flex: 1;
+    min-width: 160px;
+  }
+
+  @media (max-width: 760px) {
+    .admin-mint select,
+    .admin-mint input,
+    .admin-mint button {
+      flex: 1 1 45%;
+    }
+  }
+</style>

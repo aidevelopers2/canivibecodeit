@@ -11,6 +11,33 @@ const title = 'Sponsor canivibecodeit — a few slots, one payment, no sales cal
 const description =
   'Sponsor slots on the death list. Buy 30 days in one click, no contract, no account manager. Sponsorship never touches a verdict.';
 
+// What's on the public board for September.
+const SEPT_RUNGS = [
+  { label: 'standard · 4 slots', price: '$2,500', note: 'lower rail positions', reserved: false },
+  { label: 'mid board · 4 slots', price: '$2,750', note: 'middle of each rail', reserved: false },
+  { label: 'top of rail · 2 slots', price: '$2,999', note: 'reserved until aug 18', reserved: true },
+];
+
+const SEPT_TIMELINE = [
+  { date: 'aug 10', note: 'first refusal ends for current sponsors', live: true },
+  { date: 'aug 11', note: 'unrenewed slots open — first paid, first placed', live: false },
+  { date: 'aug 18', note: 'top-of-rail reservation releases', live: false },
+  { date: 'sep 1', note: 'board goes live', live: false },
+];
+
+const testimonials = [
+  {
+    quote:
+      '100+ visitors within hours of going live. cheaper than ads.',
+    who: 'Pierre · co-founder, Gojiberry AI',
+  },
+  {
+    quote:
+      'in 24 hours: 200+ visitors, 5 trials — we pay $90 for a trial on Meta ads. the traffic is highly qualified, mostly from the US.',
+    who: 'Dylan · co-founder, Gojiberry AI',
+  },
+];
+
 const steps = [
   {
     head: 'pick a slot and pay',
@@ -50,6 +77,55 @@ const steps = [
 
     {notice && <p class="sp-notice">{notice}</p>}
 
+    <section class="sp-sept" id="september">
+      <div class="sp-sept-head">
+        <h2>September.</h2>
+        <span class="note">10 fixed slots. yours is yours — no rotation, no sharing.</span>
+      </div>
+      <div class="sp-sept-ladder">
+        {
+          SEPT_RUNGS.map((r) => (
+            <div class="sp-sept-rung">
+              <span class="sp-sept-label">{r.label}</span>
+              <span class="sp-sept-price">{r.price}</span>
+              <span class={`sp-sept-note ${r.reserved ? 'reserved' : ''}`}>{r.note}</span>
+            </div>
+          ))
+        }
+      </div>
+      <div class="sp-sept-timeline" role="list" aria-label="September timeline">
+        {
+          SEPT_TIMELINE.map((s) => (
+            <div class="sp-sept-step" role="listitem">
+              <span class={`sp-sept-dot ${s.live ? 'live' : ''}`} aria-hidden="true" />
+              <span class="sp-sept-date">{s.date}</span>
+              <span class="sp-sept-what">{s.note}</span>
+            </div>
+          ))
+        }
+      </div>
+      <div class="sp-quotes">
+        {
+          testimonials.map((t) => (
+            <figure class="sp-quote">
+              <blockquote>“{t.quote}”</blockquote>
+              <figcaption>{t.who}</figcaption>
+            </figure>
+          ))
+        }
+      </div>
+      <div class="sp-sept-policy">
+        <span>
+          Prices float with traffic. What you pay is fixed for the term you bought — never
+          touched mid-run.
+        </span>
+        <span class="sp-sept-cta">
+          <a href="mailto:hello@canivibecodeit.com?subject=September%20slot">want in early? hello@canivibecodeit.com →</a>
+          <a href="#notify">or get the opening ping</a>
+        </span>
+      </div>
+    </section>
+
     <section class="sp-board" id="slots">
       <div class="list-head">
         <h2>The slots</h2>
@@ -58,7 +134,10 @@ const steps = [
       <div class="sp-grid">
         {
           board.slots.map((slot) => (
-            <div class={`sp-slot ${slot.state}`} data-slot={slot.id}>
+            <div
+              class={`sp-slot ${slot.state}${slot.state === 'live' && !slot.nextTaken && slot.nextState === 'open' ? ' sept-open' : ''}`}
+              data-slot={slot.id}
+            >
               <span class="microlabel">
                 slot {slot.id} · {slot.side} rail
               </span>
@@ -88,6 +167,19 @@ const steps = [
                 <>
                   <span class="sp-slot-taken">{slot.sponsor.name}</span>
                   <span class="sp-slot-note">taken until {shortDate(slot.endsAt)}</span>
+                  <span class="sp-slot-next">
+                    {slot.nextTaken ? (
+                      <span class="sn taken">SEPT — TAKEN</span>
+                    ) : slot.nextState === 'open' ? (
+                      <a class="sn open" href="https://x.com/robj3d3" rel="noopener">
+                        SEPT — OPEN · {usd(slot.priceCents)} · DM @robj3d3 →
+                      </a>
+                    ) : slot.nextState === 'reserved' ? (
+                      <span class="sn taken">SEPT — RESERVED</span>
+                    ) : (
+                      <span class="sn deciding">SEPT — SPONSOR DECIDING</span>
+                    )}
+                  </span>
                 </>
               ) : (
                 <>
@@ -157,3 +249,294 @@ const steps = [
     </section>
   </main>
 </Base>
+
+<style>
+  .sp-sept {
+    padding-top: 40px;
+  }
+
+  .sp-sept-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .sp-sept-head h2 {
+    font-family: var(--font-display);
+    font-size: clamp(30px, 4vw, 44px);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+
+  .sp-sept-ladder {
+    display: flex;
+    margin-top: 24px;
+    padding: 32px 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .sp-sept-rung {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    flex: 1;
+    padding: 0 36px;
+    border-left: 1px solid var(--border);
+    min-width: 0;
+  }
+
+  .sp-sept-rung:first-child {
+    padding-left: 0;
+    border-left: 0;
+  }
+
+  .sp-sept-rung:last-child {
+    padding-right: 0;
+  }
+
+  .sp-sept-label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .sp-sept-price {
+    font-family: var(--font-display);
+    font-size: clamp(30px, 3.6vw, 44px);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .sp-sept-note {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  .sp-sept-note.reserved {
+    color: var(--primary);
+  }
+
+  .sp-sept-timeline {
+    display: flex;
+    position: relative;
+    margin-top: 40px;
+  }
+
+  /* The rail: one hairline through every dot. Dots are 8px, so the line sits
+     at their vertical middle. */
+  .sp-sept-timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 4px;
+    height: 1px;
+    background: var(--border);
+  }
+
+  .sp-sept-step {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+    padding-right: 20px;
+    min-width: 0;
+  }
+
+  .sp-sept-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 100px;
+    background: var(--muted);
+    position: relative;
+  }
+
+  .sp-sept-dot.live {
+    background: var(--primary);
+  }
+
+  .sp-sept-date {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    font-weight: 700;
+  }
+
+  .sp-sept-what {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    line-height: 1.55;
+    color: var(--muted);
+  }
+
+  .sp-quotes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    margin-top: 44px;
+  }
+
+  .sp-quote {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 16px;
+    margin: 0;
+    padding-right: 48px;
+  }
+
+  .sp-quote + .sp-quote {
+    border-left: 1px solid var(--border);
+    padding-left: 48px;
+    padding-right: 0;
+  }
+
+  .sp-quote blockquote {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 1.5;
+    /* Hanging open quote. */
+    text-indent: -0.55ch;
+  }
+
+  .sp-quote figcaption {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  .sp-sept-policy {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 24px;
+    margin-top: 44px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--muted);
+    flex-wrap: wrap;
+  }
+
+  .sp-sept-cta {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    text-align: right;
+    flex-shrink: 0;
+  }
+
+  .sp-sept-cta a {
+    color: var(--primary);
+    white-space: nowrap;
+  }
+
+  .sp-sept-cta a + a {
+    color: var(--muted);
+  }
+
+  /* Per-slot September line on the board cards. */
+  .sp-slot :global(.sp-slot-next) {
+    display: block;
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px dashed var(--border);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+  }
+
+  .sp-slot :global(.sn.taken) {
+    color: var(--muted);
+  }
+
+  .sp-slot :global(.sn.open) {
+    color: var(--primary);
+    text-decoration: none;
+  }
+
+  .sp-slot :global(.sn.deciding) {
+    color: var(--kinda-bg);
+  }
+
+  .sp-slot.sept-open {
+    border-color: color-mix(in srgb, var(--primary) 40%, transparent);
+  }
+
+  @media (max-width: 900px) {
+    .sp-sept-ladder {
+      flex-direction: column;
+      gap: 24px;
+      padding: 24px 0;
+    }
+
+    .sp-sept-rung,
+    .sp-sept-rung:first-child {
+      padding: 0;
+      border-left: 0;
+    }
+
+    .sp-sept-rung + .sp-sept-rung {
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+    }
+
+    .sp-sept-timeline {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .sp-sept-timeline::before {
+      display: none;
+    }
+
+    .sp-sept-step {
+      display: grid;
+      grid-template-columns: 8px 64px 1fr;
+      gap: 12px;
+      align-items: baseline;
+      padding-right: 0;
+    }
+
+    .sp-sept-dot {
+      top: 2px;
+    }
+
+    .sp-quotes {
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+
+    .sp-quote {
+      padding-right: 0;
+    }
+
+    .sp-quote + .sp-quote {
+      border-left: 0;
+      border-top: 1px solid var(--border);
+      padding-left: 0;
+      padding-top: 28px;
+    }
+
+    .sp-sept-policy,
+    .sp-sept-cta {
+      flex-direction: column;
+      text-align: left;
+      align-items: flex-start;
+    }
+  }
+</style>

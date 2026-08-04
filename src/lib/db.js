@@ -64,6 +64,12 @@ const SCHEMA_SQLITE = `
     created_at INTEGER NOT NULL
   );
   CREATE INDEX IF NOT EXISTS sponsor_clicks_slot ON sponsor_clicks (slot_id, created_at);
+  CREATE TABLE IF NOT EXISTS sponsor_impressions (
+    slot_id TEXT NOT NULL,
+    day TEXT NOT NULL,
+    count INTEGER NOT NULL DEFAULT 0,
+    PRIMARY KEY (slot_id, day)
+  );
 `;
 
 const SCHEMA_PG = `
@@ -125,6 +131,12 @@ const SCHEMA_PG = `
     created_at BIGINT NOT NULL
   );
   CREATE INDEX IF NOT EXISTS sponsor_clicks_slot ON sponsor_clicks (slot_id, created_at);
+  CREATE TABLE IF NOT EXISTS sponsor_impressions (
+    slot_id TEXT NOT NULL,
+    day TEXT NOT NULL,
+    count INTEGER NOT NULL DEFAULT 0,
+    PRIMARY KEY (slot_id, day)
+  );
 `;
 
 /* Six fixed slots, three per rail side. Seed prices only — editable at runtime. */
@@ -197,6 +209,9 @@ async function pgDriver() {
   await pool.query('ALTER TABLE waitlist ADD COLUMN IF NOT EXISTS source TEXT');
   // Quarter deals: how many 30-day runs one payment covers (NULL = 1).
   await pool.query('ALTER TABLE sponsor_purchases ADD COLUMN IF NOT EXISTS months INTEGER');
+  // What the slot's NEXT run is doing: pending | open | reserved. "Taken" is
+  // never stored — it's derived from a future-dated purchase existing.
+  await pool.query('ALTER TABLE sponsor_slots ADD COLUMN IF NOT EXISTS next_state TEXT');
   await pool.query("UPDATE waitlist SET source = 'scanner' WHERE source IS NULL");
   for (const [id, cents] of SLOT_SEED) {
     await pool.query(
@@ -262,19 +277,25 @@ async function pgDriver() {
       return true;
     },
     async sponsorSlots() {
-      const r = await pool.query('SELECT id, price_cents FROM sponsor_slots ORDER BY id');
-      return r.rows.map((s) => ({ id: s.id, price_cents: Number(s.price_cents) }));
+      const r = await pool.query('SELECT id, price_cents, next_state FROM sponsor_slots ORDER BY id');
+      return r.rows.map((s) => ({
+        id: s.id, price_cents: Number(s.price_cents), next_state: s.next_state ?? null,
+      }));
     },
     async setSlotPrice(id, cents) {
       const r = await pool.query('UPDATE sponsor_slots SET price_cents = $2 WHERE id = $1', [id, cents]);
       return r.rowCount > 0;
     },
+    async setSlotNextState(id, state) {
+      const r = await pool.query('UPDATE sponsor_slots SET next_state = $2 WHERE id = $1', [id, state]);
+      return r.rowCount > 0;
+    },
     async insertPurchase(p) {
       await pool.query(
         `INSERT INTO sponsor_purchases
-           (id, slot_id, status, amount_cents, months, details_token, created_at, hold_expires_at)
-         VALUES ($1, $2, $3, $4, $5, $6, $7, $8)`,
-        [p.id, p.slot_id, p.status, p.amount_cents, p.months ?? 1, p.details_token, p.created_at, p.hold_expires_at]
+           (id, slot_id, status, amount_cents, months, details_token, created_at, hold_expires_at, stripe_session_id)
+         VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)`,
+        [p.id, p.slot_id, p.status, p.amount_cents, p.months ?? 1, p.details_token, p.created_at, p.hold_expires_at, p.stripe_session_id ?? null]
       );
     },
     async activePurchases() {
@@ -320,6 +341,23 @@ async function pgDriver() {
       );
       return r.rows.map((x) => ({ ...x, created_at: Number(x.created_at) }));
     },
+    async bumpImpressions(entries) {
+      for (const e of entries) {
+        await pool.query(
+          `INSERT INTO sponsor_impressions (slot_id, day, count) VALUES ($1, $2, $3)
+           ON CONFLICT (slot_id, day)
+           DO UPDATE SET count = sponsor_impressions.count + EXCLUDED.count`,
+          [e.slot_id, e.day, e.count]
+        );
+      }
+    },
+    async impressionRows(sinceDay) {
+      const r = await pool.query(
+        'SELECT slot_id, day, count FROM sponsor_impressions WHERE day >= $1 ORDER BY day',
+        [sinceDay]
+      );
+      return r.rows.map((x) => ({ ...x, count: Number(x.count) }));
+    },
   };
 }
 
@@ -341,6 +379,12 @@ async function sqliteDriver() {
   // Quarter deals: how many 30-day runs one payment covers (NULL = 1).
   try {
     db.exec('ALTER TABLE sponsor_purchases ADD COLUMN months INTEGER');
+  } catch (err) {
+    if (!/duplicate column/i.test(err.message)) throw err;
+  }
+  // What the slot's NEXT run is doing: pending | open | reserved.
+  try {
+    db.exec('ALTER TABLE sponsor_slots ADD COLUMN next_state TEXT');
   } catch (err) {
     if (!/duplicate column/i.test(err.message)) throw err;
   }
@@ -399,17 +443,20 @@ async function sqliteDriver() {
       return true;
     },
     async sponsorSlots() {
-      return db.prepare('SELECT id, price_cents FROM sponsor_slots ORDER BY id').all();
+      return db.prepare('SELECT id, price_cents, next_state FROM sponsor_slots ORDER BY id').all();
     },
     async setSlotPrice(id, cents) {
       return db.prepare('UPDATE sponsor_slots SET price_cents = ? WHERE id = ?').run(cents, id).changes > 0;
     },
+    async setSlotNextState(id, state) {
+      return db.prepare('UPDATE sponsor_slots SET next_state = ? WHERE id = ?').run(state, id).changes > 0;
+    },
     async insertPurchase(p) {
       db.prepare(
         `INSERT INTO sponsor_purchases
-           (id, slot_id, status, amount_cents, months, details_token, created_at, hold_expires_at)
-         VALUES (?, ?, ?, ?, ?, ?, ?, ?)`
-      ).run(p.id, p.slot_id, p.status, p.amount_cents, p.months ?? 1, p.details_token, p.created_at, p.hold_expires_at);
+           (id, slot_id, status, amount_cents, months, details_token, created_at, hold_expires_at, stripe_session_id)
+         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`
+      ).run(p.id, p.slot_id, p.status, p.amount_cents, p.months ?? 1, p.details_token, p.created_at, p.hold_expires_at, p.stripe_session_id ?? null);
     },
     async activePurchases() {
       const marks = ACTIVE_STATUSES.map(() => '?').join(', ');
@@ -449,6 +496,18 @@ async function sqliteDriver() {
            WHERE created_at >= ? ORDER BY created_at DESC`
         )
         .all(sinceMs);
+    },
+    async bumpImpressions(entries) {
+      const stmt = db.prepare(
+        `INSERT INTO sponsor_impressions (slot_id, day, count) VALUES (?, ?, ?)
+         ON CONFLICT (slot_id, day) DO UPDATE SET count = count + excluded.count`
+      );
+      for (const e of entries) stmt.run(e.slot_id, e.day, e.count);
+    },
+    async impressionRows(sinceDay) {
+      return db
+        .prepare('SELECT slot_id, day, count FROM sponsor_impressions WHERE day >= ? ORDER BY day')
+        .all(sinceDay);
     },
   };
 }
@@ -500,6 +559,10 @@ export async function setSlotPrice(id, priceCents) {
   return (await getDriver()).setSlotPrice(id, priceCents);
 }
 
+export async function setSlotNextState(id, state) {
+  return (await getDriver()).setSlotNextState(id, state);
+}
+
 export async function insertPurchase(purchase) {
   return (await getDriver()).insertPurchase(purchase);
 }
@@ -533,6 +596,14 @@ export async function addSponsorClick(slotId, surface, country, ts = Date.now())
 
 export async function sponsorClickRows(sinceMs = 0) {
   return (await getDriver()).sponsorClickRows(sinceMs);
+}
+
+export async function bumpImpressions(entries) {
+  return (await getDriver()).bumpImpressions(entries);
+}
+
+export async function impressionRows(sinceDay = '0000-00-00') {
+  return (await getDriver()).impressionRows(sinceDay);
 }
 
 export async function purchasesForAdmin(limit = 60) {

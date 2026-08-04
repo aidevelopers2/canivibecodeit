@@ -1,13 +1,15 @@
 import {
-  activePurchases, purchaseById, setSlotPrice, updatePurchase,
+  activePurchases, purchaseById, setSlotNextState, setSlotPrice, updatePurchase,
 } from '../../../lib/db.js';
 import { alertRob, esc, sendMail, shell } from '../../../lib/mail.js';
 import { json, readBody } from '../../../lib/request.js';
 import {
   cleanText, cleanTint, cleanUrl, clearCache, isAdmin, isLive, LIMITS, RUN_DAYS, RUN_MS,
-  shortDate, siteUrl, SLOT_IDS, usd, verifyAction,
+  shortDate, siteUrl, SLOT_IDS, SPILL_MS, usd, verifyAction,
 } from '../../../lib/sponsors.js';
-import { alreadyRefunded, createRefund } from '../../../lib/stripe.js';
+import { alreadyRefunded, createPaymentLink, createRefund } from '../../../lib/stripe.js';
+
+const NEXT_STATES = ['pending', 'open', 'reserved'];
 
 const REFUNDABLE = ['submitted', 'paid', 'reject_failed'];
 
@@ -60,44 +62,100 @@ export async function POST({ request }) {
     return done(`${slot} priced at ${usd(Math.round(dollars * 100))}`);
   }
 
+  if (action === 'next_state') {
+    const slot = String(body.slot ?? '').trim().toUpperCase();
+    const state = String(body.state ?? '').trim();
+    if (!SLOT_IDS.includes(slot)) return fail('unknown slot', 400);
+    if (!NEXT_STATES.includes(state)) return fail('bad state', 400);
+    await setSlotNextState(slot, state);
+    return done(`${slot} next run: ${state}`);
+  }
+
+  /* Mints a shareable checkout link for a slot's next run. The metadata is the
+     whole contract: the webhook turns the eventual payment into a purchase row
+     with the right term, so the link can be sent anywhere. */
+  if (action === 'payment_link') {
+    const slot = String(body.slot ?? '').trim().toUpperCase();
+    const kind = String(body.kind ?? '') === 'public' ? 'public' : 'renewal';
+    const dollars = Number(body.price);
+    const months = String(body.months ?? '1').trim() === '3' ? 3 : 1;
+    const term = /^(\d{4})-(\d{2})$/.exec(String(body.term ?? '').trim());
+    const sponsor = cleanText(body.sponsor, 60) ?? '';
+    if (!SLOT_IDS.includes(slot)) return fail('unknown slot', 400);
+    if (!Number.isFinite(dollars) || dollars < 1 || dollars > 100000) return fail('bad price', 400);
+    if (!term || Number(term[2]) < 1 || Number(term[2]) > 12) return fail('bad term (YYYY-MM)', 400);
+    try {
+      const link = await createPaymentLink({
+        name: `canivibecodeit.com — sponsor slot ${slot} (${RUN_DAYS * months} days)`,
+        priceCents: Math.round(dollars * 100),
+        metadata: {
+          purpose: `sponsor_${kind}_${term[1]}_${term[2]}`,
+          slot_id: slot,
+          sponsor,
+          months,
+        },
+        // A double-tap mints the same link instead of a duplicate.
+        idempotencyKey: `plink-${slot}-${kind}-${term[1]}${term[2]}-${Math.round(dollars * 100)}-${months}`,
+      });
+      return done(`${slot} ${kind} link (${usd(Math.round(dollars * 100))} total, ${RUN_DAYS * months} days): ${link.url}`);
+    } catch (err) {
+      console.error(`payment link failed: ${err?.message || err}`);
+      return fail('stripe refused the link — check the log', 502);
+    }
+  }
+
   const purchase = id ? await purchaseById(id) : null;
   if (!purchase) return json({ error: 'not found' }, 404);
 
   if (action === 'approve') {
     const now = Date.now();
-    const endsAt = now + RUN_MS * (Number(purchase.months) || 1);
+    // A purchase that already carries a future run keeps its dates — approval
+    // just clears the card to show when that run arrives. Everything else
+    // starts its clock at approval, not payment: nobody pays for the days we
+    // spent reviewing them.
+    const scheduled = purchase.starts_at && purchase.starts_at > now;
+    const startsAt = scheduled ? purchase.starts_at : now;
+    const endsAt = scheduled
+      ? purchase.ends_at
+      : now + RUN_MS * (Number(purchase.months) || 1);
 
-    /* Last line of defence for the payment race. The rivals check refunds the
-       loser automatically, but its paid_at is read before the UPDATE commits, so
-       a close enough reorder can leave two rows paid — and both could reach
-       submitted. This makes the human gate refuse to double-book the slot. */
-    const clash = (await activePurchases()).find(
-      (o) => o.slot_id === purchase.slot_id && o.id !== purchase.id && isLive(o, now)
-    );
+    /* Last line of defence against double-booking. For a run starting now,
+       refuse if the slot is already showing someone. For a future run, refuse
+       if another future run overlaps it, or if the current placement would
+       still be running more than the allowed spill into it. */
+    const clash = (await activePurchases()).find((o) => {
+      if (o.slot_id !== purchase.slot_id || o.id === purchase.id) return false;
+      if (!scheduled) return isLive(o, now);
+      if (isLive(o, now) && o.ends_at > startsAt + SPILL_MS) return true;
+      return o.status !== 'hold' && o.starts_at && o.ends_at
+        && o.starts_at > now && o.starts_at < endsAt && o.ends_at > startsAt;
+    });
     if (clash) {
-      return fail(`${purchase.slot_id} is already live — refund one of these first`, 409);
+      return fail(`${purchase.slot_id} is already booked — refund one of these first`, 409);
     }
 
-    // The clock starts at approval, not at payment: nobody pays for the days we
-    // spent reviewing them.
     const changed = await updatePurchase(
       purchase.id,
-      { status: 'live', approved_at: now, starts_at: now, ends_at: endsAt },
+      { status: 'live', approved_at: now, starts_at: startsAt, ends_at: endsAt },
       ['submitted']
     );
     if (!changed) return fail('not awaiting approval', 409);
     await sendMail({
       to: purchase.email,
-      subject: `you're live on canivibecodeit until ${shortDate(endsAt)}`,
+      subject: scheduled
+        ? `approved — you're live from ${shortDate(startsAt)}`
+        : `you're live on canivibecodeit until ${shortDate(endsAt)}`,
       html: shell(
-        `<p><b>${esc(purchase.name)}</b> is live in slot ${esc(purchase.slot_id)} right now, and`
-        + ` runs until ${esc(shortDate(endsAt))} (${RUN_DAYS * (Number(purchase.months) || 1)} days).</p>`
+        `<p><b>${esc(purchase.name)}</b> is approved for slot ${esc(purchase.slot_id)}`
+        + (scheduled
+          ? ` and goes up ${esc(shortDate(startsAt))}, running until ${esc(shortDate(endsAt))}.</p>`
+          : ` right now, and runs until ${esc(shortDate(endsAt))} (${RUN_DAYS * (Number(purchase.months) || 1)} days).</p>`)
         + `<p>Your link carries campaign tags, so the traffic shows up in your analytics as`
         + ` canivibecodeit / referral.</p>`
         + `<p>We'll email you a few days before it ends. Replying to this email reaches a human.</p>`
       ),
     });
-    return done(`${purchase.slot_id} live until ${shortDate(endsAt)}`);
+    return done(`${purchase.slot_id} live ${scheduled ? `${shortDate(startsAt)} to` : 'until'} ${shortDate(endsAt)}`);
   }
 
   if (action === 'reject' || action === 'retry_refund') {

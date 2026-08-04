@@ -1,9 +1,9 @@
 ---
-import { faviconUrl, shortDate, tintChannels, usd, withUtm } from '../lib/sponsors.js';
+import { faviconUrl, tintChannels, usd, withUtm } from '../lib/sponsors.js';
 
 // Slot variants share one fixed size; the sold-out meta card is deliberately
 // smaller — it is a notice, not a placement.
-const { slot = null, soldOut = false, nextOpen = null, total = 10, index = 0 } = Astro.props;
+const { slot = null, soldOut = false, septLeft = null, total = 10, index = 0 } = Astro.props;
 const state = soldOut ? 'soldout' : slot.state;
 const sponsor = slot?.sponsor;
 const icon = sponsor ? sponsor.logoUrl || faviconUrl(sponsor.url) : '';
@@ -67,12 +67,12 @@ const icon = sponsor ? sponsor.logoUrl || faviconUrl(sponsor.url) : '';
 
 {
   state === 'soldout' && (
-    <a class="sp-card soldout" href="/sponsor#notify" data-state="soldout">
+    <a class="sp-card soldout" href="/sponsor" data-state="soldout">
       <span class="sp-label">{total}/{total} SLOTS TAKEN</span>
       <span class="sp-cta">
-        {nextOpen
-          ? `next opens ${shortDate(nextOpen.at)} at ${usd(nextOpen.priceCents)} — get notified →`
-          : 'tell me when one opens →'}
+        {septLeft != null && septLeft < total
+          ? `pre-book september — ${septLeft} of ${total} left →`
+          : 'pre-book september →'}
       </span>
     </a>
   )

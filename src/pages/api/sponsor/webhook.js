@@ -1,13 +1,189 @@
+import crypto from 'node:crypto';
 import {
-  activePurchases, purchaseById, purchaseBySession, updatePurchase,
+  activePurchases, insertPurchase, purchaseById, purchaseBySession, updatePurchase,
 } from '../../../lib/db.js';
 import { alertRob, button, esc, sendMail, shell } from '../../../lib/mail.js';
 import { json } from '../../../lib/request.js';
-import { blocksSlot, clearCache, siteUrl } from '../../../lib/sponsors.js';
+import {
+  blocksSlot, clearCache, isLive, newToken, RUN_MS, shortDate, siteUrl, SLOT_IDS, SPILL_MS, usd,
+} from '../../../lib/sponsors.js';
 import { createRefund, verifyStripeSignature } from '../../../lib/stripe.js';
 
 const detailsLink = (purchase) =>
   `${siteUrl('/sponsor/details')}?t=${encodeURIComponent(purchase.details_token)}`;
+
+/* Hand-issued payment links carry this contract in their metadata: the slot,
+   and a purpose naming the kind of sale and the month the run starts.
+   Their sessions have no purchase row to promote — this creates one. */
+const LINK_PURPOSE_RE = /^sponsor_(renewal|public)_(\d{4})_(\d{2})$/;
+
+export async function reconcileLinkSession(session) {
+  const meta = session?.metadata || {};
+  const m = LINK_PURPOSE_RE.exec(meta.purpose || '');
+  if (!m) return false;
+
+  const [, kind, year, month] = m;
+  if (session.payment_status !== 'paid') {
+    console.warn(`link session ${session.id} (${meta.purpose}) not paid, ignoring`);
+    return true;
+  }
+  // Same delivery twice: the first one already wrote the row.
+  if (await purchaseBySession(session.id)) return true;
+
+  const slotId = String(meta.slot_id || '').toUpperCase();
+  if (!SLOT_IDS.includes(slotId) || Number(month) < 1 || Number(month) > 12) {
+    await alertRob(
+      `link payment could not be reconciled (${esc(meta.purpose)} / slot "${meta.slot_id}")`,
+      shell(
+        `<p>Session <code>${esc(session.id)}</code> (${esc(meta.purpose)}, ${esc(meta.sponsor || 'no name')},`
+        + ` ${usd(session.amount_total)}) carries a slot or month that doesn't exist. Nothing was`
+        + ` recorded — sort it by hand.</p>`
+      )
+    );
+    return true;
+  }
+
+  const now = Date.now();
+  const months = Math.max(1, Math.min(12, Number(meta.months) || 1));
+  const startsAt = Date.UTC(Number(year), Number(month) - 1, 1);
+  const endsAt = startsAt + RUN_MS * months;
+  const email = session.customer_details?.email ?? null;
+
+  /* One term, one payment. A second payment against the same slot and an
+     overlapping term is not recorded — money moved, so a human decides which
+     payment stands and refunds the other. An outgoing run spilling a few days
+     into the new term is normal and doesn't count. */
+  const actives = await activePurchases();
+  const conflict = actives.find((o) => {
+    if (o.slot_id !== slotId || o.status === 'hold') return false;
+    const oStart = o.starts_at ?? 0;
+    const oEnd = o.ends_at ?? Number.MAX_SAFE_INTEGER;
+    if (!(oStart < endsAt && oEnd > startsAt)) return false;
+    return !(oStart <= startsAt && oEnd <= startsAt + SPILL_MS);
+  });
+  if (conflict) {
+    await alertRob(
+      `link payment NOT recorded — ${slotId} already booked for that term`,
+      shell(
+        `<p>Session <code>${esc(session.id)}</code> (${esc(meta.purpose)},`
+        + ` ${esc(meta.sponsor || email || 'no name')}, ${usd(session.amount_total)},`
+        + ` payment <code>${esc(session.payment_intent || 'unknown')}</code>) overlaps existing`
+        + ` purchase <code>${esc(conflict.id)}</code> (${esc(conflict.status)}).</p>`
+        + `<p><b>The money HAS been taken.</b> Refund one of the two from the Stripe dashboard,`
+        + ` then sort the board on <a href="${esc(siteUrl('/admin/sponsors'))}">the admin page</a>.</p>`
+      )
+    );
+    return true;
+  }
+
+  // A renewal keeps the card that's already running in the slot; without one
+  // to carry over, the buyer fills in details like any other purchase.
+  const incumbent = kind === 'renewal'
+    ? actives.find((o) => o.slot_id === slotId && isLive(o, now))
+    : null;
+
+  const purchase = {
+    id: crypto.randomUUID(),
+    slot_id: slotId,
+    status: incumbent ? 'live' : 'paid',
+    amount_cents: session.amount_total ?? null,
+    months,
+    details_token: newToken(),
+    created_at: now,
+    hold_expires_at: null,
+    stripe_session_id: session.id,
+  };
+  try {
+    await insertPurchase(purchase);
+  } catch (err) {
+    // Two deliveries racing: whoever lost the unique session id did nothing.
+    console.warn(`link session ${session.id} insert failed: ${err?.message || err}`);
+    return true;
+  }
+  try {
+    await updatePurchase(purchase.id, {
+      stripe_payment_intent: session.payment_intent ?? null,
+      email: email ?? incumbent?.email ?? null,
+      paid_at: now,
+      starts_at: startsAt,
+      ends_at: endsAt,
+      ...(incumbent
+        ? {
+            name: incumbent.name,
+            tagline: incumbent.tagline,
+            url: incumbent.url,
+            logo_url: incumbent.logo_url,
+            tint: incumbent.tint,
+            submitted_at: now,
+            approved_at: now,
+          }
+        : {}),
+    });
+  } catch (err) {
+    // The row exists but is missing its term — money moved, so this must
+    // never fail silently.
+    console.error(`link session ${session.id} completion failed: ${err?.message || err}`);
+    await alertRob(
+      `link payment recorded INCOMPLETELY — ${slotId}`,
+      shell(
+        `<p>Purchase <code>${esc(purchase.id)}</code> for session <code>${esc(session.id)}</code>`
+        + ` (${esc(meta.sponsor || email || 'no name')}, ${usd(session.amount_total)}) was inserted`
+        + ` but its term and details failed to write: ${esc(err?.message || err)}.</p>`
+        + `<p>It will not show on the board until fixed. Check the`
+        + ` <a href="${esc(siteUrl('/admin/sponsors'))}">admin page</a>.</p>`
+      )
+    );
+    return true;
+  }
+  clearCache();
+
+  const toEmail = email ?? incumbent?.email;
+  if (incumbent) {
+    await sendMail({
+      to: toEmail,
+      subject: `locked in — ${purchase.slot_id} is yours ${shortDate(startsAt)} to ${shortDate(endsAt)}`,
+      html: shell(
+        `<p>Payment received. <b>${esc(incumbent.name)}</b> keeps slot ${esc(purchase.slot_id)}`
+        + ` from ${esc(shortDate(startsAt))} to ${esc(shortDate(endsAt))} — same card, same spot,`
+        + ` nothing to do.</p>`
+        + `<p>Your numbers for the current run:`
+        + ` <a href="${esc(`${siteUrl('/sponsor/stats')}?t=${encodeURIComponent(incumbent.details_token)}`)}">stats page</a>.`
+        + ` The new run gets its own page, filling in from ${esc(shortDate(startsAt))}:`
+        + ` <a href="${esc(`${siteUrl('/sponsor/stats')}?t=${encodeURIComponent(purchase.details_token)}`)}">keep this link</a>.</p>`
+        + `<p style="color:#6e6e67; font-size:12px;">Want anything on the card changed for the`
+        + ` new run? Reply to this email.</p>`
+      ),
+    });
+  } else {
+    await sendMail({
+      to: toEmail,
+      subject: `you're in — slot ${purchase.slot_id} just needs your card details`,
+      html: shell(
+        `<p>Payment received for slot ${esc(purchase.slot_id)}, running`
+        + ` ${esc(shortDate(startsAt))} to ${esc(shortDate(endsAt))}. One step left: tell us`
+        + ` what the card should say.</p>`
+        + `<p>${button(detailsLink(purchase), 'finish your card')}</p>`
+        + `<p style="color:#6e6e67; font-size:12px;">Name, one line, and your link. We review`
+        + ` every placement by hand after that. Keep this email; it's the only copy of your link.</p>`
+      ),
+    });
+  }
+
+  await alertRob(
+    `${kind} paid: ${slotId} from ${shortDate(startsAt)} — ${meta.sponsor || toEmail || 'unknown'} (${usd(session.amount_total)})`,
+    shell(
+      `<p>Slot ${esc(slotId)} ${esc(kind)} reconciled: ${esc(meta.sponsor || 'no name in metadata')},`
+      + ` ${usd(session.amount_total)}, runs ${esc(shortDate(startsAt))}–${esc(shortDate(endsAt))}`
+      + `${months > 1 ? ` (${months} runs)` : ''}.</p>`
+      + (incumbent
+        ? `<p>Card carried over from the current run — nothing to approve.</p>`
+        : `<p>The buyer was emailed for card details. If that email bounces, their details link is:`
+          + ` <a href="${esc(detailsLink(purchase))}">${esc(detailsLink(purchase))}</a></p>`)
+      + `<p><a href="${esc(siteUrl('/admin/sponsors'))}">admin</a></p>`
+    )
+  );
+  return true;
+}
 
 /* hold → paid. Called by the webhook and, when the webhook hasn't landed yet,
    by the details page off its own session lookup. The conditional update is
@@ -154,7 +330,11 @@ export async function POST({ request }) {
   const object = event?.data?.object;
   try {
     if (event.type === 'checkout.session.completed') {
-      await promoteFromSession(object, { notify: true });
+      // Hand-issued link sessions have no purchase to promote; they get a row
+      // of their own instead. Everything else takes the normal path.
+      if (!(await reconcileLinkSession(object))) {
+        await promoteFromSession(object, { notify: true });
+      }
     } else if (event.type === 'checkout.session.expired') {
       const purchase = object?.metadata?.purchase_id
         ? await purchaseById(object.metadata.purchase_id)

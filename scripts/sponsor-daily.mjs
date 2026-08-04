@@ -209,13 +209,26 @@ async function detailsReminders(db, now) {
   return rows.length;
 }
 
+// Runs that started before this date have their renewals handled personally;
+// the automated end-of-term reminder only applies to runs from this date on.
+const AUTO_RENEW_REMINDERS_FROM = Date.UTC(2026, 8, 1);
+
 async function renewReminders(db, now) {
   const rows = await db.all(
     `SELECT id, slot_id, email, name, ends_at FROM sponsor_purchases
-     WHERE status = 'live' AND reminder_renew_at IS NULL AND ends_at < ? AND ends_at > ?`,
-    [now + RENEW_WINDOW_MS, now]
+     WHERE status = 'live' AND reminder_renew_at IS NULL AND ends_at < ? AND ends_at > ?
+       AND starts_at >= ?`,
+    [now + RENEW_WINDOW_MS, now, AUTO_RENEW_REMINDERS_FROM]
   );
-  for (const r of rows) {
+  // A slot whose next run is already paid for needs no reminder at all.
+  const booked = new Set(
+    (await db.all(
+      `SELECT DISTINCT slot_id FROM sponsor_purchases
+       WHERE status IN ('live', 'paid', 'submitted') AND starts_at > ?`,
+      [now]
+    )).map((r) => r.slot_id)
+  );
+  for (const r of rows.filter((r) => !booked.has(r.slot_id))) {
     const days = Math.max(1, Math.round((num(r.ends_at) - now) / DAY));
     console.log(`renew reminder: ${r.id} (${r.slot_id}, ${days}d left)`);
     const sent = await send(

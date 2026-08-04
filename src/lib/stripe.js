@@ -85,6 +85,41 @@ export async function createCheckoutSession({
   });
 }
 
+/* A shareable, non-expiring checkout URL for exactly one sale: the link
+   deactivates after its first completed payment, so a forwarded or re-clicked
+   link can't charge twice. Payment links need a real Price object, so this is
+   two calls; the link's metadata is copied onto the checkout session it
+   produces, which is what the webhook reconciles on. The same idempotency key
+   within 24h returns the same link instead of minting another. */
+export async function createPaymentLink({ name, priceCents, metadata, idempotencyKey }) {
+  const price = await stripeFetch(
+    '/v1/prices',
+    {
+      currency: 'usd',
+      unit_amount: priceCents,
+      product_data: { name },
+    },
+    'POST',
+    idempotencyKey ? `${idempotencyKey}-price` : undefined
+  );
+  return stripeFetch(
+    '/v1/payment_links',
+    {
+      line_items: [{ price: price.id, quantity: 1 }],
+      metadata,
+      restrictions: { completed_sessions: { limit: 1 } },
+      // Same buyer profile as the self-serve checkout: business buyers get to
+      // enter a tax id and receive a proper invoice PDF.
+      tax_id_collection: { enabled: true },
+      billing_address_collection: 'required',
+      customer_creation: 'always',
+      invoice_creation: { enabled: true },
+    },
+    'POST',
+    idempotencyKey ? `${idempotencyKey}-link` : undefined
+  );
+}
+
 export async function getSession(id) {
   return stripeFetch(`/v1/checkout/sessions/${encodeURIComponent(id)}`, null, 'GET');
 }

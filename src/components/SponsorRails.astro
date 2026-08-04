@@ -1,8 +1,23 @@
 ---
 import SponsorCard from './SponsorCard.astro';
+import { recordImpressions } from '../lib/impressions.js';
 import { getBoard } from '../lib/sponsors.js';
 
 const board = await getBoard();
+// This component renders exactly once per page, which makes it the impression
+// counter: one impression per live slot per page load. Private surfaces
+// (admin, a sponsor refreshing their own pages) don't count.
+const isPrivatePage =
+  Astro.url.pathname.startsWith('/admin') ||
+  Astro.url.pathname.startsWith('/sponsor/details') ||
+  Astro.url.pathname.startsWith('/sponsor/stats') ||
+  Astro.url.search.includes('token=');
+if (!isPrivatePage) {
+  recordImpressions(
+    board.live.map((s) => s.id),
+    Astro.request.headers.get('user-agent')
+  );
+}
 // Every slot renders a card in every state — a rail with holes in it reads as
 // broken, and each state has something honest to say.
 const left = board.left;
@@ -16,10 +31,10 @@ const showSoldOut = board.allLive;
 
 <aside class="sp-rail sp-left" aria-label="Sponsors, left">
   {left.map((slot, i) => <SponsorCard {slot} index={i} />)}
-  {showSoldOut && <SponsorCard soldOut nextOpen={board.nextOpen} total={total} index={left.length} />}
+  {showSoldOut && <SponsorCard soldOut septLeft={total - board.prebookedCount} total={total} index={left.length} />}
 </aside>
 
 <aside class="sp-rail sp-right" aria-label="Sponsors, right">
   {right.map((slot, i) => <SponsorCard {slot} index={i + left.length} />)}
-  {showSoldOut && <SponsorCard soldOut nextOpen={board.nextOpen} total={total} index={total} />}
+  {showSoldOut && <SponsorCard soldOut septLeft={total - board.prebookedCount} total={total} index={total} />}
 </aside>

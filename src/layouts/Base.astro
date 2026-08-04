@@ -5,6 +5,12 @@ import '../styles/global.css';
 import DigestBar from '../components/DigestBar.astro';
 import SponsorRails from '../components/SponsorRails.astro';
 import SponsorTape from '../components/SponsorTape.astro';
+import { getBoard } from '../lib/sponsors.js';
+
+// September pre-book count for the footer link. Board is cached, so this
+// costs the layout nothing extra.
+const septBoard = await getBoard();
+const septLeft = septBoard.slots.length - septBoard.prebookedCount;
 
 const {
   title,
@@ -20,6 +26,7 @@ const canonical = new URL(Astro.url.pathname, 'https://canivibecodeit.com').href
 const isPrivate =
   Astro.url.pathname.startsWith('/admin') ||
   Astro.url.pathname.startsWith('/sponsor/details') ||
+  Astro.url.pathname.startsWith('/sponsor/stats') ||
   Astro.url.search.includes('token=');
 // Version query = cache-buster: OG images are regenerated in place, and a
 // cached miss (or stale card) at any edge must never outlive a deploy.
@@ -118,7 +125,7 @@ const blocks = [orgLd, ...jsonld];
       </span>
       <span>
         MIT · no third-party trackers ·
-        <a href="/sponsor">sponsor</a>
+        <a href="/sponsor">pre-book september{septBoard.prebookedCount > 0 ? ` — ${septLeft} of ${septBoard.slots.length} left` : ''}</a>
       </span>
       </div>
     </footer>

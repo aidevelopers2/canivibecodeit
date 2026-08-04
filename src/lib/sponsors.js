@@ -24,6 +24,10 @@ export const QUARTER_MONTHS = 3;
 export const QUARTER_MIN_CENTS = 100000;
 export const RUN_MS = RUN_DAYS * 24 * 60 * 60 * 1000;
 
+// An outgoing placement may run this far into a slot's next booked term before
+// it counts as a conflict — approvals never dock the outgoing run's days.
+export const SPILL_MS = 3 * 24 * 60 * 60 * 1000;
+
 // Used until a real icon colour is extracted, and when the sponsor's favicon is
 // CORS-tainted so the browser can't sample it.
 export const DEFAULT_TINT = '#33e667';
@@ -66,8 +70,10 @@ export function blocksSlot(p, now = Date.now()) {
   return false;
 }
 
+/* A run can be paid for before it starts: such a row blocks its slot (see
+   blocksSlot) but doesn't render a card until its start date arrives. */
 export function isLive(p, now = Date.now()) {
-  return p.status === 'live' && p.ends_at > now;
+  return p.status === 'live' && p.ends_at > now && (!p.starts_at || p.starts_at <= now);
 }
 
 /* ---------- board ---------- */
@@ -86,12 +92,21 @@ async function deriveBoard(now) {
   const board = SLOT_IDS.map((id) => {
     const slot = byId.get(id);
     const mine = purchases.filter((p) => p.slot_id === id);
-    const live = mine.find((p) => isLive(p, now));
+    // Two runs can briefly both be live when one spills into the next term;
+    // the one whose term started most recently owns the card.
+    const live = mine
+      .filter((p) => isLive(p, now))
+      .sort((a, b) => (b.starts_at ?? 0) - (a.starts_at ?? 0))[0];
     const blocked = mine.some((p) => blocksSlot(p, now));
+    // The slot's next run: taken the moment a future-dated purchase exists;
+    // otherwise whatever the admin last set (pending/open/reserved).
+    const nextTaken = mine.some((p) => p.status !== 'hold' && p.starts_at && p.starts_at > now);
     return {
       id,
       side: slotSide(id),
       priceCents: slot?.price_cents ?? 0,
+      nextState: slot?.next_state || 'pending',
+      nextTaken,
       // reserved = paid for, but not running yet. Holds show as open.
       state: live ? 'live' : blocked ? 'reserved' : 'open',
       endsAt: live?.ends_at ?? null,
@@ -115,6 +130,14 @@ async function deriveBoard(now) {
 
   const liveSlots = board.filter((s) => s.state === 'live');
 
+  // A slot is pre-booked when an active purchase's run starts in the future —
+  // renewal reconciliation writes those rows; nothing else does.
+  const prebooked = new Set(
+    purchases
+      .filter((p) => p.status !== 'hold' && p.starts_at && p.starts_at > now)
+      .map((p) => p.slot_id)
+  );
+
   return {
     slots: board,
     left: board.filter((s) => s.side === 'left'),
@@ -128,6 +151,7 @@ async function deriveBoard(now) {
     // by reservations gets reserved cards instead, which say so honestly.
     allLive: liveSlots.length === board.length,
     nextOpen: soonest ? { at: soonest.endsAt, priceCents: soonest.priceCents } : null,
+    prebookedCount: prebooked.size,
   };
 }
 
