@@ -1,61 +1,62 @@
 {
-    "slug": "vyravid",
-    "name": "Vyravid",
-    "domain": "vyravid.com",
-    "category": "ai-video",
-    "subcategory": "all-in-one AI-assisted video generator",
-    "tagline": "Create viral videos in minutes.",
-    "priceMonthly": 20,
-    "pricing": {
-      "plan": "Starter",
-      "basis": "monthly per user",
-      "unit": "per-seat",
-      "native": "20 USD",
-      "source": "https://vyravid.com/pricing",
-      "checkedOn": "2026-07-31",
-      "confidence": "high",
-      "notes": null
-    },
-    "verdict": "yes",
-    "verdictConfidence": "medium",
-    "verdictSummary": "A local version of Vyravid around the core workflow: project dashboard, script-to-scenes generation, voiceover generation, media generation, timeline assembly, and local ffmpeg rendering. The hard parts are not the CRUD shell but the many media edge cases, provider integrations, long-running jobs, and polished editor behavior.", 
-    "coreLoopDIY": "Create a local project, generate or paste a script, generate voiceover, split the script into scenes, create visual prompts/assets, arrange a timeline, apply simple effects, and render the final video locally.",
-    "diyTimeEstimate": "several focused sessions",
-    "requirements": [ 
-      "AI provider API keys",
-      "local filesystem storage"
-    ],
-    "whatYouLose": [
-      "someone else's servers & support",
-      "provider-specific voice/image/video integration details",
-      "timeline rendering polish",
-      "custom voice and character workflows"
-    ],
-    "moatTags": [
-      "integrations",
-      "scale-infra",
-      "execution-polish"
-    ],
-    "moatNotes": "Vyravid's durable edge is orchestration polish across AI media providers, managed rendering, templates, storage, and fewer local setup failures.",
-    "whyPeopleStillPay": "They pay for hosted services, managed storage, fewer setup steps, reliable provider orchestration, templates, collaboration, asset libraries, support, and polished timeline UX. A local open-source rebuild can replace the workflow for technical users, but hosted products still win on convenience and reliability.",
-    "priorArt": [
-      {
-        "name": "FFmpeg",
-        "url": "https://ffmpeg.org/",
-        "desc": "Core open-source media processing toolkit",
-        "status": "alive"
-      }
-    ],
-    "relatedSlugs": [
-      "runway",
-      "veed",
-      "capcut",
-      "descript",
-      "pika"
-    ],
-    "pagePriority": 5,
-    "verifiedOneShot": false,
-    "notes": null,
-    "prompt": "Build me a local AI-assisted video generator that uses API to generate assets (scripts, images, voiceover and videos) and use ffmpeg to render the final video. Requirements:\n- Use local filesystem storage, and ffmpeg.\n- Store app data in SQLite and generated media on the local filesystem, with media served by the backend.\n- There should be a dashboard showing project count, recent renders, drafts.\n- Add a practical project editor with script, scenes, media, voice, captions, and timeline tabs.\n- Let users paste a script, split it into editable scenes, and generate scene prompts with LLM of chocie.\n- Add voiceover generation through the configured TTS provider, plus manual audio upload as the no-key fallback.\n- Build a simple timeline: scene duration, background image/video, caption text, voice track, music bed, and transition choice.\n- Render MP4 locally with ffmpeg, including captions, audio sync, still-image timelines, simple transitions, and Ken Burns movement.\n- Show render progress, success, failure, retry, and a download link for finished MP4 files.",
-    "promptCurated": true
-  }
+  "slug": "vyravid",
+  "name": "Vyravid",
+  "domain": "vyravid.com",
+  "category": "ai-video",
+  "subcategory": "all-in-one AI-assisted video generator",
+  "tagline": "Turns a script or idea into rendered short videos with AI voiceover, media, and captions",
+  "priceMonthly": 20,
+  "pricing": {
+    "plan": "Starter",
+    "basis": "monthly per user",
+    "unit": "per-seat",
+    "native": "20 USD",
+    "source": "https://vyravid.com/pricing",
+    "checkedOn": "2026-07-31",
+    "confidence": "high",
+    "notes": null
+  },
+  "verdict": "kinda",
+  "verdictConfidence": "medium",
+  "verdictSummary": "A local version of the core workflow is buildable: project dashboard, script-to-scenes generation, voiceover, media generation, timeline assembly, and local ffmpeg rendering. The hard parts are not the CRUD shell but the media edge cases, provider integrations, long-running render jobs, and the editor polish that makes the timeline pleasant instead of fragile.",
+  "coreLoopDIY": "Create a local project, generate or paste a script, generate voiceover, split the script into scenes, create visual prompts/assets, arrange a timeline, apply simple effects, and render the final video locally.",
+  "diyTimeEstimate": "multi-day",
+  "requirements": [
+    "AI provider API keys",
+    "local filesystem storage",
+    "ffmpeg"
+  ],
+  "whatYouLose": [
+    "someone else's servers & support",
+    "provider-specific voice/image/video integration details",
+    "timeline rendering polish",
+    "custom voice and character workflows"
+  ],
+  "moatTags": [
+    "integrations",
+    "scale-infra",
+    "execution-polish"
+  ],
+  "moatNotes": "Vyravid's durable edge is orchestration polish across AI media providers, managed rendering, templates, storage, and fewer local setup failures.",
+  "whyPeopleStillPay": "They pay for hosted services, managed storage, fewer setup steps, reliable provider orchestration, templates, collaboration, asset libraries, support, and polished timeline UX. A local rebuild can replace the workflow for technical users, but hosted products still win on convenience and reliability.",
+  "priorArt": [
+    {
+      "name": "FFmpeg",
+      "url": "https://ffmpeg.org/",
+      "desc": "Core open-source media processing toolkit",
+      "status": "alive"
+    }
+  ],
+  "relatedSlugs": [
+    "runway",
+    "veed",
+    "capcut",
+    "descript",
+    "pika"
+  ],
+  "pagePriority": 3,
+  "verifiedOneShot": false,
+  "notes": "The CRUD shell is a sitting; the provider wrangling and render pipeline are the real work.",
+  "prompt": "Build me a local AI-assisted video generator to replace Vyravid. Requirements:\n\n- Node + Express + better-sqlite3, server-rendered pages with a little vanilla JS.\n  App data in SQLite, generated media on the local filesystem served by the backend.\n  All provider keys in .env.\n- A dashboard showing project count, recent renders, and drafts.\n- A project editor with script, scenes, media, voice, captions, and timeline tabs.\n- Let me paste a script, split it into editable scenes, and generate a visual prompt\n  per scene with the Anthropic API.\n- Voiceover through one configured TTS provider (key in .env), plus manual audio\n  upload as the no-key fallback.\n- A simple timeline: scene duration, background image/video, caption text, voice\n  track, music bed, and transition choice.\n- Render MP4 locally with ffmpeg: captions burned in, audio synced, still-image\n  scenes with Ken Burns movement, and simple crossfade transitions.\n- Show render progress, success, failure, retry, and a download link per finished\n  MP4. Never overwrite a previous render.\n- No accounts, no telemetry; everything stays on my machine except the API calls.\n- Out of scope: publishing to social platforms, teams, templates, and hosted\n  rendering.\n- README: setup, the .env keys, where media lives on disk, and a note that video\n  generation APIs are metered, so estimate cost per render.",
+  "promptCurated": true
+}

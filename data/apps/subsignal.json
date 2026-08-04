@@ -8,16 +8,16 @@
   "tagline": "Watches Reddit for people describing the problem you solve, and surfaces them as leads",
   "priceMonthly": null,
   "pricing": {
-    "plan": "Typical paid plan",
+    "plan": "Paid plan",
     "kind": "unknown",
-    "basis": "paid plan; billing basis requires review",
+    "basis": "unpublished",
     "unit": "flat",
     "currency": "USD",
-    "native": "Public paid plan exists; amount not safely recovered",
+    "native": "unpublished",
     "source": "https://subsignal.ai",
     "checkedOn": "2026-08-03",
     "confidence": "low",
-    "notes": "No public pricing page was reachable on the date checked; /pricing returned 404. Do not publish a number until rechecked."
+    "notes": "the product advertises a paid plan but published no pricing page when checked on 2026-08-03 · recheck before quoting a number"
   },
   "verdict": "no",
   "verdictConfidence": "medium",
@@ -65,7 +65,7 @@
   "relatedSlugs": [],
   "pagePriority": 3,
   "verifiedOneShot": false,
-  "notes": null,
+  "notes": "The polling loop is an evening of code. The moat is a years-deep Reddit archive you cannot backfill from the live API.",
   "prompt": "Build a Reddit buying-signal monitor inspired by SubSignal.\nUse exactly this stack: Node.js 22 + TypeScript + SQLite.\nPrimary job: on a schedule, fetch new posts and comments from a configured list of subreddits, ask one language model whether each one describes a problem the user's product solves, and deliver the matches to Slack or email with a link and a one-line reason.\nStart from an empty folder and create the complete working project.\nUse the official Reddit API with credentials from .env and respect its rate limits and terms of use; never scrape around them.\nStore every item you have seen in SQLite so the same thread is never delivered twice, including across restarts.\nLet the user describe their product in plain language in a config file, and build the classification prompt from that rather than from a hardcoded keyword list.\nScore each match and let the user set a threshold, so the digest can be tightened without code changes.\nSend a digest rather than one alert per hit, and make the schedule configurable.\nAlert the user when a run fails or returns nothing for several consecutive runs - a silent crawler is the main failure mode of this kind of tool.\nPut every secret in .env and provide .env.example.\nDeliberately exclude these paid-product advantages: a curated subreddit and keyword set, accumulated cross-customer history, managed uptime.\nDo not fake integrations, deliverability or data you do not have.\nWrite unit tests for deduplication and scoring, and one end-to-end smoke test against recorded fixtures rather than the live API.\nCreate a README with setup, Reddit API terms, cost estimate, architecture and limitations.\nRun the tests and build before finishing, then fix what fails.",
   "promptCurated": true
 }

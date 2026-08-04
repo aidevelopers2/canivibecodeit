@@ -21,7 +21,7 @@
   },
   "verdict": "no",
   "verdictConfidence": "high",
-  "verdictSummary": "A basic scheduler can be recreated, but RADAAR's complete product—including publishing, engagement, monitoring, analytics, team collaboration, asset management, approval workflows, and multi-network integrations—is not realistically replaceable in a weekend.",
+  "verdictSummary": "A basic scheduler can be recreated, but RADAAR's complete product · publishing, engagement, monitoring, analytics, team collaboration, asset management, approval workflows, and multi-network integrations · is not realistically replaceable in a weekend.",
   "coreLoopDIY": "Schedule posts for one social platform, publish through the official API, manage a simple content calendar, and maintain reusable media assets.",
   "diyTimeEstimate": "weeks",
   "requirements": [
@@ -73,7 +73,7 @@
     "metricool",
     "hootsuite"
   ],
-  "pagePriority": 5,
+  "pagePriority": 3,
   "verifiedOneShot": false,
   "notes": "Editorial comparison targets the complete RADAAR platform. A DIY replacement assumes only a single-network scheduler rather than the full product.",
   "prompt": "Build a personal replacement for RADAAR in an empty repository.\nUse Next.js 15, TypeScript, PostgreSQL, Drizzle ORM, and exactly one official social-platform API; do not offer alternative stacks.\nThe core loop is: create, schedule, preview, publish, and track posts for one social network with a searchable content calendar.\nMake the first run work locally with one documented command.\nStore all user data locally by default and make export straightforward.\nPut secrets in .env, ship .env.example, and never commit credentials.\nSupport drafts, scheduled posts, queues, campaigns, tags, reusable snippets, and a weekly calendar.\nConnect exactly one social platform using its documented OAuth flow.\nValidate character, media, aspect-ratio, and file-size limits before scheduling.\nPublish through idempotent background jobs with retries and clear failure states.\nStore platform post identifiers and refresh publication status through the official API.\nMaintain a reusable media library with local storage.\nSupport CSV export and token reconnect.\nInclude clear empty, loading, success, and recoverable error states.\nAdd robust validation, safe filenames, and graceful handling of unavailable APIs.\nWrite focused tests for scheduling logic and one end-to-end publishing flow.\nCreate a README covering setup, architecture, permissions, data storage, and backup.\nDo not add billing, telemetry, hosted infrastructure, enterprise collaboration, social inbox, listening, analytics dashboards, white-labeling, or unofficial scraping.\nFinish by running the tests and listing the exact commands used.",

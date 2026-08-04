@@ -1,7 +1,7 @@
 {
   "slug": "capture",
   "name": "Capture - Quick Notes",
-  "domain": "https://capture.sir.studio",
+  "domain": "capture.sir.studio",
   "appURL": "https://apps.apple.com/us/app/quick-notes-capture/id6458535284",
   "category": "notes-knowledge",
   "subcategory": "quick capture inbox for Apple devices",
@@ -17,11 +17,11 @@
     "confidence": "high",
     "notes": "The US App Store also lists a $9.99 yearly subscription. Regional prices vary."
   },
-  "verdict": "yes",
-  "verdictConfidence": "high",
-  "verdictSummary": "Capture's full core loop uses public Apple frameworks and documented integration points. A coding agent can create native apps for Apple's platforms, sync the shared inbox through iCloud, add widgets and system capture actions, and route items through destination-specific logic for more than 40 third-party apps. The integration catalog is the largest part, but it does not depend on a proprietary network or dataset.",
-  "coreLoopDIY": "Catch text, links, images, and files from any Apple device, sync them through iCloud, organize them into lists, then send each item to more than 40 third-party apps through destination-specific export logic.",
-  "diyTimeEstimate": "one sitting",
+  "verdict": "kinda",
+  "verdictConfidence": "medium",
+  "verdictSummary": "The core capture inbox is a weekend build: everything runs on public Apple frameworks, so SwiftData plus CloudKit sync, a share extension, and a menu bar capture window cover the loop on iPhone and Mac. What is not a weekend is Capture's real surface: five Apple platforms and a catalog of 40+ destination exporters whose URL schemes, APIs, and content rules shift independently. Build the two-platform inbox with a handful of exporters you actually use and it is genuinely yours; chase full parity and you have signed up for the maintenance.",
+  "coreLoopDIY": "Catch text, links, images, and files on iPhone and Mac, sync them through your private iCloud, organize them into lists, then send each item on to the apps you actually use via destination-specific export actions.",
+  "diyTimeEstimate": "multi-day",
   "requirements": [
     "Xcode",
     "Apple Developer account for iCloud and App Group entitlements"
@@ -59,6 +59,6 @@
   "pagePriority": 4,
   "verifiedOneShot": false,
   "notes": "Submitted by Capture's maker. The entry uses the US lifetime purchase and covers the complete multi-platform capture and export workflow.",
-  "prompt": "Build me a native quick-capture inbox across Apple platforms to replace Capture. Requirements:\n\n- Use Swift 6, SwiftUI, SwiftData, CloudKit, App Intents, WidgetKit, and AppKit where\n  macOS needs it. Create one Xcode project with a shared Swift package.\n- Target iPhone, iPad, Mac, Apple Watch, and Apple Vision Pro. Give each platform a\n  native layout while sharing the model, persistence, search, and export engine.\n- A capture stores text, detected URLs, phone numbers, reminder dates, images, files,\n  its list, archive state, and created and edited dates. Use NSDataDetector.\n- Store locally first with SwiftData and sync through the user's private CloudKit\n  database. Support offline writes, retries, conflict merging, and schema migration.\n- Provide Inbox, Archive, lists, full-text search, quick editing, undoable archive and\n  restore, safe deletion, JSON import and export, and automatic local backups.\n- Add a share extension for text, URLs, images, and files; configurable widgets for\n  quick capture, lists, and single items; Siri and Shortcuts actions through App Intents.\n- On Mac, add a menu bar app, global quick-capture shortcut, compact floating window,\n  and keyboard navigation. On Watch, support fast text and voice capture.\n- Build a catalog of at least 40 concrete export adapters. Each adapter owns supported\n  content types, validation, settings, encoding, and its destination-specific behavior.\n- Support URL and x-callback-url schemes, EventKit, Photos, Mail, bundled Shortcuts, and\n  REST APIs. Store API credentials in Keychain and report export failures without data loss.\n- No Capture account, telemetry, ads, or proprietary backend. Network access is limited\n  to private iCloud sync and exports the user explicitly triggers.\n- Out of scope: billing and analytics. Do not omit an Apple target or replace the 40-plus\n  adapter catalog with a generic share sheet.\n- Test CloudKit conflict handling, extensions, widgets, content detection, backups, and\n  every export adapter. Document entitlements, App Groups, iCloud, keys, and setup.",
+  "prompt": "Build me a native quick-capture inbox for iPhone and Mac to replace Capture. Requirements:\n\n- Swift 6 + SwiftUI, one Xcode project: an iOS app and a macOS menu bar app sharing a\n  Swift package for the model, persistence, search, and export logic. SwiftData for\n  storage, synced through my private CloudKit database.\n- A capture is text, a URL, an image, or a file, with a list, archive state, and\n  created/edited dates. Run NSDataDetector on text so URLs, phone numbers, and dates\n  become tappable.\n- iOS: a share extension so anything can be sent in from any app, plus a WidgetKit\n  widget for one-tap capture. Mac: a menu bar item with a global hotkey opening a\n  compact capture window.\n- Inbox, Archive, and lists, with full-text search and undoable archive/delete. JSON\n  export of everything so my notes are never trapped.\n- Export actions for the destinations I actually use: Reminders and Calendar via\n  EventKit, a Mail draft, Things and Bear via their URL schemes, and copy-as-Markdown.\n  One small adapter file per destination so more are addable later.\n- Offline-first: SwiftData writes locally and CloudKit retries when back online.\n  Last-write-wins conflict handling is fine, say so in the README.\n- No accounts, no telemetry, nothing leaves my devices except private iCloud sync and\n  the exports I trigger.\n- Out of scope: Apple Watch and Vision Pro apps, and Capture's 40+ destination catalog.\n  Keeping that many exporters alive is the paid product's job, not mine.\n- README: the entitlements to enable (App Groups, iCloud/CloudKit), and a plain warning\n  that CloudKit sync needs a paid Apple Developer account.",
   "promptCurated": true
 }
