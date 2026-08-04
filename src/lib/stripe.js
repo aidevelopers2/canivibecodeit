@@ -48,7 +48,7 @@ export async function stripeFetch(pathname, params, method = 'POST', idempotency
 }
 
 export async function createCheckoutSession({
-  purchaseId, slotId, priceCents, successUrl, cancelUrl, expiresAt, months = 1,
+  purchaseId, slotId, priceCents, successUrl, cancelUrl, expiresAt, months = 1, termNote = '',
 }) {
   return stripeFetch('/v1/checkout/sessions', {
     mode: 'payment',
@@ -77,7 +77,8 @@ export async function createCheckoutSession({
             description:
               `Your product on every page of canivibecodeit.com for ${30 * months} days: icon, name,`
               + ' tagline and link, plus the sponsor board.'
-              + (months > 1 ? ' Price locked for the full run.' : ''),
+              + (months > 1 ? ' Price locked for the full run.' : '')
+              + (termNote ? ` ${termNote}` : ''),
           },
         },
       },

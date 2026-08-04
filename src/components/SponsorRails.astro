@@ -1,7 +1,9 @@
 ---
 import SponsorCard from './SponsorCard.astro';
 import { recordImpressions } from '../lib/impressions.js';
-import { getBoard } from '../lib/sponsors.js';
+import { getBoard, nextRunStart, shortDate } from '../lib/sponsors.js';
+
+const nextMonthLabel = shortDate(nextRunStart()).split(' ')[0].toLowerCase();
 
 const board = await getBoard();
 // This component renders exactly once per page, which makes it the impression
@@ -31,10 +33,10 @@ const showSoldOut = board.allLive;
 
 <aside class="sp-rail sp-left" aria-label="Sponsors, left">
   {left.map((slot, i) => <SponsorCard {slot} index={i} />)}
-  {showSoldOut && <SponsorCard soldOut septLeft={total - board.prebookedCount} total={total} index={left.length} />}
+  {showSoldOut && <SponsorCard soldOut septLeft={total - board.prebookedCount} nextMonth={nextMonthLabel} total={total} index={left.length} />}
 </aside>
 
 <aside class="sp-rail sp-right" aria-label="Sponsors, right">
   {right.map((slot, i) => <SponsorCard {slot} index={i + left.length} />)}
-  {showSoldOut && <SponsorCard soldOut septLeft={total - board.prebookedCount} total={total} index={total} />}
+  {showSoldOut && <SponsorCard soldOut septLeft={total - board.prebookedCount} nextMonth={nextMonthLabel} total={total} index={total} />}
 </aside>

@@ -218,10 +218,13 @@ function sponsorStats(p, clicks, imps, now) {
   const myImps = imps.filter(
     (r) => r.slot_id === p.slot_id && weekDays.has(r.day) && r.day >= startDay
   );
-  const imps7 = myImps.reduce((sum, r) => sum + num(r.count), 0);
   const impDays = new Set(myImps.map((r) => r.day));
+  // Hours of impression data make CTR pure noise: report both only once the
+  // count spans at least two calendar days.
+  const impsReady = impDays.size >= 2;
+  const imps7 = impsReady ? myImps.reduce((sum, r) => sum + num(r.count), 0) : 0;
   const clicksOnImpDays = week.filter((c) => impDays.has(dayKey(num(c.created_at)))).length;
-  const ctr = imps7 > 0 ? ((clicksOnImpDays / imps7) * 100).toFixed(2) : null;
+  const ctr = impsReady && imps7 > 0 ? ((clicksOnImpDays / imps7) * 100).toFixed(2) : null;
 
   return {
     total: mine.length,
@@ -310,7 +313,8 @@ async function main() {
     for (const p of live) {
       const s = sponsorStats(p, clicks, imps, now);
       console.log(
-        `${p.slot_id} ${p.name || 'unnamed'}: ${s.week} clicks 7d, ${s.total} term, ${s.imps7} imps 7d`
+        `${p.slot_id} ${p.name || 'unnamed'}: ${s.week} clicks 7d, ${s.total} term, `
+        + `${s.ctr != null ? `${s.imps7} imps 7d` : 'imps not ready'}`
       );
       const ok = await send(
         p.email,

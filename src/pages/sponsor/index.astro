@@ -1,7 +1,14 @@
 ---
 import Base from '../../layouts/Base.astro';
 import { allApps } from '../../lib/apps.js';
-import { getBoard, QUARTER_MIN_CENTS, QUARTER_MONTHS, RUN_DAYS, shortDate, usd } from '../../lib/sponsors.js';
+import {
+  getBoard, nextRunStart, QUARTER_MIN_CENTS, QUARTER_MONTHS, RUN_DAYS, shortDate, usd,
+} from '../../lib/sponsors.js';
+
+// The slot cards sell next month by name, so the copy renews itself.
+const nextStart = nextRunStart();
+const NEXT_MONTH = shortDate(nextStart).split(' ')[0].toUpperCase();
+const nextStartLabel = shortDate(nextStart).toLowerCase();
 
 const board = await getBoard();
 const apps = allApps();
@@ -169,22 +176,30 @@ const steps = [
                   <span class="sp-slot-note">taken until {shortDate(slot.endsAt)}</span>
                   <span class="sp-slot-next">
                     {slot.nextTaken ? (
-                      <span class="sn taken">SEPT — TAKEN</span>
+                      <span class="sn taken">{NEXT_MONTH} — TAKEN</span>
                     ) : slot.nextState === 'open' ? (
-                      <a class="sn open" href="https://x.com/robj3d3" rel="noopener">
-                        SEPT — OPEN · {usd(slot.priceCents)} · DM @robj3d3 →
-                      </a>
+                      <form method="post" action="/api/sponsor/checkout" data-checkout>
+                        <input type="hidden" name="slot" value={slot.id} />
+                        <input type="hidden" name="term" value="next" />
+                        <button class="sn open" type="submit" data-price={slot.priceCents}>
+                          {NEXT_MONTH} — OPEN · {usd(slot.priceCents)} · yours from {nextStartLabel} →
+                        </button>
+                      </form>
                     ) : slot.nextState === 'reserved' ? (
-                      <span class="sn taken">SEPT — RESERVED</span>
+                      <span class="sn taken">{NEXT_MONTH} — RESERVED</span>
                     ) : (
-                      <span class="sn deciding">SEPT — SPONSOR DECIDING</span>
+                      <span class="sn deciding">{NEXT_MONTH} — SPONSOR DECIDING</span>
                     )}
                   </span>
                 </>
               ) : (
                 <>
-                  <span class="sp-slot-taken">reserved</span>
-                  <span class="sp-slot-note">someone is mid-checkout or waiting on approval</span>
+                  <span class="sp-slot-taken">{slot.nextTaken ? 'booked' : 'reserved'}</span>
+                  <span class="sp-slot-note">
+                    {slot.nextTaken && slot.nextStartsAt
+                      ? `next run starts ${shortDate(slot.nextStartsAt)}`
+                      : 'someone is mid-checkout or waiting on approval'}
+                  </span>
                 </>
               )}
             </div>
@@ -464,7 +479,18 @@ const steps = [
     color: var(--muted);
   }
 
+  .sp-slot :global(.sp-slot-next form) {
+    display: block;
+  }
+
   .sp-slot :global(.sn.open) {
+    font: inherit;
+    letter-spacing: inherit;
+    background: none;
+    border: 0;
+    padding: 0;
+    text-align: left;
+    cursor: pointer;
     color: var(--primary);
     text-decoration: none;
   }

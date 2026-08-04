@@ -1,6 +1,7 @@
 import crypto from 'node:crypto';
 import {
-  activePurchases, insertPurchase, purchaseById, purchaseBySession, updatePurchase,
+  activePurchases, insertPurchase, purchaseById, purchaseBySession, setSlotNextState,
+  updatePurchase,
 } from '../../../lib/db.js';
 import { alertRob, button, esc, sendMail, shell } from '../../../lib/mail.js';
 import { json } from '../../../lib/request.js';
@@ -119,6 +120,9 @@ export async function reconcileLinkSession(session) {
           }
         : {}),
     });
+    // The next run is sold: the slot's next-run state resets so the month
+    // after doesn't silently inherit "open".
+    await setSlotNextState(slotId, 'pending');
   } catch (err) {
     // The row exists but is missing its term — money moved, so this must
     // never fail silently.
@@ -231,12 +235,27 @@ export async function promoteFromSession(session, { notify = false } = {}) {
 
      Whoever queued first is irrelevant: a lapsed hold can be paid late, and a
      success tab can be reopened long after the slot moved on. An unpaid hold is
-     never a rival — it holds nothing until it pays, and then it lands here. */
+     never a rival — it holds nothing until it pays, and then it lands here.
+
+     A purchase for a future run only rivals purchases whose TERM overlaps its
+     own — the placement currently finishing out the slot is not a rival, and
+     may spill a few days into the new term. */
+  const mine = await purchaseById(purchase.id);
+  const rivalTo = (o, at) => {
+    if (mine?.starts_at && mine?.ends_at) {
+      if (o.status === 'hold') return false;
+      const oS = o.starts_at ?? 0;
+      const oE = o.ends_at ?? Number.MAX_SAFE_INTEGER;
+      if (!(oS < mine.ends_at && oE > mine.starts_at)) return false;
+      return !(oS <= mine.starts_at && oE <= mine.starts_at + SPILL_MS);
+    }
+    return blocksSlot(o, at);
+  };
   const beatenBy = async () => {
     const at = Date.now();
     return (await activePurchases()).filter((o) => {
       if (o.slot_id !== purchase.slot_id || o.id === purchase.id) return false;
-      if (!blocksSlot(o, at)) return false;
+      if (!rivalTo(o, at)) return false;
       const theirs = o.paid_at ?? 0;
       return theirs < now || (theirs === now && o.id < purchase.id);
     });
@@ -245,6 +264,12 @@ export async function promoteFromSession(session, { notify = false } = {}) {
   if (rivals.length === 0) rivals = await beatenBy();
 
   if (rivals.length === 0) {
+    // A future run just sold: reset the slot's next-run state so the month
+    // after doesn't silently inherit "open".
+    if (mine?.starts_at && mine.starts_at > now) {
+      await setSlotNextState(purchase.slot_id, 'pending');
+      clearCache();
+    }
     if (notify) {
       // Fire-and-forget: the details link only otherwise exists in the tab they
       // were redirected to, and tabs get closed.

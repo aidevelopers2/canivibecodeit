@@ -46,6 +46,58 @@ export async function alertRob(subject, html) {
   return sendMail({ to: process.env.DIGEST_ALERT_EMAIL, subject, html });
 }
 
+/* Everyone in the Resend audience who has unsubscribed. Unsubscribes live
+   there, not in our tables, so anything that mails a local list must check
+   here first. Throws when it can't know — mailing blind is worse than not
+   mailing. */
+export async function unsubscribedEmails() {
+  const key = process.env.RESEND_API_KEY;
+  const audience = process.env.RESEND_AUDIENCE_ID;
+  if (!key || !audience) throw new Error('missing RESEND_API_KEY or RESEND_AUDIENCE_ID');
+  const res = await fetch(`https://api.resend.com/audiences/${audience}/contacts`, {
+    headers: { Authorization: `Bearer ${key}` },
+    signal: AbortSignal.timeout(15000),
+  });
+  if (!res.ok) throw new Error(`resend contacts: HTTP ${res.status}`);
+  const body = await res.json();
+  return new Set(
+    (body?.data ?? [])
+      .filter((c) => c.unsubscribed)
+      .map((c) => String(c.email).toLowerCase())
+  );
+}
+
+/* One API call for up to 100 individual emails — each recipient gets their own
+   message, nobody sees anybody else. Returns how many were accepted. */
+export async function sendBatch(messages) {
+  const key = process.env.RESEND_API_KEY;
+  if (!key) {
+    console.warn(`batch mail skipped (no RESEND_API_KEY): ${messages.length} messages`);
+    return 0;
+  }
+  let sent = 0;
+  for (let i = 0; i < messages.length; i += 100) {
+    const chunk = messages.slice(i, i + 100).map((m) => ({ from: FROM, reply_to: REPLY_TO, ...m }));
+    try {
+      const res = await fetch('https://api.resend.com/emails/batch', {
+        method: 'POST',
+        headers: { Authorization: `Bearer ${key}`, 'Content-Type': 'application/json' },
+        body: JSON.stringify(chunk),
+        signal: AbortSignal.timeout(30000),
+      });
+      if (!res.ok) {
+        console.error(`batch mail failed (${res.status}) at chunk ${i / 100}`);
+        continue;
+      }
+      const body = await res.json().catch(() => ({}));
+      sent += body?.data?.length ?? chunk.length;
+    } catch (err) {
+      console.error(`batch mail failed: ${err?.message || err}`);
+    }
+  }
+  return sent;
+}
+
 const MONO = "font-family:'JetBrains Mono',ui-monospace,Menlo,Consolas,monospace;";
 
 export function shell(body) {

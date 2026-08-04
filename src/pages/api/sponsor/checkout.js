@@ -6,7 +6,8 @@ import { clientIp, json, readBody } from '../../../lib/request.js';
 // No clearCache here: holds never appear on the board, so creating or expiring
 // one cannot change what the rails render.
 import {
-  blocksSlot, HOLD_TTL_MS, newToken, QUARTER_MIN_CENTS, QUARTER_MONTHS, SESSION_TTL_MS, siteUrl, SLOT_IDS,
+  blocksSlot, HOLD_TTL_MS, newToken, nextRunStart, QUARTER_MIN_CENTS, QUARTER_MONTHS,
+  RUN_MS, SESSION_TTL_MS, shortDate, siteUrl, SLOT_IDS, SPILL_MS,
 } from '../../../lib/sponsors.js';
 import { createCheckoutSession } from '../../../lib/stripe.js';
 
@@ -30,7 +31,12 @@ export async function POST({ request, clientAddress }) {
 
   const slotId = String(body.slot ?? '').trim().toUpperCase();
   if (!SLOT_IDS.includes(slotId)) return fail(wantsJson, 'unknown slot', 400);
-  const months = String(body.months ?? '1').trim() === String(QUARTER_MONTHS) ? QUARTER_MONTHS : 1;
+  // A slot's next run is a single 30-day term, bought one click at a time; the
+  // quarter lock stays a now-starting purchase.
+  const nextTerm = String(body.term ?? '') === 'next';
+  const months = !nextTerm && String(body.months ?? '1').trim() === String(QUARTER_MONTHS)
+    ? QUARTER_MONTHS
+    : 1;
 
   const now = Date.now();
   const slots = await sponsorSlots();
@@ -44,7 +50,26 @@ export async function POST({ request, clientAddress }) {
   // Only money closes a slot. Another open checkout session is not a reason to
   // turn anyone away — several people racing for the same slot is the design.
   const before = await activePurchases();
-  if (before.some((p) => p.slot_id === slotId && blocksSlot(p, now))) {
+  let startsAt = null;
+  let endsAt = null;
+  if (nextTerm) {
+    /* Selling the slot's NEXT run while the current one finishes out. It must
+       be marked open, the slot must actually be mid-run (a slot that's free
+       right now sells through the normal flow), nobody may have paid for the
+       next term already, and the current run may not extend into it beyond
+       the allowed spill. */
+    startsAt = nextRunStart(now);
+    endsAt = startsAt + RUN_MS;
+    const held = before.filter((p) => p.slot_id === slotId && p.status !== 'hold');
+    if (slot.next_state !== 'open') return fail(wantsJson, TAKEN, 409);
+    if (!held.some((p) => blocksSlot(p, now))) return fail(wantsJson, TAKEN, 409);
+    if (held.some((p) => p.starts_at && p.starts_at > now)) return fail(wantsJson, TAKEN, 409);
+    // A blocked row with no end date yet (paid, awaiting approval) could end
+    // anywhere — refuse rather than guess.
+    if (held.some((p) => blocksSlot(p, now) && (p.ends_at ?? Number.MAX_SAFE_INTEGER) > startsAt + SPILL_MS)) {
+      return fail(wantsJson, TAKEN, 409);
+    }
+  } else if (before.some((p) => p.slot_id === slotId && blocksSlot(p, now))) {
     return fail(wantsJson, TAKEN, 409);
   }
 
@@ -61,6 +86,15 @@ export async function POST({ request, clientAddress }) {
     hold_expires_at: now + HOLD_TTL_MS,
   };
   await insertPurchase(purchase);
+  // A next-run hold carries its term from the start; promotion and approval
+  // both preserve future dates.
+  if (nextTerm) {
+    const stamped = await updatePurchase(purchase.id, { starts_at: startsAt, ends_at: endsAt }, ['hold']);
+    if (!stamped) {
+      console.error(`next-term hold ${purchase.id} lost its term stamp`);
+      return fail(wantsJson, 'checkout unavailable', 502);
+    }
+  }
 
   let session;
   try {
@@ -69,6 +103,7 @@ export async function POST({ request, clientAddress }) {
       slotId,
       priceCents: slot.price_cents * months,
       months,
+      termNote: nextTerm ? `Runs ${shortDate(startsAt)} to ${shortDate(endsAt)}.` : '',
       successUrl: `${siteUrl('/sponsor/details')}?t=${purchase.details_token}&session_id={CHECKOUT_SESSION_ID}`,
       cancelUrl: siteUrl('/sponsor'),
       expiresAt: now + SESSION_TTL_MS,

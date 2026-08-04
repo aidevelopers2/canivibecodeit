@@ -28,6 +28,12 @@ export const RUN_MS = RUN_DAYS * 24 * 60 * 60 * 1000;
 // it counts as a conflict — approvals never dock the outgoing run's days.
 export const SPILL_MS = 3 * 24 * 60 * 60 * 1000;
 
+// The first of the month after `now`, UTC — when a slot's next run starts.
+export function nextRunStart(now = Date.now()) {
+  const d = new Date(now);
+  return Date.UTC(d.getUTCFullYear(), d.getUTCMonth() + 1, 1);
+}
+
 // Used until a real icon colour is extracted, and when the sponsor's favicon is
 // CORS-tainted so the browser can't sample it.
 export const DEFAULT_TINT = '#33e667';
@@ -100,13 +106,19 @@ async function deriveBoard(now) {
     const blocked = mine.some((p) => blocksSlot(p, now));
     // The slot's next run: taken the moment a future-dated purchase exists;
     // otherwise whatever the admin last set (pending/open/reserved).
-    const nextTaken = mine.some((p) => p.status !== 'hold' && p.starts_at && p.starts_at > now);
+    const futureRuns = mine.filter((p) => p.status !== 'hold' && p.starts_at && p.starts_at > now);
+    const nextTaken = futureRuns.length > 0;
+    const nextStartsAt = nextTaken
+      ? Math.min(...futureRuns.map((p) => p.starts_at))
+      : null;
     return {
       id,
       side: slotSide(id),
       priceCents: slot?.price_cents ?? 0,
+      renewalPriceCents: slot?.renewal_price_cents ?? null,
       nextState: slot?.next_state || 'pending',
       nextTaken,
+      nextStartsAt,
       // reserved = paid for, but not running yet. Holds show as open.
       state: live ? 'live' : blocked ? 'reserved' : 'open',
       endsAt: live?.ends_at ?? null,

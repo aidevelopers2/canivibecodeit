@@ -3,7 +3,7 @@ import { faviconUrl, tintChannels, usd, withUtm } from '../lib/sponsors.js';
 
 // Slot variants share one fixed size; the sold-out meta card is deliberately
 // smaller — it is a notice, not a placement.
-const { slot = null, soldOut = false, septLeft = null, total = 10, index = 0 } = Astro.props;
+const { slot = null, soldOut = false, septLeft = null, nextMonth = 'next month', total = 10, index = 0 } = Astro.props;
 const state = soldOut ? 'soldout' : slot.state;
 const sponsor = slot?.sponsor;
 const icon = sponsor ? sponsor.logoUrl || faviconUrl(sponsor.url) : '';
@@ -71,8 +71,8 @@ const icon = sponsor ? sponsor.logoUrl || faviconUrl(sponsor.url) : '';
       <span class="sp-label">{total}/{total} SLOTS TAKEN</span>
       <span class="sp-cta">
         {septLeft != null && septLeft < total
-          ? `pre-book september — ${septLeft} of ${total} left →`
-          : 'pre-book september →'}
+          ? `pre-book ${nextMonth} — ${septLeft} of ${total} left →`
+          : `pre-book ${nextMonth} →`}
       </span>
     </a>
   )

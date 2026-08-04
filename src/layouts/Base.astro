@@ -5,12 +5,18 @@ import '../styles/global.css';
 import DigestBar from '../components/DigestBar.astro';
 import SponsorRails from '../components/SponsorRails.astro';
 import SponsorTape from '../components/SponsorTape.astro';
-import { getBoard } from '../lib/sponsors.js';
+import { getBoard, nextRunStart, shortDate } from '../lib/sponsors.js';
 
-// September pre-book count for the footer link. Board is cached, so this
-// costs the layout nothing extra.
+// Next-month pre-book count for the footer link. Board is cached, so this
+// costs the layout nothing extra; the month names itself.
 const septBoard = await getBoard();
 const septLeft = septBoard.slots.length - septBoard.prebookedCount;
+const prebookMonth = shortDate(nextRunStart()).split(' ')[0].toLowerCase();
+const PREBOOK_MONTHS = {
+  jan: 'january', feb: 'february', mar: 'march', apr: 'april', may: 'may', jun: 'june',
+  jul: 'july', aug: 'august', sep: 'september', oct: 'october', nov: 'november', dec: 'december',
+};
+const prebookLabel = PREBOOK_MONTHS[prebookMonth] ?? prebookMonth;
 
 const {
   title,
@@ -125,7 +131,7 @@ const blocks = [orgLd, ...jsonld];
       </span>
       <span>
         MIT · no third-party trackers ·
-        <a href="/sponsor">pre-book september{septBoard.prebookedCount > 0 ? ` — ${septLeft} of ${septBoard.slots.length} left` : ''}</a>
+        <a href="/sponsor">pre-book {prebookLabel}{septBoard.prebookedCount > 0 ? ` — ${septLeft} of ${septBoard.slots.length} left` : ''}</a>
       </span>
       </div>
     </footer>

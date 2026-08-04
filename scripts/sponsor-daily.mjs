@@ -214,17 +214,19 @@ async function detailsReminders(db, now) {
 const AUTO_RENEW_REMINDERS_FROM = Date.UTC(2026, 8, 1);
 
 async function renewReminders(db, now) {
+  // A sponsor who already received the next-run offer email needs no generic
+  // end-of-term reminder on top of it.
   const rows = await db.all(
     `SELECT id, slot_id, email, name, ends_at FROM sponsor_purchases
-     WHERE status = 'live' AND reminder_renew_at IS NULL AND ends_at < ? AND ends_at > ?
-       AND starts_at >= ?`,
+     WHERE status = 'live' AND reminder_renew_at IS NULL AND reminder_offer_at IS NULL
+       AND ends_at < ? AND ends_at > ? AND starts_at >= ?`,
     [now + RENEW_WINDOW_MS, now, AUTO_RENEW_REMINDERS_FROM]
   );
   // A slot whose next run is already paid for needs no reminder at all.
   const booked = new Set(
     (await db.all(
       `SELECT DISTINCT slot_id FROM sponsor_purchases
-       WHERE status IN ('live', 'paid', 'submitted') AND starts_at > ?`,
+       WHERE status IN ('live', 'paid', 'submitted', 'reject_failed') AND starts_at > ?`,
       [now]
     )).map((r) => r.slot_id)
   );
@@ -244,6 +246,185 @@ async function renewReminders(db, now) {
     }
   }
   return rows.length;
+}
+
+/* ---------- next-run offers (the 18th) ---------- */
+
+/* On the 18th of each month (with two days of retry slack), every current
+   sponsor whose run began on or after AUTO_RENEW_REMINDERS_FROM gets one offer
+   email: their slot's next run at the admin-set offer price, via a single-use
+   payment link, first refusal until the 24th, public at board price from the
+   25th. Runs that predate the cutoff were handled personally and are skipped. */
+
+const OFFER_WINDOW_DAYS = [18, 19, 20];
+// An outgoing run may spill this far into the next term without conflicting —
+// mirrors the site's SPILL_MS.
+const OFFER_SPILL_MS = 3 * DAY;
+const monthTag = (y, m) => `${y}_${String(m + 1).padStart(2, '0')}`;
+
+async function stripeForm(pathname, params, idempotencyKey) {
+  const key = need('STRIPE_SECRET_KEY');
+  const out = new URLSearchParams();
+  const encode = (value, prefix) => {
+    if (value === undefined || value === null) return;
+    if (typeof value === 'object') {
+      for (const [k, v] of Object.entries(value)) encode(v, `${prefix}[${k}]`);
+    } else {
+      out.append(prefix, String(value));
+    }
+  };
+  for (const [k, v] of Object.entries(params)) encode(v, k);
+  const res = await fetch(`https://api.stripe.com${pathname}`, {
+    method: 'POST',
+    headers: {
+      Authorization: `Bearer ${key}`,
+      'Content-Type': 'application/x-www-form-urlencoded',
+      ...(idempotencyKey ? { 'Idempotency-Key': idempotencyKey } : {}),
+    },
+    body: out.toString(),
+    signal: AbortSignal.timeout(20000),
+  });
+  const json = await res.json().catch(() => ({}));
+  if (!res.ok) throw new Error(`stripe ${pathname}: HTTP ${res.status} ${json?.error?.message || ''}`.trim());
+  return json;
+}
+
+async function mintOfferLink(purchase, offerCents, year, month, tag) {
+  const price = await stripeForm(
+    '/v1/prices',
+    {
+      currency: 'usd',
+      unit_amount: offerCents,
+      product_data: { name: `canivibecodeit.com — sponsor slot ${purchase.slot_id} (30 days)` },
+    },
+    `offer-${purchase.id}-${tag}-price`
+  );
+  const link = await stripeForm(
+    '/v1/payment_links',
+    {
+      'line_items[0][price]': price.id,
+      'line_items[0][quantity]': 1,
+      metadata: {
+        purpose: `sponsor_renewal_${monthTag(year, month)}`,
+        slot_id: purchase.slot_id,
+        sponsor: purchase.name || '',
+        months: 1,
+      },
+      restrictions: { completed_sessions: { limit: 1 } },
+      tax_id_collection: { enabled: true },
+      billing_address_collection: 'required',
+      customer_creation: 'always',
+      invoice_creation: { enabled: true },
+    },
+    `offer-${purchase.id}-${tag}-link`
+  );
+  return link.url;
+}
+
+function offerEmailText(p, offerCents, boardCents, endDate, startDate, linkUrl, statsUrl) {
+  const usd = (c) => `$${(Number(c) / 100).toLocaleString('en-US')}`;
+  return (
+    `Your slot ${p.slot_id} run ends ${endDate}. Next month is yours first:\n\n`
+    + `  ${usd(offerCents)} for 30 days from ${startDate} — same slot, same card,\n`
+    + `  nothing else to do. One click:\n\n`
+    + `${linkUrl}\n\n`
+    + `That price is yours until the 24th. From the 25th the slot goes on the\n`
+    + `public board at ${usd(boardCents)}, first paid, first placed.\n\n`
+    + `Your numbers so far: ${statsUrl}\n\n`
+    + `Want it locked for 3 months at this price in one payment? Reply and\n`
+    + `we'll set it up. Reply to this email for anything else too — a human\n`
+    + `reads it.`
+  );
+}
+
+async function nextRunOffers(db, now) {
+  const d = new Date(now);
+  if (!OFFER_WINDOW_DAYS.includes(d.getUTCDate())) return 0;
+
+  const rows = await db.all(
+    `SELECT id, slot_id, email, name, details_token, starts_at, ends_at FROM sponsor_purchases
+     WHERE status = 'live' AND reminder_offer_at IS NULL AND email IS NOT NULL
+       AND starts_at >= ? AND starts_at <= ? AND ends_at > ?`,
+    [AUTO_RENEW_REMINDERS_FROM, now, now]
+  );
+  if (rows.length === 0) return 0;
+
+  const slots = await db.all('SELECT id, price_cents, renewal_price_cents FROM sponsor_slots', []);
+  const slotById = new Map(slots.map((s) => [s.id, s]));
+  const booked = new Set(
+    (await db.all(
+      `SELECT DISTINCT slot_id FROM sponsor_purchases
+       WHERE status IN ('live', 'paid', 'submitted', 'reject_failed') AND starts_at > ?`,
+      [now]
+    )).map((r) => r.slot_id)
+  );
+
+  const year = d.getUTCFullYear() + (d.getUTCMonth() === 11 ? 1 : 0);
+  const month = (d.getUTCMonth() + 1) % 12;
+  const startMs = Date.UTC(year, month, 1);
+  const startDate = new Date(startMs).toISOString().slice(0, 10);
+  const tag = monthTag(year, month);
+
+  let sent = 0;
+  const problems = [];
+  for (const r of rows) {
+    if (booked.has(r.slot_id)) continue;
+    // A run that extends into the offered term (mid-month or multi-month buys)
+    // already owns some or all of it — offering it again would sell them a
+    // month they have. They get the generic end-of-term reminder instead.
+    if (num(r.ends_at) > startMs + OFFER_SPILL_MS) continue;
+    const slot = slotById.get(r.slot_id);
+    if (!slot?.renewal_price_cents) {
+      problems.push(`${r.slot_id} (${r.name || 'unnamed'}): no offer price set — no email sent`);
+      continue;
+    }
+    console.log(`next-run offer: ${r.id} (${r.slot_id}, ${r.name || 'unnamed'})`);
+    if (DRY) {
+      console.log(`  would mint link + email ${r.email}`);
+      continue;
+    }
+    try {
+      const url = await mintOfferLink(r, num(slot.renewal_price_cents), year, month, tag);
+      /* Marked BEFORE the send: if the send fails the mark is lifted again and
+         the failure alerted, but a mark that sticks after a successful send can
+         never double-email (or double-mint) on the next day's retry. */
+      await db.run('UPDATE sponsor_purchases SET reminder_offer_at = ? WHERE id = ?', [now, r.id]);
+      const ok = await send(
+        r.email,
+        `${r.name || 'your slot'} next month — yours first until the 24th`,
+        offerEmailText(
+          r,
+          num(slot.renewal_price_cents),
+          num(slot.price_cents),
+          new Date(num(r.ends_at)).toISOString().slice(0, 10),
+          startDate,
+          url,
+          `${SITE}/sponsor/stats?t=${encodeURIComponent(r.details_token)}`
+        )
+      );
+      if (ok) {
+        // A sent offer consumes the price: next cycle needs a fresh decision.
+        await db.run('UPDATE sponsor_slots SET renewal_price_cents = NULL WHERE id = ?', [r.slot_id]);
+        sent += 1;
+      } else {
+        await db.run('UPDATE sponsor_purchases SET reminder_offer_at = NULL WHERE id = ?', [r.id]);
+        problems.push(`${r.slot_id} (${r.name || 'unnamed'}): offer email failed to send`);
+      }
+    } catch (err) {
+      problems.push(`${r.slot_id} (${r.name || 'unnamed'}): ${err?.message || err}`);
+    }
+  }
+
+  if (problems.length > 0) {
+    await alert(
+      `next-run offers need you (${problems.length})`,
+      `${problems.join('\n')}\n\nSet offer prices / retry from ${SITE}/admin/sponsors?token=...`
+    );
+  }
+  if (sent > 0) {
+    await alert(`next-run offers sent: ${sent}`, `Offers went to ${sent} sponsor(s) for ${startDate}.`);
+  }
+  return sent;
 }
 
 async function robNudges(db, now) {
@@ -314,6 +495,7 @@ async function main() {
   console.log(`sponsor-daily (${DRY ? 'dry' : 'live'}) on ${db.kind}`);
   try {
     await detailsReminders(db, now);
+    await nextRunOffers(db, now);
     await renewReminders(db, now);
     await robNudges(db, now);
     await bookkeeping(db, now);
@@ -324,6 +506,27 @@ async function main() {
 
 loadEnvFile(path.join(root, '.env'));
 rollLog();
+
+// --sample-offer: email a rendered example of the next-run offer template to
+// DIGEST_TEST_EMAIL (no database, no Stripe, no sponsors) and exit. This is
+// how the template gets approved before it can ever reach a real recipient.
+if (process.argv.includes('--sample-offer')) {
+  // Entirely made-up sponsor and numbers: this is a layout proof, not data.
+  const ok = await send(
+    need('DIGEST_TEST_EMAIL'),
+    '[TEST] Acme Notes next month — yours first until the 24th',
+    offerEmailText(
+      { slot_id: 'L9', name: 'Acme Notes' },
+      100000,
+      200000,
+      '2026-10-01',
+      '2026-10-01',
+      'https://buy.stripe.com/EXAMPLE-LINK',
+      `${SITE}/sponsor/stats?t=EXAMPLE-TOKEN`
+    )
+  );
+  process.exit(ok ? 0 : 1);
+}
 
 let locked = false;
 process.on('exit', () => {

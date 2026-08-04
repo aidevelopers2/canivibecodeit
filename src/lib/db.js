@@ -166,12 +166,13 @@ const PURCHASE_FIELDS = [
   'slot_id', 'status', 'stripe_session_id', 'stripe_payment_intent', 'amount_cents',
   'email', 'name', 'tagline', 'url', 'logo_url', 'tint', 'hold_expires_at', 'paid_at',
   'submitted_at', 'approved_at', 'starts_at', 'ends_at', 'reminder_details_at',
-  'reminder_renew_at', 'months',
+  'reminder_renew_at', 'reminder_offer_at', 'months',
 ];
 
 const NUMERIC_COLUMNS = [
   'amount_cents', 'created_at', 'hold_expires_at', 'paid_at', 'submitted_at',
-  'approved_at', 'starts_at', 'ends_at', 'reminder_details_at', 'reminder_renew_at', 'months',
+  'approved_at', 'starts_at', 'ends_at', 'reminder_details_at', 'reminder_renew_at',
+  'reminder_offer_at', 'months',
 ];
 
 // Postgres hands BIGINT back as a string; the rest of the code does date maths.
@@ -212,6 +213,10 @@ async function pgDriver() {
   // What the slot's NEXT run is doing: pending | open | reserved. "Taken" is
   // never stored — it's derived from a future-dated purchase existing.
   await pool.query('ALTER TABLE sponsor_slots ADD COLUMN IF NOT EXISTS next_state TEXT');
+  // The slot's private next-run offer price for its current occupant (cents).
+  await pool.query('ALTER TABLE sponsor_slots ADD COLUMN IF NOT EXISTS renewal_price_cents INTEGER');
+  // When the automated next-run offer email went out for a purchase.
+  await pool.query('ALTER TABLE sponsor_purchases ADD COLUMN IF NOT EXISTS reminder_offer_at BIGINT');
   await pool.query("UPDATE waitlist SET source = 'scanner' WHERE source IS NULL");
   for (const [id, cents] of SLOT_SEED) {
     await pool.query(
@@ -277,10 +282,23 @@ async function pgDriver() {
       return true;
     },
     async sponsorSlots() {
-      const r = await pool.query('SELECT id, price_cents, next_state FROM sponsor_slots ORDER BY id');
+      const r = await pool.query(
+        'SELECT id, price_cents, next_state, renewal_price_cents FROM sponsor_slots ORDER BY id'
+      );
       return r.rows.map((s) => ({
-        id: s.id, price_cents: Number(s.price_cents), next_state: s.next_state ?? null,
+        id: s.id,
+        price_cents: Number(s.price_cents),
+        next_state: s.next_state ?? null,
+        renewal_price_cents: s.renewal_price_cents == null ? null : Number(s.renewal_price_cents),
       }));
+    },
+    async setSlotRenewalPrice(id, cents) {
+      const r = await pool.query('UPDATE sponsor_slots SET renewal_price_cents = $2 WHERE id = $1', [id, cents]);
+      return r.rowCount > 0;
+    },
+    async waitlistEmails(source) {
+      const r = await pool.query('SELECT email FROM waitlist WHERE source = $1 ORDER BY created_at', [source]);
+      return r.rows.map((x) => x.email);
     },
     async setSlotPrice(id, cents) {
       const r = await pool.query('UPDATE sponsor_slots SET price_cents = $2 WHERE id = $1', [id, cents]);
@@ -388,6 +406,18 @@ async function sqliteDriver() {
   } catch (err) {
     if (!/duplicate column/i.test(err.message)) throw err;
   }
+  // The slot's private next-run offer price for its current occupant (cents).
+  try {
+    db.exec('ALTER TABLE sponsor_slots ADD COLUMN renewal_price_cents INTEGER');
+  } catch (err) {
+    if (!/duplicate column/i.test(err.message)) throw err;
+  }
+  // When the automated next-run offer email went out for a purchase.
+  try {
+    db.exec('ALTER TABLE sponsor_purchases ADD COLUMN reminder_offer_at INTEGER');
+  } catch (err) {
+    if (!/duplicate column/i.test(err.message)) throw err;
+  }
   db.exec("UPDATE waitlist SET source = 'scanner' WHERE source IS NULL");
   const seedSlot = db.prepare('INSERT OR IGNORE INTO sponsor_slots (id, price_cents) VALUES (?, ?)');
   for (const [id, cents] of SLOT_SEED) seedSlot.run(id, cents);
@@ -443,7 +473,16 @@ async function sqliteDriver() {
       return true;
     },
     async sponsorSlots() {
-      return db.prepare('SELECT id, price_cents, next_state FROM sponsor_slots ORDER BY id').all();
+      return db
+        .prepare('SELECT id, price_cents, next_state, renewal_price_cents FROM sponsor_slots ORDER BY id')
+        .all();
+    },
+    async setSlotRenewalPrice(id, cents) {
+      return db.prepare('UPDATE sponsor_slots SET renewal_price_cents = ? WHERE id = ?').run(cents, id).changes > 0;
+    },
+    async waitlistEmails(source) {
+      return db.prepare('SELECT email FROM waitlist WHERE source = ? ORDER BY created_at').all(source)
+        .map((x) => x.email);
     },
     async setSlotPrice(id, cents) {
       return db.prepare('UPDATE sponsor_slots SET price_cents = ? WHERE id = ?').run(cents, id).changes > 0;
@@ -561,6 +600,14 @@ export async function setSlotPrice(id, priceCents) {
 
 export async function setSlotNextState(id, state) {
   return (await getDriver()).setSlotNextState(id, state);
+}
+
+export async function setSlotRenewalPrice(id, priceCents) {
+  return (await getDriver()).setSlotRenewalPrice(id, priceCents);
+}
+
+export async function waitlistEmails(source) {
+  return (await getDriver()).waitlistEmails(source);
 }
 
 export async function insertPurchase(purchase) {

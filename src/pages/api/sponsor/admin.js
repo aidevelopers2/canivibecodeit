@@ -1,11 +1,12 @@
 import {
-  activePurchases, purchaseById, setSlotNextState, setSlotPrice, updatePurchase,
+  activePurchases, purchaseById, rateLimit, setSlotNextState, setSlotPrice,
+  setSlotRenewalPrice, updatePurchase, waitlistEmails,
 } from '../../../lib/db.js';
-import { alertRob, esc, sendMail, shell } from '../../../lib/mail.js';
+import { alertRob, esc, sendBatch, sendMail, shell, unsubscribedEmails } from '../../../lib/mail.js';
 import { json, readBody } from '../../../lib/request.js';
 import {
-  cleanText, cleanTint, cleanUrl, clearCache, isAdmin, isLive, LIMITS, RUN_DAYS, RUN_MS,
-  shortDate, siteUrl, SLOT_IDS, SPILL_MS, usd, verifyAction,
+  cleanText, cleanTint, cleanUrl, clearCache, getBoard, isAdmin, isLive, LIMITS, nextRunStart,
+  RUN_DAYS, RUN_MS, shortDate, siteUrl, SLOT_IDS, SPILL_MS, usd, verifyAction,
 } from '../../../lib/sponsors.js';
 import { alreadyRefunded, createPaymentLink, createRefund } from '../../../lib/stripe.js';
 
@@ -60,6 +61,64 @@ export async function POST({ request }) {
     }
     await setSlotPrice(slot, Math.round(dollars * 100));
     return done(`${slot} priced at ${usd(Math.round(dollars * 100))}`);
+  }
+
+  if (action === 'renewal_price') {
+    const slot = String(body.slot ?? '').trim().toUpperCase();
+    const dollars = Number(body.price);
+    if (!SLOT_IDS.includes(slot)) return fail('unknown slot', 400);
+    if (!Number.isFinite(dollars) || dollars < 1 || dollars > 100000) {
+      return fail('bad price', 400);
+    }
+    await setSlotRenewalPrice(slot, Math.round(dollars * 100));
+    return done(`${slot} next-run offer: ${usd(Math.round(dollars * 100))}`);
+  }
+
+  /* One tap, human-triggered, never automatic: tell everyone who asked to be
+     pinged that slots are buyable. Anyone who unsubscribed from the audience is
+     excluded — if that can't be checked, nobody gets mailed. Guarded so a
+     double-tap can't double-mail. */
+  if (action === 'queue_blast') {
+    const board = await getBoard();
+    const nowOpen = board.slots.filter((s) => s.state === 'open');
+    const nextOpen = board.slots.filter(
+      (s) => s.state !== 'open' && s.nextState === 'open' && !s.nextTaken
+    );
+    if (nowOpen.length === 0 && nextOpen.length === 0) {
+      return fail('nothing open to announce', 409);
+    }
+    let recipients;
+    try {
+      const gone = await unsubscribedEmails();
+      recipients = (await waitlistEmails('sponsor')).filter((e) => !gone.has(e.toLowerCase()));
+    } catch (err) {
+      console.error(`queue blast blocked: ${err?.message || err}`);
+      return fail('could not check unsubscribes — nobody mailed', 502);
+    }
+    if (recipients.length === 0) return fail('the queue is empty', 409);
+    if (!(await rateLimit('sponsor-queue-blast', 1, 12 * 60 * 60 * 1000))) {
+      return fail('queue was already emailed in the last 12h', 429);
+    }
+
+    const startLabel = shortDate(nextRunStart());
+    const lines = [
+      ...nowOpen.map((s) => `<li>slot ${esc(s.id)} — ${usd(s.priceCents)}, live as soon as your card is approved</li>`),
+      ...nextOpen.map((s) => `<li>slot ${esc(s.id)} — ${usd(s.priceCents)}, yours from ${esc(startLabel)}</li>`),
+    ].join('');
+    const subject = nowOpen.length > 0
+      ? 'a sponsor slot just opened on canivibecodeit'
+      : `${startLabel.split(' ')[0].toLowerCase()} sponsor slots just opened on canivibecodeit`;
+    const html = shell(
+      `<p>You asked to be pinged when a canivibecodeit sponsor slot opens. Open right now:</p>`
+      + `<ul>${lines}</ul>`
+      + `<p>Fixed slots, one-off 30-day terms, first paid, first placed.</p>`
+      + `<p><a href="${esc(siteUrl('/sponsor'))}">take one → ${esc(siteUrl('/sponsor'))}</a></p>`
+      + `<p style="color:#6e6e67; font-size:12px;">You're getting this because you left your`
+      + ` email on the sponsor page. Reply "stop" and you won't again.</p>`
+    );
+
+    const sent = await sendBatch(recipients.map((to) => ({ to, subject, html })));
+    return done(`queue emailed: ${sent} of ${recipients.length}`);
   }
 
   if (action === 'next_state') {
