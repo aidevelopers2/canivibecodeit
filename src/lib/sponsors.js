@@ -34,6 +34,15 @@ export function nextRunStart(now = Date.now()) {
   return Date.UTC(d.getUTCFullYear(), d.getUTCMonth() + 1, 1);
 }
 
+const FULL_MONTHS = [
+  'january', 'february', 'march', 'april', 'may', 'june',
+  'july', 'august', 'september', 'october', 'november', 'december',
+];
+
+export function nextRunMonthName(now = Date.now()) {
+  return FULL_MONTHS[new Date(nextRunStart(now)).getUTCMonth()];
+}
+
 // Used until a real icon colour is extracted, and when the sponsor's favicon is
 // CORS-tainted so the browser can't sample it.
 export const DEFAULT_TINT = '#33e667';

@@ -1,9 +1,9 @@
 ---
 import SponsorCard from './SponsorCard.astro';
 import { recordImpressions } from '../lib/impressions.js';
-import { getBoard, nextRunStart, shortDate } from '../lib/sponsors.js';
+import { getBoard, nextRunMonthName } from '../lib/sponsors.js';
 
-const nextMonthLabel = shortDate(nextRunStart()).split(' ')[0].toLowerCase();
+const nextMonthLabel = nextRunMonthName();
 
 const board = await getBoard();
 // This component renders exactly once per page, which makes it the impression
