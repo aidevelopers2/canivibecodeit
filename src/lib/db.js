@@ -176,6 +176,17 @@ function updateParts(fields) {
   return keys;
 }
 
+// Same rule for lookups: purchaseBy interpolates the column name, so it only
+// accepts the three identifiers the exported helpers actually use.
+const PURCHASE_LOOKUP_COLS = ['id', 'stripe_session_id', 'details_token'];
+
+function lookupCol(column) {
+  if (!PURCHASE_LOOKUP_COLS.includes(column)) {
+    throw new Error(`purchaseBy: invalid column: ${column}`);
+  }
+  return column;
+}
+
 let driver;
 
 async function pgDriver() {
@@ -274,7 +285,7 @@ async function pgDriver() {
       return r.rows.map(purchaseRow);
     },
     async purchaseBy(column, value) {
-      const r = await pool.query(`SELECT * FROM sponsor_purchases WHERE ${column} = $1`, [value]);
+      const r = await pool.query(`SELECT * FROM sponsor_purchases WHERE ${lookupCol(column)} = $1`, [value]);
       return purchaseRow(r.rows[0]);
     },
     async updatePurchase(id, fields, whereStatusIn) {
@@ -408,7 +419,7 @@ async function sqliteDriver() {
         .map(purchaseRow);
     },
     async purchaseBy(column, value) {
-      return purchaseRow(db.prepare(`SELECT * FROM sponsor_purchases WHERE ${column} = ?`).get(value));
+      return purchaseRow(db.prepare(`SELECT * FROM sponsor_purchases WHERE ${lookupCol(column)} = ?`).get(value));
     },
     async updatePurchase(id, fields, whereStatusIn) {
       const keys = updateParts(fields);
