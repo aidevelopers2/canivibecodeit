@@ -2156,8 +2156,15 @@ button.sp-banner {
 @media (min-width: 1280px) {
   /* Full-bleed sections must respect the rails too: the ticker and the hero's
      chip row otherwise run underneath the cards. */
-  .ticker {
+  .ticker,
+  .digest-card.wrap {
     max-width: min(1120px, calc(100vw - 456px));
+  }
+
+  /* The footer's inner row is wider (1280px) than the content column, so it
+     needs its own cap to stay clear of the rails. */
+  .site-footer .inner {
+    max-width: min(1280px, calc(100vw - 456px));
   }
 
   .hero {
