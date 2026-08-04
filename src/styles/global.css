@@ -2156,15 +2156,19 @@ button.sp-banner {
 @media (min-width: 1280px) {
   /* Full-bleed sections must respect the rails too: the ticker and the hero's
      chip row otherwise run underneath the cards. */
-  .ticker,
-  .digest-card.wrap {
+  .ticker {
     max-width: min(1120px, calc(100vw - 456px));
   }
 
-  /* The footer's inner row is wider (1280px) than the content column, so it
-     needs its own cap to stay clear of the rails. */
+  /* The digest card's border and the footer row are visible edges, so unlike
+     the ticker they get the same 20px-per-side breathing room the content
+     column's padding gives the death list. */
+  .digest-card.wrap {
+    max-width: min(1120px, calc(100vw - 496px));
+  }
+
   .site-footer .inner {
-    max-width: min(1280px, calc(100vw - 456px));
+    max-width: min(1280px, calc(100vw - 496px));
   }
 
   .hero {
