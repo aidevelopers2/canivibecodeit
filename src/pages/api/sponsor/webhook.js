@@ -3,7 +3,7 @@ import {
   activePurchases, insertPurchase, purchaseById, purchaseBySession, setSlotNextState,
   updatePurchase,
 } from '../../../lib/db.js';
-import { alertRob, button, esc, sendMail, shell } from '../../../lib/mail.js';
+import { alertRob, brandShell, button, esc, sendMail, shell } from '../../../lib/mail.js';
 import { json } from '../../../lib/request.js';
 import {
   blocksSlot, clearCache, isLive, newToken, RUN_MS, shortDate, siteUrl, SLOT_IDS, SPILL_MS, usd,
@@ -146,7 +146,7 @@ export async function reconcileLinkSession(session) {
     await sendMail({
       to: toEmail,
       subject: `locked in — ${purchase.slot_id} is yours ${shortDate(startsAt)} to ${shortDate(endsAt)}`,
-      html: shell(
+      html: brandShell(
         `<p>Payment received. <b>${esc(incumbent.name)}</b> keeps slot ${esc(purchase.slot_id)}`
         + ` from ${esc(shortDate(startsAt))} to ${esc(shortDate(endsAt))} — same card, same spot,`
         + ` nothing to do.</p>`
@@ -162,7 +162,7 @@ export async function reconcileLinkSession(session) {
     await sendMail({
       to: toEmail,
       subject: `you're in — slot ${purchase.slot_id} just needs your card details`,
-      html: shell(
+      html: brandShell(
         `<p>Payment received for slot ${esc(purchase.slot_id)}, running`
         + ` ${esc(shortDate(startsAt))} to ${esc(shortDate(endsAt))}. One step left: tell us`
         + ` what the card should say.</p>`
@@ -276,7 +276,7 @@ export async function promoteFromSession(session, { notify = false } = {}) {
       await sendMail({
         to: email,
         subject: `you're in — slot ${purchase.slot_id} just needs your card details`,
-        html: shell(
+        html: brandShell(
           `<p>Payment received for slot ${esc(purchase.slot_id)}. One step left: tell us what`
           + ` the card should say.</p>`
           + `<p>${button(detailsLink(purchase), 'finish your card')}</p>`
@@ -298,7 +298,7 @@ export async function promoteFromSession(session, { notify = false } = {}) {
     await sendMail({
       to: email,
       subject: 'your sponsor slot was taken first — refunded',
-      html: shell(
+      html: brandShell(
         `<p>Slot ${esc(purchase.slot_id)} was bought by someone else before this payment`
         + ` landed, so your payment has been refunded in full. It's back on your card in`
         + ` 5–10 days.</p>`

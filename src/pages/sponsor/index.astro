@@ -18,17 +18,9 @@ const title = 'Sponsor canivibecodeit — a few slots, one payment, no sales cal
 const description =
   'Sponsor slots on the death list. Buy 30 days in one click, no contract, no account manager. Sponsorship never touches a verdict.';
 
-// What's on the public board for September.
-const SEPT_RUNGS = [
-  { label: 'standard · 4 slots', price: '$2,500', note: 'lower rail positions', reserved: false },
-  { label: 'mid board · 4 slots', price: '$2,750', note: 'middle of each rail', reserved: false },
-  { label: 'top of rail · 2 slots', price: '$2,999', note: 'reserved until aug 18', reserved: true },
-];
-
 const SEPT_TIMELINE = [
-  { date: 'aug 10', note: 'first refusal ends for current sponsors', live: true },
-  { date: 'aug 11', note: 'unrenewed slots open — first paid, first placed', live: false },
-  { date: 'aug 18', note: 'top-of-rail reservation releases', live: false },
+  { date: 'aug 21', note: 'first refusal ends for current sponsors', live: true },
+  { date: 'aug 22', note: 'unrenewed slots open — first paid, first placed', live: false },
   { date: 'sep 1', note: 'board goes live', live: false },
 ];
 
@@ -36,14 +28,23 @@ const testimonials = [
   {
     quote:
       '100+ visitors within hours of going live. cheaper than ads.',
-    who: 'Pierre · co-founder, Gojiberry AI',
+    who: 'Pierre-Eliott · co-founder, Gojiberry AI',
+    img: '/pfp/pierre-eliott.jpg',
   },
   {
     quote:
-      'in 24 hours: 200+ visitors, 5 trials — we pay $90 for a trial on Meta ads. the traffic is highly qualified, mostly from the US.',
+      'in 24 hours: 200+ visitors, 5 trials. we pay $90 for a trial on Meta ads. the traffic is highly qualified, mostly from the US.',
     who: 'Dylan · co-founder, Gojiberry AI',
+    img: '/pfp/dylan.jpg',
   },
 ];
+
+// "Taken" = not buyable right now: live runs whose next month is still the
+// incumbent's to refuse count as held.
+const buyableCount = board.slots.filter(
+  (s) => s.state === 'open' || (s.state !== 'open' && s.nextState === 'open' && !s.nextTaken)
+).length;
+const takenCount = board.slots.length - buyableCount;
 
 const steps = [
   {
@@ -66,20 +67,15 @@ const steps = [
     <section class="sp-hero">
       <h1>Sponsor canivibecodeit.</h1>
       <p class="sub">
-        {board.slots.length} slots. People land here to cancel something — which makes it a
+        Ten fixed slots. People land here to cancel something — which makes it a
         strange and very good place to be the thing they keep.
       </p>
-      <div class="sp-stats">
-        <span><b>60,000+</b> views in the launch surge</span>
-        <span><b>15,000+</b> unique visitors in 72 hours</span>
-        <span><b>{apps.length}</b> apps on the list</span>
-        <span><b>devs & founders</b> — people who buy tools</span>
-        <span><b>{board.openCount}/{board.slots.length}</b> slots open</span>
+      <div class="sp-statband">
+        <div class="sp-stat"><b>300,000+</b><span>views a month, current pace</span></div>
+        <div class="sp-stat"><b>{apps.length}</b><span>apps on the list</span></div>
+        <div class="sp-stat"><b>devs &amp; founders</b><span>who are cutting SaaS bills</span></div>
+        <div class="sp-stat green"><b>{takenCount}/{board.slots.length}</b><span>{NEXT_MONTH} slots taken</span></div>
       </div>
-      <p class="note sp-stats-note">
-        conservative reconstruction — our tracker dropped mid-surge, so the public
-        dashboard undercounts the launch. what it caught since: still climbing.
-      </p>
     </section>
 
     {notice && <p class="sp-notice">{notice}</p>}
@@ -89,16 +85,11 @@ const steps = [
         <h2>September.</h2>
         <span class="note">10 fixed slots. yours is yours — no rotation, no sharing.</span>
       </div>
-      <div class="sp-sept-ladder">
-        {
-          SEPT_RUNGS.map((r) => (
-            <div class="sp-sept-rung">
-              <span class="sp-sept-label">{r.label}</span>
-              <span class="sp-sept-price">{r.price}</span>
-              <span class={`sp-sept-note ${r.reserved ? 'reserved' : ''}`}>{r.note}</span>
-            </div>
-          ))
-        }
+      <div class="sp-flat">
+        <span class="sp-flat-price">$2,500</span>
+        <span class="sp-flat-note">
+          one price, any open slot, 30 days. what you pay never changes mid-run.
+        </span>
       </div>
       <div class="sp-sept-timeline" role="list" aria-label="September timeline">
         {
@@ -116,27 +107,20 @@ const steps = [
           testimonials.map((t) => (
             <figure class="sp-quote">
               <blockquote>“{t.quote}”</blockquote>
-              <figcaption>{t.who}</figcaption>
+              <figcaption>
+                <img src={t.img} alt="" width="36" height="36" loading="lazy" />
+                <span>{t.who}</span>
+              </figcaption>
             </figure>
           ))
         }
-      </div>
-      <div class="sp-sept-policy">
-        <span>
-          Prices float with traffic. What you pay is fixed for the term you bought — never
-          touched mid-run.
-        </span>
-        <span class="sp-sept-cta">
-          <a href="mailto:hello@canivibecodeit.com?subject=September%20slot">want in early? hello@canivibecodeit.com →</a>
-          <a href="#notify">or get the opening ping</a>
-        </span>
       </div>
     </section>
 
     <section class="sp-board" id="slots">
       <div class="list-head">
         <h2>The slots</h2>
-        <span class="note">prices differ per slot · they change between months</span>
+        <span class="note">$2,500 flat · your rate never rises while you stay</span>
       </div>
       <div class="sp-grid">
         {
@@ -253,8 +237,9 @@ const steps = [
       <p>
         What you're buying is placement bought once — {RUN_DAYS} days in one slot (or {RUN_DAYS * QUARTER_MONTHS}
         days on the big slots, price locked, still one payment), starting when the placement is approved. It is not a subscription and it does not
-        renew itself; when it ends, it ends, and you're welcome to buy it again at whatever
-        the price is then. Prices are set per slot and change between months.
+        renew itself; when it ends, it ends, and you're welcome to buy it again. Price
+        changes only ever apply to new sponsors — the rate you start at is yours for as
+        long as you keep renewing.
         Sponsorship never touches a verdict, a ranking, or a prompt — not yours, not your
         competitor's, and the answer to "can I vibecode it" stays whatever it was.
         Every placement is approved by hand, so anything we won't run gets a full refund,
@@ -285,61 +270,29 @@ const steps = [
     letter-spacing: -0.02em;
   }
 
-  .sp-sept-ladder {
+  .sp-flat {
     display: flex;
+    align-items: baseline;
+    gap: 28px;
     margin-top: 24px;
-    padding: 32px 0;
+    padding: 30px 0;
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
+    flex-wrap: wrap;
   }
 
-  .sp-sept-rung {
-    display: flex;
-    flex-direction: column;
-    gap: 9px;
-    flex: 1;
-    padding: 0 36px;
-    border-left: 1px solid var(--border);
-    min-width: 0;
-  }
-
-  .sp-sept-rung:first-child {
-    padding-left: 0;
-    border-left: 0;
-  }
-
-  .sp-sept-rung:last-child {
-    padding-right: 0;
-  }
-
-  .sp-sept-label {
-    font-family: var(--font-mono);
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--muted);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
-  .sp-sept-price {
+  .sp-flat-price {
     font-family: var(--font-display);
-    font-size: clamp(30px, 3.6vw, 44px);
-    font-weight: 600;
+    font-size: clamp(40px, 4.5vw, 56px);
+    font-weight: 700;
     letter-spacing: -0.02em;
     font-variant-numeric: tabular-nums;
   }
 
-  .sp-sept-note {
+  .sp-flat-note {
     font-family: var(--font-mono);
-    font-size: 12px;
+    font-size: 13px;
     color: var(--muted);
-  }
-
-  .sp-sept-note.reserved {
-    color: var(--primary);
   }
 
   .sp-sept-timeline {
@@ -427,40 +380,19 @@ const steps = [
   }
 
   .sp-quote figcaption {
+    display: flex;
+    align-items: center;
+    gap: 12px;
     font-family: var(--font-mono);
     font-size: 12px;
     color: var(--muted);
   }
 
-  .sp-sept-policy {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    gap: 24px;
-    margin-top: 44px;
-    padding-top: 24px;
-    border-top: 1px solid var(--border);
-    font-family: var(--font-mono);
-    font-size: 13px;
-    color: var(--muted);
-    flex-wrap: wrap;
-  }
-
-  .sp-sept-cta {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    text-align: right;
+  .sp-quote figcaption img {
+    width: 36px;
+    height: 36px;
+    border-radius: 100px;
     flex-shrink: 0;
-  }
-
-  .sp-sept-cta a {
-    color: var(--primary);
-    white-space: nowrap;
-  }
-
-  .sp-sept-cta a + a {
-    color: var(--muted);
   }
 
   /* Per-slot September line on the board cards. */
@@ -504,21 +436,10 @@ const steps = [
   }
 
   @media (max-width: 900px) {
-    .sp-sept-ladder {
+    .sp-flat {
       flex-direction: column;
-      gap: 24px;
+      gap: 10px;
       padding: 24px 0;
-    }
-
-    .sp-sept-rung,
-    .sp-sept-rung:first-child {
-      padding: 0;
-      border-left: 0;
-    }
-
-    .sp-sept-rung + .sp-sept-rung {
-      padding-top: 24px;
-      border-top: 1px solid var(--border);
     }
 
     .sp-sept-timeline {
@@ -556,13 +477,6 @@ const steps = [
       border-top: 1px solid var(--border);
       padding-left: 0;
       padding-top: 28px;
-    }
-
-    .sp-sept-policy,
-    .sp-sept-cta {
-      flex-direction: column;
-      text-align: left;
-      align-items: flex-start;
     }
   }
 </style>

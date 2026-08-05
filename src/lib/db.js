@@ -292,10 +292,6 @@ async function pgDriver() {
         renewal_price_cents: s.renewal_price_cents == null ? null : Number(s.renewal_price_cents),
       }));
     },
-    async setSlotRenewalPrice(id, cents) {
-      const r = await pool.query('UPDATE sponsor_slots SET renewal_price_cents = $2 WHERE id = $1', [id, cents]);
-      return r.rowCount > 0;
-    },
     async waitlistEmails(source) {
       const r = await pool.query('SELECT email FROM waitlist WHERE source = $1 ORDER BY created_at', [source]);
       return r.rows.map((x) => x.email);
@@ -477,9 +473,6 @@ async function sqliteDriver() {
         .prepare('SELECT id, price_cents, next_state, renewal_price_cents FROM sponsor_slots ORDER BY id')
         .all();
     },
-    async setSlotRenewalPrice(id, cents) {
-      return db.prepare('UPDATE sponsor_slots SET renewal_price_cents = ? WHERE id = ?').run(cents, id).changes > 0;
-    },
     async waitlistEmails(source) {
       return db.prepare('SELECT email FROM waitlist WHERE source = ? ORDER BY created_at').all(source)
         .map((x) => x.email);
@@ -600,10 +593,6 @@ export async function setSlotPrice(id, priceCents) {
 
 export async function setSlotNextState(id, state) {
   return (await getDriver()).setSlotNextState(id, state);
-}
-
-export async function setSlotRenewalPrice(id, priceCents) {
-  return (await getDriver()).setSlotRenewalPrice(id, priceCents);
 }
 
 export async function waitlistEmails(source) {

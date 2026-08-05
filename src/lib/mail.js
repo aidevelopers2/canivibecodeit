@@ -104,6 +104,44 @@ export function shell(body) {
   return `<div style="${MONO} font-size:14px; line-height:1.6; color:#171a17; max-width:520px;">${body}</div>`;
 }
 
+/* Sponsor-facing mail wears the same card as the newsletter: grey page, white
+   card, the logo lockup, and a footer naming who answers replies. Internal
+   alerts to Rob keep the bare shell above. */
+export function brandShell(body) {
+  return `<!doctype html>
+<html>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"></head>
+<body style="margin:0; padding:0; background-color:#f2f2f0;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#f2f2f0;">
+    <tr>
+      <td align="center" style="padding:32px 16px;">
+        <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px; width:100%; background-color:#ffffff; border:1px solid #e0e0db; border-radius:8px;">
+          <tr>
+            <td style="padding:40px 48px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td align="center" style="padding:4px 0 30px 0;">
+                    <span style="display:inline-block; vertical-align:middle; width:30px; height:30px; line-height:28px; border:3px solid #0e9c47; border-radius:8px; text-align:center; ${MONO} font-size:18px; font-weight:700; color:#0e9c47;">?|</span>
+                    <span style="display:inline-block; vertical-align:middle; margin-left:10px; ${MONO} font-size:17px; font-weight:500; color:#111111;">can<span style="color:#0e9c47;">i</span>vibecode<span style="color:#0e9c47;">it</span></span>
+                  </td>
+                </tr>
+              </table>
+              <div style="${MONO} font-size:14px; line-height:1.6; color:#171a17;">${body}</div>
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-top:1px solid #e0e0db; margin-top:32px;">
+                <tr>
+                  <td align="center" style="padding:18px 0 0 0; ${MONO} font-size:11.5px; line-height:18px; color:#6e6e67;">reply to this email and you'll reach Rob, not a bot.</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>`;
+}
+
 export function button(href, label) {
   return `<a href="${esc(href)}" style="${MONO} display:inline-block; background:#0e9c47;`
     + ` color:#ffffff; font-size:14px; font-weight:700; text-decoration:none;`

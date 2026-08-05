@@ -1,8 +1,8 @@
 import {
   activePurchases, purchaseById, rateLimit, setSlotNextState, setSlotPrice,
-  setSlotRenewalPrice, updatePurchase, waitlistEmails,
+  updatePurchase, waitlistEmails,
 } from '../../../lib/db.js';
-import { alertRob, esc, sendBatch, sendMail, shell, unsubscribedEmails } from '../../../lib/mail.js';
+import { alertRob, brandShell, esc, sendBatch, sendMail, shell, unsubscribedEmails } from '../../../lib/mail.js';
 import { json, readBody } from '../../../lib/request.js';
 import {
   cleanText, cleanTint, cleanUrl, clearCache, getBoard, isAdmin, isLive, LIMITS, nextRunStart,
@@ -63,17 +63,6 @@ export async function POST({ request }) {
     return done(`${slot} priced at ${usd(Math.round(dollars * 100))}`);
   }
 
-  if (action === 'renewal_price') {
-    const slot = String(body.slot ?? '').trim().toUpperCase();
-    const dollars = Number(body.price);
-    if (!SLOT_IDS.includes(slot)) return fail('unknown slot', 400);
-    if (!Number.isFinite(dollars) || dollars < 1 || dollars > 100000) {
-      return fail('bad price', 400);
-    }
-    await setSlotRenewalPrice(slot, Math.round(dollars * 100));
-    return done(`${slot} next-run offer: ${usd(Math.round(dollars * 100))}`);
-  }
-
   /* One tap, human-triggered, never automatic: tell everyone who asked to be
      pinged that slots are buyable. Anyone who unsubscribed from the audience is
      excluded — if that can't be checked, nobody gets mailed. Guarded so a
@@ -108,7 +97,7 @@ export async function POST({ request }) {
     const subject = nowOpen.length > 0
       ? 'a sponsor slot just opened on canivibecodeit'
       : `${startLabel.split(' ')[0].toLowerCase()} sponsor slots just opened on canivibecodeit`;
-    const html = shell(
+    const html = brandShell(
       `<p>You asked to be pinged when a canivibecodeit sponsor slot opens. Open right now:</p>`
       + `<ul>${lines}</ul>`
       + `<p>Fixed slots, one-off 30-day terms, first paid, first placed.</p>`
@@ -204,14 +193,13 @@ export async function POST({ request }) {
       subject: scheduled
         ? `approved — you're live from ${shortDate(startsAt)}`
         : `you're live on canivibecodeit until ${shortDate(endsAt)}`,
-      html: shell(
+      html: brandShell(
         `<p><b>${esc(purchase.name)}</b> is approved for slot ${esc(purchase.slot_id)}`
         + (scheduled
           ? ` and goes up ${esc(shortDate(startsAt))}, running until ${esc(shortDate(endsAt))}.</p>`
           : ` right now, and runs until ${esc(shortDate(endsAt))} (${RUN_DAYS * (Number(purchase.months) || 1)} days).</p>`)
         + `<p>Your link carries campaign tags, so the traffic shows up in your analytics as`
         + ` canivibecodeit / referral.</p>`
-        + `<p>We'll email you a few days before it ends. Replying to this email reaches a human.</p>`
       ),
     });
     return done(`${purchase.slot_id} live ${scheduled ? `${shortDate(startsAt)} to` : 'until'} ${shortDate(endsAt)}`);
@@ -252,7 +240,7 @@ export async function POST({ request }) {
     await sendMail({
       to: purchase.email,
       subject: 'your canivibecodeit sponsor slot — refunded',
-      html: shell(
+      html: brandShell(
         `<p>We didn't run this placement, and your payment has been refunded in full.`
         + ` It lands back on your card in 5–10 days.</p>`
         + `<p>Reply to this email if you want to know why, or want another go at it.</p>`

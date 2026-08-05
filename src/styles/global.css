@@ -2280,32 +2280,66 @@ button.sp-banner {
 }
 
 .sp-hero {
-  padding-top: 54px;
+  padding-top: 64px;
+  text-align: center;
 }
 
 .sp-hero h1 {
-  font-size: clamp(32px, 6vw, 52px);
+  font-size: clamp(32px, 6vw, 56px);
 }
 
 .sp-hero .sub {
-  padding-top: 16px;
+  padding-top: 18px;
   max-width: 62ch;
+  margin: 0 auto;
   font-size: 15px;
   line-height: 1.7;
   color: var(--muted);
 }
 
-.sp-stats {
+.sp-statband {
   display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 24px 88px;
   flex-wrap: wrap;
-  gap: 8px 24px;
-  padding-top: 24px;
-  font-size: 13px;
+  padding: 52px 0 16px 0;
+}
+
+.sp-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.sp-stat b {
+  font-family: var(--font-display);
+  font-size: clamp(30px, 3.4vw, 42px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: var(--fg);
+}
+
+.sp-stat.green b {
+  color: var(--primary);
+}
+
+.sp-stat span {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
   color: var(--muted);
 }
 
-.sp-stats b {
-  color: var(--fg);
+@media (max-width: 700px) {
+  .sp-statband {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px 16px;
+  }
 }
 
 .sp-notice {

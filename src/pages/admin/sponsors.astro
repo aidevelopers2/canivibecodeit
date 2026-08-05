@@ -98,22 +98,6 @@ const ACTIONS = {
               />
               <button class="btn ghost" type="submit">set price</button>
             </form>
-            <form method="post" action="/api/sponsor/admin">
-              <input type="hidden" name="token" value={token} />
-              <input type="hidden" name="return_to" value={returnTo} />
-              <input type="hidden" name="action" value="renewal_price" />
-              <input type="hidden" name="slot" value={slot.id} />
-              <input
-                type="number"
-                name="price"
-                min="1"
-                step="1"
-                value={slot.renewalPriceCents ? Math.round(slot.renewalPriceCents / 100) : ''}
-                placeholder="offer $"
-                aria-label={`Next-run offer price for slot ${slot.id} in dollars`}
-              />
-              <button class="btn ghost" type="submit">set offer</button>
-            </form>
             <span class="microlabel">next run: {slot.nextTaken ? 'taken' : slot.nextState}</span>
             {!slot.nextTaken && (
               <div class="admin-actions">
