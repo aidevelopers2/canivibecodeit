@@ -2311,6 +2311,8 @@ button.sp-banner {
   flex-direction: column;
   align-items: center;
   gap: 8px;
+  animation: pop-in 0.5s var(--ease-snap) both;
+  animation-delay: calc(var(--i, 0) * 80ms);
 }
 
 .sp-stat b {
@@ -2373,10 +2375,22 @@ button.sp-banner {
   border-radius: 10px;
   background: var(--surface);
   padding: 16px 18px;
+  transition: border-color 0.15s ease, background-color 0.15s ease,
+    transform 0.15s var(--ease-out);
+}
+
+.sp-slot:hover {
+  border-color: var(--muted);
+  transform: translateY(-2px);
 }
 
 .sp-slot.open {
   border-color: var(--primary-dim);
+}
+
+.sp-slot.open:hover,
+.sp-slot.sept-open:hover {
+  border-color: var(--primary);
 }
 
 .sp-slot-price {

@@ -71,10 +71,10 @@ const steps = [
         strange and very good place to be the thing they keep.
       </p>
       <div class="sp-statband">
-        <div class="sp-stat"><b>300,000+</b><span>views a month, current pace</span></div>
-        <div class="sp-stat"><b>{apps.length}</b><span>apps on the list</span></div>
-        <div class="sp-stat"><b>devs &amp; founders</b><span>who are cutting SaaS bills</span></div>
-        <div class="sp-stat green"><b>{takenCount}/{board.slots.length}</b><span>{NEXT_MONTH} slots taken</span></div>
+        <div class="sp-stat" style="--i: 0"><b>300,000+</b><span>views a month, current pace</span></div>
+        <div class="sp-stat" style="--i: 1"><b>{apps.length}</b><span>apps on the list</span></div>
+        <div class="sp-stat" style="--i: 2"><b>devs &amp; founders</b><span>who are cutting SaaS bills</span></div>
+        <div class="sp-stat green" style="--i: 3"><b>{takenCount}/{board.slots.length}</b><span>{NEXT_MONTH} slots taken</span></div>
       </div>
     </section>
 
@@ -332,6 +332,13 @@ const steps = [
 
   .sp-sept-dot.live {
     background: var(--primary);
+    animation: sp-dot-pulse 2s ease infinite;
+  }
+
+  @keyframes sp-dot-pulse {
+    50% {
+      opacity: 0.3;
+    }
   }
 
   .sp-sept-date {
@@ -393,6 +400,11 @@ const steps = [
     height: 36px;
     border-radius: 100px;
     flex-shrink: 0;
+    transition: transform 0.2s var(--ease-snap);
+  }
+
+  .sp-quote:hover figcaption img {
+    transform: scale(1.08);
   }
 
   /* Per-slot September line on the board cards. */
@@ -416,6 +428,7 @@ const steps = [
   }
 
   .sp-slot :global(.sn.open) {
+    display: inline-block;
     font: inherit;
     letter-spacing: inherit;
     background: none;
@@ -425,6 +438,15 @@ const steps = [
     cursor: pointer;
     color: var(--primary);
     text-decoration: none;
+    transition: transform 0.12s var(--ease-snap);
+  }
+
+  .sp-slot :global(.sn.open:hover) {
+    transform: translateX(2px);
+  }
+
+  .sp-slot :global(.sn.open:active) {
+    transform: scale(0.97);
   }
 
   .sp-slot :global(.sn.deciding) {
