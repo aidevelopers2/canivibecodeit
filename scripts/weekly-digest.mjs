@@ -635,6 +635,29 @@ async function resendGet(pathname) {
   return json;
 }
 
+/* Resend refuses the whole broadcast (HTTP 422) while any RFC 2606 reserved
+   address sits in the audience, so sweep them out before every send. The signup
+   endpoint blocks these too; this covers dashboard imports and older rows. */
+async function sweepFakeContacts() {
+  const aud = need('RESEND_AUDIENCE_ID');
+  const body = await resendGet(`/audiences/${aud}/contacts`);
+  const fakes = (body?.data ?? []).filter((c) => {
+    const domain = String(c.email || '').toLowerCase().split('@').pop();
+    return ['example.com', 'example.org', 'example.net', 'example.edu'].includes(domain)
+      || ['.test', '.invalid', '.example', '.localhost'].some((t) => domain.endsWith(t));
+  });
+  for (const c of fakes) {
+    const res = await fetch(`https://api.resend.com/audiences/${aud}/contacts/${c.id}`, {
+      method: 'DELETE',
+      headers: { Authorization: `Bearer ${need('RESEND_API_KEY')}` },
+      signal: AbortSignal.timeout(60000),
+    });
+    if (!res.ok) throw new Error(`could not delete fake contact ${c.email}: HTTP ${res.status}`);
+    console.log(`removed fake contact ${c.email} from the audience`);
+    await new Promise((r) => setTimeout(r, 650));
+  }
+}
+
 async function alert(subject, text) {
   const to = process.env.DIGEST_ALERT_EMAIL;
   if (!to || !process.env.RESEND_API_KEY) return;
@@ -845,6 +868,7 @@ async function main() {
   }
 
   if (MODE === 'send') {
+    await sweepFakeContacts();
     const created = await resend('/broadcasts', {
       audience_id: need('RESEND_AUDIENCE_ID'),
       from: FROM,
