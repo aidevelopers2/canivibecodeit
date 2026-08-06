@@ -56,6 +56,24 @@
       "desc": "Encrypted backup client for local and cloud targets."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Duplicati",
+      "url": "https://duplicati.com/",
+      "desc": "Backs up endpoints one at a time; it does not provide IDrive’s sync and business control plane."
+    },
+    {
+      "name": "Nextcloud Files",
+      "url": "https://nextcloud.com/files/",
+      "desc": "A sync server, not multi-device endpoint backup with snapshots and business protection."
+    },
+    {
+      "name": "Syncthing",
+      "url": "https://syncthing.net/",
+      "desc": "Replicates files and can keep versions; it is not backup administration or business data protection."
+    }
+  ],
   "relatedSlugs": [
     "arq-premium",
     "malwarebytes",

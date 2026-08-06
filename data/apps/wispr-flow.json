@@ -51,5 +51,146 @@
       "desc": "open-source macOS dictation app"
     }
   ],
+  "alternatives": [
+    {
+      "name": "FluidVoice",
+      "url": "https://altic.dev/fluid",
+      "type": "open-source",
+      "repo": "https://github.com/altic-dev/FluidVoice",
+      "platforms": [
+        "macos"
+      ],
+      "desc": "Local Mac dictation with on-device cleanup and no weekly word allowance.",
+      "stars": 9400,
+      "lastCommit": "2026-07",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Handy",
+      "url": "https://handy.computer/",
+      "type": "open-source",
+      "repo": "https://github.com/cjpais/Handy",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "The literal replacement: press, record, transcribe locally, paste.",
+      "stars": 28900,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Muesli",
+      "url": "https://muesli.works/",
+      "type": "open-source",
+      "repo": "https://github.com/Muesli-HQ/muesli",
+      "platforms": [
+        "macos"
+      ],
+      "desc": "A very fast local hold-to-talk loop on Apple Silicon, with optional cleanup and no account.",
+      "stars": 890,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "OpenWhispr",
+      "url": "https://openwhispr.com/",
+      "type": "open-source",
+      "repo": "https://github.com/OpenWhispr/openwhispr",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "Hotkey, local model, cleaned text at the cursor, plus searchable history and meeting capture.",
+      "stars": 5223,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Spokenly",
+      "url": "https://spokenly.app/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos",
+        "windows",
+        "linux",
+        "ios"
+      ],
+      "desc": "Unlimited offline dictation on Mac, Windows, Linux and iPhone; managed cloud is optional.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "TypeNo",
+      "url": "https://typeno.com/",
+      "type": "open-source",
+      "repo": "https://github.com/marswaveai/TypeNo",
+      "platforms": [
+        "macos"
+      ],
+      "desc": "A deliberately tiny Mac app for hotkey, speech, transcription and paste.",
+      "stars": 883,
+      "lastCommit": "2026-05",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Vocalinux",
+      "url": "https://vocalinux.com/",
+      "type": "open-source",
+      "repo": "https://github.com/VocaHQ/vocalinux",
+      "platforms": [
+        "linux"
+      ],
+      "desc": "Linux finally gets hold-to-talk dictation with an AppImage, Wayland support and no cloud alibi.",
+      "stars": 715,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Voquill",
+      "url": "https://voquill.com/dictation/",
+      "type": "open-source",
+      "repo": "https://github.com/voquill/voquill",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux",
+        "ios"
+      ],
+      "desc": "Wispr Flow without the meter: hotkey, local transcription, cleanup, glossary and paste.",
+      "stars": 997,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Aiko",
+      "url": "https://sindresorhus.com/aiko",
+      "desc": "Still appears in old free-app lists; the current app is paid and the download is a trial."
+    },
+    {
+      "name": "FreeFlow",
+      "url": "https://freeflow.zachlatta.com/",
+      "desc": "The app is free, but the normal path still depends on a third-party API key; fully local means running your own model server."
+    },
+    {
+      "name": "VoiceInk",
+      "url": "https://tryvoiceink.com/",
+      "desc": "Open-source code, paid official build; a non-builder does not get the app for free."
+    }
+  ],
   "prompt": "Build me a system-wide AI dictation tool like Wispr Flow for macOS. Requirements:\n\n- A background app with a global hotkey (hold-to-talk fn key or a chosen shortcut).\n  While held: record the mic. On release: transcribe and paste.\n- Transcribe with whisper.cpp locally (small or medium model), or the Groq/OpenAI\n  Whisper API if a key exists in .env · pick per a config flag.\n- Pipe the raw transcript through an LLM (key in .env) with a short prompt that\n  removes filler words, fixes punctuation, and matches casing to dictation style.\n- Insert the result at the current cursor position in whatever app has focus\n  (simulate keystrokes or use the pasteboard + Cmd-V approach, restoring the\n  previous clipboard afterwards).\n- Show a tiny floating pill while recording so I know it's live.\n- Menu bar toggle for on/off, launch at login, and a settings file for the hotkey.\n- No accounts, no telemetry, works offline with the local model.\n- README with the Accessibility/Input Monitoring permissions I need to grant."
 }

@@ -56,6 +56,25 @@
       "desc": "Self-hosted social media management software."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Plann Free",
+      "url": "https://www.plannthat.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "One Instagram account gets thirty posts, five videos, AI captions, hashtag help and thin analytics each month.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "hypefury",
     "publer",

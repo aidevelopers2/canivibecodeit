@@ -52,6 +52,14 @@
       "desc": "Open-source expert-system platform for guided interviews and document assembly."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Termly Basic",
+      "url": "https://termly.io/pricing/",
+      "desc": "The free plan allows one basic policy with no policy edits, while exportable consent logs require payment; it does not replace ongoing policy and consent recordkeeping."
+    }
+  ],
   "relatedSlugs": [
     "legalzoom",
     "rocket-lawyer",

@@ -51,6 +51,24 @@
       "desc": "Active open-source cross-platform text expansion utility with system integration."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Hammerspoon",
+      "url": "https://www.hammerspoon.org/",
+      "desc": "Powerful enough, but it does nothing until you write Lua; that is a builder's toolkit, not a non-builder replacement."
+    },
+    {
+      "name": "Karabiner-Elements",
+      "url": "https://karabiner-elements.pqrs.org/",
+      "desc": "Excellent keyboard remapper; trackpad and mouse gesture automation are somebody else's problem."
+    },
+    {
+      "name": "Mac Mouse Fix",
+      "url": "https://macmousefix.com/",
+      "desc": "The current version becomes paid after 30 days; the permanently free branch is the old one."
+    }
+  ],
   "relatedSlugs": [
     "alfred-powerpack",
     "setapp",

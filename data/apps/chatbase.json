@@ -68,6 +68,40 @@
       "desc": "Apache-2.0 sandbox-first TypeScript agent framework with typed tools and Node or Cloudflare deployment targets. Retrieval and the support application still need to be built."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Tiledesk",
+      "url": "https://tiledesk.com/",
+      "type": "open-source",
+      "repo": "https://github.com/Tiledesk/tiledesk",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A self-hosted RAG support agent across chat, email and voice; the free software arrives as an infrastructure diagram.",
+      "stars": 316,
+      "lastCommit": "2026-07",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Mastra",
+      "url": "https://mastra.ai/",
+      "desc": "A serious agent framework, not a support product; a non-builder still has to create the bot, channels and handoff."
+    },
+    {
+      "name": "Vercel AI SDK",
+      "url": "https://ai-sdk.dev/",
+      "desc": "A TypeScript toolkit whose install command is npm install; useful plumbing, not something support staff can adopt."
+    },
+    {
+      "name": "VoltAgent",
+      "url": "https://voltagent.dev/",
+      "desc": "An agent engineering framework with a console, not a deploy-and-answer support desk."
+    }
+  ],
   "relatedSlugs": [
     "animam-ai",
     "chatwoot-cloud",

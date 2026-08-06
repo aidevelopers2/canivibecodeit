@@ -61,6 +61,19 @@
       "status": "alive"
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Loops Free",
+      "url": "https://loops.so/",
+      "desc": "It sends the lifecycle emails you design; it is not the AI marketer designing them."
+    },
+    {
+      "name": "Mautic",
+      "url": "https://mautic.org/",
+      "desc": "It runs lifecycle workflows but does not autonomously propose, write and keep rewriting them."
+    }
+  ],
   "relatedSlugs": [
     "kit",
     "mailchimp",

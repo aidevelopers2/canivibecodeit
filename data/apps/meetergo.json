@@ -49,6 +49,24 @@
       "desc": "open-source scheduling platform that can be self-hosted"
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Cal.com Free",
+      "url": "https://cal.com/",
+      "desc": "Strong solo scheduling; team routing, workflows and the surrounding suite are paid or absent."
+    },
+    {
+      "name": "Cal.diy",
+      "url": "https://www.cal.diy/",
+      "desc": "The self-hosted fork removed workflows and team features, then warns against production use."
+    },
+    {
+      "name": "HubSpot Meeting Scheduler",
+      "url": "https://www.hubspot.com/products/sales/schedule-meeting",
+      "desc": "Free CRM-linked scheduling, but no built-in video, client portal or equivalent workflow suite."
+    }
+  ],
   "relatedSlugs": [
     "calendly",
     "savvycal",

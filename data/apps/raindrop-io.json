@@ -47,6 +47,77 @@
       "status": "alive"
     }
   ],
+  "alternatives": [
+    {
+      "name": "Karakeep",
+      "url": "https://karakeep.app",
+      "type": "open-source",
+      "repo": "https://github.com/karakeep-app/karakeep",
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "self-hosted",
+        "cli",
+        "browser-extension"
+      ],
+      "desc": "A bookmark junk drawer that labels itself and keeps the contents.",
+      "stars": 28100,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "LinkAce",
+      "url": "https://www.linkace.org",
+      "type": "open-source",
+      "repo": "https://github.com/Kovah/LinkAce",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A serious bookmark archive, right down to checking whether the links died.",
+      "stars": 3300,
+      "lastCommit": "2026-06",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "linkding",
+      "url": "https://linkding.link",
+      "type": "open-source",
+      "repo": "https://github.com/sissbruecker/linkding",
+      "platforms": [
+        "web",
+        "self-hosted",
+        "browser-extension"
+      ],
+      "desc": "Pinboard with a nicer face and no annual invoice.",
+      "stars": 11000,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Linkwarden",
+      "url": "https://linkwarden.app",
+      "type": "open-source",
+      "repo": "https://github.com/linkwarden/linkwarden",
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "self-hosted",
+        "browser-extension"
+      ],
+      "desc": "Raindrop with a filing cabinet and a copy of every page.",
+      "stars": 19400,
+      "lastCommit": "2026-07",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "feedly",
     "inoreader",

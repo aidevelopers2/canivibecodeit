@@ -51,6 +51,54 @@
       "status": "alive"
     }
   ],
+  "alternatives": [
+    {
+      "name": "GoatCounter",
+      "url": "https://www.goatcounter.com",
+      "type": "open-source",
+      "repo": "https://github.com/arp242/goatcounter",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A smaller privacy dashboard for people who truly meant simple.",
+      "stars": 5800,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Plausible Community Edition",
+      "url": "https://plausible.io/community-edition",
+      "type": "open-source",
+      "repo": "https://github.com/plausible/analytics",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "The closest philosophical match, except you operate the Compose file.",
+      "stars": 28377,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Umami",
+      "url": "https://umami.is",
+      "type": "open-source",
+      "repo": "https://github.com/umami-software/umami",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Simple privacy analytics with enough events and goals to avoid paying for simplicity.",
+      "stars": 38073,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "simple-analytics",
     "umami-cloud",

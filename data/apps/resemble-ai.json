@@ -56,6 +56,44 @@
       "desc": "Local speech-to-text engine suitable for private transcription."
     }
   ],
+  "alternatives": [
+    {
+      "name": "GPT-SoVITS",
+      "url": "https://github.com/RVC-Boss/GPT-SoVITS",
+      "type": "open-source",
+      "repo": "https://github.com/RVC-Boss/GPT-SoVITS",
+      "platforms": [
+        "windows"
+      ],
+      "desc": "Five seconds of reference audio gets you a local clone; detection, guardrails and a production realtime service are not included.",
+      "stars": 60500,
+      "lastCommit": "2026-07",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Voicebox",
+      "url": "https://voicebox.sh/",
+      "type": "open-source",
+      "repo": "https://github.com/jamiepine/voicebox",
+      "platforms": [
+        "macos",
+        "windows"
+      ],
+      "desc": "Local voice cloning, generation, transcription and an API in one installer; detection and a managed realtime SLA are absent.",
+      "stars": 49500,
+      "lastCommit": "2026-06",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "TTS WebUI",
+      "url": "https://ttswebui.com/",
+      "desc": "A capable local model workbench, but it does not replace voice detection or a managed realtime API."
+    }
+  ],
   "relatedSlugs": [
     "wellsaid-labs",
     "lovo",

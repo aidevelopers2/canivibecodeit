@@ -50,6 +50,30 @@
       "desc": "Text-to-diagram renderer with broad diagram syntax."
     }
   ],
+  "alternatives": [
+    {
+      "name": "HedgeDoc",
+      "url": "https://hedgedoc.org/",
+      "type": "open-source",
+      "repo": "https://github.com/hedgedoc/hedgedoc",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Collaborative Markdown documents with Mermaid diagrams, revisions, and reveal.js presentations; no free-form whiteboard, but the engineering-doc job is real.",
+      "stars": 7355,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Mermaid",
+      "url": "https://mermaid.ai/open-source/",
+      "desc": "Everyone recommends it, but Mermaid itself is a rendering library and command-line tool, not a finished collaborative documentation product."
+    }
+  ],
   "relatedSlugs": [
     "mermaid-chart",
     "cloudcraft",

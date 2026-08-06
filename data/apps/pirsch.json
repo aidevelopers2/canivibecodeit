@@ -53,6 +53,71 @@
       "desc": "Popular open-source privacy-focused web analytics platform."
     }
   ],
+  "alternatives": [
+    {
+      "name": "GoatCounter",
+      "url": "https://www.goatcounter.com",
+      "type": "open-source",
+      "repo": "https://github.com/arp242/goatcounter",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "The tiny option: page views, paths and referrers without a product-management department.",
+      "stars": 5800,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Plausible Community Edition",
+      "url": "https://plausible.io/community-edition",
+      "type": "open-source",
+      "repo": "https://github.com/plausible/analytics",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Simple cookieless traffic and goals; the Community Edition keeps the dashboard deliberately narrow.",
+      "stars": 28377,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Rybbit",
+      "url": "https://rybbit.com",
+      "type": "open-source",
+      "repo": "https://github.com/rybbit-io/rybbit",
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "A broader cookieless dashboard with events, goals and funnels, still deployable from Compose.",
+      "stars": 12600,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Umami",
+      "url": "https://umami.is",
+      "type": "open-source",
+      "repo": "https://github.com/umami-software/umami",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Cookieless page views and custom events with a compact dashboard and no hosted meter.",
+      "stars": 38073,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "matomo-cloud",
     "posthog",

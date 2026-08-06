@@ -131,7 +131,7 @@ const sponsor = hasRun
   : null;
 
 const fmt = (n) => Number(n ?? 0).toLocaleString('en-US');
-const title = 'Your sponsor stats — canivibecodeit';
+const title = 'Your sponsor stats · canivibecodeit';
 const description = 'Private placement stats for your sponsor slot.';
 ---
 
@@ -154,7 +154,7 @@ const description = 'Private placement stats for your sponsor slot.';
           <h1>Locked in.</h1>
           <p class="sub">
             Slot {purchase.slot_id} is yours from {shortDate(purchase.starts_at)} to{' '}
-            {shortDate(purchase.ends_at)}. This page starts filling in on day one — keep the
+            {shortDate(purchase.ends_at)}. This page starts filling in on day one; keep the
             link.
           </p>
         </section>
@@ -167,7 +167,7 @@ const description = 'Private placement stats for your sponsor slot.';
           <h1>No numbers yet.</h1>
           <p class="sub">
             Stats start the moment your placement goes live. This page fills itself in from
-            day one — keep the link.
+            day one; keep the link.
           </p>
         </section>
       )
@@ -196,7 +196,7 @@ const description = 'Private placement stats for your sponsor slot.';
               <span class="sps-big-label">{stats.heroLabel}</span>
               <span class="sps-big-note">
                 first-party count, bots filtered
-                {stats.undercount && ` · measured since ${shortDate(stats.clickFrom)} — undercounts, if anything`}
+                {stats.undercount && ` · measured since ${shortDate(stats.clickFrom)} · undercounts, if anything`}
               </span>
             </span>
           </div>
@@ -287,7 +287,7 @@ const description = 'Private placement stats for your sponsor slot.';
                 <span class="sp-tag">{sponsor.tagline}</span>
               </span>
               <p class="sps-note">
-                Clicks are logged first-party when someone follows your card — no cookies, no
+                Clicks are logged first-party when someone follows your card: no cookies, no
                 third parties, only your slot's numbers. Your link is tagged{' '}
                 <code>utm_source=canivibecodeit</code>
                 {sponsor.url ? <> (<a href={withUtm(sponsor.url)}>your tagged link</a>)</> : null},

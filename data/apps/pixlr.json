@@ -56,6 +56,93 @@
       "desc": "Self-hosted photo organization and search."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Adobe Express Free",
+      "url": "https://www.adobe.com/express/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "Better for templates, quick effects, generative credits, and social assets; weaker for deep layer-by-layer image surgery.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Canva Free",
+      "url": "https://www.canva.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "A broad free template and asset library with lightweight photo editing and limited AI; not a serious PSD workstation.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Desygner Free",
+      "url": "https://desygner.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "Templates, photo tools, stock assets, and monthly AI credits in a durable free plan; the editor feels less slick.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Photopea Free",
+      "url": "https://www.photopea.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "The closest free browser editor: layers, masks, PSD files, vectors, filters, and local processing, with ads instead of a subscription.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "VistaCreate Starter",
+      "url": "https://create.vista.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "Strong for stock-backed social designs and effects, with unlimited exports; advanced raster editing is shallow.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "PhotoPrism",
+      "url": "https://www.photoprism.app/",
+      "desc": "A photo server can store the result, but it cannot perform layered edits, generate assets, or build the design."
+    }
+  ],
   "relatedSlugs": [
     "polarr",
     "fotor",

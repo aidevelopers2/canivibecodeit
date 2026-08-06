@@ -52,6 +52,24 @@
       "desc": "Large open-source low-code platform for internal applications and data sources."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Draftbit Free",
+      "url": "https://draftbit.com/",
+      "desc": "Three editable projects and web preview are free; React Native code export is paid."
+    },
+    {
+      "name": "FlutterFlow Free",
+      "url": "https://www.flutterflow.io/",
+      "desc": "Wrong framework and wrong free tier: Flutter rather than React Native, with code export behind payment."
+    },
+    {
+      "name": "Nowa Starter",
+      "url": "https://nowa.dev/",
+      "desc": "A real visual mobile builder with free source export, but the source is Flutter, not React Native."
+    }
+  ],
   "relatedSlugs": [
     "flutterflow",
     "retool",

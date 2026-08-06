@@ -52,6 +52,99 @@
       "desc": "Popular open-source mail-server suite that demonstrates the operational complexity of hosted mail."
     }
   ],
+  "alternatives": [
+    {
+      "name": "BlueMail Personal",
+      "url": "https://bluemail.me/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android"
+      ],
+      "desc": "A free Windows unified inbox with unlimited accounts, search and clusters; integrations are thinner.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Edison Mail",
+      "url": "https://www.edisonmail.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos",
+        "windows",
+        "ios",
+        "android"
+      ],
+      "desc": "Unified accounts, search and rules on Windows for free; integrations are not the point.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Mailspring",
+      "url": "https://www.getmailspring.com/",
+      "type": "open-source",
+      "repo": "https://github.com/Foundry376/Mailspring",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "A modern open-source unified inbox for Windows; several workflow niceties remain Pro.",
+      "stars": 17724,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Spark Free",
+      "url": "https://sparkmailapp.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos",
+        "windows",
+        "ios",
+        "android"
+      ],
+      "desc": "A polished Windows inbox with smart sorting and search; the ecosystem of side-panel apps is gone.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Thunderbird",
+      "url": "https://www.thunderbird.net/",
+      "type": "open-source",
+      "repo": "https://github.com/thunderbird/thunderbird-desktop",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "The sturdy Windows answer with extensions and local search; visual polish varies by decade.",
+      "stars": 92,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Wino Mail",
+      "url": "https://www.winomail.app/",
+      "desc": "Open-source code, but the free Store build sells unlimited accounts; an account-capped unified inbox misses the job."
+    }
+  ],
   "relatedSlugs": [
     "superhuman",
     "front",

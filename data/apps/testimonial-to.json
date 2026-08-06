@@ -39,5 +39,63 @@
     "a hosted collection URL that isn't yours"
   ],
   "priorArt": [],
+  "alternatives": [
+    {
+      "name": "Real Testimonials",
+      "url": "https://wordpress.org/plugins/testimonial-free/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Another WordPress route: forms, moderation, grids and sliders are free; video and the clever automation live upstairs.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Shosay",
+      "url": "https://shosay.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Unlimited text, video and audio proof, imports, walls and 25-plus widgets; the bill is zero, the tiny Powered by pill is not.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Strong Testimonials",
+      "url": "https://wordpress.org/plugins/strong-testimonials/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A WordPress-only form, moderation queue, grid, slider and widget; simple enough once you already own the WordPress problem.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Famewall",
+      "url": "https://famewall.io/",
+      "desc": "The free plan stops at 10 testimonials and one video; useful demo, not a permanent replacement."
+    },
+    {
+      "name": "Reviewskits",
+      "url": "https://reviewskits.com/",
+      "desc": "A young headless stack with 52 stars, no releases, and an SDK-shaped hole where the no-code widget should be."
+    }
+  ],
   "prompt": "Build me a testimonial collection and display tool like Senja. Requirements:\n\n- A public /submit page: name, role/company, avatar upload (or auto-fetch from a\n  provided URL), star rating, and the testimonial text. Store submissions in SQLite\n  with an approved flag defaulting to false.\n- An /admin page (basic-auth from .env) listing submissions with approve/delete\n  buttons · nothing shows publicly until approved.\n- A public /wall page: masonry grid of approved testimonials, clean cards with\n  avatar, name, stars, and text. Mobile-friendly, dark mode support.\n- An embeddable widget: /embed.js renders the wall into any page via one script\n  tag + a div, iframe-free, styled to inherit the host page's font.\n- Image uploads resized server-side to 128px avatars, stored on disk.\n- Node or Python, single small server, deploy instructions for a VPS."
 }

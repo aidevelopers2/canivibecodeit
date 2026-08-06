@@ -65,7 +65,7 @@ export async function POST({ request, clientAddress }) {
       + `<p><a href="${esc(withUtm(url))}">${esc(url)}</a> &middot; tint ${esc(fields.tint)}</p>`
       + `<p style="padding-top:8px;">${button(approve, 'review & approve')}`
       + ` &nbsp; <a href="${esc(reject)}" style="color:#b4552f;">reject + refund</a></p>`
-      + `<p style="color:#6e6e67; font-size:12px;">Both links open a confirmation page —`
+      + `<p style="color:#6e6e67; font-size:12px;">Both links open a confirmation page;`
       + ` nothing changes until you tap the button there.</p>`
     )
   );

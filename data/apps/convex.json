@@ -55,6 +55,77 @@
       "desc": "Open-source platform-as-a-service toolkit for a single server."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Appwrite",
+      "url": "https://appwrite.io/",
+      "type": "open-source",
+      "repo": "https://github.com/appwrite/appwrite",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Auth, database, storage, realtime, and functions behind one polished console; the Compose file is doing a lot.",
+      "stars": 56789,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Convex Self-Hosted",
+      "url": "https://www.convex.dev/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "The actual Convex backend and reactive function runtime on your own server; auth still comes from an external provider.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Nhost",
+      "url": "https://nhost.io/",
+      "type": "open-source",
+      "repo": "https://github.com/nhost/nhost",
+      "platforms": [
+        "web",
+        "self-hosted",
+        "cli"
+      ],
+      "desc": "Postgres plus GraphQL, auth, storage, functions, and realtime; closer to Firebase than most Firebase alternatives.",
+      "stars": 9266,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Supabase",
+      "url": "https://supabase.com/",
+      "type": "open-source",
+      "repo": "https://github.com/supabase/supabase",
+      "platforms": [
+        "web",
+        "self-hosted",
+        "cli"
+      ],
+      "desc": "Database, functions, realtime, files, and auth in one self-hosted stack; SQL replaces Convex's document model.",
+      "stars": 107608,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "PocketBase",
+      "url": "https://pocketbase.io/",
+      "desc": "Database, realtime, files, and auth fit in one binary, but there is no server-side functions runtime."
+    }
+  ],
   "relatedSlugs": [
     "mongodb-atlas",
     "sentry",

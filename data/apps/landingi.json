@@ -55,6 +55,49 @@
       "desc": "Open-source web-builder framework."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Mautic",
+      "url": "https://mautic.org",
+      "type": "open-source",
+      "repo": "https://github.com/mautic/mautic",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Pages, forms, campaigns and A/B tests without licence fees; database and email operations replace the subscription.",
+      "stars": 9800,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "systeme.io",
+      "url": "https://systeme.io",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Hosted pages, popups, forms and one split test on a permanent free plan; agency workflow is thin.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "GrapesJS",
+      "url": "https://grapesjs.com",
+      "desc": "A library for building the editor, with none of the campaign product around it."
+    },
+    {
+      "name": "Webstudio",
+      "url": "https://webstudio.is",
+      "desc": "A page builder without managed popups, experiments, lead operations or agency workflow."
+    }
+  ],
   "relatedSlugs": [
     "instapage",
     "unbounce",

@@ -56,6 +56,24 @@
       "desc": "Widely used local Stable Diffusion interface and extension ecosystem."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Draw Things",
+      "url": "https://drawthings.ai/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos",
+        "ios"
+      ],
+      "desc": "Train a LoRA, keep the seed and controls, and make a consistent asset set; Apple hardware only.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "adobe-firefly",
     "mage-space",

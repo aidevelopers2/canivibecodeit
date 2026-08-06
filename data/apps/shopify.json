@@ -54,6 +54,95 @@
       "status": "alive"
     }
   ],
+  "alternatives": [
+    {
+      "name": "Bagisto",
+      "url": "https://bagisto.com",
+      "type": "open-source",
+      "repo": "https://github.com/bagisto/bagisto",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A proper Laravel storefront and admin; the free bit ends where hosting and Laravel operations begin.",
+      "stars": 27900,
+      "lastCommit": "2026-07",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Magento Open Source",
+      "url": "https://business.adobe.com/products/commerce/magento/open-source.html",
+      "type": "open-source",
+      "repo": "https://github.com/magento/magento2",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A vast store engine for anyone who thought running WooCommerce did not involve enough infrastructure.",
+      "stars": 12200,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "OpenCart",
+      "url": "https://www.opencart.com",
+      "type": "open-source",
+      "repo": "https://github.com/opencart/opencart",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Old-school PHP commerce that still does the whole job instead of selling you ten add-ons first.",
+      "stars": 8174,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Shopware Community Edition",
+      "url": "https://www.shopware.com/en/community/community-edition/",
+      "type": "open-source",
+      "repo": "https://github.com/shopware/shopware",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A serious modern store; free licence, expensive appetite for RAM and competent administration.",
+      "stars": 3399,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Vvveb",
+      "url": "https://www.vvveb.com",
+      "type": "open-source",
+      "repo": "https://github.com/givanz/Vvveb",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A visual CMS and complete shop in one PHP install; obscure, capable and still your server.",
+      "stars": 1200,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Medusa",
+      "url": "https://medusajs.com",
+      "desc": "Popular answer, wrong audience: a headless commerce development platform, not a store a non-builder installs."
+    },
+    {
+      "name": "nopCommerce",
+      "url": "https://www.nopcommerce.com",
+      "desc": "Calls itself open source, but its custom NPL is not OSI-approved and requires a powered-by link on every interface screen."
+    }
+  ],
   "relatedSlugs": [
     "podia",
     "teachable",

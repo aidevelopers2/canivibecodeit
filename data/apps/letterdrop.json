@@ -57,6 +57,14 @@
       "desc": "Open-source marketing automation platform."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Ghost",
+      "url": "https://ghost.org/",
+      "desc": "Writing and newsletters are covered, but content planning, SEO workflow and social distribution are not."
+    }
+  ],
   "relatedSlugs": [
     "audienceful",
     "feedblitz",

@@ -53,6 +53,24 @@
       "desc": "Mature open-source scheduling platform with calendar integrations and booking workflows."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Cal.com Free",
+      "url": "https://cal.com/",
+      "desc": "The free tier covers one person; routing forms and team assignment are paid."
+    },
+    {
+      "name": "Cal.diy",
+      "url": "https://www.cal.diy/",
+      "desc": "The open-source fork removed the very Teams and Workflows features this comparison needs."
+    },
+    {
+      "name": "YouCanBookMe Free",
+      "url": "https://youcanbook.me/",
+      "desc": "Forms and confirmations survive on free, but routing rules do not."
+    }
+  ],
   "relatedSlugs": [
     "cal-com-teams",
     "fantastical",

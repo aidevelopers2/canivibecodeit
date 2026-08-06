@@ -53,6 +53,137 @@
       "desc": "Active open-source social media scheduling platform."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Adobe Express Free",
+      "url": "https://www.adobe.com/express/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "Six networks, a media editor and a thousand scheduled posts monthly; analytics are nearly decorative.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "BrightBean Studio",
+      "url": "https://brightbean.xyz/studio/",
+      "type": "open-source",
+      "repo": "https://github.com/brightbeanxyz/brightbean-studio",
+      "platforms": [
+        "web",
+        "self-hosted",
+        "cli"
+      ],
+      "desc": "Hosted-free scheduling, reusable assets, inbox and analytics; no three-account austerity.",
+      "stars": 2100,
+      "lastCommit": "2026-07",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Buffer Free",
+      "url": "https://buffer.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "browser-extension"
+      ],
+      "desc": "Three channels, ten queued posts each and a tidy media workflow; only eight different channels may ever touch the account.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Fedica Free",
+      "url": "https://fedica.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "browser-extension"
+      ],
+      "desc": "Ten network accounts and unlimited monthly posts, but only ten may wait in line at once.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Mixpost Lite",
+      "url": "https://mixpost.app/",
+      "type": "open-source",
+      "repo": "https://github.com/inovector/mixpost",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Single-user queues, media and basic analytics in Docker; less convenient, less rented.",
+      "stars": 3500,
+      "lastCommit": "2026-03",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Postiz",
+      "url": "https://postiz.com/",
+      "type": "open-source",
+      "repo": "https://github.com/gitroomhq/postiz-app",
+      "platforms": [
+        "web",
+        "self-hosted",
+        "cli"
+      ],
+      "desc": "Broad scheduling and reusable media without subscription fees; operations are the new recurring charge.",
+      "stars": 34300,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Publer Free",
+      "url": "https://publer.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "browser-extension"
+      ],
+      "desc": "The same product keeps three non-X accounts and ten queued posts each; useful, intentionally cramped.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Social Champ Free",
+      "url": "https://www.socialchamp.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "Three non-X accounts, fifteen queued posts each and an inbox; one user, no X and no excess furniture.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "hootsuite",
     "metricool",

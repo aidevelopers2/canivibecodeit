@@ -52,6 +52,76 @@
       "desc": "Node-based open-source diffusion workflow engine with a large ecosystem."
     }
   ],
+  "alternatives": [
+    {
+      "name": "chaiNNer",
+      "url": "https://chainner.app/",
+      "type": "open-source",
+      "repo": "https://github.com/chaiNNer-org/chaiNNer",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "Build the enhancement chain once, save it, then throw whole folders at it; reproducibility beats a magic slider.",
+      "stars": 5959,
+      "lastCommit": "2026-07",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Final2x",
+      "url": "https://github.com/EutropicAI/Final2x",
+      "type": "open-source",
+      "repo": "https://github.com/EutropicAI/Final2x",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "A plain desktop upscaler with swappable models; less magic, more repeatability.",
+      "stars": 7234,
+      "lastCommit": "2026-07",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "NodeTool",
+      "url": "https://nodetool.ai/",
+      "type": "open-source",
+      "repo": "https://github.com/nodetool-ai/nodetool",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted",
+        "cli"
+      ],
+      "desc": "Queue upscale, restore and enhancement nodes with the settings visible instead of hidden behind Creativity.",
+      "stars": 450,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Upscayl",
+      "url": "https://upscayl.org/",
+      "type": "open-source",
+      "repo": "https://github.com/upscayl/upscayl",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "Batch upscaling without invented pores, fake lettering or a monthly invoice.",
+      "stars": 45562,
+      "lastCommit": "2026-05",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "ideogram",
     "recraft",

@@ -49,6 +49,30 @@
       "status": "alive"
     }
   ],
+  "alternatives": [
+    {
+      "name": "Speakr",
+      "url": "https://murtaza-nasir.github.io/speakr/",
+      "type": "open-source",
+      "repo": "https://github.com/murtaza-nasir/speakr",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Transcribes meetings, summarizes them and lets you chat across the archive; the price is operating the stack yourself.",
+      "stars": 3600,
+      "lastCommit": "2026-07",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Fathom",
+      "url": "https://www.fathom.ai/",
+      "desc": "Unlimited basic transcripts and summaries, but no real chat over your conversation archive."
+    }
+  ],
   "relatedSlugs": [
     "fireflies-ai",
     "fathom-ai",

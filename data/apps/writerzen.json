@@ -52,6 +52,19 @@
       "desc": "Active open-source interface for local and API-backed language models with retrieval features."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Open WebUI",
+      "url": "https://openwebui.com/",
+      "desc": "A general AI workbench, not a keyword clustering, SERP brief, and content-production pipeline."
+    },
+    {
+      "name": "Vane",
+      "url": "https://github.com/ItzCrazyKns/Vane",
+      "desc": "It researches the web, but keyword clustering, SERP analysis, briefs, and article workflow are simply not there."
+    }
+  ],
   "relatedSlugs": [
     "writesonic",
     "copy-ai",

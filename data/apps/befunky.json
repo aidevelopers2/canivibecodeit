@@ -56,6 +56,84 @@
       "desc": "Self-hosted photo organization and search."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Adobe Express Free",
+      "url": "https://www.adobe.com/express/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "A cleaner replacement for the template-and-collage half, with usable photo tools and exports on the free plan.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Canva Free",
+      "url": "https://www.canva.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "Collages, social templates, and enough photo cleanup for ordinary humans; the serious retouching tools are elsewhere.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Desygner Free",
+      "url": "https://desygner.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "A free template editor with photo tools, collages, and brand basics; less glossy, but it keeps exporting.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "VistaCreate Starter",
+      "url": "https://create.vista.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "Template graphics, collages, animation, and stock assets with unlimited downloads; advanced resizing still costs money.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Penpot",
+      "url": "https://penpot.app/",
+      "desc": "Finished and maintained, but it designs interfaces, not collages, retouched portraits, or social templates."
+    },
+    {
+      "name": "PhotoPrism",
+      "url": "https://www.photoprism.app/",
+      "desc": "A very good photo library and a very bad collage editor; it organizes pictures instead of designing with them."
+    }
+  ],
   "relatedSlugs": [
     "relaythat",
     "linearity-curve",

@@ -53,6 +53,110 @@
       "desc": "Active open-source self-hosted photo and video management platform."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Immich",
+      "url": "https://immich.app/",
+      "type": "open-source",
+      "repo": "https://github.com/immich-app/immich",
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "A superb personal photo archive with mobile backup, metadata, albums, search, maps, and sharing on storage you control; public portfolio polish is modest.",
+      "stars": 109800,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "LibrePhotos",
+      "url": "https://docs.librephotos.com/",
+      "type": "open-source",
+      "repo": "https://github.com/LibrePhotos/librephotos",
+      "platforms": [
+        "web",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "Self-hosted photos and video with faces, objects, semantic search, albums, and public links; deployment is a small server, not a button.",
+      "stars": 8000,
+      "lastCommit": "2026-06",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Lychee",
+      "url": "https://lycheeorg.dev/",
+      "type": "open-source",
+      "repo": "https://github.com/LycheeOrg/Lychee",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A clean self-hosted album gallery with metadata, passworded sharing, downloads, and a simple Docker setup; much less discovery machinery.",
+      "stars": 4300,
+      "lastCommit": "2026-07",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "PhotoPrism",
+      "url": "https://www.photoprism.app/",
+      "type": "open-source",
+      "repo": "https://github.com/photoprism/photoprism",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A searchable self-hosted photo library with RAW support, labels, faces, maps, albums, metadata, and share links; library first, social network never.",
+      "stars": 40000,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Photoview",
+      "url": "https://photoview.github.io/",
+      "type": "open-source",
+      "repo": "https://github.com/photoview/photoview",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Maps existing folders directly into a clean web gallery with RAW, EXIF, users, albums, links, and downloads; your directory tree stays the boss.",
+      "stars": 6497,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Piwigo",
+      "url": "https://piwigo.org/",
+      "type": "open-source",
+      "repo": "https://github.com/Piwigo/Piwigo",
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "The old, dependable gallery engine: private albums, users, metadata, themes, plugins, and mobile upload, paid for in maintenance rather than money.",
+      "stars": 3800,
+      "lastCommit": "2026-05",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Flickr Free",
+      "url": "https://www.flickr.com/",
+      "desc": "The free account caps the library at 1,000 items, allows only 50 non-public items, and forbids commercial use; that is not a Pro archive."
+    }
+  ],
   "relatedSlugs": [
     "adobe-lightroom",
     "capture-one",

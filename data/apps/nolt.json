@@ -52,6 +52,69 @@
       "desc": "Open-source customer-feedback portal with voting and status workflows."
     }
   ],
+  "alternatives": [
+    {
+      "name": "ClearFlask",
+      "url": "https://clearflask.com",
+      "type": "open-source",
+      "repo": "https://github.com/clearflask/clearflask",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "The full board-and-roadmap job, self-hosted with more infrastructure than Nolt ever mentions.",
+      "stars": 446,
+      "lastCommit": "2026-07",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Quackback",
+      "url": "https://quackback.io",
+      "type": "open-source",
+      "repo": "https://github.com/QuackbackIO/quackback",
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "Voting, comments, statuses and a public roadmap in one Compose stack.",
+      "stars": 216,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Sleekplan Indie",
+      "url": "https://sleekplan.com/pricing/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Unlimited feedback, voting and a roadmap for one admin; custom workflow controls are paid.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "UserJot",
+      "url": "https://userjot.com",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "A free voting board with comments, statuses and a roadmap, plus a changelog Nolt never added.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "canny",
     "productboard",

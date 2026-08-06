@@ -49,6 +49,81 @@
       "desc": "Local speech-to-text engine suitable for private transcription."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Buzz",
+      "url": "https://chidiwilliams.github.io/buzz/",
+      "type": "open-source",
+      "repo": "https://github.com/chidiwilliams/buzz",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux",
+        "cli"
+      ],
+      "desc": "MacWhisper’s basic job, minus the Mac-only part and the invoice.",
+      "stars": 20800,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "noScribe",
+      "url": "https://noscribe.de/en/",
+      "type": "open-source",
+      "repo": "https://github.com/kaixxx/noScribe",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "A hefty local interview transcriber with speaker labels and an editor; several gigabytes, zero minute meter.",
+      "stars": 2100,
+      "lastCommit": "2026-07",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Subtitle Edit",
+      "url": "https://subtitleedit.github.io/subtitleedit/",
+      "type": "open-source",
+      "repo": "https://github.com/SubtitleEdit/subtitleedit",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "A subtitle workbench with Whisper bolted in; ugly enough to be trustworthy, useful enough to stay installed.",
+      "stars": 13700,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Vibe",
+      "url": "https://thewh1teagle.github.io/vibe/",
+      "type": "open-source",
+      "repo": "https://github.com/thewh1teagle/vibe",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux",
+        "cli"
+      ],
+      "desc": "A cross-platform desktop transcriber with subtitles, batch jobs, translation and optional local summaries.",
+      "stars": 7000,
+      "lastCommit": "2026-04",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Aiko",
+      "url": "https://sindresorhus.com/aiko",
+      "desc": "Often listed as free; it is now a paid App Store app and the download is only a trial."
+    }
+  ],
   "relatedSlugs": [
     "read-ai",
     "avoma",

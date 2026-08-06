@@ -56,6 +56,49 @@
       "desc": "Open-source web-builder framework."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Mautic",
+      "url": "https://mautic.org",
+      "type": "open-source",
+      "repo": "https://github.com/mautic/mautic",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Landing pages, forms, dynamic content, analytics and real split tests for free; in return, you operate a marketing database.",
+      "stars": 9800,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "systeme.io",
+      "url": "https://systeme.io",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Three funnels, a custom domain, forms and one split test for zero dollars; personalization is basic.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "GrapesJS",
+      "url": "https://grapesjs.com",
+      "desc": "It can power an editor after engineering; it does not ship experiments, analytics or collaboration."
+    },
+    {
+      "name": "Webstudio",
+      "url": "https://webstudio.is",
+      "desc": "Builds pages, but not the experiments, personalization and campaign analytics this app is bought for."
+    }
+  ],
   "relatedSlugs": [
     "unbounce",
     "leadpages",

@@ -51,6 +51,24 @@
       "status": "alive"
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Adobe Express Free",
+      "url": "https://www.adobe.com/express/",
+      "desc": "A strong visual scheduler, but not a creator-marketing platform."
+    },
+    {
+      "name": "Later Free",
+      "url": "https://later.com/",
+      "desc": "There is no permanent free plan, only a fourteen-day trial wearing cheerful typography."
+    },
+    {
+      "name": "Publer Free",
+      "url": "https://publer.com/",
+      "desc": "Visual scheduling and link-in-bio are covered, but creator campaigns and marketplace work are missing."
+    }
+  ],
   "relatedSlugs": [
     "typefully",
     "beehiiv",

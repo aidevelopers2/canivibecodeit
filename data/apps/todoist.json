@@ -49,6 +49,8 @@
       "status": "alive"
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "sunsama",
     "akiflow",

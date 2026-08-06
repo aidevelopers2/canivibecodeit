@@ -30,8 +30,25 @@ No web form, no account — the repo is the admin panel.
   "moatTags": ["execution-polish", "integrations"],  // 1–3, see the list below
   "moatNotes": "polish/sync/collaboration",      // optional freeform aside, null is fine
   "whyPeopleStillPay": "One honest paragraph.",
-  "priorArt": [                  // existing open-source alternatives, [] if none
+  "priorArt": [                  // DIY building blocks & inspiration for builders, [] if none
     { "name": "quill", "url": "https://github.com/...", "desc": "open-source alternative" }
+  ],
+  "alternatives": [              // curated FINISHED free/OSS products, [] if none — see the rules below
+    {
+      "name": "AppFlowy",
+      "url": "https://appflowy.io",          // homepage the visitor lands on
+      "type": "open-source",                 // "open-source" | "free"
+      "repo": "https://github.com/AppFlowy-IO/AppFlowy",  // required if open-source, null if "free"
+      "platforms": ["macos", "self-hosted"], // 1+ of: web, macos, windows, linux, ios, android, self-hosted, cli, browser-extension
+      "desc": "Notion, except your data lives on your disk.",  // one dry line, site voice
+      "stars": 64100,                        // GitHub stars at check time; null for "free"
+      "lastCommit": "2026-07",               // "YYYY-MM"; null for "free"
+      "selfHost": "one-click",               // what running it costs: "hosted" | "one-click" | "docker" | "ops"
+      "checkedOn": "2026-08-05"              // when you verified it's real, free, and alive
+    }
+  ],
+  "rejectedAlternatives": [        // the obvious recommendations that FAIL the bar, [] if none
+    { "name": "Serposcope", "url": "https://serposcope.serphacker.com", "desc": "Once the obvious free answer; archived in 2024." }
   ],
   "relatedSlugs": ["otter-ai"],  // curated related apps (optional)
   "pagePriority": 5,             // 1–5 editorial weight for default ordering
@@ -104,6 +121,37 @@ invent new ones. `moatNotes` is free text for anything the tags miss.
   fidelity. This is execution, not structure — it's the moat AI erodes. An entry
   tagged *only* `execution-polish` is saying there's nothing structural left, so be
   honest either way.
+
+## Alternatives rules
+
+`alternatives` is the escape hatch: finished free/open-source products a
+**non-builder** could adopt today instead of paying. It is NOT the same as
+`priorArt` (building blocks and inspiration for people who will build). Max 8,
+best first. Every entry must clear all four bars:
+
+1. **A finished product** — installable app or usable hosted service. Not a
+   library, framework, or API. A polished self-hosted app (one container, real
+   docs, real website) counts; a bare build-from-source repo does not.
+2. **Actually free, indefinitely** — a real OSS license, or a free tier that
+   genuinely covers replacing the paid app long-term. No trials, no crippled
+   tiers.
+3. **Real and maintained** — not archived, active within ~12 months, real
+   adoption (rough bar: 500+ stars or active releases plus a real docs site).
+4. **An alternative to this app's core job**, not an adjacent tool.
+
+`type: "free"` means closed-source freeware or a genuinely sufficient free tier —
+`repo`, `stars` and `lastCommit` are `null` for those. `selfHost` is honest about
+what "free" costs to run: `hosted` (they run it), `one-click` (installer or
+desktop app), `docker` (a container and a compose file), `ops` (a real stack —
+databases, proxies, upkeep). Write `desc` in site voice (dry, honest), never the
+vendor's marketing line.
+
+`rejectedAlternatives` captures the tools everyone recommends that FAIL the bar
+(archived, trial-only, a template rather than a product) with the reason in
+`desc` — the site shows these so readers stop wasting evenings on them. `url`
+may be `null`. Max 8, and the reason must be verifiable, not a vibe. One heads-up: adding your own
+product to `alternatives` lists across the directory will get the PR closed —
+suggest it for the one app it genuinely replaces and let the bar decide.
 
 ## Prompt rules
 

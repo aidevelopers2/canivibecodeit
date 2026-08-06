@@ -53,6 +53,24 @@
       "desc": "Mature open-source scheduling platform with calendar integrations and booking workflows."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Morgen",
+      "url": "https://www.morgen.so/",
+      "desc": "Everyone recommends it; in 2026 it is a 14-day trial followed by a subscription."
+    },
+    {
+      "name": "Notion Calendar",
+      "url": "https://www.notion.com/product/calendar",
+      "desc": "Good calendar-and-task shell, but it has no contact layer and therefore does not replace Amie’s actual bundle."
+    },
+    {
+      "name": "Routine Free",
+      "url": "https://routine.co/",
+      "desc": "The free plan lacks time blocking and still has no real contacts layer; the attractive daily-planner part starts paid."
+    }
+  ],
   "relatedSlugs": [
     "cal-com-teams",
     "fantastical",

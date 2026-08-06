@@ -52,6 +52,73 @@
       "desc": "Mature open-source collaborative design platform with SVG-native editing."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Adobe Express Free",
+      "url": "https://www.adobe.com/express/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "A close free substitute for reusable marketing templates, short video, stock assets, and routine exports.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Canva Free",
+      "url": "https://www.canva.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "A broader free library for social and marketing formats, with stronger documents and decks but paid one-click resizing.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Desygner Free",
+      "url": "https://desygner.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "Templates, scheduling, brand basics, PDFs, and automatic resize in a durable free plan for up to three people.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "VistaCreate Starter",
+      "url": "https://create.vista.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "The same product's free tier covers templates, animation, scheduling, one brand kit, 10GB, and unlimited downloads.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "kittl",
     "pitch",

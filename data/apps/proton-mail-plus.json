@@ -52,6 +52,8 @@
       "desc": "Open-source desktop mail client and useful IMAP prior art."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "fastmail",
     "mailbutler",

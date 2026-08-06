@@ -57,6 +57,8 @@
       "desc": "Open-source form builder and collection backend."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "survicate",
     "uservoice",

@@ -53,6 +53,24 @@
       "desc": "Mature open-source file sync and collaboration server."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Nextcloud Files",
+      "url": "https://nextcloud.com/files/",
+      "desc": "Versions and sharing are mature; client-side encryption for the whole sync-and-share path is not."
+    },
+    {
+      "name": "Peergos",
+      "url": "https://peergos.org/",
+      "desc": "It nails client-side encryption and secret links; maintained file-version history could not be verified."
+    },
+    {
+      "name": "Syncthing",
+      "url": "https://syncthing.net/",
+      "desc": "Client-side encrypted replication can keep versions, but there is no usable share-link product."
+    }
+  ],
   "relatedSlugs": [
     "dropbox-plus",
     "google-one",

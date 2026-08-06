@@ -51,6 +51,39 @@
       "desc": "Local-first automatic time tracking with an extensible event model."
     }
   ],
+  "alternatives": [
+    {
+      "name": "FlowSavvy Free",
+      "url": "https://flowsavvy.app/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "It puts tasks around calendar events for free; the rolling scheduling horizon stops two weeks out.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Reclaim Lite",
+      "url": "https://reclaim.ai/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "A free one-week planning horizon for tasks and focus time; long-range plans remain billable.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "timehero",
     "alfred-powerpack",

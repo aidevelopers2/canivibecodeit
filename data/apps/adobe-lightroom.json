@@ -52,6 +52,64 @@
       "desc": "Active open-source self-hosted photo and video management platform."
     }
   ],
+  "alternatives": [
+    {
+      "name": "darktable",
+      "url": "https://www.darktable.org/",
+      "type": "open-source",
+      "repo": "https://github.com/darktable-org/darktable",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "A serious local catalog and non-destructive RAW editor with ratings, collections, masks, and lens profiles; learning curve included free.",
+      "stars": 12900,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "digiKam",
+      "url": "https://www.digikam.org/",
+      "type": "open-source",
+      "repo": "https://invent.kde.org/graphics/digikam",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "Excellent local photo cataloging, metadata, tags, duplicates, RAW handling, and basic edits; elegance was not in the requirements.",
+      "stars": 32,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "RapidRAW",
+      "url": "https://www.getrapidraw.com/",
+      "type": "open-source",
+      "repo": "https://github.com/CyberTimon/RapidRAW",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux",
+        "android"
+      ],
+      "desc": "A lighter modern catalog-and-edit workflow with ratings, presets, masks, and batch processing; newer, friendlier, less proven.",
+      "stars": 9200,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Immich",
+      "url": "https://immich.app/",
+      "desc": "A fine backup server and phone library, but not a desktop non-destructive RAW-development workflow."
+    }
+  ],
   "relatedSlugs": [
     "capture-one",
     "ente-photos",

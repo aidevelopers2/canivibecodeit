@@ -53,6 +53,23 @@
       "desc": "Open-source screen recording and sharing product with modern desktop architecture."
     }
   ],
+  "alternatives": [
+    {
+      "name": "ShareX",
+      "url": "https://getsharex.com",
+      "type": "open-source",
+      "repo": "https://github.com/ShareX/ShareX",
+      "platforms": [
+        "windows"
+      ],
+      "desc": "CleanShot after a Windows power user designed every menu.",
+      "stars": 38994,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "screen-studio",
     "scribe",

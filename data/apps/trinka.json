@@ -56,6 +56,19 @@
       "desc": "Open-source interface and workflow layer for local or hosted language models."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Open WebUI",
+      "url": "https://openwebui.com/",
+      "desc": "A general AI workbench; it does not verify citations, run journal checks, or perform publication screening."
+    },
+    {
+      "name": "Writefull",
+      "url": "https://www.writefull.com/",
+      "desc": "Academic language editing is real, but every useful free feature is quota-limited; it is a sampler, not a manuscript replacement."
+    }
+  ],
   "relatedSlugs": [
     "prowritingaid",
     "copy-ai",

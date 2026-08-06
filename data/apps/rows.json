@@ -52,6 +52,63 @@
       "desc": "Active open-source no-code database interface and Airtable alternative."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Quadratic Personal",
+      "url": "https://www.quadratichq.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "A real analysis spreadsheet with database connections and programmable cells; API work is less point-and-click than Rows.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Stackby Free",
+      "url": "https://stackby.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "Rows with tables instead of theatre: two live API columns, manual refresh, and 100 automations a month.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Superhuman Docs Free",
+      "url": "https://superhuman.com/docs",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "ios",
+        "android"
+      ],
+      "desc": "Connected tables and manual-refresh integrations inside a formula-heavy doc; enough for small live reports, not data engineering.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Rows Free",
+      "url": "https://rows.com/",
+      "desc": "Rows joined Superhuman and now sends new users to Superhuman Docs; not a durable product to adopt today."
+    }
+  ],
   "relatedSlugs": [
     "baserow-cloud",
     "nocodb-cloud",

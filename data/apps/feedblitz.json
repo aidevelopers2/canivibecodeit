@@ -57,6 +57,19 @@
       "desc": "Open-source marketing automation platform."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Ghost",
+      "url": "https://ghost.org/",
+      "desc": "It emails posts and sells memberships, but it does not ingest arbitrary RSS feeds or run newsletter automations."
+    },
+    {
+      "name": "MailPoet Starter",
+      "url": "https://www.mailpoet.com/",
+      "desc": "WordPress post notifications work, but monetization and general RSS-to-email do not."
+    }
+  ],
   "relatedSlugs": [
     "sendfox",
     "mailcoach-cloud",

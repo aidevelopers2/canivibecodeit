@@ -57,6 +57,69 @@
       "desc": "Self-hosted photo organization and search."
     }
   ],
+  "alternatives": [
+    {
+      "name": "darktable",
+      "url": "https://www.darktable.org/",
+      "type": "open-source",
+      "repo": "https://github.com/darktable-org/darktable",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "A mature RAW darkroom with lens profiles, masks, denoise, and non-destructive edits; the interface still expects homework.",
+      "stars": 12900,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "RapidRAW",
+      "url": "https://www.getrapidraw.com/",
+      "type": "open-source",
+      "repo": "https://github.com/CyberTimon/RapidRAW",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux",
+        "android"
+      ],
+      "desc": "A newer packaged RAW editor with lens correction, denoise, masks, and GPU edits; quicker to learn, less battle-tested than darktable.",
+      "stars": 9200,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "RawTherapee",
+      "url": "https://www.rawtherapee.com/",
+      "type": "open-source",
+      "repo": "https://github.com/RawTherapee/RawTherapee",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "Excellent RAW development, optical correction, detail recovery, and profiles, with fewer catalog features and zero hand-holding.",
+      "stars": 4100,
+      "lastCommit": "2026-07",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Penpot",
+      "url": "https://penpot.app/",
+      "desc": "A collaborative UI-design app has no useful answer to demosaicing, lens correction, or sensor noise."
+    },
+    {
+      "name": "PhotoPrism",
+      "url": "https://www.photoprism.app/",
+      "desc": "It indexes and shares RAW files but does not provide a serious RAW-development pipeline with local corrections."
+    }
+  ],
   "relatedSlugs": [
     "topaz-photo-ai",
     "sketch",

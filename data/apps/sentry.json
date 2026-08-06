@@ -53,6 +53,65 @@
       "desc": "Popular open-source uptime monitoring dashboard with many check types."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Bugsink",
+      "url": "https://www.bugsink.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Fifteen thousand hosted errors a month for one user; free self-hosting exists, but it is not open source.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Exceptionless",
+      "url": "https://exceptionless.com/",
+      "type": "open-source",
+      "repo": "https://github.com/exceptionless/Exceptionless",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A mature error tracker with a strong .NET accent and a real server to maintain.",
+      "stars": 2452,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "GlitchTip",
+      "url": "https://glitchtip.com/",
+      "type": "open-source",
+      "repo": "https://gitlab.com/glitchtip/glitchtip-backend",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Sentry's SDK protocol with fewer moving parts and fewer debugging toys.",
+      "stars": 356,
+      "lastCommit": "2026-07",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Self-hosted Sentry",
+      "url": "https://develop.sentry.dev/self-hosted/",
+      "desc": "The famous bundle is FSL source-available, not open source, and it is an operational small city."
+    },
+    {
+      "name": "Uptime Kuma",
+      "url": "https://uptime.kuma.pet/",
+      "desc": "A good uptime monitor, not an error-event collector with grouping, releases and stack traces."
+    }
+  ],
   "relatedSlugs": [
     "uptime",
     "datadog"

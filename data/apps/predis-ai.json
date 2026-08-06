@@ -56,6 +56,25 @@
       "desc": "Self-hosted social media management software."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Adobe Express Free",
+      "url": "https://www.adobe.com/express/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "Limited monthly AI credits make posts, captions and video, then schedule them; ad intelligence and volume stay paid elsewhere.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "flick",
     "hypefury",

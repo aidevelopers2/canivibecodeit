@@ -49,6 +49,19 @@
       "desc": "Local-first automatic time tracking with an extensible event model."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "ScreenZen",
+      "url": "https://screenzen.co/",
+      "desc": "It blocks distractions well, but does not plan work or analyze completed focus sessions."
+    },
+    {
+      "name": "Super Productivity",
+      "url": "https://super-productivity.com/",
+      "desc": "Tasks, timeboxing, focus timers, and analytics are here; app blocking is not."
+    }
+  ],
   "relatedSlugs": [
     "serene",
     "morgen",

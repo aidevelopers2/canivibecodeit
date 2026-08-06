@@ -53,6 +53,57 @@
       "desc": "Open-source customer-feedback portal with voting and status workflows."
     }
   ],
+  "alternatives": [
+    {
+      "name": "CATMA",
+      "url": "https://catma.de",
+      "type": "open-source",
+      "repo": "https://github.com/forTEXT/catma",
+      "platforms": [
+        "web"
+      ],
+      "desc": "Collaborative text coding in a browser, built by academics and uninterested in your sales funnel.",
+      "stars": 102,
+      "lastCommit": "2026-07",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "QualCoder",
+      "url": "https://qualcoder.org",
+      "type": "open-source",
+      "repo": "https://github.com/ccbogel/QualCoder",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "Serious interview coding, memos and theme reports on your desktop, with serious desktop-software vibes.",
+      "stars": 658,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Taguette",
+      "url": "https://www.taguette.org",
+      "type": "open-source",
+      "repo": "https://github.com/remram44/taguette",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "Code interview excerpts and export themes without recreating an enterprise research repository.",
+      "stars": 88,
+      "lastCommit": "2026-01",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "canny",
     "productboard",

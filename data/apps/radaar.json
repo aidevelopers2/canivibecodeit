@@ -68,6 +68,24 @@
       "desc": "Self-hosted social media management platform."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "BrightBean Studio",
+      "url": "https://brightbean.xyz/studio/",
+      "desc": "Publishing, engagement, analytics and collaboration are covered; public monitoring is not."
+    },
+    {
+      "name": "Mixpost Lite",
+      "url": "https://mixpost.app/",
+      "desc": "Publishing and basic analytics only; inbox, monitoring and serious collaboration live elsewhere."
+    },
+    {
+      "name": "Postiz",
+      "url": "https://postiz.com/",
+      "desc": "A scheduler with analytics and teams, not a social-monitoring command centre."
+    }
+  ],
   "relatedSlugs": [
     "buffer",
     "metricool",

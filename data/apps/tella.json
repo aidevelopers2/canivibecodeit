@@ -48,6 +48,46 @@
       "status": "alive"
     }
   ],
+  "alternatives": [
+    {
+      "name": "Recordly",
+      "url": "https://recordly.dev",
+      "type": "open-source",
+      "repo": "https://github.com/webadderallorg/Recordly",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "Polished screen-and-camera recordings with auto-zoom and editing; still visibly young around audio.",
+      "stars": 20439,
+      "lastCommit": "2026-07",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Screenity",
+      "url": "https://screenity.io",
+      "type": "open-source",
+      "repo": "https://github.com/alyssaxuu/screenity",
+      "platforms": [
+        "web",
+        "browser-extension"
+      ],
+      "desc": "A browser extension that records forever, edits enough, then hands you a file or Drive link.",
+      "stars": 18500,
+      "lastCommit": "2026-07",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "OBS Studio",
+      "url": "https://obsproject.com",
+      "desc": "Powerful capture, but the simple polishing and async-video workflow are yours to assemble."
+    }
+  ],
   "relatedSlugs": [
     "capcut",
     "granola",

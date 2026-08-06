@@ -60,6 +60,39 @@
       "desc": "Lightweight self-hosted analytics with UTM tracking and no revenue side at all"
     }
   ],
+  "alternatives": [
+    {
+      "name": "Matomo",
+      "url": "https://matomo.org",
+      "type": "open-source",
+      "repo": "https://github.com/matomo-org/matomo",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Campaign and ecommerce revenue attribution with your data on your server; the interface remembers 2014 fondly.",
+      "stars": 21700,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Umami",
+      "url": "https://umami.is",
+      "type": "open-source",
+      "repo": "https://github.com/umami-software/umami",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Campaigns, conversions and revenue in one dashboard, with attribution that does not require a spreadsheet séance.",
+      "stars": 38073,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "plausible",
     "usermaven",

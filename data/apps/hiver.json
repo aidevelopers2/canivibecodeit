@@ -52,6 +52,71 @@
       "desc": "Open-source desktop mail client and useful IMAP prior art."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Chatwoot",
+      "url": "https://www.chatwoot.com/",
+      "type": "open-source",
+      "repo": "https://github.com/chatwoot/chatwoot",
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "A proper support inbox with assignments and automations; it replaces the Gmail skin rather than living inside it.",
+      "stars": 35528,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Frappe Helpdesk",
+      "url": "https://frappe.io/helpdesk",
+      "type": "open-source",
+      "repo": "https://github.com/frappe/helpdesk",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Clean shared support queues, assignments and SLAs; installing Frappe is the first ticket.",
+      "stars": 3300,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "FreeScout",
+      "url": "https://freescout.net/",
+      "type": "open-source",
+      "repo": "https://github.com/freescout-help-desk/freescout",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Shared mailboxes, assignments and internal notes without per-agent rent; you leave Gmail for PHP and MySQL.",
+      "stars": 4500,
+      "lastCommit": "2026-07",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Zammad",
+      "url": "https://zammad.org/",
+      "type": "open-source",
+      "repo": "https://github.com/zammad/zammad",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Mature ticketing, ownership and team workflows; Gmail becomes an input channel, not the workplace.",
+      "stars": 5800,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "helpwise",
     "gmelius",

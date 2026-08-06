@@ -56,6 +56,84 @@
       "desc": "Self-hosted photo organization and search."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Adobe Express Free",
+      "url": "https://www.adobe.com/express/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "Photo cleanup, templates, generative credits, and social exports in one free browser app; the monthly AI allowance is finite.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Canva Free",
+      "url": "https://www.canva.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "Strong templates and quick photo edits with a small ration of AI tools; retouching is serviceable rather than surgical.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Desygner Free",
+      "url": "https://desygner.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "Template design, photo editing, and twenty monthly AI credits without a trial; rougher around the edges than Fotor.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "VistaCreate Starter",
+      "url": "https://create.vista.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "A generous template and stock-asset editor with basic photo effects; the AI-retouching cupboard is much barer.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Penpot",
+      "url": "https://penpot.app/",
+      "desc": "It edits interface mockups, not photographs, portraits, or template-based marketing graphics."
+    },
+    {
+      "name": "PhotoPrism",
+      "url": "https://www.photoprism.app/",
+      "desc": "It can find a face in a library; it cannot retouch that face, build a poster, or run an AI image workflow."
+    }
+  ],
   "relatedSlugs": [
     "befunky",
     "relaythat",

@@ -55,6 +55,86 @@
       "desc": "Open-source infinite-canvas SDK and whiteboard."
     }
   ],
+  "alternatives": [
+    {
+      "name": "AFFiNE",
+      "url": "https://affine.pro/",
+      "type": "open-source",
+      "repo": "https://github.com/toeverything/AFFiNE",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "Persistent team workspaces, an infinite canvas, diagrams, comments, docs, and databases; heavier than Excalidraw and heavier to self-host.",
+      "stars": 71300,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "CryptPad",
+      "url": "https://cryptpad.fr/",
+      "type": "open-source",
+      "repo": "https://github.com/cryptpad/cryptpad",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A persistent encrypted drive with collaborative whiteboards, folders, sharing, and access controls; less delightful drawing, stronger workspace bones.",
+      "stars": 7825,
+      "lastCommit": "2026-07",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Excalidraw",
+      "url": "https://excalidraw.com/",
+      "type": "open-source",
+      "repo": "https://github.com/excalidraw/excalidraw",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "The same drawing engine, free: multiplayer, share links, libraries, local-first files, and end-to-end encrypted collaboration; cloud workspace management is leaner.",
+      "stars": 124000,
+      "lastCommit": "2026-08",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "tldraw",
+      "url": "https://www.tldraw.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "A polished free multiplayer canvas with instant sharing and no install; its code is source-available, not open source for production use.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "WBO",
+      "url": "https://wbo.ophir.dev/",
+      "type": "open-source",
+      "repo": "https://github.com/lovasoa/whitebophir",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Persistent collaborative boards with a free hosted instance and optional Docker; primitive libraries, refreshingly little ceremony.",
+      "stars": 2600,
+      "lastCommit": "2026-08",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "eraser",
     "mermaid-chart",

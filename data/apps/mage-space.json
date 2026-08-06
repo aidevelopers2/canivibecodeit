@@ -57,6 +57,145 @@
       "desc": "Widely used local Stable Diffusion interface and extension ecosystem."
     }
   ],
+  "alternatives": [
+    {
+      "name": "ComfyUI",
+      "url": "https://comfy.org/",
+      "type": "open-source",
+      "repo": "https://github.com/Comfy-Org/ComfyUI",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "The broadest local model support in the least browser-service-shaped interface imaginable.",
+      "stars": 124207,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Draw Things",
+      "url": "https://drawthings.ai/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos",
+        "ios"
+      ],
+      "desc": "Private local generation and editing on Apple devices, with no account and no credit counter.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Easy Diffusion",
+      "url": "https://easydiffusion.github.io/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "A cross-platform local generator with queues, controls and custom models; no hosted convenience, no hosted bill.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "InvokeAI",
+      "url": "https://invoke.ai/",
+      "type": "open-source",
+      "repo": "https://github.com/invoke-ai/InvokeAI",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "Multiple local models, strong controls and an organized gallery; private means actually staying on your machine.",
+      "stars": 27776,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Krita AI Diffusion",
+      "url": "https://www.interstice.cloud/",
+      "type": "open-source",
+      "repo": "https://github.com/Acly/krita-ai-diffusion",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "Krita with a local diffusion engine: layers, masks, generated pixels and no gallery watching you.",
+      "stars": 10432,
+      "lastCommit": "2026-06",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "RuinedFooocus",
+      "url": "https://github.com/runew0lf/RuinedFooocus",
+      "type": "open-source",
+      "repo": "https://github.com/runew0lf/RuinedFooocus",
+      "platforms": [
+        "web",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "A low-friction local generator with styles, inpainting and reruns; Windows and Linux only.",
+      "stars": 680,
+      "lastCommit": "2026-07",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "SDAI",
+      "url": "https://sdai.moroz.cc/",
+      "type": "open-source",
+      "repo": "https://github.com/ShiftHackZ/Stable-Diffusion-KMP",
+      "platforms": [
+        "ios",
+        "android"
+      ],
+      "desc": "Mobile generation through local models, your own server or AI Horde; privacy depends on which route you choose.",
+      "stars": 1242,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "SwarmUI",
+      "url": "https://swarmui.net/",
+      "type": "open-source",
+      "repo": "https://github.com/mcmonkeyprojects/SwarmUI",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "A private multi-model generator with a simple tab up front and serious controls behind it.",
+      "stars": 4423,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "getimg-ai",
     "artbreeder",

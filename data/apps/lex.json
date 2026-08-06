@@ -52,6 +52,35 @@
       "desc": "Active open-source interface for local and API-backed language models with retrieval features."
     }
   ],
+  "alternatives": [
+    {
+      "name": "AppFlowy",
+      "url": "https://appflowy.com/",
+      "type": "open-source",
+      "repo": "https://github.com/AppFlowy-IO/AppFlowy",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "A local-first collaborative document workspace with comments, history, and free Ollama-backed AI; Notion-shaped, but it can replace Lex.",
+      "stars": 74999,
+      "lastCommit": "2026-07",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "AFFiNE",
+      "url": "https://affine.pro/",
+      "desc": "Docs and comments are free, but AI becomes paid after seven days and free cloud history lasts only seven days."
+    }
+  ],
   "relatedSlugs": [
     "writesonic",
     "copy-ai",

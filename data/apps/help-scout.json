@@ -53,6 +53,77 @@
       "desc": "Mature open-source customer engagement and shared-inbox platform."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Chatwoot",
+      "url": "https://www.chatwoot.com/",
+      "type": "open-source",
+      "repo": "https://github.com/chatwoot/chatwoot",
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "A proper support inbox with chat, email and a help center; free software, billable server chores.",
+      "stars": 35534,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Frappe Helpdesk",
+      "url": "https://frappe.io/helpdesk",
+      "type": "open-source",
+      "repo": "https://github.com/frappe/helpdesk",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Tickets, SLAs and a knowledge base in a clean Frappe shell; the five-minute installer still leaves you the pager.",
+      "stars": 3300,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "osTicket",
+      "url": "https://osticket.com/",
+      "type": "open-source",
+      "repo": "https://github.com/osTicket/osTicket",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Email and web forms become assigned tickets; dated, dependable and very much your PHP server.",
+      "stars": 3868,
+      "lastCommit": "2026-06",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Zammad",
+      "url": "https://zammad.org/",
+      "type": "open-source",
+      "repo": "https://github.com/zammad/zammad",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A serious ticket desk with email, chat, SLAs and a knowledge base; setup is the first ticket.",
+      "stars": 5800,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "FreeScout",
+      "url": "https://freescout.net/",
+      "desc": "The shared inbox is free, but its knowledge base is a paid module, so it misses the stated job."
+    }
+  ],
   "relatedSlugs": [
     "intercom",
     "zendesk",

@@ -52,6 +52,96 @@
       "desc": "Large open-source low-code platform for internal applications and data sources."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Baserow Free",
+      "url": "https://baserow.io/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Tables become forms, pages, views, automations, and a small role-aware app without writing code.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Budibase",
+      "url": "https://budibase.com/",
+      "type": "open-source",
+      "repo": "https://github.com/Budibase/budibase",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Internal apps, forms, automations, and portals in one box; much closer to Knack than its developer branding suggests.",
+      "stars": 27902,
+      "lastCommit": "2026-07",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Joget Community Edition",
+      "url": "https://www.joget.org/",
+      "type": "open-source",
+      "repo": "https://github.com/jogetworkflow/jw-community",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "Forms, lists, workflows, and role-aware apps from a product old enough to have survived several no-code fashions.",
+      "stars": 607,
+      "lastCommit": "2026-05",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "NocoBase",
+      "url": "https://www.nocobase.com/",
+      "type": "open-source",
+      "repo": "https://github.com/nocobase/nocobase",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A database-backed app builder with pages, forms, roles, workflows, and enough plugins to become your next maintenance hobby.",
+      "stars": 23600,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "REI3",
+      "url": "https://rei3.de/",
+      "type": "open-source",
+      "repo": "https://github.com/r3-team/r3",
+      "platforms": [
+        "web",
+        "windows",
+        "linux",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "A sober business-app builder with forms, reports, roles, workflows, and no per-user meter.",
+      "stars": 571,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "AppSheet Free",
+      "url": "https://about.appsheet.com/",
+      "desc": "Free use is for prototyping and testing with ten users; deployment for real work starts on a paid plan."
+    }
+  ],
   "relatedSlugs": [
     "flutterflow",
     "retool",

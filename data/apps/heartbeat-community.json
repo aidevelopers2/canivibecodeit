@@ -53,6 +53,37 @@
       "desc": "Mature open-source community discussion platform with strong moderation and search."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Moodle",
+      "url": "https://moodle.org/",
+      "type": "open-source",
+      "repo": "https://github.com/moodle/moodle",
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "Courses, forums, events and completion rules in one mature system; it feels like a school because it is one.",
+      "stars": 7300,
+      "lastCommit": "2026-07",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "HumHub",
+      "url": "https://www.humhub.com/",
+      "desc": "Spaces, events and workflows are real, but courses and creator payments are not part of the free core."
+    },
+    {
+      "name": "Odoo Community",
+      "url": "https://www.odoo.com/",
+      "desc": "The required modules exist, but asking a member to join your ERP is not a community strategy."
+    }
+  ],
   "relatedSlugs": [
     "slack-pro",
     "discord-nitro",

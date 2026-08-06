@@ -50,6 +50,14 @@
       "desc": "Mature open-source research and citation manager."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Semantic Scholar",
+      "url": "https://www.semanticscholar.org",
+      "desc": "Free and useful, but it does not label citations as supporting or disputing the cited claim."
+    }
+  ],
   "relatedSlugs": [
     "scholarcy",
     "litmaps",

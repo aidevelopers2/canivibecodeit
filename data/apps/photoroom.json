@@ -52,6 +52,25 @@
       "desc": "Node-based open-source diffusion workflow engine with a large ecosystem."
     }
   ],
+  "alternatives": [
+    {
+      "name": "chaiNNer",
+      "url": "https://chainner.app/",
+      "type": "open-source",
+      "repo": "https://github.com/chaiNNer-org/chaiNNer",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "Batch background removal and repeatable compositing, without the product-photo hand-holding.",
+      "stars": 5959,
+      "lastCommit": "2026-07",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "ideogram",
     "recraft",

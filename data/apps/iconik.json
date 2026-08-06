@@ -57,6 +57,14 @@
       "status": "alive"
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "ResourceSpace",
+      "url": "https://www.resourcespace.com",
+      "desc": "A serious DAM, but it does not federate your NAS, LTO and cloud into Iconik’s one index."
+    }
+  ],
   "relatedSlugs": [
     "shade",
     "frame-io",

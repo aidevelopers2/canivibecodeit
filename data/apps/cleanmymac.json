@@ -50,6 +50,44 @@
       "desc": "Active open-source cross-platform text expansion utility with system integration."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Mole",
+      "url": "https://mole.fit/",
+      "type": "open-source",
+      "repo": "https://github.com/tw93/Mole",
+      "platforms": [
+        "macos",
+        "cli"
+      ],
+      "desc": "CleanMyMac in a terminal; previews, history, and zero pretty gauges.",
+      "stars": 61646,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "OnyX",
+      "url": "https://www.titanium-software.fr/en/onyx.html",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos"
+      ],
+      "desc": "Twenty-three years of cache cleaning and maintenance controls, with considerably less hand-holding.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Pearcleaner",
+      "url": "https://github.com/alienator88/Pearcleaner",
+      "desc": "Popular answer, but development is on hold indefinitely and the Commons Clause is not open source."
+    }
+  ],
   "relatedSlugs": [
     "alfred-powerpack",
     "setapp",

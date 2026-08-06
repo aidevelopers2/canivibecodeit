@@ -57,6 +57,114 @@
       "desc": "Local speech-to-text engine suitable for private transcription."
     }
   ],
+  "alternatives": [
+    {
+      "name": "ComfyUI",
+      "url": "https://comfy.org/",
+      "type": "open-source",
+      "repo": "https://github.com/Comfy-Org/ComfyUI",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "An enormous local animation toolbox disguised as a wiring diagram.",
+      "stars": 124207,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Draw Things",
+      "url": "https://drawthings.ai/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos",
+        "ios"
+      ],
+      "desc": "Free local video generation on Apple hardware; the edit and rhythm work remain yours.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "LTX Desktop",
+      "url": "https://ltx.io/ltx-desktop",
+      "type": "open-source",
+      "repo": "https://github.com/Lightricks/LTX-Desktop",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "A local generative video editor with a proper timeline; music-video polish still requires you to edit.",
+      "stars": 1854,
+      "lastCommit": "2026-07",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "NodeTool",
+      "url": "https://nodetool.ai/",
+      "type": "open-source",
+      "repo": "https://github.com/nodetool-ai/nodetool",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted",
+        "cli"
+      ],
+      "desc": "Video, images and audio share one node canvas and timeline; less cinematic magic, more reproducible plumbing.",
+      "stars": 450,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "SwarmUI",
+      "url": "https://swarmui.net/",
+      "type": "open-source",
+      "repo": "https://github.com/mcmonkeyprojects/SwarmUI",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "A simple local generation tab plus the full workflow graph when the music-video experiment gets complicated.",
+      "stars": 4423,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "WanGP",
+      "url": "https://wangp.ai/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted",
+        "cli"
+      ],
+      "desc": "Local image-to-video, text-to-video and effects across several models; the interface is practical, not arty.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "fliki",
     "deepbrain-ai",

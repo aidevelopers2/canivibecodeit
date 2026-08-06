@@ -53,6 +53,24 @@
       "desc": "Mature open-source RSS reader with feeds, filters, and self-hosting support."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Anki",
+      "url": "https://apps.ankiweb.net",
+      "desc": "Excellent spaced repetition, but it does not import a highlight archive and export it as notes."
+    },
+    {
+      "name": "Glasp",
+      "url": "https://glasp.co",
+      "desc": "The free daily review works, but free highlights are public; private mode is paid."
+    },
+    {
+      "name": "PastReads",
+      "url": "https://www.pastreads.com",
+      "desc": "Unlimited imports are free, but recaps and exports, the two jobs that matter here, are Pro."
+    }
+  ],
   "relatedSlugs": [
     "raindrop-io",
     "inoreader",

@@ -48,6 +48,79 @@
       "status": "alive"
     }
   ],
+  "alternatives": [
+    {
+      "name": "BrightBean Studio",
+      "url": "https://brightbean.xyz/studio/",
+      "type": "open-source",
+      "repo": "https://github.com/brightbeanxyz/brightbean-studio",
+      "platforms": [
+        "web",
+        "self-hosted",
+        "cli"
+      ],
+      "desc": "Draft and schedule threads for X and LinkedIn with analytics; the editor is less lovingly text-obsessed.",
+      "stars": 2100,
+      "lastCommit": "2026-07",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Buffer Free",
+      "url": "https://buffer.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "browser-extension"
+      ],
+      "desc": "X threads and LinkedIn posts with ten queued items per channel; eight lifetime channel connections is the fine print.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Fedica Free",
+      "url": "https://fedica.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "browser-extension"
+      ],
+      "desc": "Text-led cross-posting with ten live scheduled items; analytics are not Typefully-deep.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Postiz",
+      "url": "https://postiz.com/",
+      "type": "open-source",
+      "repo": "https://github.com/gitroomhq/postiz-app",
+      "platforms": [
+        "web",
+        "self-hosted",
+        "cli"
+      ],
+      "desc": "Threads, drafts, schedules and analytics across far more networks; operating it is the unlisted feature.",
+      "stars": 34300,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Typefully Free",
+      "url": "https://typefully.com/",
+      "desc": "The free tier is real, but useful scheduling capacity and analytics are too restricted to replace the paid product."
+    }
+  ],
   "relatedSlugs": [
     "beehiiv",
     "kit",
@@ -55,7 +128,7 @@
   ],
   "pagePriority": 5,
   "verifiedOneShot": false,
-  "notes": "The composer and queue are easy. The catch is X's API pricing — the write tier costs more than Typefully does. That's the moat: not code, a paywall.",
+  "notes": "The composer and queue are easy. The catch is X's API pricing; the write tier costs more than Typefully does. That's the moat: not code, a paywall.",
   "prompt": "Build me a tweet composer and scheduler like Typefully. Requirements:\n\n- A local web app: compose posts and threads with live character count per\n  post, split threads with \"---\", drag to reorder, image attachments, and a\n  clean distraction-free writing view with drafts autosaved to SQLite.\n- A queue: pick a time or \"next free slot\" (slots defined in a config file,\n  e.g. weekdays 9:00 and 16:00). Calendar-style queue view grouped by day.\n- Publishing via the X API v2 (keys in .env) · with an honest README section:\n  the free API tier is read-only; posting needs the paid tier, which costs\n  more than Typefully. Include a fallback \"copy thread to clipboard\" button\n  and a browser-notification reminder at slot time so the tool stays useful\n  without paying X anything.\n- A cron-style loop in the same process publishes due queue items and marks\n  results (posted / failed with error).\n- Single Node process, no accounts, runs on localhost or a VPS.",
   "promptCurated": true
 }

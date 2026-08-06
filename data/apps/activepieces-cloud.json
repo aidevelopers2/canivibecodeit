@@ -53,6 +53,29 @@
       "desc": "Active open-source automation platform with connectors and durable workflow execution."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Activepieces Free Cloud",
+      "url": "https://www.activepieces.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Managed Activepieces with ten free active flows and unlimited runs; team controls still cost money.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Activepieces Community Edition",
+      "url": "https://www.activepieces.com/open-source",
+      "desc": "The software is free; operating queues, databases, backups, and upgrades is precisely the job this app avoids."
+    }
+  ],
   "relatedSlugs": [
     "pipedream",
     "ifttt",

@@ -57,6 +57,24 @@
       "desc": "Open-source publishing and membership platform."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Ghost",
+      "url": "https://ghost.org",
+      "desc": "Membership posts are real; merchandise production, fulfilment and donations are entirely somebody else's problem."
+    },
+    {
+      "name": "Medusa",
+      "url": "https://medusajs.com",
+      "desc": "A backend developers can assemble into commerce, with no creator storefront, fulfilment network or painless setup."
+    },
+    {
+      "name": "WooCommerce",
+      "url": "https://woocommerce.com",
+      "desc": "A store, not a print-on-demand fulfilment service or creator membership platform; the missing half is the expensive half."
+    }
+  ],
   "relatedSlugs": [
     "ko-fi",
     "buy-me-a-coffee",

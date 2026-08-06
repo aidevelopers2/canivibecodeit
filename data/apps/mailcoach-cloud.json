@@ -57,6 +57,102 @@
       "desc": "Open-source marketing automation platform."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Brevo Free",
+      "url": "https://www.brevo.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Campaigns, transactional mail and automation with a strict daily send valve.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Loops Free",
+      "url": "https://loops.so/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Hosted lifecycle and transactional email with every feature for 1,000 contacts.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Mautic",
+      "url": "https://mautic.org/",
+      "type": "open-source",
+      "repo": "https://github.com/mautic/mautic",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Campaigns, automations, transactional sends and analytics without contact pricing; the stack is anything but lightweight.",
+      "stars": 10300,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Notifuse",
+      "url": "https://www.notifuse.com/",
+      "type": "open-source",
+      "repo": "https://github.com/Notifuse/notifuse",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Campaigns, transactional mail, visual automations and analytics in one current self-hosted product.",
+      "stars": 2038,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Plunk",
+      "url": "https://www.useplunk.com/",
+      "type": "open-source",
+      "repo": "https://github.com/useplunk/plunk",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "The same campaign-plus-transactional shape with workflow automation; Docker is the subscription.",
+      "stars": 5300,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Sender Free",
+      "url": "https://www.sender.net/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Hosted campaigns, transactional sends and workflows in one free account; advanced reporting is lighter.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "listmonk",
+      "url": "https://listmonk.app/",
+      "desc": "Campaigns and transactional API are excellent; the missing automation builder leaves a core job uncovered."
+    }
+  ],
   "relatedSlugs": [
     "bento",
     "customer-io",

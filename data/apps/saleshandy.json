@@ -54,6 +54,30 @@
       "desc": "Open-source marketing automation platform with campaigns, contacts, and email workflows."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Mautic",
+      "url": "https://mautic.org/",
+      "type": "open-source",
+      "repo": "https://github.com/mautic/mautic",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A campaign engine with reply, bounce and unsubscribe handling; conservative limits are yours to configure.",
+      "stars": 10300,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "listmonk",
+      "url": "https://listmonk.app/",
+      "desc": "A fine newsletter sender, but it does not watch replies and stop a sales sequence; wrong kind of email automation."
+    }
+  ],
   "relatedSlugs": [
     "apollo-io",
     "clay",

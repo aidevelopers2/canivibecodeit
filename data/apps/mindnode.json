@@ -49,6 +49,44 @@
       "desc": "Open-source diagram canvas with an approachable interaction model."
     }
   ],
+  "alternatives": [
+    {
+      "name": "AFFiNE",
+      "url": "https://affine.pro/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android"
+      ],
+      "desc": "Mind maps, outlines, tasks, tags, and presentation frames in one app; less Apple-native polish, much less Apple-only lock-in.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Freeplane",
+      "url": "https://www.freeplane.org/",
+      "type": "open-source",
+      "repo": "https://github.com/freeplane/freeplane",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "Deep local mind mapping, outlining, attributes, filters, and scripting; powerful in the way software with several decades of menus tends to be.",
+      "stars": 4275,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "simplemind",
     "excalidraw-plus",

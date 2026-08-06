@@ -57,6 +57,24 @@
       "desc": "Self-hosted social media management software."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Adobe Express Free",
+      "url": "https://www.adobe.com/express/",
+      "desc": "You can resize and edit formats manually, which is precisely the labour Repurpose.io sells away."
+    },
+    {
+      "name": "BrightBean Studio",
+      "url": "https://brightbean.xyz/studio/",
+      "desc": "A destination scheduler, not an automatic media-reformatting pipeline."
+    },
+    {
+      "name": "Postiz",
+      "url": "https://postiz.com/",
+      "desc": "It publishes existing media; it does not automatically transcode and reframe audio or video for every network."
+    }
+  ],
   "relatedSlugs": [
     "taplio",
     "tweet-hunter",

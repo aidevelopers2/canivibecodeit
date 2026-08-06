@@ -56,6 +56,29 @@
       "desc": "Widely used local Stable Diffusion interface and extension ecosystem."
     }
   ],
+  "alternatives": [
+    {
+      "name": "ArtBot",
+      "url": "https://artbot.site/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Multiple models, free volunteer compute and a public showcase; contests and gamified credits are absent.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Civitai",
+      "url": "https://civitai.com/",
+      "desc": "The obvious community match; hosted generation runs on Buzz, so free use is an earnable allowance, not an unlimited replacement."
+    }
+  ],
   "relatedSlugs": [
     "dreamstudio",
     "krea",

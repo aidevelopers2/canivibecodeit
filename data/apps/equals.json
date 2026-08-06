@@ -52,6 +52,34 @@
       "desc": "Active open-source no-code database interface and Airtable alternative."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Quadratic Personal",
+      "url": "https://www.quadratichq.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "A spreadsheet that can query databases and run Python or JavaScript, without pretending every analysis is a dashboard.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Grist",
+      "url": "https://www.getgrist.com/",
+      "desc": "A strong relational spreadsheet, but it does not natively query a live database into an analysis workbook."
+    },
+    {
+      "name": "NocoDB Community",
+      "url": "https://nocodb.com/",
+      "desc": "A database grid, not a spreadsheet analysis workbook; it edits records rather than modelling them."
+    }
+  ],
   "relatedSlugs": [
     "baserow-cloud",
     "nocodb-cloud",

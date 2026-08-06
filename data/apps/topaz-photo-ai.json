@@ -57,6 +57,29 @@
       "desc": "Self-hosted photo organization and search."
     }
   ],
+  "alternatives": [
+    {
+      "name": "QualityScaler",
+      "url": "https://github.com/Djdefrag/QualityScaler",
+      "type": "open-source",
+      "repo": "https://github.com/Djdefrag/QualityScaler",
+      "platforms": [
+        "windows"
+      ],
+      "desc": "A packaged local Windows app for AI upscaling, denoise, and enhancement, including batch work; narrower and less polished than Topaz.",
+      "stars": 3100,
+      "lastCommit": "2026-03",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Upscayl",
+      "url": "https://upscayl.org/",
+      "desc": "Excellent free upscaling and sharpening, but no integrated RAW recovery or serious denoise workflow; one feature is not the whole product."
+    }
+  ],
   "relatedSlugs": [
     "sketch",
     "kittl",

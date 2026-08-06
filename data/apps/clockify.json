@@ -53,6 +53,40 @@
       "desc": "Mature open-source time-tracking application with projects, reports, and exports."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Kimai",
+      "url": "https://www.kimai.org/",
+      "type": "open-source",
+      "repo": "https://github.com/kimai/kimai",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Timesheets, rates, reports and invoices are all there; approvals need its free plugin and the server still needs an adult.",
+      "stars": 4900,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "My Hours Free",
+      "url": "https://myhours.com/",
+      "desc": "The free tier covers timers and basic reports; approvals, billable rates and invoicing are paid."
+    },
+    {
+      "name": "TimeCamp Free",
+      "url": "https://www.timecamp.com/",
+      "desc": "Unlimited tracking is free, but entry approvals are reserved for the Ultimate plan."
+    },
+    {
+      "name": "Toggl Track Free",
+      "url": "https://toggl.com/track/",
+      "desc": "Timer and reports are free; timesheet approvals are paid."
+    }
+  ],
   "relatedSlugs": [
     "toggl-track",
     "harvest",

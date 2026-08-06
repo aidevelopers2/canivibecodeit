@@ -52,6 +52,31 @@
       "desc": "Mature open-source collaborative design platform with SVG-native editing."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Lumi H5P Desktop Editor",
+      "url": "https://lumi.education/en/lumi-h5p-offline-desktop-editor/",
+      "type": "open-source",
+      "repo": "https://github.com/Lumieducation/Lumi",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "An installable H5P authoring app for hotspots, branching slides, interactive video, and simple games; distinctly education-shaped, but real.",
+      "stars": 190,
+      "lastCommit": "2026-05",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Penpot",
+      "url": "https://penpot.app/",
+      "desc": "It can draw the screens, but it does not publish the hotspot-heavy interactive presentation Genially is actually hired for."
+    }
+  ],
   "relatedSlugs": [
     "kittl",
     "pitch",

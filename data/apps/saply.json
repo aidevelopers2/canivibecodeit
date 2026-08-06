@@ -56,6 +56,30 @@
       "desc": "Open-source LLM resume tailoring, job matching, template editing, and PDF export."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Resume Matcher",
+      "url": "https://www.resumematcher.fyi/",
+      "type": "open-source",
+      "repo": "https://github.com/srbhr/Resume-Matcher",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Upload a master CV, paste a job ad, get a tailored PDF; the staffing dashboard is what you do not get.",
+      "stars": 25000,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Reactive Resume",
+      "url": "https://rxresu.me/",
+      "desc": "Excellent formatter; it does not match candidates to jobs or run staffing workflows."
+    }
+  ],
   "relatedSlugs": [
     "grammarly",
     "quillbot",

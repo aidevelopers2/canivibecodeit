@@ -58,6 +58,25 @@
       "desc": "Local speech-to-text engine suitable for private transcription."
     }
   ],
+  "alternatives": [
+    {
+      "name": "DUIX Avatar",
+      "url": "https://www.duix.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "Local cloned-presenter videos with multilingual speech; no stock cast, team templates or enterprise workflow layer.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "vidnoz",
     "murf",

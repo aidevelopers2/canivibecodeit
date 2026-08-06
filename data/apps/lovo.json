@@ -53,6 +53,58 @@
       "desc": "Active community continuation of the fast local Piper text-to-speech engine."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Balabolka",
+      "url": "https://www.cross-plus-a.com/balabolka.htm",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "windows"
+      ],
+      "desc": "Paste a script, choose a Windows voice, export MP3; the interface peaked before subscriptions did.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "TTS WebUI",
+      "url": "https://ttswebui.com/",
+      "type": "open-source",
+      "repo": "https://github.com/rsxdalv/TTS-WebUI",
+      "platforms": [
+        "windows"
+      ],
+      "desc": "A Windows voice lab with cloning, generation and a project-like audio library; polished is not the word.",
+      "stars": 3200,
+      "lastCommit": "2026-03",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Voicebox",
+      "url": "https://voicebox.sh/",
+      "type": "open-source",
+      "repo": "https://github.com/jamiepine/voicebox",
+      "platforms": [
+        "macos",
+        "windows"
+      ],
+      "desc": "Clone or choose a local voice, feed it a script and export long-form audio; the Mac build may need a Gatekeeper nudge.",
+      "stars": 49500,
+      "lastCommit": "2026-06",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "AllTalk TTS",
+      "url": "https://github.com/erew123/alltalk_tts",
+      "desc": "Frequently recommended, but the current path is a beta branch and installation remains a developer exercise."
+    }
+  ],
   "relatedSlugs": [
     "speechify",
     "synthesia",

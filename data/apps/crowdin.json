@@ -53,6 +53,8 @@
       "desc": "Active open-source localization platform with translation memory and in-context tooling."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "lokalise",
     "weglot",

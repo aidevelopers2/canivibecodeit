@@ -26,7 +26,7 @@ const more = known.length - chips.length;
         <span class="microlabel">last week:</span>
         {chips.map((c) => (
           <span class={`verdict-chip ${c.verdict}`}>
-            <i></i>{c.name} — {VERDICTS[c.verdict].label}
+            <i></i>{c.name} · {VERDICTS[c.verdict].label}
           </span>
         ))}
         {more > 0 && <span class="more">+{more} more</span>}

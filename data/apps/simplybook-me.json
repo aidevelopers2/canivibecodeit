@@ -50,6 +50,68 @@
       "desc": "Mature open-source scheduling platform and OAuth reference."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Appointy Free",
+      "url": "https://www.appointy.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "One staffer gets reminders, classes and Square checkout for 100 bookings a month; growth wakes the paywall.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Setmore Free",
+      "url": "https://www.setmore.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "Four staff, payments, classes and 200 monthly bookings; SMS, recurring appointments and two-way sync cost extra.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Square Appointments Free",
+      "url": "https://squareup.com/us/en/appointments",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "A serious free solo booking stack where Square operates; processing fees remain and the feature mix varies by country.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Picktime Free",
+      "url": "https://www.picktime.com/",
+      "desc": "The free plan loses reminders, custom fields and the add-on depth SimplyBook.me is bought for."
+    },
+    {
+      "name": "Reservio Free",
+      "url": "https://www.reservio.com/",
+      "desc": "Forty monthly bookings and no calendar sync is a test account, not a booking business."
+    }
+  ],
   "relatedSlugs": [
     "zoho-bookings",
     "doodle",

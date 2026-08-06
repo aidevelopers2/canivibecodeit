@@ -52,6 +52,44 @@
       "desc": "Active community continuation of the fast local Piper text-to-speech engine."
     }
   ],
+  "alternatives": [
+    {
+      "name": "TTS WebUI",
+      "url": "https://ttswebui.com/",
+      "type": "open-source",
+      "repo": "https://github.com/rsxdalv/TTS-WebUI",
+      "platforms": [
+        "windows"
+      ],
+      "desc": "A sprawling local voice studio with an installer and saved generations; expect knobs, not onboarding.",
+      "stars": 3200,
+      "lastCommit": "2026-03",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Voicebox",
+      "url": "https://voicebox.sh/",
+      "type": "open-source",
+      "repo": "https://github.com/jamiepine/voicebox",
+      "platforms": [
+        "macos",
+        "windows"
+      ],
+      "desc": "Voice profiles, long-form generation and a multi-track story editor in one local app; collaboration is absent.",
+      "stars": 49500,
+      "lastCommit": "2026-06",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "AllTalk TTS",
+      "url": "https://github.com/erew123/alltalk_tts",
+      "desc": "Plenty of voice controls, but no finished installer and a stale default branch put it below the bar."
+    }
+  ],
   "relatedSlugs": [
     "speechify",
     "synthesia",

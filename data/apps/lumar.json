@@ -52,6 +52,93 @@
       "desc": "Open-source technical SEO auditing application."
     }
   ],
+  "alternatives": [
+    {
+      "name": "CrawlSEO",
+      "url": "https://github.com/crawlseo/crawlseo",
+      "type": "open-source",
+      "repo": "https://github.com/crawlseo/crawlseo",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Rankings, crawl history and alerts in one dashboard; free code, but Google OAuth and Postgres make setup a small infrastructure hobby.",
+      "stars": 507,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Crawly",
+      "url": "https://www.getcrawly.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos"
+      ],
+      "desc": "A native Mac crawler with unlimited pages and crawl diffs; Windows users are invited to admire it from afar.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "FreeCrawl",
+      "url": "https://freecrawl.net/",
+      "type": "open-source",
+      "repo": "https://github.com/kemalai/FreeCrawl-SEO-Tool",
+      "platforms": [
+        "windows",
+        "macos",
+        "linux",
+        "cli"
+      ],
+      "desc": "A young but finished desktop crawler with 200 checks, project diffs and every export in the cupboard; the star count has not caught up yet.",
+      "stars": 87,
+      "lastCommit": "2026-07",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "SEOnaut",
+      "url": "https://seonaut.org/",
+      "type": "open-source",
+      "repo": "https://github.com/StJudeWasHere/seonaut",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A no-frills crawler that stores audits and sorts broken SEO plumbing by severity; bring Docker and MySQL.",
+      "stars": 751,
+      "lastCommit": "2026-05",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "SiteOne Crawler",
+      "url": "https://crawler.siteone.io/",
+      "type": "open-source",
+      "repo": "https://github.com/janreges/siteone-crawler",
+      "platforms": [
+        "windows",
+        "macos",
+        "linux",
+        "cli"
+      ],
+      "desc": "A proper desktop crawler with reports and a fix-first queue; no server, no URL tax, no frog.",
+      "stars": 841,
+      "lastCommit": "2026-06",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "RustySEO",
+      "url": "https://www.rustyseo.com/",
+      "desc": "Busy and promising, but still v0.3.9, unsigned, and its own README says it is new, buggy and use-at-your-own-risk."
+    }
+  ],
   "relatedSlugs": [
     "screaming-frog-seo-spider",
     "sitebulb",

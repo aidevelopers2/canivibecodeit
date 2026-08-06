@@ -53,6 +53,72 @@
       "desc": "Mature open-source customer engagement and shared-inbox platform."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Chatwoot",
+      "url": "https://www.chatwoot.com/",
+      "type": "open-source",
+      "repo": "https://github.com/chatwoot/chatwoot",
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "A proper support inbox with chat, email and a help center; free software, billable server chores.",
+      "stars": 35534,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "FreeScout",
+      "url": "https://freescout.net/",
+      "type": "open-source",
+      "repo": "https://github.com/freescout-help-desk/freescout",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Email becomes an assigned team inbox with notes and collision warnings; the nicer modules open a wallet.",
+      "stars": 4400,
+      "lastCommit": "2026-07",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "HubSpot Free CRM",
+      "url": "https://www.hubspot.com/products/crm/conversations",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "A two-seat shared inbox and live chat bolted to a CRM; free until the limits become colleagues.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Zammad",
+      "url": "https://zammad.org/",
+      "type": "open-source",
+      "repo": "https://github.com/zammad/zammad",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A serious ticket desk with email, chat, SLAs and a knowledge base; setup is the first ticket.",
+      "stars": 5800,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "intercom",
     "zendesk",

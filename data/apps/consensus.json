@@ -51,6 +51,23 @@
       "desc": "Mature open-source research and citation manager."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Ai2 Asta",
+      "url": "https://asta.allen.ai",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Ask a scientific question and get a cited mini-review instead of a confidence meter.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "scite",
     "scholarcy",

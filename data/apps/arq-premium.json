@@ -56,6 +56,24 @@
       "desc": "Encrypted backup client for local and cloud targets."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Backrest",
+      "url": "https://garethgeorge.github.io/backrest/",
+      "desc": "A polished restic front end with retention and checks, but no bundled storage whatsoever."
+    },
+    {
+      "name": "Duplicati",
+      "url": "https://duplicati.com/",
+      "desc": "The backup client is free; the destination capacity is still a separate bill."
+    },
+    {
+      "name": "Kopia",
+      "url": "https://kopia.io/",
+      "desc": "A first-rate encrypted backup app; it does not include the cloud storage Arq Premium bundles."
+    }
+  ],
   "relatedSlugs": [
     "malwarebytes",
     "intego",

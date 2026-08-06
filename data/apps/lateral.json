@@ -50,6 +50,54 @@
       "desc": "Mature open-source research and citation manager."
     }
   ],
+  "alternatives": [
+    {
+      "name": "CADIMA",
+      "url": "https://www.cadima.info/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "A sober evidence-organizing workflow for literature reviews, without the AI garnish.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "NotebookLM",
+      "url": "https://notebooklm.google.com",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "Read, compare and question a paper set with citations; screening remains manual.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Open Notebook",
+      "url": "https://www.open-notebook.ai",
+      "type": "open-source",
+      "repo": "https://github.com/lfnovo/open-notebook",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Sources, notes, search and grounded chat in one self-hosted notebook.",
+      "stars": 36400,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "recall",
     "matter",

@@ -55,6 +55,115 @@
       "desc": "Open-source terminal coding agent with repository-aware edits."
     }
   ],
+  "alternatives": [
+    {
+      "name": "GitButler",
+      "url": "https://gitbutler.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "A modern visual Git client; free forever, source-visible, and deliberately not open source.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "GitHub Desktop",
+      "url": "https://desktop.github.com/",
+      "type": "open-source",
+      "repo": "https://github.com/desktop/desktop",
+      "platforms": [
+        "macos",
+        "windows"
+      ],
+      "desc": "A calm visual Git client that stops before workspaces become a product category.",
+      "stars": 21732,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Gitnuro",
+      "url": "https://gitnuro.com/",
+      "type": "open-source",
+      "repo": "https://github.com/JetpackDuba/Gitnuro",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "A cross-platform Git GUI with no account and no upsell.",
+      "stars": 2700,
+      "lastCommit": "2026-06",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Lazygit",
+      "url": "https://lazygit.dev/",
+      "type": "open-source",
+      "repo": "https://github.com/jesseduffield/lazygit",
+      "platforms": [
+        "cli",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "Git's common chores in a terminal UI; mouse polish not included.",
+      "stars": 78000,
+      "lastCommit": "2026-05",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "SourceGit",
+      "url": "https://sourcegit-scm.github.io/",
+      "type": "open-source",
+      "repo": "https://github.com/sourcegit-scm/sourcegit",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "A small cross-platform Git GUI that mostly minds its own business.",
+      "stars": 5700,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Sourcetree",
+      "url": "https://www.sourcetreeapp.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos",
+        "windows"
+      ],
+      "desc": "Atlassian's free Git GUI; less polish than Tower, same branches.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Aider",
+      "url": "https://aider.chat/",
+      "desc": "A coding agent that uses Git, not a Git client."
+    },
+    {
+      "name": "Continue",
+      "url": "https://continue.dev/",
+      "desc": "An archived coding-agent extension, not a native visual Git client."
+    }
+  ],
   "relatedSlugs": [
     "windsurf",
     "tabnine",

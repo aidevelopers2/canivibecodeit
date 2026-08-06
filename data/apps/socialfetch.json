@@ -46,6 +46,14 @@
       "desc": "open-source media/metadata extraction for some platforms · not a multi-platform profile API"
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "yt-dlp",
+      "url": "https://github.com/yt-dlp/yt-dlp",
+      "desc": "A superb downloader CLI, not a REST API spanning profiles, posts and engagement across twenty platforms."
+    }
+  ],
   "relatedSlugs": [
     "bardeen",
     "zapier",

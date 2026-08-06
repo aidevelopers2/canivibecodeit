@@ -53,6 +53,99 @@
       "desc": "Active open-source commerce platform with modular checkout and fulfillment primitives."
     }
   ],
+  "alternatives": [
+    {
+      "name": "CourseLit",
+      "url": "https://courselit.app",
+      "type": "open-source",
+      "repo": "https://github.com/codelitdev/courselit",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Download sales and payment pages without a platform cut; email, storage and tax administration remain on your list.",
+      "stars": 1200,
+      "lastCommit": "2026-07",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Easy Digital Downloads",
+      "url": "https://easydigitaldownloads.com",
+      "type": "open-source",
+      "repo": "https://github.com/awesomemotive/easy-digital-downloads",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A free WordPress download shop using ordinary payment gateways; tax remittance remains your character-building exercise.",
+      "stars": 893,
+      "lastCommit": "2026-07",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "systeme.io",
+      "url": "https://systeme.io",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Digital products, hosted checkout and delivery on a permanent free plan; taxes stay emphatically yours.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Vvveb",
+      "url": "https://www.vvveb.com",
+      "type": "open-source",
+      "repo": "https://github.com/givanz/Vvveb",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Digital products, licence files and checkout in one self-hosted shop; it will not remit taxes or run itself.",
+      "stars": 1200,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "WooCommerce",
+      "url": "https://woocommerce.com",
+      "type": "open-source",
+      "repo": "https://github.com/woocommerce/woocommerce",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A user-owned digital storefront with no merchant-of-record magic and no platform rent.",
+      "stars": 10400,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "FOSSBilling",
+      "url": "https://fossbilling.org",
+      "desc": "Downloads, licences and billing fit, but the maintainers still call it beta and warn about rough edges."
+    },
+    {
+      "name": "Medusa",
+      "url": "https://medusajs.com",
+      "desc": "A developer commerce platform, not a finished digital-product checkout and delivery product."
+    },
+    {
+      "name": "Polar",
+      "url": "https://polar.sh",
+      "desc": "The hosted version charges 5% plus 50 cents per sale; the free self-hosted route is built for developers."
+    }
+  ],
   "relatedSlugs": [
     "gumroad",
     "paddle",

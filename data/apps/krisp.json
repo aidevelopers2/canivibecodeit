@@ -48,6 +48,37 @@
       "status": "alive"
     }
   ],
+  "alternatives": [
+    {
+      "name": "EasyEffects",
+      "url": "https://wwmm.github.io/easyeffects/",
+      "type": "open-source",
+      "repo": "https://github.com/wwmm/easyeffects",
+      "platforms": [
+        "linux"
+      ],
+      "desc": "Krisp for Linux tinkerers: system-wide cleanup, zero magic account, several knobs.",
+      "stars": 9500,
+      "lastCommit": "2026-07",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "NVIDIA Broadcast",
+      "url": "https://www.nvidia.com/en-us/geforce/broadcasting/broadcast-app/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "windows"
+      ],
+      "desc": "Excellent noise removal, free in money and expensive in RTX silicon.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "superwhisper",
     "descript",

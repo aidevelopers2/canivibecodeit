@@ -55,6 +55,64 @@
       "desc": "Self-hosted photo organization and search."
     }
   ],
+  "alternatives": [
+    {
+      "name": "darktable",
+      "url": "https://www.darktable.org/",
+      "type": "open-source",
+      "repo": "https://github.com/darktable-org/darktable",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "Catalog, RAW development, masks, effects, lens profiles, and batch export in one mature desktop app; expect knobs, many knobs.",
+      "stars": 12900,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "digiKam",
+      "url": "https://www.digikam.org/",
+      "type": "open-source",
+      "repo": "https://invent.kde.org/graphics/digikam",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "A formidable local catalog with RAW import, ratings, tags, duplicates, batch tools, and an editor; prettier workflows were not invited.",
+      "stars": 32,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "RapidRAW",
+      "url": "https://www.getrapidraw.com/",
+      "type": "open-source",
+      "repo": "https://github.com/CyberTimon/RapidRAW",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux",
+        "android"
+      ],
+      "desc": "A friendlier new RAW editor with a library, ratings, culling, masks, presets, and denoise; not yet as deep or proven.",
+      "stars": 9200,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "PhotoPrism",
+      "url": "https://www.photoprism.app/",
+      "desc": "Good server-side catalog, weak replacement for a desktop RAW editor with masking, effects, and production exports."
+    }
+  ],
   "relatedSlugs": [
     "dxo-photolab",
     "topaz-photo-ai",

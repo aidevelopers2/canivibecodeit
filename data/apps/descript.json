@@ -51,6 +51,31 @@
       "status": "alive"
     }
   ],
+  "alternatives": [
+    {
+      "name": "Kdenlive",
+      "url": "https://kdenlive.org",
+      "type": "open-source",
+      "repo": "https://github.com/KDE/kdenlive",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "A real editor with local transcription and transcript-based cutting; the AI copywriter did not come along.",
+      "stars": 5400,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "whisper.cpp",
+      "url": "https://github.com/ggml-org/whisper.cpp",
+      "desc": "Excellent transcription engine; entirely missing the finished audio-and-video editor around it."
+    }
+  ],
   "relatedSlugs": [
     "loom",
     "tella",

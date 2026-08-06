@@ -55,6 +55,14 @@
       "desc": "Lightweight self-hosted web analytics."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Matomo",
+      "url": "https://matomo.org",
+      "desc": "Covers analytics, tag management and consent, but not Piwik PRO's integrated customer-data activation layer."
+    }
+  ],
   "relatedSlugs": [
     "gosquared",
     "woopra",

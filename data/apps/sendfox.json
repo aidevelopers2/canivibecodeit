@@ -57,6 +57,80 @@
       "desc": "Open-source marketing automation platform."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Brevo Free",
+      "url": "https://www.brevo.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Campaigns, forms and automation with a 300-message daily speed governor.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "EmailOctopus Free",
+      "url": "https://emailoctopus.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Simple broadcasts, forms and three short automations; enough for a modest creator list.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Kit Free",
+      "url": "https://kit.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Unlimited sends, landing pages and one sequence for 10,000 subscribers; creator features are stronger.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Mautic",
+      "url": "https://mautic.org/",
+      "type": "open-source",
+      "repo": "https://github.com/mautic/mautic",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Broadcasts and automations with no contact cap; the server stack is wildly less simple.",
+      "stars": 10300,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Sender Free",
+      "url": "https://www.sender.net/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Broadcasts, landing pages and unlimited workflows in a generous free plan; Smart campaigns become ordinary automations.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "mailcoach-cloud",
     "bento",

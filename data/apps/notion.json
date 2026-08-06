@@ -53,6 +53,68 @@
       "status": "alive"
     }
   ],
+  "alternatives": [
+    {
+      "name": "AFFiNE",
+      "url": "https://affine.pro",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "Notion and Miro had one child, then let it keep files locally.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "AppFlowy",
+      "url": "https://appflowy.com",
+      "type": "open-source",
+      "repo": "https://github.com/AppFlowy-IO/AppFlowy",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "Notion, except the useful copy can live on your machine.",
+      "stars": 74999,
+      "lastCommit": "2026-07",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "SiYuan",
+      "url": "https://b3log.org/siyuan/",
+      "type": "open-source",
+      "repo": "https://github.com/siyuan-note/siyuan",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux",
+        "android",
+        "self-hosted",
+        "browser-extension"
+      ],
+      "desc": "Blocks, databases and relations with local storage and considerably more exposed wiring.",
+      "stars": 45647,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "evernote",
     "obsidian-sync",

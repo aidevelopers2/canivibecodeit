@@ -53,6 +53,24 @@
       "desc": "Mature open-source scheduling platform with calendar integrations and booking workflows."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Cal.com Free",
+      "url": "https://cal.com/",
+      "desc": "The free plan is one user; round-robin, routing forms and managed team events start on Teams."
+    },
+    {
+      "name": "Cal.diy",
+      "url": "https://www.cal.diy/",
+      "desc": "The 2026 open-source fork deliberately removed Teams, Organizations, Workflows and enterprise routing."
+    },
+    {
+      "name": "zcal Free",
+      "url": "https://zcal.co/",
+      "desc": "Solo scheduling is lavishly free; team creation, round-robin and collective routing are Pro."
+    }
+  ],
   "relatedSlugs": [
     "fantastical",
     "tidycal",

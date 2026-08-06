@@ -53,6 +53,55 @@
       "status": "alive"
     }
   ],
+  "alternatives": [
+    {
+      "name": "Fibery Free",
+      "url": "https://fibery.io/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "browser-extension"
+      ],
+      "desc": "Coda for ten people, with relational docs and 250 automations before the bill exists.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Superhuman Docs Free",
+      "url": "https://superhuman.com/docs",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "ios",
+        "android"
+      ],
+      "desc": "Coda is now Superhuman Docs; the free plan still has collaborative docs, connected tables, forms, formulas, and automations.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "AFFiNE",
+      "url": "https://affine.pro/",
+      "desc": "A capable local-first document workspace, but it does not replace Coda's formulas, automations, Packs, or mini-apps."
+    },
+    {
+      "name": "AppFlowy",
+      "url": "https://appflowy.com/",
+      "desc": "A polished local-first Notion clone, not a Coda replacement: no comparable formulas, Packs, automations, or app layer."
+    }
+  ],
   "relatedSlugs": [
     "tally",
     "typeform",

@@ -52,6 +52,24 @@
       "desc": "Popular open-source mail-server suite that demonstrates the operational complexity of hosted mail."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "eM Client Free",
+      "url": "https://www.emclient.com/",
+      "desc": "The free license excludes business use and charges for snooze and send-later."
+    },
+    {
+      "name": "Mailspring",
+      "url": "https://www.getmailspring.com/",
+      "desc": "The cross-platform client is real; the three Newton-style workflow features are paid or metered."
+    },
+    {
+      "name": "Spark Free",
+      "url": "https://sparkmailapp.com/",
+      "desc": "Snooze and send-later are free, but read receipts sit on a paid plan."
+    }
+  ],
   "relatedSlugs": [
     "superhuman",
     "front",

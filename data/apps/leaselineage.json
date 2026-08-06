@@ -51,6 +51,8 @@
       "status": "alive"
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "mailchimp",
     "hey-email"

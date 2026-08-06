@@ -54,6 +54,102 @@
       "desc": "Active open-source commerce platform with modular checkout and fulfillment primitives."
     }
   ],
+  "alternatives": [
+    {
+      "name": "OpenCart",
+      "url": "https://www.opencart.com",
+      "type": "open-source",
+      "repo": "https://github.com/opencart/opencart",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A complete catalog and checkout instead of a small one; free software, paid server chores.",
+      "stars": 8174,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Square Online",
+      "url": "https://squareup.com/us/en/online-store",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "A free hosted catalog with unlimited products and checkout; it is Square Checkout, not Stripe Checkout.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Square Payment Links",
+      "url": "https://squareup.com/us/en/payment-links/buy-button",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Embeddable buy buttons and hosted checkout with no monthly bill; country availability is the catch.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Stripe Payment Links",
+      "url": "https://stripe.com/payments/payment-links",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "A tiny product catalog with hosted Stripe checkout; no monthly fee, only ordinary payment processing.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Vvveb",
+      "url": "https://www.vvveb.com",
+      "type": "open-source",
+      "repo": "https://github.com/givanz/Vvveb",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A visual catalog, checkout and order desk in one install; much more shop than this brief requires.",
+      "stars": 1200,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "WooCommerce",
+      "url": "https://woocommerce.com",
+      "type": "open-source",
+      "repo": "https://github.com/woocommerce/woocommerce",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A full WordPress shop for a brief that only asked for a catalog; overkill is still a replacement.",
+      "stars": 10400,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Medusa",
+      "url": "https://medusajs.com",
+      "desc": "A useful commerce backend for developers, not a catalog-and-checkout product a normal merchant can adopt."
+    }
+  ],
   "relatedSlugs": [
     "gumroad",
     "lemon-squeezy",

@@ -52,6 +52,73 @@
       "desc": "Active open-source self-hosting platform for applications, databases, and services."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Appwrite",
+      "url": "https://appwrite.io/",
+      "type": "open-source",
+      "repo": "https://github.com/appwrite/appwrite",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Auth, database, storage, realtime, and functions behind one polished console; the Compose file is doing a lot.",
+      "stars": 56789,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Nhost",
+      "url": "https://nhost.io/",
+      "type": "open-source",
+      "repo": "https://github.com/nhost/nhost",
+      "platforms": [
+        "web",
+        "self-hosted",
+        "cli"
+      ],
+      "desc": "Postgres plus GraphQL, auth, storage, functions, and realtime; closer to Firebase than most Firebase alternatives.",
+      "stars": 9266,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "PocketBase",
+      "url": "https://pocketbase.io/",
+      "type": "open-source",
+      "repo": "https://github.com/pocketbase/pocketbase",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "For one modest app, a single local binary covers data, auth, files, realtime, and an admin UI; functions are the missing piece.",
+      "stars": 58600,
+      "lastCommit": "2026-05",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Supabase",
+      "url": "https://supabase.com/",
+      "type": "open-source",
+      "repo": "https://github.com/supabase/supabase",
+      "platforms": [
+        "web",
+        "self-hosted",
+        "cli"
+      ],
+      "desc": "A local, self-hosted backend with emulators-by-Docker: database, auth, storage, realtime, functions, and APIs.",
+      "stars": 107608,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "vercel",
     "railway",

@@ -53,6 +53,43 @@
       "desc": "Large open-source low-code platform for internal applications and data sources."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Nordcraft Free",
+      "url": "https://nordcraft.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "A responsive visual frontend over REST or GraphQL with components and workflows; free publishing keeps the badge and subdomain.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "WeWeb Free",
+      "url": "https://www.weweb.io/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "The same visual frontend builder publishes unlimited branded apps on its own subdomain for free, with APIs, components, and workflows.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Webstudio",
+      "url": "https://webstudio.is/",
+      "desc": "An excellent visual site and CMS builder, but not an application frontend with event workflows."
+    }
+  ],
   "relatedSlugs": [
     "flutterflow",
     "retool",

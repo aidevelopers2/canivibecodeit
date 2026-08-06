@@ -50,6 +50,23 @@
       "desc": "Active open-source cross-platform text expansion utility with system integration."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Forel",
+      "url": "https://forel-app.github.io/",
+      "type": "open-source",
+      "repo": "https://github.com/lab421/forel",
+      "platforms": [
+        "macos"
+      ],
+      "desc": "Hazel's folder rules, previews, history, and Finder tags, fresh enough that the paint is still wet.",
+      "stars": 275,
+      "lastCommit": "2026-07",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "alfred-powerpack",
     "setapp",

@@ -51,6 +51,8 @@
       "status": "alive"
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "xero",
     "quickbooks-online",

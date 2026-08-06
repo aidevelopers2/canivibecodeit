@@ -51,6 +51,31 @@
       "desc": "Open-source non-linear video editor."
     }
   ],
+  "alternatives": [
+    {
+      "name": "VDO.Ninja",
+      "url": "https://vdo.ninja",
+      "type": "open-source",
+      "repo": "https://github.com/steveseguin/vdo.ninja",
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "A browser studio that records isolated tracks; cloud backup means your Drive, not theirs.",
+      "stars": 4500,
+      "lastCommit": "2026-08",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Ennuicastr",
+      "url": "https://ecastr.com",
+      "desc": "The client code is open; the hosted recorder charges by the hour and the server is not yours to install."
+    }
+  ],
   "relatedSlugs": [
     "podcastle",
     "alitu",

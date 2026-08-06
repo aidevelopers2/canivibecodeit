@@ -50,6 +50,58 @@
       "status": "alive"
     }
   ],
+  "alternatives": [
+    {
+      "name": "AnythingLLM",
+      "url": "https://anythingllm.com/",
+      "type": "open-source",
+      "repo": "https://github.com/Mintplex-Labs/anything-llm",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "A local-first AI desk with reusable agents, documents, memory, and workflows; less campaign theatre, more settings.",
+      "stars": 64416,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Jan",
+      "url": "https://jan.ai/",
+      "type": "open-source",
+      "repo": "https://github.com/janhq/jan",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "A desktop ChatGPT-shaped box with local models and reusable assistants; excellent at prompts, blissfully unaware of your marketing calendar.",
+      "stars": 43900,
+      "lastCommit": "2026-07",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Open WebUI",
+      "url": "https://openwebui.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A self-hosted AI workbench with saved prompts, knowledge, web search, and multi-model comparison; powerful, not especially house-trained.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "quillbot",
     "grammarly",

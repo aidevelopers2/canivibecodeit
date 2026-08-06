@@ -51,6 +51,24 @@
       "status": "alive"
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Bitwarden Free",
+      "url": "https://bitwarden.com/pricing/",
+      "desc": "Autofill, passkeys, and one-person sharing are free; the full security-report layer is paid."
+    },
+    {
+      "name": "Proton Pass Free",
+      "url": "https://proton.me/pass",
+      "desc": "Passkeys and weak-password alerts are free; secure sharing and dark-web monitoring are paid."
+    },
+    {
+      "name": "Vaultwarden",
+      "url": "https://github.com/dani-garcia/vaultwarden",
+      "desc": "Autofill, passkeys, sharing, and reports are there; managed breach alerts are not a finished replacement."
+    }
+  ],
   "relatedSlugs": [
     "hey-email",
     "1password",

@@ -57,6 +57,24 @@
       "desc": "Open-source terminal coding agent with repository-aware edits."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Aider",
+      "url": "https://aider.chat/",
+      "desc": "A repository editor, not a GitLab-native review, security and lifecycle assistant."
+    },
+    {
+      "name": "Continue",
+      "url": "https://continue.dev/",
+      "desc": "Acquired and read-only, and it never replaced GitLab's security and lifecycle integration."
+    },
+    {
+      "name": "Kilo Code",
+      "url": "https://kilo.ai/",
+      "desc": "It covers coding assistance, not GitLab-native security, review and lifecycle workflows."
+    }
+  ],
   "relatedSlugs": [
     "pieces",
     "warp",

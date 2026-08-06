@@ -56,6 +56,39 @@
       "desc": "Open-source web-builder framework."
     }
   ],
+  "alternatives": [
+    {
+      "name": "systeme.io",
+      "url": "https://systeme.io",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Websites, funnels, products, memberships, email and CRM on a real free plan; one custom domain and one course.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "GrapesJS",
+      "url": "https://grapesjs.com",
+      "desc": "A page-editor framework, not an all-in-one site, funnel, store and CRM."
+    },
+    {
+      "name": "Odoo Community",
+      "url": "https://www.odoo.com/page/community",
+      "desc": "Website, store and CRM are present; creator funnels and simple membership delivery are not a clean free workflow."
+    },
+    {
+      "name": "Vvveb",
+      "url": "https://www.vvveb.com",
+      "desc": "The site, store and subscriptions fit; funnels and CRM do not."
+    }
+  ],
   "relatedSlugs": [
     "pixpa",
     "format",

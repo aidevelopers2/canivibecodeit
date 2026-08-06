@@ -54,6 +54,8 @@
       "desc": "Private on-device Android journal with mood coordinates and local CBT-oriented reframing."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "headspace",
     "calm"

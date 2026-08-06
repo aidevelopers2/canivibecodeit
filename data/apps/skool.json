@@ -57,6 +57,37 @@
       "desc": "Open-source publishing and membership platform."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Moodle",
+      "url": "https://moodle.org/",
+      "type": "open-source",
+      "repo": "https://github.com/moodle/moodle",
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "Courses, forums, events, badges and paid enrolment replace most of Skool; the cheerful leaderboard becomes academic furniture.",
+      "stars": 7300,
+      "lastCommit": "2026-07",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Discourse",
+      "url": "https://www.discourse.org/",
+      "desc": "A first-rate forum with badges; courses and subscriptions remain conspicuously absent."
+    },
+    {
+      "name": "Odoo Community",
+      "url": "https://www.odoo.com/",
+      "desc": "Courses, forums, events and checkout exist, but only after turning a business suite into a community site."
+    }
+  ],
   "relatedSlugs": [
     "heartbeat-community",
     "bettermode",

@@ -52,6 +52,152 @@
       "desc": "Mature open-source time-tracking application with projects, reports, and exports."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Clockify Free",
+      "url": "https://clockify.me/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android",
+        "browser-extension"
+      ],
+      "desc": "Five users get timers, projects and PDF reports one month at a time; CSV, billable rates and approvals are paid.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "My Hours Free",
+      "url": "https://myhours.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "browser-extension"
+      ],
+      "desc": "A clean five-person timer with unlimited projects, clients and basic reports; approvals, rates and invoices are paid.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "solidtime",
+      "url": "https://www.solidtime.io/",
+      "type": "open-source",
+      "repo": "https://github.com/solidtime-io/solidtime",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "Modern multi-user timers, clients and billable rates in one Compose stack; the desktop apps are still beta.",
+      "stars": 8846,
+      "lastCommit": "2026-07",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Super Productivity",
+      "url": "https://super-productivity.com/",
+      "type": "open-source",
+      "repo": "https://github.com/super-productivity/super-productivity",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android"
+      ],
+      "desc": "A local project timer with reminders, reports and no plastic eight-sided desk ornament required.",
+      "stars": 21156,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "TimeCamp Free",
+      "url": "https://www.timecamp.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android",
+        "browser-extension"
+      ],
+      "desc": "Unlimited people and projects get timers, auto-tracking and basic reports; app analytics, billable controls and approvals are paid.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "TimeTagger",
+      "url": "https://timetagger.app/",
+      "type": "open-source",
+      "repo": "https://github.com/almarklein/timetagger",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A lean timeline, tags and PDF or CSV reports in one container; it is built for individuals, not payroll departments.",
+      "stars": 1768,
+      "lastCommit": "2026-05",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Toggl Track Free",
+      "url": "https://toggl.com/track/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "ios",
+        "android",
+        "browser-extension"
+      ],
+      "desc": "Five users get fast timers, projects, tags and reports; approvals and paid-time controls cost extra.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Traggo",
+      "url": "https://traggo.net/",
+      "type": "open-source",
+      "repo": "https://github.com/traggo/server",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A tiny tag-based timer with useful dashboards in one container; invoices and mobile apps never arrive.",
+      "stars": 1615,
+      "lastCommit": "2026-07",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "toggl-track",
     "harvest",

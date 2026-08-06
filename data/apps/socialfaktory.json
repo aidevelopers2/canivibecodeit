@@ -52,6 +52,19 @@
       "desc": "Self-hosted social media management, an alternative publishing backbone."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Adobe Express Free",
+      "url": "https://www.adobe.com/express/",
+      "desc": "It can make and schedule video, but has no AI actors, synthetic voices or brief-to-published pipeline."
+    },
+    {
+      "name": "Postiz",
+      "url": "https://postiz.com/",
+      "desc": "A scheduler with AI helpers, not an AI actor studio."
+    }
+  ],
   "relatedSlugs": [
     "postiz",
     "predis-ai",

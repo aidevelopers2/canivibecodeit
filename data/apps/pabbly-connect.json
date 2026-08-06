@@ -53,6 +53,54 @@
       "desc": "Active open-source automation platform with connectors and durable workflow execution."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Activepieces Community Edition",
+      "url": "https://www.activepieces.com/open-source",
+      "type": "open-source",
+      "repo": "https://github.com/activepieces/activepieces",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Durable trigger-action workflows, retries, and no lifetime-deal arithmetic.",
+      "stars": 23604,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Automatisch",
+      "url": "https://automatisch.io/",
+      "type": "open-source",
+      "repo": "https://github.com/automatisch/automatisch",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "The small self-hosted connector box Pabbly Connect's simpler workflows actually need.",
+      "stars": 13923,
+      "lastCommit": "2026-01",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "n8n Community Edition",
+      "url": "https://n8n.io/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A deeper visual runner for documented APIs, free when you operate it yourself.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "pipedream",
     "ifttt",

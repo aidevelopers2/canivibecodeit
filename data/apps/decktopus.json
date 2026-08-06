@@ -50,6 +50,27 @@
       "desc": "Open-source diagram canvas with an approachable interaction model."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Presenton",
+      "url": "https://presenton.ai/",
+      "type": "open-source",
+      "repo": "https://github.com/presenton/presenton",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "AI-generated, template-based presentations with a drag editor and editable PowerPoint export; forms and hosted engagement analytics are not included.",
+      "stars": 9393,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "visme",
     "lucidchart",

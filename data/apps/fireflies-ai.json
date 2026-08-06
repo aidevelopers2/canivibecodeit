@@ -50,6 +50,56 @@
       "status": "alive"
     }
   ],
+  "alternatives": [
+    {
+      "name": "Fathom",
+      "url": "https://www.fathom.ai/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "macos",
+        "windows"
+      ],
+      "desc": "Unlimited recording, transcription, basic summaries, clips and search for one person; the revenue-team machinery remains paid.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "OpenWhispr",
+      "url": "https://openwhispr.com/",
+      "type": "open-source",
+      "repo": "https://github.com/OpenWhispr/openwhispr",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "One installer records meetings without a bot, labels speakers, summarizes them and keeps the archive searchable.",
+      "stars": 5223,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Speakr",
+      "url": "https://murtaza-nasir.github.io/speakr/",
+      "type": "open-source",
+      "repo": "https://github.com/murtaza-nasir/speakr",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A polished self-hosted call archive with transcription, summaries, search and chat; zero subscription, nonzero server.",
+      "stars": 3600,
+      "lastCommit": "2026-07",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "fathom-ai",
     "tldv",

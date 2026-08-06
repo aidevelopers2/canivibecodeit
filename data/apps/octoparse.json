@@ -55,6 +55,40 @@
       "desc": "Source-available workflow automation engine and connector reference."
     }
   ],
+  "alternatives": [
+    {
+      "name": "EasySpider",
+      "url": "https://github.com/NaiboWang/EasySpider",
+      "type": "open-source",
+      "repo": "https://github.com/NaiboWang/EasySpider",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "A finished visual desktop scraper with selectors, pagination, loops, and scheduled local runs.",
+      "stars": 44125,
+      "lastCommit": "2026-07",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Maxun",
+      "url": "https://maxun.dev/",
+      "type": "open-source",
+      "repo": "https://github.com/getmaxun/maxun",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A browser-based robot recorder with schedules and exports, but your Docker host becomes the cloud.",
+      "stars": 17100,
+      "lastCommit": "2026-07",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "parsehub",
     "import-io",

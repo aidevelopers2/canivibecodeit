@@ -53,6 +53,23 @@
       "desc": "Open-source customer-feedback portal with voting and status workflows."
     }
   ],
+  "alternatives": [
+    {
+      "name": "UXtweak Free",
+      "url": "https://www.uxtweak.com/pricing/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "One small unmoderated prototype study at a time; results vanish from the dashboard after two weeks.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "canny",
     "productboard",

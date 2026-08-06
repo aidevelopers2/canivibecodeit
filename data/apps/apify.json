@@ -56,6 +56,24 @@
       "desc": "Source-available workflow automation engine and connector reference."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Crawlee",
+      "url": "https://crawlee.dev/",
+      "desc": "The obvious sibling is a Node.js library; actors, proxies, storage, and scheduling are still yours to assemble."
+    },
+    {
+      "name": "Firecrawl",
+      "url": "https://www.firecrawl.dev/",
+      "desc": "A crawling API, not a hosted actor platform with proxy infrastructure, storage, schedules, and a marketplace."
+    },
+    {
+      "name": "Maxun",
+      "url": "https://maxun.dev/",
+      "desc": "No-code robots are real; actors, proxy infrastructure, durable storage, and a marketplace are not."
+    }
+  ],
   "relatedSlugs": [
     "octoparse",
     "parsehub",

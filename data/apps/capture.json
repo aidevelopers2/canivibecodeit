@@ -51,6 +51,19 @@
       "desc": "Open-source Swift notes app for macOS and iOS with CloudKit sync."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Drafts",
+      "url": "https://getdrafts.com",
+      "desc": "Excellent text inbox, but images, files and custom routing are not all free."
+    },
+    {
+      "name": "FSNotes",
+      "url": "https://fsnot.es",
+      "desc": "A fast notes app, not an inbox that dispatches captures to other apps."
+    }
+  ],
   "relatedSlugs": [
     "drafts-pro",
     "bear-pro",

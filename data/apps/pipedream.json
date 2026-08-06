@@ -53,6 +53,54 @@
       "desc": "Active open-source automation platform with connectors and durable workflow execution."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Kestra Community Edition",
+      "url": "https://kestra.io/",
+      "type": "open-source",
+      "repo": "https://github.com/kestra-io/kestra",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Event-triggered code, schedules, retries, logs, and a workflow engine built for keeping receipts.",
+      "stars": 27561,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "n8n Community Edition",
+      "url": "https://n8n.io/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Code nodes, credentials, webhooks, retries, and execution logs in a self-hosted visual shell.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Windmill Community Edition",
+      "url": "https://www.windmill.dev/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Pipedream with your own Postgres and no pretence that code has disappeared.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "ifttt",
     "relay-app",

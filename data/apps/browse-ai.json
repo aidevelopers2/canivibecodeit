@@ -55,6 +55,40 @@
       "desc": "Source-available workflow automation engine and connector reference."
     }
   ],
+  "alternatives": [
+    {
+      "name": "EasySpider",
+      "url": "https://github.com/NaiboWang/EasySpider",
+      "type": "open-source",
+      "repo": "https://github.com/NaiboWang/EasySpider",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "A desktop scraper whose academic-looking workflow editor still gets paginated data out.",
+      "stars": 44125,
+      "lastCommit": "2026-07",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Maxun",
+      "url": "https://maxun.dev/",
+      "type": "open-source",
+      "repo": "https://github.com/getmaxun/maxun",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Point, click, schedule a robot, and keep the scraper on your own box.",
+      "stars": 17100,
+      "lastCommit": "2026-07",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "apify",
     "octoparse",

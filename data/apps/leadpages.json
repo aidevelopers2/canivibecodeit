@@ -52,6 +52,49 @@
       "desc": "Open-source visual website builder designed around web standards."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Mautic",
+      "url": "https://mautic.org",
+      "type": "open-source",
+      "repo": "https://github.com/mautic/mautic",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Landing pages, embedded forms and email campaigns in one open-source stack; setup is considerably less leaden than maintenance.",
+      "stars": 9800,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "systeme.io",
+      "url": "https://systeme.io",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Three hosted funnels, forms, email automation and a custom domain free; one split test is included.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "GrapesJS",
+      "url": "https://grapesjs.com",
+      "desc": "The visual editor is a framework, while forms, delivery and hosting are homework."
+    },
+    {
+      "name": "Webstudio",
+      "url": "https://webstudio.is",
+      "desc": "Builds the page; free hosted custom domains and a managed form-to-email pipeline are where the replacement stops."
+    }
+  ],
   "relatedSlugs": [
     "duda",
     "tilda",

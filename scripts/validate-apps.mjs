@@ -9,6 +9,9 @@ const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..')
 const dir = path.join(root, 'data/apps');
 
 const UNITS = ['flat', 'per-seat', 'usage', 'one-time', 'custom'];
+const ALT_TYPES = ['open-source', 'free'];
+const ALT_PLATFORMS = ['web', 'macos', 'windows', 'linux', 'ios', 'android', 'self-hosted', 'cli', 'browser-extension'];
+const ALT_SELF_HOST = ['hosted', 'one-click', 'docker', 'ops'];
 
 const isStr = (v) => typeof v === 'string' && v.trim() !== '';
 const isStrArray = (v) => Array.isArray(v) && v.every((x) => isStr(x));
@@ -35,6 +38,8 @@ const REQUIRED = {
   moatNotes: (v) => v === null || typeof v === 'string',
   whyPeopleStillPay: (v) => v === null || typeof v === 'string',
   priorArt: (v) => Array.isArray(v),
+  alternatives: (v) => Array.isArray(v),
+  rejectedAlternatives: (v) => Array.isArray(v),
   pagePriority: (v) => typeof v === 'number' && v >= 1 && v <= 5,
   verifiedOneShot: (v) => typeof v === 'boolean',
   notes: (v) => v === null || typeof v === 'string',
@@ -95,6 +100,50 @@ for (const file of files) {
   }
   if (app.relatedSlugs !== undefined && !isStrArray(app.relatedSlugs)) {
     bad('relatedSlugs must be an array of slugs');
+  }
+
+  if (Array.isArray(app.alternatives)) {
+    if (app.alternatives.length > 8) {
+      bad(`alternatives is capped at 8 curated entries, found ${app.alternatives.length}`);
+    }
+    const urls = new Set();
+    app.alternatives.forEach((a, i) => {
+      const where = `alternatives[${i}]`;
+      if (!a || typeof a !== 'object' || Array.isArray(a)) return bad(`${where} must be an object`);
+      if (!isStr(a.name)) bad(`${where}.name is required`);
+      if (!isStr(a.url) || !/^https?:\/\//.test(a.url)) bad(`${where}.url must be an http(s) URL`);
+      if (!ALT_TYPES.includes(a.type)) bad(`${where}.type must be ${ALT_TYPES.join(' | ')}`);
+      if (a.type === 'open-source') {
+        if (!isStr(a.repo) || !/^https?:\/\//.test(a.repo)) bad(`${where}.repo is required for open-source entries`);
+        if (typeof a.stars !== 'number' || a.stars < 0) bad(`${where}.stars is required for open-source entries`);
+        if (!/^\d{4}-\d{2}$/.test(a.lastCommit ?? '')) bad(`${where}.lastCommit must be "YYYY-MM" for open-source entries`);
+      } else if (a.type === 'free') {
+        if (a.repo !== null) bad(`${where}.repo must be null for free entries`);
+        if (a.stars !== null) bad(`${where}.stars must be null for free entries`);
+        if (a.lastCommit !== null) bad(`${where}.lastCommit must be null for free entries`);
+      }
+      if (!Array.isArray(a.platforms) || a.platforms.length < 1 || !a.platforms.every((x) => ALT_PLATFORMS.includes(x))) {
+        bad(`${where}.platforms needs 1+ of ${ALT_PLATFORMS.join(' | ')}`);
+      }
+      if (!isStr(a.desc)) bad(`${where}.desc is required`);
+      if (!ALT_SELF_HOST.includes(a.selfHost)) bad(`${where}.selfHost must be ${ALT_SELF_HOST.join(' | ')}`);
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(a.checkedOn ?? '')) bad(`${where}.checkedOn must be "YYYY-MM-DD"`);
+      if (a.url && urls.has(a.url)) bad(`${where}.url duplicates another entry`);
+      urls.add(a.url);
+    });
+  }
+
+  if (Array.isArray(app.rejectedAlternatives)) {
+    if (app.rejectedAlternatives.length > 8) {
+      bad(`rejectedAlternatives is capped at 8, found ${app.rejectedAlternatives.length}`);
+    }
+    app.rejectedAlternatives.forEach((r, i) => {
+      if (!r || typeof r !== 'object' || !isStr(r.name) || !isStr(r.desc)) {
+        bad(`rejectedAlternatives[${i}] needs a name and a desc (the reason it fails)`);
+      } else if (r.url !== null && !(isStr(r.url) && /^https?:\/\//.test(r.url))) {
+        bad(`rejectedAlternatives[${i}].url must be an http(s) URL or null`);
+      }
+    });
   }
 }
 

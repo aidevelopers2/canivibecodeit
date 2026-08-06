@@ -53,6 +53,56 @@
       "desc": "Active open-source automation platform with connectors and durable workflow execution."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Dify Community Edition",
+      "url": "https://dify.ai/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A serious agent canvas with a free Community Edition and a license that keeps one eyebrow raised.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Flowise",
+      "url": "https://flowiseai.com/",
+      "type": "open-source",
+      "repo": "https://github.com/FlowiseAI/Flowise",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A visual agent builder that is happiest when every box contains an LLM.",
+      "stars": 55199,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Langflow",
+      "url": "https://www.langflow.org/",
+      "type": "open-source",
+      "repo": "https://github.com/langflow-ai/langflow",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "self-hosted"
+      ],
+      "desc": "Drag boxes around an LLM graph until files and APIs become one useful workflow.",
+      "stars": 152879,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "pipedream",
     "ifttt",

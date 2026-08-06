@@ -134,7 +134,7 @@ export const MOAT_TAG_DESCS = {
   'hardware': "Physical devices, or data only the vendor's hardware produces.",
   'collaboration': 'It only pays off once the whole team is in it: shared editing, presence, permissions.',
   'content-rights': 'Licensed content, media rights, curriculum, template and asset libraries.',
-  'execution-polish': 'Polish, reliability, sync quality, import fidelity — execution, not structure.',
+  'execution-polish': 'Polish, reliability, sync quality, import fidelity: execution, not structure.',
 };
 
 
@@ -216,4 +216,66 @@ export function relatedApps(app, votes) {
 
 export function yearlySaving(app) {
   return app.priceMonthly != null ? app.priceMonthly * 12 : null;
+}
+
+// Curated free/OSS alternatives, best first: stars decide where they exist,
+// seeded order breaks ties and places the star-less free tools.
+export function sortedAlternatives(app) {
+  return [...(app.alternatives ?? [])].sort(
+    (a, b) => (b.stars ?? -1) - (a.stars ?? -1)
+  );
+}
+
+// Apps that earn a dedicated /<slug>/alternatives page. Thin pages hurt SEO,
+// so the bar is 3+ — below that the verdict-page section is the whole story.
+export const ALTERNATIVES_PAGE_MIN = 3;
+
+export function appsWithAlternativesPage() {
+  return allApps().filter(
+    (a) => (a.alternatives ?? []).length >= ALTERNATIVES_PAGE_MIN
+  );
+}
+
+// What running the free thing actually costs you, per the seeding research.
+export const SELF_HOST_LABELS = {
+  hosted: 'they host it',
+  'one-click': 'one-click install',
+  docker: 'docker to self-host',
+  ops: 'self-host, real ops',
+};
+
+// Sitemap staging (decided 2026-08-06, Ahrefs advice): a young domain shouldn't
+// push all 350+ new pages to Google at once. The named slugs are the low-KD /
+// high-volume targets from the Ahrefs research; the rest of the ~30 fill up by
+// editorial weight. ALL alternatives pages must join the sitemap ~6-8 weeks
+// after launch — tracked in planning/16-alternatives/progress.md, do not lose.
+const ALT_SITEMAP_PRIORITY = [
+  'zapier', 'loom', 'calendly', 'intercom', 'grammarly',
+  'notion', 'mailchimp', 'docusign', 'typeform', '1password',
+];
+const ALT_SITEMAP_LIMIT = 30;
+
+export function alternativesSitemapApps() {
+  const eligible = appsWithAlternativesPage();
+  const named = ALT_SITEMAP_PRIORITY.map((s) => eligible.find((a) => a.slug === s)).filter(Boolean);
+  const rest = eligible
+    .filter((a) => !named.includes(a))
+    .sort(
+      (x, y) =>
+        y.pagePriority - x.pagePriority || y.alternatives.length - x.alternatives.length
+    );
+  return [...named, ...rest].slice(0, ALT_SITEMAP_LIMIT);
+}
+
+export function formatStars(n) {
+  if (n == null) return null;
+  return n >= 1000 ? `${(n / 1000).toFixed(n >= 10000 ? 0 : 1)}k` : String(n);
+}
+
+// "2026-07" → "jul 2026", for the activity signal on alternative cards.
+export function formatMonth(ym) {
+  if (!ym) return null;
+  const [y, m] = ym.split('-').map(Number);
+  const names = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];
+  return names[m - 1] ? `${names[m - 1]} ${y}` : ym;
 }

@@ -82,7 +82,7 @@ export async function POST({ request }) {
       recipients = (await waitlistEmails('sponsor')).filter((e) => !gone.has(e.toLowerCase()));
     } catch (err) {
       console.error(`queue blast blocked: ${err?.message || err}`);
-      return fail('could not check unsubscribes — nobody mailed', 502);
+      return fail('could not check unsubscribes; nobody mailed', 502);
     }
     if (recipients.length === 0) return fail('the queue is empty', 409);
     if (!(await rateLimit('sponsor-queue-blast', 1, 12 * 60 * 60 * 1000))) {
@@ -91,8 +91,8 @@ export async function POST({ request }) {
 
     const startLabel = shortDate(nextRunStart());
     const lines = [
-      ...nowOpen.map((s) => `<li>slot ${esc(s.id)} — ${usd(s.priceCents)}, live as soon as your card is approved</li>`),
-      ...nextOpen.map((s) => `<li>slot ${esc(s.id)} — ${usd(s.priceCents)}, yours from ${esc(startLabel)}</li>`),
+      ...nowOpen.map((s) => `<li>slot ${esc(s.id)} · ${usd(s.priceCents)}, live as soon as your card is approved</li>`),
+      ...nextOpen.map((s) => `<li>slot ${esc(s.id)} · ${usd(s.priceCents)}, yours from ${esc(startLabel)}</li>`),
     ].join('');
     const subject = nowOpen.length > 0
       ? 'a sponsor slot just opened on canivibecodeit'
@@ -134,7 +134,7 @@ export async function POST({ request }) {
     if (!term || Number(term[2]) < 1 || Number(term[2]) > 12) return fail('bad term (YYYY-MM)', 400);
     try {
       const link = await createPaymentLink({
-        name: `canivibecodeit.com — sponsor slot ${slot} (${RUN_DAYS * months} days)`,
+        name: `canivibecodeit.com · sponsor slot ${slot} (${RUN_DAYS * months} days)`,
         priceCents: Math.round(dollars * 100),
         metadata: {
           purpose: `sponsor_${kind}_${term[1]}_${term[2]}`,
@@ -148,7 +148,7 @@ export async function POST({ request }) {
       return done(`${slot} ${kind} link (${usd(Math.round(dollars * 100))} total, ${RUN_DAYS * months} days): ${link.url}`);
     } catch (err) {
       console.error(`payment link failed: ${err?.message || err}`);
-      return fail('stripe refused the link — check the log', 502);
+      return fail('stripe refused the link; check the log', 502);
     }
   }
 
@@ -179,7 +179,7 @@ export async function POST({ request }) {
         && o.starts_at > now && o.starts_at < endsAt && o.ends_at > startsAt;
     });
     if (clash) {
-      return fail(`${purchase.slot_id} is already booked — refund one of these first`, 409);
+      return fail(`${purchase.slot_id} is already booked; refund one of these first`, 409);
     }
 
     const changed = await updatePurchase(
@@ -191,7 +191,7 @@ export async function POST({ request }) {
     await sendMail({
       to: purchase.email,
       subject: scheduled
-        ? `approved — you're live from ${shortDate(startsAt)}`
+        ? `approved · you're live from ${shortDate(startsAt)}`
         : `you're live on canivibecodeit until ${shortDate(endsAt)}`,
       html: brandShell(
         `<p><b>${esc(purchase.name)}</b> is approved for slot ${esc(purchase.slot_id)}`
@@ -234,12 +234,12 @@ export async function POST({ request }) {
           + `<p>Retry from <a href="${esc(siteUrl('/admin/sponsors'))}">the admin page</a>.</p>`
         )
       );
-      return fail('refund failed — retry from the admin page', 502);
+      return fail('refund failed; retry from the admin page', 502);
     }
     await updatePurchase(purchase.id, { status: 'rejected' }, REFUNDABLE);
     await sendMail({
       to: purchase.email,
-      subject: 'your canivibecodeit sponsor slot — refunded',
+      subject: 'your canivibecodeit sponsor slot · refunded',
       html: brandShell(
         `<p>We didn't run this placement, and your payment has been refunded in full.`
         + ` It lands back on your card in 5–10 days.</p>`

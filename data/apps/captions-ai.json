@@ -53,6 +53,24 @@
       "desc": "Active community continuation of the fast local Piper text-to-speech engine."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "CapCut",
+      "url": "https://www.capcut.com/",
+      "desc": "The obvious free answer is not free for the core job: Auto Reframe is Pro-only on web, desktop and mobile."
+    },
+    {
+      "name": "OpenReel Video",
+      "url": "https://openreel.video/",
+      "desc": "A maintained free editor that can style imported subtitles; auto-captioning and subject-aware reframing are not there."
+    },
+    {
+      "name": "Plumely",
+      "url": "https://www.plumely.online/",
+      "desc": "Local captions are free; the face-tracking reframe that makes it a Captions replacement is Pro-only."
+    }
+  ],
   "relatedSlugs": [
     "speechify",
     "synthesia",

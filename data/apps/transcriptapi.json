@@ -44,6 +44,14 @@
       "desc": "open-source Python library for the core caption fetch"
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "youtube-transcript-api",
+      "url": "https://github.com/jdepoix/youtube-transcript-api",
+      "desc": "A Python package and CLI, not a hosted JSON API with search and playlist endpoints."
+    }
+  ],
   "relatedSlugs": [],
   "pagePriority": 3,
   "verifiedOneShot": false,

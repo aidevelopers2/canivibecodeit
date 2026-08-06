@@ -57,6 +57,24 @@
       "desc": "Source-available workflow automation engine and connector reference."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Crawlee",
+      "url": "https://crawlee.dev/",
+      "desc": "A developer crawler; schemas, entity resolution, and the knowledge graph are still your project."
+    },
+    {
+      "name": "Firecrawl",
+      "url": "https://www.firecrawl.dev/",
+      "desc": "A crawling API, not a structured extraction product or maintained knowledge graph."
+    },
+    {
+      "name": "Scrapy",
+      "url": "https://scrapy.org/",
+      "desc": "A superb Python framework; the first thing it asks for is Python."
+    }
+  ],
   "relatedSlugs": [
     "hexomatic",
     "robomotion",

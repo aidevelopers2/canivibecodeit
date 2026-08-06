@@ -57,6 +57,14 @@
       "desc": "Widely used local Stable Diffusion interface and extension ecosystem."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "ComfyUI",
+      "url": "https://comfy.org/",
+      "desc": "Generation, editing and an API are covered; integrated model training is still an assembled workflow, not a finished product."
+    }
+  ],
   "relatedSlugs": [
     "artbreeder",
     "openart",

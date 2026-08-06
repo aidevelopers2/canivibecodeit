@@ -54,6 +54,39 @@
       "desc": "Mature open-source file sync and collaboration server."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Peergos",
+      "url": "https://peergos.org/",
+      "type": "open-source",
+      "repo": "https://github.com/Peergos/Peergos",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "End-to-end encrypted sync and secret links, with a smaller ecosystem and a stranger architecture.",
+      "stars": 2400,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Nextcloud Files",
+      "url": "https://nextcloud.com/files/",
+      "desc": "Secure links and versions, yes; Tresorit-style end-to-end encrypted sharing, no."
+    },
+    {
+      "name": "Syncthing",
+      "url": "https://syncthing.net/",
+      "desc": "Encrypted folder replication is real; secure external links are simply not part of the product."
+    }
+  ],
   "relatedSlugs": [
     "dropbox-plus",
     "google-one",

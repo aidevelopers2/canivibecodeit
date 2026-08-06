@@ -57,6 +57,114 @@
       "desc": "Local speech-to-text engine suitable for private transcription."
     }
   ],
+  "alternatives": [
+    {
+      "name": "ComfyUI",
+      "url": "https://comfy.org/",
+      "type": "open-source",
+      "repo": "https://github.com/Comfy-Org/ComfyUI",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "The broad local video back end; powerful enough to replace the workflow, not Kling's proprietary model.",
+      "stars": 124207,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Draw Things",
+      "url": "https://drawthings.ai/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos",
+        "ios"
+      ],
+      "desc": "Local video generation on Mac, iPhone and iPad; no cloud queue, no cloud-scale speed.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "LTX Desktop",
+      "url": "https://ltx.io/ltx-desktop",
+      "type": "open-source",
+      "repo": "https://github.com/Lightricks/LTX-Desktop",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "Text and image generation inside a real local editor; less model spectacle, much more control over the cut.",
+      "stars": 1854,
+      "lastCommit": "2026-07",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "NodeTool",
+      "url": "https://nodetool.ai/",
+      "type": "open-source",
+      "repo": "https://github.com/nodetool-ai/nodetool",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted",
+        "cli"
+      ],
+      "desc": "A desktop node workflow and timeline for local video models; capable, young, and refreshingly unmetered.",
+      "stars": 450,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "SwarmUI",
+      "url": "https://swarmui.net/",
+      "type": "open-source",
+      "repo": "https://github.com/mcmonkeyprojects/SwarmUI",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "A local prompt interface for current text-to-video and image-to-video models, with reusable settings.",
+      "stars": 4423,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "WanGP",
+      "url": "https://wangp.ai/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted",
+        "cli"
+      ],
+      "desc": "Run current local video models without per-clip credits; your GPU and patience become the pricing plan.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "hailuo-ai",
     "heygen",

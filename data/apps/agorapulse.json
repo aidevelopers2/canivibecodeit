@@ -56,6 +56,24 @@
       "desc": "Self-hosted social media management software."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Agorapulse Free",
+      "url": "https://www.agorapulse.com/",
+      "desc": "The free plan everybody still cites was killed on July 6, 2026."
+    },
+    {
+      "name": "BrightBean Studio",
+      "url": "https://brightbean.xyz/studio/",
+      "desc": "Publishing, approvals, inbox and analytics are real; public listening and ROI attribution are not."
+    },
+    {
+      "name": "Postiz",
+      "url": "https://postiz.com/",
+      "desc": "A broad scheduler with analytics, not a listening or social-ROI platform."
+    }
+  ],
   "relatedSlugs": [
     "sprout-social",
     "socialpilot",

@@ -53,6 +53,100 @@
       "desc": "Active open-source modern CRM with extensible data models."
     }
   ],
+  "alternatives": [
+    {
+      "name": "EspoCRM",
+      "url": "https://www.espocrm.com/",
+      "type": "open-source",
+      "repo": "https://github.com/espocrm/espocrm",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A traditional CRM that actually lets you change the data model; polished enough, but still your server.",
+      "stars": 3200,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Frappe CRM",
+      "url": "https://frappe.io/crm",
+      "type": "open-source",
+      "repo": "https://github.com/frappe/crm",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A clean leads-and-deals board with notes, tasks and email; Frappe underneath means a real server, not a toy.",
+      "stars": 3200,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "HubSpot Free CRM",
+      "url": "https://www.hubspot.com/products/crm",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "A real two-seat CRM for free; 1,000 contacts is where the upsell starts counting.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Krayin CRM",
+      "url": "https://krayincrm.com/",
+      "type": "open-source",
+      "repo": "https://github.com/krayin/laravel-crm",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A Laravel sales pipeline with leads, contacts and email; glossy enough, but it still wants a PHP stack.",
+      "stars": 24000,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "SuiteCRM",
+      "url": "https://suitecrm.com/",
+      "type": "open-source",
+      "repo": "https://github.com/SuiteCRM/SuiteCRM",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "The old-school full-fat CRM: every module you remember, plus the server you now own.",
+      "stars": 5500,
+      "lastCommit": "2026-07",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Twenty",
+      "url": "https://twenty.com/",
+      "type": "open-source",
+      "repo": "https://github.com/twentyhq/twenty",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A modern pipeline CRM with custom objects, views and mailbox sync; the subscription becomes a Compose file.",
+      "stars": 54400,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "pipedrive",
     "close-crm",

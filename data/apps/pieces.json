@@ -56,6 +56,24 @@
       "desc": "Open-source terminal coding agent with repository-aware edits."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Aider",
+      "url": "https://aider.chat/",
+      "desc": "A coding agent, not a persistent developer-memory and snippet workspace."
+    },
+    {
+      "name": "Continue",
+      "url": "https://continue.dev/",
+      "desc": "An archived coding-agent extension, not a local context-capture and snippet memory product."
+    },
+    {
+      "name": "massCode",
+      "url": "https://masscode.io/",
+      "desc": "Excellent snippets, notes and tasks; it does not capture the automatic AI memory and timeline that make Pieces Pieces."
+    }
+  ],
   "relatedSlugs": [
     "warp",
     "bito",

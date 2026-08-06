@@ -52,6 +52,40 @@
       "desc": "Active open-source self-hosted photo and video management platform."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Ente Photos",
+      "url": "https://ente.io/",
+      "type": "open-source",
+      "repo": "https://github.com/ente-io/ente",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "The actual open-source Ente stack: end-to-end encrypted backup with cross-platform clients; self-hosting means running storage, a database, and backups.",
+      "stars": 26800,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Immich",
+      "url": "https://immich.app/",
+      "desc": "Excellent self-hosted backup, but the server can inspect the library; it is not Ente's server-blind end-to-end encryption model."
+    },
+    {
+      "name": "PhotoPrism",
+      "url": "https://www.photoprism.app/",
+      "desc": "Powerful photo management, no equivalent client-side end-to-end encryption; the administrator can read the originals."
+    }
+  ],
   "relatedSlugs": [
     "adobe-lightroom",
     "capture-one",

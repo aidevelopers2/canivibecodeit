@@ -56,6 +56,24 @@
       "desc": "Widely used local Stable Diffusion interface and extension ecosystem."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Draw Things",
+      "url": "https://drawthings.ai/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos",
+        "ios"
+      ],
+      "desc": "Generation, editing and local LoRA training in one free Apple app; hosted workflows and sharing are what you lose.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "seaart",
     "tensor-art",

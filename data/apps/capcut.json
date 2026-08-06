@@ -52,6 +52,94 @@
       "status": "alive"
     }
   ],
+  "alternatives": [
+    {
+      "name": "Adobe Express",
+      "url": "https://www.adobe.com/express/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "Browser editing, captions, graphics and templates without a watermark; premium stock and clever tricks still wave from behind glass.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Clipchamp",
+      "url": "https://clipchamp.com/en/video-editor/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "windows"
+      ],
+      "desc": "CapCut’s less chaotic browser cousin; free exports stop at 1080p, not at a watermark.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "DaVinci Resolve",
+      "url": "https://www.blackmagicdesign.com/products/davinciresolve",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "A film studio hiding behind a free download; the cleverest AI toys stay in Studio.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Kdenlive",
+      "url": "https://kdenlive.org",
+      "type": "open-source",
+      "repo": "https://github.com/KDE/kdenlive",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "A real multitrack editor with local captions, minus the template casino.",
+      "stars": 5400,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Shotcut",
+      "url": "https://shotcut.org",
+      "type": "open-source",
+      "repo": "https://github.com/mltframework/shotcut",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "A sturdy desktop editor that would rather give you controls than trends.",
+      "stars": 14800,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "OpenCut",
+      "url": "https://opencut.app",
+      "desc": "The famous answer is between codebases: classic is archived and the replacement is still a rewrite."
+    }
+  ],
   "relatedSlugs": [
     "granola",
     "otter-ai",

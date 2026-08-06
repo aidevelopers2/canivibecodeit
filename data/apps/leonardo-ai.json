@@ -52,6 +52,115 @@
       "desc": "Node-based open-source diffusion workflow engine with a large ecosystem."
     }
   ],
+  "alternatives": [
+    {
+      "name": "ComfyUI",
+      "url": "https://comfy.org/",
+      "type": "open-source",
+      "repo": "https://github.com/Comfy-Org/ComfyUI",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "The canonical local workflow engine, complete with saved graphs, queues and every knob Leonardo hides.",
+      "stars": 124207,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Draw Things",
+      "url": "https://drawthings.ai/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos",
+        "ios"
+      ],
+      "desc": "Local models, histories, canvases and retained settings on Apple hardware; no team asset library.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Easy Diffusion",
+      "url": "https://easydiffusion.github.io/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "A simpler local queue with custom models and reproducible settings; fewer workflow toys, fewer invoices.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "InvokeAI",
+      "url": "https://invoke.ai/",
+      "type": "open-source",
+      "repo": "https://github.com/invoke-ai/InvokeAI",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "Organized boards, rich metadata, masks and reusable workflows for local and API-backed image models.",
+      "stars": 27776,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "NodeTool",
+      "url": "https://nodetool.ai/",
+      "type": "open-source",
+      "repo": "https://github.com/nodetool-ai/nodetool",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted",
+        "cli"
+      ],
+      "desc": "A native workflow app for local and BYOK image models, with projects and results kept on your machine.",
+      "stars": 450,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "SwarmUI",
+      "url": "https://swarmui.net/",
+      "type": "open-source",
+      "repo": "https://github.com/mcmonkeyprojects/SwarmUI",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "A clean Generate tab, history, grids and the full workflow graph; parameters survive every rerun.",
+      "stars": 4423,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "ideogram",
     "recraft",

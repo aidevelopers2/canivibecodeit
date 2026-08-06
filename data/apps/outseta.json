@@ -58,6 +58,24 @@
       "desc": "Open-source publishing and membership platform."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Odoo Community",
+      "url": "https://www.odoo.com/page/community",
+      "desc": "Broad enough to look tempting, but not an embeddable SaaS auth, billing, email and help-desk bundle."
+    },
+    {
+      "name": "Supabase",
+      "url": "https://supabase.com",
+      "desc": "Auth and a database cover two boxes; subscriptions, CRM, email, help desk and reporting still need to be built."
+    },
+    {
+      "name": "systeme.io",
+      "url": "https://systeme.io",
+      "desc": "CRM, email and subscriptions are present; embedded SaaS authentication and a help desk are not."
+    }
+  ],
   "relatedSlugs": [
     "thinkific",
     "learnworlds",

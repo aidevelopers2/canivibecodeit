@@ -51,6 +51,19 @@
       "desc": "Local speech-to-text engine suitable for private transcription."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Meetily",
+      "url": "https://meetily.ai/",
+      "desc": "Records and summarizes meetings, but has no shared agenda system or meeting analytics."
+    },
+    {
+      "name": "Speakr",
+      "url": "https://murtaza-nasir.github.io/speakr/",
+      "desc": "A searchable transcript workspace, not a meeting-management system with agendas and recurring rituals."
+    }
+  ],
   "relatedSlugs": [
     "sembly-ai",
     "supernormal",

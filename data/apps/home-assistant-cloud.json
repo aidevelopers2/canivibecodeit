@@ -52,6 +52,80 @@
       "desc": "Active open-source recipe manager and meal planner for households."
     }
   ],
+  "alternatives": [
+    {
+      "name": "AmneziaVPN",
+      "url": "https://amnezia.org/self-hosted",
+      "type": "open-source",
+      "repo": "https://github.com/amnezia-vpn/amnezia-client",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android"
+      ],
+      "desc": "Point it at your VPS and it builds a private route home; remote access is yours, voice integrations are not.",
+      "stars": 14334,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "NetBird",
+      "url": "https://netbird.io/",
+      "type": "open-source",
+      "repo": "https://github.com/netbirdio/netbird",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "A free managed private network to your Home Assistant, with routes and access rules instead of port forwarding.",
+      "stars": 28100,
+      "lastCommit": "2026-08",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Tailscale Personal",
+      "url": "https://tailscale.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android"
+      ],
+      "desc": "Remote Home Assistant access without port forwarding; voice-assistant bridging and vendor support stay paid.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "wg-easy",
+      "url": "https://wg-easy.github.io/wg-easy/latest/",
+      "type": "open-source",
+      "repo": "https://github.com/wg-easy/wg-easy",
+      "platforms": [
+        "web",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "A self-hosted WireGuard doorway to Home Assistant; certificates, DNS, and uptime remain your hobbies.",
+      "stars": 25886,
+      "lastCommit": "2026-06",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "paprika-recipe-manager",
     "cozi-gold",

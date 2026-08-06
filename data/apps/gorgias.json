@@ -53,6 +53,26 @@
       "desc": "Mature open-source customer engagement and shared-inbox platform."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Chatwoot",
+      "url": "https://www.chatwoot.com/",
+      "type": "open-source",
+      "repo": "https://github.com/chatwoot/chatwoot",
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "Email and Shopify conversations share one inbox; useful ecommerce plumbing, minus Gorgias's deeper store automations.",
+      "stars": 35534,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "intercom",
     "zendesk",

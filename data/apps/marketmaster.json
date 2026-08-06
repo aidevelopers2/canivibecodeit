@@ -41,6 +41,14 @@
   "moatNotes": "workflow/research/integrations/quality control",
   "whyPeopleStillPay": "They pay to move from a website to a coordinated, reviewable, publish-ready campaign without maintaining research, media, validation, integration, and delivery infrastructure themselves.",
   "priorArt": [],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Mautic",
+      "url": "https://mautic.org/",
+      "desc": "Mature campaign automation, not a creative factory: it sends messages and scores leads but does not research a site or produce ads, social and video."
+    }
+  ],
   "relatedSlugs": [
     "jasper"
   ],

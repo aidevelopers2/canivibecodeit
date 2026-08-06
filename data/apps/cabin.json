@@ -55,6 +55,54 @@
       "desc": "Lightweight self-hosted web analytics."
     }
   ],
+  "alternatives": [
+    {
+      "name": "GoatCounter",
+      "url": "https://www.goatcounter.com",
+      "type": "open-source",
+      "repo": "https://github.com/arp242/goatcounter",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Tiny traffic analytics that tells you what happened and declines to become a growth platform.",
+      "stars": 5800,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Plausible Community Edition",
+      "url": "https://plausible.io/community-edition",
+      "type": "open-source",
+      "repo": "https://github.com/plausible/analytics",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Privacy-friendly traffic analytics in one Compose stack; the cloud-only extras stay elsewhere.",
+      "stars": 28377,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Umami",
+      "url": "https://umami.is",
+      "type": "open-source",
+      "repo": "https://github.com/umami-software/umami",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A clean cookieless dashboard, minus Cabin's hosting bill.",
+      "stars": 38073,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "posthog",
     "mixpanel",

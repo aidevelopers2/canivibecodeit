@@ -51,6 +51,19 @@
       "status": "alive"
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "BlogPilot",
+      "url": "https://github.com/IamRamgarhia/BlogPilot-Open-Source-AI-SEO-Content-Studio",
+      "desc": "The feature list says all-in-one SEO studio; nine stars and fifteen commits say come back later."
+    },
+    {
+      "name": "thruuu",
+      "url": "https://thruuu.com/",
+      "desc": "Ten one-time credits buy two briefs at most; research, optimization and writing do not stay free after that."
+    }
+  ],
   "relatedSlugs": [
     "quickbooks-online",
     "xero",

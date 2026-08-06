@@ -52,6 +52,19 @@
       "desc": "Open-source technical SEO auditing application."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "BlogPilot",
+      "url": "https://github.com/IamRamgarhia/BlogPilot-Open-Source-AI-SEO-Content-Studio",
+      "desc": "Writes and scores individual articles; it neither inventories a site nor proves topic coverage, and nine stars is not production evidence."
+    },
+    {
+      "name": "OpenSEO",
+      "url": "https://openseo.so/",
+      "desc": "Strong keyword data, no content inventory or transparent corpus-level topic model; DataForSEO cannot invent that layer."
+    }
+  ],
   "relatedSlugs": [
     "screaming-frog-seo-spider",
     "sitebulb",

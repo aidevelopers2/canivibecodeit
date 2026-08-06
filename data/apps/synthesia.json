@@ -53,6 +53,19 @@
       "desc": "Active community continuation of the fast local Piper text-to-speech engine."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Duix.Avatar",
+      "url": "https://www.duix.com/",
+      "desc": "A custom-licensed GPU stack is not a free, finished replacement for making presenter videos."
+    },
+    {
+      "name": "OpenReel Video",
+      "url": "https://openreel.video/",
+      "desc": "A competent editor, but it does not turn slides and narration into synthetic-presenter videos."
+    }
+  ],
   "relatedSlugs": [
     "speechify",
     "heygen",

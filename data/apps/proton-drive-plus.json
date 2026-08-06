@@ -53,6 +53,39 @@
       "desc": "Mature open-source file sync and collaboration server."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Peergos",
+      "url": "https://peergos.org/",
+      "type": "open-source",
+      "repo": "https://github.com/Peergos/Peergos",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "End-to-end encrypted sync and secret links, with a smaller ecosystem and a stranger architecture.",
+      "stars": 2400,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Nextcloud Files",
+      "url": "https://nextcloud.com/files/",
+      "desc": "Self-hosted files and links, but not client-side encrypted sharing by default."
+    },
+    {
+      "name": "Seafile Community Edition",
+      "url": "https://www.seafile.com/",
+      "desc": "Encrypted libraries exist, but external share-link semantics are not Proton-style end-to-end encryption."
+    }
+  ],
   "relatedSlugs": [
     "dropbox-plus",
     "google-one",

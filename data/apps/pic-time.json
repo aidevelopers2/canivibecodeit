@@ -52,6 +52,42 @@
       "desc": "Active open-source self-hosted photo and video management platform."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Piwigo",
+      "url": "https://piwigo.org/",
+      "type": "open-source",
+      "repo": "https://github.com/Piwigo/Piwigo",
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "Private client accounts, album permissions, favorites, downloads, and gallery themes on your own server; proofing works, commerce polish does not.",
+      "stars": 3800,
+      "lastCommit": "2026-05",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "CloudSpot Free",
+      "url": "https://cloudspot.io/",
+      "desc": "Three active galleries, JPEG-only uploads, and 2048-pixel download limits make this a demo shelf, not client delivery."
+    },
+    {
+      "name": "Pic-Time Free",
+      "url": "https://www.pic-time.com/",
+      "desc": "The free account falls from 10GB to 3GB after six months, while client selections and album proofing remain premium."
+    },
+    {
+      "name": "Picflow Free",
+      "url": "https://picflow.com/",
+      "desc": "The workflow is excellent, favorites, comments, annotations, passwords, but 2GB is too small for a durable professional client-gallery replacement."
+    }
+  ],
   "relatedSlugs": [
     "adobe-lightroom",
     "capture-one",

@@ -50,6 +50,43 @@
       "desc": "Active open-source cross-platform text expansion utility with system integration."
     }
   ],
+  "alternatives": [
+    {
+      "name": "SaneBar",
+      "url": "https://sanebar.com/",
+      "type": "open-source",
+      "repo": "https://github.com/sane-apps/SaneBar",
+      "platforms": [
+        "macos"
+      ],
+      "desc": "A native menu-bar bouncer with every former Pro feature unlocked.",
+      "stars": 262,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Thaw",
+      "url": "https://github.com/thaw-app/Thaw",
+      "type": "open-source",
+      "repo": "https://github.com/thaw-app/Thaw",
+      "platforms": [
+        "macos"
+      ],
+      "desc": "Ice thawed: signed, actively maintained, and limited to macOS 26 or later.",
+      "stars": 9500,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Ice",
+      "url": "https://icemenubar.app/",
+      "desc": "The famous answer stopped after a September 2025 beta; current macOS users moved to the Thaw fork."
+    }
+  ],
   "relatedSlugs": [
     "alfred-powerpack",
     "setapp",

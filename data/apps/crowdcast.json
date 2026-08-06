@@ -52,6 +52,24 @@
       "desc": "Widely deployed open-source video-conferencing platform."
     }
   ],
+  "alternatives": [
+    {
+      "name": "BigBlueButton",
+      "url": "https://bigbluebutton.org",
+      "type": "open-source",
+      "repo": "https://github.com/bigbluebutton/bigbluebutton",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Interactive live sessions, polls and replay recordings; public-event polish remains your job.",
+      "stars": 9200,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "zoom-pro",
     "google-workspace-business-starter",

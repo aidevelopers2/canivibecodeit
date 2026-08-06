@@ -52,6 +52,19 @@
       "desc": "Local speech-to-text engine suitable for private transcription."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Fathom",
+      "url": "https://www.fathom.ai/",
+      "desc": "The free plan records calls; coaching scorecards, CRM workflows and revenue intelligence are another product tier."
+    },
+    {
+      "name": "tl;dv",
+      "url": "https://tldv.io/",
+      "desc": "Free transcripts are not free sales coaching: scorecards, CRM sync and playbooks are paid."
+    }
+  ],
   "relatedSlugs": [
     "macwhisper",
     "read-ai",

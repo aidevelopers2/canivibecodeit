@@ -32,7 +32,11 @@
     "Comment-to-DM automations, scheduled follow-ups, and human-approval gates on AI writes",
     "Someone else babysitting webhook uptime, token refresh, and Meta API deprecations"
   ],
-  "moatTags": ["integrations", "scale-infra", "execution-polish"],
+  "moatTags": [
+    "integrations",
+    "scale-infra",
+    "execution-polish"
+  ],
   "moatNotes": "The moat is Meta's gate, not the code: App Review + business verification to operate beyond your own account, plus permanent connector upkeep across four platform APIs.",
   "whyPeopleStillPay": "Because the product is the plumbing. Instagram automation is 10% LLM calls and 90% staying connected: OAuth token lifecycles, webhook receivers that never sleep, Meta App Review, deprecation churn across Instagram, Facebook, Shopify and GoHighLevel APIs, and a CRM so conversations turn into customers instead of scrollback.",
   "priorArt": [
@@ -40,6 +44,19 @@
       "name": "Chatwoot",
       "url": "https://github.com/chatwoot/chatwoot",
       "desc": "open-source support inbox with an official Instagram DM channel, bring-your-own Meta app"
+    }
+  ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Chatwoot",
+      "url": "https://www.chatwoot.com/",
+      "desc": "A real Instagram inbox and CRM, but no follower-triggered comment automation; it misses the actual trick."
+    },
+    {
+      "name": "Manychat Free",
+      "url": "https://manychat.com/",
+      "desc": "It can trigger Instagram comment and DM automations, but twenty-five active contacts a month is a testing allowance, not a sales system."
     }
   ],
   "relatedSlugs": [],

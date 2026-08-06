@@ -53,6 +53,95 @@
       "desc": "Mature open-source newsletter and mailing-list manager."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Brevo Free",
+      "url": "https://www.brevo.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Simple campaigns, contacts and forms with a 300-email daily ceiling.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "EmailOctopus Free",
+      "url": "https://emailoctopus.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "A small list, campaigns and one form without a bill; automation and reporting limits are clearly visible.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Keila",
+      "url": "https://www.keila.io/",
+      "type": "open-source",
+      "repo": "https://github.com/pentacent/keila",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Self-hosted newsletters and signup forms with a real visual editor; SMTP setup replaces onboarding calls.",
+      "stars": 2179,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Kit Free",
+      "url": "https://kit.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Forms, landing pages and unlimited sends for creators; the editor is less event-flyer, more newsletter.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "listmonk",
+      "url": "https://listmonk.app/",
+      "type": "open-source",
+      "repo": "https://github.com/knadh/listmonk",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Lists, campaigns and embeddable forms in a fast admin; hand-holding is not bundled.",
+      "stars": 22600,
+      "lastCommit": "2026-07",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Sender Free",
+      "url": "https://www.sender.net/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Newsletters, contact management and signup forms for 2,500 subscribers; branding is the free-tier watermark.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "substack",
     "mailerlite",

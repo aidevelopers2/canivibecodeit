@@ -50,6 +50,24 @@
       "desc": "Mature open-source research and citation manager."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Hypothesis",
+      "url": "https://web.hypothes.is",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "browser-extension"
+      ],
+      "desc": "Highlights and margin notes on the live web; discovery is somebody else's problem.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "goodlinks",
     "feedbin",

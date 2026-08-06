@@ -54,6 +54,90 @@
       "status": "alive"
     }
   ],
+  "alternatives": [
+    {
+      "name": "Concrete CMS",
+      "url": "https://www.concretecms.org",
+      "type": "open-source",
+      "repo": "https://github.com/concretecms/concretecms",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "In-context page editing, blocks, collections and workflows; design freedom is more conventional.",
+      "stars": 850,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Microweber",
+      "url": "https://microweber.org",
+      "type": "open-source",
+      "repo": "https://github.com/microweber/microweber",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Drag-and-drop pages and CMS content in one PHP app; capable, quieter and decidedly self-hosted.",
+      "stars": 3431,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Plasmic",
+      "url": "https://www.plasmic.app",
+      "type": "open-source",
+      "repo": "https://github.com/plasmicapp/plasmic",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A hosted visual builder and CMS with custom domains free; the badge stays and the mental model leans React.",
+      "stars": 6900,
+      "lastCommit": "2026-08",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Vvveb",
+      "url": "https://www.vvveb.com",
+      "type": "open-source",
+      "repo": "https://github.com/givanz/Vvveb",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A finished visual CMS with custom content, forms and publishing; less design polish, more PHP ownership.",
+      "stars": 1200,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Webstudio",
+      "url": "https://webstudio.is",
+      "type": "open-source",
+      "repo": "https://github.com/webstudio-is/webstudio",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "The closest honest replacement: visual CSS, reusable components and CMS data, with free custom domains only when self-hosted.",
+      "stars": 8800,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "GrapesJS",
+      "url": "https://grapesjs.com",
+      "desc": "A framework for creating Webflow-like editors, not a visual CMS and hosting product."
+    }
+  ],
   "relatedSlugs": [
     "framer",
     "carrd",

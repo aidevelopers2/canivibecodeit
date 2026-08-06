@@ -53,6 +53,60 @@
       "desc": "Active open-source no-code database interface and Airtable alternative."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Baserow Community",
+      "url": "https://baserow.io/",
+      "type": "open-source",
+      "repo": "https://github.com/baserow/baserow",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A friendlier database grid with relations and formulas; less spreadsheet-like, more app-builder-like.",
+      "stars": 5517,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Grist",
+      "url": "https://www.getgrist.com/",
+      "type": "open-source",
+      "repo": "https://github.com/gristlabs/grist-core",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "The actual product, self-hosted: formulas, relational records, forms, and views in one small workspace.",
+      "stars": 11100,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Teable Community",
+      "url": "https://teable.ai/",
+      "type": "open-source",
+      "repo": "https://github.com/teableio/teable",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Relational tables, formula fields, forms, and views in a tidy self-hosted grid.",
+      "stars": 21300,
+      "lastCommit": "2026-07",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Mathesar",
+      "url": "https://mathesar.org/",
+      "desc": "Excellent relational data editing, but no spreadsheet formula model, the feature that makes Grist Grist."
+    }
+  ],
   "relatedSlugs": [
     "baserow-cloud",
     "nocodb-cloud",

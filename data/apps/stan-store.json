@@ -57,6 +57,39 @@
       "desc": "Open-source publishing and membership platform."
     }
   ],
+  "alternatives": [
+    {
+      "name": "systeme.io",
+      "url": "https://systeme.io",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Products, one course, checkout, email and bookings on a free plan; mobile-first link-page polish is not included.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "CourseLit",
+      "url": "https://courselit.app",
+      "desc": "Products and courses fit, but bookings and the mobile link-in-bio storefront do not."
+    },
+    {
+      "name": "Ghost",
+      "url": "https://ghost.org",
+      "desc": "Membership posts are useful; bookings, product checkout and course delivery are missing."
+    },
+    {
+      "name": "Medusa",
+      "url": "https://medusajs.com",
+      "desc": "It can power products after development, not a finished mobile creator store with bookings and leads."
+    }
+  ],
   "relatedSlugs": [
     "fourthwall",
     "ko-fi",

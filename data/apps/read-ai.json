@@ -52,6 +52,19 @@
       "desc": "Widely used local Whisper inference implementation suitable for private transcription."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "OpenWhispr",
+      "url": "https://openwhispr.com/",
+      "desc": "Captures and summarizes meetings, but does not produce engagement or sentiment analytics."
+    },
+    {
+      "name": "Speakr",
+      "url": "https://murtaza-nasir.github.io/speakr/",
+      "desc": "Strong transcripts, summaries and speaker statistics; no engagement score pretending to know who was paying attention."
+    }
+  ],
   "relatedSlugs": [
     "fathom-ai",
     "avoma",

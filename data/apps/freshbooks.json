@@ -53,6 +53,8 @@
       "status": "alive"
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "invoice-ninja",
     "ynab",

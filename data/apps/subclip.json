@@ -54,6 +54,14 @@
       "desc": "Open-source Electron editor with local Whisper transcription, word-level caption editing, clipping, and FFmpeg export."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Kdenlive",
+      "url": "https://kdenlive.org",
+      "desc": "Cuts and captions, yes; dubbing, rendering API and publishing workflow, no."
+    }
+  ],
   "relatedSlugs": [
     "descript",
     "opusclip",

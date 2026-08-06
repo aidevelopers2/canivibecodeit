@@ -53,6 +53,97 @@
       "desc": "Active open-source no-code database interface and Airtable alternative."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Budibase",
+      "url": "https://budibase.com/",
+      "type": "open-source",
+      "repo": "https://github.com/Budibase/budibase",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Build and publish database-backed forms, tables, charts, and workflows; reporting is basic but present.",
+      "stars": 27902,
+      "lastCommit": "2026-07",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Corteza",
+      "url": "https://cortezaproject.org/",
+      "type": "open-source",
+      "repo": "https://github.com/cortezaproject/corteza",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A self-hosted business-app suite with records, pages, workflows, charts, and enterprise-grade amounts of configuration.",
+      "stars": 2100,
+      "lastCommit": "2026-03",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Joget Community Edition",
+      "url": "https://www.joget.org/",
+      "type": "open-source",
+      "repo": "https://github.com/jogetworkflow/jw-community",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "Forms, lists, workflows, and role-aware apps from a product old enough to have survived several no-code fashions.",
+      "stars": 607,
+      "lastCommit": "2026-05",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "NocoBase",
+      "url": "https://www.nocobase.com/",
+      "type": "open-source",
+      "repo": "https://github.com/nocobase/nocobase",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Pages, forms, tables, charts, roles, and workflows over a real database; Caspio without the managed-service part.",
+      "stars": 23600,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "REI3",
+      "url": "https://rei3.de/",
+      "type": "open-source",
+      "repo": "https://github.com/r3-team/r3",
+      "platforms": [
+        "web",
+        "windows",
+        "linux",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "A sober business-app builder with forms, reports, roles, workflows, and no per-user meter.",
+      "stars": 571,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Saltcorn",
+      "url": "https://saltcorn.com/",
+      "desc": "It does the job, but its own security page lists fresh critical RCE, SQL injection, path-traversal, and cross-tenant bugs."
+    }
+  ],
   "relatedSlugs": [
     "baserow-cloud",
     "nocodb-cloud",

@@ -53,6 +53,85 @@
       "desc": "Mature open-source community discussion platform with strong moderation and search."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Discourse",
+      "url": "https://www.discourse.org/",
+      "type": "open-source",
+      "repo": "https://github.com/discourse/discourse",
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "Long-lived topic threads with search and notifications; more public-forum-shaped than workplace-shaped.",
+      "stars": 47600,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Mattermost Team Edition",
+      "url": "https://mattermost.com/",
+      "type": "open-source",
+      "repo": "https://github.com/mattermost/mattermost",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "Channels and threads work, but Mattermost still rewards live chat more than Twist's deliberate silence.",
+      "stars": 38700,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Pumble Free",
+      "url": "https://pumble.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android"
+      ],
+      "desc": "Unlimited threaded history for free; topic structure is looser, so humans must supply the discipline.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Zulip",
+      "url": "https://zulip.com/",
+      "type": "open-source",
+      "repo": "https://github.com/zulip/zulip",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "The closest free answer: streams hold channels, topics hold threads, and every reply lands somewhere deliberate.",
+      "stars": 25600,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "slack-pro",
     "discord-nitro",

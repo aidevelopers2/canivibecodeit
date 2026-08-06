@@ -56,6 +56,19 @@
       "desc": "Open-source interface and workflow layer for local or hosted language models."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Binoculars",
+      "url": "https://github.com/ahans30/Binoculars",
+      "desc": "The authors call it academic code, not a consumer product; it needs Python and models, and the repo stopped in 2024."
+    },
+    {
+      "name": "DetectGPT",
+      "url": "https://github.com/eric-mitchell/detect-gpt",
+      "desc": "Four-commit research code with a requirements file and no maintained product; useful paper, useless install recommendation."
+    }
+  ],
   "relatedSlugs": [
     "winston-ai",
     "gptzero",

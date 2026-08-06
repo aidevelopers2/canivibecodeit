@@ -54,6 +54,96 @@
       "desc": "Mature open-source newsletter and mailing-list manager."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Brevo Free",
+      "url": "https://www.brevo.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Campaigns, forms and automation with a 300-email daily throttle.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "EmailOctopus Free",
+      "url": "https://emailoctopus.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Newsletters, one form and a small welcome automation for 2,500 contacts.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Kit Free",
+      "url": "https://kit.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Forms, landing pages and one sequence for up to 10,000 subscribers; one recommendation slot is not yours.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "MailPoet Starter",
+      "url": "https://www.mailpoet.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "WordPress newsletters, forms and a basic welcome automation for 500 subscribers; WordPress is mandatory.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Sender Free",
+      "url": "https://www.sender.net/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "A genuinely useful hosted list with forms, landing pages and workflows; branding remains.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "listmonk",
+      "url": "https://listmonk.app/",
+      "desc": "A superb broadcast tool, but no built-in welcome sequence means it misses the stated job."
+    },
+    {
+      "name": "MailerLite Free",
+      "url": "https://www.mailerlite.com/",
+      "desc": "The free plan now stops at 250 subscribers; that is a demo with better posture."
+    },
+    {
+      "name": "SendPortal",
+      "url": "https://sendportal.io/",
+      "desc": "Commonly suggested, but its repository has been motionless since April 2024."
+    }
+  ],
   "relatedSlugs": [
     "substack",
     "activecampaign",

@@ -53,6 +53,48 @@
       "desc": "Active open-source commerce platform with modular checkout and fulfillment primitives."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Square Payment Links",
+      "url": "https://squareup.com/us/en/payment-links/buy-button",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "A buy button, product card and hosted checkout for zero monthly dollars; Square must operate in your country.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Stripe Payment Links",
+      "url": "https://stripe.com/payments/payment-links",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Hosted product pages and embeddable buy buttons without a monthly plan; catalog management stays deliberately small.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Medusa",
+      "url": "https://medusajs.com",
+      "desc": "Headless commerce is not an embeddable shop for non-builders, however often alternative lists pretend otherwise."
+    },
+    {
+      "name": "Shoprocket",
+      "url": "https://shoprocket.io",
+      "desc": "The closest Ecwid-shaped product, but live selling starts after a 14-day trial at roughly $29 a month."
+    }
+  ],
   "relatedSlugs": [
     "gumroad",
     "lemon-squeezy",

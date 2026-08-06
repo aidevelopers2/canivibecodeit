@@ -55,6 +55,86 @@
       "desc": "Open-source infinite-canvas SDK and whiteboard."
     }
   ],
+  "alternatives": [
+    {
+      "name": "AFFiNE",
+      "url": "https://affine.pro/",
+      "type": "open-source",
+      "repo": "https://github.com/toeverything/AFFiNE",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "Collaborative whiteboards tied to docs, databases, and planning views; broader than Lucidspark, more infrastructure if self-hosted.",
+      "stars": 71300,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "CryptPad",
+      "url": "https://cryptpad.fr/",
+      "type": "open-source",
+      "repo": "https://github.com/cryptpad/cryptpad",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Persistent encrypted whiteboards inside a shared drive with permissions and team folders; visually plain, operationally serious.",
+      "stars": 7825,
+      "lastCommit": "2026-07",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Excalidraw",
+      "url": "https://excalidraw.com/",
+      "type": "open-source",
+      "repo": "https://github.com/excalidraw/excalidraw",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Fast multiplayer whiteboards, libraries, links, exports, and workshop-friendly sketching; fewer facilitation widgets, much less account bureaucracy.",
+      "stars": 124000,
+      "lastCommit": "2026-08",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "tldraw",
+      "url": "https://www.tldraw.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "A frictionless hosted multiplayer canvas for brainstorming and planning; templates and enterprise workshop controls are sparse.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "WBO",
+      "url": "https://wbo.ophir.dev/",
+      "type": "open-source",
+      "repo": "https://github.com/lovasoa/whitebophir",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "The basic communal whiteboard that keeps working: persistent rooms, live cursors, free hosting, and almost no workshop theatre.",
+      "stars": 2600,
+      "lastCommit": "2026-08",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "creately",
     "smartdraw",

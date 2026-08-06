@@ -55,6 +55,35 @@
       "desc": "Open-source platform-as-a-service toolkit for a single server."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Cloudflare Workers Free",
+      "url": "https://workers.cloudflare.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "cli"
+      ],
+      "desc": "The same platform is genuinely free at small scale: 100,000 requests a day plus storage, queues, databases, vectors, and AI quotas.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Coolify",
+      "url": "https://coolify.io/",
+      "desc": "A capable self-hosted PaaS, but not an edge runtime and not a bundle of queues, serverless storage, networking, and AI."
+    },
+    {
+      "name": "Dokku",
+      "url": "https://dokku.com/",
+      "desc": "A container deployer on one server, not Cloudflare's edge compute, storage, queues, networking, or AI platform."
+    }
+  ],
   "relatedSlugs": [
     "supabase-pro",
     "firebase-blaze",

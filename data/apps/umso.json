@@ -53,6 +53,49 @@
       "desc": "Open-source visual website builder designed around web standards."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Mautic",
+      "url": "https://mautic.org",
+      "type": "open-source",
+      "repo": "https://github.com/mautic/mautic",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Landing pages, forms and analytics without limits; clean startup simplicity is replaced by a marketing control room.",
+      "stars": 9800,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "systeme.io",
+      "url": "https://systeme.io",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "A hosted startup page, custom domain, form and campaign analytics for zero dollars; the funnel UI gives away its ancestry.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "GrapesJS",
+      "url": "https://grapesjs.com",
+      "desc": "A page-editor framework, not a hosted landing page with forms and analytics."
+    },
+    {
+      "name": "Mobirise AI",
+      "url": "https://ai.mobirise.com",
+      "desc": "It creates the page and form, but a durable built-in analytics story is missing."
+    }
+  ],
   "relatedSlugs": [
     "duda",
     "tilda",

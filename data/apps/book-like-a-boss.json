@@ -50,6 +50,71 @@
       "desc": "Mature open-source scheduling platform and OAuth reference."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Appointy Free",
+      "url": "https://www.appointy.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "One staffer gets reminders, classes and Square checkout for 100 bookings a month; growth wakes the paywall.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Setmore Free",
+      "url": "https://www.setmore.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "Four staff, payments, classes and 200 monthly bookings; SMS, recurring appointments and two-way sync cost extra.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Square Appointments Free",
+      "url": "https://squareup.com/us/en/appointments",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "A serious free solo booking stack where Square operates; processing fees remain and the feature mix varies by country.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "TidyCal Free",
+      "url": "https://tidycal.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Unlimited one-person booking types and paid bookings on one calendar; group meetings and fancy emails cost extra.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "zcal",
     "cal-com-teams",

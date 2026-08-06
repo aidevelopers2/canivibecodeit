@@ -44,7 +44,127 @@
     {
       "name": "cal.com",
       "url": "https://github.com/calcom/cal.com",
-      "desc": "open-source Calendly — self-host and skip the OAuth pain"
+      "desc": "open-source Calendly; self-host and skip the OAuth pain"
+    }
+  ],
+  "alternatives": [
+    {
+      "name": "Cal.com Free",
+      "url": "https://cal.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android",
+        "browser-extension"
+      ],
+      "desc": "Unlimited solo event types, calendars and bookings, with payments and notifications; team routing costs money.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Google Calendar appointment schedules",
+      "url": "https://calendar.google.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "One bare appointment page inside the calendar you already use; reminders, payments and polish are paid.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Koalendar Free",
+      "url": "https://koalendar.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "browser-extension"
+      ],
+      "desc": "Unlimited booking pages and two calendar connections; payments, forms, reminders and team routing are paid.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "TidyCal Free",
+      "url": "https://tidycal.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Unlimited one-person booking types and paid bookings on one calendar; group meetings and fancy emails cost extra.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "YouCanBookMe Free",
+      "url": "https://youcanbook.me/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "browser-extension"
+      ],
+      "desc": "One booking page, but it keeps forms, payments, confirmations, polls and the calendar-overlay trick.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "zcal Free",
+      "url": "https://zcal.co/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Unlimited links and calendars, custom questions, email reminders and Stripe payments; teams are paid and zcal takes 3%.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Zoho Bookings Free",
+      "url": "https://www.zoho.com/bookings/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "browser-extension"
+      ],
+      "desc": "A real one-person booking desk with forms, reminders and two-way sync; staff and payment plumbing cost extra.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Cal.diy",
+      "url": "https://www.cal.diy/",
+      "desc": "Self-hostable, yes; also explicitly a hobbyist, non-production fork that expects database and security expertise."
     }
   ],
   "relatedSlugs": [
@@ -54,7 +174,7 @@
   ],
   "pagePriority": 5,
   "verifiedOneShot": false,
-  "notes": "The booking page is easy. Calendar-sync OAuth is where weekends go to die — be honest with yourself about that before starting.",
+  "notes": "The booking page is easy. Calendar-sync OAuth is where weekends go to die; be honest with yourself about that before starting.",
   "prompt": "Build me a personal booking page like Calendly. Requirements:\n\n- A public /book page showing my available slots for the next 14 days; visitors\n  pick one, enter name + email + note, and get a confirmation page.\n- Availability = weekly rules in a config file (e.g. Mon–Fri 10:00–17:00,\n  30-min slots, 15-min buffer between meetings, my timezone) minus existing\n  bookings, rendered in the visitor's local timezone.\n- Google Calendar sync via OAuth (credentials in .env): busy events block slots,\n  and confirmed bookings are created in my calendar with the visitor invited and\n  a Google Meet link attached. Warn me in the README: this OAuth app setup is\n  the fiddly part · budget an hour for the Google Cloud console alone.\n- Email confirmations to both sides via SMTP creds in .env.\n- Cancel/reschedule links with a signed token in the email.\n- SQLite storage, one Node process, no accounts, no framework lock-in.",
   "promptCurated": true
 }

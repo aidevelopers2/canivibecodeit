@@ -54,6 +54,65 @@
       "desc": "Open-source local knowledge graph and outliner."
     }
   ],
+  "alternatives": [
+    {
+      "name": "AFFiNE",
+      "url": "https://affine.pro",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "Documents and an infinite canvas in one local-first app, without the research tax.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Logseq",
+      "url": "https://logseq.com",
+      "type": "open-source",
+      "repo": "https://github.com/logseq/logseq",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android"
+      ],
+      "desc": "Cards, block links and whiteboards for sense-making, with rougher furniture.",
+      "stars": 44299,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Obsidian",
+      "url": "https://obsidian.md",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android"
+      ],
+      "desc": "Canvas boards backed by linked Markdown files and an enormous plugin drawer.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "mem-ai",
     "napkin",

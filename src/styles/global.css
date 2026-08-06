@@ -33,19 +33,24 @@
   --ease-snap: cubic-bezier(0.2, 0.9, 0.3, 1.2);
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
 
+  /* Border-only cards sit directly on the dark ground; in light they become
+     white cards popping off the paper background. */
+  --card: transparent;
+
   color-scheme: dark;
 }
 
 [data-theme='light'] {
-  /* light — paper terminal. White canvas, white cards with borders; the warm
-     grey only survives in wells and hovers so the page doesn't grey-wash. */
-  --bg: #ffffff;
+  /* light — paper terminal, inverted for contrast (Rob 2026-08-06): warm paper
+     GROUND, pure-white cards that pop off it, darker borders and secondary
+     text. The old all-white version read washed out. */
+  --bg: #f4f1e8;
   --surface: #ffffff;
-  --surface-2: #f4f2ea;
-  --border: #ddd9cc;
-  --fg: #171a17;
-  --muted: #6c7268;
-  --primary: #0e9c47;
+  --surface-2: #ece8db;
+  --border: #c9c2ac;
+  --fg: #14170f;
+  --muted: #575d51;
+  --primary: #0b7c39;
   --on-primary: #ffffff;
   --primary-dim: #9fdcb6;
   --kinda-bg: #f5b300;
@@ -59,8 +64,9 @@
   --ticker-cell: #f4fbf6;
   --ticker-cell-border: #bcdcc7;
   --lose-bg: #fbe3e3;
-  --lose-border: #eebbbb;
+  --lose-border: #e5a5a5;
   --shadow: 0 8px 32px rgba(40, 36, 24, 0.14);
+  --card: #ffffff;
 
   color-scheme: light;
 }
@@ -458,6 +464,7 @@ h3 {
 }
 
 .chip {
+  background: var(--card);
   font-size: 12px;
   border: 1px solid var(--border);
   border-radius: 100px;
@@ -677,6 +684,7 @@ h3 {
 }
 
 .vchip {
+  background: var(--card);
   font-family: var(--font-mono);
   font-size: 11px;
   font-weight: 700;
@@ -1037,6 +1045,7 @@ a.row:hover .badge {
 }
 
 .prior-card {
+  background: var(--card);
   display: flex;
   align-items: center;
   gap: 12px;
@@ -1081,6 +1090,7 @@ a.row:hover .badge {
 }
 
 .mini-card {
+  background: var(--card);
   display: flex;
   align-items: center;
   gap: 11px;
@@ -1826,6 +1836,476 @@ a.row:hover .badge {
 .toast.show {
   translate: -50% 0;
   opacity: 1;
+}
+
+/* ---------- the escape hatch (curated free/OSS alternatives) ---------- */
+
+.escape-hatch {
+  padding-top: 52px;
+}
+
+.eh-head {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  padding: 10px 0 4px 0;
+}
+
+.alt-tile {
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  background: var(--surface-2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.alt-tile.big {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  font-size: 17px;
+}
+
+.alt-star {
+  fill: var(--kinda-bg);
+  flex-shrink: 0;
+}
+
+.alt-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 100px;
+  background: var(--primary);
+  flex-shrink: 0;
+}
+
+.alt-zero {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.alt-badge {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: 100px;
+  padding: 3px 10px;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+/* colour means something: green is reserved for open source */
+.alt-badge.oss {
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+.alt-badge.free {
+  color: var(--muted);
+  border: 1px solid var(--border);
+}
+
+/* compact row on the verdict page */
+.alt-row {
+  background: var(--card);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 13px 16px;
+  margin-top: 12px;
+  animation: pop-in 0.5s var(--ease-snap) both;
+  animation-delay: calc(var(--i, 0) * 80ms);
+  transition: border-color 0.15s ease, transform 0.15s var(--ease-out);
+}
+
+.alt-row:hover {
+  border-color: var(--muted);
+  transform: translateX(3px);
+}
+
+.alt-row .alt-main {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  flex: 1;
+}
+
+.alt-row .alt-name {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--primary);
+}
+
+.alt-row .alt-desc {
+  font-size: 12.5px;
+  color: var(--muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.alt-row .alt-meta {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 11.5px;
+  color: var(--muted);
+  flex-shrink: 0;
+}
+
+.alt-row .alt-meta b {
+  font-size: 12px;
+  color: var(--fg);
+}
+
+.alt-row .arrow {
+  color: var(--muted);
+}
+
+.eh-foot {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding-top: 14px;
+  font-size: 12.5px;
+  color: var(--muted);
+}
+
+.eh-foot a {
+  color: var(--primary);
+  font-weight: 500;
+}
+
+/* full card on the dedicated page */
+.alt-intro {
+  padding-top: 18px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--muted);
+  max-width: 76ch;
+}
+
+.alt-list {
+  padding-top: 10px;
+}
+
+.alt-card {
+  background: var(--card);
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 18px 20px;
+  margin-top: 14px;
+  animation: pop-in 0.5s var(--ease-snap) both;
+  animation-delay: calc(var(--i, 0) * 80ms);
+  transition: border-color 0.15s ease, transform 0.15s var(--ease-out), box-shadow 0.2s ease;
+}
+
+.alt-card:hover {
+  border-color: var(--muted);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.alt-card .alt-body {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-width: 0;
+  flex: 1;
+}
+
+.alt-card .alt-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.alt-card .alt-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.alt-card .alt-desc {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--fg);
+  margin: 0;
+}
+
+.alt-platforms {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  flex-wrap: wrap;
+}
+
+.alt-plat {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 10.5px;
+  color: var(--muted);
+}
+
+.alt-card .alt-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+  flex-shrink: 0;
+}
+
+.alt-card .alt-stars {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.alt-card .alt-active {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11.5px;
+  color: var(--muted);
+}
+
+.alt-card .alt-links {
+  display: flex;
+  gap: 12px;
+  font-size: 12.5px;
+}
+
+.alt-card .alt-links a {
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.alt-verdict-link {
+  color: var(--muted);
+}
+
+.alt-verdict-link:hover {
+  color: var(--fg);
+}
+
+.alt-plat.selfhost {
+  border-left: 1px solid var(--border);
+  padding-left: 13px;
+}
+
+.alt-plat.one-click svg,
+.alt-plat.hosted svg {
+  stroke: var(--primary);
+}
+
+.alt-plat.docker svg,
+.alt-plat.ops svg {
+  stroke: var(--kinda-bg);
+}
+
+.alt-suspects {
+  padding-top: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.suspect {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  border-left: 2px solid var(--lose-border);
+  padding: 2px 0 2px 14px;
+  font-size: 12.5px;
+  margin: 0;
+}
+
+.suspect b {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--fg);
+  flex-shrink: 0;
+}
+
+.suspect span {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+@media (max-width: 760px) {
+  .suspect {
+    flex-direction: column;
+    gap: 2px;
+  }
+}
+
+/* hairline segments: the page reads as sections, not floating text */
+.seg {
+  border-top: 1px solid var(--border);
+  margin-top: 44px;
+  padding-top: 30px;
+}
+
+.alt-head .title {
+  align-items: flex-start;
+}
+
+.alt-head .title img {
+  margin-top: 3px;
+}
+
+.alt-strip {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 20px 0 10px 0;
+}
+
+.alt-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 6px 13px;
+  font-size: 12px;
+  color: var(--muted);
+  background: var(--card);
+}
+
+.alt-pill b {
+  color: var(--fg);
+}
+
+.alt-pill.zero {
+  border-color: var(--primary);
+}
+
+.alt-pill.zero b {
+  color: var(--primary);
+}
+
+.alt-pill.cat {
+  color: var(--fg);
+  margin-left: auto;
+  transition: border-color 0.15s ease, transform 0.12s var(--ease-snap);
+}
+
+.alt-pill.cat:hover {
+  border-color: var(--primary);
+  transform: translateY(-1px);
+}
+
+.strip-arrow {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.strip-verdict {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--primary);
+}
+
+.alt-table-wrap {
+  padding-top: 40px;
+  overflow-x: auto;
+}
+
+.alt-table {
+  width: 100%;
+  margin-top: 14px;
+  border-collapse: collapse;
+  font-size: 12.5px;
+}
+
+.alt-table th {
+  text-align: left;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding: 8px 14px 8px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.alt-table td {
+  padding: 9px 14px 9px 0;
+  border-bottom: 1px solid var(--border);
+  color: var(--fg);
+}
+
+.alt-table td a {
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.alt-build {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  padding: 17px 20px;
+  margin-top: 40px;
+  font-size: 13.5px;
+}
+
+.alt-build span {
+  flex: 1;
+  min-width: 220px;
+}
+
+.alt-hub-group {
+  padding-top: 36px;
+}
+
+@media (max-width: 760px) {
+  .alt-row .alt-meta span {
+    display: none;
+  }
+
+  .alt-row .alt-dot {
+    display: none;
+  }
+
+  .alt-card {
+    flex-wrap: wrap;
+  }
+
+  .alt-card .alt-side {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 4px;
+  }
 }
 
 /* ---------- reveal on scroll ---------- */

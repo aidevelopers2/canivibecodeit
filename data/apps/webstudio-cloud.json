@@ -56,6 +56,50 @@
       "desc": "Open-source web-builder framework."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Plasmic",
+      "url": "https://www.plasmic.app",
+      "type": "open-source",
+      "repo": "https://github.com/plasmicapp/plasmic",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Hosted visual projects, CMS and custom domains on a permanent free plan; a Plasmic badge replaces the bill.",
+      "stars": 6900,
+      "lastCommit": "2026-08",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Webstudio",
+      "url": "https://webstudio.is",
+      "type": "open-source",
+      "repo": "https://github.com/webstudio-is/webstudio",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "The same open-source builder on your own server; the subscription disappears and the cloud chores move in.",
+      "stars": 8800,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "GrapesJS",
+      "url": "https://grapesjs.com",
+      "desc": "The editor framework lacks projects, hosting, CMS connections and a finished user product."
+    },
+    {
+      "name": "Silex",
+      "url": "https://www.silex.me",
+      "desc": "A good free visual publisher, but not an equivalent cloud project and CMS-connection product."
+    }
+  ],
   "relatedSlugs": [
     "readymag",
     "siter-io",

@@ -52,6 +52,62 @@
       "desc": "Open-source search ranking tracker for owned keyword sets."
     }
   ],
+  "alternatives": [
+    {
+      "name": "OpenSEO",
+      "url": "https://openseo.so/",
+      "type": "open-source",
+      "repo": "https://github.com/every-app/open-seo",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Keyword ideas, clusters and location-aware rank checks in one container; the data meter belongs to DataForSEO.",
+      "stars": 10614,
+      "lastCommit": "2026-07",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "SEO Panel",
+      "url": "https://www.seopanel.org/",
+      "type": "open-source",
+      "repo": "https://github.com/seopanel/Seo-Panel",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A dated but maintained SEO control panel: keyword positions, suggestions and reports, with all the glamour of PHP admin software.",
+      "stars": 149,
+      "lastCommit": "2026-06",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "SerpBear",
+      "url": "https://docs.serpbear.com/",
+      "type": "open-source",
+      "repo": "https://github.com/towfiqi/serpbear",
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "Rank tracking with history, alerts and Google Ads ideas; not five mangoes, but it covers the edible parts.",
+      "stars": 2016,
+      "lastCommit": "2026-05",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Serposcope",
+      "url": "https://www.serposcope.com/",
+      "desc": "Still turns up in every free-rank-tracker list; archived in 2024 and untouched since January 2022."
+    }
+  ],
   "relatedSlugs": [
     "moz-pro",
     "se-ranking",

@@ -50,6 +50,19 @@
       "desc": "Local speech-to-text engine suitable for private transcription."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Fathom",
+      "url": "https://www.fathom.ai/",
+      "desc": "Unlimited basic summaries are real; dependable action-item workflows and automations are paid."
+    },
+    {
+      "name": "tl;dv",
+      "url": "https://tldv.io/",
+      "desc": "Unlimited recordings are real; AI notes stop at ten meetings a month and the workflow half is paid."
+    }
+  ],
   "relatedSlugs": [
     "minuteslink",
     "screenapp",

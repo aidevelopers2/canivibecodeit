@@ -53,6 +53,53 @@
       "desc": "Mature open-source scheduling platform with calendar integrations and booking workflows."
     }
   ],
+  "alternatives": [
+    {
+      "name": "FlowSavvy Free",
+      "url": "https://flowsavvy.app/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "It auto-plans unlimited tasks for the next two weeks; priorities and dependencies are how the paid plan gets you.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Reclaim Lite",
+      "url": "https://reclaim.ai/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "The free solo plan moves focus, habits, breaks and meetings around; the planning horizon is one week.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Trevor AI Free",
+      "url": "https://www.trevorai.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "One calendar gets task-to-time-block planning and some AI suggestions; multiple calendars and deeper automation cost extra.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "cal-com-teams",
     "fantastical",

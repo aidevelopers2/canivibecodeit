@@ -56,6 +56,39 @@
       "status": "alive"
     }
   ],
+  "alternatives": [
+    {
+      "name": "MediaCMS",
+      "url": "https://mediacms.io",
+      "type": "open-source",
+      "repo": "https://github.com/mediacms-io/mediacms",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A private YouTube-shaped cabinet with permissions, embeds and local transcription.",
+      "stars": 5000,
+      "lastCommit": "2026-07",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "PeerTube",
+      "url": "https://joinpeertube.org",
+      "type": "open-source",
+      "repo": "https://github.com/Chocobozzz/PeerTube",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Vimeo on your server, complete with embeds and privacy controls; bandwidth is now your problem.",
+      "stars": 15200,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "loom",
     "frame-io",

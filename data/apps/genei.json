@@ -50,6 +50,40 @@
       "desc": "Mature open-source research and citation manager."
     }
   ],
+  "alternatives": [
+    {
+      "name": "NotebookLM",
+      "url": "https://notebooklm.google.com",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "Sources become cited answers, summaries and notes; the free limits are unusually humane.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Open Notebook",
+      "url": "https://www.open-notebook.ai",
+      "type": "open-source",
+      "repo": "https://github.com/lfnovo/open-notebook",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A self-hosted research notebook for sources, summaries and chat, with Docker attached.",
+      "stars": 36400,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "afforai",
     "lateral",

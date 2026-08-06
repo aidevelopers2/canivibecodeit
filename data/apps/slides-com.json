@@ -50,6 +50,39 @@
       "desc": "Open-source diagram canvas with an approachable interaction model."
     }
   ],
+  "alternatives": [
+    {
+      "name": "CryptPad",
+      "url": "https://cryptpad.org/",
+      "type": "open-source",
+      "repo": "https://github.com/cryptpad/cryptpad",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Collaborative browser presentations with sharing, embeds, source editing, and privacy-first storage; fewer designer templates and developer niceties.",
+      "stars": 7825,
+      "lastCommit": "2026-08",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "HedgeDoc",
+      "url": "https://hedgedoc.org/",
+      "type": "open-source",
+      "repo": "https://github.com/hedgedoc/hedgedoc",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Write collaborative Markdown and present it through reveal.js, with diagrams, revisions, and exports; ideal when slides are text and code rather than decorative masonry.",
+      "stars": 7355,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "decktopus",
     "visme",

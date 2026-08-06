@@ -53,6 +53,87 @@
       "desc": "Mature open-source community discussion platform with strong moderation and search."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Cosmos Free",
+      "url": "https://cosmos.video/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "ios",
+        "android"
+      ],
+      "desc": "Four concurrent people get an always-on spatial office, chat and unlimited calls.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "flat.social Free",
+      "url": "https://flat.social/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Five people, unlimited sessions and custom rooms; enough office for a genuinely small team.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Kumospace Free",
+      "url": "https://www.kumospace.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "ios",
+        "android"
+      ],
+      "desc": "The actual product is free for five registered members, with customizable rooms and basic chat intact.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "SpatialChat Free",
+      "url": "https://spatial.chat/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Twelve people fit, but only for two hours a day; permanent free does not mean permanently open.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "WorkAdventure Free",
+      "url": "https://workadventu.re/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "A pixel office for ten simultaneous people; less boardroom, more tiny RPG.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "slack-pro",
     "discord-nitro",

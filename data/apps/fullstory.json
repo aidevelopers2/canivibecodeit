@@ -53,6 +53,42 @@
       "desc": "Popular open-source privacy-focused web analytics platform."
     }
   ],
+  "alternatives": [
+    {
+      "name": "OpenReplay",
+      "url": "https://openreplay.com",
+      "type": "open-source",
+      "repo": "https://github.com/openreplay/openreplay",
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "Session replay with console, network and error context; the server bill and YAML are yours.",
+      "stars": 12425,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "PostHog",
+      "url": "https://posthog.com",
+      "type": "open-source",
+      "repo": "https://github.com/PostHog/posthog",
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "Events, replay and privacy controls on a generous free allowance, without FullStory's enterprise gravity.",
+      "stars": 37500,
+      "lastCommit": "2026-08",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "matomo-cloud",
     "posthog",

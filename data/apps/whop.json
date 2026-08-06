@@ -57,6 +57,24 @@
       "desc": "Open-source publishing and membership platform."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Discourse",
+      "url": "https://www.discourse.org",
+      "desc": "Paid groups and chat are real; software delivery, courses, files and marketplace discovery are not."
+    },
+    {
+      "name": "Ghost",
+      "url": "https://ghost.org",
+      "desc": "Memberships and posts cover one corner; software, files, courses and a buyer marketplace cover the rest."
+    },
+    {
+      "name": "Medusa",
+      "url": "https://medusajs.com",
+      "desc": "It can become a seller backend after engineering; it has no marketplace discovery or finished creator-product experience."
+    }
+  ],
   "relatedSlugs": [
     "skool",
     "heartbeat-community",

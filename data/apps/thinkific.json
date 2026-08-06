@@ -54,6 +54,106 @@
       "desc": "Active open-source commerce platform with modular checkout and fulfillment primitives."
     }
   ],
+  "alternatives": [
+    {
+      "name": "CourseLit",
+      "url": "https://courselit.app",
+      "type": "open-source",
+      "repo": "https://github.com/codelitdev/courselit",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A modern self-hosted course site with lessons, quizzes, drip and progress; email and storage need configuring.",
+      "stars": 1200,
+      "lastCommit": "2026-07",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Frappe Learning",
+      "url": "https://frappe.io/learning",
+      "type": "open-source",
+      "repo": "https://github.com/frappe/lms",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Structured courses, lessons, progress, quizzes and certificates without a licence bill; Docker remains.",
+      "stars": 3100,
+      "lastCommit": "2026-07",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Moodle",
+      "url": "https://moodle.org",
+      "type": "open-source",
+      "repo": "https://github.com/moodle/moodle",
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "Lessons, progress and quizzes with decades of scars and capabilities.",
+      "stars": 7300,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Odoo Community",
+      "url": "https://www.odoo.com/page/community",
+      "type": "open-source",
+      "repo": "https://github.com/odoo/odoo",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Paid courses, lessons, quizzes and progress inside a giant business suite; overkill arrives preinstalled.",
+      "stars": 53527,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "systeme.io",
+      "url": "https://systeme.io",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "One structured course with lessons and quizzes on a hosted free plan; one is the operative number.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Tutor LMS",
+      "url": "https://tutorlms.com",
+      "type": "open-source",
+      "repo": "https://github.com/themeum/tutor",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "WordPress courses, progress and quizzes for free; the surrounding plugin ecosystem will introduce itself.",
+      "stars": 124,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Medusa",
+      "url": "https://medusajs.com",
+      "desc": "Selling access is not the same as delivering lessons, progress and quizzes."
+    }
+  ],
   "relatedSlugs": [
     "gumroad",
     "lemon-squeezy",

@@ -53,6 +53,86 @@
       "desc": "Mature open-source community discussion platform with strong moderation and search."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Discourse",
+      "url": "https://www.discourse.org/",
+      "type": "open-source",
+      "repo": "https://github.com/discourse/discourse",
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "Forums, chat and member profiles with a decade of battle scars; Ruby, Postgres and Redis become your hobbies.",
+      "stars": 47600,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Flarum",
+      "url": "https://flarum.org/",
+      "type": "open-source",
+      "repo": "https://github.com/flarum/framework",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "The least baroque forum here; extensions arrive before courses, events or payments.",
+      "stars": 6700,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Forem",
+      "url": "https://forem.com/",
+      "type": "open-source",
+      "repo": "https://github.com/forem/forem",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A branded publishing community with profiles, feeds and discussion; deployment is considerably less friendly than the members.",
+      "stars": 22800,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "HumHub",
+      "url": "https://www.humhub.com/",
+      "type": "open-source",
+      "repo": "https://github.com/humhub/humhub",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Spaces, profiles, streams and events on your server; payments and courses are not hiding in a submenu.",
+      "stars": 6700,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "NodeBB",
+      "url": "https://nodebb.org/",
+      "type": "open-source",
+      "repo": "https://github.com/NodeBB/NodeBB",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A fast modern forum with profiles and real-time chat; MongoDB, Redis or Postgres becomes your problem.",
+      "stars": 15200,
+      "lastCommit": "2026-07",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "slack-pro",
     "discord-nitro",

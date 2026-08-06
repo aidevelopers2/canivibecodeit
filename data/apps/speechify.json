@@ -53,6 +53,75 @@
       "desc": "Active community continuation of the fast local Piper text-to-speech engine."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Balabolka",
+      "url": "https://www.cross-plus-a.com/balabolka.htm",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "windows"
+      ],
+      "desc": "The Windows answer: open the document, press play, save the audio, ignore the time-travel interface.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Koodo Reader",
+      "url": "https://www.koodoreader.com/en",
+      "type": "open-source",
+      "repo": "https://github.com/koodo-reader/koodo-reader",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "A cross-platform ebook and document reader with free local or system text-to-speech.",
+      "stars": 27800,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Readest",
+      "url": "https://readest.com/",
+      "type": "open-source",
+      "repo": "https://github.com/readest/readest",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android"
+      ],
+      "desc": "Reads books, PDFs and documents aloud across desktop, mobile and web without a listening quota.",
+      "stars": 23100,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Thorium Reader",
+      "url": "https://thorium.edrlab.org/en/",
+      "type": "open-source",
+      "repo": "https://github.com/edrlab/thorium-reader",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "A cross-platform accessible ebook reader with built-in read-aloud and no cloud account.",
+      "stars": 2814,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "synthesia",
     "heygen",

@@ -53,6 +53,74 @@
       "desc": "Open-source technical SEO auditing application."
     }
   ],
+  "alternatives": [
+    {
+      "name": "CrawlSEO",
+      "url": "https://github.com/crawlseo/crawlseo",
+      "type": "open-source",
+      "repo": "https://github.com/crawlseo/crawlseo",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Crawls, rank snapshots, alerts and issue history; replacing the subscription means adopting Postgres and Google OAuth.",
+      "stars": 507,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "OpenSEO",
+      "url": "https://openseo.so/",
+      "type": "open-source",
+      "repo": "https://github.com/every-app/open-seo",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A self-hosted audit and rank dashboard; remediation is a list rather than a workflow, and DataForSEO keeps the meter running.",
+      "stars": 10614,
+      "lastCommit": "2026-07",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "SEO Panel",
+      "url": "https://www.seopanel.org/",
+      "type": "open-source",
+      "repo": "https://github.com/seopanel/Seo-Panel",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Site audits, keyword positions and reports in a maintained interface that still remembers Internet Explorer.",
+      "stars": 149,
+      "lastCommit": "2026-06",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Seobility Basic",
+      "url": "https://www.seobility.net/en/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "The vendor's own permanent free tier covers one 1,000-page site and ten weekly-tracked keywords; small really does mean small.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "SEO PowerSuite Free",
+      "url": "https://www.link-assistant.com/",
+      "desc": "Good one-off audits, no free project saving; remediation history vanishes with the window."
+    }
+  ],
   "relatedSlugs": [
     "screaming-frog-seo-spider",
     "sitebulb",

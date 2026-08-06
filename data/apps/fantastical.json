@@ -53,6 +53,24 @@
       "desc": "Mature open-source scheduling platform with calendar integrations and booking workflows."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Apple Calendar",
+      "url": "https://support.apple.com/guide/calendar/welcome/mac",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos",
+        "ios"
+      ],
+      "desc": "Already on every Apple device, with natural-language entry and local calendar groups; no booking links attached.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "cal-com-teams",
     "tidycal",

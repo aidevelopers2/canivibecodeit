@@ -45,7 +45,7 @@
     {
       "name": "plausible/analytics",
       "url": "https://github.com/plausible/analytics",
-      "desc": "Plausible itself is open source — self-host it"
+      "desc": "Plausible itself is open source; self-host it"
     },
     {
       "name": "umami",
@@ -53,6 +53,71 @@
       "desc": "lightweight self-hosted analytics"
     }
   ],
+  "alternatives": [
+    {
+      "name": "GoatCounter",
+      "url": "https://www.goatcounter.com",
+      "type": "open-source",
+      "repo": "https://github.com/arp242/goatcounter",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Even simpler than Plausible, which is either refreshing or a warning.",
+      "stars": 5800,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Plausible Community Edition",
+      "url": "https://plausible.io/community-edition",
+      "type": "open-source",
+      "repo": "https://github.com/plausible/analytics",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Plausible without the hosted bill; you keep the core dashboard and inherit the Compose stack.",
+      "stars": 28377,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Rybbit",
+      "url": "https://rybbit.com",
+      "type": "open-source",
+      "repo": "https://github.com/rybbit-io/rybbit",
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "Plausible's core plus replay and funnels, in exchange for a busier dashboard.",
+      "stars": 12600,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Umami",
+      "url": "https://umami.is",
+      "type": "open-source",
+      "repo": "https://github.com/umami-software/umami",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "The closest broad substitute: simple traffic analytics, events and goals with your data attached.",
+      "stars": 38073,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "fathom-analytics",
     "simple-analytics",
@@ -60,7 +125,7 @@
   ],
   "pagePriority": 5,
   "verifiedOneShot": false,
-  "notes": "Script + ingest + dashboard is a weekend. The data pipeline polish — bot filtering, sessionization at scale — is the real product. Both are open source: self-hosting is the honest move here.",
+  "notes": "Script + ingest + dashboard is a weekend. The data pipeline polish; bot filtering, sessionization at scale; is the real product. Both are open source: self-hosting is the honest move here.",
   "prompt": "Build me a privacy-first web analytics tool like Plausible (personal scale).\nRequirements:\n\n- A <2KB tracking snippet (vanilla JS, no cookies): sends pageview beacons with\n  path, referrer, screen class, and a daily-rotating visitor hash computed\n  server-side from IP + user-agent + a salt (never store raw IPs).\n- An ingest endpoint that filters obvious bots by user-agent and writes to\n  SQLite. One row per event; index on (site, date).\n- A /dashboard (basic-auth from .env): unique visitors, pageviews, top pages,\n  top referrers, and countries for today/7d/30d, with a visitors-per-day bar\n  chart as inline SVG. Fast and clean, dark mode.\n- Sessionization: a visit ends after 30 idle minutes; compute bounce rate.\n- Multi-site support via a site id in the snippet.\n- Node or Python, one process. Honest note in the README: at serious traffic,\n  self-host the real Plausible instead · this is for personal sites.",
   "promptCurated": true
 }

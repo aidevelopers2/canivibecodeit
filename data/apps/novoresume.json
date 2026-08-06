@@ -51,6 +51,8 @@
       "desc": "Active open-source resume builder with structured data and PDF export."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "teal-plus",
     "jobscan",

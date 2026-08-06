@@ -53,6 +53,83 @@
       "desc": "Mature open-source community discussion platform with strong moderation and search."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Discord Free",
+      "url": "https://discord.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android"
+      ],
+      "desc": "The same servers, channels and friend graph; you lose large uploads, HD streaming and decorative peacocking.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Element",
+      "url": "https://element.io/",
+      "type": "open-source",
+      "repo": "https://github.com/element-hq/element-web",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "Encrypted Matrix rooms with real apps and a free public homeserver; running your own server is optional suffering.",
+      "stars": 13300,
+      "lastCommit": "2026-07",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Rocket.Chat Community",
+      "url": "https://www.rocket.chat/",
+      "type": "open-source",
+      "repo": "https://github.com/RocketChat/Rocket.Chat",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "Discord without the public friend graph: channels, threads and files for up to a hundred concurrent users.",
+      "stars": 45900,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Stoat",
+      "url": "https://stoat.chat/",
+      "type": "open-source",
+      "repo": "https://github.com/stoatchat/self-hosted",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Discord-shaped chat on your server; the web client works, while most official native clients still do not.",
+      "stars": 2600,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "slack-pro",
     "circle",

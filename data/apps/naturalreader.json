@@ -52,6 +52,75 @@
       "desc": "Active community continuation of the fast local Piper text-to-speech engine."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Balabolka",
+      "url": "https://www.cross-plus-a.com/balabolka.htm",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "windows"
+      ],
+      "desc": "Opens most document formats, reads them with whatever voices Windows owns, and never discovers a subscription.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Koodo Reader",
+      "url": "https://www.koodoreader.com/en",
+      "type": "open-source",
+      "repo": "https://github.com/koodo-reader/koodo-reader",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "Reads nearly every ebook format aloud; the fancy hosted voice is paid, the local and system voices are not.",
+      "stars": 27800,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Readest",
+      "url": "https://readest.com/",
+      "type": "open-source",
+      "repo": "https://github.com/readest/readest",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android"
+      ],
+      "desc": "A book-and-PDF reader with built-in narration and no premium-voice bait-and-switch.",
+      "stars": 23100,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Thorium Reader",
+      "url": "https://thorium.edrlab.org/en/",
+      "type": "open-source",
+      "repo": "https://github.com/edrlab/thorium-reader",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "A free desktop reader built by accessibility people: ebooks, PDFs and text-to-speech, with no account or ad slot.",
+      "stars": 2814,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "speechify",
     "synthesia",

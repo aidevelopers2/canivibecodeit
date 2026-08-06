@@ -53,6 +53,54 @@
       "desc": "Active open-source automation platform with connectors and durable workflow execution."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Activepieces Community Edition",
+      "url": "https://www.activepieces.com/open-source",
+      "type": "open-source",
+      "repo": "https://github.com/activepieces/activepieces",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Zapier with a Docker bill and no task meter.",
+      "stars": 23604,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Automatisch",
+      "url": "https://automatisch.io/",
+      "type": "open-source",
+      "repo": "https://github.com/automatisch/automatisch",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A smaller Zapier clone with fewer connectors and a proper AGPL license.",
+      "stars": 13923,
+      "lastCommit": "2026-01",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "n8n Community Edition",
+      "url": "https://n8n.io/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A broad visual connector catalog with retries and logs; free for internal self-hosting, fair-code rather than open source.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "pipedream",
     "ifttt",

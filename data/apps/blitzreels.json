@@ -57,6 +57,19 @@
       "desc": "Mature open-source nonlinear video editor."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "auto-editor",
+      "url": "https://auto-editor.com",
+      "desc": "Useful automatic cuts from a CLI; not a full NLE, API platform or agent-integrated product."
+    },
+    {
+      "name": "Kdenlive",
+      "url": "https://kdenlive.org",
+      "desc": "A real editor, but no API, CLI or agent workflow; automation stops at opening the app."
+    }
+  ],
   "relatedSlugs": [
     "opusclip",
     "veed",

@@ -51,6 +51,24 @@
       "desc": "Mature open-source scheduling platform and OAuth reference."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Cal.com Free",
+      "url": "https://cal.com/",
+      "desc": "The free plan does forms and payments for one person; round-robin and routing forms are paid."
+    },
+    {
+      "name": "Cal.diy",
+      "url": "https://www.cal.diy/",
+      "desc": "The famous open-source answer, but the 2026 fork removed teams and workflows and is officially for hobbyist, non-production use."
+    },
+    {
+      "name": "YouCanBookMe Free",
+      "url": "https://youcanbook.me/",
+      "desc": "The free page handles forms and payments, but not the team routing Appointlet is hired for."
+    }
+  ],
   "relatedSlugs": [
     "oncehub",
     "setmore",

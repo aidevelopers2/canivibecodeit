@@ -45,5 +45,38 @@
       "desc": "excellent open-source cron monitoring"
     }
   ],
+  "alternatives": [
+    {
+      "name": "Healthchecks",
+      "url": "https://healthchecks.io/",
+      "type": "open-source",
+      "repo": "https://github.com/healthchecks/healthchecks",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Cron phones home; this notices when it stops.",
+      "stars": 10200,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Uptime Kuma",
+      "url": "https://uptime.kuma.pet/",
+      "type": "open-source",
+      "repo": "https://github.com/louislam/uptime-kuma",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Push monitors and ordinary uptime checks under one very cheerful roof.",
+      "stars": 87300,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "prompt": "Build me a cron-job monitor like Cronitor / Healthchecks. Requirements:\n\n- Each monitored job gets a unique ping URL (/ping/:uuid). The job's crontab\n  line just appends `&& curl -fsS <url>` · document this.\n- Define jobs in SQLite via a basic-auth /admin page: name, expected period\n  (e.g. every 60 min) and grace time. Store every ping with timestamp.\n- A scheduler loop checks each job: if now > last_ping + period + grace, the job\n  is LATE → send one alert webhook (Discord/Slack/Telegram, URL in .env) with\n  the job name and how late it is. Alert again on recovery. No alert spam ·\n  one per state change.\n- /admin dashboard: each job as a row with green/amber/red status dot, last ping\n  time (\"7 min ago\"), and a 24h ping histogram as inline SVG.\n- Support /ping/:uuid/fail for explicit failure reports with an optional body\n  shown in the alert.\n- Python or Node, single process, systemd unit included."
 }

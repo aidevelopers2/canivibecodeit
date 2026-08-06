@@ -52,6 +52,74 @@
       "desc": "Popular open-source mail-server suite that demonstrates the operational complexity of hosted mail."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Apple Mail",
+      "url": "https://support.apple.com/guide/mail/welcome/mac",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos",
+        "ios"
+      ],
+      "desc": "Local indexing, tracker blocking and optional on-device summaries, provided your hardware is modern enough.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "BlueMail Personal",
+      "url": "https://bluemail.me/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android"
+      ],
+      "desc": "Unlimited accounts, PGP and capped AI summaries for free; the privacy story is less austere than Canary's.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Mailspring",
+      "url": "https://www.getmailspring.com/",
+      "type": "open-source",
+      "repo": "https://github.com/Foundry376/Mailspring",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "A local desktop index and open codebase; summaries and the privacy halo are absent.",
+      "stars": 17724,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Thunderbird",
+      "url": "https://www.thunderbird.net/",
+      "type": "open-source",
+      "repo": "https://github.com/thunderbird/thunderbird-desktop",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "Private local mail and search without an account tax; AI summaries are somebody else's problem.",
+      "stars": 92,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "superhuman",
     "front",

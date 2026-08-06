@@ -49,6 +49,113 @@
       "status": "alive"
     }
   ],
+  "alternatives": [
+    {
+      "name": "ComfyUI",
+      "url": "https://comfy.org/",
+      "type": "open-source",
+      "repo": "https://github.com/Comfy-Org/ComfyUI",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "Can produce superb images with current models, provided you are willing to become the workflow designer.",
+      "stars": 124207,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Draw Things",
+      "url": "https://drawthings.ai/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos",
+        "ios"
+      ],
+      "desc": "Excellent local generation on Apple hardware; the model choice is yours, so the taste is too.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Easy Diffusion",
+      "url": "https://easydiffusion.github.io/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "The easy local installer; output quality follows the model you download, not a secret Midjourney recipe.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "InvokeAI",
+      "url": "https://invoke.ai/",
+      "type": "open-source",
+      "repo": "https://github.com/invoke-ai/InvokeAI",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "A polished local studio for strong open image models; better editing, less instant house style.",
+      "stars": 27776,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "RuinedFooocus",
+      "url": "https://github.com/runew0lf/RuinedFooocus",
+      "type": "open-source",
+      "repo": "https://github.com/runew0lf/RuinedFooocus",
+      "platforms": [
+        "web",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "The closest thing here to prompt-and-go; its defaults are friendly, its model stack less fashionable.",
+      "stars": 680,
+      "lastCommit": "2026-07",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "SwarmUI",
+      "url": "https://swarmui.net/",
+      "type": "open-source",
+      "repo": "https://github.com/mcmonkeyprojects/SwarmUI",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "A prompt-first local UI for current image models; you supply the model and GPU instead of renting the aesthetic.",
+      "stars": 4423,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "runway",
     "elevenlabs",

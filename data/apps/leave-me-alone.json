@@ -51,6 +51,68 @@
       "desc": "Open-source desktop mail client and useful IMAP prior art."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Cleanfox",
+      "url": "https://www.cleanfox.io/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "Unsubscribe and delete newsletter piles for free; anonymized shopping data is the rent.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Edison Mail",
+      "url": "https://www.edisonmail.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos",
+        "windows",
+        "ios",
+        "android"
+      ],
+      "desc": "Unsubscribe, bulk-delete and block senders inside a free mail client; the cleanup service becomes an app.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Gmailytics",
+      "url": "https://gmailytics.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "browser-extension"
+      ],
+      "desc": "Unlimited newsletter unsubscribes plus sender cleanup for Gmail; no recurring bill and no non-Gmail support.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Gmail Cleaner",
+      "url": "https://gururagavendra.github.io/gmail-cleaner/",
+      "desc": "The cleanup works, but requiring a hand-made Google OAuth client fails the non-builder test."
+    },
+    {
+      "name": "InboxPurge",
+      "url": "https://www.inboxpurge.com/",
+      "desc": "Twenty free actions per month turns a cleanup utility into a tasting menu."
+    }
+  ],
   "relatedSlugs": [
     "mailbird",
     "proton-mail-plus",

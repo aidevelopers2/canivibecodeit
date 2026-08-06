@@ -57,6 +57,19 @@
       "desc": "Open-source marketing automation platform."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Dittofeed",
+      "url": "https://www.dittofeed.com/",
+      "desc": "Excellent event journeys across email, SMS and push; no ecommerce CDP, predictive personalization or store reporting parity."
+    },
+    {
+      "name": "Mautic",
+      "url": "https://mautic.org/",
+      "desc": "Automation and segmentation are real; native ecommerce data, SMS economics and predictive analytics are not."
+    }
+  ],
   "relatedSlugs": [
     "omnisend",
     "substack",

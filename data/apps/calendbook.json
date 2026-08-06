@@ -51,6 +51,70 @@
       "desc": "Mature open-source scheduling platform and OAuth reference."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Appointy Free",
+      "url": "https://www.appointy.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "One staffer gets reminders, classes and Square checkout for 100 bookings a month; growth wakes the paywall.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Cal.com Free",
+      "url": "https://cal.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android",
+        "browser-extension"
+      ],
+      "desc": "Unlimited solo event types, calendars and bookings, with payments and notifications; team routing costs money.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "zcal Free",
+      "url": "https://zcal.co/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Unlimited links and calendars, custom questions, email reminders and Stripe payments; teams are paid and zcal takes 3%.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "TidyCal Free",
+      "url": "https://tidycal.com/",
+      "desc": "Payments are free, but automated reminder controls are not; it stops just short of the stated job."
+    },
+    {
+      "name": "YouCanBookMe Free",
+      "url": "https://youcanbook.me/",
+      "desc": "Payments and confirmations are free, but pre-meeting reminders start on a paid plan."
+    }
+  ],
   "relatedSlugs": [
     "lemcal",
     "clockwise",

@@ -52,6 +52,19 @@
       "desc": "Open-source search ranking tracker for owned keyword sets."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "ContentGecko Free SERP Clustering",
+      "url": "https://contentgecko.io/free-serp-keyword-clustering/",
+      "desc": "A useful free clusterer for 200 supplied keywords; it never tells you which SERPs are weak."
+    },
+    {
+      "name": "OpenSEO",
+      "url": "https://openseo.so/",
+      "desc": "Keyword research and clustering, yes; the weak-domain and weak-SERP scoring that makes LowFruits useful, no."
+    }
+  ],
   "relatedSlugs": [
     "moz-pro",
     "se-ranking",

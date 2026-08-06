@@ -50,6 +50,44 @@
       "desc": "Open-source diagram canvas with an approachable interaction model."
     }
   ],
+  "alternatives": [
+    {
+      "name": "diagrams.net",
+      "url": "https://app.diagrams.net/",
+      "type": "open-source",
+      "repo": "https://github.com/jgraph/drawio-desktop",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "The closest broad replacement: flowcharts, network diagrams, floor plans, org charts, engineering shapes, templates, and local files without a subscription.",
+      "stars": 62464,
+      "lastCommit": "2026-07",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "yEd",
+      "url": "https://www.yworks.com/products/yed",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "Automatic layout is the star here, especially for org charts, networks, processes, and dependency graphs; floor-plan tooling is much thinner.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "edrawmax",
     "mindmeister",

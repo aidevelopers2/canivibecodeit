@@ -54,6 +54,19 @@
       "desc": "Open-source marketing automation platform with campaigns, contacts, and email workflows."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "listmonk",
+      "url": "https://listmonk.app/",
+      "desc": "A fine newsletter sender, but it does not watch replies and stop a sales sequence; wrong kind of email automation."
+    },
+    {
+      "name": "Mautic",
+      "url": "https://mautic.org/",
+      "desc": "It can run the sequence, but it does not enrich contacts through user-supplied providers without custom integration work."
+    }
+  ],
   "relatedSlugs": [
     "apollo-io",
     "clay",

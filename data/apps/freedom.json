@@ -49,6 +49,52 @@
       "desc": "Local-first automatic time tracking with an extensible event model."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Apple Screen Time",
+      "url": "https://support.apple.com/guide/mac-help/mchlfafa9773/mac",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos",
+        "ios"
+      ],
+      "desc": "Already installed on Apple devices, syncs limits, and is easier to override than Freedom.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "ScreenZen",
+      "url": "https://screenzen.co/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos",
+        "windows",
+        "ios",
+        "android"
+      ],
+      "desc": "App and site blocking across phones and desktops, paid for by donations instead of guilt.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Cold Turkey Blocker",
+      "url": "https://getcoldturkey.com/",
+      "desc": "The free tier blocks websites; app blocking and schedules are the paid product."
+    },
+    {
+      "name": "LeechBlock NG",
+      "url": "https://www.proginosko.com/leechblock/",
+      "desc": "Excellent browser blocker; it cannot block desktop or phone apps, so it misses the cross-device core."
+    }
+  ],
   "relatedSlugs": [
     "opal",
     "session",

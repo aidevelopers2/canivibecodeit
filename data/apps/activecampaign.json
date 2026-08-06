@@ -54,6 +54,110 @@
       "desc": "Mature open-source newsletter and mailing-list manager."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Brevo Free",
+      "url": "https://www.brevo.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Campaigns and automation for up to 2,000 automated contacts; the 300-email daily ceiling slows launch day.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "EmailOctopus Free",
+      "url": "https://emailoctopus.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "A useful hosted list plus three five-step automations; exactly enough machinery for a small lifecycle.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Loops Free",
+      "url": "https://loops.so/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Lifecycle and marketing email for 1,000 contacts with every feature; contact 1,001 brings a card reader.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Mautic",
+      "url": "https://mautic.org/",
+      "type": "open-source",
+      "repo": "https://github.com/mautic/mautic",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "The full automation engine with no contact tax; it replaces the SaaS bill with serious server maintenance.",
+      "stars": 10300,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Notifuse",
+      "url": "https://www.notifuse.com/",
+      "type": "open-source",
+      "repo": "https://github.com/Notifuse/notifuse",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Visual campaigns and automations in one modern compose stack; PostgreSQL and an SMTP provider still need seats.",
+      "stars": 2038,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Plunk",
+      "url": "https://www.useplunk.com/",
+      "type": "open-source",
+      "repo": "https://github.com/useplunk/plunk",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Campaigns, transactional mail and workflows in one container; the sending provider still sends a bill.",
+      "stars": 5300,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Sender Free",
+      "url": "https://www.sender.net/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "A real free list, unlimited workflows and 15,000 monthly sends; SMS did not make the cut.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "substack",
     "mailerlite",

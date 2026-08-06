@@ -52,6 +52,41 @@
       "desc": "Open-source desktop mail client and useful IMAP prior art."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Chatwoot",
+      "url": "https://www.chatwoot.com/",
+      "type": "open-source",
+      "repo": "https://github.com/chatwoot/chatwoot",
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "Email, live chat and messaging with assignments, notes and automations; self-hosting adds a small Rails estate.",
+      "stars": 35528,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Zammad",
+      "url": "https://zammad.org/",
+      "type": "open-source",
+      "repo": "https://github.com/zammad/zammad",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Email, chat, phone and social tickets in one mature desk; Elasticsearch joins the payroll in server chores.",
+      "stars": 5800,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "gmelius",
     "mimestream",

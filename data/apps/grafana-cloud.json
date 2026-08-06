@@ -53,6 +53,60 @@
       "desc": "Popular open-source uptime monitoring dashboard with many check types."
     }
   ],
+  "alternatives": [
+    {
+      "name": "HyperDX",
+      "url": "https://www.hyperdx.io/",
+      "type": "open-source",
+      "repo": "https://github.com/hyperdxio/hyperdx",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "An OpenTelemetry stack with logs, metrics and traces; ClickHouse replaces the alphabet soup.",
+      "stars": 9798,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "OpenObserve",
+      "url": "https://openobserve.ai/",
+      "type": "open-source",
+      "repo": "https://github.com/openobserve/openobserve",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Logs, metrics, traces and dashboards in one stack; fewer logos, same telemetry.",
+      "stars": 20578,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Uptrace",
+      "url": "https://uptrace.dev/",
+      "type": "open-source",
+      "repo": "https://github.com/uptrace/uptrace",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "OpenTelemetry APM with two databases and no pretending that is one click.",
+      "stars": 4300,
+      "lastCommit": "2026-06",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Uptime Kuma",
+      "url": "https://uptime.kuma.pet/",
+      "desc": "A good uptime dashboard, not hosted metrics, logs, traces and visualization."
+    }
+  ],
   "relatedSlugs": [
     "sentry",
     "uptime"

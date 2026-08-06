@@ -52,6 +52,30 @@
       "status": "alive"
     }
   ],
+  "alternatives": [
+    {
+      "name": "Ghost",
+      "url": "https://ghost.org/",
+      "type": "open-source",
+      "repo": "https://github.com/TryGhost/Ghost",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Publishing, newsletters, memberships and paid subscriptions on your server; beehiiv's ad network and growth machinery stay behind.",
+      "stars": 54700,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Substack",
+      "url": "https://substack.com/",
+      "desc": "No monthly bill, but ten percent of paid subscription revenue is not free once monetization works."
+    }
+  ],
   "relatedSlugs": [
     "kit",
     "mailchimp",

@@ -47,6 +47,19 @@
       "desc": "open-source social scheduling, the nearest self-host starting point"
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Fedica Free",
+      "url": "https://fedica.com/",
+      "desc": "Useful X scheduling in a tiny rolling queue, without the AI content and engagement suite."
+    },
+    {
+      "name": "Postiz",
+      "url": "https://postiz.com/",
+      "desc": "AI scheduling and analytics are present, but X-specific engagement and growth tooling are not."
+    }
+  ],
   "relatedSlugs": [
     "typefully",
     "buffer",

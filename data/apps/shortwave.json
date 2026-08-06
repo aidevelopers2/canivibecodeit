@@ -53,6 +53,44 @@
       "desc": "Popular open-source mail-server suite that demonstrates the operational complexity of hosted mail."
     }
   ],
+  "alternatives": [
+    {
+      "name": "BlueMail Personal",
+      "url": "https://bluemail.me/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android"
+      ],
+      "desc": "Clusters group related mail and the Later Board turns messages into tasks; Gmail-specific bundles are less clever.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Spark Free",
+      "url": "https://sparkmailapp.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos",
+        "windows",
+        "ios",
+        "android"
+      ],
+      "desc": "Smart Inbox, Set Aside and Done reproduce the focused workflow; conversation bundling is simpler.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "superhuman",
     "front",

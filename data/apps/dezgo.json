@@ -57,6 +57,128 @@
       "desc": "Widely used local Stable Diffusion interface and extension ecosystem."
     }
   ],
+  "alternatives": [
+    {
+      "name": "ComfyUI",
+      "url": "https://comfy.org/",
+      "type": "open-source",
+      "repo": "https://github.com/Comfy-Org/ComfyUI",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "Every diffusion control you could ask for, arranged as cable spaghetti instead of credits.",
+      "stars": 124207,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Draw Things",
+      "url": "https://drawthings.ai/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos",
+        "ios"
+      ],
+      "desc": "Generation, inpainting and model controls on Apple hardware; local use is free and offline.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Easy Diffusion",
+      "url": "https://easydiffusion.github.io/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "The beginner installer with generation, inpainting, queues and current models; free locally, not open-source.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "InvokeAI",
+      "url": "https://invoke.ai/",
+      "type": "open-source",
+      "repo": "https://github.com/invoke-ai/InvokeAI",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "A local image studio with a real canvas, masks, history, reruns, and no credit meter.",
+      "stars": 27776,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "RuinedFooocus",
+      "url": "https://github.com/runew0lf/RuinedFooocus",
+      "type": "open-source",
+      "repo": "https://github.com/runew0lf/RuinedFooocus",
+      "platforms": [
+        "web",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "Type a prompt and mostly ignore the machinery; the name is worse than the installer.",
+      "stars": 680,
+      "lastCommit": "2026-07",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "SDAI",
+      "url": "https://sdai.moroz.cc/",
+      "type": "open-source",
+      "repo": "https://github.com/ShiftHackZ/Stable-Diffusion-KMP",
+      "platforms": [
+        "ios",
+        "android"
+      ],
+      "desc": "A free mobile front end for local models, your own server, or donated GPUs; provider setup is the catch.",
+      "stars": 1242,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "SwarmUI",
+      "url": "https://swarmui.net/",
+      "type": "open-source",
+      "repo": "https://github.com/mcmonkeyprojects/SwarmUI",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "A straightforward Generate tab over a much deeper local engine; private, flexible, and free.",
+      "stars": 4423,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "photoleap",
     "lensa",

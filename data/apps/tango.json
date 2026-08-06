@@ -53,6 +53,35 @@
       "desc": "Open-source screen recording and sharing product with modern desktop architecture."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Mimik",
+      "url": "https://mimik.westpoint.io",
+      "type": "open-source",
+      "repo": "https://github.com/westpoint-io/mimik",
+      "platforms": [
+        "web",
+        "browser-extension"
+      ],
+      "desc": "Tango without the cloud: click through a workflow and get local, editable steps.",
+      "stars": 88,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Folge",
+      "url": "https://folge.me",
+      "desc": "A proper desktop guide maker whose free forever ends at guide number six."
+    },
+    {
+      "name": "MotionShot",
+      "url": "https://www.motionshot.app",
+      "desc": "Two watermarked guides, then the free story is over."
+    }
+  ],
   "relatedSlugs": [
     "screen-studio",
     "cleanshot-x",

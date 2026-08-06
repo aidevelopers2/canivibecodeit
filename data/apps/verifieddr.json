@@ -43,6 +43,19 @@
   "moatNotes": "data access/network/operations",
   "whyPeopleStillPay": "They pay for verified backlink and traffic data, cross-model checks, historical monitoring, and a partner network without maintaining API integrations and scheduled jobs.",
   "priorArt": [],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Elmo",
+      "url": "https://www.elmohq.com/",
+      "desc": "Strong on AI mentions and citations; it has no TrueDR analogue, verified-partnership network or conventional search-visibility layer."
+    },
+    {
+      "name": "OpenSEO",
+      "url": "https://openseo.so/",
+      "desc": "Covers organic data and two AI surfaces; no TrueDR, no verified partnerships and no multi-engine AI benchmark."
+    }
+  ],
   "relatedSlugs": [
     "semrush",
     "ahrefs",

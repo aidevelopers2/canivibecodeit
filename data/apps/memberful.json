@@ -56,6 +56,59 @@
       "desc": "Open-source publishing and membership platform."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Ghost",
+      "url": "https://ghost.org",
+      "type": "open-source",
+      "repo": "https://github.com/TryGhost/Ghost",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Memberships, subscriptions and gated posts without a plugin pile; the whole site becomes a Ghost site.",
+      "stars": 54500,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Paid Memberships Pro",
+      "url": "https://www.paidmembershipspro.com",
+      "type": "open-source",
+      "repo": "https://github.com/strangerstudios/paid-memberships-pro",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A WordPress membership paywall with recurring Stripe and PayPal billing; free software, paid in plugin upkeep.",
+      "stars": 528,
+      "lastCommit": "2026-07",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "systeme.io",
+      "url": "https://systeme.io",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "A hosted membership site with recurring billing and 2,000 contacts free; WordPress integration is not the point.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Medusa",
+      "url": "https://medusajs.com",
+      "desc": "A commerce backend is not a WordPress membership and gated-content product."
+    }
+  ],
   "relatedSlugs": [
     "memberstack",
     "outseta",

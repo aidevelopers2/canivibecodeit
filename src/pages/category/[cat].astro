@@ -14,7 +14,7 @@ const apps = appsByCategory(cat).sort((a, b) => votes(b.slug) - votes(a.slug));
 if (apps.length === 0) return new Response(null, { status: 404 });
 
 const cats = categoriesInUse();
-const title = `Vibecode your ${meta.label.toLowerCase()} subscription — Can I Vibecode It?`;
+const title = `Vibecode your ${meta.label.toLowerCase()} subscription · Can I Vibecode It?`;
 const description = `${meta.label} apps ranked by how replaceable they are with one AI prompt: ${apps
   .map((a) => a.name)
   .join(', ')}.`;
@@ -32,7 +32,7 @@ const jsonld = [
   {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    name: `${meta.label} — vibecodability`,
+    name: `${meta.label} · vibecodability`,
     itemListElement: apps.map((a, i) => ({
       '@type': 'ListItem',
       position: i + 1,

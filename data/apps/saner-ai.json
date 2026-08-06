@@ -54,6 +54,62 @@
       "desc": "Open-source local knowledge graph and outliner."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Atomic",
+      "url": "https://atomicapp.ai",
+      "type": "open-source",
+      "repo": "https://github.com/kenforthewin/atomic",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "self-hosted",
+        "browser-extension"
+      ],
+      "desc": "Capture, automatic connections and cited chat over your notes; bring the model yourself.",
+      "stars": 1600,
+      "lastCommit": "2026-07",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Khoj",
+      "url": "https://khoj.dev",
+      "type": "open-source",
+      "repo": "https://github.com/khoj-ai/khoj",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "Search and chat across personal files, now self-host only because the cloud shut down.",
+      "stars": 36308,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Open Notebook",
+      "url": "https://www.open-notebook.ai",
+      "type": "open-source",
+      "repo": "https://github.com/lfnovo/open-notebook",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A private source notebook with search and chat; capture is upload-first, not frictionless.",
+      "stars": 36400,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "fabric",
     "milanote",

@@ -53,6 +53,60 @@
       "desc": "Widely deployed open-source video-conferencing platform."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Jitsi Meet",
+      "url": "https://meet.jit.si",
+      "type": "open-source",
+      "repo": "https://github.com/jitsi/jitsi-meet",
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "Click a room link and meet; no account choreography required.",
+      "stars": 29700,
+      "lastCommit": "2026-08",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "MiroTalk SFU",
+      "url": "https://sfu.mirotalk.com",
+      "type": "open-source",
+      "repo": "https://github.com/miroslavpejic85/mirotalksfu",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A capable WebRTC room in one Docker stack, with lobby, whiteboard and recording.",
+      "stars": 3100,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Nextcloud Talk",
+      "url": "https://nextcloud.com/talk",
+      "type": "open-source",
+      "repo": "https://github.com/nextcloud/spreed",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "Browser meeting links inside Nextcloud; scaling them turns into a TURN-server hobby.",
+      "stars": 2200,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "zoom-pro",
     "google-workspace-business-starter",

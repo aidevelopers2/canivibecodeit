@@ -50,6 +50,36 @@
       "desc": "Active open-source cross-platform text expansion utility with system integration."
     }
   ],
+  "alternatives": [
+    {
+      "name": "CopyQ",
+      "url": "https://hluk.github.io/CopyQ/",
+      "type": "open-source",
+      "repo": "https://github.com/hluk/CopyQ",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "A clipboard filing cabinet with tabs, filters, rules, and built-in encryption.",
+      "stars": 12100,
+      "lastCommit": "2026-07",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Maccy",
+      "url": "https://maccy.app/",
+      "desc": "Fast and local, but it lacks app-level encrypted history, pinboards, and expiration rules."
+    },
+    {
+      "name": "PasteBar",
+      "url": "https://www.pastebar.app/",
+      "desc": "Feature-complete and free for personal use, but its CC BY-NC license does not cover ordinary commercial use."
+    }
+  ],
   "relatedSlugs": [
     "alfred-powerpack",
     "setapp",

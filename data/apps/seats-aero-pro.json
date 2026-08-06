@@ -51,6 +51,8 @@
       "desc": "Open-source self-hosted trail database and route explorer using open map data."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "tripit-pro",
     "wanderlog-pro",

@@ -49,6 +49,109 @@
       "status": "alive"
     }
   ],
+  "alternatives": [
+    {
+      "name": "Cline",
+      "url": "https://cline.bot/",
+      "type": "open-source",
+      "repo": "https://github.com/cline/cline",
+      "platforms": [
+        "browser-extension",
+        "cli",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "A code agent in your editor; the model bill is still yours.",
+      "stars": 65800,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Kilo Code",
+      "url": "https://kilo.ai/",
+      "type": "open-source",
+      "repo": "https://github.com/kilo-org/kilocode",
+      "platforms": [
+        "browser-extension",
+        "cli",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "One open agent across VS Code, JetBrains and the terminal; inference still has a meter somewhere.",
+      "stars": 26735,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "OpenCode",
+      "url": "https://opencode.ai/",
+      "type": "open-source",
+      "repo": "https://github.com/anomalyco/opencode",
+      "platforms": [
+        "cli",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "A fast local coding agent with no loyalty to any model vendor.",
+      "stars": 193678,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Tabby",
+      "url": "https://tabbyml.com/",
+      "type": "open-source",
+      "repo": "https://github.com/TabbyML/tabby",
+      "platforms": [
+        "browser-extension",
+        "self-hosted"
+      ],
+      "desc": "Copilot-shaped completions and chat, paid for with your own GPU instead of a seat.",
+      "stars": 33819,
+      "lastCommit": "2026-06",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Zed",
+      "url": "https://zed.dev/",
+      "type": "open-source",
+      "repo": "https://github.com/zed-industries/zed",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "A fast open editor with completions, chat and agents built in; model usage is separate.",
+      "stars": 88100,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Continue",
+      "url": "https://continue.dev/",
+      "desc": "Acquired by Cursor; the repo is read-only and 2.0.0 is the last release."
+    },
+    {
+      "name": "Refact",
+      "url": "https://github.com/smallcloudai/refact",
+      "desc": "The original repo was archived and Refact Cloud was retired in May 2026."
+    },
+    {
+      "name": "Roo Code",
+      "url": "https://github.com/RooCodeInc/Roo-Code",
+      "desc": "The extension shut down and the repo was archived on May 15, 2026."
+    }
+  ],
   "relatedSlugs": [
     "cursor",
     "replit",

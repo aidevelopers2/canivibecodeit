@@ -52,6 +52,60 @@
       "desc": "Open-source search ranking tracker for owned keyword sets."
     }
   ],
+  "alternatives": [
+    {
+      "name": "CrawlSEO",
+      "url": "https://github.com/crawlseo/crawlseo",
+      "type": "open-source",
+      "repo": "https://github.com/crawlseo/crawlseo",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Owned-site crawls, rank snapshots, optional backlink data and alerts; capable software, decidedly non-trivial setup.",
+      "stars": 507,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "OpenSEO",
+      "url": "https://openseo.so/",
+      "type": "open-source",
+      "repo": "https://github.com/every-app/open-seo",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Rank tracking, audits, competitor rows and backlinks in one container; the backlink API is where free becomes philosophical.",
+      "stars": 10614,
+      "lastCommit": "2026-07",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "SEO Panel",
+      "url": "https://www.seopanel.org/",
+      "type": "open-source",
+      "repo": "https://github.com/seopanel/Seo-Panel",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Rankings, audits, backlinks and reports in one venerable PHP dashboard; modernity was not part of the bargain.",
+      "stars": 149,
+      "lastCommit": "2026-06",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "SEO PowerSuite Free",
+      "url": "https://www.link-assistant.com/",
+      "desc": "Four serious desktop modules, zero project saving on the free edition; useful for a snapshot, useless for tracking."
+    }
+  ],
   "relatedSlugs": [
     "moz-pro",
     "mangools",

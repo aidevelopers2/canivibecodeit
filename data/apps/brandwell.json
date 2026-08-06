@@ -56,6 +56,14 @@
       "desc": "Open-source interface and workflow layer for local or hosted language models."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Open WebUI",
+      "url": "https://openwebui.com/",
+      "desc": "A general AI workbench, not a brand-governed content optimization and campaign-production system."
+    }
+  ],
   "relatedSlugs": [
     "originality-ai",
     "copyleaks",

@@ -50,6 +50,57 @@
       "desc": "Open-source diagram canvas with an approachable interaction model."
     }
   ],
+  "alternatives": [
+    {
+      "name": "CryptPad",
+      "url": "https://cryptpad.org/",
+      "type": "open-source",
+      "repo": "https://github.com/cryptpad/cryptpad",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Encrypted collaborative documents, whiteboards, diagrams, slides, and Kanban boards; less polished than Lucidchart, considerably less interested in your data.",
+      "stars": 7825,
+      "lastCommit": "2026-08",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "diagrams.net",
+      "url": "https://app.diagrams.net/",
+      "type": "open-source",
+      "repo": "https://github.com/jgraph/drawio-desktop",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "The obvious answer because it is the right one: broad diagramming, local ownership, imports, templates, and real-time collaboration through Google Drive or OneDrive.",
+      "stars": 62464,
+      "lastCommit": "2026-07",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Excalidraw",
+      "url": "https://excalidraw.com/",
+      "type": "open-source",
+      "repo": "https://github.com/excalidraw/excalidraw",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Faster and friendlier for collaborative sketches and system diagrams; deliberately worse at formal templates and precision drafting.",
+      "stars": 129054,
+      "lastCommit": "2026-08",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "lucidspark",
     "creately",

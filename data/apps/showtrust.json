@@ -38,6 +38,64 @@
   "moatNotes": "free tier/polish",
   "whyPeopleStillPay": "For one site, they don't · it's free, uncapped, and nothing is feature-gated, so the paid tier only exists to add a second project. What you actually trade away by self-hosting is smaller and more boring than money: the layout and styling controls are a real chunk of fiddly frontend work, and the impression tracking tells you whether the wall is doing anything at all, which a hand-rolled version silently won't. One honest mark against the hosted option · the collection page carries a 'Powered by ShowTrustTo' line on every tier, paid included, and there's no switch to remove it. If that badge on a page you send to customers bothers you, that alone is a legitimate reason to build your own.",
   "priorArt": [],
+  "alternatives": [
+    {
+      "name": "Real Testimonials",
+      "url": "https://wordpress.org/plugins/testimonial-free/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Another WordPress route: forms, moderation, grids and sliders are free; video and the clever automation live upstairs.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Shosay",
+      "url": "https://shosay.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Unlimited text, video and audio proof, imports, walls and 25-plus widgets; the bill is zero, the tiny Powered by pill is not.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Strong Testimonials",
+      "url": "https://wordpress.org/plugins/strong-testimonials/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A WordPress-only form, moderation queue, grid, slider and widget; simple enough once you already own the WordPress problem.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Reviewskits",
+      "url": "https://reviewskits.com/",
+      "desc": "A young headless stack with 52 stars, no releases, and an SDK-shaped hole where the no-code widget should be."
+    },
+    {
+      "name": "Senja",
+      "url": "https://senja.io/",
+      "desc": "Polished and genuinely free, right up to testimonial number sixteen; the core collection job then becomes paid."
+    }
+  ],
   "relatedSlugs": [
     "testimonial-to"
   ],

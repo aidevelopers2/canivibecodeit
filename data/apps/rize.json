@@ -52,6 +52,24 @@
       "desc": "Mature open-source time-tracking application with projects, reports, and exports."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "ActivityWatch",
+      "url": "https://activitywatch.net/",
+      "desc": "The local activity categories are excellent; built-in focus and break reminders are missing."
+    },
+    {
+      "name": "ManicTime Free",
+      "url": "https://www.manictime.com/solutions/individual",
+      "desc": "Automatic local activity tracking is exact, but there is no neutral focus-and-break coaching loop."
+    },
+    {
+      "name": "Super Productivity",
+      "url": "https://super-productivity.com/",
+      "desc": "It handles focus and break timers, but not passive application categorization."
+    }
+  ],
   "relatedSlugs": [
     "toggl-track",
     "harvest",

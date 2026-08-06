@@ -54,6 +54,69 @@
       "status": "alive"
     }
   ],
+  "alternatives": [
+    {
+      "name": "Huly",
+      "url": "https://huly.io/",
+      "type": "open-source",
+      "repo": "https://github.com/hcengineering/platform",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Issues, docs and chat in one stack; the hosted service is closing, so this means self-hosting.",
+      "stars": 27246,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Leantime",
+      "url": "https://leantime.io/",
+      "type": "open-source",
+      "repo": "https://github.com/leantime/leantime",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Project planning for people who do not collect project-management jargon.",
+      "stars": 11300,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "OpenProject",
+      "url": "https://www.openproject.org/",
+      "type": "open-source",
+      "repo": "https://github.com/opf/openproject",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Linear's sober older cousin, complete with Gantt charts.",
+      "stars": 15767,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Plane",
+      "url": "https://plane.so/",
+      "type": "open-source",
+      "repo": "https://github.com/makeplane/plane",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Linear with more knobs and a server you now own.",
+      "stars": 55600,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "todoist",
     "notion",

@@ -47,6 +47,28 @@
       "status": "alive"
     }
   ],
+  "alternatives": [
+    {
+      "name": "MoneyPrinterTurbo",
+      "url": "https://moneyprinterturbo.cc/",
+      "type": "open-source",
+      "repo": "https://github.com/harry0703/MoneyPrinterTurbo",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted",
+        "cli"
+      ],
+      "desc": "Turns a topic or script into a narrated, captioned stock-footage short; tasteful restraint is not bundled.",
+      "stars": 101648,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "runway",
     "veed",

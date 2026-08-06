@@ -50,6 +50,38 @@
       "status": "alive"
     }
   ],
+  "alternatives": [
+    {
+      "name": "Raycast Free",
+      "url": "https://www.raycast.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos",
+        "windows"
+      ],
+      "desc": "Raycast without Pro: the launcher survives, and AI works only if you bring the model or key.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "SuperCmd v1",
+      "url": "https://github.com/SuperCmdLabs/SuperCmd",
+      "type": "open-source",
+      "repo": "https://github.com/SuperCmdLabs/SuperCmd",
+      "platforms": [
+        "macos"
+      ],
+      "desc": "The still-maintained open-source v1 runs Raycast-style extensions, clipboard, snippets, windows, and bring-your-own AI.",
+      "stars": 3062,
+      "lastCommit": "2026-07",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "notion",
     "evernote",

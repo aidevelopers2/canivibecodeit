@@ -55,6 +55,60 @@
       "desc": "Open-source web-builder framework."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Plasmic",
+      "url": "https://www.plasmic.app",
+      "type": "open-source",
+      "repo": "https://github.com/plasmicapp/plasmic",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Freeform hosted design, responsive layouts and custom domains free; Cargo's typography cult is not included.",
+      "stars": 6900,
+      "lastCommit": "2026-08",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Silex",
+      "url": "https://www.silex.me",
+      "type": "open-source",
+      "repo": "https://github.com/silexlabs/Silex",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Freeform visual publishing with static export; less art-school mystique, considerably more ownership.",
+      "stars": 2919,
+      "lastCommit": "2026-08",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Webstudio",
+      "url": "https://webstudio.is",
+      "type": "open-source",
+      "repo": "https://github.com/webstudio-is/webstudio",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A visual canvas with honest CSS and CMS connections; the free custom-domain route means self-hosting.",
+      "stars": 8800,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "GrapesJS",
+      "url": "https://grapesjs.com",
+      "desc": "A page-builder framework, not a finished publishing service, despite the very convincing playground."
+    }
+  ],
   "relatedSlugs": [
     "pixieset",
     "mixo",

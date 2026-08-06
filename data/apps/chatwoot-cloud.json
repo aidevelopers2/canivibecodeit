@@ -52,6 +52,60 @@
       "desc": "Mature open-source customer engagement and shared-inbox platform."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Chatwoot",
+      "url": "https://www.chatwoot.com/",
+      "type": "open-source",
+      "repo": "https://github.com/chatwoot/chatwoot",
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "A proper support inbox with chat, email and a help center; free software, billable server chores.",
+      "stars": 35534,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "HubSpot Free CRM",
+      "url": "https://www.hubspot.com/products/crm/conversations",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "A two-seat shared inbox and live chat bolted to a CRM; free until the limits become colleagues.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "tawk.to",
+      "url": "https://www.tawk.to/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "ios",
+        "android"
+      ],
+      "desc": "Live chat, tickets and a knowledge base for zero dollars; the little badge is how the arithmetic survives.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "intercom",
     "zendesk",

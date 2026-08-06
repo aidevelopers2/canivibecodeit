@@ -49,6 +49,24 @@
       "status": "alive"
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "FlowSavvy Free",
+      "url": "https://flowsavvy.app/",
+      "desc": "Excellent automatic task planning, but it does not manage habits, breaks and smart meetings as one system."
+    },
+    {
+      "name": "Super Productivity",
+      "url": "https://super-productivity.com/",
+      "desc": "A fine manual planner, but it does not continuously move calendar holds around conflicts."
+    },
+    {
+      "name": "Trevor AI Free",
+      "url": "https://www.trevorai.com/",
+      "desc": "It schedules tasks well; habits, buffers and conflict-aware recurring meetings are outside the free job."
+    }
+  ],
   "relatedSlugs": [
     "calendly",
     "savvycal",

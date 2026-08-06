@@ -53,6 +53,117 @@
       "desc": "Mature open-source newsletter and mailing-list manager."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Brevo Free",
+      "url": "https://www.brevo.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "A visual campaign editor and basic reports with a 300-email daily speed limit.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "EmailOctopus Free",
+      "url": "https://emailoctopus.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Campaigns and reports for 2,500 contacts; branding and a 30-day reporting window are the tax.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Keila",
+      "url": "https://www.keila.io/",
+      "type": "open-source",
+      "repo": "https://github.com/pentacent/keila",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A friendly campaign editor, forms and tracking without contact pricing; delivery is your SMTP provider's job.",
+      "stars": 2179,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "listmonk",
+      "url": "https://listmonk.app/",
+      "type": "open-source",
+      "repo": "https://github.com/knadh/listmonk",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Campaigns, segments and analytics in one fast compose file; templates favor competence over theatre.",
+      "stars": 22600,
+      "lastCommit": "2026-07",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Notifuse",
+      "url": "https://www.notifuse.com/",
+      "type": "open-source",
+      "repo": "https://github.com/Notifuse/notifuse",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Visual MJML campaigns, scheduling, A/B tests and analytics; bring PostgreSQL and a sender.",
+      "stars": 2038,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "phpList",
+      "url": "https://www.phplist.org/",
+      "type": "open-source",
+      "repo": "https://github.com/phpList/phplist3",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Campaigns, segmentation and click tracking from the old guard; the interface remembers when gradients were a feature.",
+      "stars": 864,
+      "lastCommit": "2026-07",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Sender Free",
+      "url": "https://www.sender.net/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Branded campaigns, subscribers and click reports in a genuinely useful free tier.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "SendPortal",
+      "url": "https://sendportal.io/",
+      "desc": "Still commonly recommended; the last commit was April 2024 and the Laravel app has not moved since."
+    }
+  ],
   "relatedSlugs": [
     "substack",
     "mailerlite",

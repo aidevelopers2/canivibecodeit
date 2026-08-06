@@ -56,6 +56,14 @@
       "desc": "Widely used local Stable Diffusion interface and extension ecosystem."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Krita AI Diffusion",
+      "url": "https://www.interstice.cloud/",
+      "desc": "Excellent free image editing and generation; it does not supply the video editor, templates, stickers, or asset marketplace."
+    }
+  ],
   "relatedSlugs": [
     "leonardo-ai",
     "ideogram",

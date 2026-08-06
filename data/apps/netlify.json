@@ -51,6 +51,35 @@
       "status": "alive"
     }
   ],
+  "alternatives": [
+    {
+      "name": "Netlify Free",
+      "url": "https://www.netlify.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "cli"
+      ],
+      "desc": "The same service covers a small production site indefinitely: Git deploys, previews, functions, forms, TLS, and 300 monthly credits.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Cloudflare Pages Free",
+      "url": "https://pages.cloudflare.com/",
+      "desc": "Previews and functions are excellent; the missing built-in forms service means it does not replace the whole Netlify job."
+    },
+    {
+      "name": "Coolify",
+      "url": "https://coolify.io/",
+      "desc": "Great for hosting apps, but deploy previews, serverless functions, and a managed form inbox do not arrive as one finished product."
+    }
+  ],
   "relatedSlugs": [
     "webflow",
     "framer",

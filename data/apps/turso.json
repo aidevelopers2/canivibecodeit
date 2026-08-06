@@ -55,6 +55,24 @@
       "desc": "Open-source platform-as-a-service toolkit for a single server."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Turso Free",
+      "url": "https://turso.tech/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "cli"
+      ],
+      "desc": "The same hosted service is unusually generous: 100 databases, replicas, branches, 5 GB, and one-day point-in-time restore.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "convex",
     "mongodb-atlas",

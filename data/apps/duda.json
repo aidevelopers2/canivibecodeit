@@ -52,6 +52,90 @@
       "desc": "Open-source visual website builder designed around web standards."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Concrete CMS",
+      "url": "https://www.concretecms.org",
+      "type": "open-source",
+      "repo": "https://github.com/concretecms/concretecms",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "In-page editing, reusable blocks, permissions and workflows; hosting and client support are no longer bundled.",
+      "stars": 850,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Plasmic",
+      "url": "https://www.plasmic.app",
+      "type": "open-source",
+      "repo": "https://github.com/plasmicapp/plasmic",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Reusable components, collaboration and unlimited projects free; client handoff is less agency-tailored.",
+      "stars": 6900,
+      "lastCommit": "2026-08",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Silex",
+      "url": "https://www.silex.me",
+      "type": "open-source",
+      "repo": "https://github.com/silexlabs/Silex",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A free visual publisher for client sites with export; reusable-section workflows are basic.",
+      "stars": 2919,
+      "lastCommit": "2026-08",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Vvveb",
+      "url": "https://www.vvveb.com",
+      "type": "open-source",
+      "repo": "https://github.com/givanz/Vvveb",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A visual CMS with multisite support, reusable themes and forms; the agency dashboard is less civilized.",
+      "stars": 1200,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Webstudio",
+      "url": "https://webstudio.is",
+      "type": "open-source",
+      "repo": "https://github.com/webstudio-is/webstudio",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Responsive visual sites with reusable components and CMS data; agency management becomes your own process.",
+      "stars": 8800,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "GrapesJS",
+      "url": "https://grapesjs.com",
+      "desc": "An embeddable editor developers use to build Duda-like products, not Duda-like product itself."
+    }
+  ],
   "relatedSlugs": [
     "tilda",
     "typedream",

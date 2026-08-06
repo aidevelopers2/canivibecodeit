@@ -50,6 +50,57 @@
       "desc": "Open-source diagram canvas with an approachable interaction model."
     }
   ],
+  "alternatives": [
+    {
+      "name": "AFFiNE",
+      "url": "https://affine.pro/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android"
+      ],
+      "desc": "Mind maps live beside documents, whiteboards, tasks, and presentation frames; free cloud collaboration is limited to small workspaces.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "TeamMapper",
+      "url": "https://teammapper.org/",
+      "type": "open-source",
+      "repo": "https://github.com/b310-digital/teammapper",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Small, focused collaborative mind maps with a straightforward Docker install; public hosted maps expire, so permanence means self-hosting.",
+      "stars": 479,
+      "lastCommit": "2026-06",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "WiseMapping",
+      "url": "https://www.wisemapping.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "A genuinely free hosted collaborative mind mapper with unlimited maps and useful imports and exports; tasks and presentation tricks are absent.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "xmind",
     "ayoa",

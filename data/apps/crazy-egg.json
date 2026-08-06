@@ -55,6 +55,36 @@
       "desc": "Open-source product analytics, feature flags, and session replay."
     }
   ],
+  "alternatives": [
+    {
+      "name": "PostHog",
+      "url": "https://posthog.com",
+      "type": "open-source",
+      "repo": "https://github.com/PostHog/posthog",
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "Heatmaps, replays, surveys, traffic reports and experiments, free until the usage meters get serious.",
+      "stars": 37500,
+      "lastCommit": "2026-08",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Matomo",
+      "url": "https://matomo.org",
+      "desc": "The obvious recommendation fails: heatmaps, replay and A/B testing are paid plugins."
+    },
+    {
+      "name": "Microsoft Clarity",
+      "url": "https://clarity.microsoft.com",
+      "desc": "Unlimited heatmaps and recordings, but no surveys or A/B testing; half the suite is absent."
+    }
+  ],
   "relatedSlugs": [
     "smartlook",
     "logrocket",

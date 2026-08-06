@@ -52,6 +52,46 @@
       "desc": "Active open-source recipe manager and meal planner for households."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Donetick",
+      "url": "https://donetick.com/",
+      "type": "open-source",
+      "repo": "https://github.com/donetick/donetick",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Tody with shared assignments, flexible recurrence, and a history nobody can quietly rewrite.",
+      "stars": 2400,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Grocy",
+      "url": "https://grocy.info/",
+      "type": "open-source",
+      "repo": "https://github.com/grocy/grocy",
+      "platforms": [
+        "web",
+        "windows",
+        "self-hosted"
+      ],
+      "desc": "Recurring chores with due dates and history, bundled inside a tiny home ERP.",
+      "stars": 9358,
+      "lastCommit": "2026-07",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Family Tools Basic",
+      "url": "https://familytoolsapp.com/",
+      "desc": "Shared chores work, but flexible condition-based recurrence and neutral history are thinner than Tody."
+    }
+  ],
   "relatedSlugs": [
     "paprika-recipe-manager",
     "home-assistant-cloud",

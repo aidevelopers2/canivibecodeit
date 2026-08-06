@@ -52,6 +52,32 @@
       "status": "alive"
     }
   ],
+  "alternatives": [
+    {
+      "name": "Cap",
+      "url": "https://cap.so",
+      "type": "open-source",
+      "repo": "https://github.com/CapSoftware/Cap",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "self-hosted"
+      ],
+      "desc": "Loom with your own storage and your own server chores.",
+      "stars": 20500,
+      "lastCommit": "2026-07",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "OBS Studio",
+      "url": "https://obsproject.com",
+      "desc": "Records anything beautifully; hosts, transcribes and organizes absolutely nothing."
+    }
+  ],
   "relatedSlugs": [
     "tella",
     "capcut",

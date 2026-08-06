@@ -53,6 +53,92 @@
       "desc": "Active open-source no-code database interface and Airtable alternative."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Baserow Free",
+      "url": "https://baserow.io/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Its free app builder turns tables into pages and forms for hundreds of external users, with basic roles and automations.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Budibase",
+      "url": "https://budibase.com/",
+      "type": "open-source",
+      "repo": "https://github.com/Budibase/budibase",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Internal apps, forms, automations, and portals in one box; much closer to Knack than its developer branding suggests.",
+      "stars": 27902,
+      "lastCommit": "2026-07",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "NocoBase",
+      "url": "https://www.nocobase.com/",
+      "type": "open-source",
+      "repo": "https://github.com/nocobase/nocobase",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A database-backed app builder with pages, forms, roles, workflows, and enough plugins to become your next maintenance hobby.",
+      "stars": 23600,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "REI3",
+      "url": "https://rei3.de/",
+      "type": "open-source",
+      "repo": "https://github.com/r3-team/r3",
+      "platforms": [
+        "web",
+        "windows",
+        "linux",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "A sober business-app builder with forms, reports, roles, workflows, and no per-user meter.",
+      "stars": 571,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Softr Free",
+      "url": "https://www.softr.io/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "A hosted portal builder with pages, forms, record editing, user groups, and visibility rules on the free plan.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Saltcorn",
+      "url": "https://saltcorn.com/",
+      "desc": "It does the job, but its own security page lists fresh critical RCE, SQL injection, path-traversal, and cross-tenant bugs."
+    }
+  ],
   "relatedSlugs": [
     "baserow-cloud",
     "nocodb-cloud",

@@ -55,6 +55,52 @@
       "desc": "Open-source media downloader that covers the DIY URL import step."
     }
   ],
+  "alternatives": [
+    {
+      "name": "NotebookLM",
+      "url": "https://notebooklm.google",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "Drop in a YouTube video and get searchable, source-grounded study material; Google keeps the notebook.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "StoryToolkitAI",
+      "url": "https://github.com/octimot/StoryToolkitAI",
+      "type": "open-source",
+      "repo": "https://github.com/octimot/StoryToolkitAI",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "Local transcription and semantic footage search from an app that still admits it is rough.",
+      "stars": 977,
+      "lastCommit": "2026-06",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "whisper.cpp",
+      "url": "https://github.com/ggml-org/whisper.cpp",
+      "desc": "Excellent transcription engine; no searchable study workspace or finished note-taking product surrounds it."
+    },
+    {
+      "name": "yt-dlp",
+      "url": "https://github.com/yt-dlp/yt-dlp",
+      "desc": "Gets the video onto disk and then considers its work complete."
+    }
+  ],
   "relatedSlugs": [
     "notta",
     "descript",

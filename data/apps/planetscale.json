@@ -52,6 +52,45 @@
       "desc": "Active open-source self-hosting platform for applications, databases, and services."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Coolify",
+      "url": "https://coolify.io/",
+      "type": "open-source",
+      "repo": "https://github.com/coollabsio/coolify",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A MySQL container with TLS, monitoring, scheduled backups, and restore controls on one server; branching is gone with PlanetScale.",
+      "stars": 57000,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Dokploy",
+      "url": "https://dokploy.com/",
+      "type": "open-source",
+      "repo": "https://github.com/Dokploy/dokploy",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Run MySQL on your own host with managed deployment and backups; schema branching is the thing you give up.",
+      "stars": 36000,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Dokku",
+      "url": "https://dokku.com/",
+      "desc": "The MySQL plugin deploys a database, but migrations and dependable backups are still your scripts."
+    }
+  ],
   "relatedSlugs": [
     "vercel",
     "railway",

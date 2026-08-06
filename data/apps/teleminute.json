@@ -47,6 +47,45 @@
       "status": "alive"
     }
   ],
+  "alternatives": [
+    {
+      "name": "Activepieces",
+      "url": "https://www.activepieces.com/",
+      "type": "open-source",
+      "repo": "https://github.com/activepieces/activepieces",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A visual automation product with Telegram triggers, replies, forms, and broadcasts; you assemble the bot rather than code it.",
+      "stars": 23604,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "n8n Community Edition",
+      "url": "https://n8n.io/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A visual Telegram workflow engine that can receive commands, branch, collect answers, and broadcast; self-hosting is the price of free.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "grammY",
+      "url": "https://grammy.dev/",
+      "desc": "A very good Telegram bot library, which is precisely why a non-builder should not be sent here."
+    }
+  ],
   "relatedSlugs": [
     "chatwoot-cloud",
     "livechat"

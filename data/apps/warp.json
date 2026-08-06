@@ -56,6 +56,50 @@
       "desc": "Open-source terminal coding agent with repository-aware edits."
     }
   ],
+  "alternatives": [
+    {
+      "name": "cmux",
+      "url": "https://cmux.com/",
+      "type": "open-source",
+      "repo": "https://github.com/manaflow-ai/cmux",
+      "platforms": [
+        "macos"
+      ],
+      "desc": "A native Mac terminal for many agents; no cloud memory and no Windows version.",
+      "stars": 25700,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Wave Terminal",
+      "url": "https://www.waveterm.dev/",
+      "type": "open-source",
+      "repo": "https://github.com/wavetermdev/waveterm",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "A modern block terminal with workspaces and AI, minus the account requirement.",
+      "stars": 21900,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Aider",
+      "url": "https://aider.chat/",
+      "desc": "A coding agent that runs inside a terminal, not the terminal itself."
+    },
+    {
+      "name": "Continue",
+      "url": "https://continue.dev/",
+      "desc": "An archived coding-agent extension, not a terminal emulator."
+    }
+  ],
   "relatedSlugs": [
     "bito",
     "blackbox-ai",

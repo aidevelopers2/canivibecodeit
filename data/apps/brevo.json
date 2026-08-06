@@ -54,6 +54,96 @@
       "desc": "Mature open-source newsletter and mailing-list manager."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Brevo Free",
+      "url": "https://www.brevo.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "The vendor's own free tier does newsletters and transactional mail; 300 messages a day is the small print.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "listmonk",
+      "url": "https://listmonk.app/",
+      "type": "open-source",
+      "repo": "https://github.com/knadh/listmonk",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Fast campaigns plus a transactional API and explicit subscriber states; the visual polish is utilitarian.",
+      "stars": 22600,
+      "lastCommit": "2026-07",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Loops Free",
+      "url": "https://loops.so/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Marketing and transactional email share one hosted account; the free ceiling is 1,000 contacts.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Notifuse",
+      "url": "https://www.notifuse.com/",
+      "type": "open-source",
+      "repo": "https://github.com/Notifuse/notifuse",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Campaigns, transactional API and subscription records in one compose stack; delivery still needs an SMTP provider.",
+      "stars": 2038,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Plunk",
+      "url": "https://www.useplunk.com/",
+      "type": "open-source",
+      "repo": "https://github.com/useplunk/plunk",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Transactional and campaign email with workflows; self-hosting is free, sending is not magic.",
+      "stars": 5300,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Sender Free",
+      "url": "https://www.sender.net/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Newsletters, transactional email and consent-friendly lists with 15,000 monthly sends; one seat means one cook.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "substack",
     "mailerlite",

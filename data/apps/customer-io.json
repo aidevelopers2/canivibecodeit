@@ -57,6 +57,24 @@
       "desc": "Open-source marketing automation platform."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Dittofeed",
+      "url": "https://www.dittofeed.com/",
+      "type": "open-source",
+      "repo": "https://github.com/dittofeed/dittofeed",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Event-triggered journeys across email, SMS and push with branching and segments; in-app messaging is the conspicuous hole.",
+      "stars": 2887,
+      "lastCommit": "2026-03",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "drip",
     "activecampaign",

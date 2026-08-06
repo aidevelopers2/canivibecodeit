@@ -52,6 +52,19 @@
       "desc": "Open-source customer-feedback portal with voting and status workflows."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Quackback",
+      "url": "https://quackback.io",
+      "desc": "Connects support feedback to issues, but has no interview-note research workspace."
+    },
+    {
+      "name": "QualCoder",
+      "url": "https://qualcoder.org",
+      "desc": "Handles interview coding well, but has no support ingestion or product-issue linkage."
+    }
+  ],
   "relatedSlugs": [
     "canny",
     "productboard",

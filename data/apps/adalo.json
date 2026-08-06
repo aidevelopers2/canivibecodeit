@@ -52,6 +52,41 @@
       "desc": "Large open-source low-code platform for internal applications and data sources."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Glide Free",
+      "url": "https://www.glideapps.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "A schema-first mobile-style web app with fixed components and ten personal users; native app-store binaries are not included.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Appsmith Community",
+      "url": "https://www.appsmith.com/",
+      "desc": "An internal desktop-web tool builder, not a consumer-facing mobile-style PWA builder."
+    },
+    {
+      "name": "MIT App Inventor",
+      "url": "https://appinventor.mit.edu/",
+      "desc": "It builds Android and iOS packages, not a hosted progressive web app."
+    },
+    {
+      "name": "Thunkable Free",
+      "url": "https://thunkable.com/",
+      "desc": "The free plan is public-project prototyping; keeping a published web or mobile app alive requires a subscription."
+    }
+  ],
   "relatedSlugs": [
     "flutterflow",
     "retool",

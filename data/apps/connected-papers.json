@@ -51,6 +51,37 @@
       "desc": "Mature open-source research and citation manager."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Inciteful",
+      "url": "https://incitefulmed.com/academic/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "A citation graph from one seed paper, plus a useful trick for connecting two distant ones.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "ResearchRabbit",
+      "url": "https://www.researchrabbit.ai",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Citation chasing with a map, free until your review becomes industrial.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "genei",
     "afforai",

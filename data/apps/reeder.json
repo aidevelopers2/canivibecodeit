@@ -51,6 +51,70 @@
       "desc": "Mature open-source RSS reader with feeds, filters, and self-hosting support."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Fluent Reader",
+      "url": "https://hyliu.me/fluent-reader/",
+      "type": "open-source",
+      "repo": "https://github.com/yang991178/fluent-reader",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "A clean desktop reader with regex rules and an Electron tax.",
+      "stars": 9600,
+      "lastCommit": "2026-04",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "NetNewsWire",
+      "url": "https://netnewswire.com",
+      "type": "open-source",
+      "repo": "https://github.com/Ranchero-Software/NetNewsWire",
+      "platforms": [
+        "macos",
+        "ios"
+      ],
+      "desc": "Reeder's Apple-native calm, with fewer services and no invoice.",
+      "stars": 10300,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "RSS Guard",
+      "url": "https://rssguard.readthedocs.io",
+      "type": "open-source",
+      "repo": "https://github.com/martinrotter/rssguard",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "A desktop feed reader that supports nearly everything and looks like it knows that.",
+      "stars": 2700,
+      "lastCommit": "2026-07",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Vienna",
+      "url": "https://www.vienna-rss.com",
+      "type": "open-source",
+      "repo": "https://github.com/ViennaRSS/vienna-rss",
+      "platforms": [
+        "macos"
+      ],
+      "desc": "A veteran Mac feed reader still shipping releases instead of a retirement announcement.",
+      "stars": 1971,
+      "lastCommit": "2026-07",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "readwise",
     "raindrop-io",

@@ -39,6 +39,73 @@
   "moatNotes": "AI workflows/prompt systems/domain expertise/creator data",
   "whyPeopleStillPay": "Creators are not only paying for AI image generation. The biggest value is creating high-quality thumbnails without needing to become prompt experts. ThumblifyAI's tuned prompts and workflows, and generation process are tuned specifically for creating catchy YouTube thumbnails. Users get a faster and more consistent path from video idea to thumbnail instead of spending hours experimenting with prompts, styles, and settings.",
   "priorArt": [],
+  "alternatives": [
+    {
+      "name": "Adobe Express Free",
+      "url": "https://www.adobe.com/express/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "A free thumbnail maker with templates, background removal allowances, and ordinary exports; the AI is assistance, not an oracle.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Canva Free",
+      "url": "https://www.canva.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "Thousands of thumbnail templates and enough text, cutout, and image tools to do the job; it will not pretend to predict clicks.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Desygner Free",
+      "url": "https://desygner.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "Template-driven thumbnails, photo tools, and a small monthly AI allowance; less hype, roughly the same actual work.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "VistaCreate Starter",
+      "url": "https://create.vista.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "Fast thumbnail layouts from stock, local images, text effects, and reusable styles, with unlimited downloads.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [],
   "pagePriority": 4,
   "verifiedOneShot": false,

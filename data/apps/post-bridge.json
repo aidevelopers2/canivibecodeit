@@ -47,6 +47,57 @@
       "status": "alive"
     }
   ],
+  "alternatives": [
+    {
+      "name": "BrightBean Studio",
+      "url": "https://brightbean.xyz/studio/",
+      "type": "open-source",
+      "repo": "https://github.com/brightbeanxyz/brightbean-studio",
+      "platforms": [
+        "web",
+        "self-hosted",
+        "cli"
+      ],
+      "desc": "Broad publishing, REST, MCP and hosted-free convenience; the closest answer that does not hand you a database.",
+      "stars": 2100,
+      "lastCommit": "2026-07",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Postiz",
+      "url": "https://postiz.com/",
+      "type": "open-source",
+      "repo": "https://github.com/gitroomhq/postiz-app",
+      "platforms": [
+        "web",
+        "self-hosted",
+        "cli"
+      ],
+      "desc": "Twenty-eight-plus channels, API, MCP and CLI; broad coverage bought with a broad deployment stack.",
+      "stars": 34300,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "TryPost",
+      "url": "https://trypost.it/",
+      "type": "open-source",
+      "repo": "https://github.com/trypostit/trypost",
+      "platforms": [
+        "web",
+        "self-hosted",
+        "cli"
+      ],
+      "desc": "Twelve-network cross-posting with REST and MCP; operate the server and bring your own platform credentials.",
+      "stars": 468,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "buffer",
     "postiz",

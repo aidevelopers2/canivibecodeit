@@ -53,6 +53,59 @@
       "desc": "Large open-source low-code platform for internal applications and data sources."
     }
   ],
+  "alternatives": [
+    {
+      "name": "MIT App Inventor",
+      "url": "https://appinventor.mit.edu/",
+      "type": "open-source",
+      "repo": "https://github.com/mit-cml/appinventor-sources",
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "Blocks, fixed mobile components, local storage, and installable apps; aesthetically still very much MIT App Inventor.",
+      "stars": 1700,
+      "lastCommit": "2026-07",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Nowa Starter",
+      "url": "https://nowa.dev/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "ios",
+        "android"
+      ],
+      "desc": "A more modern visual mobile builder with local projects and source export; overkill for a prototype, but genuinely free.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Thunkable Free",
+      "url": "https://thunkable.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "The same product is free for its stated job, prototyping with fixed components and local data, provided public projects are acceptable.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "flutterflow",
     "retool",

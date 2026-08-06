@@ -53,6 +53,45 @@
       "desc": "Active open-source web application for a broad set of PDF operations."
     }
   ],
+  "alternatives": [
+    {
+      "name": "PDFgear",
+      "url": "https://www.pdfgear.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "ios",
+        "android"
+      ],
+      "desc": "View, annotate, organize, convert, fill, sign, OCR, and edit PDFs across desktop and mobile without a subscription; sync is your problem.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Stirling PDF",
+      "url": "https://stirling.com/",
+      "type": "open-source",
+      "repo": "https://github.com/Stirling-Tools/Stirling-PDF",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "A private browser-based toolbox for editing, organizing, converting, signing, and batch-processing PDFs; not a seamless cross-device cloud library.",
+      "stars": 88969,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "adobe-acrobat-pro",
     "pdf-expert",

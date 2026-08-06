@@ -58,6 +58,14 @@
       "desc": "Local speech-to-text engine suitable for private transcription."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "DUIX Avatar",
+      "url": "https://www.duix.com/",
+      "desc": "It renders cloned presenters, but Tavus's API and live conversational replicas are different jobs."
+    }
+  ],
   "relatedSlugs": [
     "kaiber",
     "fliki",

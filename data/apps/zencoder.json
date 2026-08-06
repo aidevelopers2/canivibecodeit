@@ -56,6 +56,102 @@
       "desc": "Open-source terminal coding agent with repository-aware edits."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Aider",
+      "url": "https://aider.chat/",
+      "type": "open-source",
+      "repo": "https://github.com/Aider-AI/aider",
+      "platforms": [
+        "cli",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "It edits the repo from a terminal and commits its own mess.",
+      "stars": 48000,
+      "lastCommit": "2026-05",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Cline",
+      "url": "https://cline.bot/",
+      "type": "open-source",
+      "repo": "https://github.com/cline/cline",
+      "platforms": [
+        "browser-extension",
+        "cli",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "A code agent in your editor; the model bill is still yours.",
+      "stars": 65800,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Goose",
+      "url": "https://goose-docs.ai/",
+      "type": "open-source",
+      "repo": "https://github.com/aaif-goose/goose",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux",
+        "cli"
+      ],
+      "desc": "A desktop agent that edits and runs code without pretending the model is free.",
+      "stars": 52400,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Kilo Code",
+      "url": "https://kilo.ai/",
+      "type": "open-source",
+      "repo": "https://github.com/kilo-org/kilocode",
+      "platforms": [
+        "browser-extension",
+        "cli",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "Repository agents across VS Code, JetBrains and terminal; inference still has a meter somewhere.",
+      "stars": 26735,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "OpenCode",
+      "url": "https://opencode.ai/",
+      "type": "open-source",
+      "repo": "https://github.com/anomalyco/opencode",
+      "platforms": [
+        "cli",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "A fast local coding agent with no loyalty to any model vendor.",
+      "stars": 193678,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Continue",
+      "url": "https://continue.dev/",
+      "desc": "Acquired by Cursor; the repo is read-only and 2.0.0 is the last release."
+    }
+  ],
   "relatedSlugs": [
     "gitkraken",
     "tower",

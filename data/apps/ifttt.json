@@ -48,6 +48,71 @@
       "status": "alive"
     }
   ],
+  "alternatives": [
+    {
+      "name": "Activepieces Community Edition",
+      "url": "https://www.activepieces.com/open-source",
+      "type": "open-source",
+      "repo": "https://github.com/activepieces/activepieces",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "App-to-app automations with schedules, webhooks, approvals, and no per-task meter.",
+      "stars": 23604,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Home Assistant",
+      "url": "https://www.home-assistant.io/",
+      "type": "open-source",
+      "repo": "https://github.com/home-assistant/core",
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "IFTTT for the house, except the house keeps the data and needs an always-on box.",
+      "stars": 89769,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Huginn",
+      "url": "https://github.com/huginn/huginn",
+      "type": "open-source",
+      "repo": "https://github.com/huginn/huginn",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "IFTTT's paranoid older cousin: ugly, capable, and living on your server.",
+      "stars": 49754,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Node-RED",
+      "url": "https://nodered.org/",
+      "type": "open-source",
+      "repo": "https://github.com/node-red/node-red",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Visual wiring for events, APIs, and devices; friendly until the payload turns into JavaScript.",
+      "stars": 23499,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "n8n-cloud",
     "plausible",

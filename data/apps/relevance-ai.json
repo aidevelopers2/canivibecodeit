@@ -55,6 +55,56 @@
       "desc": "Source-available workflow automation engine and connector reference."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Dify Community Edition",
+      "url": "https://dify.ai/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "The broadest finished free agent platform here; the Docker stack is the tax.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Flowise",
+      "url": "https://flowiseai.com/",
+      "type": "open-source",
+      "repo": "https://github.com/FlowiseAI/Flowise",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Agents, tools, RAG, and orchestration in a canvas you can run yourself.",
+      "stars": 55199,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Langflow",
+      "url": "https://www.langflow.org/",
+      "type": "open-source",
+      "repo": "https://github.com/langflow-ai/langflow",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "self-hosted"
+      ],
+      "desc": "A desktop-or-server visual agent builder with tools, knowledge, and multi-agent flows.",
+      "stars": 152879,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "browse-ai",
     "apify",

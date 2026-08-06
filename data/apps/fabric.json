@@ -54,6 +54,48 @@
       "desc": "Open-source local knowledge graph and outliner."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Atomic",
+      "url": "https://atomicapp.ai",
+      "type": "open-source",
+      "repo": "https://github.com/kenforthewin/atomic",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "self-hosted",
+        "browser-extension"
+      ],
+      "desc": "Notes and web clips become a semantic graph; arbitrary files are not its strongest suit.",
+      "stars": 1600,
+      "lastCommit": "2026-07",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Karakeep",
+      "url": "https://karakeep.app",
+      "type": "open-source",
+      "repo": "https://github.com/karakeep-app/karakeep",
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "self-hosted",
+        "cli",
+        "browser-extension"
+      ],
+      "desc": "Links, notes, images and PDFs get searchable, preserved and optionally auto-tagged.",
+      "stars": 28100,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "milanote",
     "scrivener",

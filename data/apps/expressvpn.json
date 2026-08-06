@@ -45,6 +45,24 @@
   "whyPeopleStillPay": "ExpressVPN: Security subscriptions buy professional operations, audits, response capacity, redundancy, and accountability when something goes wrong.",
   "ongoingBurden": "Own threat modelling, key management, patching, backups, restore tests, incident response, privacy requests, and dependency security.",
   "priorArt": [],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Proton VPN Free",
+      "url": "https://protonvpn.com/free-vpn",
+      "desc": "Unlimited bandwidth is real; global server choice, router support, and multiple connections are paid."
+    },
+    {
+      "name": "TunnelBear Free",
+      "url": "https://www.tunnelbear.com/pricing",
+      "desc": "Two gigabytes a month is enough to test the bear, not live behind it."
+    },
+    {
+      "name": "Windscribe Free",
+      "url": "https://windscribe.com/features/use-for-free",
+      "desc": "Ten gigabytes a month is a trial-sized allowance for a full-time VPN."
+    }
+  ],
   "relatedSlugs": [
     "mullvad",
     "surfshark",

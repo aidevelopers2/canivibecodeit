@@ -56,6 +56,49 @@
       "desc": "Open-source web-builder framework."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Mautic",
+      "url": "https://mautic.org",
+      "type": "open-source",
+      "repo": "https://github.com/mautic/mautic",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Responsive pages, forms, campaign analytics and A/B testing; self-hosting is the least mobile-friendly part.",
+      "stars": 9800,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "systeme.io",
+      "url": "https://systeme.io",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Mobile-ready landing pages, forms and one split test free; advanced integrations and agency polish are thinner.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "GrapesJS",
+      "url": "https://grapesjs.com",
+      "desc": "The editor can be embedded into a product; the product is not included."
+    },
+    {
+      "name": "Webstudio",
+      "url": "https://webstudio.is",
+      "desc": "Makes responsive pages, but not managed experiments, lead workflows and integrations."
+    }
+  ],
   "relatedSlugs": [
     "landingi",
     "instapage",

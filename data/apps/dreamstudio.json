@@ -57,6 +57,141 @@
       "desc": "Widely used local Stable Diffusion interface and extension ecosystem."
     }
   ],
+  "alternatives": [
+    {
+      "name": "ArtBot",
+      "url": "https://artbot.site/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "A browser generator powered by donated GPUs; free forever means occasionally waiting your turn.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "ComfyUI",
+      "url": "https://comfy.org/",
+      "type": "open-source",
+      "repo": "https://github.com/Comfy-Org/ComfyUI",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "The local engine that trades DreamStudio's tidy form for total control and zero metering.",
+      "stars": 124207,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Draw Things",
+      "url": "https://drawthings.ai/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos",
+        "ios"
+      ],
+      "desc": "A serious local generator for Apple hardware; free, offline, and far less interested in credit packs.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Easy Diffusion",
+      "url": "https://easydiffusion.github.io/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "Install it, choose a model, type a prompt; the source license is not open-source, but local use stays free.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "InvokeAI",
+      "url": "https://invoke.ai/",
+      "type": "open-source",
+      "repo": "https://github.com/invoke-ai/InvokeAI",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "A polished local front end for modern image models, with canvas editing and no per-image bill.",
+      "stars": 27776,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Perchance AI Image Generator",
+      "url": "https://perchance.org/ai-text-to-image-generator",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Unlimited browser generation with no account; the interface looks homemade because it is.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "RuinedFooocus",
+      "url": "https://github.com/runew0lf/RuinedFooocus",
+      "type": "open-source",
+      "repo": "https://github.com/runew0lf/RuinedFooocus",
+      "platforms": [
+        "web",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "A prompt-first local generator for people who would rather not learn what a sampler is.",
+      "stars": 680,
+      "lastCommit": "2026-07",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "SwarmUI",
+      "url": "https://swarmui.net/",
+      "type": "open-source",
+      "repo": "https://github.com/mcmonkeyprojects/SwarmUI",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "Current image models behind a simple Generate tab, with the full graph waiting only when you need it.",
+      "stars": 4423,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "krea",
     "recraft",

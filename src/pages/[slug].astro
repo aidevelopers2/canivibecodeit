@@ -3,7 +3,8 @@ import Base from '../layouts/Base.astro';
 import VerdictBadge from '../components/VerdictBadge.astro';
 import DigestCard from '../components/DigestCard.astro';
 import DigestReveal from '../components/DigestReveal.astro';
-import { getApp, relatedApps, yearlySaving, CATEGORIES, VERDICTS, MOAT_TAGS, MOAT_TAG_EMOJI } from '../lib/apps.js';
+import AltCard from '../components/AltCard.astro';
+import { getApp, relatedApps, yearlySaving, sortedAlternatives, ALTERNATIVES_PAGE_MIN, CATEGORIES, VERDICTS, MOAT_TAGS, MOAT_TAG_EMOJI } from '../lib/apps.js';
 import { voteCount, voteCounts } from '../lib/db.js';
 
 const { slug } = Astro.params;
@@ -20,10 +21,13 @@ const moats = (app.moatTags ?? [])
   .filter((t) => MOAT_TAGS[t])
   .map((t) => ({ tag: t, label: MOAT_TAGS[t], emoji: MOAT_TAG_EMOJI[t] }));
 
+const alternatives = sortedAlternatives(app);
+const hasAltPage = alternatives.length >= ALTERNATIVES_PAGE_MIN;
+
 const verdictWord = { yes: 'YES', kinda: 'KINDA', no: 'NOT REALLY' }[app.verdict];
 const priceLine =
   app.priceMonthly != null ? `costs $${app.priceMonthly}/mo ($${saving}/yr)` : 'has usage-based pricing';
-const title = `Can I vibecode ${app.name}? ${verdictWord} — replace it with one AI prompt`;
+const title = `Can I vibecode ${app.name}? ${verdictWord} · replace it with one AI prompt`;
 const description = `${verdictWord}: ${app.name} ${priceLine}. ${
   app.verdict === 'no'
     ? "Here's why it survives vibecoding."
@@ -38,7 +42,7 @@ const faq = [
         ? `Yes. A competent AI coding agent (Claude Code, Codex, Cursor) can build a usable personal ${app.name} replacement in one session with the prompt on this page. It runs on your own machine or server with no subscription.`
         : app.verdict === 'kinda'
           ? `Kinda. The core of ${app.name} is buildable in a weekend with the prompt on this page, but there are real gaps: ${app.whatYouLose.slice(0, 2).join(', ')}. Read the honest list above before committing.`
-          : `Not really. ${app.name}'s value is not the code — ${app.notes.split('.')[1]?.trim() ?? 'the moat survives one prompt'}. See the honest breakdown above.`,
+          : `Not really. ${app.name}'s value is not the code: ${app.notes.split('.')[1]?.trim() ?? 'the moat survives one prompt'}. See the honest breakdown above.`,
   },
   {
     q: `How much does ${app.name} cost?`,
@@ -50,7 +54,7 @@ const faq = [
             app.verdict === 'yes' ? `That's what you save by replacing it with one prompt.` : ''
           }`
         : `${app.name}'s pricing is usage-based or varies by plan${
-            app.pricing?.notes ? ` — ${app.pricing.notes}` : ''
+            app.pricing?.notes ? ` · ${app.pricing.notes}` : ''
           }.`,
   },
   {
@@ -60,9 +64,13 @@ const faq = [
   {
     q: `Is there an open-source alternative to ${app.name}?`,
     a:
-      app.priorArt.length > 0
-        ? `Yes — ${app.priorArt.map((p) => `${p.name} (${p.desc})`).join(', ')}. Using prior art is also vibecoding; the prompt is for when you want it exactly your way.`
-        : `No mature open-source alternative worth pointing at — which is exactly why the one-shot prompt on this page exists.`,
+      alternatives.length > 0
+        ? `Yes: ${alternatives.slice(0, 3).map((p) => `${p.name} (${p.desc})`).join(' ')} ${
+            hasAltPage ? `All ${alternatives.length} curated free alternatives are at canivibecodeit.com/${app.slug}/alternatives.` : ''
+          } The prompt is for when you want it exactly your way.`
+        : app.priorArt.length > 0
+          ? `Yes: ${app.priorArt.map((p) => `${p.name} (${p.desc})`).join(', ')}. Using prior art is also vibecoding; the prompt is for when you want it exactly your way.`
+          : `No mature open-source alternative worth pointing at, which is exactly why the one-shot prompt on this page exists.`,
   },
 ];
 
@@ -145,7 +153,11 @@ const tweet = encodeURIComponent(
           </div>
           <div class="prompt-body">
             <pre id="no-prompt">Don't build this one. {app.whyPeopleStillPay || 'The moat is not the code.'}{
-              app.priorArt.length ? `\n\nIf you want off anyway, start from ${app.priorArt[0].name} (prior art below).` : ''
+              alternatives.length
+                ? `\n\nIf you want off anyway, ${alternatives[0].name} is free (escape hatch below).`
+                : app.priorArt.length
+                  ? `\n\nIf you want off anyway, start from ${app.priorArt[0].name} (prior art below).`
+                  : ''
             }</pre>
           </div>
         </section>
@@ -210,6 +222,9 @@ const tweet = encodeURIComponent(
           <p class="lose-item"><i>x</i>{l}</p>
         ))}
       </section>
+      {/* The escape hatch replaces this section wherever it exists — prior art
+          stays in the data (and in the FAQ) as the builder's raw material. */}
+      {alternatives.length === 0 && (
       <section>
         <span class="microlabel">prior art · use these instead of building, if you'd rather</span>
         {
@@ -224,13 +239,45 @@ const tweet = encodeURIComponent(
             ))
           ) : (
             <p class="lose-item" style="color: var(--muted);">
-              Nothing worth pointing at — that's why the prompt exists.
+              Nothing worth pointing at. That's why the prompt exists.
             </p>
           )
         }
       </section>
+      )}
     </div>
 
+    <div class="actions">
+      <button class="btn primary" data-vote={app.slug}>
+        I replaced this · <span data-votes={app.slug}>{votes}</span>
+      </button>
+      <a
+        class="btn ghost"
+        href={`https://twitter.com/intent/tweet?text=${tweet}`}
+        data-share={app.slug}
+      >share on X ↗</a>
+      <span class="tweet">"I just replaced {app.name.split(' / ')[0]}{app.priceMonthly != null ? ` ($${app.priceMonthly}/mo)` : ''} with one prompt"</span>
+    </div>
+
+    {
+      alternatives.length > 0 && (
+        <section class="escape-hatch">
+          <span class="microlabel">the escape hatch</span>
+          <h2 class="eh-head">Don't feel like building it? These folks already made it free.</h2>
+          {alternatives.slice(0, 3).map((alt, i) => (
+            <AltCard {alt} compact i={i} />
+          ))}
+          <p class="eh-foot">
+            {hasAltPage && (
+              <a href={`/${app.slug}/alternatives`}>
+                all {alternatives.length} free alternatives to {app.name.split(' / ')[0]} →
+              </a>
+            )}
+            <span>{hasAltPage && '· '}no votes, no pay-to-list · just what's real</span>
+          </p>
+        </section>
+      )
+    }
 
     {
       related.length > 0 && (
@@ -254,18 +301,6 @@ const tweet = encodeURIComponent(
         </section>
       )
     }
-
-    <div class="actions">
-      <button class="btn primary" data-vote={app.slug}>
-        I replaced this · <span data-votes={app.slug}>{votes}</span>
-      </button>
-      <a
-        class="btn ghost"
-        href={`https://twitter.com/intent/tweet?text=${tweet}`}
-        data-share={app.slug}
-      >share on X ↗</a>
-      <span class="tweet">"I just replaced {app.name.split(' / ')[0]}{app.priceMonthly != null ? ` ($${app.priceMonthly}/mo)` : ''} with one prompt"</span>
-    </div>
 
     <section class="faq">
       <span class="microlabel">questions</span>

@@ -54,6 +54,24 @@
       "desc": "Active open-source web application for a broad set of PDF operations."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "DocuSeal",
+      "url": "https://www.docuseal.com/",
+      "desc": "A strong signature product, not a complete fill-annotate-version replacement for DocHub."
+    },
+    {
+      "name": "OpenSign",
+      "url": "https://www.opensignlabs.com/",
+      "desc": "Handles templates, requests, signing, and audit trails, but it is not a general PDF annotation and version-management workspace."
+    },
+    {
+      "name": "Stirling PDF",
+      "url": "https://stirling.com/",
+      "desc": "Handles filling, annotation, and document transformations, but not DocHub's integrated signature-request workflow and version tracking."
+    }
+  ],
   "relatedSlugs": [
     "adobe-acrobat-pro",
     "pdf-expert",

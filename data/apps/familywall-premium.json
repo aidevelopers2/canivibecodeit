@@ -51,6 +51,24 @@
       "desc": "Active open-source recipe manager and meal planner for households."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Family Tools Basic",
+      "url": "https://familytoolsapp.com/",
+      "desc": "Calendar, chores, and lists are free; family messaging and location check-ins are missing."
+    },
+    {
+      "name": "FamilyWall Free",
+      "url": "https://www.familywall.com/",
+      "desc": "Calendar, lists, and chat are free; locating family members is a Premium feature."
+    },
+    {
+      "name": "Homechart",
+      "url": "https://homechart.app/",
+      "desc": "Calendar and household tools look right; sharing a household is paid, before location even enters the room."
+    }
+  ],
   "relatedSlugs": [
     "paprika-recipe-manager",
     "home-assistant-cloud",

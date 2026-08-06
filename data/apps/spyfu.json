@@ -52,6 +52,19 @@
       "desc": "Open-source search ranking tracker for owned keyword sets."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "OpenSEO",
+      "url": "https://openseo.so/",
+      "desc": "Competitor organic rows, yes; historical PPC keywords, ad tests and a long-lived advertising corpus, no."
+    },
+    {
+      "name": "SEO PowerSuite Free",
+      "url": "https://www.link-assistant.com/",
+      "desc": "Can inspect competitors today, cannot save the free project, and has no SpyFu-style ad-history warehouse."
+    }
+  ],
   "relatedSlugs": [
     "moz-pro",
     "se-ranking",

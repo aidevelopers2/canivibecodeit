@@ -53,6 +53,29 @@
       "desc": "Widely deployed open-source video-conferencing platform."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Nextcloud Hub",
+      "url": "https://nextcloud.com/hub",
+      "type": "open-source",
+      "repo": "https://github.com/nextcloud/server",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "Google Workspace, except the admin console has your name on the blame.",
+      "stars": 36300,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "zoom-pro",
     "microsoft-teams-essentials",

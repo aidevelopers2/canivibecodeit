@@ -52,6 +52,46 @@
       "desc": "Open-source non-linear video editor."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Adobe Express",
+      "url": "https://www.adobe.com/express/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "Browser editing, recording, captions and graphics without a watermark; avatars and team machinery stay elsewhere.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Clipchamp",
+      "url": "https://clipchamp.com/en/video-editor/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "windows"
+      ],
+      "desc": "A capable browser editor and recorder with free 1080p exports; collaboration and avatars are thinner.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "OpenCut",
+      "url": "https://opencut.app",
+      "desc": "The famous answer is between codebases: classic is archived and the replacement is still a rewrite."
+    }
+  ],
   "relatedSlugs": [
     "kapwing",
     "invideo",

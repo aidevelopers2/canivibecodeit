@@ -52,6 +52,24 @@
       "desc": "Open-source technical SEO auditing application."
     }
   ],
+  "alternatives": [
+    {
+      "name": "CrawlSEO",
+      "url": "https://github.com/crawlseo/crawlseo",
+      "type": "open-source",
+      "repo": "https://github.com/crawlseo/crawlseo",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Scheduled crawls and real alerts without a subscription; the catch is configuring Google OAuth, Postgres and notification plumbing yourself.",
+      "stars": 507,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "screaming-frog-seo-spider",
     "sitebulb",

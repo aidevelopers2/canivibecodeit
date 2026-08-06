@@ -53,6 +53,8 @@
       "desc": "Node library for public App Store listing metadata; same consolation-layer limits"
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "vernigo",
     "spyfu",

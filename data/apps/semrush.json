@@ -52,6 +52,19 @@
       "status": "alive"
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "OpenSEO",
+      "url": "https://openseo.so/",
+      "desc": "Covers organic SEO basics, but no serious PPC corpus, advertising history or content suite; DataForSEO is compulsory besides."
+    },
+    {
+      "name": "SEO PowerSuite Free",
+      "url": "https://www.link-assistant.com/",
+      "desc": "A respectable SEO toolbox that cannot save free projects and never had Semrush's PPC, content or AI-visibility breadth."
+    }
+  ],
   "relatedSlugs": [
     "surfer-seo",
     "frase",

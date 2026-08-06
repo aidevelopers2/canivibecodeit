@@ -57,6 +57,19 @@
       "desc": "Self-hosted social media management software."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "BrightBean Studio",
+      "url": "https://brightbean.xyz/studio/",
+      "desc": "Publishing, approvals, inbox, analytics and client workspaces are present; white-label reseller tooling is not."
+    },
+    {
+      "name": "Postiz",
+      "url": "https://postiz.com/",
+      "desc": "Publishing and team workflow clear the easy half; monitoring, reporting depth and white-labeling do not."
+    }
+  ],
   "relatedSlugs": [
     "agorapulse",
     "sprout-social",

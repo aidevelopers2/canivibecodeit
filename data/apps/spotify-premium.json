@@ -53,6 +53,8 @@
       "desc": "Active open-source personal music server for legally owned libraries."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "apple-music",
     "youtube-music-premium",

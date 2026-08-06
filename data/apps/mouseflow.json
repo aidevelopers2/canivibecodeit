@@ -53,6 +53,75 @@
       "desc": "Popular open-source privacy-focused web analytics platform."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Microsoft Clarity",
+      "url": "https://clarity.microsoft.com",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "Unlimited session playback and heatmaps for free; the product is exactly as suspiciously generous as it sounds.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "OpenReplay",
+      "url": "https://openreplay.com",
+      "type": "open-source",
+      "repo": "https://github.com/openreplay/openreplay",
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "Replay a consented sample with full debugging context, provided you are willing to run the stack.",
+      "stars": 12425,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "PostHog",
+      "url": "https://posthog.com",
+      "type": "open-source",
+      "repo": "https://github.com/PostHog/posthog",
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "Replay, heatmaps and filters on a free allowance that is large enough for a small product.",
+      "stars": 37500,
+      "lastCommit": "2026-08",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Rybbit",
+      "url": "https://rybbit.com",
+      "type": "open-source",
+      "repo": "https://github.com/rybbit-io/rybbit",
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "Cookieless analytics and replay in one Compose file, with fewer forensic bells.",
+      "stars": 12600,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "matomo-cloud",
     "posthog",

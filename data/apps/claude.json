@@ -50,6 +50,129 @@
       "status": "alive"
     }
   ],
+  "alternatives": [
+    {
+      "name": "AnythingLLM",
+      "url": "https://anythingllm.com/",
+      "type": "open-source",
+      "repo": "https://github.com/Mintplex-Labs/anything-llm",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "A private AI desk for documents and agents; install it, then choose local models or somebody else's meter.",
+      "stars": 64400,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Big-AGI",
+      "url": "https://big-agi.com/",
+      "type": "open-source",
+      "repo": "https://github.com/enricoros/big-AGI",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A local-first multi-model workspace with files, search, code and personas; the interface assumes you enjoy buttons.",
+      "stars": 7100,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Cherry Studio",
+      "url": "https://cherryai.com/",
+      "type": "open-source",
+      "repo": "https://github.com/CherryHQ/cherry-studio",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "A desktop model switchboard with assistants, files, agents and MCP; bring keys or make your laptop sweat.",
+      "stars": 49867,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Jan",
+      "url": "https://jan.ai/",
+      "type": "open-source",
+      "repo": "https://github.com/janhq/jan",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "A local-first desktop assistant with cloud connectors and tools; your RAM gets the invoice.",
+      "stars": 43900,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "LibreChat",
+      "url": "https://www.librechat.ai/",
+      "type": "open-source",
+      "repo": "https://github.com/danny-avila/LibreChat",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A self-hosted model switchboard with agents, files and tools; free software, paid model bills if you use paid models.",
+      "stars": 41700,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "LM Studio",
+      "url": "https://lmstudio.ai/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "A local-model desktop lab with chat, documents and tools; free forever, but your hardware is now the cloud.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Open WebUI",
+      "url": "https://openwebui.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "ChatGPT-shaped self-hosting with models, files, search and tools; the software is free, the admin role is yours.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Msty",
+      "url": "https://msty.ai/",
+      "desc": "The desktop core is $0, but the terms limit it to private non-commercial use; paid work needs a license."
+    }
+  ],
   "relatedSlugs": [
     "perplexity",
     "gemini",

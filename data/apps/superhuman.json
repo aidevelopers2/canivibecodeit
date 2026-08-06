@@ -53,6 +53,93 @@
       "desc": "Popular open-source mail-server suite that demonstrates the operational complexity of hosted mail."
     }
   ],
+  "alternatives": [
+    {
+      "name": "BlueMail Personal",
+      "url": "https://bluemail.me/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android"
+      ],
+      "desc": "Unified accounts, clusters and keyboard control for free; it is less monastic and much less expensive.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Edison Mail",
+      "url": "https://www.edisonmail.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos",
+        "windows",
+        "ios",
+        "android"
+      ],
+      "desc": "Focused sorting, fast search and custom actions for free; command-bar maximalism is optional.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Mailspring",
+      "url": "https://www.getmailspring.com/",
+      "type": "open-source",
+      "repo": "https://github.com/Foundry376/Mailspring",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "Keyboard-first desktop mail with a local index; the speed is real even when the workflow extras are paid.",
+      "stars": 17724,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Spark Free",
+      "url": "https://sparkmailapp.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos",
+        "windows",
+        "ios",
+        "android"
+      ],
+      "desc": "Fast search, keyboard shortcuts and a focused inbox without the executive-assistant price tag.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Thunderbird",
+      "url": "https://www.thunderbird.net/",
+      "type": "open-source",
+      "repo": "https://github.com/thunderbird/thunderbird-desktop",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "Keyboard-driven local mail and search with no subscription; the interface will not flatter your venture round.",
+      "stars": 92,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "front",
     "fastmail",

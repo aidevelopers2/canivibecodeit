@@ -50,6 +50,58 @@
       "status": "alive"
     }
   ],
+  "alternatives": [
+    {
+      "name": "pyVideoTrans",
+      "url": "https://en.pyvideotrans.com/",
+      "type": "open-source",
+      "repo": "https://github.com/jianchang512/pyvideotrans",
+      "platforms": [
+        "windows"
+      ],
+      "desc": "Drop in a video and it does the dull chain, transcribe, translate, dub, remux, without billing by the minute.",
+      "stars": 18600,
+      "lastCommit": "2026-07",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "TTS WebUI",
+      "url": "https://ttswebui.com/",
+      "type": "open-source",
+      "repo": "https://github.com/rsxdalv/TTS-WebUI",
+      "platforms": [
+        "windows"
+      ],
+      "desc": "A 10GB local voice lab with an installer and every model drawer open; model licences are your homework.",
+      "stars": 3200,
+      "lastCommit": "2026-03",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Voicebox",
+      "url": "https://voicebox.sh/",
+      "type": "open-source",
+      "repo": "https://github.com/jamiepine/voicebox",
+      "platforms": [
+        "macos",
+        "windows"
+      ],
+      "desc": "A local voice studio with cloning, seven engines, transcription and a multi-track editor; dubbing still takes manual assembly.",
+      "stars": 49500,
+      "lastCommit": "2026-06",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "AllTalk TTS",
+      "url": "https://github.com/erew123/alltalk_tts",
+      "desc": "Feature-rich, but the maintained work lives off the stale main branch and installation still starts with Git, Python and C++ tools."
+    }
+  ],
   "relatedSlugs": [
     "chatgpt",
     "claude",

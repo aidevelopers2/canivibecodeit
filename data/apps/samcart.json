@@ -56,6 +56,39 @@
       "desc": "Open-source publishing and membership platform."
     }
   ],
+  "alternatives": [
+    {
+      "name": "systeme.io",
+      "url": "https://systeme.io",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Checkout, subscriptions, bumps, upsells, one course and one affiliate program; free until your second course or fourth funnel.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Ghost",
+      "url": "https://ghost.org",
+      "desc": "Subscriptions and content are there; conversion checkout, bumps, upsells and affiliates are not."
+    },
+    {
+      "name": "Medusa",
+      "url": "https://medusajs.com",
+      "desc": "A developer backend, not a conversion checkout, funnel, affiliate and course product."
+    },
+    {
+      "name": "WooCommerce",
+      "url": "https://woocommerce.com",
+      "desc": "The free core sells products, but subscriptions, funnels, affiliates and course delivery require a plugin shopping spree."
+    }
+  ],
   "relatedSlugs": [
     "thrivecart",
     "whop",

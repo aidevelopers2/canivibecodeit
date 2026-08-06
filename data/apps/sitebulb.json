@@ -52,6 +52,93 @@
       "desc": "Open-source technical SEO auditing application."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Crawly",
+      "url": "https://www.getcrawly.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos"
+      ],
+      "desc": "A free Mac crawler that turns nineteen issue types into a clean findings list and keeps crawl diffs.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "FreeCrawl",
+      "url": "https://freecrawl.net/",
+      "type": "open-source",
+      "repo": "https://github.com/kemalai/FreeCrawl-SEO-Tool",
+      "platforms": [
+        "windows",
+        "macos",
+        "linux",
+        "cli"
+      ],
+      "desc": "A desktop crawler with 200 checks, issue evidence and project comparisons; the hint engine is younger, not imaginary.",
+      "stars": 87,
+      "lastCommit": "2026-07",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "LibreCrawl",
+      "url": "https://librecrawl.com/",
+      "type": "open-source",
+      "repo": "https://github.com/PhialsBasement/LibreCrawl",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Unlimited crawls and a browser dashboard with audits; prioritization is plainer, but the evidence is there.",
+      "stars": 827,
+      "lastCommit": "2026-06",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "SEOnaut",
+      "url": "https://seonaut.org/",
+      "type": "open-source",
+      "repo": "https://github.com/StJudeWasHere/seonaut",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Stores audits and sorts issues by severity; not as pretty as Sitebulb, equally capable of ruining your afternoon.",
+      "stars": 751,
+      "lastCommit": "2026-05",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "SiteOne Crawler",
+      "url": "https://crawler.siteone.io/",
+      "type": "open-source",
+      "repo": "https://github.com/janreges/siteone-crawler",
+      "platforms": [
+        "windows",
+        "macos",
+        "linux",
+        "cli"
+      ],
+      "desc": "Crawls locally, calculates a quality score and tells you what to fix first; almost suspiciously on brief.",
+      "stars": 841,
+      "lastCommit": "2026-06",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "RustySEO",
+      "url": "https://www.rustyseo.com/",
+      "desc": "Looks like the obvious new answer; v0.3.9 and its own buggy warning say not for readers yet."
+    }
+  ],
   "relatedSlugs": [
     "screaming-frog-seo-spider",
     "contentking",

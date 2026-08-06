@@ -57,6 +57,39 @@
       "status": "alive"
     }
   ],
+  "alternatives": [
+    {
+      "name": "Clapshot",
+      "url": "https://github.com/elonen/clapshot",
+      "type": "open-source",
+      "repo": "https://github.com/elonen/clapshot",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Frame-accurate comments, drawings and version stacks without Adobe; you still run the server.",
+      "stars": 262,
+      "lastCommit": "2026-07",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Kitsu",
+      "url": "https://kitsu.cg-wire.com",
+      "type": "open-source",
+      "repo": "https://github.com/cgwire/kitsu",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Frame-by-frame reviews, version comparisons and approvals; the VFX production tracker comes along for the ride.",
+      "stars": 681,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "descript",
     "loom",

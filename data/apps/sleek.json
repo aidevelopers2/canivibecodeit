@@ -57,6 +57,39 @@
       "status": "alive"
     }
   ],
+  "alternatives": [
+    {
+      "name": "Google Stitch",
+      "url": "https://stitch.withgoogle.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Prompt or screenshot to multi-screen UI, editable canvas, prototypes, Figma copy, and frontend code export; usage is capped, not trialled.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Motiff",
+      "url": "https://motiff.com/",
+      "desc": "The service has been discontinued; the remaining site is an export notice wearing a product's clothes."
+    },
+    {
+      "name": "OpenPencil",
+      "url": "https://openpencil.dev/",
+      "desc": "Open source and interesting, but explicitly not production-ready and not a dependable prompt-to-code workflow yet."
+    },
+    {
+      "name": "Visily",
+      "url": "https://www.visily.ai/",
+      "desc": "Its free tier allows only two editable boards and removes both Figma and code export, which are central to Sleek's job."
+    }
+  ],
   "relatedSlugs": [
     "figma",
     "canva",

@@ -53,6 +53,41 @@
       "desc": "Popular open-source privacy-focused web analytics platform."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Microsoft Clarity",
+      "url": "https://clarity.microsoft.com",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "Unlimited heatmaps and recordings, subsidized by Microsoft instead of your card.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "PostHog",
+      "url": "https://posthog.com",
+      "type": "open-source",
+      "repo": "https://github.com/PostHog/posthog",
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "Consent-gated events and heatmaps, plus replay when a colored blob is not enough.",
+      "stars": 37500,
+      "lastCommit": "2026-08",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "matomo-cloud",
     "posthog",

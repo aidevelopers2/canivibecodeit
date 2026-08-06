@@ -52,6 +52,69 @@
       "desc": "Open-source customer-feedback portal with voting and status workflows."
     }
   ],
+  "alternatives": [
+    {
+      "name": "ClearFlask",
+      "url": "https://clearflask.com",
+      "type": "open-source",
+      "repo": "https://github.com/clearflask/clearflask",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Feedback, duplicate merging and a real roadmap; deployment is the least lightweight part.",
+      "stars": 446,
+      "lastCommit": "2026-07",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Quackback",
+      "url": "https://quackback.io",
+      "type": "open-source",
+      "repo": "https://github.com/QuackbackIO/quackback",
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "Canny's whole loop in one Compose file, including duplicate merging; young, fast-moving, and worth pinning.",
+      "stars": 216,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Sleekplan Indie",
+      "url": "https://sleekplan.com/pricing/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Unlimited feedback, a roadmap and a changelog for one admin; branding and the default workflow are the rent.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "UserJot",
+      "url": "https://userjot.com",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Two free feedback boards, duplicate detection, statuses and a public roadmap with no user meter hiding nearby.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "productboard",
     "dovetail",

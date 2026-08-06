@@ -53,6 +53,14 @@
       "desc": "Active community continuation of the fast local Piper text-to-speech engine."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Duix.Avatar",
+      "url": "https://www.duix.com/",
+      "desc": "A local avatar stack with a custom licence, three containers and workstation-class hardware is not the install-this answer."
+    }
+  ],
   "relatedSlugs": [
     "speechify",
     "synthesia",

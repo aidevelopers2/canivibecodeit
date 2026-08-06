@@ -50,6 +50,74 @@
       "status": "alive"
     }
   ],
+  "alternatives": [
+    {
+      "name": "FlowSavvy Free",
+      "url": "https://flowsavvy.app/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "It auto-plans unlimited tasks for the next two weeks; priorities and dependencies are how the paid plan gets you.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Super Productivity",
+      "url": "https://super-productivity.com/",
+      "type": "open-source",
+      "repo": "https://github.com/super-productivity/super-productivity",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android"
+      ],
+      "desc": "A local task planner with timeboxes, focus mode and its own stopwatch; less glossy, less interested in your wallet.",
+      "stars": 21156,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Trevor AI Free",
+      "url": "https://www.trevorai.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "One calendar gets task-to-time-block planning and some AI suggestions; multiple calendars and deeper automation cost extra.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Amplenote Free",
+      "url": "https://www.amplenote.com/",
+      "desc": "Useful free tasks and notes, but external calendar sync is a Pro feature."
+    },
+    {
+      "name": "Ellie Free",
+      "url": "https://ellieplanner.com/",
+      "desc": "Calendar integration and timebox mode are both behind the subscription."
+    },
+    {
+      "name": "Routine Free",
+      "url": "https://routine.co/",
+      "desc": "The free plan has tasks and calendars, but the daily time-blocking loop is paid."
+    }
+  ],
   "relatedSlugs": [
     "akiflow",
     "motion",

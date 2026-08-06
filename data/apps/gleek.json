@@ -50,6 +50,39 @@
       "desc": "Text-to-diagram renderer with broad diagram syntax."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Mermaid Live Editor",
+      "url": "https://mermaid.live/",
+      "type": "open-source",
+      "repo": "https://github.com/mermaid-js/mermaid-live-editor",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Type Mermaid, see the diagram immediately, and export it; narrower than Gleek, but finished, free, and pleasantly uncomplicated.",
+      "stars": 6719,
+      "lastCommit": "2026-08",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "PlantUML Server",
+      "url": "https://editor.plantuml.com/",
+      "type": "open-source",
+      "repo": "https://github.com/plantuml/plantuml-server",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A usable browser editor for architecture, sequence, process, and data-model diagrams written as text; the syntax is less forgiving than Gleek's.",
+      "stars": 2210,
+      "lastCommit": "2026-06",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "pitch",
     "prezi",

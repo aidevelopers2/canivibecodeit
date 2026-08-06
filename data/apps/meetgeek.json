@@ -53,6 +53,19 @@
       "desc": "Widely used local Whisper inference implementation suitable for private transcription."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Fathom",
+      "url": "https://www.fathom.ai/",
+      "desc": "Free recording and summaries are generous; recurring-theme and team analytics are not part of the free job."
+    },
+    {
+      "name": "Speakr",
+      "url": "https://murtaza-nasir.github.io/speakr/",
+      "desc": "It has speaker statistics and chat, not automatic recurring-theme tracking across meetings."
+    }
+  ],
   "relatedSlugs": [
     "fathom-ai",
     "read-ai",

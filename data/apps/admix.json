@@ -52,6 +52,80 @@
       "desc": "Open-source multi-model AI chat platform for self-hosting API-based assistants."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Big-AGI",
+      "url": "https://big-agi.com/",
+      "type": "open-source",
+      "repo": "https://github.com/enricoros/big-AGI",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "One prompt fans out across models and Beam can merge the answers; free software, paid API keys if you chase frontier models.",
+      "stars": 7100,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "ChatALL",
+      "url": "https://chatall.ai/",
+      "type": "open-source",
+      "repo": "https://github.com/ai-shifu/ChatALL",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "The exact compare-everyone desktop app; use API-backed bots, because scraped web connectors break whenever vendors sneeze.",
+      "stars": 16500,
+      "lastCommit": "2025-11",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Cherry Studio",
+      "url": "https://cherryai.com/",
+      "type": "open-source",
+      "repo": "https://github.com/CherryHQ/cherry-studio",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "Same prompt, several models, side by side; bring API keys or make local models do the arguing.",
+      "stars": 49867,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Open WebUI",
+      "url": "https://openwebui.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "Run several models in parallel columns and merge the result; free to run, source-available rather than open source.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Msty",
+      "url": "https://msty.ai/",
+      "desc": "The desktop core is $0, but the terms limit it to private non-commercial use; paid work needs a license."
+    }
+  ],
   "relatedSlugs": [
     "chatgpt",
     "claude",

@@ -51,6 +51,63 @@
       "status": "alive"
     }
   ],
+  "alternatives": [
+    {
+      "name": "FreshRSS",
+      "url": "https://freshrss.org",
+      "type": "open-source",
+      "repo": "https://github.com/FreshRSS/FreshRSS",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Filters, search, tags and extensions without a subscription or hosted convenience.",
+      "stars": 15700,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Miniflux",
+      "url": "https://miniflux.app",
+      "type": "open-source",
+      "repo": "https://github.com/miniflux/v2",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Regex filters, full-text search and a clean reader; monitoring and automations are basic.",
+      "stars": 9600,
+      "lastCommit": "2026-05",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "NewsBlur",
+      "url": "https://newsblur.com",
+      "type": "open-source",
+      "repo": "https://github.com/samuelclay/NewsBlur",
+      "platforms": [
+        "web",
+        "macos",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "Trainable feeds, search and newsletters, plus enough infrastructure to qualify as a hobby.",
+      "stars": 7600,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Folo",
+      "url": "https://folo.is",
+      "desc": "A good reader, but one free action is too cramped to replace Inoreader's rules and automations."
+    }
+  ],
   "relatedSlugs": [
     "todoist",
     "sunsama",

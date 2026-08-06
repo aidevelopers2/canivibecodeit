@@ -50,6 +50,48 @@
       "desc": "Mature open-source research and citation manager."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Koofr",
+      "url": "https://koofr.eu",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android"
+      ],
+      "desc": "Ten free gigabytes of WebDAV that Zotero can use without a storage subscription.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Nextcloud",
+      "url": "https://nextcloud.com",
+      "type": "open-source",
+      "repo": "https://github.com/nextcloud/server",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "Unlimited Zotero WebDAV if you already wanted a server to babysit.",
+      "stars": 36300,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "elicit",
     "consensus",

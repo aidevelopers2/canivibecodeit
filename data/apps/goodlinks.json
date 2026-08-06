@@ -51,6 +51,46 @@
       "desc": "Mature open-source RSS reader with feeds, filters, and self-hosting support."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Karakeep",
+      "url": "https://karakeep.app",
+      "type": "open-source",
+      "repo": "https://github.com/karakeep-app/karakeep",
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "self-hosted",
+        "cli",
+        "browser-extension"
+      ],
+      "desc": "A polished read-later archive with highlights and mobile apps, provided you host it.",
+      "stars": 28100,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "wallabag",
+      "url": "https://wallabag.org",
+      "type": "open-source",
+      "repo": "https://github.com/wallabag/wallabag",
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "self-hosted",
+        "browser-extension"
+      ],
+      "desc": "Readable saved pages, tags and highlights across devices; local Apple elegance becomes Docker.",
+      "stars": 12900,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "readwise",
     "raindrop-io",

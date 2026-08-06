@@ -52,6 +52,31 @@
       "desc": "Open-source screen recording and sharing product with modern desktop architecture."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Recordly",
+      "url": "https://recordly.dev",
+      "type": "open-source",
+      "repo": "https://github.com/webadderallorg/Recordly",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "Auto-zoom demos with styled frames and installers; young enough that audio still occasionally picks a fight.",
+      "stars": 20439,
+      "lastCommit": "2026-07",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Screenize",
+      "url": "https://github.com/syi0808/screenize",
+      "desc": "Promising Screen Studio clone whose maintainer explicitly paused development in May 2026."
+    }
+  ],
   "relatedSlugs": [
     "cleanshot-x",
     "scribe",

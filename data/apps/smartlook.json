@@ -51,6 +51,42 @@
       "desc": "Open-source product analytics, feature flags, and session replay."
     }
   ],
+  "alternatives": [
+    {
+      "name": "OpenReplay",
+      "url": "https://openreplay.com",
+      "type": "open-source",
+      "repo": "https://github.com/openreplay/openreplay",
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "Recordings, heatmaps, events, funnels and mobile replay, with full data control and nontrivial operations.",
+      "stars": 12425,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "PostHog",
+      "url": "https://posthog.com",
+      "type": "open-source",
+      "repo": "https://github.com/PostHog/posthog",
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "Replays, heatmaps, funnels and mobile SDKs on a free allowance that covers a small product.",
+      "stars": 37500,
+      "lastCommit": "2026-08",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "logrocket",
     "june",

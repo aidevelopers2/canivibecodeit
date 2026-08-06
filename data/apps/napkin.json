@@ -54,6 +54,29 @@
       "desc": "Open-source local knowledge graph and outliner."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Atomic",
+      "url": "https://atomicapp.ai",
+      "type": "open-source",
+      "repo": "https://github.com/kenforthewin/atomic",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "self-hosted",
+        "browser-extension"
+      ],
+      "desc": "Short notes turn into a semantic graph without waiting for you to become an archivist.",
+      "stars": 1600,
+      "lastCommit": "2026-07",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "saner-ai",
     "fabric",

@@ -53,6 +53,24 @@
       "desc": "Active open-source social media scheduling platform."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "BrightBean Studio",
+      "url": "https://brightbean.xyz/studio/",
+      "desc": "It publishes LinkedIn and tracks results, but has no relationship follow-up list."
+    },
+    {
+      "name": "Buffer Free",
+      "url": "https://buffer.com/",
+      "desc": "LinkedIn scheduling and basic analytics, minus lead lists, relationship reminders and serious ideation."
+    },
+    {
+      "name": "Postiz",
+      "url": "https://postiz.com/",
+      "desc": "AI-assisted LinkedIn publishing is covered; relationship management is not."
+    }
+  ],
   "relatedSlugs": [
     "hootsuite",
     "metricool",

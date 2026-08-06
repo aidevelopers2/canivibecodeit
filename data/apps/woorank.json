@@ -56,6 +56,60 @@
       "desc": "Open-source site-wide Lighthouse crawler and dashboard."
     }
   ],
+  "alternatives": [
+    {
+      "name": "CrawlSEO",
+      "url": "https://github.com/crawlseo/crawlseo",
+      "type": "open-source",
+      "repo": "https://github.com/crawlseo/crawlseo",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Crawls, rank snapshots, comparisons, alerts and exports; the dashboard is free, the setup is not effortless.",
+      "stars": 507,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "OpenSEO",
+      "url": "https://openseo.so/",
+      "type": "open-source",
+      "repo": "https://github.com/every-app/open-seo",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Website audits, rank tracking and competitor views in one container; polished client reporting is still on the road map.",
+      "stars": 10614,
+      "lastCommit": "2026-07",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "SEO Panel",
+      "url": "https://www.seopanel.org/",
+      "type": "open-source",
+      "repo": "https://github.com/seopanel/Seo-Panel",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Reviews, rankings, backlinks and scheduled reports in a PHP dashboard that has survived several design eras.",
+      "stars": 149,
+      "lastCommit": "2026-06",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "SEO PowerSuite Free",
+      "url": "https://www.link-assistant.com/",
+      "desc": "Broad enough to be recommended, crippled exactly where ongoing reporting starts: free projects cannot be saved."
+    }
+  ],
   "relatedSlugs": [
     "rank-math-pro",
     "yoast-seo-premium",

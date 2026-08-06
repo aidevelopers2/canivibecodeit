@@ -53,6 +53,75 @@
       "desc": "Open-source visual website builder designed around web standards."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Mobirise AI",
+      "url": "https://ai.mobirise.com",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Block-based startup sites with code export and three free projects a month.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Plasmic",
+      "url": "https://www.plasmic.app",
+      "type": "open-source",
+      "repo": "https://github.com/plasmicapp/plasmic",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Reusable components, hosting and code deployment on a free plan; much less constrained than requested.",
+      "stars": 6900,
+      "lastCommit": "2026-08",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Publii",
+      "url": "https://getpublii.com",
+      "type": "open-source",
+      "repo": "https://github.com/GetPublii/Publii",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "A desktop block editor that exports a static site; startup-specific components are not the main attraction.",
+      "stars": 7300,
+      "lastCommit": "2026-07",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Silex",
+      "url": "https://www.silex.me",
+      "type": "open-source",
+      "repo": "https://github.com/silexlabs/Silex",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Constrained visual building with plain-HTML export; less startup polish, no hostage situation.",
+      "stars": 2919,
+      "lastCommit": "2026-08",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "GrapesJS",
+      "url": "https://grapesjs.com",
+      "desc": "A component-editor framework, not a ready-to-publish startup-site product."
+    }
+  ],
   "relatedSlugs": [
     "duda",
     "tilda",

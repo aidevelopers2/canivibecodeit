@@ -52,6 +52,14 @@
       "desc": "Open-source desktop mail client and useful IMAP prior art."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Delta Chat",
+      "url": "https://delta.chat/",
+      "desc": "Email-as-chat is real; shared notes and meetings are not."
+    }
+  ],
   "relatedSlugs": [
     "clean-email",
     "sanebox",

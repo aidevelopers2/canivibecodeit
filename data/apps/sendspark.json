@@ -53,6 +53,14 @@
       "desc": "Open-source screen recording and sharing product with modern desktop architecture."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Cap",
+      "url": "https://cap.so",
+      "desc": "Records and hosts a video; recipient-specific sales pages are not part of the deal."
+    }
+  ],
   "relatedSlugs": [
     "screen-studio",
     "cleanshot-x",

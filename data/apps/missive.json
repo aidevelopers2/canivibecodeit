@@ -53,6 +53,71 @@
       "desc": "Popular open-source mail-server suite that demonstrates the operational complexity of hosted mail."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Chatwoot",
+      "url": "https://www.chatwoot.com/",
+      "type": "open-source",
+      "repo": "https://github.com/chatwoot/chatwoot",
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "Collaborative email with private notes, mentions and ownership; also handles chat when Missive was doing too much.",
+      "stars": 35528,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Frappe Helpdesk",
+      "url": "https://frappe.io/helpdesk",
+      "type": "open-source",
+      "repo": "https://github.com/frappe/helpdesk",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Assignments, comments and shared queues in a clean interface; the Frappe stack is the hidden teammate.",
+      "stars": 3300,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "FreeScout",
+      "url": "https://freescout.net/",
+      "type": "open-source",
+      "repo": "https://github.com/freescout-help-desk/freescout",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Shared mailboxes, internal notes and assignments without seat fees; chat-style polish is traded for server care.",
+      "stars": 4500,
+      "lastCommit": "2026-07",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Zammad",
+      "url": "https://zammad.org/",
+      "type": "open-source",
+      "repo": "https://github.com/zammad/zammad",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A mature team inbox with internal notes and ticket owners; it feels like support software because it is.",
+      "stars": 5800,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "superhuman",
     "front",

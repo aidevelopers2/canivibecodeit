@@ -52,6 +52,38 @@
       "desc": "Large open-source low-code platform for internal applications and data sources."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Nowa Starter",
+      "url": "https://nowa.dev/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "ios",
+        "android"
+      ],
+      "desc": "A visual Flutter builder with editable standard code and unlimited free source downloads; publishing-as-a-service is paid.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "FlutterFlow Free",
+      "url": "https://www.flutterflow.io/",
+      "desc": "You can build and test two projects; downloading the Flutter source is the first paid tier."
+    },
+    {
+      "name": "MIT App Inventor",
+      "url": "https://appinventor.mit.edu/",
+      "desc": "A finished mobile builder, but it emits App Inventor projects and packages, not maintainable Flutter source."
+    }
+  ],
   "relatedSlugs": [
     "retool",
     "weweb",

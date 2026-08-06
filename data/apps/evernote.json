@@ -50,6 +50,68 @@
       "status": "alive"
     }
   ],
+  "alternatives": [
+    {
+      "name": "Joplin",
+      "url": "https://joplinapp.org",
+      "type": "open-source",
+      "repo": "https://github.com/laurent22/joplin",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android",
+        "cli",
+        "browser-extension"
+      ],
+      "desc": "Evernote after removing the rent, the lock-in and some polish.",
+      "stars": 55800,
+      "lastCommit": "2026-07",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Notesnook",
+      "url": "https://notesnook.com",
+      "type": "open-source",
+      "repo": "https://github.com/streetwriters/notesnook",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android",
+        "browser-extension"
+      ],
+      "desc": "Evernote with the server blindfolded and the free tier still usable.",
+      "stars": 14400,
+      "lastCommit": "2026-08",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "SiYuan",
+      "url": "https://b3log.org/siyuan/",
+      "type": "open-source",
+      "repo": "https://github.com/siyuan-note/siyuan",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux",
+        "android",
+        "self-hosted",
+        "browser-extension"
+      ],
+      "desc": "Capture, search, tasks and databases; free sync means bringing your own server.",
+      "stars": 45647,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "obsidian-sync",
     "readwise-reader",

@@ -46,5 +46,84 @@
       "desc": "beloved self-hosted uptime monitor"
     }
   ],
+  "alternatives": [
+    {
+      "name": "Gatus",
+      "url": "https://gatus.io/",
+      "type": "open-source",
+      "repo": "https://github.com/TwiN/gatus",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A YAML file, a status board and enough protocol checks to annoy most outages.",
+      "stars": 11800,
+      "lastCommit": "2026-07",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Kener",
+      "url": "https://kener.ing/",
+      "type": "open-source",
+      "repo": "https://github.com/rajnandan1/kener",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A handsome status page that also does the checking, not just the apologizing.",
+      "stars": 5100,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "OneUptime",
+      "url": "https://oneuptime.com/",
+      "type": "open-source",
+      "repo": "https://github.com/oneuptime/oneuptime",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Uptime, status pages and on-call in one enormous open-source cupboard.",
+      "stars": 7400,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "OpenStatus",
+      "url": "https://openstatus.dev/",
+      "type": "open-source",
+      "repo": "https://github.com/openstatusHQ/openstatus",
+      "platforms": [
+        "web",
+        "self-hosted",
+        "cli"
+      ],
+      "desc": "Uptime checks and a status page, with YAML for the suspicious.",
+      "stars": 8945,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Uptime Kuma",
+      "url": "https://uptime.kuma.pet/",
+      "type": "open-source",
+      "repo": "https://github.com/louislam/uptime-kuma",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A cheerful dashboard for asking URLs whether they are dead yet.",
+      "stars": 87300,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "prompt": "Build me an uptime monitor like UptimeRobot. Requirements:\n\n- A config file (monitors.json) listing URLs with: name, interval seconds,\n  timeout, expected status code, and an optional keyword the body must contain.\n- A single long-running Node or Python process that checks each monitor on its\n  interval, records results (SQLite: timestamp, status, latency ms), and tracks\n  state transitions.\n- On DOWN or RECOVERED transitions (after 2 consecutive fails to avoid flaps):\n  send a webhook (Discord/Slack/Telegram format, URL from .env) with the monitor\n  name, error, and duration of the outage.\n- A public /status page: green/red per monitor, uptime % over 24h/7d/30d, and a\n  latency sparkline drawn as inline SVG. Auto-refresh every 30s.\n- Keep 90 days of history, prune older rows daily.\n- One process, no queue, no Docker required; systemd unit file included."
 }

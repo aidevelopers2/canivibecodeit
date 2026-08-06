@@ -52,6 +52,64 @@
       "desc": "Mature open-source RSS reader with feeds, filters, and self-hosting support."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Karakeep",
+      "url": "https://karakeep.app",
+      "type": "open-source",
+      "repo": "https://github.com/karakeep-app/karakeep",
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "self-hosted",
+        "cli",
+        "browser-extension"
+      ],
+      "desc": "Saved pages, reader mode, highlights and full-text search, plus rather more machinery.",
+      "stars": 28100,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Linkwarden",
+      "url": "https://linkwarden.app",
+      "type": "open-source",
+      "repo": "https://github.com/linkwarden/linkwarden",
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "self-hosted",
+        "browser-extension"
+      ],
+      "desc": "A preserved, searchable reading archive with annotations and no disappearing pages.",
+      "stars": 19400,
+      "lastCommit": "2026-07",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "wallabag",
+      "url": "https://wallabag.org",
+      "type": "open-source",
+      "repo": "https://github.com/wallabag/wallabag",
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "self-hosted",
+        "browser-extension"
+      ],
+      "desc": "Instapaper's readable archive, highlights and search, with the server bill moved to you.",
+      "stars": 12900,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "readwise",
     "raindrop-io",

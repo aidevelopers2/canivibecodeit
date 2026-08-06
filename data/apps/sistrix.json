@@ -57,6 +57,19 @@
       "desc": "Open-source site-wide Lighthouse crawler and dashboard."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "OpenSEO",
+      "url": "https://openseo.so/",
+      "desc": "Good organic basics, no ecommerce intelligence and no home-grown visibility or link index; all data comes from DataForSEO."
+    },
+    {
+      "name": "SEO PowerSuite Free",
+      "url": "https://www.link-assistant.com/",
+      "desc": "Desktop SEO tools with no free saving, no ecommerce intelligence and nothing resembling SISTRIX's longitudinal dataset."
+    }
+  ],
   "relatedSlugs": [
     "se-ranking",
     "mangools",

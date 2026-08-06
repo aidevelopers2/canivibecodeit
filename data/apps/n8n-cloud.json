@@ -50,6 +50,54 @@
       "status": "alive"
     }
   ],
+  "alternatives": [
+    {
+      "name": "Activepieces Community Edition",
+      "url": "https://www.activepieces.com/open-source",
+      "type": "open-source",
+      "repo": "https://github.com/activepieces/activepieces",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A genuinely open-source workflow runner with a simpler one-container path.",
+      "stars": 23604,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Automatisch",
+      "url": "https://automatisch.io/",
+      "type": "open-source",
+      "repo": "https://github.com/automatisch/automatisch",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A smaller AGPL automation server for people who do not need n8n's entire ecosystem.",
+      "stars": 13923,
+      "lastCommit": "2026-01",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "n8n Community Edition",
+      "url": "https://n8n.io/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "The same workflow engine without the cloud bill; you inherit updates, backups, and uptime.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "plausible",
     "fathom-analytics",

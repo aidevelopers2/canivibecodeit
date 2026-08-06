@@ -53,6 +53,100 @@
       "status": "alive"
     }
   ],
+  "alternatives": [
+    {
+      "name": "CourseLit",
+      "url": "https://courselit.app",
+      "type": "open-source",
+      "repo": "https://github.com/codelitdev/courselit",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Courses, coaching-style communities, downloads and sales pages in one stack; you run the stack.",
+      "stars": 1200,
+      "lastCommit": "2026-07",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Frappe Learning",
+      "url": "https://frappe.io/learning",
+      "type": "open-source",
+      "repo": "https://github.com/frappe/lms",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Courses, cohorts, assignments, quizzes, certificates and payments in a modern UI; coaching workflows are lighter.",
+      "stars": 3100,
+      "lastCommit": "2026-07",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Moodle",
+      "url": "https://moodle.org",
+      "type": "open-source",
+      "repo": "https://github.com/moodle/moodle",
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "The most complete free LMS here, with the least creator-friendly first impression.",
+      "stars": 7300,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Odoo Community",
+      "url": "https://www.odoo.com/page/community",
+      "type": "open-source",
+      "repo": "https://github.com/odoo/odoo",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A website, course catalog, forums and payments inside an ERP; subtle it is not.",
+      "stars": 53527,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "systeme.io",
+      "url": "https://systeme.io",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "One hosted course, bookings, digital products and payments free; useful until your catalog becomes plural.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Tutor LMS",
+      "url": "https://tutorlms.com",
+      "type": "open-source",
+      "repo": "https://github.com/themeum/tutor",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A full course shop inside WordPress; low GitHub stars, but current releases and more than 100,000 active installs.",
+      "stars": 124,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "kajabi",
     "circle",

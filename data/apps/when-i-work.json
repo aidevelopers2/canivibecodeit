@@ -53,6 +53,8 @@
       "desc": "Active open-source human-resources and payroll application built on Frappe."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "gusto",
     "rippling",

@@ -52,6 +52,28 @@
       "desc": "Node-based open-source diffusion workflow engine with a large ecosystem."
     }
   ],
+  "alternatives": [
+    {
+      "name": "NodeTool",
+      "url": "https://nodetool.ai/",
+      "type": "open-source",
+      "repo": "https://github.com/nodetool-ai/nodetool",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted",
+        "cli"
+      ],
+      "desc": "Mask, remove backgrounds, retouch, relight, upscale and composite locally; the buttons exist, the cloud polish does not.",
+      "stars": 450,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "ideogram",
     "recraft",

@@ -50,6 +50,19 @@
       "desc": "Local speech-to-text engine suitable for private transcription."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "OpenReel Video",
+      "url": "https://openreel.video/",
+      "desc": "A real free browser editor, but it neither auto-transcribes recordings nor searches a media archive."
+    },
+    {
+      "name": "Screenpipe",
+      "url": "https://screenpipe.com/",
+      "desc": "The repo is source-available rather than OSS, and the signed desktop app costs money; the free path is compiling it yourself."
+    }
+  ],
   "relatedSlugs": [
     "transkriptor",
     "timeos",

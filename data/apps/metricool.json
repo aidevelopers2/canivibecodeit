@@ -53,6 +53,95 @@
       "desc": "Active open-source social media scheduling platform."
     }
   ],
+  "alternatives": [
+    {
+      "name": "BrightBean Studio",
+      "url": "https://brightbean.xyz/studio/",
+      "type": "open-source",
+      "repo": "https://github.com/brightbeanxyz/brightbean-studio",
+      "platforms": [
+        "web",
+        "self-hosted",
+        "cli"
+      ],
+      "desc": "Publishing plus cross-account analytics, with an inbox for good measure; public competitor research is not included.",
+      "stars": 2100,
+      "lastCommit": "2026-07",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Buffer Free",
+      "url": "https://buffer.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "browser-extension"
+      ],
+      "desc": "Three profiles, ten queued posts each and basic analytics; eight lifetime channel connections is the hidden ceiling.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Mixpost Lite",
+      "url": "https://mixpost.app/",
+      "type": "open-source",
+      "repo": "https://github.com/inovector/mixpost",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Single-user scheduling with basic account analytics and queues; the free edition stays deliberately small.",
+      "stars": 3500,
+      "lastCommit": "2026-03",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Postiz",
+      "url": "https://postiz.com/",
+      "type": "open-source",
+      "repo": "https://github.com/gitroomhq/postiz-app",
+      "platforms": [
+        "web",
+        "self-hosted",
+        "cli"
+      ],
+      "desc": "Multi-network scheduling and account analytics; self-hosting replaces the bill with infrastructure.",
+      "stars": 34300,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Social Champ Free",
+      "url": "https://www.socialchamp.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "Three non-X accounts with scheduling, analytics and an inbox; the missing X connection is not subtle.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Metricool Free",
+      "url": "https://metricool.com/",
+      "desc": "It omits LinkedIn and X and stops at twenty posts a month; that is below Metricool's actual job."
+    }
+  ],
   "relatedSlugs": [
     "hootsuite",
     "hypefury",

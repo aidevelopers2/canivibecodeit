@@ -57,6 +57,19 @@
       "desc": "Local speech-to-text engine suitable for private transcription."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Podbean Free",
+      "url": "https://www.podbean.com/podcast-hosting-pricing",
+      "desc": "Five hours total and a 20-episode RSS feed; that is a sample tray, not a home."
+    },
+    {
+      "name": "Spreaker Free Speech",
+      "url": "https://www.spreaker.com/plans",
+      "desc": "The hosting is real, but Spreaker discontinued livestreaming; one of Podbean’s core jobs is gone."
+    }
+  ],
   "relatedSlugs": [
     "libsyn",
     "redcircle",

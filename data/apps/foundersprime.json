@@ -40,6 +40,37 @@
   "moatNotes": "value is curated verification of deals and programs, not a unique widget",
   "whyPeopleStillPay": "Founders pay to skip hours of hunting scattered vendor pages and expired promos. The subscription buys research time, trust, and a maintained catalog · a DIY list goes stale within weeks without continuous upkeep.",
   "priorArt": [],
+  "alternatives": [
+    {
+      "name": "F6S",
+      "url": "https://www.f6s.com",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Deals, credits, grants and accelerators in one sprawling free founder bazaar.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "FounderPass",
+      "url": "https://www.founderpass.com",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Hundreds of startup discounts; the free shelf is real, though the premium shelf keeps waving.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [],
   "pagePriority": 3,
   "verifiedOneShot": false,

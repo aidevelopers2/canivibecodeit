@@ -51,6 +51,54 @@
       "desc": "Active open-source workspace with local-first documents and databases."
     }
   ],
+  "alternatives": [
+    {
+      "name": "BookStack",
+      "url": "https://www.bookstackapp.com",
+      "type": "open-source",
+      "repo": "https://github.com/BookStackApp/BookStack",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Simple team documentation with rigid shelves and no per-seat toll.",
+      "stars": 19000,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Docmost",
+      "url": "https://docmost.com",
+      "type": "open-source",
+      "repo": "https://github.com/docmost/docmost",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A clean collaborative wiki with spaces, comments, history and search.",
+      "stars": 21273,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Wiki.js",
+      "url": "https://js.wiki",
+      "type": "open-source",
+      "repo": "https://github.com/requarks/wiki",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A full team wiki with good search and enough knobs to justify Docker.",
+      "stars": 28718,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "craft",
     "nuclino",

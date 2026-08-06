@@ -67,6 +67,24 @@
       "status": "alive"
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "FreeFlow",
+      "url": "https://freeflow.zachlatta.com/",
+      "desc": "Fast dictation on Mac, not a telephony recorder or professional-services workflow."
+    },
+    {
+      "name": "Handy",
+      "url": "https://handy.computer/",
+      "desc": "Excellent desktop dictation, but it cannot listen to calls on your existing number, update a CRM or match billable time."
+    },
+    {
+      "name": "VoiceInk",
+      "url": "https://tryvoiceink.com/",
+      "desc": "System-wide dictation only; the phone-call, CRM and time-matching parts do not exist."
+    }
+  ],
   "relatedSlugs": [
     "superwhisper",
     "wispr-flow",

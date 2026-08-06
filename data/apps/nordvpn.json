@@ -52,6 +52,80 @@
       "desc": "Widely used Bitwarden-compatible self-hosted password server implementation."
     }
   ],
+  "alternatives": [
+    {
+      "name": "AmneziaVPN",
+      "url": "https://amnezia.org/self-hosted",
+      "type": "open-source",
+      "repo": "https://github.com/amnezia-vpn/amnezia-client",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android"
+      ],
+      "desc": "Give it a VPS login and it builds the tunnel; you still own the server bill and blast radius.",
+      "stars": 14334,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "NetBird",
+      "url": "https://netbird.io/",
+      "type": "open-source",
+      "repo": "https://github.com/netbirdio/netbird",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "WireGuard remote access with a real dashboard and a free plan big enough for a household.",
+      "stars": 28100,
+      "lastCommit": "2026-08",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Tailscale Personal",
+      "url": "https://tailscale.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android"
+      ],
+      "desc": "A private mesh to your own machines, not a rented streaming passport.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "wg-easy",
+      "url": "https://wg-easy.github.io/wg-easy/latest/",
+      "type": "open-source",
+      "repo": "https://github.com/wg-easy/wg-easy",
+      "platforms": [
+        "web",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "WireGuard with a web panel and QR codes; the Linux server is still your problem.",
+      "stars": 25886,
+      "lastCommit": "2026-06",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "bitwarden",
     "deleteme",

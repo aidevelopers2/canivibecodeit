@@ -53,6 +53,24 @@
       "desc": "Mature open-source newsletter and mailing-list manager."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Buttondown Free",
+      "url": "https://buttondown.com/",
+      "desc": "The free plan stops at 100 subscribers and automations require a paid plan; that is not the described product."
+    },
+    {
+      "name": "Keila",
+      "url": "https://www.keila.io/",
+      "desc": "Excellent Markdown newsletters and forms, but marketing automations are still on the roadmap."
+    },
+    {
+      "name": "listmonk",
+      "url": "https://listmonk.app/",
+      "desc": "Markdown campaigns and archives are real; a no-code welcome sequence is not."
+    }
+  ],
   "relatedSlugs": [
     "substack",
     "mailerlite",

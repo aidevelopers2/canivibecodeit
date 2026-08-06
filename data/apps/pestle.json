@@ -51,6 +51,24 @@
       "desc": "Active open-source recipe manager and meal planner for households."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "KitchenOwl",
+      "url": "https://kitchenowl.org/",
+      "desc": "The feature list gets close, but guided timers are absent and the project remains Public Alpha."
+    },
+    {
+      "name": "Mealie",
+      "url": "https://mealie.io/",
+      "desc": "Household recipes and shopping are mature; Pestle’s guided cooking loop is not reproduced."
+    },
+    {
+      "name": "RecipeSage",
+      "url": "https://recipesage.com/",
+      "desc": "Portable recipes and meal plans, yes; guided cooking with integrated timers, no."
+    }
+  ],
   "relatedSlugs": [
     "paprika-recipe-manager",
     "home-assistant-cloud",

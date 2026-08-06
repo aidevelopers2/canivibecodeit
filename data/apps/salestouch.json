@@ -40,6 +40,8 @@
   "moatNotes": "LinkedIn access infrastructure + account safety",
   "whyPeopleStillPay": "They pay for the execution layer, not the dashboard. SalesTouch keeps authenticated LinkedIn sessions alive, turns private network data into agent tools, schedules actions within safety rules, and absorbs the maintenance when LinkedIn changes behavior. Rebuilding the screens is easy; operating the connection reliably without endangering an account is the product.",
   "priorArt": [],
+  "alternatives": [],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "zapier",
     "buffer",

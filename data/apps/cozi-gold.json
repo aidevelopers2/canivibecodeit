@@ -52,6 +52,47 @@
       "desc": "Active open-source recipe manager and meal planner for households."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Cozi Free",
+      "url": "https://www.cozi.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "The same shared calendar, lists, tasks, and recipes for $0; the ads and nicer controls stay upstairs.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Family Tools Basic",
+      "url": "https://familytoolsapp.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "Calendar, chores, and shared lists for twelve people; meal planning is exactly where the paywall starts.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Homechart",
+      "url": "https://homechart.app/",
+      "desc": "Looks free and self-hosted; shared households still require a paid subscription."
+    }
+  ],
   "relatedSlugs": [
     "paprika-recipe-manager",
     "home-assistant-cloud",

@@ -53,6 +53,60 @@
       "desc": "Popular open-source uptime monitoring dashboard with many check types."
     }
   ],
+  "alternatives": [
+    {
+      "name": "HyperDX",
+      "url": "https://www.hyperdx.io/",
+      "type": "open-source",
+      "repo": "https://github.com/hyperdxio/hyperdx",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "OpenTelemetry traces with logs and a query UI; sampling is still your call.",
+      "stars": 9798,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "OpenObserve",
+      "url": "https://openobserve.ai/",
+      "type": "open-source",
+      "repo": "https://github.com/openobserve/openobserve",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "OpenTelemetry traces with logs, metrics and SQL-like querying; sampling is still your call.",
+      "stars": 20578,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Uptrace",
+      "url": "https://uptrace.dev/",
+      "type": "open-source",
+      "repo": "https://github.com/uptrace/uptrace",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Trace analysis and service maps on your own databases; high-cardinality magic is less magical.",
+      "stars": 4300,
+      "lastCommit": "2026-06",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Uptime Kuma",
+      "url": "https://uptime.kuma.pet/",
+      "desc": "Endpoint checks are not trace ingestion or high-cardinality event analysis."
+    }
+  ],
   "relatedSlugs": [
     "sentry",
     "uptime"

@@ -51,6 +51,70 @@
       "desc": "Mature open-source time-tracking application with projects, reports, and exports."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Clockify Free",
+      "url": "https://clockify.me/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android",
+        "browser-extension"
+      ],
+      "desc": "Five users get timers and a private auto-tracker; reports stop at 31-day windows and CSV export is paid.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "ManicTime Free",
+      "url": "https://www.manictime.com/solutions/individual",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "One computer gets automatic app, site and document history, tags and timesheet export; cloud sync is the billable part.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Toggl Track Free",
+      "url": "https://toggl.com/track/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "ios",
+        "android",
+        "browser-extension"
+      ],
+      "desc": "Fast timers plus a private desktop activity trail you can promote into entries; formal approvals cost extra.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "ActivityWatch",
+      "url": "https://activitywatch.net/",
+      "desc": "It records the local history, but does not turn selected blocks into project time entries."
+    }
+  ],
   "relatedSlugs": [
     "toggl-track",
     "harvest",

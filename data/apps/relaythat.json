@@ -55,6 +55,41 @@
       "desc": "Self-hosted photo organization and search."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Desygner Free",
+      "url": "https://desygner.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "The rare free plan that actually includes brand assets, automatic resizing, and scheduling; less automatic than RelayThat, but not a bait tier.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Adobe Express Free",
+      "url": "https://www.adobe.com/express/",
+      "desc": "Good editor, wrong free tier: Resize and proper Brand Kits sit behind Premium, leaving the RelayThat job unfinished."
+    },
+    {
+      "name": "Canva Free",
+      "url": "https://www.canva.com/",
+      "desc": "Everyone suggests it, then discovers Magic Resize and the useful Brand Kit controls are paid, the two features this replacement needs."
+    },
+    {
+      "name": "VistaCreate Starter",
+      "url": "https://create.vista.com/",
+      "desc": "The free tier is generous for manual design, but its one-click Resizer is Pro, so cross-format automation fails the test."
+    }
+  ],
   "relatedSlugs": [
     "linearity-curve",
     "photopea-premium",

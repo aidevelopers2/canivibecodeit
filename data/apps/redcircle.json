@@ -57,6 +57,19 @@
       "desc": "Local speech-to-text engine suitable for private transcription."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Castopod",
+      "url": "https://castopod.org",
+      "desc": "Excellent independent hosting; RedCircle’s cross-promotion and advertising marketplace do not exist."
+    },
+    {
+      "name": "RedCircle Core",
+      "url": "https://redcircle.com/podcasters",
+      "desc": "The free host is genuine, but cross-promotion and arbitrary dynamic ad insertion are paid, the two jobs named here."
+    }
+  ],
   "relatedSlugs": [
     "castos",
     "headliner",

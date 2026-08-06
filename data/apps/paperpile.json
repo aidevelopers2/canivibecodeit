@@ -52,6 +52,28 @@
       "desc": "Mature open-source research and citation manager."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Zotero",
+      "url": "https://www.zotero.org",
+      "type": "open-source",
+      "repo": "https://github.com/zotero/zotero",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android",
+        "browser-extension"
+      ],
+      "desc": "The reference manager everyone keeps recommending because it actually earns it.",
+      "stars": 14890,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "readcube-papers",
     "zotero-storage",

@@ -52,6 +52,19 @@
       "status": "alive"
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Ahrefs Webmaster Tools",
+      "url": "https://ahrefs.com/webmaster-tools",
+      "desc": "Excellent on sites you can verify; the moment you ask about a competitor, the free lunch ends."
+    },
+    {
+      "name": "OpenSEO",
+      "url": "https://openseo.so/",
+      "desc": "A polished shell around DataForSEO, not a free web, keyword and backlink index; the data account starts with a fifty-dollar top-up."
+    }
+  ],
   "relatedSlugs": [
     "semrush",
     "surfer-seo",

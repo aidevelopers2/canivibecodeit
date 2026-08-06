@@ -45,12 +45,77 @@
     {
       "name": "Penpot",
       "url": "https://github.com/penpot/penpot",
-      "desc": "open-source design tool — the serious alternative"
+      "desc": "open-source design tool; the serious alternative"
     },
     {
       "name": "Excalidraw",
       "url": "https://github.com/excalidraw/excalidraw",
       "desc": "collaborative whiteboard, open source"
+    }
+  ],
+  "alternatives": [
+    {
+      "name": "Lunacy",
+      "url": "https://icons8.com/lunacy",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "A polished free desktop UI editor with components, prototypes, cloud documents, and native apps; collaboration limits are small-team sized.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Penpot",
+      "url": "https://penpot.app/",
+      "type": "open-source",
+      "repo": "https://github.com/penpot/penpot",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "The real open-source answer: browser UI design, components, tokens, prototypes, comments, and multiplayer without pretending a whiteboard is Figma.",
+      "stars": 58200,
+      "lastCommit": "2026-08",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Quant-UX",
+      "url": "https://www.quant-ux.com/",
+      "type": "open-source",
+      "repo": "https://github.com/KlausSchaefers/quant-ux",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Browser prototypes, collaboration, user tests, and analytics in one product; weaker than Figma for pixel-perfect design systems.",
+      "stars": 2700,
+      "lastCommit": "2026-05",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Excalidraw",
+      "url": "https://excalidraw.com/",
+      "desc": "Excellent collaborative sketching, but hand-drawn boxes are not a component library, vector UI editor, or production design system."
+    },
+    {
+      "name": "OpenPencil",
+      "url": "https://openpencil.dev/",
+      "desc": "Promising and properly open source, but its own README says it is under active development and not production-ready."
+    },
+    {
+      "name": "Pencil Project",
+      "url": "https://pencil.evolus.vn/",
+      "desc": "The classic recommendation is stale: the repository's last commit was January 2023, well outside the maintenance bar."
     }
   ],
   "relatedSlugs": [
@@ -60,7 +125,7 @@
   ],
   "pagePriority": 5,
   "verifiedOneShot": false,
-  "notes": "The credibility entry. Figma's value is multiplayer CRDTs, a decade of canvas engineering, and everyone else being on it. You can't one-shot a moat — and network effects are the strongest moat there is.",
+  "notes": "The credibility entry. Figma's value is multiplayer CRDTs, a decade of canvas engineering, and everyone else being on it. You can't one-shot a moat; and network effects are the strongest moat there is.",
   "prompt": "Build me a single-player vector canvas editor, a weekend sketch of Figma's core\ncanvas. Requirements:\n\n- A canvas editor with rectangles, ellipses, text, and frames; select, move,\n  and resize with handles; fill, stroke, and corner-radius controls in a right\n  panel.\n- A layers list with drag-reorder.\n- Export the current selection as SVG and PNG.\n- Local-first: documents persist to IndexedDB, with import and export as JSON.\n- Vanilla JS or Svelte on a single canvas element, pick the simpler to ship; no\n  backend at all.\n- No accounts, no telemetry, everything stays in the browser on my machine.\n- Out of scope: multiplayer, comments, components, auto-layout, and plugins.\n  Do not build any collaboration or sync layer.\n- README: state that this is not a Figma replacement, the moat is real-time\n  multiplayer plus the network of people already on it, and point to Penpot or\n  Excalidraw for serious single-player use.",
   "promptCurated": true
 }

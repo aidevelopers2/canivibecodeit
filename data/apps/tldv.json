@@ -50,6 +50,19 @@
       "status": "alive"
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Fathom",
+      "url": "https://www.fathom.ai/",
+      "desc": "Free recording, clips and basic summaries are real; CRM sync and advanced workflows are paid."
+    },
+    {
+      "name": "OpenWhispr",
+      "url": "https://openwhispr.com/",
+      "desc": "A capable private recorder and archive, but no clip workflow or CRM sync."
+    }
+  ],
   "relatedSlugs": [
     "krisp",
     "superwhisper",

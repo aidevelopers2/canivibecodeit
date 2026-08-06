@@ -55,6 +55,19 @@
       "desc": "Self-hosted social media management software."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Mixpost Lite",
+      "url": "https://mixpost.app/",
+      "desc": "Evergreen queues are present; turning one article into a finished campaign is still manual."
+    },
+    {
+      "name": "Postiz",
+      "url": "https://postiz.com/",
+      "desc": "RSS auto-posting and repeats exist, but not the blog-to-campaign generator or curated-content loop."
+    }
+  ],
   "relatedSlugs": [
     "repurpose-io",
     "taplio",

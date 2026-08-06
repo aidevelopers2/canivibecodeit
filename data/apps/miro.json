@@ -52,6 +52,86 @@
       "status": "alive"
     }
   ],
+  "alternatives": [
+    {
+      "name": "AFFiNE",
+      "url": "https://affine.pro/",
+      "type": "open-source",
+      "repo": "https://github.com/toeverything/AFFiNE",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "An integrated canvas, docs, databases, and planning workspace for teams willing to accept a younger product and real self-hosting chores.",
+      "stars": 71300,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "CryptPad",
+      "url": "https://cryptpad.fr/",
+      "type": "open-source",
+      "repo": "https://github.com/cryptpad/cryptpad",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Encrypted collaborative whiteboards with persistent folders, permissions, and sharing; fewer templates, far better data boundaries.",
+      "stars": 7825,
+      "lastCommit": "2026-07",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Excalidraw",
+      "url": "https://excalidraw.com/",
+      "type": "open-source",
+      "repo": "https://github.com/excalidraw/excalidraw",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "The best simple escape hatch for collaborative diagrams, workshops, and planning: fast, free, local-first, and pleasantly uninterested in becoming Salesforce.",
+      "stars": 124000,
+      "lastCommit": "2026-08",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "tldraw",
+      "url": "https://www.tldraw.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "A polished instant multiplayer canvas with sharing and no account requirement; lighter on facilitation, integrations, and admin.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "WBO",
+      "url": "https://wbo.ophir.dev/",
+      "type": "open-source",
+      "repo": "https://github.com/lovasoa/whitebophir",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A tiny, durable collaborative board with persistent rooms and a free hosted instance; useful precisely because it does not try to run the company.",
+      "stars": 2600,
+      "lastCommit": "2026-08",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "granola",
     "otter-ai",

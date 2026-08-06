@@ -51,6 +51,24 @@
       "desc": "Mature open-source scheduling platform and OAuth reference."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Notion Calendar",
+      "url": "https://www.notion.com/product/calendar",
+      "desc": "A good desktop calendar with Notion tasks, but not a real focus-planning system."
+    },
+    {
+      "name": "Routine Free",
+      "url": "https://routine.co/",
+      "desc": "The free shell looks right; time blocking and time boxing begin on the paid plan."
+    },
+    {
+      "name": "Super Productivity",
+      "url": "https://super-productivity.com/",
+      "desc": "Excellent tasks and focus mode, but calendar events are imported rather than managed as a full calendar client."
+    }
+  ],
   "relatedSlugs": [
     "vimcal",
     "book-like-a-boss",

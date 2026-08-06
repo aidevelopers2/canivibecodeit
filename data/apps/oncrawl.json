@@ -52,6 +52,32 @@
       "desc": "Open-source technical SEO auditing application."
     }
   ],
+  "alternatives": [
+    {
+      "name": "FreeCrawl",
+      "url": "https://freecrawl.net/",
+      "type": "open-source",
+      "repo": "https://github.com/kemalai/FreeCrawl-SEO-Tool",
+      "platforms": [
+        "windows",
+        "macos",
+        "linux",
+        "cli"
+      ],
+      "desc": "A local crawler that joins GSC and GA4 data, keeps projects and exports the lot; no cloud cluster, no invoice.",
+      "stars": 87,
+      "lastCommit": "2026-07",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "RustySEO",
+      "url": "https://www.rustyseo.com/",
+      "desc": "It has crawl, log, GSC and GA4 surfaces; its own v0.3.9 warning still says new, buggy and use at your own risk."
+    }
+  ],
   "relatedSlugs": [
     "screaming-frog-seo-spider",
     "sitebulb",

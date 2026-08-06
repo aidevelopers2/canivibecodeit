@@ -62,6 +62,24 @@
       "status": "alive"
     }
   ],
+  "alternatives": [
+    {
+      "name": "Short.io",
+      "url": "https://short.io/pricing/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "browser-extension"
+      ],
+      "desc": "Short links, analytics, QR codes, mobile routing and link-in-bio pages on a genuinely useful free plan.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "bitly",
     "linktree",

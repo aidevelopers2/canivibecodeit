@@ -51,6 +51,25 @@
       "desc": "Active open-source workspace with local-first documents and databases."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Memos",
+      "url": "https://www.usememos.com",
+      "type": "open-source",
+      "repo": "https://github.com/usememos/memos",
+      "platforms": [
+        "web",
+        "self-hosted",
+        "browser-extension"
+      ],
+      "desc": "Small Markdown cards, tags and public or private sharing, served from one Docker container.",
+      "stars": 62000,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "craft",
     "slite",

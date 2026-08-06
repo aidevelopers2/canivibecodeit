@@ -50,6 +50,82 @@
       "desc": "local transcription engine"
     }
   ],
+  "alternatives": [
+    {
+      "name": "Anarlog",
+      "url": "https://anarlog.so/",
+      "type": "open-source",
+      "repo": "https://github.com/fastrepl/anarlog",
+      "platforms": [
+        "macos"
+      ],
+      "desc": "Granola rearranged, literally: local recording, local transcript and your own model.",
+      "stars": 8961,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Meetily",
+      "url": "https://meetily.ai/",
+      "type": "open-source",
+      "repo": "https://github.com/Zackriya-Solutions/meetily",
+      "platforms": [
+        "macos",
+        "windows"
+      ],
+      "desc": "A local meeting recorder that writes the transcript and summary without inviting a bot or your legal department.",
+      "stars": 28357,
+      "lastCommit": "2026-06",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Meeting Transcriber",
+      "url": "https://meetingtranscriber.app/",
+      "type": "open-source",
+      "repo": "https://github.com/pasrom/meeting-transcriber",
+      "platforms": [
+        "macos"
+      ],
+      "desc": "A Mac menu-bar recorder that notices the call, separates speakers and writes a Markdown protocol; ninety-seven stars, fourteen hundred commits.",
+      "stars": 97,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Muesli",
+      "url": "https://muesli.works/",
+      "type": "open-source",
+      "repo": "https://github.com/Muesli-HQ/muesli",
+      "platforms": [
+        "macos"
+      ],
+      "desc": "Granola and Wispr Flow sharing one Mac menu-bar icon: local capture, speaker labels, templates and your choice of model.",
+      "stars": 890,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "OpenWhispr",
+      "url": "https://openwhispr.com/",
+      "type": "open-source",
+      "repo": "https://github.com/OpenWhispr/openwhispr",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "A cross-platform local notepad that records the call, separates speakers and keeps searchable notes.",
+      "stars": 5223,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "otter-ai",
     "fireflies-ai",
@@ -57,7 +133,7 @@
   ],
   "pagePriority": 5,
   "verifiedOneShot": false,
-  "notes": "The trend's poster child. Local audio capture, Whisper transcription, an LLM summary into a markdown folder — the core loop is one prompt.",
+  "notes": "The trend's poster child. Local audio capture, Whisper transcription, an LLM summary into a markdown folder; the core loop is one prompt.",
   "prompt": "Build me a local meeting-notes app like Granola for macOS. Requirements:\n\n- A menu bar app (Swift or an Electron tray app · pick the simpler to ship) with\n  Start/Stop Recording. Record system audio + mic (use whatever screen-audio capture\n  permission approach is standard).\n- On stop: transcribe the audio locally with whisper.cpp (medium model), or via\n  OpenAI/Groq Whisper API if a key is present in .env.\n- Send the transcript to an LLM (key from .env) with a prompt that produces: a\n  5-bullet summary, decisions made, and action items with owners.\n- Save to ~/MeetingNotes/YYYY-MM-DD-HHMM.md: summary at top, full transcript below\n  a divider. Keep the audio file next to it.\n- No accounts, no cloud storage, no telemetry. Everything stays on my machine except\n  the API calls, and work fully offline if whisper.cpp + a local model are available.\n- Include a README with the permissions I need to grant and how to install deps.",
   "promptCurated": true
 }

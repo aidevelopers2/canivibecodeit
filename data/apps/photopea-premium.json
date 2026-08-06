@@ -55,6 +55,44 @@
       "desc": "Self-hosted photo organization and search."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Affinity",
+      "url": "https://affinity.serif.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos",
+        "windows"
+      ],
+      "desc": "A free professional desktop suite for raster, vector, and layout work with PSD handling; no browser tab, no subscription.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Photopea Free",
+      "url": "https://www.photopea.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "The same editor, the same PSD machinery, and real exports; Premium mainly removes ads and adds convenience rather than unlocking the core.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "PhotoPrism",
+      "url": "https://www.photoprism.app/",
+      "desc": "Photo management is adjacent, not equivalent; there are no layers, vector paths, PSD editing, or production design tools here."
+    }
+  ],
   "relatedSlugs": [
     "luminar-neo",
     "capture-one",

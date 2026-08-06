@@ -51,6 +51,29 @@
       "desc": "Active open-source workspace with local-first documents and databases."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Atomic",
+      "url": "https://atomicapp.ai",
+      "type": "open-source",
+      "repo": "https://github.com/kenforthewin/atomic",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "self-hosted",
+        "browser-extension"
+      ],
+      "desc": "A second brain that actually connects notes for you; bring your own model and mind the newness.",
+      "stars": 1600,
+      "lastCommit": "2026-07",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "craft",
     "slite",

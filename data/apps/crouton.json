@@ -51,6 +51,24 @@
       "desc": "Active open-source recipe manager and meal planner for households."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "KitchenOwl",
+      "url": "https://kitchenowl.org/",
+      "desc": "Covers recipes, plans, and groceries but not the timer requirement, and still calls itself Public Alpha."
+    },
+    {
+      "name": "Mealie",
+      "url": "https://mealie.io/",
+      "desc": "A strong recipe and meal-planning server; cooking timers remain a requested feature, not a finished one."
+    },
+    {
+      "name": "RecipeSage",
+      "url": "https://recipesage.com/",
+      "desc": "Recipes, meal plans, and groceries are excellent; integrated cooking timers are not there."
+    }
+  ],
   "relatedSlugs": [
     "paprika-recipe-manager",
     "home-assistant-cloud",

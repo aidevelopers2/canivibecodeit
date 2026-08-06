@@ -52,6 +52,64 @@
       "desc": "Active open-source self-hosted photo and video management platform."
     }
   ],
+  "alternatives": [
+    {
+      "name": "darktable",
+      "url": "https://www.darktable.org/",
+      "type": "open-source",
+      "repo": "https://github.com/darktable-org/darktable",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "Reusable styles, presets, history, sidecars, and fully reversible local adjustments; it learns nothing about your taste, which is both flaw and feature.",
+      "stars": 12900,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "RapidRAW",
+      "url": "https://www.getrapidraw.com/",
+      "type": "open-source",
+      "repo": "https://github.com/CyberTimon/RapidRAW",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux",
+        "android"
+      ],
+      "desc": "Non-destructive presets, masks, batch edits, and local processing in a modern app; no personalized AI style model, no recurring bill.",
+      "stars": 9200,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "RawTherapee",
+      "url": "https://www.rawtherapee.com/",
+      "type": "open-source",
+      "repo": "https://github.com/RawTherapee/RawTherapee",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "Processing profiles and sidecars make repeatable RAW adjustments completely reversible; automation is deterministic, not psychic.",
+      "stars": 4100,
+      "lastCommit": "2026-07",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Immich",
+      "url": "https://immich.app/",
+      "desc": "It preserves originals and metadata, but it is a photo backup system, not a reversible preset-and-adjustment engine."
+    }
+  ],
   "relatedSlugs": [
     "adobe-lightroom",
     "capture-one",

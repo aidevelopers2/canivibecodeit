@@ -53,6 +53,49 @@
       "desc": "Open-source visual website builder designed around web standards."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Mautic",
+      "url": "https://mautic.org",
+      "type": "open-source",
+      "repo": "https://github.com/mautic/mautic",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A focused landing-page stack with forms, analytics and user-controlled A/B tests; you operate every moving part.",
+      "stars": 9800,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "systeme.io",
+      "url": "https://systeme.io",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Hosted pages, forms and one A/B test free; enough for a small experiment, not an optimization department.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "GrapesJS",
+      "url": "https://grapesjs.com",
+      "desc": "The editor framework is free; the experiment runner, analytics and hosting are imaginary."
+    },
+    {
+      "name": "Webstudio",
+      "url": "https://webstudio.is",
+      "desc": "A strong page builder with no built-in free experimentation product."
+    }
+  ],
   "relatedSlugs": [
     "duda",
     "tilda",

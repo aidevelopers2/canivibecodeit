@@ -57,6 +57,24 @@
       "desc": "Open-source publishing and membership platform."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Ghost",
+      "url": "https://ghost.org",
+      "desc": "Paid posts and memberships do not add up to tips, commissions, crowdfunding and a shop."
+    },
+    {
+      "name": "Liberapay",
+      "url": "https://liberapay.com",
+      "desc": "Free and honest, but limited to recurring unconditional donations: no shop, posts, commissions, crowdfunding or real one-off tips."
+    },
+    {
+      "name": "Medusa",
+      "url": "https://medusajs.com",
+      "desc": "It supplies commerce plumbing for developers, not a finished creator page with support and commission workflows."
+    }
+  ],
   "relatedSlugs": [
     "buy-me-a-coffee",
     "patreon",

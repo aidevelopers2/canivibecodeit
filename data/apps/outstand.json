@@ -54,6 +54,31 @@
       "status": "alive"
     }
   ],
+  "alternatives": [
+    {
+      "name": "Postiz",
+      "url": "https://postiz.com/",
+      "type": "open-source",
+      "repo": "https://github.com/gitroomhq/postiz-app",
+      "platforms": [
+        "web",
+        "self-hosted",
+        "cli"
+      ],
+      "desc": "One API for thirty-odd social networks; the OAuth paperwork is now your hobby.",
+      "stars": 34300,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Mixpost",
+      "url": "https://mixpost.app/",
+      "desc": "The free Lite edition covers three networks and a dashboard, not an 11-network posting API."
+    }
+  ],
   "relatedSlugs": [
     "post-bridge",
     "postiz",

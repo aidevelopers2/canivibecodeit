@@ -52,6 +52,25 @@
       "desc": "Mature open-source grammar and style checker with desktop and server components."
     }
   ],
+  "alternatives": [
+    {
+      "name": "WritingTool",
+      "url": "https://writingtool.org/",
+      "type": "open-source",
+      "repo": "https://github.com/writingtool-org/writingtool",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "A LibreOffice extension with long-document checks, style statistics, profiles, and local AI; installing Java is the cover charge.",
+      "stars": 65,
+      "lastCommit": "2026-07",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "sudowrite",
     "languagetool",

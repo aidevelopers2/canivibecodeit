@@ -55,6 +55,58 @@
       "desc": "Open-source interface and workflow layer for local or hosted language models."
     }
   ],
+  "alternatives": [
+    {
+      "name": "AnythingLLM",
+      "url": "https://anythingllm.com/",
+      "type": "open-source",
+      "repo": "https://github.com/Mintplex-Labs/anything-llm",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "A local-first AI desk with reusable agents, documents, memory, and workflows; less campaign theatre, more settings.",
+      "stars": 64416,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Open WebUI",
+      "url": "https://openwebui.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A self-hosted AI workbench with saved prompts, knowledge, web search, and multi-model comparison; powerful, not especially house-trained.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Witsy",
+      "url": "https://witsyai.com/",
+      "type": "open-source",
+      "repo": "https://github.com/Kochava-Studios/witsy",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "System-wide selected-text commands, reusable experts, a scratchpad, and document context; bring the model and skip the subscription.",
+      "stars": 2000,
+      "lastCommit": "2026-04",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "hypotenuse-ai",
     "scalenut",

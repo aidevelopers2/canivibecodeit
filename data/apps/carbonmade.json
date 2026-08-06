@@ -56,6 +56,76 @@
       "desc": "Open-source web-builder framework."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Plasmic",
+      "url": "https://www.plasmic.app",
+      "type": "open-source",
+      "repo": "https://github.com/plasmicapp/plasmic",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A hosted visual portfolio with full layout freedom and a custom domain free; the Plasmic badge stays.",
+      "stars": 6900,
+      "lastCommit": "2026-08",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Publii",
+      "url": "https://getpublii.com",
+      "type": "open-source",
+      "repo": "https://github.com/GetPublii/Publii",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "A desktop portfolio publisher that produces a fast static site; hosting is your problem, server maintenance is not.",
+      "stars": 7300,
+      "lastCommit": "2026-07",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Silex",
+      "url": "https://www.silex.me",
+      "type": "open-source",
+      "repo": "https://github.com/silexlabs/Silex",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A free visual builder that exports ordinary HTML; portfolio templates are less polished but your files are yours.",
+      "stars": 2919,
+      "lastCommit": "2026-08",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Webstudio",
+      "url": "https://webstudio.is",
+      "type": "open-source",
+      "repo": "https://github.com/webstudio-is/webstudio",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Open-source visual design with real CSS control; self-hosting replaces Carbonmade's calm with operations.",
+      "stars": 8800,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "GrapesJS",
+      "url": "https://grapesjs.com",
+      "desc": "Everyone recommends it because the demo looks finished; the repo is an embeddable framework you must turn into a product."
+    }
+  ],
   "relatedSlugs": [
     "cargo",
     "pixieset",

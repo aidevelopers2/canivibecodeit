@@ -51,6 +51,27 @@
       "status": "alive"
     }
   ],
+  "alternatives": [
+    {
+      "name": "Presenton",
+      "url": "https://presenton.ai/",
+      "type": "open-source",
+      "repo": "https://github.com/presenton/presenton",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "Generate a deck from a prompt or document, edit it visually, and export editable PPTX or PDF; bring an API key or a local model instead of another subscription.",
+      "stars": 9393,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "jasper",
     "quillbot",

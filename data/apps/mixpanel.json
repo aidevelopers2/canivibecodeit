@@ -53,6 +53,57 @@
       "desc": "Popular open-source privacy-focused web analytics platform."
     }
   ],
+  "alternatives": [
+    {
+      "name": "OpenPanel",
+      "url": "https://openpanel.dev",
+      "type": "open-source",
+      "repo": "https://github.com/Openpanel-dev/openpanel",
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "The useful product-analytics core, plus a ClickHouse stack you now get to know personally.",
+      "stars": 6280,
+      "lastCommit": "2026-07",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "PostHog",
+      "url": "https://posthog.com",
+      "type": "open-source",
+      "repo": "https://github.com/PostHog/posthog",
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "Funnels, cohorts and retention with a free million-event runway and considerably more machinery.",
+      "stars": 37500,
+      "lastCommit": "2026-08",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Umami",
+      "url": "https://umami.is",
+      "type": "open-source",
+      "repo": "https://github.com/umami-software/umami",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Funnels, cohorts and retention locally, without the enterprise taxonomy workshop.",
+      "stars": 38073,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "matomo-cloud",
     "posthog",

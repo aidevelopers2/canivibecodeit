@@ -50,6 +50,44 @@
       "status": "alive"
     }
   ],
+  "alternatives": [
+    {
+      "name": "YouCanBookMe Free",
+      "url": "https://youcanbook.me/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "browser-extension"
+      ],
+      "desc": "One booking page, but it keeps forms, payments, confirmations, polls and the calendar-overlay trick.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "zcal Free",
+      "url": "https://zcal.co/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "The booker sees calendar conflicts on the page, and free also buys unlimited links, forms, reminders and polls.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Cal.com Free",
+      "url": "https://cal.com/",
+      "desc": "Excellent free scheduling, but no equivalent overlay-calendar booking experience."
+    }
+  ],
   "relatedSlugs": [
     "raycast-pro",
     "notion",

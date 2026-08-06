@@ -50,6 +50,29 @@
       "desc": "Mature open-source research and citation manager."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Inciteful",
+      "url": "https://incitefulmed.com/academic/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Paper, author and citation graphs from a seed, free and refreshingly unmonetized.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Open Knowledge Maps",
+      "url": "https://openknowledgemaps.org",
+      "desc": "A useful topic-cluster map, not a paper, author and citation graph."
+    }
+  ],
   "relatedSlugs": [
     "connected-papers",
     "genei",

@@ -49,6 +49,30 @@
       "status": "alive"
     }
   ],
+  "alternatives": [
+    {
+      "name": "Whatomate",
+      "url": "https://whatomate.io/",
+      "type": "open-source",
+      "repo": "https://github.com/shridarpatil/whatomate",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "The missing inbox, flow builder and API for Meta's Cloud API; Meta still sends the bill.",
+      "stars": 1400,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "WAHA",
+      "url": "https://waha.devlike.pro/",
+      "desc": "A polished unofficial WhatsApp Web bridge, not Meta's supported business API."
+    }
+  ],
   "relatedSlugs": [
     "n8n-cloud",
     "zapier",

@@ -59,6 +59,19 @@
       "desc": "Open-source newsletter tool with campaigns, segments and forms."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "MailPoet Starter",
+      "url": "https://www.mailpoet.com/",
+      "desc": "Basic WooCommerce email exists, but store attribution, popups, Shopify and custom automations do not clear the free tier."
+    },
+    {
+      "name": "Mautic",
+      "url": "https://mautic.org/",
+      "desc": "A capable automation engine, not an install-in-your-store product with native attribution and popups."
+    }
+  ],
   "relatedSlugs": [
     "klaviyo",
     "omnisend",

@@ -55,6 +55,40 @@
       "desc": "Source-available workflow automation engine and connector reference."
     }
   ],
+  "alternatives": [
+    {
+      "name": "EasySpider",
+      "url": "https://github.com/NaiboWang/EasySpider",
+      "type": "open-source",
+      "repo": "https://github.com/NaiboWang/EasySpider",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "Point-and-click extraction and pagination on the desktop; cloud workers are what disappear.",
+      "stars": 44125,
+      "lastCommit": "2026-07",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Maxun",
+      "url": "https://maxun.dev/",
+      "type": "open-source",
+      "repo": "https://github.com/getmaxun/maxun",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "No-code scraping, scheduled runs, and change monitoring, provided you bring the server.",
+      "stars": 17100,
+      "lastCommit": "2026-07",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "robomotion",
     "parabola",

@@ -56,6 +56,64 @@
       "desc": "Open-source terminal coding agent with repository-aware edits."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Kilo Code",
+      "url": "https://kilo.ai/",
+      "type": "open-source",
+      "repo": "https://github.com/kilo-org/kilocode",
+      "platforms": [
+        "browser-extension",
+        "cli",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "Generation, tests and agentic edits are covered; review policy is less elaborate.",
+      "stars": 26735,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Kodus",
+      "url": "https://kodus.io/",
+      "type": "open-source",
+      "repo": "https://github.com/kodustech/kodus-ai",
+      "platforms": [
+        "web",
+        "self-hosted",
+        "cli"
+      ],
+      "desc": "Serious self-hosted AI review; it brings two databases and a message broker to the meeting.",
+      "stars": 1300,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "PR-Agent",
+      "url": "https://www.pr-agent.ai/",
+      "type": "open-source",
+      "repo": "https://github.com/The-PR-Agent/pr-agent",
+      "platforms": [
+        "cli",
+        "self-hosted"
+      ],
+      "desc": "A pull-request reviewer with blunt slash commands; you still pay the model.",
+      "stars": 12400,
+      "lastCommit": "2026-07",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Continue",
+      "url": "https://continue.dev/",
+      "desc": "Acquired by Cursor; the repo is read-only and 2.0.0 is the last release."
+    }
+  ],
   "relatedSlugs": [
     "amazon-q-developer",
     "jetbrains-ai-pro",

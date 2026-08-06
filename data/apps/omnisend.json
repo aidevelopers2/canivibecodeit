@@ -57,6 +57,19 @@
       "desc": "Open-source marketing automation platform."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Dittofeed",
+      "url": "https://www.dittofeed.com/",
+      "desc": "Email, SMS and push journeys are real; forms, ecommerce attribution and store reporting are not."
+    },
+    {
+      "name": "MailPoet Starter",
+      "url": "https://www.mailpoet.com/",
+      "desc": "The free WordPress plan has basic store email, but custom Woo automations and serious reporting are paid."
+    }
+  ],
   "relatedSlugs": [
     "substack",
     "buttondown",

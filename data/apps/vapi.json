@@ -60,6 +60,30 @@
       "status": "alive"
     }
   ],
+  "alternatives": [
+    {
+      "name": "Dograh",
+      "url": "https://www.dograh.com/",
+      "type": "open-source",
+      "repo": "https://github.com/dograh-hq/dograh",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A Vapi-shaped workflow builder you can Docker-compose; phone and model meters remain.",
+      "stars": 5100,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Pipecat",
+      "url": "https://www.pipecat.ai/",
+      "desc": "A well-maintained framework for building voice agents, not an install-and-use voice-agent product."
+    }
+  ],
   "relatedSlugs": [
     "elevenlabs",
     "replit",

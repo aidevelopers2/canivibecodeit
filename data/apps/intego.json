@@ -56,6 +56,19 @@
       "desc": "Encrypted backup client for local and cloud targets."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Kopia",
+      "url": "https://kopia.io/",
+      "desc": "Excellent encrypted backup; it does nothing for malware, firewalling, cleanup, or parental controls."
+    },
+    {
+      "name": "Malwarebytes Free",
+      "url": "https://www.malwarebytes.com/mwb-download",
+      "desc": "The free scanner cleans malware on demand; firewall, continuous protection, backup, cleanup, and parental controls are absent."
+    }
+  ],
   "relatedSlugs": [
     "aura",
     "incogni",

@@ -56,6 +56,19 @@
       "desc": "Source-available workflow automation engine and connector reference."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Activepieces Community Edition",
+      "url": "https://www.activepieces.com/open-source",
+      "desc": "The workflows are free; SSO, custom roles, audit logs, and enterprise secrets are not."
+    },
+    {
+      "name": "n8n Community Edition",
+      "url": "https://n8n.io/",
+      "desc": "The engine is free; project roles, SSO, audit, and external secrets sit in paid editions."
+    }
+  ],
   "relatedSlugs": [
     "gumloop",
     "lindy",

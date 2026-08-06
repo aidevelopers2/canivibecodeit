@@ -56,6 +56,24 @@
       "desc": "Open-source web-builder framework."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "GrapesJS",
+      "url": "https://grapesjs.com",
+      "desc": "A visual-editor framework with none of the photographer business workflow Pixpa sells."
+    },
+    {
+      "name": "Publii",
+      "url": "https://getpublii.com",
+      "desc": "A good portfolio and gallery publisher, but no proofing, client delivery workflow or native ecommerce."
+    },
+    {
+      "name": "Webstudio",
+      "url": "https://webstudio.is",
+      "desc": "The website is covered; galleries, proofing, client delivery and store operations are not."
+    }
+  ],
   "relatedSlugs": [
     "format",
     "carbonmade",

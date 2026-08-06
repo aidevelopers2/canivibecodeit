@@ -53,6 +53,44 @@
       "desc": "Active community continuation of the fast local Piper text-to-speech engine."
     }
   ],
+  "alternatives": [
+    {
+      "name": "TTS WebUI",
+      "url": "https://ttswebui.com/",
+      "type": "open-source",
+      "repo": "https://github.com/rsxdalv/TTS-WebUI",
+      "platforms": [
+        "windows"
+      ],
+      "desc": "Dozens of local TTS and cloning engines behind one Windows installer and a saved-audio library.",
+      "stars": 3200,
+      "lastCommit": "2026-03",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Voicebox",
+      "url": "https://voicebox.sh/",
+      "type": "open-source",
+      "repo": "https://github.com/jamiepine/voicebox",
+      "platforms": [
+        "macos",
+        "windows"
+      ],
+      "desc": "A local voice studio with cloning, reusable profiles, long-form generation and a multi-track editor.",
+      "stars": 49500,
+      "lastCommit": "2026-06",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "GPT-SoVITS",
+      "url": "https://github.com/RVC-Boss/GPT-SoVITS",
+      "desc": "Excellent cloning and generation, but it is a model workbench rather than an organised voiceover-project app."
+    }
+  ],
   "relatedSlugs": [
     "speechify",
     "synthesia",

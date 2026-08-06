@@ -52,6 +52,45 @@
       "desc": "Active open-source self-hosting platform for applications, databases, and services."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Coolify",
+      "url": "https://coolify.io/",
+      "type": "open-source",
+      "repo": "https://github.com/coollabsio/coolify",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Deploy a container from Git, get TLS, logs, health checks, databases, and scheduled backups on your own server.",
+      "stars": 57000,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Dokploy",
+      "url": "https://dokploy.com/",
+      "type": "open-source",
+      "repo": "https://github.com/Dokploy/dokploy",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A small self-hosted app platform with container deploys, TLS, logs, monitoring, and database backups.",
+      "stars": 36000,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Dokku",
+      "url": "https://dokku.com/",
+      "desc": "Excellent at deploys and routing, but backups and a usable operations console are add-ons you assemble yourself."
+    }
+  ],
   "relatedSlugs": [
     "vercel",
     "railway",

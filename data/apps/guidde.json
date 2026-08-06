@@ -53,6 +53,19 @@
       "desc": "Open-source screen recording and sharing product with modern desktop architecture."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Cap",
+      "url": "https://cap.so",
+      "desc": "Records a screen video; it does not turn clicks into a narrated step guide."
+    },
+    {
+      "name": "Guideless",
+      "url": "https://guideless.ai",
+      "desc": "Three narrated guides and no MP4 export; that is a demo of the product, not a replacement."
+    }
+  ],
   "relatedSlugs": [
     "screen-studio",
     "cleanshot-x",

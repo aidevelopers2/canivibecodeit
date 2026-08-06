@@ -53,6 +53,24 @@
       "desc": "Mature open-source time-tracking application with projects, reports, and exports."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "ActivityWatch",
+      "url": "https://activitywatch.net/",
+      "desc": "Excellent private app classification, but it has no integrated focus-session loop."
+    },
+    {
+      "name": "ManicTime Free",
+      "url": "https://www.manictime.com/solutions/individual",
+      "desc": "Automatic local classification is exact; focused sessions are simply not part of the product."
+    },
+    {
+      "name": "Super Productivity",
+      "url": "https://super-productivity.com/",
+      "desc": "Focus sessions are excellent, but it does not passively classify every application you use."
+    }
+  ],
   "relatedSlugs": [
     "toggl-track",
     "harvest",

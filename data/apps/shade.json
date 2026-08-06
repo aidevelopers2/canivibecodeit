@@ -57,6 +57,30 @@
       "status": "alive"
     }
   ],
+  "alternatives": [
+    {
+      "name": "ResourceSpace",
+      "url": "https://www.resourcespace.com",
+      "type": "open-source",
+      "repo": "https://github.com/resourcespace/resourcespace",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Faces, sentence search and local transcripts in an old-school DAM; installation has not discovered joy.",
+      "stars": 58,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Immich",
+      "url": "https://immich.app",
+      "desc": "Faces and visual sentence search work; spoken words remain invisible, which is one of Shade’s headline jobs."
+    }
+  ],
   "relatedSlugs": [
     "iconik",
     "frame-io",

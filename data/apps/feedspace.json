@@ -41,6 +41,29 @@
   "moatNotes": "the in-house fetch engine and the curation rules are the two automated ends · the collection form between them is the easy part",
   "whyPeopleStillPay": "Because the hand-built version decays. A wall you assemble yourself is accurate the week you build it and stale three months later, the newest review sitting in an inbox nobody pasted from. Here neither end stays manual: reviews arrive on their own, rules decide what reaches the widget. Rebuilding it means owning the fetching, not just the form.",
   "priorArt": [],
+  "alternatives": [
+    {
+      "name": "Shosay",
+      "url": "https://shosay.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Unlimited text, video and audio proof, imports, walls and 25-plus widgets; the bill is zero, the tiny Powered by pill is not.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Famewall",
+      "url": "https://famewall.io/",
+      "desc": "The free plan stops at 10 testimonials and one video; useful demo, not a permanent replacement."
+    }
+  ],
   "relatedSlugs": [
     "testimonial-to",
     "showtrust",

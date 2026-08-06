@@ -57,6 +57,14 @@
       "desc": "Widely used local Stable Diffusion interface and extension ecosystem."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Civitai",
+      "url": "https://civitai.com/",
+      "desc": "The familiar model-sharing answer; its hosted generator is credit-like, and the open site code omits the actual generation and training stack."
+    }
+  ],
   "relatedSlugs": [
     "imagineart",
     "dezgo",

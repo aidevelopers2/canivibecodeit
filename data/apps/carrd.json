@@ -48,6 +48,88 @@
       "status": "alive"
     }
   ],
+  "alternatives": [
+    {
+      "name": "Mobirise AI",
+      "url": "https://ai.mobirise.com",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Three generated and exportable sites a month for free; the templates retain a faint Bootstrap aftertaste.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Plasmic",
+      "url": "https://www.plasmic.app",
+      "type": "open-source",
+      "repo": "https://github.com/plasmicapp/plasmic",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A custom-domain visual site on the free plan; comically overpowered for a one-page profile and branded accordingly.",
+      "stars": 6900,
+      "lastCommit": "2026-08",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Silex",
+      "url": "https://www.silex.me",
+      "type": "open-source",
+      "repo": "https://github.com/silexlabs/Silex",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A visual one-page builder that exports plain HTML and costs nothing; publishing begins with a GitLab login.",
+      "stars": 2919,
+      "lastCommit": "2026-08",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "systeme.io",
+      "url": "https://systeme.io",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Three hosted funnels and a custom domain free; perfect when the one-page site is secretly collecting leads.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Webstudio",
+      "url": "https://webstudio.is",
+      "type": "open-source",
+      "repo": "https://github.com/webstudio-is/webstudio",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Far more CSS control than Carrd and far more self-hosting responsibility.",
+      "stars": 8800,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "GrapesJS",
+      "url": "https://grapesjs.com",
+      "desc": "A library for creating builders, not the one-page builder a normal person came to install."
+    }
+  ],
   "relatedSlugs": [
     "airtable",
     "coda",
@@ -55,7 +137,7 @@
   ],
   "pagePriority": 5,
   "verifiedOneShot": false,
-  "notes": "To be fair, Carrd is famously cheap. But you have Claude Code — you don't need a site builder at all.",
+  "notes": "To be fair, Carrd is famously cheap. But you have Claude Code; you don't need a site builder at all.",
   "prompt": "Build me a one-page personal site to replace Carrd. Requirements:\n\n- One elegant single-page site from a content.json file: name, headline, short\n  about paragraph, avatar, social links, and an optional list of projects with\n  title + description + URL. Editing the JSON is the CMS.\n- Design it properly: strong typographic hierarchy, generous whitespace, one\n  accent color set via a CSS variable, dark mode via prefers-color-scheme,\n  tasteful hover states. It should look designed, not templated.\n- A working contact form with no third-party service: POST to a tiny endpoint\n  that appends to messages.log and returns an inline thank-you. Honeypot field\n  for bots.\n- Perfect Lighthouse scores: inline the CSS, no frameworks, no webfonts unless\n  self-hosted, proper OG tags + generated OG image.\n- Static HTML + one small server file for the form. Deploy instructions for\n  any VPS or static host + serverless form alternative.",
   "promptCurated": true
 }

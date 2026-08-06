@@ -51,6 +51,82 @@
       "desc": "Local speech-to-text engine suitable for private transcription."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Anarlog",
+      "url": "https://anarlog.so/",
+      "type": "open-source",
+      "repo": "https://github.com/fastrepl/anarlog",
+      "platforms": [
+        "macos"
+      ],
+      "desc": "A Mac meeting notepad with local transcripts, local files and bring-your-own summaries.",
+      "stars": 8961,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Meetily",
+      "url": "https://meetily.ai/",
+      "type": "open-source",
+      "repo": "https://github.com/Zackriya-Solutions/meetily",
+      "platforms": [
+        "macos",
+        "windows"
+      ],
+      "desc": "A local recorder and summarizer for Mac and Windows; no account, no meeting bot.",
+      "stars": 28357,
+      "lastCommit": "2026-06",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Meeting Transcriber",
+      "url": "https://meetingtranscriber.app/",
+      "type": "open-source",
+      "repo": "https://github.com/pasrom/meeting-transcriber",
+      "platforms": [
+        "macos"
+      ],
+      "desc": "A Mac menu-bar app that captures the call and emits decisions, tasks and a transcript as Markdown.",
+      "stars": 97,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Muesli",
+      "url": "https://muesli.works/",
+      "type": "open-source",
+      "repo": "https://github.com/Muesli-HQ/muesli",
+      "platforms": [
+        "macos"
+      ],
+      "desc": "Local mic-and-system capture, live transcription, summaries and action items in a signed Mac app.",
+      "stars": 890,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "OpenWhispr",
+      "url": "https://openwhispr.com/",
+      "type": "open-source",
+      "repo": "https://github.com/OpenWhispr/openwhispr",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "Bot-free meeting capture, speaker labels and searchable notes in one cross-platform installer.",
+      "stars": 5223,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "bluedot",
     "notta",

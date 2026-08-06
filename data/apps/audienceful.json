@@ -57,6 +57,37 @@
       "desc": "Open-source marketing automation platform."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Kit Free",
+      "url": "https://kit.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Publishing, forms, segmentation and one sequence for up to 10,000 subscribers; Kit keeps one recommendation slot as rent.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Sender Free",
+      "url": "https://www.sender.net/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Forms, segments, campaigns and automations in a generous hosted tier; the public publication layer is basic.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "feedblitz",
     "sendfox",

@@ -51,6 +51,24 @@
       "desc": "Open-source desktop mail client and useful IMAP prior art."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "BlueMail Personal",
+      "url": "https://bluemail.me/",
+      "desc": "Capped AI drafting is not tracking, scheduling, notes and contact management."
+    },
+    {
+      "name": "Mailspring",
+      "url": "https://www.getmailspring.com/",
+      "desc": "Tracking and scheduling are Pro, while notes and contact enrichment are not a replacement."
+    },
+    {
+      "name": "Spark Free",
+      "url": "https://sparkmailapp.com/",
+      "desc": "Scheduling is free, but read status and AI are paid and contact notes never become a CRM."
+    }
+  ],
   "relatedSlugs": [
     "boomerang-for-gmail",
     "superhuman",

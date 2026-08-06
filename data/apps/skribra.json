@@ -41,6 +41,19 @@
   "moatNotes": "platform approvals/data access/ongoing maintenance",
   "whyPeopleStillPay": "Two reasons, and neither is that the writing is difficult. First, the integrations aren't a coding problem · publishing to Shopify or Webflow means shipping an app through their review, and you can write perfect code and still be three weeks from a published article. Second, the DIY version has its own bill: every article is a stack of paid LLM calls and useful keyword data is a paid API, so this isn't a weekend versus a subscription, it's a weekend plus a metered cost versus a subscription. What's left after that is maintenance nobody enjoys owning · deciding what to write next, not writing the same thing twice, and going back to old posts when the numbers move.",
   "priorArt": [],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "BlogPilot",
+      "url": "https://github.com/IamRamgarhia/BlogPilot-Open-Source-AI-SEO-Content-Studio",
+      "desc": "Writes SEO articles and exports to CMS-shaped formats; nine stars, fifteen commits and no proven keep-it-ranking loop."
+    },
+    {
+      "name": "DispatchSEO",
+      "url": "https://dispatchseo.com/",
+      "desc": "Closest thing found: keyword research, articles, pull-request publishing and rank tracking, followed by a seven-day trial instead of a free plan."
+    }
+  ],
   "relatedSlugs": [
     "surfer-seo",
     "frase",

@@ -51,6 +51,14 @@
       "desc": "Mature open-source grammar and style checker with desktop and server components."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Stik",
+      "url": "https://www.stik.ink/",
+      "desc": "Fast capture is real, but Drafts-style reusable actions and destination workflows are not; this replaces the inbox, not Drafts Pro."
+    }
+  ],
   "relatedSlugs": [
     "sudowrite",
     "prowritingaid",

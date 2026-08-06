@@ -53,6 +53,56 @@
       "desc": "Active open-source social media scheduling platform."
     }
   ],
+  "alternatives": [
+    {
+      "name": "BrightBean Studio",
+      "url": "https://brightbean.xyz/studio/",
+      "type": "open-source",
+      "repo": "https://github.com/brightbeanxyz/brightbean-studio",
+      "platforms": [
+        "web",
+        "self-hosted",
+        "cli"
+      ],
+      "desc": "Reusable schedules and broad publishing with analytics; evergreen categories are less explicit, but the loop works.",
+      "stars": 2100,
+      "lastCommit": "2026-07",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Mixpost Lite",
+      "url": "https://mixpost.app/",
+      "type": "open-source",
+      "repo": "https://github.com/inovector/mixpost",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Queues are the product: fill categories, set times and let old posts circulate again.",
+      "stars": 3500,
+      "lastCommit": "2026-03",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Postiz",
+      "url": "https://postiz.com/",
+      "type": "open-source",
+      "repo": "https://github.com/gitroomhq/postiz-app",
+      "platforms": [
+        "web",
+        "self-hosted",
+        "cli"
+      ],
+      "desc": "Recurring posts and multi-network scheduling replace the evergreen loop; self-hosting is the new category.",
+      "stars": 34300,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "hootsuite",
     "metricool",

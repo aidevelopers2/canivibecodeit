@@ -50,6 +50,54 @@
       "status": "alive"
     }
   ],
+  "alternatives": [
+    {
+      "name": "Activepieces Community Edition",
+      "url": "https://www.activepieces.com/open-source",
+      "type": "open-source",
+      "repo": "https://github.com/activepieces/activepieces",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Zapier with a Docker bill and no task meter.",
+      "stars": 23604,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Automatisch",
+      "url": "https://automatisch.io/",
+      "type": "open-source",
+      "repo": "https://github.com/automatisch/automatisch",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A smaller AGPL Zapier clone for ordinary trigger-action flows.",
+      "stars": 13923,
+      "lastCommit": "2026-01",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "n8n Community Edition",
+      "url": "https://n8n.io/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "The standard self-hosted answer: broad, durable, and fair-code rather than open source.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "make",
     "ifttt",

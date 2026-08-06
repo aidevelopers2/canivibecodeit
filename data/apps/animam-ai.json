@@ -62,6 +62,24 @@
       "status": "open-source"
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Chatwoot",
+      "url": "https://www.chatwoot.com/",
+      "desc": "A live-chat and support inbox, not a site-trained agent that quotes and books on its own."
+    },
+    {
+      "name": "Onyx",
+      "url": "https://onyx.app/",
+      "desc": "Excellent internal RAG chat; it has no public lead, quote, or booking product hiding in the settings."
+    },
+    {
+      "name": "Typebot Community Edition",
+      "url": "https://typebot.io/",
+      "desc": "A polished conversation-flow builder, but site RAG, quoting, and booking are integrations you still have to assemble."
+    }
+  ],
   "relatedSlugs": [],
   "pagePriority": 3,
   "verifiedOneShot": false,

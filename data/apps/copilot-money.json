@@ -50,6 +50,8 @@
       "status": "alive"
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "fathom-hq",
     "ahrefs",

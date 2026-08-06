@@ -1,0 +1,220 @@
+---
+/* Dedicated "X alternatives" page — exists only when an app has 3+ curated
+   free/OSS alternatives (thin pages hurt the SEO this page exists for).
+   Split of intent vs /<slug>: that page answers "can I vibecode it", this one
+   answers "what should I use instead". Keep titles and H1s distinct. */
+import Base from '../../layouts/Base.astro';
+import AltCard from '../../components/AltCard.astro';
+import DigestCard from '../../components/DigestCard.astro';
+import VerdictBadge from '../../components/VerdictBadge.astro';
+import {
+  getApp,
+  appsWithAlternativesPage,
+  sortedAlternatives,
+  yearlySaving,
+  ALTERNATIVES_PAGE_MIN,
+  SELF_HOST_LABELS,
+  CATEGORIES,
+  VERDICTS,
+} from '../../lib/apps.js';
+
+const { slug } = Astro.params;
+const app = getApp(slug);
+if (!app) return new Response(null, { status: 404 });
+
+const alternatives = sortedAlternatives(app);
+if (alternatives.length < ALTERNATIVES_PAGE_MIN) return new Response(null, { status: 404 });
+
+const cat = CATEGORIES[app.category];
+const v = VERDICTS[app.verdict];
+const saving = yearlySaving(app);
+const shortName = app.name.split(' / ')[0];
+const n = alternatives.length;
+const ossCount = alternatives.filter((a) => a.type === 'open-source').length;
+
+const updated = alternatives.map((a) => a.checkedOn).sort().at(-1);
+
+// Sideways links: other apps in this category that also earn a page — the
+// topic cluster is nearly the only ranking lever a young domain has.
+const siblings = appsWithAlternativesPage()
+  .filter((a) => a.category === app.category && a.slug !== app.slug)
+  .slice(0, 6);
+
+const title = `${shortName} alternatives: ${n} free & open-source picks`;
+const description = `${n} curated, verified alternatives to ${shortName}${
+  app.priceMonthly != null ? ` ($${app.priceMonthly}/mo)` : ''
+} that cost $0: ${ossCount === n ? 'all open source' : `${ossCount} open source`}, all actually free. GitHub stars and last activity checked, no votes, no pay-to-list.`;
+
+const faq = [
+  {
+    q: `Is there a free alternative to ${shortName}?`,
+    a: `Yes: ${alternatives
+      .slice(0, 3)
+      .map((a) => a.name)
+      .join(', ')}${n > 3 ? ` and ${n - 3} more` : ''}. Every tool on this page is either open source or genuinely free to use long-term: no trials, no crippled tiers.`,
+  },
+  {
+    q: `Should I just build my own ${shortName}?`,
+    a: `Our verdict is ${v.label}. ${app.verdictSummary} If you'd rather build, the exact one-shot prompt is free at canivibecodeit.com/${app.slug}.`,
+  },
+];
+
+const jsonld = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: title,
+    numberOfItems: n,
+    itemListElement: alternatives.map((a, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: a.name,
+      url: a.url,
+    })),
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faq.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'The Death List', item: 'https://canivibecodeit.com/' },
+      { '@type': 'ListItem', position: 2, name: app.name, item: `https://canivibecodeit.com/${app.slug}` },
+      { '@type': 'ListItem', position: 3, name: 'Free alternatives', item: `https://canivibecodeit.com/${app.slug}/alternatives` },
+    ],
+  },
+];
+---
+
+<Base {title} {description} ogImage={`/og/${app.slug}.png`} {jsonld}>
+  <main class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="/">the death list</a> / <a href="/alternatives">alternatives</a> /
+      <a href={`/${app.slug}`}>{app.slug}</a> / <span class="here">free alternatives</span>
+    </nav>
+
+    <div class="app-head alt-head">
+      <span class="title">
+        <img src={`/icons/${app.slug}.png`} alt="" width="48" height="48" />
+        <h1>{shortName} alternatives: {n} free & open-source picks</h1>
+      </span>
+    </div>
+
+    <p class="alt-intro">
+      Curated, verified, and actually free. No trials, no crippled tiers. Star counts
+      and last-activity dates checked by hand, not scraped and forgotten.
+    </p>
+
+    <div class="alt-strip">
+      <span class="alt-pill">{app.slug} <b>{app.priceMonthly != null ? `$${app.priceMonthly}/mo` : '$?/mo'}</b></span>
+      <span class="strip-arrow">→</span>
+      <span class="alt-pill zero">these <b>$0</b></span>
+      <a class="strip-verdict" href={`/${app.slug}`}>
+        <VerdictBadge verdict={app.verdict} />
+        <span>can I vibecode it? the honest breakdown →</span>
+      </a>
+      <a class="alt-pill cat" href={`/category/${app.category}`}>{cat.emoji} {cat.label.toLowerCase()}</a>
+    </div>
+
+    <section class="alt-list">
+      {alternatives.map((alt, i) => <AltCard {alt} i={i} />)}
+    </section>
+
+    <p class="eh-foot">
+      <span>last updated {updated} · no votes, no pay-to-list · just what's real</span>
+    </p>
+
+    {
+      app.rejectedAlternatives.length > 0 && (
+        <section class="alt-suspects seg reveal">
+          <span class="microlabel">the usual suspects · recommended everywhere, rejected here</span>
+          {app.rejectedAlternatives.slice(0, 3).map((r) => (
+            <p class="suspect">
+              <b>{r.name}</b>
+              <span>{r.desc}</span>
+            </p>
+          ))}
+        </section>
+      )
+    }
+
+    <section class="alt-table-wrap seg">
+      <span class="microlabel">at a glance</span>
+      <table class="alt-table">
+        <thead>
+          <tr><th>tool</th><th>license</th><th>running it</th><th>platforms</th><th>stars</th><th>active</th></tr>
+        </thead>
+        <tbody>
+          {alternatives.map((a) => (
+            <tr>
+              <td><a href={a.url} target="_blank" rel="noopener">{a.name}</a></td>
+              <td>{a.type === 'open-source' ? 'open source' : 'free (closed)'}</td>
+              <td>{SELF_HOST_LABELS[a.selfHost] ?? '—'}</td>
+              <td>{(a.platforms ?? []).join(', ')}</td>
+              <td>{a.stars != null ? a.stars.toLocaleString('en-US') : '—'}</td>
+              <td>{a.lastCommit ?? '—'}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </section>
+
+    <section class="alt-build reveal">
+      <span>Rather build it exactly your way? The one-shot prompt is free too.</span>
+      <a class="btn primary" href={`/${app.slug}`}>get the prompt →</a>
+    </section>
+
+    {
+      app.whyPeopleStillPay && (
+        <section class="seg">
+          <span class="microlabel">why people still pay for {shortName}</span>
+          <p style="padding-top: 12px; font-size: 14px; line-height: 1.7; color: var(--fg); max-width: 76ch;">
+            {app.whyPeopleStillPay}
+            {saving != null && ` If none of that applies to you, any pick above saves $${saving.toLocaleString('en-US')} a year.`}
+          </p>
+        </section>
+      )
+    }
+
+    <section class="faq seg">
+      <span class="microlabel">questions</span>
+      {
+        faq.map((f, i) => (
+          <details open={i === 0}>
+            <summary>{f.q}</summary>
+            <p class="a">{f.a}</p>
+          </details>
+        ))
+      }
+    </section>
+
+    {
+      siblings.length > 0 && (
+        <section class="related seg">
+          <span class="microlabel">more escape hatches in {cat.label.toLowerCase()}</span>
+          <div class="related-grid">
+            {siblings.map((s) => (
+              <a class="mini-card" href={`/${s.slug}/alternatives`}>
+                <img src={`/icons/${s.slug}.png`} alt="" width="26" height="26" loading="lazy" />
+                <span>
+                  <span class="m-name">{s.name.split(' / ')[0]} alternatives</span>
+                  <br />
+                  <span class="m-meta">{s.alternatives.length} free picks</span>
+                </span>
+              </a>
+            ))}
+          </div>
+        </section>
+      )
+    }
+  </main>
+
+  <DigestCard source="alternatives" />
+</Base>

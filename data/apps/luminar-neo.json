@@ -56,6 +56,63 @@
       "desc": "Self-hosted photo organization and search."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Affinity",
+      "url": "https://affinity.serif.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos",
+        "windows"
+      ],
+      "desc": "A powerful free desktop photo editor for adjustments, masks, effects, and compositing; no catalog and no marketplace of one-click extensions.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "darktable",
+      "url": "https://www.darktable.org/",
+      "type": "open-source",
+      "repo": "https://github.com/darktable-org/darktable",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "A complete non-destructive darkroom with masks, effects, lens correction, and denoise; automation is technical rather than magical.",
+      "stars": 12900,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "RapidRAW",
+      "url": "https://www.getrapidraw.com/",
+      "type": "open-source",
+      "repo": "https://github.com/CyberTimon/RapidRAW",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux",
+        "android"
+      ],
+      "desc": "Local RAW editing with AI masks, denoise, presets, blur, healing, and batch work; fewer canned sky-and-glow tricks, much less rent.",
+      "stars": 9200,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "PhotoPrism",
+      "url": "https://www.photoprism.app/",
+      "desc": "An asset library with light editing is not a desktop effects editor, however often photo-server lists pretend otherwise."
+    }
+  ],
   "relatedSlugs": [
     "capture-one",
     "on1-photo-raw",

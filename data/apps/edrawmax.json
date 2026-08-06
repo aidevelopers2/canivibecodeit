@@ -50,6 +50,44 @@
       "desc": "Open-source diagram canvas with an approachable interaction model."
     }
   ],
+  "alternatives": [
+    {
+      "name": "diagrams.net",
+      "url": "https://app.diagrams.net/",
+      "type": "open-source",
+      "repo": "https://github.com/jgraph/drawio-desktop",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "The unglamorous diagram workhorse: huge template coverage, local files, imports, automatic layouts, and collaboration through shared storage.",
+      "stars": 62464,
+      "lastCommit": "2026-07",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "yEd",
+      "url": "https://www.yworks.com/products/yed",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "Excellent automatic layout and plenty of business and technical diagrams; less template theatre, more getting boxes aligned.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "mindmeister",
     "xmind",

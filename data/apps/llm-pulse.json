@@ -43,6 +43,40 @@
   "moatNotes": "managed multi-model runs, historical evidence, and workflow depth",
   "whyPeopleStillPay": "Teams pay to keep large prompt sets running on schedule, preserve evidence over time, and analyze mentions, citations, sentiment, competitors, and traffic in one dependable workflow without maintaining the execution pipeline themselves.",
   "priorArt": [],
+  "alternatives": [
+    {
+      "name": "Elmo",
+      "url": "https://www.elmohq.com/",
+      "type": "open-source",
+      "repo": "https://github.com/elmohq/elmo",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Tracks mentions, citations and competitors across the major engines; sentiment and referral traffic are still on the road map.",
+      "stars": 224,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "GEO/AEO Tracker",
+      "url": "https://github.com/danishashko/geo-aeo-tracker",
+      "desc": "It has mentions, citations, sentiment and competitors; 221 stars and a compulsory commercial scraper keep it below the bar."
+    },
+    {
+      "name": "OneGlanse",
+      "url": "https://oneglanse.com/",
+      "desc": "Broad engine coverage, tiny proof: 141 stars, no releases and an operations diagram that reads like a procurement list."
+    },
+    {
+      "name": "OpenSEO",
+      "url": "https://openseo.so/",
+      "desc": "Healthy project, wrong breadth: two AI surfaces, no sentiment and no AI-referral analytics."
+    }
+  ],
   "relatedSlugs": [
     "100-questions",
     "verifieddr",

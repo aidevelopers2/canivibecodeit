@@ -57,6 +57,24 @@
       "desc": "Peer-to-peer continuous file synchronization."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Nextcloud Files",
+      "url": "https://nextcloud.com/files/",
+      "desc": "Drive and calendar are credible; encrypted mail, consumer VPN, and a password manager are separate projects."
+    },
+    {
+      "name": "Proton Free",
+      "url": "https://proton.me/pricing",
+      "desc": "Mail, calendar, drive, passwords, and VPN are free; the storage and VPN limits are the whole reason Unlimited exists."
+    },
+    {
+      "name": "Syncthing",
+      "url": "https://syncthing.net/",
+      "desc": "A superb file-sync engine replacing roughly one-fifth of the suite."
+    }
+  ],
   "relatedSlugs": [
     "nordvpn",
     "expressvpn",

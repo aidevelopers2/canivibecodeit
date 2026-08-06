@@ -51,6 +51,52 @@
       "desc": "Mature open-source scheduling platform and OAuth reference."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Appointy Free",
+      "url": "https://www.appointy.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "One staffer gets reminders, classes and Square checkout for 100 bookings a month; growth wakes the paywall.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Square Appointments Free",
+      "url": "https://squareup.com/us/en/appointments",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "A serious free solo booking stack where Square operates; processing fees remain and the feature mix varies by country.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Easy!Appointments",
+      "url": "https://easyappointments.org/",
+      "desc": "A credible open-source scheduler, but payments and class handling are not built in."
+    },
+    {
+      "name": "Picktime Free",
+      "url": "https://www.picktime.com/",
+      "desc": "Staff and classes are free, but reminders and custom forms are paid."
+    }
+  ],
   "relatedSlugs": [
     "simplybook-me",
     "zoho-bookings",

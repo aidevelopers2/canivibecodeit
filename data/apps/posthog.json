@@ -51,6 +51,19 @@
       "desc": "Popular open-source privacy-focused web analytics platform."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "OpenPanel",
+      "url": "https://openpanel.dev",
+      "desc": "Product analytics and replay are here; feature flags and a data warehouse are not."
+    },
+    {
+      "name": "Rybbit",
+      "url": "https://rybbit.com",
+      "desc": "Excellent analytics and replay, but no feature flags or warehouse; two major products are missing."
+    }
+  ],
   "relatedSlugs": [
     "matomo-cloud",
     "mixpanel",

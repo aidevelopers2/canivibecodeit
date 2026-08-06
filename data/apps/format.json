@@ -56,6 +56,24 @@
       "desc": "Open-source web-builder framework."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "GrapesJS",
+      "url": "https://grapesjs.com",
+      "desc": "A builder framework with none of Format's photographer workflow or client delivery."
+    },
+    {
+      "name": "Publii",
+      "url": "https://getpublii.com",
+      "desc": "A pleasant portfolio publisher, but no client proofing, gallery workflow or integrated store."
+    },
+    {
+      "name": "Webstudio",
+      "url": "https://webstudio.is",
+      "desc": "It can build the portfolio site; client galleries, proofing, delivery and store workflow remain missing."
+    }
+  ],
   "relatedSlugs": [
     "carbonmade",
     "cargo",

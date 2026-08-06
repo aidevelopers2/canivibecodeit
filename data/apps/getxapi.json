@@ -50,6 +50,19 @@
       "desc": "TypeScript X scraper, no official API"
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "twitter-scraper",
+      "url": "https://github.com/the-convocation/twitter-scraper",
+      "desc": "An npm library against X's private frontend API; its own README warns that endpoints break and accounts can be banned."
+    },
+    {
+      "name": "twscrape",
+      "url": "https://github.com/vladkens/twscrape",
+      "desc": "A Python library and CLI that needs sacrificial X accounts; not a finished REST API with posting, DMs or webhooks."
+    }
+  ],
   "pagePriority": 3,
   "verifiedOneShot": false,
   "notes": "The DIY version works until X notices; the product is the part that keeps working after.",

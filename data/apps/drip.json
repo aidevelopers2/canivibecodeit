@@ -53,6 +53,69 @@
       "desc": "Mature open-source newsletter and mailing-list manager."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Dittofeed",
+      "url": "https://www.dittofeed.com/",
+      "type": "open-source",
+      "repo": "https://github.com/dittofeed/dittofeed",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Cart and product events can trigger branching email journeys; ecommerce integrations are yours to wire.",
+      "stars": 2887,
+      "lastCommit": "2026-03",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Mautic",
+      "url": "https://mautic.org/",
+      "type": "open-source",
+      "repo": "https://github.com/mautic/mautic",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Tracks behavior and fires campaigns from events; modern ecommerce niceties require integration work.",
+      "stars": 10300,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Notifuse",
+      "url": "https://www.notifuse.com/",
+      "type": "open-source",
+      "repo": "https://github.com/Notifuse/notifuse",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Event-triggered campaigns and segmentation without contact pricing; store-specific reporting is absent.",
+      "stars": 2038,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Plunk",
+      "url": "https://www.useplunk.com/",
+      "type": "open-source",
+      "repo": "https://github.com/useplunk/plunk",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A small event stream can drive conditional email workflows; ecommerce dashboards do not appear by wishing.",
+      "stars": 5300,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "substack",
     "mailerlite",

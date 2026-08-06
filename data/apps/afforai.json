@@ -50,6 +50,63 @@
       "desc": "Mature open-source research and citation manager."
     }
   ],
+  "alternatives": [
+    {
+      "name": "AnythingLLM",
+      "url": "https://anythingllm.com",
+      "type": "open-source",
+      "repo": "https://github.com/Mintplex-Labs/anything-llm",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "Point it at your files and bring your own model; the privacy is free, the compute is not.",
+      "stars": 64000,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "NotebookLM",
+      "url": "https://notebooklm.google.com",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "Upload the papers and interrogate them; Google pays the model bill and keeps the limits.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Open Notebook",
+      "url": "https://www.open-notebook.ai",
+      "type": "open-source",
+      "repo": "https://github.com/lfnovo/open-notebook",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "NotebookLM on your own server; bring Docker, a model and realistic expectations about citations.",
+      "stars": 36400,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Open Paper",
+      "url": "https://openpaper.ai",
+      "desc": "The code is open, but self-hosting is not optimized and the free hosted plan stops at ten papers."
+    }
+  ],
   "relatedSlugs": [
     "lateral",
     "recall",

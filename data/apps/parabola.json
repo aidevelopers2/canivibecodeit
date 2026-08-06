@@ -55,6 +55,25 @@
       "desc": "Source-available workflow automation engine and connector reference."
     }
   ],
+  "alternatives": [
+    {
+      "name": "KNIME Analytics Platform",
+      "url": "https://www.knime.com/knime-analytics-platform",
+      "type": "open-source",
+      "repo": "https://github.com/knime/knime-core",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "A visual data workbench with hundreds of connectors; scheduled cloud runs are where KNIME starts charging.",
+      "stars": 773,
+      "lastCommit": "2026-04",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "bardeen",
     "relay-app",

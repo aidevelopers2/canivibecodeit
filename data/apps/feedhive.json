@@ -56,6 +56,19 @@
       "desc": "Self-hosted social media management software."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "BrightBean Studio",
+      "url": "https://brightbean.xyz/studio/",
+      "desc": "Scheduler, inbox and analytics: yes. AI writing and automatic content recycling: no."
+    },
+    {
+      "name": "TryPost",
+      "url": "https://trypost.it/",
+      "desc": "Scheduling and recycling are free, but the AI writer needs a model account and somebody still receives that bill."
+    }
+  ],
   "relatedSlugs": [
     "ocoya",
     "predis-ai",

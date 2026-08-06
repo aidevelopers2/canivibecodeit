@@ -55,6 +55,25 @@
       "desc": "Lightweight self-hosted web analytics."
     }
   ],
+  "alternatives": [
+    {
+      "name": "PostHog",
+      "url": "https://posthog.com",
+      "type": "open-source",
+      "repo": "https://github.com/PostHog/posthog",
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "Realtime analytics, user profiles and automated messages in one free account; subtle it is not.",
+      "stars": 37500,
+      "lastCommit": "2026-08",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "woopra",
     "matomo-cloud",

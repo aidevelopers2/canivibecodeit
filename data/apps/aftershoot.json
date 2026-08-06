@@ -52,6 +52,73 @@
       "desc": "Active open-source self-hosted photo and video management platform."
     }
   ],
+  "alternatives": [
+    {
+      "name": "digiKam",
+      "url": "https://www.digikam.org/",
+      "type": "open-source",
+      "repo": "https://invent.kde.org/graphics/digikam",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "Duplicate search, similarity tools, aesthetic detection, pick labels, and metadata export in a mature desktop catalog; setup is less friendly.",
+      "stars": 32,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "RapidRAW",
+      "url": "https://www.getrapidraw.com/",
+      "type": "open-source",
+      "repo": "https://github.com/CyberTimon/RapidRAW",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux",
+        "android"
+      ],
+      "desc": "Imports folders, groups duplicates, flags blur, supports ratings, and hands the keepers into a RAW workflow without a subscription.",
+      "stars": 9200,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Selekt",
+      "url": "https://www.selekt.photos/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos",
+        "windows"
+      ],
+      "desc": "A packaged local culler with RAW previews, duplicate and burst grouping, explainable scores, ratings, and XMP export; still labelled beta.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "FilterPixel",
+      "url": "https://filterpixel.com/",
+      "desc": "The free allowance is four projects for life, and duplicate clustering plus Lightroom or Capture One handoff require payment."
+    },
+    {
+      "name": "Narrative",
+      "url": "https://narrative.so/",
+      "desc": "Frequently called free, actually a trial; the ongoing culling product starts on a paid plan."
+    },
+    {
+      "name": "OptiCull Free",
+      "url": "https://dopeai.tech/opticull",
+      "desc": "Unlimited manual culling is free, but AI scoring and duplicate grouping, the Aftershoot part, sit in the paid tier."
+    }
+  ],
   "relatedSlugs": [
     "adobe-lightroom",
     "capture-one",

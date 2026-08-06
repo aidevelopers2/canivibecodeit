@@ -53,6 +53,95 @@
       "desc": "Mature open-source newsletter and mailing-list manager."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Brevo Free",
+      "url": "https://www.brevo.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "A huge contact allowance with a tiny daily send pipe; suitable when low volume is literal.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "EmailOctopus Free",
+      "url": "https://emailoctopus.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "The vendor's own free plan covers 2,500 contacts and 10,000 monthly emails; branding and automation limits remain.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Keila",
+      "url": "https://www.keila.io/",
+      "type": "open-source",
+      "repo": "https://github.com/pentacent/keila",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A self-hosted list, forms and campaigns without contact caps; you supply deliverability.",
+      "stars": 2179,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Kit Free",
+      "url": "https://kit.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Unlimited sends and forms for up to 10,000 subscribers; one built-in recommendation slot belongs to Kit.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "listmonk",
+      "url": "https://listmonk.app/",
+      "type": "open-source",
+      "repo": "https://github.com/knadh/listmonk",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "The lean self-hosted answer for lists and campaigns; setup is one compose file plus an SMTP account.",
+      "stars": 22600,
+      "lastCommit": "2026-07",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Sender Free",
+      "url": "https://www.sender.net/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "A larger useful free allowance with campaigns, forms and automations; one user only.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "substack",
     "mailerlite",

@@ -51,6 +51,52 @@
       "desc": "Open-source search ranking tracker for owned keyword sets."
     }
   ],
+  "alternatives": [
+    {
+      "name": "OpenSEO",
+      "url": "https://openseo.so/",
+      "type": "open-source",
+      "repo": "https://github.com/every-app/open-seo",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Desktop and mobile rank tracking by location, backed by paid DataForSEO calls rather than wishful scraping.",
+      "stars": 10614,
+      "lastCommit": "2026-07",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "SerpBear",
+      "url": "https://docs.serpbear.com/",
+      "type": "open-source",
+      "repo": "https://github.com/towfiqi/serpbear",
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "Location-aware rank history and alerts without a SaaS seat; your chosen SERP provider still expects lunch money.",
+      "stars": 2016,
+      "lastCommit": "2026-05",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "SEO PowerSuite Free",
+      "url": "https://www.link-assistant.com/",
+      "desc": "It can check rankings and then forget the project, because saving is paid."
+    },
+    {
+      "name": "Serposcope",
+      "url": "https://www.serposcope.com/",
+      "desc": "The famous self-hosted answer is now an archived one; last commit January 2022."
+    }
+  ],
   "relatedSlugs": [
     "moz-pro",
     "se-ranking",

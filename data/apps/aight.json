@@ -58,6 +58,68 @@
       "status": "alive"
     }
   ],
+  "alternatives": [
+    {
+      "name": "Happy",
+      "url": "https://happy.engineering/",
+      "type": "open-source",
+      "repo": "https://github.com/slopus/happy",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android",
+        "cli"
+      ],
+      "desc": "A phone remote for Claude Code and Codex, with your computer still doing the work.",
+      "stars": 23200,
+      "lastCommit": "2026-05",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Nimbalyst",
+      "url": "https://nimbalyst.com/",
+      "type": "open-source",
+      "repo": "https://github.com/nimbalyst/nimbalyst",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android"
+      ],
+      "desc": "A visual desk for several coding agents, without turning them into a node graph.",
+      "stars": 1408,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Paseo",
+      "url": "https://paseo.sh/",
+      "type": "open-source",
+      "repo": "https://github.com/getpaseo/paseo",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android",
+        "self-hosted",
+        "cli"
+      ],
+      "desc": "One control panel for five coding CLIs; the agents still need a host.",
+      "stars": 12416,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "github-copilot",
     "cursor",

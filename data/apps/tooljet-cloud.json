@@ -53,6 +53,83 @@
       "desc": "Large open-source low-code platform for internal applications and data sources."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Appsmith Free",
+      "url": "https://www.appsmith.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Five people can build and run database-backed internal apps in the hosted product without paying.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Budibase",
+      "url": "https://budibase.com/",
+      "type": "open-source",
+      "repo": "https://github.com/Budibase/budibase",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Internal apps, forms, automations, and portals in one box; much closer to Knack than its developer branding suggests.",
+      "stars": 27902,
+      "lastCommit": "2026-07",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Lowcoder",
+      "url": "https://www.lowcoder.cloud/",
+      "type": "open-source",
+      "repo": "https://github.com/lowcoder-org/lowcoder",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A self-hosted internal-tool canvas with a broad widget set; less polished, but not a toy.",
+      "stars": 1600,
+      "lastCommit": "2026-07",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Retool Free",
+      "url": "https://retool.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "The paid app's real builder, database, mobile apps, and 500 workflow runs for up to five people at $0.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "ToolJet Free",
+      "url": "https://www.tooljet.ai/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "The same cloud product is free for two builders, 50 end users, two apps, five database tables, and unlimited external data sources.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "flutterflow",
     "retool",

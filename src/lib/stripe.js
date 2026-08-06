@@ -73,7 +73,7 @@ export async function createCheckoutSession({
           currency: 'usd',
           unit_amount: priceCents,
           product_data: {
-            name: `canivibecodeit.com — sponsor slot (${30 * months} days)`,
+            name: `canivibecodeit.com · sponsor slot (${30 * months} days)`,
             description:
               `Your product on every page of canivibecodeit.com for ${30 * months} days: icon, name,`
               + ' tagline and link, plus the sponsor board.'

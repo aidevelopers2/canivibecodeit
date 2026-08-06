@@ -53,6 +53,63 @@
       "desc": "Mature open-source community discussion platform with strong moderation and search."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Discord Free",
+      "url": "https://discord.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android"
+      ],
+      "desc": "Private servers, channels, events and mobile apps, backed by the friend graph Geneva would otherwise make you rebuild.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Element",
+      "url": "https://element.io/",
+      "type": "open-source",
+      "repo": "https://github.com/element-hq/element-web",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "Private Matrix spaces, rooms and encrypted messaging with proper mobile apps; the social discovery layer is thinner.",
+      "stars": 13300,
+      "lastCommit": "2026-07",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "HumHub",
+      "url": "https://www.humhub.com/",
+      "type": "open-source",
+      "repo": "https://github.com/humhub/humhub",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A self-owned private social network with spaces, profiles and activity streams; mobile polish is the tax.",
+      "stars": 6700,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "slack-pro",
     "discord-nitro",

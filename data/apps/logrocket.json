@@ -52,6 +52,45 @@
       "desc": "Popular open-source uptime monitoring dashboard with many check types."
     }
   ],
+  "alternatives": [
+    {
+      "name": "HyperDX",
+      "url": "https://www.hyperdx.io/",
+      "type": "open-source",
+      "repo": "https://github.com/hyperdxio/hyperdx",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Session replay plus the logs and errors that explain the bad movie.",
+      "stars": 9798,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "PostHog",
+      "url": "https://posthog.com/",
+      "type": "open-source",
+      "repo": "https://github.com/PostHog/posthog",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Product analytics and session replay with a lot of other products attached.",
+      "stars": 37500,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Uptime Kuma",
+      "url": "https://uptime.kuma.pet/",
+      "desc": "It tells you the site is up; it does not replay what the user did before it broke."
+    }
+  ],
   "relatedSlugs": [
     "sentry",
     "uptime"

@@ -57,6 +57,40 @@
       "status": "alive"
     }
   ],
+  "alternatives": [
+    {
+      "name": "Elmo",
+      "url": "https://www.elmohq.com/",
+      "type": "open-source",
+      "repo": "https://github.com/elmohq/elmo",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A real self-hosted AI visibility dashboard; crawler-log analysis is the conspicuous thing it does not replace.",
+      "stars": 224,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "GEO/AEO Tracker",
+      "url": "https://github.com/danishashko/geo-aeo-tracker",
+      "desc": "Tracks answers, not crawlers; 221 stars and a required Bright Data account do not rescue the missing half."
+    },
+    {
+      "name": "OneGlanse",
+      "url": "https://oneglanse.com/",
+      "desc": "Broad AI monitoring, no crawler-log product, no releases and far too much infrastructure for 141 stars."
+    },
+    {
+      "name": "OpenSEO",
+      "url": "https://openseo.so/",
+      "desc": "Mature SEO software, but two AI surfaces and no crawler-log analysis do not replace Profound."
+    }
+  ],
   "relatedSlugs": [
     "100-questions",
     "ahrefs",

@@ -54,6 +54,50 @@
       "status": "alive"
     }
   ],
+  "alternatives": [
+    {
+      "name": "Happy",
+      "url": "https://happy.engineering/",
+      "type": "open-source",
+      "repo": "https://github.com/slopus/happy",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android",
+        "cli"
+      ],
+      "desc": "A phone remote for Claude Code and Codex; put the CLI on a server if the laptop must stay out of it.",
+      "stars": 23200,
+      "lastCommit": "2026-05",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Paseo",
+      "url": "https://paseo.sh/",
+      "type": "open-source",
+      "repo": "https://github.com/getpaseo/paseo",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android",
+        "self-hosted",
+        "cli"
+      ],
+      "desc": "Phone control for coding agents on a remote machine; you still provide that machine.",
+      "stars": 12416,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "cursor",
     "claude",

@@ -49,6 +49,8 @@
       "desc": "Open-source, local-first personal workspace for assessing, documenting, and tracking EC261 and UK261 flight claims."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [],
   "relatedSlugs": [],
   "pagePriority": 4,
   "verifiedOneShot": false,

@@ -53,6 +53,30 @@
       "desc": "Mature open-source newsletter and mailing-list manager."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Ghost",
+      "url": "https://ghost.org/",
+      "type": "open-source",
+      "repo": "https://github.com/TryGhost/Ghost",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Posts, newsletters, memberships and payments on your server; Substack's discovery graph does not come in the tarball.",
+      "stars": 54700,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Kit Free",
+      "url": "https://kit.com/",
+      "desc": "Public posts, recommendations and paid products are present, but Kit takes a platform cut on every sale."
+    }
+  ],
   "relatedSlugs": [
     "mailerlite",
     "activecampaign",

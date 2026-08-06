@@ -47,6 +47,138 @@
       "status": "alive"
     }
   ],
+  "alternatives": [
+    {
+      "name": "FluidVoice",
+      "url": "https://altic.dev/fluid",
+      "type": "open-source",
+      "repo": "https://github.com/altic-dev/FluidVoice",
+      "platforms": [
+        "macos"
+      ],
+      "desc": "Fast Mac dictation with local cleanup; even the fancy part stays on the machine.",
+      "stars": 9400,
+      "lastCommit": "2026-07",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Handy",
+      "url": "https://handy.computer/",
+      "type": "open-source",
+      "repo": "https://github.com/cjpais/Handy",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "Press a key, talk and get plain text in the app you were already using. No cleanup magic, no invoice.",
+      "stars": 28900,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Muesli",
+      "url": "https://muesli.works/",
+      "type": "open-source",
+      "repo": "https://github.com/Muesli-HQ/muesli",
+      "platforms": [
+        "macos"
+      ],
+      "desc": "Hold a key, talk and get cleaned text at the cursor; the local meeting recorder comes along for free.",
+      "stars": 890,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "OpenWhispr",
+      "url": "https://openwhispr.com/",
+      "type": "open-source",
+      "repo": "https://github.com/OpenWhispr/openwhispr",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "A cross-platform hotkey-to-cursor app with local models, cleanup, history and meeting capture.",
+      "stars": 5223,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Spokenly",
+      "url": "https://spokenly.app/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos",
+        "windows",
+        "linux",
+        "ios"
+      ],
+      "desc": "Unlimited local dictation behind a polished installer; cloud convenience is the bit it charges for.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "TypeNo",
+      "url": "https://typeno.com/",
+      "type": "open-source",
+      "repo": "https://github.com/marswaveai/TypeNo",
+      "platforms": [
+        "macos"
+      ],
+      "desc": "Control, talk, Control, paste. It has no settings because there is nothing to upsell.",
+      "stars": 883,
+      "lastCommit": "2026-05",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Voicebox",
+      "url": "https://voicebox.sh/",
+      "type": "open-source",
+      "repo": "https://github.com/jamiepine/voicebox",
+      "platforms": [
+        "macos",
+        "windows"
+      ],
+      "desc": "Voice cloning studio attached to a global dictation hotkey; overkill, free overkill.",
+      "stars": 49500,
+      "lastCommit": "2026-06",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Voquill",
+      "url": "https://voquill.com/dictation/",
+      "type": "open-source",
+      "repo": "https://github.com/voquill/voquill",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux",
+        "ios"
+      ],
+      "desc": "System-wide dictation, local Whisper, cleanup and a glossary; cloud convenience is the paid part.",
+      "stars": 997,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "VoiceInk",
+      "url": "https://tryvoiceink.com/",
+      "desc": "The code is open, but the usable download is a trial; the free path is compiling it yourself in Xcode."
+    }
+  ],
   "relatedSlugs": [
     "descript",
     "loom",

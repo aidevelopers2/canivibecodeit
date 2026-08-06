@@ -52,6 +52,26 @@
       "desc": "Open-source customer-feedback portal with voting and status workflows."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Quackback",
+      "url": "https://quackback.io",
+      "type": "open-source",
+      "repo": "https://github.com/QuackbackIO/quackback",
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "A central feedback inbox with tags, duplicate merging, roadmap decisions and issue-tracker sync.",
+      "stars": 216,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "canny",
     "productboard",

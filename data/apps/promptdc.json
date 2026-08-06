@@ -38,6 +38,55 @@
   "moatNotes": "Polish, site compatibility, and maintained rewrite profiles",
   "whyPeopleStillPay": "People pay for confidence that rewriting works across the sites and editors they use every day, plus maintained profiles, a polished interface, account features, and fixes when web apps change. A personal BYOK clone covers the basic loop well, but keeping rich editors reliable is continuing product work.",
   "priorArt": [],
+  "alternatives": [
+    {
+      "name": "Page Assist",
+      "url": "https://pageassist.xyz/",
+      "type": "open-source",
+      "repo": "https://github.com/n4ze3m/page-assist",
+      "platforms": [
+        "android",
+        "browser-extension"
+      ],
+      "desc": "A browser sidebar that reads the page, rewrites the selection, and saves custom actions; your local model does the thinking.",
+      "stars": 8100,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Witsy",
+      "url": "https://witsyai.com/",
+      "type": "open-source",
+      "repo": "https://github.com/Kochava-Studios/witsy",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "System-wide selected-text commands, reusable experts, a scratchpad, and document context; bring the model and skip the subscription.",
+      "stars": 2000,
+      "lastCommit": "2026-04",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Writing Tools",
+      "url": "https://github.com/theJayTea/WritingTools",
+      "type": "open-source",
+      "repo": "https://github.com/theJayTea/WritingTools",
+      "platforms": [
+        "macos",
+        "windows"
+      ],
+      "desc": "Select text anywhere, hit a hotkey, and fix, rewrite, summarize, or obey a custom instruction without opening another tab.",
+      "stars": 2400,
+      "lastCommit": "2026-05",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [],
   "pagePriority": 3,
   "verifiedOneShot": false,

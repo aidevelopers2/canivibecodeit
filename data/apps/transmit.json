@@ -50,6 +50,24 @@
       "desc": "Active open-source cross-platform text expansion utility with system integration."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Cyberduck",
+      "url": "https://cyberduck.io/",
+      "type": "open-source",
+      "repo": "https://github.com/iterate-ch/cyberduck",
+      "platforms": [
+        "macos",
+        "windows"
+      ],
+      "desc": "Transmit's protocol list, bookmarks, and transfer queue, plus a donation nag instead of a receipt.",
+      "stars": 4500,
+      "lastCommit": "2026-07",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "alfred-powerpack",
     "setapp",

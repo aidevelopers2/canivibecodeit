@@ -53,7 +53,7 @@ const returnTo = `/admin/decide?id=${encodeURIComponent(id)}&action=${action}&si
           <input type="hidden" name="sig" value={sig} />
           <input type="hidden" name="return_to" value={returnTo} />
           <button class={`btn ${action === 'approve' ? 'primary' : 'ghost'}`} type="submit">
-            {action === 'approve' ? `yes — put it live for ${30 * (Number(purchase.months) || 1)} days` : 'yes — reject and refund in full'}
+            {action === 'approve' ? `yes · put it live for ${30 * (Number(purchase.months) || 1)} days` : 'yes · reject and refund in full'}
           </button>
         </form>
       ) : (

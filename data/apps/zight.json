@@ -52,6 +52,40 @@
       "desc": "Open-source screen recording and sharing product with modern desktop architecture."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Cap",
+      "url": "https://cap.so",
+      "type": "open-source",
+      "repo": "https://github.com/CapSoftware/Cap",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "self-hosted"
+      ],
+      "desc": "Screen recordings and screenshots with hosted links; the self-hosted option comes with chores.",
+      "stars": 20500,
+      "lastCommit": "2026-07",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "ShareX",
+      "url": "https://getsharex.com",
+      "type": "open-source",
+      "repo": "https://github.com/ShareX/ShareX",
+      "platforms": [
+        "windows"
+      ],
+      "desc": "Screenshots, GIFs, recordings and upload links, wrapped in unapologetic Windows utility energy.",
+      "stars": 38994,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "screen-studio",
     "cleanshot-x",

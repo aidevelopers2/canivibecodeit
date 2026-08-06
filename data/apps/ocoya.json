@@ -55,6 +55,24 @@
       "desc": "Self-hosted social media management software."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Adobe Express Free",
+      "url": "https://www.adobe.com/express/",
+      "desc": "Design, limited AI generation and scheduling are covered; ecommerce integrations and account analytics are not."
+    },
+    {
+      "name": "BrightBean Studio",
+      "url": "https://brightbean.xyz/studio/",
+      "desc": "Scheduling and analytics without AI design or ecommerce plumbing."
+    },
+    {
+      "name": "Postiz",
+      "url": "https://postiz.com/",
+      "desc": "AI captions and scheduling are not the same thing as an integrated design and ecommerce studio."
+    }
+  ],
   "relatedSlugs": [
     "predis-ai",
     "flick",

@@ -53,6 +53,37 @@
       "desc": "Open-source expert-system platform for guided interviews and document assembly."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Cooley GO Docs",
+      "url": "https://www.cooleygo.com/documents/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Guided questionnaires that produce common startup documents and supporting checklists; genuinely useful, deliberately not a general legal-document supermarket.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Orrick Tech Studio",
+      "url": "https://www.orrick.com/en/tech-studio/resources/forms",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "A substantial free library of startup forms and document generators; no subscription, no attorney-on-call service, and no claim that a template understands your situation.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "legalzoom",
     "clerky",

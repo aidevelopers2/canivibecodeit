@@ -52,6 +52,130 @@
       "desc": "Node-based open-source diffusion workflow engine with a large ecosystem."
     }
   ],
+  "alternatives": [
+    {
+      "name": "ComfyUI",
+      "url": "https://comfy.org/",
+      "type": "open-source",
+      "repo": "https://github.com/Comfy-Org/ComfyUI",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "Every parameter is explicit and every graph rerunnable; comparison is rigorous, if not elegant.",
+      "stars": 124207,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Draw Things",
+      "url": "https://drawthings.ai/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos",
+        "ios"
+      ],
+      "desc": "A local gallery with retained settings, seeds and reruns; excellent for experiments on Apple hardware.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Easy Diffusion",
+      "url": "https://easydiffusion.github.io/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "Prompt matrices, queues and saved settings make controlled comparisons possible without a subscription.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "InvokeAI",
+      "url": "https://invoke.ai/",
+      "type": "open-source",
+      "repo": "https://github.com/invoke-ai/InvokeAI",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "Choose a model, keep every parameter, compare a board of outputs and rerun the winner without guesswork.",
+      "stars": 27776,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Krita AI Diffusion",
+      "url": "https://www.interstice.cloud/",
+      "type": "open-source",
+      "repo": "https://github.com/Acly/krita-ai-diffusion",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "Queue variants, inspect history and refine selected results inside a real editor.",
+      "stars": 10432,
+      "lastCommit": "2026-06",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "RuinedFooocus",
+      "url": "https://github.com/runew0lf/RuinedFooocus",
+      "type": "open-source",
+      "repo": "https://github.com/runew0lf/RuinedFooocus",
+      "platforms": [
+        "web",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "Saved metadata, batches and reruns make it a decent prompt lab without making it feel like one.",
+      "stars": 680,
+      "lastCommit": "2026-07",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "SwarmUI",
+      "url": "https://swarmui.net/",
+      "type": "open-source",
+      "repo": "https://github.com/mcmonkeyprojects/SwarmUI",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "Its grid generator turns prompt and parameter sweeps into an actual experiment instead of a scrolling feed.",
+      "stars": 4423,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "recraft",
     "photoroom",

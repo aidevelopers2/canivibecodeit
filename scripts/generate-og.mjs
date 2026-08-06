@@ -49,7 +49,10 @@ const fonts = [
 const bg = `data:image/png;base64,${readFileSync(path.join(root, 'scripts/og-background.png')).toString('base64')}`;
 const icon = (slug) => {
   const p = path.join(root, 'public/icons', `${slug}.png`);
-  return existsSync(p) ? `data:image/png;base64,${readFileSync(p).toString('base64')}` : null;
+  // An empty or near-empty file (a failed favicon fetch that got committed)
+  // makes satori throw and takes the whole build down — treat it as no icon.
+  if (!existsSync(p) || statSync(p).size < 100) return null;
+  return `data:image/png;base64,${readFileSync(p).toString('base64')}`;
 };
 
 const COLORS = {

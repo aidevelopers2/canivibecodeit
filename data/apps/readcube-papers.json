@@ -51,6 +51,45 @@
       "desc": "Mature open-source research and citation manager."
     }
   ],
+  "alternatives": [
+    {
+      "name": "JabRef",
+      "url": "https://www.jabref.org",
+      "type": "open-source",
+      "repo": "https://github.com/JabRef/jabref",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux",
+        "browser-extension"
+      ],
+      "desc": "A serious BibTeX library with the glamour level set correctly.",
+      "stars": 4544,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Zotero",
+      "url": "https://www.zotero.org",
+      "type": "open-source",
+      "repo": "https://github.com/zotero/zotero",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android",
+        "browser-extension"
+      ],
+      "desc": "A mature library, PDF reader, discovery tool and citation engine with no subscription.",
+      "stars": 14890,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "zotero-storage",
     "elicit",

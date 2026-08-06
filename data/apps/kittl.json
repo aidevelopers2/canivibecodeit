@@ -52,6 +52,46 @@
       "desc": "Mature open-source collaborative design platform with SVG-native editing."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Affinity",
+      "url": "https://affinity.serif.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos",
+        "windows"
+      ],
+      "desc": "A fully featured vector, raster, and layout suite now free forever; bring your own templates and taste.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Inkscape",
+      "url": "https://inkscape.org/",
+      "type": "open-source",
+      "repo": "https://gitlab.com/inkscape/inkscape",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "Serious vector lettering, paths, labels, posters, and print-ready SVG/PDF export; stock mockups and one-click effects are your problem.",
+      "stars": 3985,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Graphite",
+      "url": "https://graphite.rs/",
+      "desc": "The vector engine is impressive and actively built, but the project still labels itself alpha and lists missing core competencies."
+    }
+  ],
   "relatedSlugs": [
     "pitch",
     "vistacreate",

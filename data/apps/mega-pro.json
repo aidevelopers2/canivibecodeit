@@ -53,6 +53,52 @@
       "desc": "Mature open-source file sync and collaboration server."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Seafile Community Edition",
+      "url": "https://www.seafile.com/",
+      "type": "open-source",
+      "repo": "https://github.com/haiwen/seafile",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "Client-side encrypted libraries with sync and version history; public sharing is less zero-knowledge than MEGA.",
+      "stars": 15071,
+      "lastCommit": "2026-07",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Syncthing",
+      "url": "https://syncthing.net/",
+      "type": "open-source",
+      "repo": "https://github.com/syncthing/syncthing",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "Peer-to-peer folder sync with versioning; the server is a dumb encrypted replica, not a browsable cloud.",
+      "stars": 87354,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Nextcloud Files",
+      "url": "https://nextcloud.com/files/",
+      "desc": "A mature file cloud, but end-to-end encryption is not the default storage-and-sharing model."
+    }
+  ],
   "relatedSlugs": [
     "dropbox-plus",
     "google-one",

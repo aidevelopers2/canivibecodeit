@@ -1,7 +1,7 @@
 /* Fetch favicons for every app that doesn't have public/icons/<slug>.png yet.
    Sources tried in order: Google s2 favicon service (64px), then the site's
    /favicon.ico. Flags tiny/placeholder results so they can be hunted manually. */
-import { readdirSync, readFileSync, writeFileSync, existsSync, statSync } from 'node:fs';
+import { readdirSync, readFileSync, writeFileSync, existsSync, statSync, mkdirSync } from 'node:fs';
 import path from 'node:path';
 
 const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
@@ -46,4 +46,42 @@ for (const app of apps) {
   }
 }
 
+/* Alternative tools get favicons too, keyed by hostname (they have no slug) in
+   public/icons/alt/. The page falls back to a letter tile when one is missing,
+   so a failed fetch degrades, never breaks. */
+const altDir = path.join(iconsDir, 'alt');
+mkdirSync(altDir, { recursive: true });
+
+const hosts = new Map();
+for (const app of apps) {
+  for (const alt of app.alternatives ?? []) {
+    try {
+      const host = new URL(alt.url).hostname.replace(/^www\./, '');
+      if (!hosts.has(host)) hosts.set(host, alt.name);
+    } catch {
+      /* bad URLs are the validator's problem */
+    }
+  }
+}
+
+let altFetched = 0;
+const altFailed = [];
+for (const [host] of hosts) {
+  const out = path.join(altDir, `${host}.png`);
+  if (!force && existsSync(out) && statSync(out).size > 300) continue;
+  let buf = await fetchBuf(`https://www.google.com/s2/favicons?domain=${host}&sz=64`).catch(() => null);
+  if (!buf || buf.length < 200) {
+    buf = (await fetchBuf(`https://${host}/favicon.ico`).catch(() => null)) || buf;
+  }
+  if (buf && buf.length >= 200) {
+    writeFileSync(out, buf);
+    altFetched++;
+    console.log('alt icon:', host, buf.length);
+  } else {
+    altFailed.push(host);
+    console.log('ALT FAILED:', host);
+  }
+}
+
 console.log(`\nfetched ${fetched}; needs manual attention: ${suspicious.join(', ') || 'none'}`);
+console.log(`alt icons fetched ${altFetched}; failed (letter-tile fallback): ${altFailed.join(', ') || 'none'}`);

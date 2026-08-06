@@ -52,6 +52,14 @@
       "desc": "Open-source desktop mail client and useful IMAP prior art."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Chatwoot",
+      "url": "https://www.chatwoot.com/",
+      "desc": "A real shared inbox and automation desk, but not Gmail-native and not a sales-sequence tool."
+    }
+  ],
   "relatedSlugs": [
     "mimestream",
     "spike",

@@ -50,6 +50,24 @@
       "desc": "Text-to-diagram renderer with broad diagram syntax."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Mermaid",
+      "url": "https://mermaid.ai/open-source/",
+      "desc": "The diagram engine underneath the product is free, but it is still an engine rather than a hosted visual editor and team workspace."
+    },
+    {
+      "name": "Mermaid AI",
+      "url": "https://mermaid.ai/pricing",
+      "desc": "The free hosted plan stops at three diagrams, while collaborative editing sits behind paid tiers; that is a demo allowance, not a durable replacement."
+    },
+    {
+      "name": "Mermaid Live Editor",
+      "url": "https://mermaid.live/",
+      "desc": "A good text editor and preview, but it lacks Mermaid Chart's visual editing and collaborative workspace."
+    }
+  ],
   "relatedSlugs": [
     "cloudcraft",
     "gleek",

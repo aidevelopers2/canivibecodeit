@@ -53,6 +53,62 @@
       "desc": "Mature open-source time-tracking application with projects, reports, and exports."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Dolibarr",
+      "url": "https://www.dolibarr.org/",
+      "type": "open-source",
+      "repo": "https://github.com/Dolibarr/dolibarr",
+      "platforms": [
+        "web",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "Harvest is in there somewhere, behind an entire ERP; the price is zero and the setup vocabulary is not.",
+      "stars": 7500,
+      "lastCommit": "2026-07",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "ERPNext",
+      "url": "https://erpnext.com/",
+      "type": "open-source",
+      "repo": "https://github.com/frappe/erpnext",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Timesheets become invoices cleanly; unfortunately the replacement arrives attached to an entire ERP and its operations manual.",
+      "stars": 35700,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Kimai",
+      "url": "https://www.kimai.org/",
+      "type": "open-source",
+      "repo": "https://github.com/kimai/kimai",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Timesheets, rates, reports and invoices are all there; approvals need its free plugin and the server still needs an adult.",
+      "stars": 4900,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Invoice Ninja Free",
+      "url": "https://invoiceninja.com/",
+      "desc": "It turns time into invoices, but the free plan stops at five clients and the code is Elastic-licensed, not open source."
+    }
+  ],
   "relatedSlugs": [
     "toggl-track",
     "clockify",

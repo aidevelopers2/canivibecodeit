@@ -51,6 +51,61 @@
       "desc": "Mature open-source scheduling platform and OAuth reference."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Calendly Free",
+      "url": "https://calendly.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "browser-extension"
+      ],
+      "desc": "One active event type and unlimited bookings; meeting polls survive, workflows and teams do not.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "TidyCal Free",
+      "url": "https://tidycal.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Unlimited one-person booking types and paid bookings on one calendar; group meetings and fancy emails cost extra.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "YouCanBookMe Free",
+      "url": "https://youcanbook.me/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "browser-extension"
+      ],
+      "desc": "One booking page, but it keeps forms, payments, confirmations, polls and the calendar-overlay trick.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Rallly",
+      "url": "https://rallly.co/",
+      "desc": "A superb poller, but it does not also provide reusable one-to-one scheduling links."
+    }
+  ],
   "relatedSlugs": [
     "cal-com-teams",
     "zencal",

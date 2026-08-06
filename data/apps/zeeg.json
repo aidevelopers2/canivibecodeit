@@ -51,6 +51,24 @@
       "desc": "Mature open-source scheduling platform and OAuth reference."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Cal.com Free",
+      "url": "https://cal.com/",
+      "desc": "Solo links are free; routing forms, round-robin and team workflows are paid."
+    },
+    {
+      "name": "Cal.diy",
+      "url": "https://www.cal.diy/",
+      "desc": "Teams and Workflows were removed from the open-source fork, which is also marked non-production."
+    },
+    {
+      "name": "zcal Free",
+      "url": "https://zcal.co/",
+      "desc": "Solo scheduling is lavishly free; team creation, round-robin and collective routing are Pro."
+    }
+  ],
   "relatedSlugs": [
     "tidycal",
     "calday",

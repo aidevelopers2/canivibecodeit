@@ -42,6 +42,40 @@
   "moatNotes": "workflow/reliability/evidence normalization",
   "whyPeopleStillPay": "They pay for a repeatable, frozen benchmark with provider failures handled, citations normalized, every metric tied to evidence, and a report that is ready to act on.",
   "priorArt": [],
+  "alternatives": [
+    {
+      "name": "Elmo",
+      "url": "https://www.elmohq.com/",
+      "type": "open-source",
+      "repo": "https://github.com/elmohq/elmo",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Prompt-by-prompt AI visibility with citations and competitors across the major engines; the queries still need model or scraper credentials.",
+      "stars": 224,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "GEO/AEO Tracker",
+      "url": "https://github.com/danishashko/geo-aeo-tracker",
+      "desc": "A polished dashboard with 221 stars and 28 commits; every real run still depends on Bright Data's commercial scraper."
+    },
+    {
+      "name": "OneGlanse",
+      "url": "https://oneglanse.com/",
+      "desc": "The feature list is dead-on; 141 stars, no releases, five provider logins, three databases and a residential proxy are not a non-builder product."
+    },
+    {
+      "name": "OpenSEO",
+      "url": "https://openseo.so/",
+      "desc": "Mature and installable, but its visibility layer stops at ChatGPT and Google AI Overview; Claude, Gemini and Grok are the product here."
+    }
+  ],
   "relatedSlugs": [
     "ahrefs",
     "semrush",

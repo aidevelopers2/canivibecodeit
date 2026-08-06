@@ -54,6 +54,64 @@
       "desc": "Open-source local knowledge graph and outliner."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Logseq",
+      "url": "https://logseq.com",
+      "type": "open-source",
+      "repo": "https://github.com/logseq/logseq",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android"
+      ],
+      "desc": "Roam's block graph, minus the monthly tribute and plus a folder you can inspect.",
+      "stars": 44299,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Obsidian",
+      "url": "https://obsidian.md",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android"
+      ],
+      "desc": "Bidirectional links and block references in plain files; the outline comes from plugins.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "SiYuan",
+      "url": "https://b3log.org/siyuan/",
+      "type": "open-source",
+      "repo": "https://github.com/siyuan-note/siyuan",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux",
+        "android",
+        "self-hosted",
+        "browser-extension"
+      ],
+      "desc": "Block references, backlinks and outlines without making the outliner your entire personality.",
+      "stars": 45647,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "tana",
     "capacities",

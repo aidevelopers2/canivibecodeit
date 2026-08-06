@@ -57,6 +57,19 @@
       "desc": "Open-source site-wide Lighthouse crawler and dashboard."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "ContentGecko Free SERP Clustering",
+      "url": "https://contentgecko.io/free-serp-keyword-clustering/",
+      "desc": "Clusters keywords you already have; it neither discovers them nor filters weak SERPs."
+    },
+    {
+      "name": "OpenSEO",
+      "url": "https://openseo.so/",
+      "desc": "It does keyword research, not weak-SERP pattern scoring; DataForSEO also makes free mostly a source-code adjective."
+    }
+  ],
   "relatedSlugs": [
     "keysearch",
     "serpstat",

@@ -52,6 +52,19 @@
       "status": "alive"
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "BrightBean Studio",
+      "url": "https://brightbean.xyz/studio/",
+      "desc": "Agent-friendly social publishing, not a communications carrier in disguise."
+    },
+    {
+      "name": "Postiz",
+      "url": "https://postiz.com/",
+      "desc": "A social publishing API and MCP server, with no WhatsApp, SMS, RCS, voice or phone-number infrastructure."
+    }
+  ],
   "relatedSlugs": [
     "buffer",
     "postiz",

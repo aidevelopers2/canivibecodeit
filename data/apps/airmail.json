@@ -52,6 +52,69 @@
       "desc": "Popular open-source mail-server suite that demonstrates the operational complexity of hosted mail."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Apple Mail",
+      "url": "https://support.apple.com/guide/mail/welcome/mac",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos",
+        "ios"
+      ],
+      "desc": "The client already on the Mac has send-later, reminders and swipe actions; customization stops where Apple says.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Edison Mail",
+      "url": "https://www.edisonmail.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos",
+        "windows",
+        "ios",
+        "android"
+      ],
+      "desc": "Custom swipes, snooze and scheduled sending without a subscription; optional shopping-data research pays the bill.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Spark Free",
+      "url": "https://sparkmailapp.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos",
+        "windows",
+        "ios",
+        "android"
+      ],
+      "desc": "Snooze, scheduled sends and configurable actions for free; read receipts and team features still collect rent.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "eM Client Free",
+      "url": "https://www.emclient.com/",
+      "desc": "The perpetual license is real, but snooze and send-later are paid and business use is forbidden."
+    },
+    {
+      "name": "Mailspring",
+      "url": "https://www.getmailspring.com/",
+      "desc": "A polished Mac client, but free snooze and send-later are deliberately rationed."
+    }
+  ],
   "relatedSlugs": [
     "superhuman",
     "front",

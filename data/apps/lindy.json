@@ -56,6 +56,24 @@
       "desc": "Source-available workflow automation engine and connector reference."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Dify Community Edition",
+      "url": "https://dify.ai/",
+      "desc": "A visual agent builder; the inbox, calendar, and support integrations are still yours to wire."
+    },
+    {
+      "name": "Flowise",
+      "url": "https://flowiseai.com/",
+      "desc": "A visual LLM graph, not a finished email, meeting, or support assistant."
+    },
+    {
+      "name": "n8n Community Edition",
+      "url": "https://n8n.io/",
+      "desc": "A workflow canvas, not a ready assistant; email, meetings, and support behavior still have to be designed."
+    }
+  ],
   "relatedSlugs": [
     "relevance-ai",
     "browse-ai",

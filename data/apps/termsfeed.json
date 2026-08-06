@@ -52,6 +52,29 @@
       "desc": "Open-source expert-system platform for guided interviews and document assembly."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Shopify Policy Generator",
+      "url": "https://www.shopify.com/tools/policy-generator",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Free generators for privacy, terms, refund, and shipping policies; respectable first drafts for ordinary stores, not compliance-by-checkbox.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Termly Basic",
+      "url": "https://termly.io/pricing/",
+      "desc": "One basic policy and no policy edits on the free tier is too cramped to replace a policy-generator subscription long-term."
+    }
+  ],
   "relatedSlugs": [
     "legalzoom",
     "rocket-lawyer",

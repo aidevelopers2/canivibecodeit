@@ -45,6 +45,57 @@
       "desc": "scheduler for non-containerized apps from a compose-style yml"
     }
   ],
+  "alternatives": [
+    {
+      "name": "cmux",
+      "url": "https://cmux.com/",
+      "type": "open-source",
+      "repo": "https://github.com/manaflow-ai/cmux",
+      "platforms": [
+        "macos"
+      ],
+      "desc": "A native Mac workspace for terminals, browsers and agent notifications; repos remain folders.",
+      "stars": 25700,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Nimbalyst",
+      "url": "https://nimbalyst.com/",
+      "type": "open-source",
+      "repo": "https://github.com/nimbalyst/nimbalyst",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android"
+      ],
+      "desc": "A visual desktop for several coding agents; repos and terminals stay in the same room.",
+      "stars": 1408,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Wave Terminal",
+      "url": "https://www.waveterm.dev/",
+      "type": "open-source",
+      "repo": "https://github.com/wavetermdev/waveterm",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "Repos, terminals, previews and remote files in one window; agents are just commands.",
+      "stars": 21900,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [],
   "pagePriority": 3,
   "verifiedOneShot": false,

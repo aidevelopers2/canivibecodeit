@@ -42,6 +42,14 @@
   "moatNotes": "proprietary data/crawler scale/AI extraction pipeline",
   "whyPeopleStillPay": "They pay because property search is a moving data pipeline: portals block scrapers, listing HTML changes, duplicates multiply, and the useful part is having the whole market normalized and searchable before a deal disappears.",
   "priorArt": [],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "InsulaCRM",
+      "url": "https://insulacrm.com/",
+      "desc": "A real-estate CRM with a heroic feature list, twelve stars and one commit; it still has no European property search."
+    }
+  ],
   "relatedSlugs": [
     "perplexity",
     "replit",

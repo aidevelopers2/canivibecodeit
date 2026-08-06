@@ -52,6 +52,40 @@
       "desc": "Active open-source coding-assistant framework for IDEs and multiple model providers."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Dyad",
+      "url": "https://dyad.sh/",
+      "type": "open-source",
+      "repo": "https://github.com/dyad-sh/dyad",
+      "platforms": [
+        "macos",
+        "windows"
+      ],
+      "desc": "Bolt on your laptop, minus the hosting fairy.",
+      "stars": 21100,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "bolt.diy",
+      "url": "https://bolt.diy/",
+      "desc": "MIT source, but its WebContainers runtime needs a commercial licence for production business use."
+    },
+    {
+      "name": "Continue",
+      "url": "https://continue.dev/",
+      "desc": "Acquired and read-only, and an editor agent was never a local prompt-to-app sandbox."
+    },
+    {
+      "name": "Onlook",
+      "url": "https://onlook.com/",
+      "desc": "The code is active; the product still says early access and sends users to a waitlist."
+    }
+  ],
   "relatedSlugs": [
     "windsurf",
     "replit",

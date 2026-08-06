@@ -51,6 +51,97 @@
       "status": "alive"
     }
   ],
+  "alternatives": [
+    {
+      "name": "GPT Researcher",
+      "url": "https://gptr.dev/",
+      "type": "open-source",
+      "repo": "https://github.com/assafelovic/gpt-researcher",
+      "platforms": [
+        "web",
+        "self-hosted",
+        "cli"
+      ],
+      "desc": "A research agent rather than a search box; it returns cited reports and a bill from whichever model you chose.",
+      "stars": 28840,
+      "lastCommit": "2026-07",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Khoj",
+      "url": "https://khoj.dev/",
+      "type": "open-source",
+      "repo": "https://github.com/khoj-ai/khoj",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "A personal AI that searches the web and your files; broader than Perplexity, and noticeably heavier to run.",
+      "stars": 36300,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Local Deep Research",
+      "url": "https://github.com/LearningCircuit/local-deep-research",
+      "type": "open-source",
+      "repo": "https://github.com/LearningCircuit/local-deep-research",
+      "platforms": [
+        "web",
+        "self-hosted",
+        "cli"
+      ],
+      "desc": "Less search box, more research intern: it searches, iterates and writes cited reports on your own hardware.",
+      "stars": 8900,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Morphic",
+      "url": "https://www.morphic.sh/",
+      "type": "open-source",
+      "repo": "https://github.com/miurla/morphic",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A cited answer engine with a prettier face; Docker quietly brings PostgreSQL, Redis and SearXNG along.",
+      "stars": 9000,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Vane",
+      "url": "https://github.com/ItzCrazyKns/Vane",
+      "type": "open-source",
+      "repo": "https://github.com/ItzCrazyKns/Vane",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Perplexity with the meter removed: cited answers and deep research, provided you can run one Docker stack.",
+      "stars": 36010,
+      "lastCommit": "2026-04",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Perplexity Standard",
+      "url": "https://www.perplexity.ai/",
+      "desc": "Basic searches are practically unlimited; Pro Search and Research are explicitly very limited, which is the paid product's point."
+    }
+  ],
   "relatedSlugs": [
     "gemini",
     "gamma",

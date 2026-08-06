@@ -16,7 +16,7 @@ const apps = allApps().sort(
 );
 const cats = topCategories();
 
-const title = 'Can I Vibecode It? — Which subscriptions are one prompt away from free';
+const title = 'Can I Vibecode It? · Which subscriptions are one prompt away from free';
 const description =
   'The leaderboard of SaaS apps you can replace with one AI prompt. Honest verdicts, the exact prompt to run, and what you lose by leaving.';
 
@@ -62,7 +62,7 @@ const jsonld = [
         <input
           type="search"
           id="search"
-          placeholder="type an app. yes, kinda, or not really — plus the exact prompt, free."
+          placeholder={`type an app… (${apps.length} on the list)`}
           autocomplete="off"
           aria-label="Search apps"
           role="combobox"

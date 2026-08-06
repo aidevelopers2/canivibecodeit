@@ -52,6 +52,57 @@
       "desc": "Open-source search ranking tracker for owned keyword sets."
     }
   ],
+  "alternatives": [
+    {
+      "name": "OpenSEO",
+      "url": "https://openseo.so/",
+      "type": "open-source",
+      "repo": "https://github.com/every-app/open-seo",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Tracks desktop and mobile positions by location with history; free software, compulsory DataForSEO credits.",
+      "stars": 10614,
+      "lastCommit": "2026-07",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "SerpBear",
+      "url": "https://docs.serpbear.com/",
+      "type": "open-source",
+      "repo": "https://github.com/towfiqi/serpbear",
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "A real tracker with history and alerts; the software is free, the Google results usually are not.",
+      "stars": 2016,
+      "lastCommit": "2026-05",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "SEO PowerSuite Free",
+      "url": "https://www.link-assistant.com/",
+      "desc": "Free forever, provided you never save a project; that is a demo with better stamina, not rank tracking."
+    },
+    {
+      "name": "Serposcope",
+      "url": "https://www.serposcope.com/",
+      "desc": "Once the obvious free answer; archived in 2024, last commit January 2022, and the maintainer says bugs will not be fixed."
+    },
+    {
+      "name": "SerpTrail",
+      "url": "https://github.com/serpapi/serptrail",
+      "desc": "A neat new tracker from SerpApi; 42 stars and a July launch make it evidence, not yet a recommendation."
+    }
+  ],
   "relatedSlugs": [
     "moz-pro",
     "se-ranking",

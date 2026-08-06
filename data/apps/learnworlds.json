@@ -58,6 +58,82 @@
       "desc": "Open-source publishing and membership platform."
     }
   ],
+  "alternatives": [
+    {
+      "name": "CourseLit",
+      "url": "https://courselit.app",
+      "type": "open-source",
+      "repo": "https://github.com/codelitdev/courselit",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Courses, quizzes, drip lessons, communities and a site in one compose stack; interactive-video polish is thinner.",
+      "stars": 1200,
+      "lastCommit": "2026-07",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Frappe Learning",
+      "url": "https://frappe.io/learning",
+      "type": "open-source",
+      "repo": "https://github.com/frappe/lms",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A modern course platform with video, quizzes, assignments, cohorts, discussions and payments; mobile apps are not included.",
+      "stars": 3100,
+      "lastCommit": "2026-07",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Moodle",
+      "url": "https://moodle.org",
+      "type": "open-source",
+      "repo": "https://github.com/moodle/moodle",
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "A real LMS with lessons, progress, quizzes, forums, H5P and mobile apps; the interface has opinions from several geological eras.",
+      "stars": 7300,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Odoo Community",
+      "url": "https://www.odoo.com/page/community",
+      "type": "open-source",
+      "repo": "https://github.com/odoo/odoo",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Website, paid courses, forums and business plumbing in one enormous box; native mobile-course polish is not its party trick.",
+      "stars": 53527,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Ghost",
+      "url": "https://ghost.org",
+      "desc": "A fine membership publisher, not an LMS with progress, quizzes, assignments or interactive lessons."
+    },
+    {
+      "name": "Medusa",
+      "url": "https://medusajs.com",
+      "desc": "Commerce infrastructure does not become a course platform merely because courses can be sold."
+    }
+  ],
   "relatedSlugs": [
     "samcart",
     "thrivecart",

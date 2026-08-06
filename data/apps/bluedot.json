@@ -51,6 +51,19 @@
       "desc": "Local speech-to-text engine suitable for private transcription."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Fathom",
+      "url": "https://www.fathom.ai/",
+      "desc": "Bot-free capture exists in Mac beta, but the shared team workspace and knowledge layer are paid."
+    },
+    {
+      "name": "OpenWhispr",
+      "url": "https://openwhispr.com/",
+      "desc": "Bot-free capture, notes and searchable history are real; meeting clips and a shared team knowledge layer are not."
+    }
+  ],
   "relatedSlugs": [
     "notta",
     "sonix",

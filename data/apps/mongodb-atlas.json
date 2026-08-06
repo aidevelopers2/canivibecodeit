@@ -55,6 +55,19 @@
       "desc": "Open-source platform-as-a-service toolkit for a single server."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "MongoDB Atlas Free",
+      "url": "https://www.mongodb.com/atlas",
+      "desc": "The M0 cluster is free forever, but 512 MB, no backups, and 'learning and exploring' is not a replacement for Atlas production services."
+    },
+    {
+      "name": "MongoDB Community Server",
+      "url": "https://www.mongodb.com/products/self-managed/community-edition",
+      "desc": "A database server, not Atlas: no managed cluster, Atlas Search service, vector service, backups, or data platform."
+    }
+  ],
   "relatedSlugs": [
     "sentry",
     "uptime",

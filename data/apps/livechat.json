@@ -52,6 +52,74 @@
       "desc": "Mature open-source customer engagement and shared-inbox platform."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Chatwoot",
+      "url": "https://www.chatwoot.com/",
+      "type": "open-source",
+      "repo": "https://github.com/chatwoot/chatwoot",
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "A proper support inbox with chat, email and a help center; free software, billable server chores.",
+      "stars": 35534,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Live Helper Chat",
+      "url": "https://livehelperchat.com/",
+      "type": "open-source",
+      "repo": "https://github.com/LiveHelperChat/livehelperchat",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A battle-tested live-chat desk with routing, transcripts and canned replies; the interface has seen some things.",
+      "stars": 2236,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "tawk.to",
+      "url": "https://www.tawk.to/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "ios",
+        "android"
+      ],
+      "desc": "Live chat, tickets and a knowledge base for zero dollars; the little badge is how the arithmetic survives.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Zammad",
+      "url": "https://zammad.org/",
+      "type": "open-source",
+      "repo": "https://github.com/zammad/zammad",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A serious ticket desk with email, chat, SLAs and a knowledge base; setup is the first ticket.",
+      "stars": 5800,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "intercom",
     "zendesk",

@@ -44,5 +44,66 @@
       "desc": "the styling library that does the heavy lifting"
     }
   ],
+  "alternatives": [
+    {
+      "name": "Mini QR",
+      "url": "https://mini-qr-code-generator.vercel.app/",
+      "type": "open-source",
+      "repo": "https://github.com/lyqht/mini-qr",
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "A tidy QR workshop that generates, scans and batches without asking for a credit card or your life story.",
+      "stars": 2300,
+      "lastCommit": "2026-08",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "QR TIGER Free",
+      "url": "https://www.qrcode-tiger.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "The same generator gives away unlimited static codes that never expire; dynamic codes stop at three and 500 scans each.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "QRCode Monkey",
+      "url": "https://www.qrcode-monkey.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Static QR codes, unlimited scans and useful exports; tracking is the bit they keep for paying customers.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "qr-code-styling",
+      "url": "https://qr-code-styling.com/",
+      "desc": "A JavaScript library with a demo, not a product; last commit was April 2025."
+    },
+    {
+      "name": "TEC-IT QR Code Generator",
+      "url": "https://qrcode.tec-it.com/en/Url",
+      "desc": "Free and permanent, but the terms limit the generator and its images to private non-commercial use unless TEC-IT approves."
+    }
+  ],
   "prompt": "Build me a QR code generator like QR Tiger, self-hosted. Requirements:\n\n- A single page: enter a URL or text, live-preview the QR code, customize\n  foreground/background color, corner style, and an optional center logo upload.\n  Use the qr-code-styling library. Export as PNG or SVG.\n- Dynamic QR codes: /r/:slug 302-redirects to a target URL stored in SQLite,\n  so the destination can be edited later without reprinting the code. CRUD for\n  these behind basic-auth (/admin, credentials from .env).\n- Scan tracking for dynamic codes: log timestamp + user-agent + referer per hit,\n  show per-code totals and a 30-day count in the admin list.\n- Clean minimal UI, mobile-friendly, no accounts, no third-party calls.\n- Node, one process, SQLite file storage, deploy notes for a VPS."
 }

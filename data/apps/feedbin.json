@@ -56,6 +56,57 @@
       "desc": "Minimal self-hosted feed reader with a reliable polling core."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Folo",
+      "url": "https://folo.is",
+      "type": "open-source",
+      "repo": "https://github.com/RSSNext/Folo",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android"
+      ],
+      "desc": "RSS and one newsletter inbox for free; the 151st feed starts a pricing conversation.",
+      "stars": 38800,
+      "lastCommit": "2026-08",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "NewsBlur",
+      "url": "https://newsblur.com",
+      "type": "open-source",
+      "repo": "https://github.com/samuelclay/NewsBlur",
+      "platforms": [
+        "web",
+        "macos",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "RSS, email newsletters, search and filtering, provided you operate the whole contraption.",
+      "stars": 7600,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "FreshRSS",
+      "url": "https://freshrss.org",
+      "desc": "Excellent RSS, but it has no built-in email-newsletter inbox."
+    },
+    {
+      "name": "Miniflux",
+      "url": "https://miniflux.app",
+      "desc": "A fine feed reader, but newsletters need a separate email-to-RSS service."
+    }
+  ],
   "relatedSlugs": [
     "newsblur-premium",
     "bazqux-reader",

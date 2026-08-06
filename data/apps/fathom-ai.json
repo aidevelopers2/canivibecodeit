@@ -49,6 +49,19 @@
       "status": "alive"
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Meetily",
+      "url": "https://meetily.ai/",
+      "desc": "A solid local meeting assistant with no turnkey note-sync integrations."
+    },
+    {
+      "name": "OpenWhispr",
+      "url": "https://openwhispr.com/",
+      "desc": "It records, transcribes and summarizes locally, but it does not sync finished notes into the tools around your meeting."
+    }
+  ],
   "relatedSlugs": [
     "tldv",
     "krisp",

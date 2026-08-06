@@ -57,6 +57,24 @@
       "desc": "Self-hosted social media management software."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Fedica Free",
+      "url": "https://fedica.com/",
+      "desc": "Good X scheduling with a ten-item queue; no AI writing or lead machinery."
+    },
+    {
+      "name": "Postiz",
+      "url": "https://postiz.com/",
+      "desc": "AI writing, scheduling and analytics are here; lead tools and relationship automation are not."
+    },
+    {
+      "name": "TryPost",
+      "url": "https://trypost.it/",
+      "desc": "The scheduler is free, the AI needs a model bill, and there are no lead tools."
+    }
+  ],
   "relatedSlugs": [
     "authoredup",
     "feedhive",

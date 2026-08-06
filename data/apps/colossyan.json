@@ -53,6 +53,19 @@
       "desc": "Active community continuation of the fast local Piper text-to-speech engine."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Duix.Avatar",
+      "url": "https://www.duix.com/",
+      "desc": "Calls itself open source; the licence is custom, and the setup still wants Docker, 100GB of disk and an NVIDIA GPU."
+    },
+    {
+      "name": "OpenReel Video",
+      "url": "https://openreel.video/",
+      "desc": "A general browser editor, not a slide-to-presenter training-video factory."
+    }
+  ],
   "relatedSlugs": [
     "speechify",
     "synthesia",

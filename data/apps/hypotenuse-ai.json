@@ -57,6 +57,14 @@
       "desc": "Open-source interface and workflow layer for local or hosted language models."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Open WebUI",
+      "url": "https://openwebui.com/",
+      "desc": "A general chat workbench; it does not run product-catalog, campaign, and image-production workflows as one product."
+    }
+  ],
   "relatedSlugs": [
     "scalenut",
     "koalawriter",

@@ -52,6 +52,58 @@
       "desc": "Widely used Bitwarden-compatible self-hosted password server implementation."
     }
   ],
+  "alternatives": [
+    {
+      "name": "California DROP",
+      "url": "https://privacy.ca.gov/drop/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "California residents get one government request to 600-plus brokers; everyone else gets a geography lesson.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Optery Free Basic",
+      "url": "https://www.optery.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Finds the profiles and hands you the opt-out links; your unpaid labor is the business model.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Permission Slip by DeleteMe",
+      "url": "https://joindeleteme.com/permission-slip/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "ios",
+        "android"
+      ],
+      "desc": "A phone app that sends individual privacy requests and tracks them; bulk broker removal is the paid part.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Mozilla Monitor",
+      "url": "https://monitor.mozilla.org/",
+      "desc": "Everyone still links it; Mozilla shut the broker-removal product down and deleted its scan data."
+    }
+  ],
   "relatedSlugs": [
     "bitwarden",
     "deleteme",

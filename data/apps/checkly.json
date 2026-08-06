@@ -53,6 +53,30 @@
       "desc": "Popular open-source uptime monitoring dashboard with many check types."
     }
   ],
+  "alternatives": [
+    {
+      "name": "OneUptime",
+      "url": "https://oneuptime.com/",
+      "type": "open-source",
+      "repo": "https://github.com/oneuptime/oneuptime",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Scheduled Playwright and API checks, plus an incident system you did not ask for.",
+      "stars": 7400,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Uptime Kuma",
+      "url": "https://uptime.kuma.pet/",
+      "desc": "No Playwright or scripted browser transactions; it checks endpoints, not journeys."
+    }
+  ],
   "relatedSlugs": [
     "sentry",
     "uptime"

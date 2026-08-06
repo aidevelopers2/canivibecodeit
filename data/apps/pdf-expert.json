@@ -52,6 +52,41 @@
       "desc": "Active open-source web application for a broad set of PDF operations."
     }
   ],
+  "alternatives": [
+    {
+      "name": "PDFgear",
+      "url": "https://www.pdfgear.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "ios",
+        "android"
+      ],
+      "desc": "A polished free local editor for annotation, forms, signatures, merging, conversion, OCR, and light text edits; the most direct answer here.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Preview",
+      "url": "https://support.apple.com/guide/preview/welcome/mac",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos"
+      ],
+      "desc": "Already on every Mac and quietly excellent at viewing, annotating, filling, signing, rearranging, merging, and exporting PDFs; direct text editing is not the deal.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "adobe-acrobat-pro",
     "smallpdf",

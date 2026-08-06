@@ -50,6 +50,77 @@
       "status": "alive"
     }
   ],
+  "alternatives": [
+    {
+      "name": "Apple Writing Tools",
+      "url": "https://support.apple.com/en-us/121582",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos",
+        "ios"
+      ],
+      "desc": "Proofread, rewrite, shorten, or change tone almost anywhere, assuming your Apple hardware made the guest list.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Harper",
+      "url": "https://writewithharper.com/",
+      "type": "open-source",
+      "repo": "https://github.com/Automattic/harper",
+      "platforms": [
+        "macos",
+        "android",
+        "browser-extension"
+      ],
+      "desc": "A fast English grammar checker that stays on your device and mostly keeps its opinions to itself.",
+      "stars": 14200,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Writing Tools",
+      "url": "https://github.com/theJayTea/WritingTools",
+      "type": "open-source",
+      "repo": "https://github.com/theJayTea/WritingTools",
+      "platforms": [
+        "macos",
+        "windows"
+      ],
+      "desc": "Select text anywhere, hit a hotkey, and fix, rewrite, summarize, or obey a custom instruction without opening another tab.",
+      "stars": 2400,
+      "lastCommit": "2026-05",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "WritingTool",
+      "url": "https://writingtool.org/",
+      "type": "open-source",
+      "repo": "https://github.com/writingtool-org/writingtool",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "A LibreOffice extension with long-document checks, style statistics, profiles, and local AI; installing Java is the cover charge.",
+      "stars": 65,
+      "lastCommit": "2026-07",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "LanguageTool Free",
+      "url": "https://languagetool.org/",
+      "desc": "The engine is open source, but the browser extension went Premium-only in 2026; the free web checker no longer replaces across-app use."
+    }
+  ],
   "relatedSlugs": [
     "languagetool",
     "canva",

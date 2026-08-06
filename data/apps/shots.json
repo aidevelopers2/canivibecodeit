@@ -12,7 +12,7 @@
     "notes": null
   },
   "verdictConfidence": "high",
-  "verdictSummary": "Gradient background, padding, rounded corners, export. Pure client-side canvas work — there is no server to even build.",
+  "verdictSummary": "Gradient background, padding, rounded corners, export. Pure client-side canvas work; there is no server to even build.",
   "coreLoopDIY": null,
   "diyTimeEstimate": "one sitting",
   "requirements": [],
@@ -32,12 +32,57 @@
   "category": "screenshots",
   "priceMonthly": 10,
   "verdict": "yes",
-  "notes": "Gradient background, padding, rounded corners, export. Pure client-side canvas work — there is no server to even build.",
+  "notes": "Gradient background, padding, rounded corners, export. Pure client-side canvas work; there is no server to even build.",
   "whatYouLose": [
     "their template/mockup library",
     "device frames kept up to date",
     "batch processing"
   ],
   "priorArt": [],
+  "alternatives": [
+    {
+      "name": "BrandBird Screenshot Beautifier",
+      "url": "https://www.brandbird.app/tools/screenshot-beautifier",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Gradients, padding and rounded corners for free; batch work is where the bill starts.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "macshot",
+      "url": "https://macshot.io",
+      "type": "open-source",
+      "repo": "https://github.com/sw33tLie/macshot",
+      "platforms": [
+        "macos"
+      ],
+      "desc": "Gradients, padding, rounded corners and shadows in a native Mac app that also takes the screenshot.",
+      "stars": 2800,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "ScreenCharm",
+      "url": "https://screencharm.com/free-tools/screenshot-beautifier",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "The Shots.so recipe, free forever and done entirely in your browser.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "prompt": "Build me a screenshot beautifier like Shots or Xnapper, as a single static page.\nRequirements:\n\n- Drag-and-drop or paste a screenshot onto the page (also support a file picker).\n- Render it on a canvas with: adjustable padding, corner radius, and shadow;\n  a background picker with ~10 tasteful presets (gradients + solid colors) plus\n  a custom color input; optional 16:9 / 4:3 / 1:1 / Twitter-size canvas ratios.\n- Live preview of every control, no Apply buttons. Controls in a sidebar.\n- Export as PNG at 1x or 2x with one click; also Copy to clipboard.\n- Everything client-side · no uploads, no server, works offline once loaded.\n  Vanilla JS + canvas, one HTML file, no build step, no frameworks.\n- Make the defaults gorgeous so the first export already looks premium."
 }

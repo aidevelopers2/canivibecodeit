@@ -56,6 +56,14 @@
       "desc": "Widely used local Stable Diffusion interface and extension ecosystem."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Krita AI Diffusion",
+      "url": "https://www.interstice.cloud/",
+      "desc": "A strong desktop editor with generation and compositing, but no mobile template library or quick social-video workflow."
+    }
+  ],
   "relatedSlugs": [
     "lensa",
     "picsart",

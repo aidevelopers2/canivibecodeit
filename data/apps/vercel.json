@@ -53,6 +53,75 @@
       "status": "alive"
     }
   ],
+  "alternatives": [
+    {
+      "name": "Cloudflare Pages Free",
+      "url": "https://pages.cloudflare.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "cli"
+      ],
+      "desc": "Git-to-edge hosting with previews and Workers functions; a strong fit unless your app depends on Vercel's Next.js-only tricks.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Coolify",
+      "url": "https://coolify.io/",
+      "type": "open-source",
+      "repo": "https://github.com/coollabsio/coolify",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Deploy Next.js or any web container from Git on your own server; previews and framework magic are less automatic.",
+      "stars": 57000,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Dokploy",
+      "url": "https://dokploy.com/",
+      "type": "open-source",
+      "repo": "https://github.com/Dokploy/dokploy",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A newer self-hosted PaaS for apps and databases, with previews, TLS, logs, and backups in the same control plane.",
+      "stars": 36000,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Netlify Free",
+      "url": "https://www.netlify.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "cli"
+      ],
+      "desc": "A commercial-friendly frontend cloud with Git deploys, previews, serverless functions, TLS, and a hard free allowance.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Vercel Hobby",
+      "url": "https://vercel.com/",
+      "desc": "Free, but its terms restrict Hobby to personal or non-commercial use; your business frontend is not a hobby."
+    }
+  ],
   "relatedSlugs": [
     "netlify",
     "webflow",

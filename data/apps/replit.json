@@ -51,6 +51,58 @@
       "status": "alive"
     }
   ],
+  "alternatives": [
+    {
+      "name": "code-server",
+      "url": "https://coder.com/docs/code-server",
+      "type": "open-source",
+      "repo": "https://github.com/coder/code-server",
+      "platforms": [
+        "web",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "VS Code in a browser; agents, hosting and deployment are separate chores.",
+      "stars": 78643,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Coder",
+      "url": "https://coder.com/",
+      "type": "open-source",
+      "repo": "https://github.com/coder/coder",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "Full cloud workspaces on your infrastructure; Terraform and PostgreSQL come along for the ride.",
+      "stars": 13300,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Eclipse Che",
+      "url": "https://www.eclipse.org/che/",
+      "type": "open-source",
+      "repo": "https://github.com/eclipse-che/che",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A real browser IDE platform, assuming Kubernetes already counts as normal in your house.",
+      "stars": 7200,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "codesandbox",
     "vercel",

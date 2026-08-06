@@ -55,6 +55,29 @@
       "desc": "Open-source product analytics, feature flags, and session replay."
     }
   ],
+  "alternatives": [
+    {
+      "name": "ProfitWell Metrics",
+      "url": "https://www.paddle.com/profitwell-metrics",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "MRR, churn, cohorts and segmentation for zero dollars; advanced forecasting is still somebody else's job.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "MRR.io Free",
+      "url": "https://mrr.io",
+      "desc": "The free plan hides cohorts and segmentation behind Pro, so it misses the actual job."
+    }
+  ],
   "relatedSlugs": [
     "baremetrics",
     "usermaven",

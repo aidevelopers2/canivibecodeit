@@ -40,6 +40,30 @@
   "moatNotes": "browser fleet, blocking-rule corpus, proxies, and rendering reliability",
   "whyPeopleStillPay": "They want a screenshot API that stays reliable across hostile, slow, dynamic, and consent-heavy sites without operating Chrome/Chromium workers, updating blocking rules, managing proxies, or debugging browser failures.",
   "priorArt": [],
+  "alternatives": [
+    {
+      "name": "Gotenberg",
+      "url": "https://gotenberg.dev/",
+      "type": "open-source",
+      "repo": "https://github.com/gotenberg/gotenberg",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A single Docker API for screenshots and PDFs; no anti-bot magic included.",
+      "stars": 12800,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Browserless",
+      "url": "https://www.browserless.io/",
+      "desc": "Free only for non-commercial use; production proprietary work needs a paid licence."
+    }
+  ],
   "relatedSlugs": [
     "shotomatic",
     "apify",

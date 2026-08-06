@@ -52,6 +52,105 @@
       "desc": "Open-source visual website builder designed around web standards."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Concrete CMS",
+      "url": "https://www.concretecms.org",
+      "type": "open-source",
+      "repo": "https://github.com/concretecms/concretecms",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A proper in-page CMS for people who prefer editing the page to editing a dashboard about the page.",
+      "stars": 850,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Microweber",
+      "url": "https://microweber.org",
+      "type": "open-source",
+      "repo": "https://github.com/microweber/microweber",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A drag-and-drop PHP CMS with pages, forms and collections; simple to edit, not maintenance-free.",
+      "stars": 3431,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Plasmic",
+      "url": "https://www.plasmic.app",
+      "type": "open-source",
+      "repo": "https://github.com/plasmicapp/plasmic",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Unlimited hosted projects, CMS and custom domains free; the badge is cheaper than Dorik.",
+      "stars": 6900,
+      "lastCommit": "2026-08",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Silex",
+      "url": "https://www.silex.me",
+      "type": "open-source",
+      "repo": "https://github.com/silexlabs/Silex",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A visual multi-page static-site builder with export; collections are manual rather than magical.",
+      "stars": 2919,
+      "lastCommit": "2026-08",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Vvveb",
+      "url": "https://www.vvveb.com",
+      "type": "open-source",
+      "repo": "https://github.com/givanz/Vvveb",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A finished visual CMS with forms, posts and custom content; obscure enough that support starts with reading docs.",
+      "stars": 1200,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Webstudio",
+      "url": "https://webstudio.is",
+      "type": "open-source",
+      "repo": "https://github.com/webstudio-is/webstudio",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A polished visual builder and CMS connector; using your own domain for free moves hosting onto you.",
+      "stars": 8800,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "GrapesJS",
+      "url": "https://grapesjs.com",
+      "desc": "The editor is real; the product around it is yours to build."
+    }
+  ],
   "relatedSlugs": [
     "duda",
     "tilda",

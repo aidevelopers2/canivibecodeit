@@ -51,6 +51,39 @@
       "desc": "Mature open-source research and citation manager."
     }
   ],
+  "alternatives": [
+    {
+      "name": "CADIMA",
+      "url": "https://www.cadima.info/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "A free systematic-review workbench; the automation is mostly humans with checklists.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Ai2 Asta",
+      "url": "https://asta.allen.ai",
+      "desc": "Good at finding and summarizing papers, but it has no screening or extraction workflow."
+    },
+    {
+      "name": "ASReview LAB",
+      "url": "https://asreview.nl/",
+      "desc": "Excellent screening software, but it only screens and still expects a local Python install."
+    },
+    {
+      "name": "Rayyan",
+      "url": "https://www.rayyan.ai",
+      "desc": "The free tier screens papers, but extraction and the serious automation live behind paid plans."
+    }
+  ],
   "relatedSlugs": [
     "consensus",
     "scite",

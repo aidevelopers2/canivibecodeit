@@ -52,6 +52,83 @@
       "status": "alive"
     }
   ],
+  "alternatives": [
+    {
+      "name": "Baserow Free",
+      "url": "https://baserow.io/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "A table workspace plus an app builder for portals and mobile-style screens; visual polish is lower, data ownership is better.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Budibase",
+      "url": "https://budibase.com/",
+      "type": "open-source",
+      "repo": "https://github.com/Budibase/budibase",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Internal apps, forms, automations, and portals in one box; much closer to Knack than its developer branding suggests.",
+      "stars": 27902,
+      "lastCommit": "2026-07",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Glide Free",
+      "url": "https://www.glideapps.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "The same builder works indefinitely for one simple Glide-table app and ten personal users; integrations wait behind payment.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "NocoBase",
+      "url": "https://www.nocobase.com/",
+      "type": "open-source",
+      "repo": "https://github.com/nocobase/nocobase",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A database-backed app builder with pages, forms, roles, workflows, and enough plugins to become your next maintenance hobby.",
+      "stars": 23600,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Softr Free",
+      "url": "https://www.softr.io/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "A friendlier portal and dashboard builder with real users, forms, record actions, workflows, and a free published app.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "bubble",
     "zapier",

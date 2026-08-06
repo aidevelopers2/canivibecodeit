@@ -49,6 +49,19 @@
       "desc": "Local-first automatic time tracking with an extensible event model."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Logseq",
+      "url": "https://logseq.com/",
+      "desc": "A fine local journal and task graph; habits and relationship notes require inventing your own system."
+    },
+    {
+      "name": "Obsidian",
+      "url": "https://obsidian.md/",
+      "desc": "A polished local notebook, not an encrypted task, habit, journal, and relationship manager out of the box."
+    }
+  ],
   "relatedSlugs": [
     "skedpal",
     "timehero",

@@ -54,6 +54,46 @@
       "desc": "Self-hosted photo organization and search."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Affinity",
+      "url": "https://affinity.serif.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos",
+        "windows"
+      ],
+      "desc": "A free desktop vector-and-layout suite with typography, masks, effects, and professional export; Apple-only convenience is gone, capability is not.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Inkscape",
+      "url": "https://inkscape.org/",
+      "type": "open-source",
+      "repo": "https://gitlab.com/inkscape/inkscape",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "The unfashionable workhorse for vector illustration, typography, and production SVG/PDF files across all three desktop operating systems.",
+      "stars": 3985,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Graphite",
+      "url": "https://graphite.rs/",
+      "desc": "Modern, open, and still alpha; not the finished illustrator a non-builder should trust with paid work yet."
+    }
+  ],
   "relatedSlugs": [
     "photopea-premium",
     "luminar-neo",

@@ -53,6 +53,30 @@
       "desc": "Widely used local Whisper inference implementation suitable for private transcription."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Speakr",
+      "url": "https://murtaza-nasir.github.io/speakr/",
+      "type": "open-source",
+      "repo": "https://github.com/murtaza-nasir/speakr",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Upload or record calls, separate speakers, keep searchable notes and inspect speaker stats; the server is now your problem.",
+      "stars": 3600,
+      "lastCommit": "2026-07",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "OpenWhispr",
+      "url": "https://openwhispr.com/",
+      "desc": "Excellent transcription and searchable notes, but no coaching notebook, scorecards or call-review workflow."
+    }
+  ],
   "relatedSlugs": [
     "fathom-ai",
     "read-ai",

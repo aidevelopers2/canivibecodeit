@@ -25,7 +25,7 @@ const status = purchase?.status ?? 'missing';
 const editable = status === 'paid' || status === 'submitted';
 const tint = purchase?.tint || DEFAULT_TINT;
 
-const title = 'Your sponsor slot — canivibecodeit';
+const title = 'Your sponsor slot · canivibecodeit';
 const description = 'Finish setting up your sponsor placement.';
 ---
 
@@ -47,7 +47,7 @@ const description = 'Finish setting up your sponsor placement.';
         <section class="sp-hero">
           <h1>Still waiting on the payment.</h1>
           <p class="sub">
-            Stripe hasn't confirmed this one yet. Give it a minute and reload — if it never
+            Stripe hasn't confirmed this one yet. Give it a minute and reload. If it never
             confirms, nothing was charged and the slot goes back on sale.
           </p>
         </section>
@@ -82,13 +82,13 @@ const description = 'Finish setting up your sponsor placement.';
       editable && (
         <>
           <section class="sp-hero">
-            <h1>{status === 'submitted' ? 'Got it — waiting on approval.' : "Paid. Now, who are you?"}</h1>
+            <h1>{status === 'submitted' ? 'Got it. Waiting on approval.' : "Paid. Now, who are you?"}</h1>
             <p class="sub">
               Slot {purchase.slot_id} · {usd(purchase.amount_cents)} · {RUN_DAYS * (Number(purchase.months) || 1)} days from the moment
               it's approved.{' '}
               {status === 'submitted'
                 ? "We've got it. You can still change anything below until it goes live."
-                : 'Three fields, then we review it — usually within a few hours.'}
+                : 'Three fields, then we review it, usually within a few hours.'}
             </p>
           </section>
 
@@ -148,7 +148,7 @@ const description = 'Finish setting up your sponsor placement.';
               </label>
 
               <label>
-                <span class="microlabel">icon url — optional, we grab your favicon otherwise</span>
+                <span class="microlabel">icon url · optional, we grab your favicon otherwise</span>
                 <input
                   type="text"
                   inputmode="url"
@@ -164,7 +164,7 @@ const description = 'Finish setting up your sponsor placement.';
                 <span class="microlabel">card color</span>
                 <span class="sp-color-row">
                   <input type="color" name="tint" id="sp-tint" value={tint} />
-                  <span class="sp-color-hint">defaults to your icon's color — change it if you'd rather stand out</span>
+                  <span class="sp-color-hint">defaults to your icon's color; change it if you'd rather stand out</span>
                 </span>
               </label>
 
@@ -321,7 +321,7 @@ const description = 'Finish setting up your sponsor placement.';
       }).catch(() => null);
       const data = await res?.json().catch(() => ({}));
       if (res?.ok) {
-        msg.textContent = "sent. we review every sponsor by hand — you'll get an email either way.";
+        msg.textContent = "sent. we review every sponsor by hand; you'll get an email either way.";
         msg.className = 'sp-form-msg ok';
         btn.textContent = 'update it';
       } else {

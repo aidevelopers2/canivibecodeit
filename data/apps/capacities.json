@@ -50,6 +50,65 @@
       "desc": "Active open-source workspace with local-first documents and databases."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Anytype",
+      "url": "https://anytype.io",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android"
+      ],
+      "desc": "Capacities with the same object obsession, local data and only 100 MB of free relay storage.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "SiYuan",
+      "url": "https://b3log.org/siyuan/",
+      "type": "open-source",
+      "repo": "https://github.com/siyuan-note/siyuan",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux",
+        "android",
+        "self-hosted",
+        "browser-extension"
+      ],
+      "desc": "Typed blocks, relations and database views for people who enjoy seeing the machinery.",
+      "stars": 45647,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Trilium Notes",
+      "url": "https://triliumnotes.org",
+      "type": "open-source",
+      "repo": "https://github.com/TriliumNext/Trilium",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted",
+        "browser-extension"
+      ],
+      "desc": "Notes become objects through attributes, relations and reusable templates.",
+      "stars": 37278,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "craft",
     "slite",

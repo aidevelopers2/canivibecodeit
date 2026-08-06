@@ -50,6 +50,19 @@
       "desc": "Local speech-to-text engine suitable for private transcription."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Muesli",
+      "url": "https://muesli.works/",
+      "desc": "Excellent local notes; integrations and cross-tool knowledge are deliberately not the product."
+    },
+    {
+      "name": "OpenWhispr",
+      "url": "https://openwhispr.com/",
+      "desc": "Good meeting capture and search, but no pre-meeting briefings, cross-tool context or automated follow-up system."
+    }
+  ],
   "relatedSlugs": [
     "wudpecker",
     "meetrecord",

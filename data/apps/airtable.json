@@ -53,6 +53,92 @@
       "status": "alive"
     }
   ],
+  "alternatives": [
+    {
+      "name": "Airtable Free",
+      "url": "https://airtable.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "ios",
+        "android"
+      ],
+      "desc": "The obvious escape hatch is staying put: five editors and 1,000 records per base, with forms, interfaces, and small automations.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Baserow Free",
+      "url": "https://baserow.io/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Airtable with fewer ornaments: 3,000 rows, forms, views, automations, and a small app builder for $0.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Fibery Free",
+      "url": "https://fibery.io/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "browser-extension"
+      ],
+      "desc": "A less spreadsheet-shaped Airtable replacement with relational databases, forms, views, formulas, and 250 automations for ten people.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "SeaTable Free",
+      "url": "https://seatable.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "A serious grid with 10,000 rows, forms, automations, scripts, and an app builder before it asks for money.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Teable Free",
+      "url": "https://teable.ai/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "An Airtable-shaped database with 1,000 rows, 100 automations, and a real app builder on the free plan.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "NocoDB Community",
+      "url": "https://nocodb.com/",
+      "desc": "The grid and forms are real; Airtable-style automations and interfaces are not in the free Community product."
+    }
+  ],
   "relatedSlugs": [
     "coda",
     "tally",

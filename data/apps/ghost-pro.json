@@ -51,6 +51,30 @@
       "status": "alive"
     }
   ],
+  "alternatives": [
+    {
+      "name": "Ghost",
+      "url": "https://ghost.org/",
+      "type": "open-source",
+      "repo": "https://github.com/TryGhost/Ghost",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Ghost Pro without Ghost doing the server, database, mail plumbing, backups, or late-night updates for you.",
+      "stars": 54691,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Substack",
+      "url": "https://substack.com/",
+      "desc": "Free until readers pay you; then Substack takes ten percent, which is not the same thing as free."
+    }
+  ],
   "relatedSlugs": [
     "shopify",
     "podia",

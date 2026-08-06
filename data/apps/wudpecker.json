@@ -50,6 +50,19 @@
       "desc": "Local speech-to-text engine suitable for private transcription."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Muesli",
+      "url": "https://muesli.works/",
+      "desc": "Custom templates and local notes are excellent; the integrations that make Wudpecker useful are missing."
+    },
+    {
+      "name": "Speakr",
+      "url": "https://murtaza-nasir.github.io/speakr/",
+      "desc": "Templates and searchable notes exist, but turnkey integrations do not, and deployment is a real stack."
+    }
+  ],
   "relatedSlugs": [
     "meetrecord",
     "macwhisper",

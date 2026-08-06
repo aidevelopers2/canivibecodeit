@@ -51,6 +51,25 @@
       "desc": "Open-source non-linear video editor."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Recordly",
+      "url": "https://recordly.dev",
+      "type": "open-source",
+      "repo": "https://github.com/webadderallorg/Recordly",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "Screen recording, auto-zoom and a real editor; young enough that audio still occasionally picks a fight.",
+      "stars": 20439,
+      "lastCommit": "2026-07",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "riverside",
     "zencastr",

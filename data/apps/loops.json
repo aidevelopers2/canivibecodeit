@@ -57,6 +57,97 @@
       "desc": "Open-source marketing automation platform."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Brevo Free",
+      "url": "https://www.brevo.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Hosted marketing and transactional email with automation; the 300-message daily cap is less startup-shaped.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Dittofeed",
+      "url": "https://www.dittofeed.com/",
+      "type": "open-source",
+      "repo": "https://github.com/dittofeed/dittofeed",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Lifecycle journeys driven by product events, with richer branching and much heavier operations.",
+      "stars": 2887,
+      "lastCommit": "2026-03",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Loops Free",
+      "url": "https://loops.so/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "The vendor's own free tier includes every lifecycle and transactional feature for 1,000 contacts.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Mautic",
+      "url": "https://mautic.org/",
+      "type": "open-source",
+      "repo": "https://github.com/mautic/mautic",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A complete lifecycle automation engine with no contact ceiling; simplicity left the building.",
+      "stars": 10300,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Notifuse",
+      "url": "https://www.notifuse.com/",
+      "type": "open-source",
+      "repo": "https://github.com/Notifuse/notifuse",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Modern campaigns, transactional mail and visual automations in one compose stack; event collection remains your job.",
+      "stars": 2038,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Plunk",
+      "url": "https://www.useplunk.com/",
+      "type": "open-source",
+      "repo": "https://github.com/useplunk/plunk",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Marketing, transactional email and workflows from one self-hosted app; SaaS-specific templates are fewer.",
+      "stars": 5300,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "letterdrop",
     "audienceful",

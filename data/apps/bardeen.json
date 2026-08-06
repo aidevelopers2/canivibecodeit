@@ -53,6 +53,40 @@
       "desc": "Active open-source automation platform with connectors and durable workflow execution."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Automa",
+      "url": "https://www.goautoma.com/extension/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "browser-extension"
+      ],
+      "desc": "A browser flowchart that clicks, fills, scrapes, and runs on a schedule.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "UI.Vision RPA",
+      "url": "https://ui.vision/",
+      "type": "open-source",
+      "repo": "https://github.com/A9T9/RPA",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux",
+        "browser-extension"
+      ],
+      "desc": "A visible macro recorder with OCR; the interface escaped from 2009, the automations did not.",
+      "stars": 2000,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "pipedream",
     "ifttt",

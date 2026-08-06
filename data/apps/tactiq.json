@@ -53,6 +53,59 @@
       "desc": "Widely used local Whisper inference implementation suitable for private transcription."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Meeting Transcriber",
+      "url": "https://meetingtranscriber.app/",
+      "type": "open-source",
+      "repo": "https://github.com/pasrom/meeting-transcriber",
+      "platforms": [
+        "macos"
+      ],
+      "desc": "Auto-detects common meeting apps on Mac, transcribes locally and writes structured notes.",
+      "stars": 97,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Muesli",
+      "url": "https://muesli.works/",
+      "type": "open-source",
+      "repo": "https://github.com/Muesli-HQ/muesli",
+      "platforms": [
+        "macos"
+      ],
+      "desc": "Skips browser captions and records the actual call instead, then cleans it into notes on your Mac.",
+      "stars": 890,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "OpenWhispr",
+      "url": "https://openwhispr.com/",
+      "type": "open-source",
+      "repo": "https://github.com/OpenWhispr/openwhispr",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "Cross-platform meeting capture, transcript cleanup and AI notes without a browser extension or minute meter.",
+      "stars": 5223,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "TranscripTonic",
+      "url": "https://chromewebstore.google.com/detail/transcriptonic/ciepnfnceimjehngolkijpnbappkkiag",
+      "desc": "Captures Google Meet captions cleanly, but stops at a text file; the AI-notes half of Tactiq is missing."
+    }
+  ],
   "relatedSlugs": [
     "fathom-ai",
     "read-ai",

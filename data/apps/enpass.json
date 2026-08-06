@@ -52,6 +52,37 @@
       "desc": "Widely used Bitwarden-compatible self-hosted password server implementation."
     }
   ],
+  "alternatives": [
+    {
+      "name": "KeePassXC",
+      "url": "https://keepassxc.org/",
+      "type": "open-source",
+      "repo": "https://github.com/KeePassXreboot/keepassxc",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux",
+        "browser-extension"
+      ],
+      "desc": "A local encrypted vault with browser autofill; put the database in your own sync folder and own the conflicts.",
+      "stars": 28300,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Proton Pass Free",
+      "url": "https://proton.me/pass",
+      "desc": "A hosted vault, not a local database synced through storage you choose."
+    },
+    {
+      "name": "Vaultwarden",
+      "url": "https://github.com/dani-garcia/vaultwarden",
+      "desc": "A capable self-hosted password server, but it replaces Enpass’s local-file model with server operations."
+    }
+  ],
   "relatedSlugs": [
     "bitwarden",
     "deleteme",

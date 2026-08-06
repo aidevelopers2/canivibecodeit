@@ -49,6 +49,58 @@
       "status": "alive"
     }
   ],
+  "alternatives": [
+    {
+      "name": "AFFiNE",
+      "url": "https://affine.pro/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android"
+      ],
+      "desc": "Docs, whiteboards, databases, mind maps, tasks, and presentation frames in one finished app; the free hosted limits are tolerable for one person or a tiny team.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "CryptPad",
+      "url": "https://cryptpad.org/",
+      "type": "open-source",
+      "repo": "https://github.com/cryptpad/cryptpad",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Private collaborative docs, whiteboards, diagrams, slides, and Kanban in one suite; rougher edges, fewer tasteful shortcuts, and no native mind-map mode.",
+      "stars": 7825,
+      "lastCommit": "2026-08",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Excalidraw",
+      "url": "https://excalidraw.com/",
+      "type": "open-source",
+      "repo": "https://github.com/excalidraw/excalidraw",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Excellent collaborative flowcharts, wireframes, and loose visual thinking; it does not pretend to be a proper document editor or structured mind mapper.",
+      "stars": 129054,
+      "lastCommit": "2026-08",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "adobe-express",
     "midjourney",

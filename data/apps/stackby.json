@@ -53,6 +53,36 @@
       "desc": "Active open-source no-code database interface and Airtable alternative."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Stackby Free",
+      "url": "https://stackby.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "The same product's free plan does the actual job: 20 stacks, 1,500 rows each, two API columns, views, and 100 automations.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "NocoDB Free",
+      "url": "https://nocodb.com/",
+      "desc": "A good table workspace, but it has no linked API-column feature, the reason to use Stackby in the first place."
+    },
+    {
+      "name": "Rows Free",
+      "url": "https://rows.com/",
+      "desc": "The famous connected-spreadsheet alternative is being folded into Superhuman Docs, so it is not a durable new home."
+    }
+  ],
   "relatedSlugs": [
     "baserow-cloud",
     "nocodb-cloud",

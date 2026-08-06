@@ -53,6 +53,19 @@
       "desc": "Widely deployed open-source video-conferencing platform."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "BigBlueButton",
+      "url": "https://bigbluebutton.org",
+      "desc": "Good live room, wrong product: registration pages and replay marketing are still your job."
+    },
+    {
+      "name": "Jitsi Meet",
+      "url": "https://meet.jit.si",
+      "desc": "A meeting room is not a webinar platform; registrations, reminders and replay pages are absent."
+    }
+  ],
   "relatedSlugs": [
     "zoom-pro",
     "google-workspace-business-starter",

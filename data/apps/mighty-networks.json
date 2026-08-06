@@ -51,6 +51,37 @@
       "status": "alive"
     }
   ],
+  "alternatives": [
+    {
+      "name": "Moodle",
+      "url": "https://moodle.org/",
+      "type": "open-source",
+      "repo": "https://github.com/moodle/moodle",
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "Courses, forums, events, badges and paid enrolment are all here; the creator-brand gloss emphatically is not.",
+      "stars": 7300,
+      "lastCommit": "2026-07",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "HumHub",
+      "url": "https://www.humhub.com/",
+      "desc": "A capable community and event hub, minus the course-selling and subscription machinery."
+    },
+    {
+      "name": "Odoo Community",
+      "url": "https://www.odoo.com/",
+      "desc": "Its modules cover the nouns, but the result is an ERP portal rather than a membership community."
+    }
+  ],
   "relatedSlugs": [
     "buffer",
     "later",

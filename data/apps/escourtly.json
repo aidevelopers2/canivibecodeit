@@ -37,7 +37,11 @@
     "CRM sync to Salesforce, HubSpot and Pipedrive",
     "custom domains with certificates handled for you"
   ],
-  "moatTags": ["execution-polish", "integrations", "scale-infra"],
+  "moatTags": [
+    "execution-polish",
+    "integrations",
+    "scale-infra"
+  ],
   "moatNotes": "capture fidelity across real apps, CRM sync, and hosted delivery",
   "replacementScope": "personal demo recorder with a self-hosted viewer",
   "ongoingBurden": "extension upkeep across Chrome releases, DOM capture edge cases, asset inlining, page hosting, custom domains and TLS, and viewer analytics",
@@ -49,7 +53,19 @@
       "desc": "MIT-licensed DOM record and replay · the capture engine this whole category is built on."
     }
   ],
-  "relatedSlugs": ["arcade", "supademo", "guidde"],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "rrweb",
+      "url": "https://github.com/rrweb-io/rrweb",
+      "desc": "The famous answer is an SDK and player, not a product anyone can install and hand to sales."
+    }
+  ],
+  "relatedSlugs": [
+    "arcade",
+    "supademo",
+    "guidde"
+  ],
   "pagePriority": 3,
   "verifiedOneShot": false,
   "notes": "Submitted by the product's founder · verdict and prompt follow the same criteria as the other entries in this category, and the DIY substitute is a self-hosted rrweb recorder rather than a video tool.",

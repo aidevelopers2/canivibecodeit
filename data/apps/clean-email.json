@@ -51,6 +51,72 @@
       "desc": "Open-source desktop mail client and useful IMAP prior art."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Edison Mail",
+      "url": "https://www.edisonmail.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos",
+        "windows",
+        "ios",
+        "android"
+      ],
+      "desc": "Bulk delete, unsubscribe, rules and sender blocking for free; opt out of the shopping-data research if that sentence bothered you.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Gmailytics",
+      "url": "https://gmailytics.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "browser-extension"
+      ],
+      "desc": "Gmail cleanup by sender with unlimited unsubscribes; background automation and other mail providers stayed home.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Inbox Zero",
+      "url": "https://www.getinboxzero.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Rules, bulk unsubscribe, cold-email blocking and cleanup under your own roof; OAuth and Docker are the cover charge.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Cleanfox",
+      "url": "https://www.cleanfox.io/",
+      "desc": "Free and functional, but market research on anonymized inbox data is still the business model."
+    },
+    {
+      "name": "Gmail Cleaner",
+      "url": "https://gururagavendra.github.io/gmail-cleaner/",
+      "desc": "Free and local, but setup starts by creating a Google Cloud OAuth app; that is not a non-builder install."
+    },
+    {
+      "name": "InboxPurge",
+      "url": "https://www.inboxpurge.com/",
+      "desc": "The local extension works, but twenty free actions barely clears one afternoon's backlog."
+    }
+  ],
   "relatedSlugs": [
     "sanebox",
     "leave-me-alone",

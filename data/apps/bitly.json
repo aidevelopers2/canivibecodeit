@@ -59,6 +59,69 @@
       "status": "alive"
     }
   ],
+  "alternatives": [
+    {
+      "name": "Dub",
+      "url": "https://dub.co",
+      "type": "open-source",
+      "repo": "https://github.com/dubinc/dub",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Bitly with deeper attribution; self-hosting means recreating half a startup's infrastructure.",
+      "stars": 24200,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Shlink",
+      "url": "https://shlink.io",
+      "type": "open-source",
+      "repo": "https://github.com/shlinkio/shlink",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Branded links, routing rules and serious click stats in one container; the QR endpoint is living on borrowed time.",
+      "stars": 5171,
+      "lastCommit": "2026-07",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Short.io",
+      "url": "https://short.io/pricing/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "browser-extension"
+      ],
+      "desc": "A thousand branded links, QR codes and real analytics before the pricing page becomes relevant.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Sink",
+      "url": "https://sink.cool",
+      "type": "open-source",
+      "repo": "https://github.com/miantiao-me/sink",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A polished Bitly clone on Cloudflare; free hosting, several bindings, and no server to patch.",
+      "stars": 7000,
+      "lastCommit": "2026-07",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "linktree",
     "qr"

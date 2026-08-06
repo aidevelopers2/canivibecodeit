@@ -53,6 +53,63 @@
       "desc": "Active open-source coding-assistant framework for IDEs and multiple model providers."
     }
   ],
+  "alternatives": [
+    {
+      "name": "AnythingLLM",
+      "url": "https://anythingllm.com/",
+      "type": "open-source",
+      "repo": "https://github.com/Mintplex-Labs/anything-llm",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "Chat, documents and agents in one installer; the models are still your problem.",
+      "stars": 64400,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Jan",
+      "url": "https://jan.ai/",
+      "type": "open-source",
+      "repo": "https://github.com/janhq/jan",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "A local ChatGPT-shaped window that also accepts your own API keys.",
+      "stars": 43900,
+      "lastCommit": "2026-07",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "LibreChat",
+      "url": "https://www.librechat.ai/",
+      "type": "open-source",
+      "repo": "https://github.com/danny-avila/LibreChat",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A multi-model chat client with no interest in owning the conversation.",
+      "stars": 41700,
+      "lastCommit": "2026-07",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Continue",
+      "url": "https://continue.dev/",
+      "desc": "An archived coding assistant, not a general local assistant client."
+    }
+  ],
   "relatedSlugs": [
     "windsurf",
     "replit",

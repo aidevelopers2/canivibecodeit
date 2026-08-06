@@ -48,6 +48,23 @@
       "status": "alive"
     }
   ],
+  "alternatives": [
+    {
+      "name": "Piktochart Free",
+      "url": "https://piktochart.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Sixty AI credits refresh each month; it makes carousels, not your entire social calendar.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "canva",
     "gamma",

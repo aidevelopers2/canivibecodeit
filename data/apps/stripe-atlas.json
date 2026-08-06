@@ -52,6 +52,23 @@
       "desc": "Open-source expert-system platform for guided interviews and document assembly."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Cooley GO Delaware Incorporation Package",
+      "url": "https://www.cooleygo.com/documents/incorporation-package-delaware/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "A free questionnaire that generates a Delaware incorporation package, answer summary, and filing checklist; unlike Atlas, it does not file anything or open your bank account.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "legalzoom",
     "rocket-lawyer",

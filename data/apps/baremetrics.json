@@ -55,6 +55,34 @@
       "desc": "Open-source product analytics, feature flags, and session replay."
     }
   ],
+  "alternatives": [
+    {
+      "name": "ChartMogul Free",
+      "url": "https://chartmogul.com/subscription-analytics/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "MRR, churn, cohorts and forecasts for free while the company stays under $10,000 MRR.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "MRR.io Free",
+      "url": "https://mrr.io",
+      "desc": "The free plan stops at basic metrics; cohorts and forecasting are paid."
+    },
+    {
+      "name": "ProfitWell Metrics",
+      "url": "https://www.paddle.com/profitwell-metrics",
+      "desc": "Free MRR, churn and cohorts, but no real forecasting; one headline feature is still missing."
+    }
+  ],
   "relatedSlugs": [
     "usermaven",
     "piwik-pro",

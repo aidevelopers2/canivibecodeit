@@ -52,6 +52,24 @@
       "desc": "Open-source customer-feedback portal with voting and status workflows."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Quackback",
+      "url": "https://quackback.io",
+      "desc": "Feedback, roadmap and changelog are covered; there is no real support desk or help center."
+    },
+    {
+      "name": "Sleekplan Indie",
+      "url": "https://sleekplan.com/pricing/",
+      "desc": "The free widget closes the feedback loop, not customer-support tickets; half the app is missing."
+    },
+    {
+      "name": "UserJot",
+      "url": "https://userjot.com",
+      "desc": "Excellent feedback, roadmap and changelog; its widget is not a support inbox or help center."
+    }
+  ],
   "relatedSlugs": [
     "canny",
     "productboard",

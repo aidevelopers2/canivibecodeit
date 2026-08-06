@@ -53,6 +53,33 @@
       "desc": "Mature open-source scheduling platform with calendar integrations and booking workflows."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Notion Calendar",
+      "url": "https://www.notion.com/product/calendar",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "ios",
+        "android"
+      ],
+      "desc": "Cron with a Notion badge: quick keyboarding, multiple calendars and availability sharing, but no contact brain.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Apple Calendar",
+      "url": "https://support.apple.com/guide/calendar/welcome/mac",
+      "desc": "Fast and free on Apple hardware, but it has no scheduling-link workflow."
+    }
+  ],
   "relatedSlugs": [
     "cal-com-teams",
     "fantastical",

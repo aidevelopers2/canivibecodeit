@@ -54,6 +54,54 @@
       "desc": "Active open-source web application for a broad set of PDF operations."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Documenso",
+      "url": "https://documenso.com/",
+      "type": "open-source",
+      "repo": "https://github.com/documenso/documenso",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Open-source document signing with templates, recipients, verification, and audit history; production self-hosting means Postgres, email, HTTPS, and actual operations.",
+      "stars": 14279,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "DocuSeal",
+      "url": "https://www.docuseal.com/",
+      "type": "open-source",
+      "repo": "https://github.com/docusealco/docuseal",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Reusable document templates, multiple recipients, signing links, reminders, and audit records; self-host it and the core workflow is not metered.",
+      "stars": 18202,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "OpenSign",
+      "url": "https://www.opensignlabs.com/",
+      "type": "open-source",
+      "repo": "https://github.com/OpenSignLabs/OpenSign",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A polished signature-request product with templates, sequential signing, audit trails, and a small hosted free allowance; Docker removes the vendor cap.",
+      "stars": 6772,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "adobe-acrobat-pro",
     "pdf-expert",

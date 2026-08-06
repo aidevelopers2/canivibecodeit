@@ -53,6 +53,24 @@
       "desc": "Active open-source commerce platform with modular checkout and fulfillment primitives."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "FOSSBilling",
+      "url": "https://fossbilling.org",
+      "desc": "Catalogs, subscriptions, downloads and licence keys fit, but the product remains explicitly beta with limited support."
+    },
+    {
+      "name": "Medusa",
+      "url": "https://medusajs.com",
+      "desc": "A commerce backend can be extended into entitlements; that extension work is exactly what this exercise forbids."
+    },
+    {
+      "name": "Polar",
+      "url": "https://polar.sh",
+      "desc": "The hosted path charges per sale and the self-hosted entitlement stack expects developers, not a non-builder."
+    }
+  ],
   "relatedSlugs": [
     "gumroad",
     "lemon-squeezy",

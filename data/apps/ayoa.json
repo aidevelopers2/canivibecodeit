@@ -55,6 +55,28 @@
       "desc": "Open-source infinite-canvas SDK and whiteboard."
     }
   ],
+  "alternatives": [
+    {
+      "name": "AFFiNE",
+      "url": "https://affine.pro/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android"
+      ],
+      "desc": "A surprisingly complete docs-and-whiteboards workspace; the free plan allows unlimited local workspaces, but cloud history and team size are capped.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "mindnode",
     "simplemind",

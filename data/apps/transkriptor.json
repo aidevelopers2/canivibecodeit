@@ -51,6 +51,24 @@
       "desc": "Local speech-to-text engine suitable for private transcription."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Subtitle Edit",
+      "url": "https://subtitleedit.github.io/subtitleedit/",
+      "desc": "Powerful subtitle review for one person, not a collaborative transcription workspace."
+    },
+    {
+      "name": "transcribee",
+      "url": "https://transcribee.net/",
+      "desc": "The collaborative idea is right; the project still labels itself unfinished and warns about severe multi-user performance."
+    },
+    {
+      "name": "Vibe",
+      "url": "https://thewh1teagle.github.io/vibe/",
+      "desc": "Covers transcription, translation and subtitles on one desktop; team collaboration is absent."
+    }
+  ],
   "relatedSlugs": [
     "timeos",
     "wudpecker",

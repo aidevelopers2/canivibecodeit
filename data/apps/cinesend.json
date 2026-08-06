@@ -57,6 +57,19 @@
       "status": "alive"
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Nextcloud",
+      "url": "https://nextcloud.com",
+      "desc": "Private links and passwords are not DRM, forensic watermarking, geo-blocking or view limits."
+    },
+    {
+      "name": "Shaka Packager",
+      "url": "https://shaka-project.github.io/shaka-packager/html/",
+      "desc": "A media-packaging command-line tool, not a secure screener product a normal team can adopt."
+    }
+  ],
   "relatedSlugs": [
     "frame-io",
     "vimeo",

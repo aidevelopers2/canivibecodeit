@@ -52,6 +52,47 @@
       "desc": "Open-source search ranking tracker for owned keyword sets."
     }
   ],
+  "alternatives": [
+    {
+      "name": "OpenSEO",
+      "url": "https://openseo.so/",
+      "type": "open-source",
+      "repo": "https://github.com/every-app/open-seo",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Keyword discovery, clustering and repeat rank checks in one container; DataForSEO sends the usage bill.",
+      "stars": 10614,
+      "lastCommit": "2026-07",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "SerpBear",
+      "url": "https://docs.serpbear.com/",
+      "type": "open-source",
+      "repo": "https://github.com/towfiqi/serpbear",
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "Rank history plus Google Ads keyword ideas; less research suite, more honest spreadsheet with alarms.",
+      "stars": 2016,
+      "lastCommit": "2026-05",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "SEO PowerSuite Free",
+      "url": "https://www.link-assistant.com/",
+      "desc": "Plenty of keyword machinery, but the free edition cannot save projects; tomorrow's research starts from zero."
+    }
+  ],
   "relatedSlugs": [
     "moz-pro",
     "se-ranking",

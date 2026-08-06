@@ -51,6 +51,8 @@
       "desc": "federated photo sharing with ephemeral 24-hour stories"
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "discord-nitro",
     "geneva-app"

@@ -54,6 +54,63 @@
       "desc": "Open-source local knowledge graph and outliner."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Kindling",
+      "url": "https://kindlingwriter.com",
+      "type": "open-source",
+      "repo": "https://github.com/smith-and-web/kindling",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "A tiny new Scrivener-shaped app that imports the real thing and keeps the outline beside the draft.",
+      "stars": 53,
+      "lastCommit": "2026-06",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Manuskript",
+      "url": "https://www.theologeek.ch/manuskript/",
+      "type": "open-source",
+      "repo": "https://github.com/olivierkes/manuskript",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "Scrivener's broad outline, rebuilt by volunteers and left with rougher edges.",
+      "stars": 2400,
+      "lastCommit": "2026-07",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "novelWriter",
+      "url": "https://novelwriter.io",
+      "type": "open-source",
+      "repo": "https://github.com/vkbo/novelWriter",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "A manuscript binder made of plain text, with fewer knobs than Scrivener.",
+      "stars": 3000,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Story Architect",
+      "url": "https://starc.app",
+      "desc": "Real installers and active work, but the project still calls the current release beta."
+    }
+  ],
   "relatedSlugs": [
     "livingwriter",
     "dabble",

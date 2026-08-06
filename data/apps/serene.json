@@ -49,6 +49,19 @@
       "desc": "Local-first automatic time tracking with an extensible event model."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "ScreenZen",
+      "url": "https://screenzen.co/",
+      "desc": "The blocker is real; goals, focus timers, planning, and session analytics are not."
+    },
+    {
+      "name": "Super Productivity",
+      "url": "https://super-productivity.com/",
+      "desc": "Tasks, timers, planning, and analytics are covered; distraction blocking is not."
+    }
+  ],
   "relatedSlugs": [
     "morgen",
     "routine",

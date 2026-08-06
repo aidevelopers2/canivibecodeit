@@ -55,6 +55,43 @@
       "desc": "Open-source infinite-canvas SDK and whiteboard."
     }
   ],
+  "alternatives": [
+    {
+      "name": "AFFiNE",
+      "url": "https://affine.pro/",
+      "type": "open-source",
+      "repo": "https://github.com/toeverything/AFFiNE",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "Notion and Miro sharing one canvas: collaborative docs, databases, diagrams, whiteboards, and planning views; dedicated PM automation is thinner.",
+      "stars": 71300,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Drawnix",
+      "url": "https://drawnix.com/",
+      "desc": "Flowcharts, mind maps, and freehand canvas are real; shared databases and project planning are not."
+    },
+    {
+      "name": "Excalidraw",
+      "url": "https://excalidraw.com/",
+      "desc": "A superb whiteboard and sketching tool, but there are no databases or project-planning system behind the drawings."
+    },
+    {
+      "name": "tldraw",
+      "url": "https://www.tldraw.com/",
+      "desc": "The hosted canvas is polished and free, but it remains a whiteboard, not Creately's diagram-plus-database planning workspace."
+    }
+  ],
   "relatedSlugs": [
     "smartdraw",
     "edrawmax",

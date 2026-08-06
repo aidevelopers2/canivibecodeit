@@ -49,6 +49,52 @@
       "desc": "Local-first automatic time tracking with an extensible event model."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Apple Screen Time",
+      "url": "https://support.apple.com/guide/mac-help/mchlfafa9773/mac",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos",
+        "ios"
+      ],
+      "desc": "Built-in Apple limits with passcodes and device sync; less stubborn, but genuinely free.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "ScreenZen",
+      "url": "https://screenzen.co/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos",
+        "windows",
+        "ios",
+        "android"
+      ],
+      "desc": "The hardened blocker without the subscription: delays, limits, strict sessions, and cross-device apps.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Cold Turkey Blocker",
+      "url": "https://getcoldturkey.com/",
+      "desc": "The free tier stops at websites; blocking apps and locked schedules requires Pro."
+    },
+    {
+      "name": "LeechBlock NG",
+      "url": "https://www.proginosko.com/leechblock/",
+      "desc": "A browser extension cannot enforce iPhone or Mac app limits, however stern its options page looks."
+    }
+  ],
   "relatedSlugs": [
     "session",
     "serene",

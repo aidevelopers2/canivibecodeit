@@ -56,6 +56,64 @@
       "desc": "Open-source publishing and membership platform."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Ghost",
+      "url": "https://ghost.org",
+      "type": "open-source",
+      "repo": "https://github.com/TryGhost/Ghost",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "All four nouns are present, but the website becomes a Ghost publication rather than keeping its current stack.",
+      "stars": 54500,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Paid Memberships Pro",
+      "url": "https://www.paidmembershipspro.com",
+      "type": "open-source",
+      "repo": "https://github.com/strangerstudios/paid-memberships-pro",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Authentication, member records, recurring billing and gated content inside WordPress; arbitrary-site embedding is gone.",
+      "stars": 528,
+      "lastCommit": "2026-07",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "systeme.io",
+      "url": "https://systeme.io",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Hosted users, subscriptions and gated content for a small membership site; you move the site into its ecosystem.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Medusa",
+      "url": "https://medusajs.com",
+      "desc": "It handles commerce primitives, not drop-in site authentication, member data and content gating."
+    },
+    {
+      "name": "Supabase",
+      "url": "https://supabase.com",
+      "desc": "Auth and data are there, but this is a developer backend, not a membership product a non-builder installs."
+    }
+  ],
   "relatedSlugs": [
     "outseta",
     "thinkific",

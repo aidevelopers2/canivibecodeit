@@ -59,6 +59,69 @@
       "status": "alive"
     }
   ],
+  "alternatives": [
+    {
+      "name": "Parabolic",
+      "url": "https://nickvision.org/parabolic.html",
+      "type": "open-source",
+      "repo": "https://github.com/NickvisionApps/Parabolic",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "A polite desktop face on yt-dlp; paste a playlist, pick MP3, go make tea.",
+      "stars": 6800,
+      "lastCommit": "2026-06",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Tartube",
+      "url": "https://tartube.sourceforge.io/",
+      "type": "open-source",
+      "repo": "https://github.com/axcore/tartube",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "A gloriously busy desktop queue for whole channels and playlists.",
+      "stars": 3100,
+      "lastCommit": "2026-07",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "yt-dlp",
+      "url": "https://github.com/yt-dlp/yt-dlp",
+      "type": "open-source",
+      "repo": "https://github.com/yt-dlp/yt-dlp",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux",
+        "cli"
+      ],
+      "desc": "Ugly, terminal-shaped, and still the downloader every prettier app quietly depends on.",
+      "stars": 182794,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "cobalt",
+      "url": "https://cobalt.tools",
+      "desc": "Lovely one-link downloader; AudioFetcher’s playlist job is still an open feature request."
+    },
+    {
+      "name": "Seal",
+      "url": "https://f-droid.org/packages/com.junkfood.seal/",
+      "desc": "Twenty-eight thousand stars, but the 2026 commits are monthly sponsor-copy edits; the last real code landed April 2025."
+    }
+  ],
   "relatedSlugs": [
     "descript",
     "capcut",

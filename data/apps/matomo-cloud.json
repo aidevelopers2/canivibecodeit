@@ -53,6 +53,39 @@
       "desc": "Popular open-source privacy-focused web analytics platform."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Matomo",
+      "url": "https://matomo.org",
+      "type": "open-source",
+      "repo": "https://github.com/matomo-org/matomo",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "The same analytics engine with goals and campaigns; you replace the cloud bill with PHP and database upkeep.",
+      "stars": 21700,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Umami",
+      "url": "https://umami.is",
+      "type": "open-source",
+      "repo": "https://github.com/umami-software/umami",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Goals, campaigns and first-party data in a much smaller self-hosted package.",
+      "stars": 38073,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "posthog",
     "mixpanel",

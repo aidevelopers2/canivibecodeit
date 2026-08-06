@@ -53,6 +53,116 @@
       "desc": "Widely used Bitwarden-compatible self-hosted password server implementation."
     }
   ],
+  "alternatives": [
+    {
+      "name": "AliasVault",
+      "url": "https://www.aliasvault.net/",
+      "type": "open-source",
+      "repo": "https://github.com/aliasvault/aliasvault",
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "self-hosted",
+        "browser-extension"
+      ],
+      "desc": "Passwords, passkeys, and disposable inboxes in one vault; self-host it and mail delivery joins your chores.",
+      "stars": 2400,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Bitwarden Free",
+      "url": "https://bitwarden.com/pricing/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android",
+        "browser-extension"
+      ],
+      "desc": "A full vault and form filler without the annual invoice; obscure identity fields may need manual cleanup.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "KeePassXC",
+      "url": "https://keepassxc.org/",
+      "type": "open-source",
+      "repo": "https://github.com/KeePassXreboot/keepassxc",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux",
+        "browser-extension"
+      ],
+      "desc": "A vault file on your disk with excellent autofill; syncing and sharing are deliberately somebody else’s job.",
+      "stars": 28300,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Proton Pass Free",
+      "url": "https://proton.me/pass",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android",
+        "browser-extension"
+      ],
+      "desc": "Unlimited logins, passkeys, and ten aliases for $0; sharing and dark-web monitoring live upstairs.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Vaultwarden",
+      "url": "https://github.com/dani-garcia/vaultwarden",
+      "type": "open-source",
+      "repo": "https://github.com/dani-garcia/vaultwarden",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android",
+        "self-hosted",
+        "browser-extension"
+      ],
+      "desc": "Bitwarden’s clients pointed at your own server; unofficial, capable, and now you are the outage.",
+      "stars": 65000,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Padloc",
+      "url": "https://padloc.app/",
+      "desc": "The live site hides a stalled repo: last commit March 2025 and production self-hosting docs never really arrived."
+    },
+    {
+      "name": "Passbolt Community Edition",
+      "url": "https://www.passbolt.com/",
+      "desc": "Excellent shared credentials; broad personal form filling is not its real job."
+    }
+  ],
   "relatedSlugs": [
     "bitwarden",
     "deleteme",

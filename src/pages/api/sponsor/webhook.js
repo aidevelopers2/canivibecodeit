@@ -38,7 +38,7 @@ export async function reconcileLinkSession(session) {
       shell(
         `<p>Session <code>${esc(session.id)}</code> (${esc(meta.purpose)}, ${esc(meta.sponsor || 'no name')},`
         + ` ${usd(session.amount_total)}) carries a slot or month that doesn't exist. Nothing was`
-        + ` recorded — sort it by hand.</p>`
+        + ` recorded; sort it by hand.</p>`
       )
     );
     return true;
@@ -64,7 +64,7 @@ export async function reconcileLinkSession(session) {
   });
   if (conflict) {
     await alertRob(
-      `link payment NOT recorded — ${slotId} already booked for that term`,
+      `link payment NOT recorded · ${slotId} already booked for that term`,
       shell(
         `<p>Session <code>${esc(session.id)}</code> (${esc(meta.purpose)},`
         + ` ${esc(meta.sponsor || email || 'no name')}, ${usd(session.amount_total)},`
@@ -128,7 +128,7 @@ export async function reconcileLinkSession(session) {
     // never fail silently.
     console.error(`link session ${session.id} completion failed: ${err?.message || err}`);
     await alertRob(
-      `link payment recorded INCOMPLETELY — ${slotId}`,
+      `link payment recorded INCOMPLETELY · ${slotId}`,
       shell(
         `<p>Purchase <code>${esc(purchase.id)}</code> for session <code>${esc(session.id)}</code>`
         + ` (${esc(meta.sponsor || email || 'no name')}, ${usd(session.amount_total)}) was inserted`
@@ -145,10 +145,10 @@ export async function reconcileLinkSession(session) {
   if (incumbent) {
     await sendMail({
       to: toEmail,
-      subject: `locked in — ${purchase.slot_id} is yours ${shortDate(startsAt)} to ${shortDate(endsAt)}`,
+      subject: `locked in · ${purchase.slot_id} is yours ${shortDate(startsAt)} to ${shortDate(endsAt)}`,
       html: brandShell(
         `<p>Payment received. <b>${esc(incumbent.name)}</b> keeps slot ${esc(purchase.slot_id)}`
-        + ` from ${esc(shortDate(startsAt))} to ${esc(shortDate(endsAt))} — same card, same spot,`
+        + ` from ${esc(shortDate(startsAt))} to ${esc(shortDate(endsAt))}: same card, same spot,`
         + ` nothing to do.</p>`
         + `<p>Your numbers for the current run:`
         + ` <a href="${esc(`${siteUrl('/sponsor/stats')}?t=${encodeURIComponent(incumbent.details_token)}`)}">stats page</a>.`
@@ -161,7 +161,7 @@ export async function reconcileLinkSession(session) {
   } else {
     await sendMail({
       to: toEmail,
-      subject: `you're in — slot ${purchase.slot_id} just needs your card details`,
+      subject: `you're in · slot ${purchase.slot_id} just needs your card details`,
       html: brandShell(
         `<p>Payment received for slot ${esc(purchase.slot_id)}, running`
         + ` ${esc(shortDate(startsAt))} to ${esc(shortDate(endsAt))}. One step left: tell us`
@@ -174,13 +174,13 @@ export async function reconcileLinkSession(session) {
   }
 
   await alertRob(
-    `${kind} paid: ${slotId} from ${shortDate(startsAt)} — ${meta.sponsor || toEmail || 'unknown'} (${usd(session.amount_total)})`,
+    `${kind} paid: ${slotId} from ${shortDate(startsAt)} · ${meta.sponsor || toEmail || 'unknown'} (${usd(session.amount_total)})`,
     shell(
       `<p>Slot ${esc(slotId)} ${esc(kind)} reconciled: ${esc(meta.sponsor || 'no name in metadata')},`
       + ` ${usd(session.amount_total)}, runs ${esc(shortDate(startsAt))}–${esc(shortDate(endsAt))}`
       + `${months > 1 ? ` (${months} runs)` : ''}.</p>`
       + (incumbent
-        ? `<p>Card carried over from the current run — nothing to approve.</p>`
+        ? `<p>Card carried over from the current run; nothing to approve.</p>`
         : `<p>The buyer was emailed for card details. If that email bounces, their details link is:`
           + ` <a href="${esc(detailsLink(purchase))}">${esc(detailsLink(purchase))}</a></p>`)
       + `<p><a href="${esc(siteUrl('/admin/sponsors'))}">admin</a></p>`
@@ -275,13 +275,13 @@ export async function promoteFromSession(session, { notify = false } = {}) {
       // were redirected to, and tabs get closed.
       await sendMail({
         to: email,
-        subject: `you're in — slot ${purchase.slot_id} just needs your card details`,
+        subject: `you're in · slot ${purchase.slot_id} just needs your card details`,
         html: brandShell(
           `<p>Payment received for slot ${esc(purchase.slot_id)}. One step left: tell us what`
           + ` the card should say.</p>`
           + `<p>${button(detailsLink(purchase), 'finish your card')}</p>`
           + `<p style="color:#6e6e67; font-size:12px;">Name, one line, and your link. We review`
-          + ` every placement by hand after that — usually within a few hours. Keep this email;`
+          + ` every placement by hand after that, usually within a few hours. Keep this email;`
           + ` it's the only copy of your link.</p>`
         ),
       });
@@ -297,7 +297,7 @@ export async function promoteFromSession(session, { notify = false } = {}) {
     await updatePurchase(purchase.id, { status: 'refunded_conflict' }, ['paid']);
     await sendMail({
       to: email,
-      subject: 'your sponsor slot was taken first — refunded',
+      subject: 'your sponsor slot was taken first · refunded',
       html: brandShell(
         `<p>Slot ${esc(purchase.slot_id)} was bought by someone else before this payment`
         + ` landed, so your payment has been refunded in full. It's back on your card in`
@@ -314,7 +314,7 @@ export async function promoteFromSession(session, { notify = false } = {}) {
   // Rob hears about every double-booking, not just the ones that fail to refund:
   // two people paid for one slot and he needs to know it happened.
   await alertRob(
-    `sponsor slot ${purchase.slot_id} double-booked${refundError ? ' — REFUND FAILED' : ' (auto-refunded)'}`,
+    `sponsor slot ${purchase.slot_id} double-booked${refundError ? ' · REFUND FAILED' : ' (auto-refunded)'}`,
     shell(
       `<p>Purchase <code>${esc(purchase.id)}</code> (${esc(email || 'no email')}) paid for slot`
       + ` ${esc(purchase.slot_id)}, which was already held by: ${esc(rivalList)}.</p>`

@@ -52,6 +52,24 @@
       "status": "alive"
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Karakeep",
+      "url": "https://karakeep.app",
+      "desc": "Excellent capture, PDFs, RSS and highlights, but no spaced highlight review."
+    },
+    {
+      "name": "Omnivore",
+      "url": "https://github.com/omnivore-app/omnivore",
+      "desc": "The cloud died; the surviving version is a multi-service self-host, not a normal-person install."
+    },
+    {
+      "name": "wallabag",
+      "url": "https://wallabag.org",
+      "desc": "A solid read-later archive, but it lacks the combined RSS, PDF and spaced-review workflow."
+    }
+  ],
   "relatedSlugs": [
     "raindrop-io",
     "feedly",

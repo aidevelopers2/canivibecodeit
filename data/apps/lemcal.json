@@ -51,6 +51,39 @@
       "desc": "Mature open-source scheduling platform and OAuth reference."
     }
   ],
+  "alternatives": [
+    {
+      "name": "zcal Free",
+      "url": "https://zcal.co/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Personalized one-use links, branded pages, reminders and Zapier are free; round-robin sales routing is paid.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Cal.com Free",
+      "url": "https://cal.com/",
+      "desc": "Unlimited solo scheduling is free; sales workflows and routing are not."
+    },
+    {
+      "name": "HubSpot Meeting Scheduler",
+      "url": "https://www.hubspot.com/products/sales/schedule-meeting",
+      "desc": "A useful free sales booking link, but the personalized scheduling workflows are paid CRM automation."
+    },
+    {
+      "name": "TidyCal Free",
+      "url": "https://tidycal.com/",
+      "desc": "Cheap and competent, but it has no free sales-personalization or follow-up workflow layer."
+    }
+  ],
   "relatedSlugs": [
     "clockwise",
     "rise-calendar",

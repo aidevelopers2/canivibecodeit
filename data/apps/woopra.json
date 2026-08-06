@@ -56,6 +56,25 @@
       "desc": "Open-source product analytics, feature flags, and session replay."
     }
   ],
+  "alternatives": [
+    {
+      "name": "PostHog",
+      "url": "https://posthog.com",
+      "type": "open-source",
+      "repo": "https://github.com/PostHog/posthog",
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "Profiles, journeys, retention, triggers and integrations in one free account; setup is less hand-holding, more toolbox.",
+      "stars": 37500,
+      "lastCommit": "2026-08",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "matomo-cloud",
     "pirsch",

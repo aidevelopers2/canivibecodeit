@@ -51,6 +51,34 @@
       "desc": "self-hosted page-change monitoring with notifications · covers the docs and pricing pages an API cannot"
     }
   ],
+  "alternatives": [
+    {
+      "name": "modelalert.ai",
+      "url": "https://modelalert.ai",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "The exact job: one terse email when a model appears, without pretending it is a platform.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "changedetection.io",
+      "url": "https://changedetection.io",
+      "desc": "A capable page watcher, but you must choose every provider page and maintain the watches."
+    },
+    {
+      "name": "models.dev",
+      "url": "https://models.dev",
+      "desc": "A live model catalog and API, not a notification service."
+    }
+  ],
   "relatedSlugs": [
     "claude",
     "chatgpt",

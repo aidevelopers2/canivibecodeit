@@ -53,6 +53,103 @@
       "desc": "Widely used local Whisper inference implementation suitable for private transcription."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Buzz",
+      "url": "https://chidiwilliams.github.io/buzz/",
+      "type": "open-source",
+      "repo": "https://github.com/chidiwilliams/buzz",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux",
+        "cli"
+      ],
+      "desc": "Offline file and live transcription with speaker labels, search, exports and an optional summary plugin.",
+      "stars": 20800,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Meetily",
+      "url": "https://meetily.ai/",
+      "type": "open-source",
+      "repo": "https://github.com/Zackriya-Solutions/meetily",
+      "platforms": [
+        "macos",
+        "windows"
+      ],
+      "desc": "Local live transcription, imported recordings and summaries for Mac and Windows.",
+      "stars": 28357,
+      "lastCommit": "2026-06",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Muesli",
+      "url": "https://muesli.works/",
+      "type": "open-source",
+      "repo": "https://github.com/Muesli-HQ/muesli",
+      "platforms": [
+        "macos"
+      ],
+      "desc": "Live meeting capture and file import with local transcription, notes and history; Mac only.",
+      "stars": 890,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "OpenWhispr",
+      "url": "https://openwhispr.com/",
+      "type": "open-source",
+      "repo": "https://github.com/OpenWhispr/openwhispr",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "Records meetings or imports audio, labels speakers, summarizes it and keeps a searchable archive.",
+      "stars": 5223,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Speakr",
+      "url": "https://murtaza-nasir.github.io/speakr/",
+      "type": "open-source",
+      "repo": "https://github.com/murtaza-nasir/speakr",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A self-hosted archive for recordings, transcripts, summaries and search; bring a server and preferably a GPU.",
+      "stars": 3600,
+      "lastCommit": "2026-07",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Vibe",
+      "url": "https://thewh1teagle.github.io/vibe/",
+      "type": "open-source",
+      "repo": "https://github.com/thewh1teagle/vibe",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux",
+        "cli"
+      ],
+      "desc": "A desktop transcriber with file batches, live capture, translation and optional local summaries; collaboration is now a folder.",
+      "stars": 7000,
+      "lastCommit": "2026-04",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "fathom-ai",
     "read-ai",

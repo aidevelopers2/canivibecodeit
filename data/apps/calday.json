@@ -51,6 +51,109 @@
       "desc": "Mature open-source scheduling platform and OAuth reference."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Appointy Free",
+      "url": "https://www.appointy.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "One staffer gets reminders, classes and Square checkout for 100 bookings a month; growth wakes the paywall.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Easy!Appointments",
+      "url": "https://easyappointments.org/",
+      "type": "open-source",
+      "repo": "https://github.com/alextselegidis/easyappointments",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A proper provider-and-service booking system, provided you will also become its PHP and MySQL caretaker.",
+      "stars": 4300,
+      "lastCommit": "2026-07",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Setmore Free",
+      "url": "https://www.setmore.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "Four staff, payments, classes and 200 monthly bookings; SMS, recurring appointments and two-way sync cost extra.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Square Appointments Free",
+      "url": "https://squareup.com/us/en/appointments",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "A serious free solo booking stack where Square operates; processing fees remain and the feature mix varies by country.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "zcal Free",
+      "url": "https://zcal.co/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Unlimited links and calendars, custom questions, email reminders and Stripe payments; teams are paid and zcal takes 3%.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Zoho Bookings Free",
+      "url": "https://www.zoho.com/bookings/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "browser-extension"
+      ],
+      "desc": "A real one-person booking desk with forms, reminders and two-way sync; staff and payment plumbing cost extra.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Picktime Free",
+      "url": "https://www.picktime.com/",
+      "desc": "The free plan omits automated reminders, which is one of the small-business basics here."
+    }
+  ],
   "relatedSlugs": [
     "youcanbookme",
     "acuity-scheduling",

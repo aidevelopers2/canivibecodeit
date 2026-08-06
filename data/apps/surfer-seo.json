@@ -53,6 +53,19 @@
       "status": "not found"
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "BlogPilot",
+      "url": "https://github.com/IamRamgarhia/BlogPilot-Open-Source-AI-SEO-Content-Studio",
+      "desc": "SERP scoring and AI writing in one repo; nine stars and fifteen commits are below the production-confidence line."
+    },
+    {
+      "name": "thruuu",
+      "url": "https://thruuu.com/",
+      "desc": "A credible SERP analyzer and brief maker whose free allowance is ten one-time credits, not an ongoing optimizer."
+    }
+  ],
   "relatedSlugs": [
     "frase",
     "quickbooks-online",

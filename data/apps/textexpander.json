@@ -51,6 +51,36 @@
       "desc": "Active open-source cross-platform text expansion utility with system integration."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Espanso",
+      "url": "https://espanso.org/",
+      "type": "open-source",
+      "repo": "https://github.com/espanso/espanso",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "TextExpander's forms, variables, dates, and scripts are here; the snippet editor is a YAML file.",
+      "stars": 13900,
+      "lastCommit": "2025-10",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Raycast Free",
+      "url": "https://www.raycast.com/",
+      "desc": "A fine free snippet expander, but forms and richer fill-ins are not really there."
+    },
+    {
+      "name": "Text Blaze",
+      "url": "https://blaze.today/",
+      "desc": "The free tier is a demo-sized snippet set; full forms and dynamic rules are paid."
+    }
+  ],
   "relatedSlugs": [
     "alfred-powerpack",
     "setapp",

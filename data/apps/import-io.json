@@ -55,6 +55,24 @@
       "desc": "Source-available workflow automation engine and connector reference."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "EasySpider",
+      "url": "https://github.com/NaiboWang/EasySpider",
+      "desc": "A desktop scraper, not a managed extraction pipeline with quality controls."
+    },
+    {
+      "name": "Firecrawl",
+      "url": "https://www.firecrawl.dev/",
+      "desc": "A crawling API; pipeline QA, repair, and delivery still need an operator."
+    },
+    {
+      "name": "Maxun",
+      "url": "https://maxun.dev/",
+      "desc": "Good self-hosted robots; no managed quality controls, delivery SLA, or data operations team."
+    }
+  ],
   "relatedSlugs": [
     "diffbot",
     "hexomatic",

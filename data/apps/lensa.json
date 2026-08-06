@@ -57,6 +57,14 @@
       "desc": "Widely used local Stable Diffusion interface and extension ecosystem."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "ComfyUI",
+      "url": "https://comfy.org/",
+      "desc": "It can make avatars and replace backgrounds; it is not a tap-to-retouch mobile portrait editor."
+    }
+  ],
   "relatedSlugs": [
     "picsart",
     "leonardo-ai",

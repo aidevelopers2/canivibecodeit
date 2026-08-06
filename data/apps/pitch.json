@@ -51,6 +51,93 @@
       "desc": "Mature open-source collaborative design platform with SVG-native editing."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Canva Free",
+      "url": "https://www.canva.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "Polished presentation templates and collaborative editing with good PDF export; more design playground, less structured deck system.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Google Slides",
+      "url": "https://workspace.google.com/products/slides/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "The boring default remains excellent: live collaboration, comments, templates, and PPTX/PDF export with no meaningful personal-use ceiling.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "LibreOffice Impress",
+      "url": "https://www.libreoffice.org/",
+      "type": "open-source",
+      "repo": "https://github.com/LibreOffice/core",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "A proper offline presentation app with PPTX/PDF support and no account; collaboration means sending files like it is 2012.",
+      "stars": 4200,
+      "lastCommit": "2026-07",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Pitch Free",
+      "url": "https://pitch.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "The same structured presentation editor for up to five people, with unlimited decks and templates; free PDFs carry Pitch branding and PPTX export is absent.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "PowerPoint for the web",
+      "url": "https://www.microsoft.com/microsoft-365/powerpoint",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "Free browser PowerPoint with comments, coauthoring, and familiar file export; less elegant than Pitch, more likely to open everywhere.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Penpot",
+      "url": "https://penpot.app/",
+      "desc": "A design canvas can make slides one rectangle at a time, but it lacks presentation structure, playback, notes, and sane deck export."
+    }
+  ],
   "relatedSlugs": [
     "kittl",
     "vistacreate",

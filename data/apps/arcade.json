@@ -53,6 +53,19 @@
       "desc": "Open-source screen recording and sharing product with modern desktop architecture."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Propels",
+      "url": "https://propels.ai",
+      "desc": "Open-source in theory; 27 stars and an AWS Amplify development setup are not a product a non-builder installs."
+    },
+    {
+      "name": "rrweb",
+      "url": "https://github.com/rrweb-io/rrweb",
+      "desc": "The famous answer is an SDK and player, not a product anyone can install and hand to sales."
+    }
+  ],
   "relatedSlugs": [
     "screen-studio",
     "cleanshot-x",

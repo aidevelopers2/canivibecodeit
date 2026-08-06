@@ -56,6 +56,19 @@
       "desc": "Self-hosted social media management software."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Buffer Free",
+      "url": "https://buffer.com/",
+      "desc": "It schedules LinkedIn and shows basic metrics, but lacks LinkedIn-specific formatting and post-analysis depth."
+    },
+    {
+      "name": "Typefully Free",
+      "url": "https://typefully.com/",
+      "desc": "The free tier lets you write a little; a useful scheduling queue and analytics are paid."
+    }
+  ],
   "relatedSlugs": [
     "feedhive",
     "ocoya",

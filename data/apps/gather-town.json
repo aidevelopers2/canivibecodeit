@@ -53,6 +53,93 @@
       "desc": "Mature open-source community discussion platform with strong moderation and search."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Cosmos Free",
+      "url": "https://cosmos.video/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "ios",
+        "android"
+      ],
+      "desc": "A persistent spatial office for four people with no call timer; the fifth person remains outdoors.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "flat.social Free",
+      "url": "https://flat.social/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Five people, unlimited sessions and custom rooms; small, simple and refreshingly uninterested in seat arithmetic.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Kumospace Free",
+      "url": "https://www.kumospace.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "ios",
+        "android"
+      ],
+      "desc": "Five registered members get customizable spatial rooms and basic chat; the sixth seat costs money.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "SpatialChat Free",
+      "url": "https://spatial.chat/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Twelve people and four rooms for two hours a day; the office closes itself at lunch.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "WorkAdventure Free",
+      "url": "https://workadventu.re/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "A pixel office for ten simultaneous people; the eleventh gets bounced.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Gather Trial",
+      "url": "https://www.gather.town/",
+      "desc": "Gather killed its permanent free tier; the current free story ends after thirty days."
+    }
+  ],
   "relatedSlugs": [
     "slack-pro",
     "discord-nitro",

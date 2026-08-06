@@ -46,6 +46,24 @@
       "desc": "mature cross-platform screenshot capture, but not a timed Mac automation workflow"
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "macshot",
+      "url": "https://macshot.io",
+      "desc": "Excellent Mac capture, numbered annotations and local exports, but it cannot run URL-list website batches."
+    },
+    {
+      "name": "Microlink Bulk Screenshots",
+      "url": "https://microlink.io/tools/website-screenshot/bulk",
+      "desc": "Captures 25 website URLs to a ZIP, and does precisely none of the Mac automation or guide work."
+    },
+    {
+      "name": "shot-scraper",
+      "url": "https://shot-scraper.datasette.io",
+      "desc": "Excellent website batches from a terminal, but no Mac UI capture or click-built guides."
+    }
+  ],
   "relatedSlugs": [
     "shots",
     "tella"

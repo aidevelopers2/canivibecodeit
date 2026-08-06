@@ -52,6 +52,24 @@
       "desc": "Mature open-source RSS reader with feeds, filters, and self-hosting support."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Folo",
+      "url": "https://folo.is",
+      "desc": "Has RSS and one newsletter inbox, but no real highlight-and-note workflow for saved pages."
+    },
+    {
+      "name": "Karakeep",
+      "url": "https://karakeep.app",
+      "desc": "Handles articles, RSS, highlights and notes, but it has no email-newsletter inbox."
+    },
+    {
+      "name": "NewsBlur",
+      "url": "https://newsblur.com",
+      "desc": "Reads feeds and email newsletters, but does not replace Matter's page-highlighting workflow."
+    }
+  ],
   "relatedSlugs": [
     "readwise",
     "raindrop-io",

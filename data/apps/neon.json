@@ -52,6 +52,39 @@
       "desc": "Active open-source self-hosting platform for applications, databases, and services."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Coolify",
+      "url": "https://coolify.io/",
+      "type": "open-source",
+      "repo": "https://github.com/coollabsio/coolify",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Run one Postgres database on your server with a web console, scheduled backups, restore jobs, and honest ops responsibility.",
+      "stars": 57000,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Dokploy",
+      "url": "https://dokploy.com/",
+      "type": "open-source",
+      "repo": "https://github.com/Dokploy/dokploy",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Deploy Postgres, schedule backups, and restore it from the same self-hosted control plane.",
+      "stars": 36000,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "vercel",
     "railway",

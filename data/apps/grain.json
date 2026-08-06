@@ -51,6 +51,31 @@
       "desc": "Local speech-to-text engine suitable for private transcription."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Fathom",
+      "url": "https://www.fathom.ai/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "macos",
+        "windows"
+      ],
+      "desc": "Records calls, makes clips, writes basic summaries and searches the archive; deeper customer-intelligence workflows still cost money.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "tl;dv",
+      "url": "https://tldv.io/",
+      "desc": "The recording library is free, but AI notes are capped at ten meetings a month and CRM workflows are paid."
+    }
+  ],
   "relatedSlugs": [
     "fellow",
     "sembly-ai",

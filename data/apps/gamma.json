@@ -52,6 +52,8 @@
       "status": "alive"
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "beautiful-ai",
     "jasper",

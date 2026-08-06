@@ -56,6 +56,19 @@
       "desc": "Source-available workflow automation engine and connector reference."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Activepieces Community Edition",
+      "url": "https://www.activepieces.com/open-source",
+      "desc": "Good automation, wrong governance tier: enterprise identity, audit, and controls still cost money."
+    },
+    {
+      "name": "n8n Community Edition",
+      "url": "https://n8n.io/",
+      "desc": "A capable engine, but the free edition does not replace Workato's governance and connector support."
+    }
+  ],
   "relatedSlugs": [
     "tray-io",
     "gumloop",

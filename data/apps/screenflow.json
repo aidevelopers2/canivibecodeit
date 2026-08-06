@@ -50,6 +50,19 @@
       "desc": "Open-source non-linear video editor."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Kdenlive",
+      "url": "https://kdenlive.org",
+      "desc": "Excellent multitrack editing, but no integrated Mac screen recorder; half the product is absent."
+    },
+    {
+      "name": "Recordly",
+      "url": "https://recordly.dev",
+      "desc": "Records and edits, but the timeline still accepts only one video track; ScreenFlow’s multitrack core is missing."
+    }
+  ],
   "relatedSlugs": [
     "camtasia",
     "riverside",

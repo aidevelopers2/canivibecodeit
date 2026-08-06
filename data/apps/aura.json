@@ -46,6 +46,24 @@
   "whyPeopleStillPay": "Aura: Security subscriptions buy professional operations, audits, response capacity, redundancy, and accountability when something goes wrong.",
   "ongoingBurden": "Own threat modelling, key management, patching, backups, restore tests, incident response, privacy requests, and dependency security.",
   "priorArt": [],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Bitwarden Free",
+      "url": "https://bitwarden.com/pricing/",
+      "desc": "A very good password manager; identity monitoring, credit tools, antivirus, VPN, and family safety remain missing."
+    },
+    {
+      "name": "Malwarebytes Free",
+      "url": "https://www.malwarebytes.com/mwb-download",
+      "desc": "An on-demand malware cleaner is one small slice of Aura, not the identity-and-family suite."
+    },
+    {
+      "name": "Proton Free",
+      "url": "https://proton.me/pricing",
+      "desc": "Mail, drive, passwords, and VPN are free; credit monitoring, antivirus, and family safety are not."
+    }
+  ],
   "relatedSlugs": [
     "incogni",
     "deleteme",

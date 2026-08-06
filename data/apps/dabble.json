@@ -50,6 +50,110 @@
       "desc": "Mature open-source grammar and style checker with desktop and server components."
     }
   ],
+  "alternatives": [
+    {
+      "name": "bibisco Community Edition",
+      "url": "https://bibisco.com/novel-writing-software-download/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android"
+      ],
+      "desc": "The free edition keeps projects, storylines, characters, chapters, scenes, backups and export; outline, timeline and search are paid.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Kindling",
+      "url": "https://kindlingwriter.com/",
+      "type": "open-source",
+      "repo": "https://github.com/smith-and-web/kindling",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "A tiny local fiction studio where the outline stays beside the draft; no AI, no cloud, and barely any GitHub fame yet.",
+      "stars": 53,
+      "lastCommit": "2026-06",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Manuskript",
+      "url": "https://www.theologeek.ch/manuskript/",
+      "type": "open-source",
+      "repo": "https://github.com/olivierkes/manuskript",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "A Scrivener-shaped box of scenes, characters, plots, index cards, and rough edges that cost exactly nothing.",
+      "stars": 2400,
+      "lastCommit": "2026-04",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Novelist",
+      "url": "https://www.novelist.app/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "A genuinely free mobile novel planner with boards, scenes, goals, history, and no ad slot lurking under the keyboard.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "novelWriter",
+      "url": "https://novelwriter.io/",
+      "type": "open-source",
+      "repo": "https://github.com/vkbo/novelWriter",
+      "platforms": [
+        "windows",
+        "linux"
+      ],
+      "desc": "A plain-text novel room with scenes, synopses, cross-references, and no cloud account between you and chapter twelve.",
+      "stars": 3000,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "yWriter",
+      "url": "https://spacejock.com/yWriter.html",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "windows"
+      ],
+      "desc": "A veteran Windows novel organiser that treats scenes, characters, locations, and reports like a database, because it basically is one.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Story Architect",
+      "url": "https://starc.app/",
+      "desc": "The free editor is real, but corkboard, timeline, extended story data, cloud sync, and AI are paid, the bits these apps are bought for."
+    }
+  ],
   "relatedSlugs": [
     "sudowrite",
     "prowritingaid",

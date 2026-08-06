@@ -57,6 +57,83 @@
       "desc": "Open-source marketing automation platform."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Dittofeed",
+      "url": "https://www.dittofeed.com/",
+      "type": "open-source",
+      "repo": "https://github.com/dittofeed/dittofeed",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Event-driven segments and multichannel journeys with a marketer-facing UI; the infrastructure diagram is not decorative.",
+      "stars": 2887,
+      "lastCommit": "2026-03",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Loops Free",
+      "url": "https://loops.so/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Hosted lifecycle email with events and automation for 1,000 contacts; advanced data work still needs another tool.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Mautic",
+      "url": "https://mautic.org/",
+      "type": "open-source",
+      "repo": "https://github.com/mautic/mautic",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Behavior tracking, segments and campaigns with years of battle scars; operating it is also a campaign.",
+      "stars": 10300,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Notifuse",
+      "url": "https://www.notifuse.com/",
+      "type": "open-source",
+      "repo": "https://github.com/Notifuse/notifuse",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Contact events, segments and branching automations in a modern self-hosted app; behavioral plumbing is still yours.",
+      "stars": 2038,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Plunk",
+      "url": "https://www.useplunk.com/",
+      "type": "open-source",
+      "repo": "https://github.com/useplunk/plunk",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Events, conditions and automated email in one open platform; analytics are leaner than Bento's.",
+      "stars": 5300,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "customer-io",
     "drip",

@@ -38,6 +38,8 @@
   "moatNotes": "custom fine-tuned models + a detector eval treadmill; the wrapper UI is trivial, the pass rate is not",
   "whyPeopleStillPay": "Because 'sounds human to me' and 'passes Turnitin' are different products. Prompt-based rewrites are exactly what modern detectors train on, so DIY results are hit-or-miss and degrade as detectors update. Paying customers are buying a maintained pass rate: someone else fine-tunes models, re-benchmarks against every detector release, and eats the retraining cost when the arms race moves.",
   "priorArt": [],
+  "alternatives": [],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "quillbot",
     "gptzero",

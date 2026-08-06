@@ -52,6 +52,61 @@
       "desc": "Active open-source self-hosting platform for applications, databases, and services."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Coolify",
+      "url": "https://coolify.io/",
+      "type": "open-source",
+      "repo": "https://github.com/coollabsio/coolify",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "One container, automatic TLS, health checks, logs, and restarts on hardware you pay for directly.",
+      "stars": 57000,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Dokku",
+      "url": "https://dokku.com/",
+      "type": "open-source",
+      "repo": "https://github.com/dokku/dokku",
+      "platforms": [
+        "linux",
+        "self-hosted",
+        "cli"
+      ],
+      "desc": "The original tiny Heroku-on-one-box; excellent once you are comfortable treating a server like a pet.",
+      "stars": 32100,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Dokploy",
+      "url": "https://dokploy.com/",
+      "type": "open-source",
+      "repo": "https://github.com/Dokploy/dokploy",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A newer self-hosted PaaS for apps and databases, with previews, TLS, logs, and backups in the same control plane.",
+      "stars": 36000,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Render Free",
+      "url": "https://render.com/",
+      "desc": "Free web services spin down, lose local files, and are for hobby or testing workloads, not a durable Render replacement."
+    }
+  ],
   "relatedSlugs": [
     "vercel",
     "railway",

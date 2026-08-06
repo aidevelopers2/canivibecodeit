@@ -52,6 +52,19 @@
       "desc": "Open-source technical SEO auditing application."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "BlogPilot",
+      "url": "https://github.com/IamRamgarhia/BlogPilot-Open-Source-AI-SEO-Content-Studio",
+      "desc": "Claims competitor analysis and content scoring; nine stars is where the inspection should begin, not end."
+    },
+    {
+      "name": "thruuu",
+      "url": "https://thruuu.com/",
+      "desc": "The free credits can inspect a SERP and make roughly two briefs; the inspectable checklist does not remain free."
+    }
+  ],
   "relatedSlugs": [
     "screaming-frog-seo-spider",
     "sitebulb",

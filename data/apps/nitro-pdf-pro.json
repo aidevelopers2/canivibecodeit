@@ -53,6 +53,60 @@
       "desc": "Active open-source web application for a broad set of PDF operations."
     }
   ],
+  "alternatives": [
+    {
+      "name": "PDF24",
+      "url": "https://tools.pdf24.org/en/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "windows"
+      ],
+      "desc": "A sprawling free Windows and web PDF suite covering conversion, assembly, editing, OCR, signing, and compression without usage limits.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "PDFgear",
+      "url": "https://www.pdfgear.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "ios",
+        "android"
+      ],
+      "desc": "The closest zero-cost desktop substitute for editing, conversion, combining, forms, and ordinary signatures; Nitro's business administration features stay behind.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Stirling PDF",
+      "url": "https://stirling.com/",
+      "type": "open-source",
+      "repo": "https://github.com/Stirling-Tools/Stirling-PDF",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "The self-hosted option when privacy and batch operations matter more than desktop-app gloss.",
+      "stars": 88969,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "adobe-acrobat-pro",
     "pdf-expert",

@@ -52,6 +52,24 @@
       "desc": "Popular open-source mail-server suite that demonstrates the operational complexity of hosted mail."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Apple Mail",
+      "url": "https://support.apple.com/guide/mail/welcome/mac",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos",
+        "ios"
+      ],
+      "desc": "The native Mac client with a local cache and first-class Gmail support; it uses Apple's ideas about Gmail, not Mimestream's.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "superhuman",
     "front",

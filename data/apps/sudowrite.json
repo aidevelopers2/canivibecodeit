@@ -52,6 +52,25 @@
       "desc": "Mature open-source grammar and style checker with desktop and server components."
     }
   ],
+  "alternatives": [
+    {
+      "name": "KoboldCpp",
+      "url": "https://github.com/LostRuins/koboldcpp",
+      "type": "open-source",
+      "repo": "https://github.com/LostRuins/koboldcpp",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "One executable plus a model download gets you story continuation, memory, world info and author’s notes; elegance was not bundled.",
+      "stars": 11300,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "prowritingaid",
     "languagetool",

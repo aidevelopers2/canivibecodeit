@@ -58,6 +58,28 @@
       "desc": "Local speech-to-text engine suitable for private transcription."
     }
   ],
+  "alternatives": [
+    {
+      "name": "MoneyPrinterTurbo",
+      "url": "https://moneyprinterturbo.cc/",
+      "type": "open-source",
+      "repo": "https://github.com/harry0703/MoneyPrinterTurbo",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted",
+        "cli"
+      ],
+      "desc": "Feed it a topic or script; it returns stock-footage shorts, captions and a voice, with all the subtlety the name promises.",
+      "stars": 101648,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "deepbrain-ai",
     "hour-one",

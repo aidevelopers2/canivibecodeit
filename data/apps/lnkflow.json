@@ -59,6 +59,14 @@
       "status": "alive"
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Dub",
+      "url": "https://dub.co",
+      "desc": "Tracks link conversions inside Dub, but no verified native pushback to Meta or Google Ads."
+    }
+  ],
   "relatedSlugs": [
     "plausible",
     "fathom-analytics",

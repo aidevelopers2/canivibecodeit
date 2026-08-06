@@ -54,6 +54,42 @@
       "desc": "Open-source local knowledge graph and outliner."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Apple Journal",
+      "url": "https://apps.apple.com/us/app/journal/id6447391597",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos",
+        "ios"
+      ],
+      "desc": "Day One's Apple-shaped core, free because the hardware already collected the money.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "moodiary",
+      "url": "https://docs.moodiary.net",
+      "type": "open-source",
+      "repo": "https://github.com/ZhuJHua/moodiary",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android"
+      ],
+      "desc": "A real diary app with media, maps and sync, not a notes app wearing a calendar.",
+      "stars": 1900,
+      "lastCommit": "2026-07",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "journey",
     "diarly",

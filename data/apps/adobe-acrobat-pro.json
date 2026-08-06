@@ -54,6 +54,60 @@
       "desc": "Active open-source web application for a broad set of PDF operations."
     }
   ],
+  "alternatives": [
+    {
+      "name": "PDF24",
+      "url": "https://tools.pdf24.org/en/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "windows"
+      ],
+      "desc": "An enormous free toolbox for merging, converting, compressing, OCR, editing, signing, redacting, and more; the offline desktop app is Windows-only.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "PDFgear",
+      "url": "https://www.pdfgear.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "ios",
+        "android"
+      ],
+      "desc": "A genuinely free local PDF editor with text editing, OCR, conversion, forms, signing, and no watermark; Adobe still wins on prepress and obscure enterprise machinery.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Stirling PDF",
+      "url": "https://stirling.com/",
+      "type": "open-source",
+      "repo": "https://github.com/Stirling-Tools/Stirling-PDF",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "More than sixty PDF operations behind a usable interface, including editing, OCR, conversion, redaction, forms, and signatures; the full private setup is best in Docker.",
+      "stars": 88969,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "pdf-expert",
     "smallpdf",

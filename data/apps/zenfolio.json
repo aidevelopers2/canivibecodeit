@@ -52,6 +52,62 @@
       "desc": "Active open-source self-hosted photo and video management platform."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Lychee",
+      "url": "https://lycheeorg.dev/",
+      "type": "open-source",
+      "repo": "https://github.com/LycheeOrg/Lychee",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A tidy self-hosted portfolio and passworded client gallery with downloads; deliberately light on business machinery.",
+      "stars": 4300,
+      "lastCommit": "2026-07",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Photoview",
+      "url": "https://photoview.github.io/",
+      "type": "open-source",
+      "repo": "https://github.com/photoview/photoview",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Turns owned folders into a clean web portfolio with RAW, EXIF, users, shares, and downloads; design customization is sparse.",
+      "stars": 6497,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Piwigo",
+      "url": "https://piwigo.org/",
+      "type": "open-source",
+      "repo": "https://github.com/Piwigo/Piwigo",
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "Portfolio-like themes, private client albums, users, metadata, and downloads on your server; sales and lab fulfillment do not come along.",
+      "stars": 3800,
+      "lastCommit": "2026-05",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Immich",
+      "url": "https://immich.app/",
+      "desc": "A strong personal archive with sharing, not a purpose-built portfolio and client-delivery surface."
+    }
+  ],
   "relatedSlugs": [
     "adobe-lightroom",
     "capture-one",

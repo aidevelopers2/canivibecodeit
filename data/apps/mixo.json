@@ -56,6 +56,34 @@
       "desc": "Open-source web-builder framework."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Mobirise AI",
+      "url": "https://ai.mobirise.com",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Three AI-generated sites a month, code export and basic lead forms; the copy is as original as the prompt deserves.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "GrapesJS",
+      "url": "https://grapesjs.com",
+      "desc": "No prompt-to-site product exists here; only a framework somebody could use to build one."
+    },
+    {
+      "name": "TeleportHQ",
+      "url": "https://teleporthq.io",
+      "desc": "Frequently listed as free, but its current editor offer is a seven-day trial and code download is paid."
+    }
+  ],
   "relatedSlugs": [
     "dorik",
     "typedream",

@@ -53,6 +53,40 @@
       "status": "alive"
     }
   ],
+  "alternatives": [
+    {
+      "name": "Plasmic",
+      "url": "https://www.plasmic.app",
+      "type": "open-source",
+      "repo": "https://github.com/plasmicapp/plasmic",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A hosted visual builder with CMS, interactions, Figma import and a custom domain free; the badge remains.",
+      "stars": 6900,
+      "lastCommit": "2026-08",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "GrapesJS",
+      "url": "https://grapesjs.com",
+      "desc": "A framework for making visual editors, not a hosted animated site builder."
+    },
+    {
+      "name": "TeleportHQ",
+      "url": "https://teleporthq.io",
+      "desc": "The old free-plan advice is stale: current pricing gives a seven-day trial and then asks for an editor subscription."
+    },
+    {
+      "name": "Webstudio",
+      "url": "https://webstudio.is",
+      "desc": "The open core builds excellent sites and CMS pages, but Framer-grade animation is not a complete free equivalent."
+    }
+  ],
   "relatedSlugs": [
     "carrd",
     "airtable",

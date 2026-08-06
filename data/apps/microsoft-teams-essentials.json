@@ -52,6 +52,35 @@
       "desc": "Widely deployed open-source video-conferencing platform."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Nextcloud Hub",
+      "url": "https://nextcloud.com/hub",
+      "type": "open-source",
+      "repo": "https://github.com/nextcloud/server",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "Team files, documents, chat and calls under one roof; you also own the roof.",
+      "stars": 36300,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Mattermost Entry",
+      "url": "https://mattermost.com",
+      "desc": "The free edition now forgets after 10,000 messages and hangs up calls at 40 minutes."
+    }
+  ],
   "relatedSlugs": [
     "zoom-pro",
     "google-workspace-business-starter",

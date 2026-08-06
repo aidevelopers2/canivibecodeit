@@ -41,6 +41,19 @@
   "moatNotes": "automation/integrations/deliverability",
   "whyPeopleStillPay": "They pay to avoid operating the unglamorous parts: verified webhooks, timed sends, email delivery, retries, consent records, media handling, and integrations. The wall itself is easy; making customer requests arrive reliably and safely is the service.",
   "priorArt": [],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Real Testimonials",
+      "url": "https://wordpress.org/plugins/testimonial-free/",
+      "desc": "Automated testimonial asks and follow-ups are paid; the free plugin covers forms and displays, not Proofling’s core loop."
+    },
+    {
+      "name": "Senja",
+      "url": "https://senja.io/",
+      "desc": "Polished and genuinely free, right up to testimonial number sixteen; the core collection job then becomes paid."
+    }
+  ],
   "relatedSlugs": [
     "testimonial-to"
   ],

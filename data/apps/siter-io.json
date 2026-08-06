@@ -56,6 +56,35 @@
       "desc": "Open-source web-builder framework."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Plasmic",
+      "url": "https://www.plasmic.app",
+      "type": "open-source",
+      "repo": "https://github.com/plasmicapp/plasmic",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A collaborative visual builder with Figma import, hosting and custom domains on the free plan; the badge stays.",
+      "stars": 6900,
+      "lastCommit": "2026-08",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "GrapesJS",
+      "url": "https://grapesjs.com",
+      "desc": "An editor framework with no finished collaboration, import and publishing product."
+    },
+    {
+      "name": "TeleportHQ",
+      "url": "https://teleporthq.io",
+      "desc": "Figma import looks promising until the current seven-day editor trial ends."
+    }
+  ],
   "relatedSlugs": [
     "umso",
     "swipe-pages",

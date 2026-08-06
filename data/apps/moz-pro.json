@@ -51,6 +51,74 @@
       "desc": "Open-source search ranking tracker for owned keyword sets."
     }
   ],
+  "alternatives": [
+    {
+      "name": "CrawlSEO",
+      "url": "https://github.com/crawlseo/crawlseo",
+      "type": "open-source",
+      "repo": "https://github.com/crawlseo/crawlseo",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A crawl dashboard with saved rank snapshots, alerts and exports; setup is the part Moz used to hide from you.",
+      "stars": 507,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "OpenSEO",
+      "url": "https://openseo.so/",
+      "type": "open-source",
+      "repo": "https://github.com/every-app/open-seo",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Rank tracking and site audits in one container; backlink rows cost extra because nobody donated a web index.",
+      "stars": 10614,
+      "lastCommit": "2026-07",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "SEO Panel",
+      "url": "https://www.seopanel.org/",
+      "type": "open-source",
+      "repo": "https://github.com/seopanel/Seo-Panel",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Rank checks, site audits, backlinks and reports in a stubbornly old-school interface.",
+      "stars": 149,
+      "lastCommit": "2026-06",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Seobility Basic",
+      "url": "https://www.seobility.net/en/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "One 1,000-page project and ten tracked keywords for free; enough for one small site, not an agency cosplay.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "SEO PowerSuite Free",
+      "url": "https://www.link-assistant.com/",
+      "desc": "The modules are real; the free edition's refusal to save projects makes ongoing monitoring imaginary."
+    }
+  ],
   "relatedSlugs": [
     "se-ranking",
     "mangools",

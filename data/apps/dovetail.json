@@ -52,6 +52,57 @@
       "desc": "Open-source customer-feedback portal with voting and status workflows."
     }
   ],
+  "alternatives": [
+    {
+      "name": "CATMA",
+      "url": "https://catma.de",
+      "type": "open-source",
+      "repo": "https://github.com/forTEXT/catma",
+      "platforms": [
+        "web"
+      ],
+      "desc": "Collaborative text annotation and analysis in a hosted academic tool, minus Dovetail's repository sprawl.",
+      "stars": 102,
+      "lastCommit": "2026-07",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "QualCoder",
+      "url": "https://qualcoder.org",
+      "type": "open-source",
+      "repo": "https://github.com/ccbogel/QualCoder",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "Store evidence, code excerpts and build themes locally, without pretending it is an enterprise research hub.",
+      "stars": 658,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Taguette",
+      "url": "https://www.taguette.org",
+      "type": "open-source",
+      "repo": "https://github.com/remram44/taguette",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "A focused repository for highlights, tags and exported findings; video-research polish is not invited.",
+      "stars": 88,
+      "lastCommit": "2026-01",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "canny",
     "productboard",

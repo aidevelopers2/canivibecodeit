@@ -54,6 +54,24 @@
       "desc": "Open-source local knowledge graph and outliner."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Apple Journal",
+      "url": "https://apps.apple.com/us/app/journal/id6447391597",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos",
+        "ios"
+      ],
+      "desc": "Prompts, media, app locking and iCloud sync, with no subscription beyond Apple ownership.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "roam-research",
     "tana",

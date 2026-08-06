@@ -53,6 +53,76 @@
       "desc": "Mature open-source file sync and collaboration server."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Backrest",
+      "url": "https://garethgeorge.github.io/backrest/",
+      "type": "open-source",
+      "repo": "https://github.com/garethgeorge/backrest",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "Restic with buttons, schedules, checks, and enough guardrails to avoid living in a terminal.",
+      "stars": 7100,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Duplicati",
+      "url": "https://duplicati.com/",
+      "type": "open-source",
+      "repo": "https://github.com/duplicati/duplicati",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "Browser-driven encrypted backups to nearly any storage target, with more knobs than charm.",
+      "stars": 14900,
+      "lastCommit": "2026-07",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Kopia",
+      "url": "https://kopia.io/",
+      "type": "open-source",
+      "repo": "https://github.com/kopia/kopia",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux",
+        "cli"
+      ],
+      "desc": "Encrypted snapshots to storage you choose; the cloud bill and restore drills are still yours.",
+      "stars": 13800,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Nextcloud Files",
+      "url": "https://nextcloud.com/files/",
+      "desc": "Everyone calls it a Dropbox replacement; sync is still not backup when deletions propagate."
+    },
+    {
+      "name": "restic",
+      "url": "https://restic.net/",
+      "desc": "Excellent backup engine; still a terminal, scheduler, and retention policy you must assemble yourself."
+    },
+    {
+      "name": "Syncthing",
+      "url": "https://syncthing.net/",
+      "desc": "Excellent folder replication with versions; no object-store backup, restore testing, or share-link layer."
+    }
+  ],
   "relatedSlugs": [
     "google-one",
     "icloud-plus",

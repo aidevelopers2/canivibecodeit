@@ -54,6 +54,14 @@
       "status": "alive"
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "PRAW",
+      "url": "https://praw.readthedocs.io",
+      "desc": "A maintained Python wrapper for Reddit, not an app that clusters pains or produces startup ideas."
+    }
+  ],
   "relatedSlugs": [
     "dovetail",
     "maze",

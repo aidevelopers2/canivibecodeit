@@ -55,6 +55,46 @@
       "desc": "Source-available workflow automation engine and connector reference."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Power Automate for desktop",
+      "url": "https://apps.microsoft.com/detail/9nftch6j7fhv",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "windows"
+      ],
+      "desc": "Windows gets a free attended RPA designer; unattended cloud robots still report to accounting.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "UI.Vision RPA",
+      "url": "https://ui.vision/",
+      "type": "open-source",
+      "repo": "https://github.com/A9T9/RPA",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux",
+        "browser-extension"
+      ],
+      "desc": "Browser and desktop macros with OCR and spreadsheets; cloud workers are replaced by the machine in front of you.",
+      "stars": 2000,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "OpenRPA",
+      "url": "https://openiap.io/openrpa",
+      "desc": "Still widely listed; the core repository has not moved since June 2025."
+    }
+  ],
   "relatedSlugs": [
     "parabola",
     "bardeen",

@@ -58,6 +58,14 @@
       "desc": "Widely used local Stable Diffusion interface and extension ecosystem."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "ComfyUI",
+      "url": "https://comfy.org/",
+      "desc": "Excellent local raster generation; it does not replace vectors, Adobe-app integration, or Firefly's cross-app effects."
+    }
+  ],
   "relatedSlugs": [
     "mage-space",
     "getimg-ai",

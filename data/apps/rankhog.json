@@ -48,6 +48,19 @@
       "status": "alive"
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "F5Bot",
+      "url": "https://f5bot.com/",
+      "desc": "Free Reddit keyword alerts that work; no Google or AI ranking discovery, drafting or browser posting."
+    },
+    {
+      "name": "RedSignal",
+      "url": "https://github.com/ivucicev/redsignal",
+      "desc": "Monitors Reddit and drafts replies nicely; it never finds threads because they rank in Google or AI, and twenty stars is still twenty."
+    }
+  ],
   "relatedSlugs": [
     "surfer-seo",
     "semrush",

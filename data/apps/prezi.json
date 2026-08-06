@@ -57,6 +57,31 @@
       "desc": "Open-source infinite-canvas SDK and whiteboard."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Sozi",
+      "url": "https://sozi.baierouge.fr/",
+      "type": "open-source",
+      "repo": "https://github.com/sozi-projects/Sozi",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "A real zooming presentation editor built around SVG canvases and camera paths; less collaborative, less glossy, and blessedly free of a monthly bill.",
+      "stars": 1698,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Excalidraw",
+      "url": "https://excalidraw.com/",
+      "desc": "It provides an infinite canvas and presentation-like frames, but not Prezi's sequenced zoom paths and polished playback model."
+    }
+  ],
   "relatedSlugs": [
     "slides-com",
     "decktopus",

@@ -52,6 +52,100 @@
       "desc": "Active open-source recipe manager and meal planner for households."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Grocy",
+      "url": "https://grocy.info/",
+      "type": "open-source",
+      "repo": "https://github.com/grocy/grocy",
+      "platforms": [
+        "web",
+        "windows",
+        "self-hosted"
+      ],
+      "desc": "Meal plans and groceries run through a tiny home ERP, because apparently the fridge needed one.",
+      "stars": 9358,
+      "lastCommit": "2026-07",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Mealie",
+      "url": "https://mealie.io/",
+      "type": "open-source",
+      "repo": "https://github.com/mealie-recipes/mealie",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A household recipe server with meal plans and grocery lists; you supply the server and patience.",
+      "stars": 12900,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "RecipeSage",
+      "url": "https://recipesage.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "browser-extension"
+      ],
+      "desc": "Recipes, a calendar meal planner, and generated shopping lists, without the annual renewal.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Samsung Food",
+      "url": "https://samsungfood.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "browser-extension"
+      ],
+      "desc": "Drag recipes onto a weekly plan and turn it into groceries; ads replace the annual invoice.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Tandoor Recipes",
+      "url": "https://tandoor.dev/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "The full recipe-plan-shopping loop; free for personal self-hosting, but the license is not actually open source.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Copy Me That",
+      "url": "https://www.copymethat.com/",
+      "desc": "A direct fit until recipe 41; the free tier now stops at 40 recipes."
+    },
+    {
+      "name": "KitchenOwl",
+      "url": "https://kitchenowl.org/",
+      "desc": "Polished enough to tempt you; the project still labels itself Public Alpha."
+    }
+  ],
   "relatedSlugs": [
     "paprika-recipe-manager",
     "home-assistant-cloud",

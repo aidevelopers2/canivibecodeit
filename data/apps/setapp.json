@@ -51,6 +51,43 @@
       "desc": "Active open-source cross-platform text expansion utility with system integration."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Applite",
+      "url": "https://aerolite.dev/applite",
+      "type": "open-source",
+      "repo": "https://github.com/milanvarady/Applite",
+      "platforms": [
+        "macos"
+      ],
+      "desc": "A non-technical Homebrew app store for installing and updating casks you actually own.",
+      "stars": 6900,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Latest",
+      "url": "https://max.codes/latest/",
+      "type": "open-source",
+      "repo": "https://github.com/mangerlahn/Latest",
+      "platforms": [
+        "macos"
+      ],
+      "desc": "Checks App Store and Sparkle apps, then updates them without pretending to be an app subscription.",
+      "stars": 4700,
+      "lastCommit": "2026-07",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "MacUpdater",
+      "url": "https://www.corecode.io/macupdater/",
+      "desc": "The final edition is free because the product shut down; its update database is no longer maintained."
+    }
+  ],
   "relatedSlugs": [
     "alfred-powerpack",
     "bartender",

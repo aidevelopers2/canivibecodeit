@@ -57,6 +57,8 @@
       "desc": "open-source board for queueing and reviewing coding agent tasks"
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "cursor",
     "warp",

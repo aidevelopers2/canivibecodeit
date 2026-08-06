@@ -52,6 +52,89 @@
       "status": "alive"
     }
   ],
+  "alternatives": [
+    {
+      "name": "Microweber",
+      "url": "https://microweber.org",
+      "type": "open-source",
+      "repo": "https://github.com/microweber/microweber",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Drag-and-drop websites and ecommerce with a real installer; the app market is smaller and the server is yours.",
+      "stars": 3431,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Odoo Community",
+      "url": "https://www.odoo.com/page/community",
+      "type": "open-source",
+      "repo": "https://github.com/odoo/odoo",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Website, ecommerce, CRM and business apps in one free suite; bookings and AI polish are less straightforward.",
+      "stars": 53527,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Square Online",
+      "url": "https://squareup.com/us/en/online-store",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "A hosted site, unlimited-product store and solo booking system free; design freedom and country coverage are narrower.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Vvveb",
+      "url": "https://www.vvveb.com",
+      "type": "open-source",
+      "repo": "https://github.com/givanz/Vvveb",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A visual CMS, forms, blog, shop and extensions in one install; AI hand-holding and managed operations are gone.",
+      "stars": 1200,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "WordPress",
+      "url": "https://wordpress.org",
+      "type": "open-source",
+      "repo": "https://github.com/WordPress/wordpress-develop",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "The universal site platform with themes, plugins and an editor; bookings and commerce mean choosing more plugins.",
+      "stars": 3400,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "GrapesJS",
+      "url": "https://grapesjs.com",
+      "desc": "A library used to build visual editors, not a Wix replacement a normal person can sign up for."
+    }
+  ],
   "relatedSlugs": [
     "github-copilot",
     "cursor",

@@ -51,6 +51,87 @@
       "desc": "Mature open-source scheduling platform and OAuth reference."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Appointy Free",
+      "url": "https://www.appointy.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "One staffer gets reminders, classes and Square checkout for 100 bookings a month; growth wakes the paywall.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Setmore Free",
+      "url": "https://www.setmore.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "Four staff, payments, classes and 200 monthly bookings; SMS, recurring appointments and two-way sync cost extra.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Square Appointments Free",
+      "url": "https://squareup.com/us/en/appointments",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "A serious free solo booking stack where Square operates; processing fees remain and the feature mix varies by country.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "zcal Free",
+      "url": "https://zcal.co/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Forms, Stripe payments, email reminders and group classes are free; teams are paid and zcal takes 3%.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Easy!Appointments",
+      "url": "https://easyappointments.org/",
+      "desc": "Everyone points here for open source; it has providers and reminders, but no built-in payments or class workflow."
+    },
+    {
+      "name": "Picktime Free",
+      "url": "https://www.picktime.com/",
+      "desc": "The free plan handles classes and bookings, but reminders and custom intake fields are paid."
+    },
+    {
+      "name": "Reservio Free",
+      "url": "https://www.reservio.com/",
+      "desc": "Free means 40 bookings a month and no calendar sync; that is a demo-sized business, not a replacement."
+    }
+  ],
   "relatedSlugs": [
     "appointlet",
     "oncehub",

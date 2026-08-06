@@ -61,6 +61,8 @@
       "desc": "Document parsing to structured formats, including table structure recovery."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [],
   "relatedSlugs": [],
   "pagePriority": 3,
   "verifiedOneShot": false,

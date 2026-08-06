@@ -56,6 +56,66 @@
       "desc": "Self-hosted photo organization and search."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Lunacy",
+      "url": "https://icons8.com/lunacy",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "A polished native desktop UI editor with components, prototypes, cloud files, and small-team collaboration, free indefinitely.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Penpot",
+      "url": "https://penpot.app/",
+      "type": "open-source",
+      "repo": "https://github.com/penpot/penpot",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Browser-based interface design, components, libraries, prototypes, comments, and multiplayer, with a credible import-and-self-host story.",
+      "stars": 58200,
+      "lastCommit": "2026-08",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Quant-UX",
+      "url": "https://www.quant-ux.com/",
+      "type": "open-source",
+      "repo": "https://github.com/KlausSchaefers/quant-ux",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A useful free prototype-and-test workspace with collaboration and analytics; less capable for production-grade visual systems.",
+      "stars": 2700,
+      "lastCommit": "2026-05",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "OpenPencil",
+      "url": "https://openpencil.dev/",
+      "desc": "It looks like the exciting new answer, but the maintainers explicitly say it is not ready for production use."
+    },
+    {
+      "name": "Pencil Project",
+      "url": "https://pencil.evolus.vn/",
+      "desc": "Still appears in every listicle; the repository has not moved since January 2023 and misses the maintenance requirement."
+    }
+  ],
   "relatedSlugs": [
     "kittl",
     "picmonkey",

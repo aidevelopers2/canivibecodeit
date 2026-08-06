@@ -55,6 +55,45 @@
       "desc": "Open-source local knowledge graph and outliner."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Logseq",
+      "url": "https://logseq.com",
+      "type": "open-source",
+      "repo": "https://github.com/logseq/logseq",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android"
+      ],
+      "desc": "Daily notes, backlinks and block references; calendar context is native, AI is optional.",
+      "stars": 44299,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Obsidian",
+      "url": "https://obsidian.md",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android"
+      ],
+      "desc": "Fast local notes and backlinks, with calendar and AI supplied by one-click plugins.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "heptabase",
     "mem-ai",

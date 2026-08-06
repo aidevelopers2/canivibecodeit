@@ -52,6 +52,14 @@
       "desc": "Node-based open-source diffusion workflow engine with a large ecosystem."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "ComfyUI",
+      "url": "https://comfy.org/",
+      "desc": "Raster generation is thoroughly covered; brand-aware vector generation and editable SVG output are not."
+    }
+  ],
   "relatedSlugs": [
     "ideogram",
     "photoroom",

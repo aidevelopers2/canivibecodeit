@@ -52,6 +52,23 @@
       "desc": "Open-source expert-system platform for guided interviews and document assembly."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Cooley GO Docs",
+      "url": "https://www.cooleygo.com/documents/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Law-firm-built startup questionnaires that generate formation and financing documents, an answer summary, and review checklists; useful drafts, not your lawyer.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "legalzoom",
     "rocket-lawyer",

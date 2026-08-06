@@ -49,7 +49,7 @@ const icon = sponsor ? sponsor.logoUrl || faviconUrl(sponsor.url) : '';
         data-price={openSlot.priceCents}
       >
         <span class="sp-text">
-          <span class="sp-name">your product here — {usd(openSlot.priceCents)}/30 days</span>
+          <span class="sp-name">your product here · {usd(openSlot.priceCents)}/30 days</span>
           <span class="sp-tag">read by people cancelling subscriptions all day</span>
         </span>
         <span class="sp-arrow">→</span>
@@ -59,7 +59,7 @@ const icon = sponsor ? sponsor.logoUrl || faviconUrl(sponsor.url) : '';
     <a class="sp-banner reserved" href="/sponsor" data-state="reserved">
       <span class="sp-text">
         <span class="sp-name">sponsor slots reserved</span>
-        <span class="sp-tag">someone's grabbing them — check back soon</span>
+        <span class="sp-tag">someone's grabbing them; check back soon</span>
       </span>
       <span class="sp-arrow">→</span>
     </a>
@@ -69,7 +69,7 @@ const icon = sponsor ? sponsor.logoUrl || faviconUrl(sponsor.url) : '';
         <span class="sp-name">{board.slots.length}/{board.slots.length} sponsor slots taken</span>
         <span class="sp-tag">
           {board.nextOpen
-            ? `next opens ${shortDate(board.nextOpen.at)} at ${usd(board.nextOpen.priceCents)} — get notified`
+            ? `next opens ${shortDate(board.nextOpen.at)} at ${usd(board.nextOpen.priceCents)} · get notified`
             : 'get told when one opens'}
         </span>
       </span>

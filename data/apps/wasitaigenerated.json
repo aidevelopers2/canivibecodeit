@@ -58,6 +58,24 @@
       "desc": "Curvature-based zero-shot detection of machine-generated text."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Binoculars",
+      "url": "https://github.com/ahans30/Binoculars",
+      "desc": "Text-only academic code that needs Python and models; it cannot inspect images, audio, or video, and the repo stopped in 2024."
+    },
+    {
+      "name": "DetectGPT",
+      "url": "https://github.com/eric-mitchell/detect-gpt",
+      "desc": "Four-commit text-detection research code from 2023; it is neither a maintained product nor a multimodal detector."
+    },
+    {
+      "name": "GLTR",
+      "url": "https://gltr.io/",
+      "desc": "A GPT-2 text visualizer from 2023; it cannot touch images, audio, or video and is not an installable modern detector."
+    }
+  ],
   "relatedSlugs": [
     "gptzero",
     "originality-ai",

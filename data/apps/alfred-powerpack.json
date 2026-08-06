@@ -51,6 +51,44 @@
       "desc": "Active open-source cross-platform text expansion utility with system integration."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Raycast Free",
+      "url": "https://www.raycast.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos",
+        "windows"
+      ],
+      "desc": "Alfred's launcher, snippets, clipboard, and extension store are free; sync and hosted AI are where the invoice starts.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "SuperCmd v1",
+      "url": "https://github.com/SuperCmdLabs/SuperCmd",
+      "type": "open-source",
+      "repo": "https://github.com/SuperCmdLabs/SuperCmd",
+      "platforms": [
+        "macos"
+      ],
+      "desc": "The still-maintained open-source v1 has extensions, clipboard, snippets, windows, and bring-your-own AI; v2 is paid.",
+      "stars": 3062,
+      "lastCommit": "2026-07",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Sol",
+      "url": "https://sol.ospfranco.com/",
+      "desc": "A good launcher with clipboard and scripts, but no text-snippet expansion."
+    }
+  ],
   "relatedSlugs": [
     "setapp",
     "bartender",

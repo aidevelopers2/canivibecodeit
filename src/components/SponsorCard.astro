@@ -60,7 +60,7 @@ const icon = sponsor ? sponsor.logoUrl || faviconUrl(sponsor.url) : '';
   state === 'reserved' && (
     <a class="sp-card reserved" href="/sponsor" data-slot={slot.id} data-state="reserved">
       <span class="sp-label">RESERVED</span>
-      <span class="sp-cta">someone's grabbing this slot — check back soon</span>
+      <span class="sp-cta">someone's grabbing this slot; check back soon</span>
     </a>
   )
 }
@@ -71,7 +71,7 @@ const icon = sponsor ? sponsor.logoUrl || faviconUrl(sponsor.url) : '';
       <span class="sp-label">{total}/{total} SLOTS TAKEN</span>
       <span class="sp-cta">
         {septLeft != null && septLeft < total
-          ? `pre-book ${nextMonth} — ${septLeft} of ${total} left →`
+          ? `pre-book ${nextMonth} · ${septLeft} of ${total} left →`
           : `pre-book ${nextMonth} →`}
       </span>
     </a>

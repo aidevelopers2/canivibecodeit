@@ -53,6 +53,69 @@
       "desc": "Mature open-source file sync and collaboration server."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Nextcloud Files",
+      "url": "https://nextcloud.com/files/",
+      "type": "open-source",
+      "repo": "https://github.com/nextcloud/server",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "Selected folders and camera uploads through your own server; Apple-level OS integration does not come with it.",
+      "stars": 36346,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "OpenCloud",
+      "url": "https://opencloud.eu/",
+      "type": "open-source",
+      "repo": "https://github.com/opencloud-eu/opencloud",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "Cross-platform folder sync and photo upload without Apple’s ecosystem glue or someone else’s uptime.",
+      "stars": 5800,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Seafile Community Edition",
+      "url": "https://www.seafile.com/",
+      "type": "open-source",
+      "repo": "https://github.com/haiwen/seafile",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "Reliable file sync and mobile photo backup; it will not become iCloud inside Apple apps.",
+      "stars": 15071,
+      "lastCommit": "2026-07",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "dropbox-plus",
     "google-one",

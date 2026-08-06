@@ -51,6 +51,24 @@
       "status": "alive"
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "BrightBean Studio",
+      "url": "https://brightbean.xyz/studio/",
+      "desc": "MCP, API and broad publishing, minus the voice-learning writer that makes Posterly Posterly."
+    },
+    {
+      "name": "Postiz",
+      "url": "https://postiz.com/",
+      "desc": "Agent-friendly publishing with AI helpers, but no convincing learn-my-voice system."
+    },
+    {
+      "name": "TryPost",
+      "url": "https://trypost.it/",
+      "desc": "MCP, API and a brand profile are real, but AI needs your model account and coverage stops around twelve networks."
+    }
+  ],
   "relatedSlugs": [
     "postiz",
     "post-bridge",

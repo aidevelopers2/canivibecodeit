@@ -43,6 +43,24 @@
   "moatNotes": "proprietary dataset + usage signals",
   "whyPeopleStillPay": "The useful result is not calculating views divided by a channel average. It is having enough current video and channel history to discover outliers and undersupplied niches before you already know where to look. Building the dashboard is straightforward; collecting, refreshing, and ranking that market-wide dataset is the product.",
   "priorArt": [],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "1of10 Free",
+      "url": "https://1of10.com",
+      "desc": "The free plan exposes five outlier results and 60 credits; that is a demo, not a living niche database."
+    },
+    {
+      "name": "TubeLab Free",
+      "url": "https://tubelab.net",
+      "desc": "The free analyzer checks ideas you bring; its daily unsaturated-niche database is paid."
+    },
+    {
+      "name": "Viewstats Free",
+      "url": "https://www.viewstats.com",
+      "desc": "The free extension scores pages you already browse; outlier search, alerts and collections are Pro."
+    }
+  ],
   "relatedSlugs": [],
   "pagePriority": 4,
   "verifiedOneShot": false,

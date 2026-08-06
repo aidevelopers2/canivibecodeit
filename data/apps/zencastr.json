@@ -57,6 +57,19 @@
       "desc": "Local speech-to-text engine suitable for private transcription."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Castopod",
+      "url": "https://castopod.org",
+      "desc": "Excellent podcast host, but it does not record remote guests."
+    },
+    {
+      "name": "VDO.Ninja",
+      "url": "https://vdo.ninja",
+      "desc": "Excellent remote capture, but editing, podcast hosting and distribution are absent."
+    }
+  ],
   "relatedSlugs": [
     "squadcast",
     "podcastle",

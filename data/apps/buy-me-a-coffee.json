@@ -57,6 +57,24 @@
       "desc": "Open-source publishing and membership platform."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Ghost",
+      "url": "https://ghost.org",
+      "desc": "Memberships and paid posts are real; tips, commissions and a creator shop are not."
+    },
+    {
+      "name": "Liberapay",
+      "url": "https://liberapay.com",
+      "desc": "A real free donation service, but recurring no-strings gifts are all it does: no posts, perks, shop, commissions or proper one-off tips."
+    },
+    {
+      "name": "Medusa",
+      "url": "https://medusajs.com",
+      "desc": "It can become a shop after development work; it is not a creator-support page anyone simply installs."
+    }
+  ],
   "relatedSlugs": [
     "patreon",
     "memberful",

@@ -55,6 +55,76 @@
       "desc": "Minimal self-hosted feed reader with a reliable polling core."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Folo",
+      "url": "https://folo.is",
+      "type": "open-source",
+      "repo": "https://github.com/RSSNext/Folo",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android"
+      ],
+      "desc": "A modern hosted feed reader with 150 free feeds; self-hosting the backend is not on the menu.",
+      "stars": 38800,
+      "lastCommit": "2026-08",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "FreshRSS",
+      "url": "https://freshrss.org",
+      "type": "open-source",
+      "repo": "https://github.com/FreshRSS/FreshRSS",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Filtering, folders and full-text reading in a well-kept self-hosted package.",
+      "stars": 15700,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Miniflux",
+      "url": "https://miniflux.app",
+      "type": "open-source",
+      "repo": "https://github.com/miniflux/v2",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Fast reading, regex filters and full-content fetching with very little ceremony.",
+      "stars": 9600,
+      "lastCommit": "2026-05",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "NewsBlur",
+      "url": "https://newsblur.com",
+      "type": "open-source",
+      "repo": "https://github.com/samuelclay/NewsBlur",
+      "platforms": [
+        "web",
+        "macos",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "Training filters and comment-aware feeds, paid for with a serious server stack.",
+      "stars": 7600,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "paperpile",
     "readcube-papers",

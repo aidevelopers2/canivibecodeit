@@ -57,6 +57,14 @@
       "desc": "Open-source marketing automation platform."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Kit Free",
+      "url": "https://kit.com/",
+      "desc": "It covers email, forms, automation and digital products, but charges a platform cut on every sale and is not design-led."
+    }
+  ],
   "relatedSlugs": [
     "emailoctopus",
     "loops",

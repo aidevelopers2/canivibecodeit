@@ -52,6 +52,8 @@
       "desc": "Active open-source personal music server for legally owned libraries."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "spotify-premium",
     "apple-music",

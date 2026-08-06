@@ -62,6 +62,14 @@
       "desc": "Self-hosted change monitoring with notifications."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "F5Bot",
+      "url": "https://f5bot.com/",
+      "desc": "The free tier is personal-use only, while lead generation is the business use this app exists for."
+    }
+  ],
   "relatedSlugs": [],
   "pagePriority": 3,
   "verifiedOneShot": false,

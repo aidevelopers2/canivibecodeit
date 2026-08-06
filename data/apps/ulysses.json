@@ -52,6 +52,44 @@
       "desc": "Mature open-source grammar and style checker with desktop and server components."
     }
   ],
+  "alternatives": [
+    {
+      "name": "SiYuan",
+      "url": "https://b3log.org/siyuan/",
+      "type": "open-source",
+      "repo": "https://github.com/siyuan-note/siyuan",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "A local-first writing library with blocks, links, huge documents, and real exports; less monastic than Ulysses, much harder to lose.",
+      "stars": 45641,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Zettlr",
+      "url": "https://www.zettlr.com/",
+      "type": "open-source",
+      "repo": "https://github.com/Zettlr/Zettlr",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "A serious Markdown desk with folders, writing targets, citations, and export machinery that occasionally admits Pandoc is under the hood.",
+      "stars": 13300,
+      "lastCommit": "2026-07",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "sudowrite",
     "prowritingaid",

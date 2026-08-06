@@ -52,6 +52,8 @@
       "desc": "Active open-source resume builder with structured data and PDF export."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "jobscan",
     "huntr",

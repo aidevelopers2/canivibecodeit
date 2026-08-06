@@ -50,6 +50,38 @@
       "desc": "Active open-source cross-platform text expansion utility with system integration."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Apple Automator",
+      "url": "https://support.apple.com/guide/automator/welcome/mac",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos"
+      ],
+      "desc": "Old, unfashionable, and still able to turn folders, services, calendars, and app actions into local workflows.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Apple Shortcuts",
+      "url": "https://support.apple.com/guide/shortcuts-mac/welcome/mac",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos",
+        "ios"
+      ],
+      "desc": "Apple's built-in macro box: plenty of deterministic actions, fewer background triggers, no extra invoice.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "alfred-powerpack",
     "setapp",

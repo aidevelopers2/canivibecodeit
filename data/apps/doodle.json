@@ -53,6 +53,99 @@
       "desc": "Mature open-source scheduling platform with calendar integrations and booking workflows."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Calendly Free",
+      "url": "https://calendly.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "browser-extension"
+      ],
+      "desc": "One active event type and unlimited bookings; meeting polls survive, workflows and teams do not.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Nextcloud Polls",
+      "url": "https://apps.nextcloud.com/apps/polls",
+      "type": "open-source",
+      "repo": "https://github.com/nextcloud/polls",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Excellent Doodle replacement hiding inside a whole Nextcloud server; the poll is easy, the platform is not.",
+      "stars": 284,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Rallly",
+      "url": "https://rallly.co/",
+      "type": "open-source",
+      "repo": "https://github.com/lukevella/rallly",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Doodle’s useful half, date polls, votes, comments and finalization, without the account ambush.",
+      "stars": 5200,
+      "lastCommit": "2026-08",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "TidyCal Free",
+      "url": "https://tidycal.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Unlimited one-person booking types and paid bookings on one calendar; group meetings and fancy emails cost extra.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "YouCanBookMe Free",
+      "url": "https://youcanbook.me/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "browser-extension"
+      ],
+      "desc": "One booking page, but it keeps forms, payments, confirmations, polls and the calendar-overlay trick.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "zcal Free",
+      "url": "https://zcal.co/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Polls, calendar overlay, voting deadlines and finalization are free; the ads are also absent.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "cal-com-teams",
     "fantastical",

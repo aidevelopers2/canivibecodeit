@@ -55,6 +55,27 @@
       "desc": "Open-source local knowledge graph and outliner."
     }
   ],
+  "alternatives": [
+    {
+      "name": "moodiary",
+      "url": "https://docs.moodiary.net",
+      "type": "open-source",
+      "repo": "https://github.com/ZhuJHua/moodiary",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android"
+      ],
+      "desc": "Cross-platform journaling with media, a trail map and WebDAV backup; reminders are thinner.",
+      "stars": 1900,
+      "lastCommit": "2026-07",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "diarly",
     "roam-research",

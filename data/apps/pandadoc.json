@@ -54,6 +54,32 @@
       "desc": "Active open-source web application for a broad set of PDF operations."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Dolibarr",
+      "url": "https://www.dolibarr.org/",
+      "type": "open-source",
+      "repo": "https://github.com/Dolibarr/dolibarr",
+      "platforms": [
+        "web",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "Build reusable proposals and quotes from products and saved lines, generate PDFs, email them, and collect online approval or signatures; heavier than PandaDoc because it is also an ERP.",
+      "stars": 7488,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "DocuSeal",
+      "url": "https://www.docuseal.com/",
+      "desc": "Excellent once a document already exists, but it does not replace PandaDoc's proposal authoring, pricing tables, and content-library workflow."
+    }
+  ],
   "relatedSlugs": [
     "adobe-acrobat-pro",
     "pdf-expert",

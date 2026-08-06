@@ -51,6 +51,57 @@
       "status": "alive"
     }
   ],
+  "alternatives": [
+    {
+      "name": "Folo",
+      "url": "https://folo.is",
+      "type": "open-source",
+      "repo": "https://github.com/RSSNext/Folo",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android"
+      ],
+      "desc": "A modern hosted research feed with 150 free subscriptions, one inbox and one automation.",
+      "stars": 38800,
+      "lastCommit": "2026-08",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "NewsBlur",
+      "url": "https://newsblur.com",
+      "type": "open-source",
+      "repo": "https://github.com/samuelclay/NewsBlur",
+      "platforms": [
+        "web",
+        "macos",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "Feeds, newsletters and trainable filters, in exchange for running several databases.",
+      "stars": 7600,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "FreshRSS",
+      "url": "https://freshrss.org",
+      "desc": "Excellent RSS, but it has no built-in email-newsletter inbox or alert workflow."
+    },
+    {
+      "name": "Miniflux",
+      "url": "https://miniflux.app",
+      "desc": "A fine feed reader, but newsletters and monitoring require separate services."
+    }
+  ],
   "relatedSlugs": [
     "inoreader",
     "todoist",

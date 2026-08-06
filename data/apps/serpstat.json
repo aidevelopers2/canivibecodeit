@@ -52,6 +52,35 @@
       "desc": "Open-source search ranking tracker for owned keyword sets."
     }
   ],
+  "alternatives": [
+    {
+      "name": "OpenSEO",
+      "url": "https://openseo.so/",
+      "type": "open-source",
+      "repo": "https://github.com/every-app/open-seo",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Tracks keywords and stores competitor domain research locally; DataForSEO supplies the facts and charges by the spoonful.",
+      "stars": 10614,
+      "lastCommit": "2026-07",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "SerpBear",
+      "url": "https://docs.serpbear.com/",
+      "desc": "Excellent at tracking your keywords, entirely uninterested in importing competitor research."
+    },
+    {
+      "name": "Serposcope",
+      "url": "https://www.serposcope.com/",
+      "desc": "Rank tracking only, archived in 2024 and last touched in January 2022."
+    }
+  ],
   "relatedSlugs": [
     "moz-pro",
     "se-ranking",

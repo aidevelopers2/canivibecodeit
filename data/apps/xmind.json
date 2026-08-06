@@ -50,6 +50,58 @@
       "desc": "Open-source diagram canvas with an approachable interaction model."
     }
   ],
+  "alternatives": [
+    {
+      "name": "AFFiNE",
+      "url": "https://affine.pro/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android"
+      ],
+      "desc": "Mind maps can turn into presentation frames and sit beside outlines, docs, and tasks; exports and visual refinement are not as mature as Xmind's.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Freeplane",
+      "url": "https://www.freeplane.org/",
+      "type": "open-source",
+      "repo": "https://github.com/freeplane/freeplane",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "A serious desktop mind mapper with outlines, formulas, attributes, filters, and local files; excellent depth, unmistakably utilitarian furniture.",
+      "stars": 4275,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "WiseMapping",
+      "url": "https://www.wisemapping.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Free hosted mind maps with collaboration and common import and export formats; no desktop application, offline workflow, or polished presentation mode.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "ayoa",
     "mindnode",

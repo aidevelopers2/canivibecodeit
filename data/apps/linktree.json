@@ -45,5 +45,59 @@
       "desc": "open-source link page, 100+ branded buttons"
     }
   ],
+  "alternatives": [
+    {
+      "name": "Carrd",
+      "url": "https://carrd.co/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Three free one-page sites; your custom domain and the last scrap of vanity still cost money.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "LinkStack",
+      "url": "https://linkstack.org/",
+      "type": "open-source",
+      "repo": "https://github.com/LinkStackOrg/LinkStack",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Linktree without the landlord: editor, themes and click stats, all in one Docker stack.",
+      "stars": 3700,
+      "lastCommit": "2026-07",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Linktree Free",
+      "url": "https://linktr.ee/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "The same static page with unlimited basic links for zero dollars; branding and serious analytics remain the rent.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "LittleLink",
+      "url": "https://littlelink.io/",
+      "desc": "Popular, healthy and still a template: a non-builder must edit files to change a link."
+    }
+  ],
   "prompt": "Build me a link-in-bio page to replace Linktree. Requirements:\n\n- A single static page: avatar, name, short bio, and a list of link buttons defined\n  in one links.json file (title, url, optional emoji). Editing the JSON is the CMS.\n- Clean mobile-first design, dark mode via prefers-color-scheme, subtle hover states.\n  No framework needed · one HTML file with embedded CSS is fine, or Astro if you must.\n- Add click tracking with zero third parties: each link goes through a /go/:slug\n  redirect that appends a line to a local clicks.log (or a SQLite row) then 302s.\n  Add a /stats page (basic-auth from .env) showing clicks per link.\n- Proper OG tags + generated OG image so the page previews well when shared.\n- Include deploy instructions for a plain VPS with Caddy or nginx."
 }

@@ -56,6 +56,24 @@
       "desc": "Open-source terminal coding agent with repository-aware edits."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Aider",
+      "url": "https://aider.chat/",
+      "desc": "A repository editor, not an AWS-aware IDE, CLI and cloud-operations assistant."
+    },
+    {
+      "name": "Continue",
+      "url": "https://continue.dev/",
+      "desc": "Acquired by Cursor; the repo is read-only, and it never covered AWS cloud operations anyway."
+    },
+    {
+      "name": "Kilo Code",
+      "url": "https://kilo.ai/",
+      "desc": "A capable coding agent, but it does not replace Amazon Q's AWS console and cloud-operations integration."
+    }
+  ],
   "relatedSlugs": [
     "jetbrains-ai-pro",
     "gitlab-duo",

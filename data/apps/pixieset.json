@@ -52,6 +52,57 @@
       "desc": "Active open-source self-hosted photo and video management platform."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Lychee",
+      "url": "https://lycheeorg.dev/",
+      "type": "open-source",
+      "repo": "https://github.com/LycheeOrg/Lychee",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A clean self-hosted gallery with password-protected albums, downloads, metadata, and Docker deployment; no built-in storefront.",
+      "stars": 4300,
+      "lastCommit": "2026-07",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Piwigo",
+      "url": "https://piwigo.org/",
+      "type": "open-source",
+      "repo": "https://github.com/Piwigo/Piwigo",
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "Private users and albums, passworded access, downloads, themes, and storage you own; less glossy, vastly less hostage-like.",
+      "stars": 3800,
+      "lastCommit": "2026-05",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "CloudSpot Free",
+      "url": "https://cloudspot.io/",
+      "desc": "Only three active galleries and downloads capped at 2048 pixels; fine for previews, not the promised client-delivery replacement."
+    },
+    {
+      "name": "Immich",
+      "url": "https://immich.app/",
+      "desc": "Great family photo server, awkward client gallery: sharing exists, but passworded proofing and presentation controls are not the product."
+    },
+    {
+      "name": "Pixieset Free",
+      "url": "https://pixieset.com/",
+      "desc": "Three gigabytes and platform branding make the free tier a sampler, while the more useful delivery controls remain paid."
+    }
+  ],
   "relatedSlugs": [
     "adobe-lightroom",
     "capture-one",

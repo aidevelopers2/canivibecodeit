@@ -50,6 +50,42 @@
       "desc": "Open-source product analytics, feature flags, and session replay."
     }
   ],
+  "alternatives": [
+    {
+      "name": "OpenPanel",
+      "url": "https://openpanel.dev",
+      "type": "open-source",
+      "repo": "https://github.com/Openpanel-dev/openpanel",
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "Privacy-first funnels, attribution and session timelines, with optional replay and mandatory ClickHouse.",
+      "stars": 6280,
+      "lastCommit": "2026-07",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "PostHog",
+      "url": "https://posthog.com",
+      "type": "open-source",
+      "repo": "https://github.com/PostHog/posthog",
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "Funnels, attribution, profiles and session replay; privacy depends on the settings you actually choose.",
+      "stars": 37500,
+      "lastCommit": "2026-08",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "piwik-pro",
     "gosquared",

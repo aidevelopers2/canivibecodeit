@@ -53,6 +53,60 @@
       "desc": "Active open-source web application for a broad set of PDF operations."
     }
   ],
+  "alternatives": [
+    {
+      "name": "PDF24",
+      "url": "https://tools.pdf24.org/en/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "windows"
+      ],
+      "desc": "Free editing, conversion, forms, OCR, signatures, and document assembly; strong for ordinary PDFs, weaker for Foxit's reusable form-field workflow.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "PDFgear",
+      "url": "https://www.pdfgear.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "ios",
+        "android"
+      ],
+      "desc": "Direct text and object editing, OCR, Office conversion, forms, signatures, and organization without a paid tier; reusable form authoring is less mature than Foxit's.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Stirling PDF",
+      "url": "https://stirling.com/",
+      "type": "open-source",
+      "repo": "https://github.com/Stirling-Tools/Stirling-PDF",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "A broad private PDF workshop with editing, conversion, OCR, forms, signatures, and batch operations; less polished for repeatedly designing complex forms.",
+      "stars": 88969,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "adobe-acrobat-pro",
     "pdf-expert",

@@ -56,6 +56,24 @@
       "desc": "Self-hosted photo organization and search."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Affinity",
+      "url": "https://affinity.serif.com/",
+      "desc": "Powerful for desktop photo retouching and effects, but it does not handle Polarr's creator-style video filters."
+    },
+    {
+      "name": "PhotoPrism",
+      "url": "https://www.photoprism.app/",
+      "desc": "It organizes and searches media; filters, retouching, masks, and creator effects are not the product."
+    },
+    {
+      "name": "Snapseed",
+      "url": "https://play.google.com/store/apps/details?id=com.niksoftware.snapseed",
+      "desc": "A superb permanently free photo-filter and masking app, but it has no video editor; half the core job is still missing."
+    }
+  ],
   "relatedSlugs": [
     "fotor",
     "befunky",

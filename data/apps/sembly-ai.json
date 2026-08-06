@@ -52,6 +52,68 @@
       "desc": "Widely used local Whisper inference implementation suitable for private transcription."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Meeting Transcriber",
+      "url": "https://meetingtranscriber.app/",
+      "type": "open-source",
+      "repo": "https://github.com/pasrom/meeting-transcriber",
+      "platforms": [
+        "macos"
+      ],
+      "desc": "Turns a captured meeting into a transcript, summary, decisions and tasks in ordinary Markdown.",
+      "stars": 97,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Muesli",
+      "url": "https://muesli.works/",
+      "type": "open-source",
+      "repo": "https://github.com/Muesli-HQ/muesli",
+      "platforms": [
+        "macos"
+      ],
+      "desc": "Local transcripts plus configurable notes, decisions and action items; the searchable notebook stays on your Mac.",
+      "stars": 890,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "OpenWhispr",
+      "url": "https://openwhispr.com/",
+      "type": "open-source",
+      "repo": "https://github.com/OpenWhispr/openwhispr",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "Records or imports audio, labels speakers, generates notes and keeps the result searchable.",
+      "stars": 5223,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Speakr",
+      "url": "https://murtaza-nasir.github.io/speakr/",
+      "type": "open-source",
+      "repo": "https://github.com/murtaza-nasir/speakr",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Self-hosted transcription, templates, topics, tasks, search and chat in one polished web app.",
+      "stars": 3600,
+      "lastCommit": "2026-07",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "fathom-ai",
     "read-ai",

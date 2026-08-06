@@ -51,6 +51,24 @@
       "desc": "Open-source desktop mail client and useful IMAP prior art."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Boomerang Basic",
+      "url": "https://www.boomeranggmail.com/",
+      "desc": "The forever-free plan exists, but ten workflow credits a month is one busy morning."
+    },
+    {
+      "name": "Mailspring",
+      "url": "https://www.getmailspring.com/",
+      "desc": "Send-later and reminders are paid, and Inbox Pause never arrived."
+    },
+    {
+      "name": "Right Inbox Free",
+      "url": "https://www.rightinbox.com/",
+      "desc": "The free plan meters only a handful of scheduled or reminded messages each month; that is a demo."
+    }
+  ],
   "relatedSlugs": [
     "superhuman",
     "spark-premium",

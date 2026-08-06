@@ -51,6 +51,87 @@
       "desc": "Active open-source workspace with local-first documents and databases."
     }
   ],
+  "alternatives": [
+    {
+      "name": "AFFiNE",
+      "url": "https://affine.pro",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "Notion and a whiteboard had one child, then let it keep files locally.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "AppFlowy",
+      "url": "https://appflowy.com",
+      "type": "open-source",
+      "repo": "https://github.com/AppFlowy-IO/AppFlowy",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "A local-first workspace with pages and databases, minus the peer-to-peer mystique.",
+      "stars": 74999,
+      "lastCommit": "2026-07",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "SiYuan",
+      "url": "https://b3log.org/siyuan/",
+      "type": "open-source",
+      "repo": "https://github.com/siyuan-note/siyuan",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux",
+        "android",
+        "self-hosted",
+        "browser-extension"
+      ],
+      "desc": "A block database wearing a note app's clothes, with the fiddly bits exposed.",
+      "stars": 45647,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Trilium Notes",
+      "url": "https://triliumnotes.org",
+      "type": "open-source",
+      "repo": "https://github.com/TriliumNext/Trilium",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted",
+        "browser-extension"
+      ],
+      "desc": "A personal knowledge tree with relations, attributes and a sync server you control.",
+      "stars": 37278,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "craft",
     "slite",

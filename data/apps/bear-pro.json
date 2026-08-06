@@ -50,6 +50,62 @@
       "desc": "Active open-source workspace with local-first documents and databases."
     }
   ],
+  "alternatives": [
+    {
+      "name": "FSNotes",
+      "url": "https://fsnot.es",
+      "type": "open-source",
+      "repo": "https://github.com/glushchenko/fsnotes",
+      "platforms": [
+        "macos",
+        "ios"
+      ],
+      "desc": "Bear's tagged Markdown heart, minus the house style and subscription.",
+      "stars": 7400,
+      "lastCommit": "2026-07",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Joplin",
+      "url": "https://joplinapp.org",
+      "type": "open-source",
+      "repo": "https://github.com/laurent22/joplin",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android",
+        "cli",
+        "browser-extension"
+      ],
+      "desc": "Tagged Markdown notes with real sync choices and rather less Apple polish.",
+      "stars": 55800,
+      "lastCommit": "2026-07",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Obsidian",
+      "url": "https://obsidian.md",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android"
+      ],
+      "desc": "Local Markdown, backlinks and a plugin bazaar; sync is still your problem.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "craft",
     "slite",

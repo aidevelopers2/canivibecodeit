@@ -57,6 +57,24 @@
       "desc": "Local speech-to-text engine suitable for private transcription."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Castopod",
+      "url": "https://castopod.org",
+      "type": "open-source",
+      "repo": "https://github.com/ad-aures/castopod",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Self-hosted podcasting with real analytics and private feeds; you become the hosting company.",
+      "stars": 863,
+      "lastCommit": "2026-06",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "podbean",
     "libsyn",

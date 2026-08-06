@@ -50,6 +50,24 @@
       "desc": "Local speech-to-text engine suitable for private transcription."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Subtitle Edit",
+      "url": "https://subtitleedit.github.io/subtitleedit/",
+      "desc": "A serious subtitle workbench, but still a single-user desktop file rather than a collaborative review room."
+    },
+    {
+      "name": "transcribee",
+      "url": "https://transcribee.net/",
+      "desc": "Collaborative and active, but its own README says it is unfinished and concurrent editing has severe performance problems."
+    },
+    {
+      "name": "Vibe",
+      "url": "https://thewh1teagle.github.io/vibe/",
+      "desc": "Excellent local transcription, translation and subtitles; collaborative media review is missing."
+    }
+  ],
   "relatedSlugs": [
     "tactiq",
     "circleback",

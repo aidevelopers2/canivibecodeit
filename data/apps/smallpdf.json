@@ -53,6 +53,27 @@
       "desc": "Active open-source web application for a broad set of PDF operations."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Stirling PDF",
+      "url": "https://stirling.com/",
+      "type": "open-source",
+      "repo": "https://github.com/Stirling-Tools/Stirling-PDF",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "The credible self-hosted Smallpdf replacement: a large transformation toolbox, local control, and no artificial per-day rationing.",
+      "stars": 88969,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "adobe-acrobat-pro",
     "pdf-expert",

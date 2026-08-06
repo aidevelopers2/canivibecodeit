@@ -46,6 +46,24 @@
   "whyPeopleStillPay": "Surfshark: Security subscriptions buy professional operations, audits, response capacity, redundancy, and accountability when something goes wrong.",
   "ongoingBurden": "Own threat modelling, key management, patching, backups, restore tests, incident response, privacy requests, and dependency security.",
   "priorArt": [],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Malwarebytes Free",
+      "url": "https://www.malwarebytes.com/mwb-download",
+      "desc": "An on-demand scanner, not Surfshark’s VPN-plus-alerts-plus-antivirus bundle."
+    },
+    {
+      "name": "Proton Free",
+      "url": "https://proton.me/pricing",
+      "desc": "VPN, passwords, mail, and storage are free; antivirus, identity alerts, and unlimited-device VPN are not."
+    },
+    {
+      "name": "RiseupVPN",
+      "url": "https://riseup.net/vpn",
+      "desc": "A genuinely free privacy VPN; antivirus, identity alerts, and iPhone support are missing."
+    }
+  ],
   "relatedSlugs": [
     "icloud-plus",
     "google-one",

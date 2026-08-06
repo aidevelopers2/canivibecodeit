@@ -57,6 +57,19 @@
       "desc": "Self-hosted social media management software."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "BrightBean Studio",
+      "url": "https://brightbean.xyz/studio/",
+      "desc": "Publishing, inbox, analytics and collaboration are strong; public listening and customer-care depth are missing."
+    },
+    {
+      "name": "Postiz",
+      "url": "https://postiz.com/",
+      "desc": "Scheduling, teams and analytics cover the commodity layer, not listening or enterprise care."
+    }
+  ],
   "relatedSlugs": [
     "socialpilot",
     "missinglettr",

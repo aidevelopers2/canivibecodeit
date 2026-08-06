@@ -48,6 +48,24 @@
       "status": "alive"
     }
   ],
+  "alternatives": [
+    {
+      "name": "Inbox Zero",
+      "url": "https://www.getinboxzero.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "The exact organizer, drafter and cold-email blocker, free to self-host below five business users; OAuth and Docker remain unpaid labor.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "hey-email"
   ],

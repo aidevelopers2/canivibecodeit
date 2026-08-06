@@ -53,6 +53,80 @@
       "desc": "Active open-source no-code database interface and Airtable alternative."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Baserow Free",
+      "url": "https://baserow.io/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Airtable with fewer ornaments: 3,000 rows, forms, views, automations, and a small app builder for $0.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Grist",
+      "url": "https://www.getgrist.com/",
+      "type": "open-source",
+      "repo": "https://github.com/gristlabs/grist-core",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Self-hosted rather than managed, but a polished relational grid with formulas and forms.",
+      "stars": 11100,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "NocoDB Free",
+      "url": "https://nocodb.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "The same managed product: three editors, 1,000 records, forms, grid, kanban, gallery, webhooks, and API access.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "SeaTable Free",
+      "url": "https://seatable.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "A serious grid with 10,000 rows, forms, automations, scripts, and an app builder before it asks for money.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Teable Free",
+      "url": "https://teable.ai/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "An Airtable-shaped database with 1,000 rows, 100 automations, and a real app builder on the free plan.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "baserow-cloud",
     "grist",

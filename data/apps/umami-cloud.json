@@ -48,6 +48,71 @@
       "status": "alive"
     }
   ],
+  "alternatives": [
+    {
+      "name": "GoatCounter",
+      "url": "https://www.goatcounter.com",
+      "type": "open-source",
+      "repo": "https://github.com/arp242/goatcounter",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "The lighter self-hosted substitute when page traffic is the whole question.",
+      "stars": 5800,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Plausible Community Edition",
+      "url": "https://plausible.io/community-edition",
+      "type": "open-source",
+      "repo": "https://github.com/plausible/analytics",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A similarly restrained privacy dashboard with a mature self-hosted edition.",
+      "stars": 28377,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Rybbit",
+      "url": "https://rybbit.com",
+      "type": "open-source",
+      "repo": "https://github.com/rybbit-io/rybbit",
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "A broader self-hosted alternative with replay and funnels, at the cost of more moving parts.",
+      "stars": 12600,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Umami",
+      "url": "https://umami.is",
+      "type": "open-source",
+      "repo": "https://github.com/umami-software/umami",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Exactly Umami, except the cloud engineer is now you and Docker gets a vote.",
+      "stars": 38073,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "squarespace",
     "wix",

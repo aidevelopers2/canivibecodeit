@@ -52,6 +52,39 @@
       "desc": "Local-first automatic time tracking with an extensible event model."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Focus101",
+      "url": "https://focus101.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "One matched body-double per workday on the free plan; weekends must fend for themselves.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Cofocus",
+      "url": "https://www.cofocus.one/",
+      "desc": "The right format, but the free plan stops at three sessions a week."
+    },
+    {
+      "name": "Flow Club",
+      "url": "https://www.flow.club/",
+      "desc": "A group coworking service with a trial, not a free plan and not one-to-one."
+    },
+    {
+      "name": "FocusPair",
+      "url": "https://www.focuspair.com/",
+      "desc": "Free video coworking, provided you already have a partner; matching and scheduling are absent."
+    }
+  ],
   "relatedSlugs": [
     "freedom",
     "opal",

@@ -1,0 +1,78 @@
+---
+/* The hub: every dedicated alternatives page, grouped by category. Flattens
+   crawl depth to 2 for each child page and concentrates internal links. */
+import Base from '../layouts/Base.astro';
+import DigestCard from '../components/DigestCard.astro';
+import { appsWithAlternativesPage, CATEGORIES } from '../lib/apps.js';
+
+const apps = appsWithAlternativesPage();
+const totalAlts = apps.reduce((s, a) => s + a.alternatives.length, 0);
+
+const groups = Object.entries(CATEGORIES)
+  .map(([slug, meta]) => ({
+    slug,
+    ...meta,
+    apps: apps.filter((a) => a.category === slug).sort((x, y) => y.alternatives.length - x.alternatives.length),
+  }))
+  .filter((g) => g.apps.length > 0)
+  .sort((a, b) => b.apps.length - a.apps.length);
+
+const title = `Free & open-source alternatives to ${apps.length} paid SaaS apps`;
+const description = `${totalAlts} curated free and open-source alternatives across ${apps.length} paid apps; every entry verified (license, activity, real adoption). No votes, no pay-to-list.`;
+
+const jsonld = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: title,
+    numberOfItems: apps.length,
+    itemListElement: apps.map((a, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: `${a.name.split(' / ')[0]} alternatives`,
+      url: `https://canivibecodeit.com/${a.slug}/alternatives`,
+    })),
+  },
+];
+---
+
+<Base {title} {description} {jsonld}>
+  <main class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="/">the death list</a> / <span class="here">alternatives</span>
+    </nav>
+
+    <div class="list-head" style="padding-top: 20px;">
+      <h2>the escape hatches</h2>
+      <span class="note">{totalAlts} free alternatives · {apps.length} {apps.length === 1 ? 'app' : 'apps'}</span>
+    </div>
+
+    <p class="alt-intro">
+      Don't feel like building it? Every list below is curated and verified: open
+      source or genuinely free, maintained, and usable by a normal human. No votes,
+      no pay-to-list.
+    </p>
+
+    {
+      groups.map((g) => (
+        <section class="alt-hub-group">
+          <span class="microlabel">{g.emoji} {g.label.toLowerCase()}</span>
+          <div class="related-grid">
+            {g.apps.map((a) => (
+              <a class="mini-card" href={`/${a.slug}/alternatives`}>
+                <img src={`/icons/${a.slug}.png`} alt="" width="26" height="26" loading="lazy" />
+                <span>
+                  <span class="m-name">{a.name.split(' / ')[0]} alternatives</span>
+                  <br />
+                  <span class="m-meta">{a.alternatives.length} free picks</span>
+                </span>
+              </a>
+            ))}
+          </div>
+        </section>
+      ))
+    }
+  </main>
+
+  <DigestCard source="alternatives_hub" />
+</Base>

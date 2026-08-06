@@ -48,6 +48,43 @@
       "status": "alive"
     }
   ],
+  "alternatives": [
+    {
+      "name": "Boring Notch",
+      "url": "https://boringnotch.com/",
+      "type": "open-source",
+      "repo": "https://github.com/TheBoredTeam/boring.notch",
+      "platforms": [
+        "macos"
+      ],
+      "desc": "Music, files, calendar, camera, and system HUDs; clipboard and window snapping stay elsewhere.",
+      "stars": 10096,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Notchy",
+      "url": "https://notchy.dev/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos"
+      ],
+      "desc": "Gojo's clipboard, windows, files, media, and another two dozen notch tricks, all free.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Gojo source code",
+      "url": "https://gojo.rohoswagger.com/",
+      "desc": "The source is public, but the signed binary expires after three days; avoiding payment means building it yourself."
+    }
+  ],
   "relatedSlugs": [
     "raycast-pro",
     "superwhisper"

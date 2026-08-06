@@ -53,6 +53,41 @@
       "desc": "Open-source screen recording and sharing product with modern desktop architecture."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Cap",
+      "url": "https://cap.so",
+      "type": "open-source",
+      "repo": "https://github.com/CapSoftware/Cap",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "self-hosted"
+      ],
+      "desc": "Record screen and camera, keep an organized library, then paste the link into your own sales email.",
+      "stars": 20500,
+      "lastCommit": "2026-07",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Screenity",
+      "url": "https://screenity.io",
+      "type": "open-source",
+      "repo": "https://github.com/alyssaxuu/screenity",
+      "platforms": [
+        "web",
+        "browser-extension"
+      ],
+      "desc": "Unlimited screen-and-camera recording with local or Drive output; personalization is still manual, as requested.",
+      "stars": 18500,
+      "lastCommit": "2026-07",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "screen-studio",
     "cleanshot-x",

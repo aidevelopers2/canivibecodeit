@@ -52,6 +52,48 @@
       "desc": "Active open-source coding-assistant framework for IDEs and multiple model providers."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Kilo Code",
+      "url": "https://kilo.ai/",
+      "type": "open-source",
+      "repo": "https://github.com/kilo-org/kilocode",
+      "platforms": [
+        "browser-extension",
+        "cli",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "A maintained editor agent with model choice; heavier than a completion engine.",
+      "stars": 26735,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Tabby",
+      "url": "https://tabbyml.com/",
+      "type": "open-source",
+      "repo": "https://github.com/TabbyML/tabby",
+      "platforms": [
+        "browser-extension",
+        "self-hosted"
+      ],
+      "desc": "The direct answer: self-hosted repository completions and chat through your own models.",
+      "stars": 33819,
+      "lastCommit": "2026-06",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Continue",
+      "url": "https://continue.dev/",
+      "desc": "Acquired by Cursor; the repo is read-only and 2.0.0 is the last release."
+    }
+  ],
   "relatedSlugs": [
     "windsurf",
     "replit",

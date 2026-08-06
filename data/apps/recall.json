@@ -52,6 +52,29 @@
       "desc": "Mature open-source RSS reader with feeds, filters, and self-hosting support."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Atomic",
+      "url": "https://atomicapp.ai",
+      "type": "open-source",
+      "repo": "https://github.com/kenforthewin/atomic",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "self-hosted",
+        "browser-extension"
+      ],
+      "desc": "Saved sources become summaries and a linked semantic graph; bring your own model.",
+      "stars": 1600,
+      "lastCommit": "2026-07",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "readwise",
     "raindrop-io",

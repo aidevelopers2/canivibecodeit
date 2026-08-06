@@ -52,6 +52,58 @@
       "desc": "Widely used Bitwarden-compatible self-hosted password server implementation."
     }
   ],
+  "alternatives": [
+    {
+      "name": "AliasVault",
+      "url": "https://www.aliasvault.net/",
+      "type": "open-source",
+      "repo": "https://github.com/aliasvault/aliasvault",
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "self-hosted",
+        "browser-extension"
+      ],
+      "desc": "Passwords, passkeys, aliases, and encrypted backups on your server; reliable mail delivery is now infrastructure.",
+      "stars": 2400,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Proton Pass Free",
+      "url": "https://proton.me/pass",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android",
+        "browser-extension"
+      ],
+      "desc": "The same password-and-alias vault with ten aliases and portable exports; unlimited aliases and sharing stay paid.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Bitwarden Free",
+      "url": "https://bitwarden.com/pricing/",
+      "desc": "Excellent password vault and export story; email aliases are not a native core feature."
+    },
+    {
+      "name": "KeePassXC",
+      "url": "https://keepassxc.org/",
+      "desc": "Local vault and portable encrypted backups, but no integrated alias service."
+    }
+  ],
   "relatedSlugs": [
     "bitwarden",
     "deleteme",

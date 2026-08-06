@@ -61,6 +61,39 @@
       "desc": "browser-based video compositing engine powered by WebCodecs"
     }
   ],
+  "alternatives": [
+    {
+      "name": "MoneyPrinterTurbo",
+      "url": "https://github.com/harry0703/MoneyPrinterTurbo",
+      "type": "open-source",
+      "repo": "https://github.com/harry0703/MoneyPrinterTurbo",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted",
+        "cli"
+      ],
+      "desc": "Give it a topic or script and it assembles footage, voice and captions; you supply the model keys and patience.",
+      "stars": 66000,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "OpenMontage",
+      "url": "https://www.openmontage.video",
+      "desc": "Impressive engine, but the non-builder desktop app is still private alpha; today it expects an AI coding assistant."
+    },
+    {
+      "name": "YumCut",
+      "url": "https://yumcut.com",
+      "desc": "Source-available under a noncommercial licence, while the usable hosted workflow is credit-metered; neither story qualifies."
+    }
+  ],
   "relatedSlugs": [
     "invideo",
     "opusclip",

@@ -56,6 +56,30 @@
       "desc": "Open-source site-wide Lighthouse crawler and dashboard."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Rank Math SEO",
+      "url": "https://wordpress.org/plugins/seo-by-rank-math/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "SEO guidance, schema, redirects and internal-link suggestions without the Premium bill; support remains your own problem.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Yoast SEO Free",
+      "url": "https://wordpress.org/plugins/wordpress-seo/",
+      "desc": "Metadata, sitemaps and schema stay free; redirects and internal-link suggestions are exactly what Premium keeps behind the till."
+    }
+  ],
   "relatedSlugs": [
     "aioseo",
     "clearscope",

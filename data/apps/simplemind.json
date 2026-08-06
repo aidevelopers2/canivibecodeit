@@ -50,6 +50,42 @@
       "desc": "Open-source diagram canvas with an approachable interaction model."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Freeplane",
+      "url": "https://www.freeplane.org/",
+      "type": "open-source",
+      "repo": "https://github.com/freeplane/freeplane",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "Flexible local mind maps with links, notes, attributes, filters, and exports; no mobile app and considerably less visual restraint.",
+      "stars": 4275,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "yEd",
+      "url": "https://www.yworks.com/products/yed",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "Not marketed as a mind mapper, but its free layouts and local graph files handle large, irregular maps unusually well.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "excalidraw-plus",
     "eraser",

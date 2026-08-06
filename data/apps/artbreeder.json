@@ -57,6 +57,14 @@
       "desc": "Widely used local Stable Diffusion interface and extension ecosystem."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "ComfyUI",
+      "url": "https://comfy.org/",
+      "desc": "It can blend images if you build the graph; there is no finished gene-slider, lineage, or exploration product here."
+    }
+  ],
   "relatedSlugs": [
     "openart",
     "seaart",

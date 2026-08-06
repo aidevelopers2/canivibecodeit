@@ -51,6 +51,24 @@
       "desc": "Open-source desktop mail client and useful IMAP prior art."
     }
   ],
+  "alternatives": [
+    {
+      "name": "Inbox Zero",
+      "url": "https://www.getinboxzero.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Server-side AI rules, follow-up tracking and bulk cleanup for Gmail or Outlook; self-hosting starts with OAuth, Docker and a model.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "leave-me-alone",
     "mailbird",

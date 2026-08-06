@@ -52,6 +52,37 @@
       "status": "alive"
     }
   ],
+  "alternatives": [
+    {
+      "name": "Moodle",
+      "url": "https://moodle.org/",
+      "type": "open-source",
+      "repo": "https://github.com/moodle/moodle",
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "A school wearing work boots: courses, forums, calendars, badges and paid enrolment, without Circle's polished creator clubhouse.",
+      "stars": 7300,
+      "lastCommit": "2026-07",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Discourse",
+      "url": "https://www.discourse.org/",
+      "desc": "Excellent community software; courses, memberships and payments are still somebody else's product."
+    },
+    {
+      "name": "Odoo Community",
+      "url": "https://www.odoo.com/",
+      "desc": "It has courses, forums, events and checkout, but an ERP assembled from modules is not a coherent creator community."
+    }
+  ],
   "relatedSlugs": [
     "mighty-networks",
     "buffer",

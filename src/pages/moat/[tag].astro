@@ -20,7 +20,7 @@ const apps = appsByMoat(tag).sort((a, b) => votes(b.slug) - votes(a.slug));
 if (apps.length === 0) return new Response(null, { status: 404 });
 
 const moats = moatsInUse();
-const title = `Apps defended by ${label} — Can I Vibecode It?`;
+const title = `Apps defended by ${label} · Can I Vibecode It?`;
 const description = `${apps.length} subscription apps whose moat is ${label}: ${MOAT_TAG_DESCS[tag]} Ranked by how many people replaced them with one AI prompt.`;
 
 const jsonld = [
@@ -36,7 +36,7 @@ const jsonld = [
   {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    name: `${label} — apps defended by this moat`,
+    name: `${label} · apps defended by this moat`,
     itemListElement: apps.map((a, i) => ({
       '@type': 'ListItem',
       position: i + 1,

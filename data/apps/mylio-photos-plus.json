@@ -51,6 +51,24 @@
       "desc": "Active open-source self-hosted photo and video management platform."
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "digiKam",
+      "url": "https://www.digikam.org/",
+      "desc": "It nails local and network catalogs, duplicates, tags, and metadata, but has no Mylio-style multi-device vault or storage policy."
+    },
+    {
+      "name": "Immich",
+      "url": "https://immich.app/",
+      "desc": "It syncs devices into one central server; it does not provide Mylio's peer-like device graph, local vaults, or space-aware originals."
+    },
+    {
+      "name": "PhotoPrism",
+      "url": "https://www.photoprism.app/",
+      "desc": "A capable server library, not a device-aware distributed catalog; every device is merely a client of the box."
+    }
+  ],
   "relatedSlugs": [
     "adobe-lightroom",
     "capture-one",
