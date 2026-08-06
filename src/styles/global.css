@@ -482,6 +482,23 @@ h3 {
   transform: translateY(-1px);
 }
 
+/* launch teaser: the alternatives chip reads green until the feature is old news */
+.chip-new {
+  border-color: var(--primary);
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.new-tag {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  background: var(--primary);
+  color: var(--on-primary);
+  border-radius: 100px;
+  padding: 2px 6px;
+}
+
 .chip:active {
   transform: scale(0.95);
 }
