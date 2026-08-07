@@ -111,7 +111,9 @@
     data = JSON.parse(document.getElementById('globe-data')?.textContent || 'null');
     if (data?.unavailable) data = null;
   } catch { data = null; }
-  let dataAt = Date.now();
+  // dataAt is when the snapshot was COMPUTED, not fetched: the server says how
+  // many seconds it already spent in its cache, so "ago" drift stays honest.
+  let dataAt = Date.now() - (data?.age || 0) * 1000;
 
   let pins = [];
   const buildPins = () => {
@@ -397,13 +399,15 @@
       sub.textContent = `from ${fmt(data.liveCountries)} ${data.liveCountries === 1 ? 'country' : 'countries'} · ${fmt(data.allTime?.views)} visits${since}`;
     }
     if (feedEl) {
+      const drift = Math.floor((Date.now() - dataAt) / 1000);
       feedEl.innerHTML = (data.feed || [])
         .slice(0, 4)
         .map((f, i) => {
+          const ago = f.ago + drift;
           const text = f.copy
             ? `someone in ${esc(country(f.c))} copied the ${esc(f.app || 'app')} prompt`
-            : `someone in ${esc(country(f.c))} ${f.ago < 120 ? 'is reading' : 'read'} ${esc(f.path)}`;
-          return `<li${i === 0 ? ' class="fresh"' : ''}><span class="g-dot"></span><span class="g-line">${flag(f.c)} ${text}</span><span class="g-ago">${agoStr(f.ago)}</span></li>`;
+            : `someone in ${esc(country(f.c))} ${ago < 120 ? 'is reading' : 'read'} ${esc(f.path)}`;
+          return `<li${i === 0 ? ' class="fresh"' : ''}><span class="g-dot"></span><span class="g-line">${flag(f.c)} ${text}</span><span class="g-ago">${agoStr(ago)}</span></li>`;
         })
         .join('');
     }
@@ -423,14 +427,19 @@
       const next = await res.json();
       if (next && !next.unavailable) {
         data = next;
-        dataAt = Date.now();
+        dataAt = Date.now() - (next.age || 0) * 1000;
         buildPins();
         renderData();
         if (reduced) draw(0);
       }
     } catch { /* keep the last picture */ }
   };
-  setInterval(poll, 60_000);
+  setInterval(poll, 30_000);
+  // A tab coming back from the background skipped its polls; catch up now
+  // instead of showing stale numbers for up to another interval.
+  document.addEventListener('visibilitychange', () => {
+    if (!document.hidden && Date.now() - dataAt > 30_000) poll();
+  });
 
   /* ---------- boot ---------- */
   // Dev preview only: PostHog creds never exist on dev boxes, so ?demo=1

@@ -6,6 +6,9 @@ import { globeStats } from '../lib/analytics.js';
 const { embed = false } = Astro.props;
 
 const s = await globeStats();
+// Seconds the snapshot has already aged in the server cache: the client adds
+// this to its own elapsed time so "ago" labels stay honest between polls.
+const age = s ? Math.max(0, Math.round((Date.now() - s.at) / 1000)) : 0;
 const fmt = (n) => (n == null ? '—' : Number(n).toLocaleString('en-US'));
 
 const flag = (cc) =>
@@ -91,7 +94,7 @@ const sinceLabel = s?.allTime?.since
       </div>
     </div>
   </div>
-  <script type="application/json" id="globe-data" set:html={JSON.stringify(s || { unavailable: true })} />
+  <script type="application/json" id="globe-data" set:html={JSON.stringify(s ? { ...s, age } : { unavailable: true })} />
   <noscript>
     <style is:inline>
       .globe-wrap {

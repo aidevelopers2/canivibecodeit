@@ -23,13 +23,28 @@ const QUERY = `
     AND timestamp > now() - INTERVAL 7 DAY
 `;
 
-async function hogql(query) {
+/* PostHog's query API allows 2400 requests/hour but only 3 concurrent queries
+   per project; queued queries can be cancelled. Callers must keep any
+   Promise.all at 3 queries or fewer. A 429 means the hourly quota is gone:
+   stop asking for five minutes and let every caller serve its stale cache. */
+let pausedUntil = 0;
+
+async function hogql(query, { fresh = false } = {}) {
+  if (Date.now() < pausedUntil) throw new Error('posthog rate limited');
   const res = await fetch(`${HOST}/api/projects/${PROJECT}/query/`, {
     method: 'POST',
     headers: { Authorization: `Bearer ${KEY}`, 'Content-Type': 'application/json' },
-    body: JSON.stringify({ query: { kind: 'HogQLQuery', query } }),
+    /* fresh = force_blocking, which bypasses PostHog's own query-result cache.
+       Our query text never changes (now() lives inside the SQL), so without it
+       PostHog returns the same snapshot for minutes and the live window slides
+       backwards between their recomputes. */
+    body: JSON.stringify({
+      query: { kind: 'HogQLQuery', query },
+      refresh: fresh ? 'force_blocking' : 'blocking',
+    }),
     signal: AbortSignal.timeout(10000),
   });
+  if (res.status === 429) pausedUntil = Date.now() + 300_000;
   if (!res.ok) throw new Error(`posthog ${res.status}`);
   return (await res.json()).results;
 }
@@ -45,7 +60,9 @@ export async function dashboardStats() {
   if (now - dashCache.at < 120_000) return dashCache.data;
 
   try {
-    const [tiles, allTime, byDay, pages, agents, topPrompts] = await Promise.all([
+    // Two batches of three: the project allows 3 concurrent queries, and a
+    // six-wide Promise.all gets the overflow queued and sometimes cancelled.
+    const [tiles, allTime, byDay] = await Promise.all([
       hogql(QUERY),
       hogql(`
         SELECT countIf(event = '$pageview') AS views,
@@ -63,6 +80,8 @@ export async function dashboardStats() {
         WHERE ${SITE} AND timestamp > now() - INTERVAL 14 DAY
         GROUP BY d ORDER BY d
       `),
+    ]);
+    const [pages, agents, topPrompts] = await Promise.all([
       hogql(`
         SELECT properties.$pathname AS p, count() AS n
         FROM events
@@ -102,42 +121,78 @@ export async function dashboardStats() {
 }
 
 let globeCache = { at: 0, data: null };
+// Totals that barely move sit in their own 10-minute tier, so each live
+// refresh costs two queries instead of five (three concurrent is the cap).
+let globeSlow = {
+  at: 0,
+  allTime: { views: null, countries: null, since: null },
+  topCountries: [],
+  moreCountries: 0,
+};
 
 /* Geo picture for the homepage globe. Country-level only, on purpose: no
-   person ids, no combos that could single anyone out. One shared 60s cache
-   serves both the server render and the /api/globe poll. */
+   person ids, no combos that could single anyone out. One shared 30s cache
+   serves both the server render and the /api/globe poll; `at` lets callers
+   tell the client how old the snapshot is. */
 export async function globeStats() {
   if (!PROJECT || !KEY) return null;
   const now = Date.now();
-  if (now - globeCache.at < 60_000) return globeCache.data;
+  if (now - globeCache.at < 30_000) return globeCache.data;
 
-  try {
-    const [live, allTime, countries7d, feed, pins] = await Promise.all([
-      hogql(`
-        SELECT countDistinct(person_id) AS live,
-               countDistinctIf(properties.$geoip_country_code,
-                 properties.$geoip_country_code != '') AS countries
-        FROM events
-        WHERE ${SITE} AND event = '$pageview'
-          AND timestamp > now() - INTERVAL 5 MINUTE
-      `),
-      hogql(`
+  if (now - globeSlow.at > 600_000) {
+    try {
+      // Sequential on purpose: the fast tier below runs two queries of its
+      // own, and a third in flight here would hit the concurrency cap.
+      const allTime = await hogql(`
         SELECT count() AS views,
                countDistinctIf(properties.$geoip_country_code,
                  properties.$geoip_country_code != '') AS countries,
                toDate(min(timestamp)) AS since
         FROM events
         WHERE ${SITE} AND event = '$pageview'
-      `),
-      hogql(`
+      `);
+      const countries7d = await hogql(`
         SELECT properties.$geoip_country_code AS c, countDistinct(person_id) AS n
         FROM events
         WHERE ${SITE} AND event = '$pageview'
           AND timestamp > now() - INTERVAL 7 DAY
           AND properties.$geoip_country_code != ''
         GROUP BY c ORDER BY n DESC
-      `),
-      hogql(`
+      `);
+      globeSlow = {
+        at: now,
+        allTime: { views: allTime[0][0], countries: allTime[0][1], since: allTime[0][2] },
+        topCountries: countries7d.slice(0, 5).map(([c, n]) => ({ c, n })),
+        moreCountries: Math.max(0, countries7d.length - 5),
+      };
+    } catch {
+      globeSlow.at = now - 480_000; // keep the stale totals, retry in ~2 minutes
+    }
+  }
+
+  try {
+    const [pinRows, feed] = await Promise.all([
+      // One query carries both the pins (60-minute window) and the live count
+      // (5-minute sub-window). Summing per-country distincts can double-count
+      // a person who hops countries, and geo-less events drop out entirely;
+      // both effects are negligible and the pins need the geo split anyway.
+      hogql(
+        `
+        SELECT properties.$geoip_country_code AS c,
+               countDistinct(person_id) AS n,
+               countDistinctIf(person_id,
+                 timestamp > now() - INTERVAL 5 MINUTE) AS live,
+               toUnixTimestamp(max(timestamp)) AS latest
+        FROM events
+        WHERE ${SITE} AND event = '$pageview'
+          AND timestamp > now() - INTERVAL 60 MINUTE
+          AND properties.$geoip_country_code != ''
+        GROUP BY c ORDER BY n DESC LIMIT 60
+      `,
+        { fresh: true }
+      ),
+      hogql(
+        `
         SELECT properties.$geoip_country_code AS c,
                event,
                properties.$pathname AS path,
@@ -150,27 +205,20 @@ export async function globeStats() {
           AND timestamp > now() - INTERVAL 60 MINUTE
           AND properties.$geoip_country_code != ''
         ORDER BY timestamp DESC LIMIT 12
-      `),
-      hogql(`
-        SELECT properties.$geoip_country_code AS c,
-               countDistinct(person_id) AS n,
-               toUnixTimestamp(max(timestamp)) AS latest
-        FROM events
-        WHERE ${SITE} AND event = '$pageview'
-          AND timestamp > now() - INTERVAL 60 MINUTE
-          AND properties.$geoip_country_code != ''
-        GROUP BY c ORDER BY n DESC LIMIT 40
-      `),
+      `,
+        { fresh: true }
+      ),
     ]);
-    const nowS = Math.floor(now / 1000);
+    const nowS = Math.floor(Date.now() / 1000);
     globeCache = {
-      at: now,
+      at: Date.now(),
       data: {
-        live: live[0][0],
-        liveCountries: live[0][1],
-        allTime: { views: allTime[0][0], countries: allTime[0][1], since: allTime[0][2] },
-        topCountries: countries7d.slice(0, 5).map(([c, n]) => ({ c, n })),
-        moreCountries: Math.max(0, countries7d.length - 5),
+        at: Date.now(),
+        live: pinRows.reduce((sum, r) => sum + Number(r[2]), 0),
+        liveCountries: pinRows.filter((r) => Number(r[2]) > 0).length,
+        allTime: globeSlow.allTime,
+        topCountries: globeSlow.topCountries,
+        moreCountries: globeSlow.moreCountries,
         feed: feed.map(([c, event, path, app, device, ref, ts]) => ({
           c,
           copy: event === 'copy_prompt',
@@ -180,7 +228,7 @@ export async function globeStats() {
           ref,
           ago: Math.max(0, nowS - ts),
         })),
-        pins: pins.map(([c, n, latest]) => ({ c, n, ago: Math.max(0, nowS - latest) })),
+        pins: pinRows.map(([c, n, , latest]) => ({ c, n, ago: Math.max(0, nowS - latest) })),
       },
     };
   } catch {
