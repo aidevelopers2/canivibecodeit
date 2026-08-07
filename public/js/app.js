@@ -11,10 +11,12 @@
      document/window or a timer registers a cleanup here so navigations don't
      stack duplicates. */
   let cleanups = [];
+  let inited = false;
   const onLeave = (fn) => cleanups.push(fn);
   document.addEventListener('astro:before-swap', () => {
     cleanups.forEach((fn) => fn());
     cleanups = [];
+    inited = false; // re-arm boot() for the incoming page
   });
 
   /* Coming back from Stripe with the back button restores this page from the
@@ -723,21 +725,18 @@
     }
   };
 
-  /* astro:page-load fires on the initial load too, so this is the only boot
-     path in practice; the fallback below only exists for a future where the
-     router is removed and the event never comes. */
-  let booted = false;
-  document.addEventListener('astro:page-load', () => {
-    booted = true;
+  /* astro:page-load fires on the initial load too, but on slow pages the
+     timer fallback can beat it — boot() makes whichever arrives second a
+     no-op. Double-running initPage wires every handler twice, and a doubled
+     theme toggle flips the theme twice per click, i.e. visibly never. The
+     before-swap handler above re-arms it for each soft navigation. */
+  const boot = () => {
+    if (inited) return;
+    inited = true;
     initPage();
-  });
-  const bootFallback = () =>
-    setTimeout(() => {
-      if (!booted) {
-        booted = true;
-        initPage();
-      }
-    }, 20);
+  };
+  document.addEventListener('astro:page-load', boot);
+  const bootFallback = () => setTimeout(boot, 20);
   document.readyState === 'loading'
     ? addEventListener('DOMContentLoaded', bootFallback)
     : bootFallback();
