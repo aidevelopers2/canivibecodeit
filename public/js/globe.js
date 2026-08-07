@@ -333,16 +333,19 @@
   const loop = (t) => {
     raf = null;
     if (!visible) return;
-    const dt = lastT ? Math.min(100, t - lastT) : 16;
+    // dt spans any off-screen gap (and, on the first frame, the whole time
+    // since page load): the globe appears to have been spinning all along
+    // instead of waking up when scrolled to.
+    const dt = t - lastT;
     lastT = t;
     const idle = performance.now() - lastPointer > 4000;
-    if (!dragging && !hovering && idle) lon0 += (SPIN * dt) / 1000;
+    if (!dragging && !hovering && idle) lon0 = (lon0 + (SPIN * dt) / 1000) % 360;
     draw(t);
     raf = requestAnimationFrame(loop);
   };
   const start = () => {
     if (reduced) { draw(0); return; }
-    if (!raf) { lastT = 0; raf = requestAnimationFrame(loop); }
+    if (!raf) raf = requestAnimationFrame(loop);
   };
 
   let onScreen = false;
@@ -455,6 +458,6 @@
   setup();
   canvas.style.cursor = 'grab';
   canvas.style.touchAction = 'none';
-  if (reduced) draw(0);
+  draw(0); // paint immediately: the globe must never be blank when scrolled to
   io.observe(canvas);
 })();
