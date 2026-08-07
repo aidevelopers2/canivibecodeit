@@ -52,13 +52,22 @@ async function hogql(query, { fresh = false } = {}) {
 const SITE = `properties.$host = 'canivibecodeit.com'`;
 
 let dashCache = { at: 0, data: null };
+let dashInFlight = null;
 
-// Fuller dataset for the /stats page. One shared 2-minute cache.
+// Fuller dataset for the /stats page. One shared 2-minute cache; concurrent
+// callers at TTL expiry share one refresh instead of racing PostHog.
 export async function dashboardStats() {
   if (!PROJECT || !KEY) return null;
-  const now = Date.now();
-  if (now - dashCache.at < 120_000) return dashCache.data;
+  if (Date.now() - dashCache.at < 120_000) return dashCache.data;
+  if (!dashInFlight)
+    dashInFlight = refreshDashboard().finally(() => {
+      dashInFlight = null;
+    });
+  return dashInFlight;
+}
 
+async function refreshDashboard() {
+  const now = Date.now();
   try {
     // Two batches of three: the project allows 3 concurrent queries, and a
     // six-wide Promise.all gets the overflow queued and sometimes cancelled.
@@ -130,14 +139,28 @@ let globeSlow = {
   moreCountries: 0,
 };
 
+// Single-flight guard: every visitor's tab polls /api/globe and every page
+// render calls globeStats(), so when the TTL lapses several requests can race
+// to refresh at once. They all await the one in-flight refresh instead of
+// each firing their own PostHog queries.
+let globeInFlight = null;
+
 /* Geo picture for the homepage globe. Country-level only, on purpose: no
    person ids, no combos that could single anyone out. One shared 30s cache
    serves both the server render and the /api/globe poll; `at` lets callers
    tell the client how old the snapshot is. */
 export async function globeStats() {
   if (!PROJECT || !KEY) return null;
+  if (Date.now() - globeCache.at < 30_000) return globeCache.data;
+  if (!globeInFlight)
+    globeInFlight = refreshGlobe().finally(() => {
+      globeInFlight = null;
+    });
+  return globeInFlight;
+}
+
+async function refreshGlobe() {
   const now = Date.now();
-  if (now - globeCache.at < 30_000) return globeCache.data;
 
   if (now - globeSlow.at > 600_000) {
     try {
@@ -238,12 +261,20 @@ export async function globeStats() {
 }
 
 let cache = { at: 0, data: null };
+let siteInFlight = null;
 
 export async function siteStats() {
   if (!PROJECT || !KEY) return null;
-  const now = Date.now();
-  if (now - cache.at < 60_000) return cache.data;
+  if (Date.now() - cache.at < 60_000) return cache.data;
+  if (!siteInFlight)
+    siteInFlight = refreshSite().finally(() => {
+      siteInFlight = null;
+    });
+  return siteInFlight;
+}
 
+async function refreshSite() {
+  const now = Date.now();
   try {
     const res = await fetch(`${HOST}/api/projects/${PROJECT}/query/`, {
       method: 'POST',
