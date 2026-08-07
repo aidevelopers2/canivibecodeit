@@ -846,6 +846,50 @@ h3 {
   transform: scale(0.95);
 }
 
+/* ---------- escape-hatch strip (hero, under the chips) ---------- */
+
+.hatch-strip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  width: min(1080px, 100%);
+  padding: 13px 18px;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--primary);
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--primary) 3%, var(--bg));
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--fg);
+  transition: border-color 0.15s ease;
+}
+
+.hatch-strip:hover {
+  border-color: var(--muted);
+  border-left-color: var(--primary);
+}
+
+.hatch-strip .hs-cta {
+  color: var(--primary);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.hatch-strip:hover .hs-cta {
+  text-decoration: underline;
+}
+
+@media (max-width: 760px) {
+  .hatch-strip {
+    font-size: 12px;
+    gap: 8px;
+    padding: 11px 14px;
+    text-align: center;
+  }
+}
+
 .chip.active {
   background: var(--primary);
   border-color: var(--primary);
