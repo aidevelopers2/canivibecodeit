@@ -49,7 +49,7 @@
   "priorArt": [
     {
       "name": "Binoculars",
-      "url": "https://github.com/AhmedSSoliman/Binoculars",
+      "url": "https://github.com/ahans30/Binoculars",
       "desc": "Zero-shot LLM text detection using perplexity ratios between two models."
     },
     {

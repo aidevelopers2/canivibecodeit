@@ -60,17 +60,17 @@
       "name": "KNIME Analytics Platform",
       "url": "https://www.knime.com/knime-analytics-platform",
       "type": "open-source",
-      "repo": "https://github.com/knime/knime-core",
+      "repo": "https://github.com/knime-oss/knime-core",
       "platforms": [
         "macos",
         "windows",
         "linux"
       ],
       "desc": "A visual data workbench with hundreds of connectors; scheduled cloud runs are where KNIME starts charging.",
-      "stars": 773,
-      "lastCommit": "2026-04",
+      "stars": 0,
+      "lastCommit": "2026-07",
       "selfHost": "one-click",
-      "checkedOn": "2026-08-06"
+      "checkedOn": "2026-08-07"
     }
   ],
   "rejectedAlternatives": [],

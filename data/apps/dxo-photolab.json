@@ -1,8 +1,8 @@
 {
   "slug": "dxo-photolab",
   "name": "DxO PhotoLab",
-  "domain": "dxo.com",
-  "appURL": "https://dxo.com",
+  "domain": "www.dxo.com",
+  "appURL": "https://www.dxo.com",
   "category": "design",
   "subcategory": "RAW photo editor",
   "tagline": "RAW processing, optical corrections, denoising, and local adjustments",
