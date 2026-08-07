@@ -70,6 +70,13 @@ const SCHEMA_SQLITE = `
     count INTEGER NOT NULL DEFAULT 0,
     PRIMARY KEY (slot_id, day)
   );
+  CREATE TABLE IF NOT EXISTS searches (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    query TEXT NOT NULL,
+    hits INTEGER NOT NULL DEFAULT 0,
+    country TEXT,
+    created_at INTEGER NOT NULL
+  );
 `;
 
 const SCHEMA_PG = `
@@ -136,6 +143,13 @@ const SCHEMA_PG = `
     day TEXT NOT NULL,
     count INTEGER NOT NULL DEFAULT 0,
     PRIMARY KEY (slot_id, day)
+  );
+  CREATE TABLE IF NOT EXISTS searches (
+    id SERIAL PRIMARY KEY,
+    query TEXT NOT NULL,
+    hits INTEGER NOT NULL DEFAULT 0,
+    country TEXT,
+    created_at BIGINT NOT NULL
   );
 `;
 
@@ -372,6 +386,19 @@ async function pgDriver() {
       );
       return r.rows.map((x) => ({ ...x, count: Number(x.count) }));
     },
+    async addSearch(query, hits, country, ts) {
+      await pool.query(
+        'INSERT INTO searches (query, hits, country, created_at) VALUES ($1, $2, $3, $4)',
+        [query, hits, country, ts]
+      );
+    },
+    async searchRows(afterId, limit) {
+      const r = await pool.query(
+        'SELECT id, query, hits, country, created_at FROM searches WHERE id > $1 ORDER BY id LIMIT $2',
+        [afterId, limit]
+      );
+      return r.rows.map((x) => ({ ...x, id: Number(x.id), created_at: Number(x.created_at) }));
+    },
     async sponsorTotals() {
       const [imp, clk] = await Promise.all([
         pool.query('SELECT COALESCE(SUM(count), 0) AS n, MIN(day) AS since FROM sponsor_impressions'),
@@ -553,6 +580,18 @@ async function sqliteDriver() {
         .prepare('SELECT slot_id, day, count FROM sponsor_impressions WHERE day >= ? ORDER BY day')
         .all(sinceDay);
     },
+    async addSearch(query, hits, country, ts) {
+      db.prepare(
+        'INSERT INTO searches (query, hits, country, created_at) VALUES (?, ?, ?, ?)'
+      ).run(query, hits, country, ts);
+    },
+    async searchRows(afterId, limit) {
+      return db
+        .prepare(
+          'SELECT id, query, hits, country, created_at FROM searches WHERE id > ? ORDER BY id LIMIT ?'
+        )
+        .all(afterId, limit);
+    },
     async sponsorTotals() {
       const imp = db
         .prepare('SELECT COALESCE(SUM(count), 0) AS n, MIN(day) AS since FROM sponsor_impressions')
@@ -677,6 +716,16 @@ export async function sponsorTotals() {
   if (now - totalsCache.at < 60_000) return totalsCache.data;
   totalsCache = { at: now, data: await (await getDriver()).sponsorTotals() };
   return totalsCache.data;
+}
+
+export async function addSearch(query, hits, country, ts = Date.now()) {
+  return (await getDriver()).addSearch(query, hits, country, ts);
+}
+
+// Incremental export for the off-site audit log: rows strictly after `afterId`,
+// oldest first, so the puller can resume from the last id it has seen.
+export async function searchRows(afterId = 0, limit = 5000) {
+  return (await getDriver()).searchRows(afterId, limit);
 }
 
 export async function purchasesForAdmin(limit = 60) {

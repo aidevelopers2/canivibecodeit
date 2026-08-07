@@ -239,6 +239,39 @@
     if (srBox && !e.target.closest('.search-wrap')) renderDropdown('');
   });
 
+  /* ---------- search audit ----------
+     Log the query someone settled on, not every keystroke: a pause, Enter,
+     picking a result, or leaving the box flushes it. Deduped so backspacing
+     and retyping the same thing doesn't double-log. */
+  let searchLogTimer;
+  let lastLoggedQuery = '';
+  const logSearch = () => {
+    clearTimeout(searchLogTimer);
+    const q = (search?.value || '').trim().toLowerCase().slice(0, 80);
+    if (!q || q === lastLoggedQuery) return;
+    lastLoggedQuery = q;
+    const hits = rowData.filter((r) => r.lower.includes(q)).length;
+    track('search', { query: q, hits });
+    // keepalive: the request survives navigating away to a picked result.
+    fetch('/api/search', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ q, hits }),
+      keepalive: true,
+    }).catch(() => {});
+  };
+  if (search) {
+    search.addEventListener('input', () => {
+      clearTimeout(searchLogTimer);
+      searchLogTimer = setTimeout(logSearch, 1500);
+    });
+    search.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') logSearch();
+    });
+    search.addEventListener('blur', logSearch);
+    srBox?.addEventListener('click', logSearch);
+  }
+
   // Chips are real links (SEO); on the homepage they filter in place instead.
   const chips = $('#chips');
   if (chips && rows.length) {
