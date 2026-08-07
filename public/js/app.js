@@ -176,14 +176,13 @@
   const renderDropdown = (q) => {
     if (!srBox) return;
     srActive = -1;
-    if (!q) {
-      srBox.classList.remove('open');
-      search?.setAttribute('aria-expanded', 'false');
-      return;
-    }
-    const hits = rowData.filter((r) => r.lower.includes(q));
+    const hits = q ? rowData.filter((r) => r.lower.includes(q)) : [];
     if (!hits.length) {
+      // Clear the rows, don't just hide them: Enter reads the row list, and a
+      // stale row from three keystrokes ago must not swallow the keypress and
+      // redirect someone whose full query matches nothing.
       srBox.classList.remove('open');
+      srBox.innerHTML = '';
       search?.setAttribute('aria-expanded', 'false');
       return;
     }
@@ -228,6 +227,10 @@
     } else if (e.key === 'Escape') {
       renderDropdown('');
     } else if (e.key === 'Enter') {
+      // Only follow a suggestion the user can see: with the dropdown closed
+      // (query matches nothing) Enter does nothing, and the death list's
+      // "no results" state is the honest answer.
+      if (!srBox?.classList.contains('open')) return;
       const target = items[srActive >= 0 ? srActive : 0];
       if (target) location.href = target.getAttribute('href');
     }
