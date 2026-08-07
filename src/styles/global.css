@@ -1529,6 +1529,22 @@ a.row:hover .badge {
   }
 }
 
+/* card-style embed of the globe inside /stats and /sponsor */
+.globe-strip.embedded {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  grid-column: 1 / -1;
+}
+
+.globe-strip.embedded .inner {
+  max-width: none;
+  padding: 18px 20px 22px;
+}
+
+.sponsor-page .globe-strip.embedded {
+  margin-top: 28px;
+}
+
 /* ---------- stats dashboard ---------- */
 
 .dash-tiles {

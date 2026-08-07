@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import VisitorGlobe from '../components/VisitorGlobe.astro';
 import { dashboardStats } from '../lib/analytics.js';
 import { allApps, appsWithAlternativesPage, moatsInUse, VERDICTS } from '../lib/apps.js';
 import { sponsorTotals } from '../lib/db.js';
@@ -103,33 +104,43 @@ const description =
       </div>
     </div>
 
-    {
-      data ? (
-        <div class="panels">
+    <div class="panels">
+      {
+        data && (
           <section class="panel span-2">
             <header>
               <span class="microlabel">page views · last 14 days</span>
             </header>
-            <canvas id="chart-views" height="220"></canvas>
+            <canvas id="chart-views" height="220" />
           </section>
-          <section class="panel">
-            <header>
-              <span class="microlabel">top pages · 7d</span>
-            </header>
-            <canvas id="chart-pages" height="240"></canvas>
-          </section>
-          <section class="panel">
-            <header>
-              <span class="microlabel">copies by agent · 7d</span>
-            </header>
-            <canvas id="chart-agents" height="150"></canvas>
-            <header style="margin-top: 18px;">
-              <span class="microlabel">most-copied prompts · 7d</span>
-            </header>
-            <canvas id="chart-prompts" height="200"></canvas>
-          </section>
-        </div>
-      ) : (
+        )
+      }
+      <VisitorGlobe embed />
+      {
+        data && (
+          <Fragment>
+            <section class="panel">
+              <header>
+                <span class="microlabel">top pages · 7d</span>
+              </header>
+              <canvas id="chart-pages" height="240" />
+            </section>
+            <section class="panel">
+              <header>
+                <span class="microlabel">copies by agent · 7d</span>
+              </header>
+              <canvas id="chart-agents" height="150" />
+              <header style="margin-top: 18px;">
+                <span class="microlabel">most-copied prompts · 7d</span>
+              </header>
+              <canvas id="chart-prompts" height="200" />
+            </section>
+          </Fragment>
+        )
+      }
+    </div>
+    {
+      !data && (
         <p style="padding-top: 40px; color: var(--muted); font-size: 14px;">
           Analytics warming up. Numbers appear once the first events land.
         </p>

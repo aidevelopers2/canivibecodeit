@@ -370,8 +370,13 @@
     { attributes: true, attributeFilter: ['data-theme'] }
   );
 
+  /* Width changes only: mobile URL-bar collapse fires height-only resizes
+     on every scroll, and re-initing the canvas for those reads as flicker. */
   let rt;
+  let lastW = innerWidth;
   addEventListener('resize', () => {
+    if (innerWidth === lastW) return;
+    lastW = innerWidth;
     clearTimeout(rt);
     rt = setTimeout(() => { setup(); if (reduced) draw(0); }, 200);
   });

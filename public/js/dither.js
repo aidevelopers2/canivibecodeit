@@ -388,8 +388,14 @@
       document.documentElement,
       { attributes: true, attributeFilter: ['data-theme'] }
     );
+    /* Width changes only: on phones, scrolling collapses the URL bar, which
+       fires resize with a new HEIGHT — reloading on that made the page
+       flicker on every scroll. */
     let rt;
+    let lastW = innerWidth;
     addEventListener('resize', () => {
+      if (innerWidth === lastW) return;
+      lastW = innerWidth;
       clearTimeout(rt);
       rt = setTimeout(() => location.reload(), 400);
     });

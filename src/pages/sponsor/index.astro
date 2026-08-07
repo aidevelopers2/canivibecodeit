@@ -1,5 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
+import VisitorGlobe from '../../components/VisitorGlobe.astro';
 import { allApps } from '../../lib/apps.js';
 import {
   getBoard, nextRunStart, QUARTER_MIN_CENTS, QUARTER_MONTHS, RUN_DAYS, shortDate, usd,
@@ -79,6 +80,8 @@ const steps = [
     </section>
 
     {notice && <p class="sp-notice">{notice}</p>}
+
+    <VisitorGlobe embed />
 
     <section class="sp-sept" id="september">
       <div class="sp-sept-head">

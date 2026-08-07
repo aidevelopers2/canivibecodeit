@@ -1,6 +1,10 @@
 ---
 import { globeStats } from '../lib/analytics.js';
 
+// embed: card-style variant for mounting inside a page section (e.g. /stats,
+// /sponsor) instead of as the full-bleed homepage strip.
+const { embed = false } = Astro.props;
+
 const s = await globeStats();
 const fmt = (n) => (n == null ? '—' : Number(n).toLocaleString('en-US'));
 
@@ -33,7 +37,7 @@ const sinceLabel = s?.allTime?.since
   : null;
 ---
 
-<aside class="globe-strip" id="globe-strip" aria-label="Live visitors around the world">
+<aside class={`globe-strip${embed ? ' embedded' : ''}`} id="globe-strip" aria-label="Live visitors around the world">
   <div class="inner">
     <span class="strip-head">
       <a href="/stats" class="microlabel" style="color: var(--muted);"
