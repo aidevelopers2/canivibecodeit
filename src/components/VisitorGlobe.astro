@@ -1,0 +1,96 @@
+---
+import { globeStats } from '../lib/analytics.js';
+
+const s = await globeStats();
+const fmt = (n) => (n == null ? '—' : Number(n).toLocaleString('en-US'));
+
+const flag = (cc) =>
+  /^[A-Z]{2}$/.test(cc || '')
+    ? String.fromCodePoint(...[...cc].map((ch) => 0x1f1e6 + ch.charCodeAt(0) - 65))
+    : '';
+const regionNames = new Intl.DisplayNames(['en'], { type: 'region' });
+const country = (cc) => {
+  try {
+    return regionNames.of(cc) || cc;
+  } catch {
+    return cc;
+  }
+};
+const ago = (sec) =>
+  sec < 10 ? 'just now' : sec < 60 ? `${sec}s ago` : sec < 3600 ? `${Math.floor(sec / 60)}m ago` : `${Math.floor(sec / 3600)}h ago`;
+const feedText = (f) =>
+  f.copy
+    ? `someone in ${country(f.c)} copied the ${f.app || 'app'} prompt`
+    : `someone in ${country(f.c)} ${f.ago < 120 ? 'is reading' : 'read'} ${f.path}`;
+
+const sinceLabel = s?.allTime?.since
+  ? new Date(s.allTime.since + 'T00:00:00Z')
+      .toLocaleDateString('en-GB', { day: 'numeric', month: 'short', timeZone: 'UTC' })
+      .toLowerCase()
+  : null;
+---
+
+<aside class="globe-strip" id="globe-strip" aria-label="Live visitors around the world">
+  <div class="inner">
+    <span class="strip-head">
+      <a href="/stats" class="microlabel" style="color: var(--muted);"
+        >live · who's on the site right now · public, because why not · full dashboard →</a
+      >
+      <span class="strip-note">country-level only, nobody is identifiable</span>
+    </span>
+    <div class="globe-grid">
+      <div class="globe-wrap">
+        <canvas id="globe-canvas" aria-label="Spinning globe of recent visitors by country"
+        ></canvas>
+      </div>
+      <div class="globe-side">
+        <div class="g-count">
+          <span class="g-num" id="g-live">{fmt(s?.live)}</span>
+          <span class="g-lab">{s?.live === 1 ? 'person' : 'people'} on the site right now</span>
+        </div>
+        <span class="g-sub" id="g-sub">
+          {
+            s
+              ? `from ${fmt(s.liveCountries)} ${s.liveCountries === 1 ? 'country' : 'countries'} · ${fmt(s.allTime.views)} visits${sinceLabel ? ` since ${sinceLabel}` : ''}`
+              : 'analytics warming up'
+          }
+        </span>
+        <ul class="g-feed" id="g-feed">
+          {
+            (s?.feed || []).slice(0, 4).map((f, i) => (
+              <li class={i === 0 ? 'fresh' : ''}>
+                <span class="g-dot" />
+                <span class="g-line">
+                  {flag(f.c)} {feedText(f)}
+                </span>
+                <span class="g-ago">{ago(f.ago)}</span>
+              </li>
+            ))
+          }
+        </ul>
+        <div class="g-countries">
+          <span class="microlabel">visitors · 7d · by country</span>
+          <div class="g-chips" id="g-chips">
+            {
+              (s?.topCountries || []).map((r) => (
+                <span class="g-chip">
+                  {flag(r.c)} {r.c} {fmt(r.n)}
+                </span>
+              ))
+            }
+            {s?.moreCountries > 0 && <span class="g-more">+ {s.moreCountries} more</span>}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="application/json" id="globe-data" set:html={JSON.stringify(s || { unavailable: true })} />
+  <noscript>
+    <style is:inline>
+      .globe-wrap {
+        display: none;
+      }
+    </style>
+  </noscript>
+</aside>
+<script src={`/js/globe.js?v=${__BUILD_ID__}`} defer></script>

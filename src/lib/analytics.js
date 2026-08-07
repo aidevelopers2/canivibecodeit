@@ -101,6 +101,94 @@ export async function dashboardStats() {
   return dashCache.data;
 }
 
+let globeCache = { at: 0, data: null };
+
+/* Geo picture for the homepage globe. Country-level only, on purpose: no
+   person ids, no combos that could single anyone out. One shared 60s cache
+   serves both the server render and the /api/globe poll. */
+export async function globeStats() {
+  if (!PROJECT || !KEY) return null;
+  const now = Date.now();
+  if (now - globeCache.at < 60_000) return globeCache.data;
+
+  try {
+    const [live, allTime, countries7d, feed, pins] = await Promise.all([
+      hogql(`
+        SELECT countDistinct(person_id) AS live,
+               countDistinctIf(properties.$geoip_country_code,
+                 properties.$geoip_country_code != '') AS countries
+        FROM events
+        WHERE ${SITE} AND event = '$pageview'
+          AND timestamp > now() - INTERVAL 5 MINUTE
+      `),
+      hogql(`
+        SELECT count() AS views,
+               countDistinctIf(properties.$geoip_country_code,
+                 properties.$geoip_country_code != '') AS countries,
+               toDate(min(timestamp)) AS since
+        FROM events
+        WHERE ${SITE} AND event = '$pageview'
+      `),
+      hogql(`
+        SELECT properties.$geoip_country_code AS c, countDistinct(person_id) AS n
+        FROM events
+        WHERE ${SITE} AND event = '$pageview'
+          AND timestamp > now() - INTERVAL 7 DAY
+          AND properties.$geoip_country_code != ''
+        GROUP BY c ORDER BY n DESC
+      `),
+      hogql(`
+        SELECT properties.$geoip_country_code AS c,
+               event,
+               properties.$pathname AS path,
+               coalesce(properties.app, '') AS app,
+               coalesce(properties.$device_type, '') AS device,
+               coalesce(properties.$referring_domain, '') AS ref,
+               toUnixTimestamp(timestamp) AS ts
+        FROM events
+        WHERE ${SITE} AND event IN ('$pageview', 'copy_prompt')
+          AND timestamp > now() - INTERVAL 60 MINUTE
+          AND properties.$geoip_country_code != ''
+        ORDER BY timestamp DESC LIMIT 12
+      `),
+      hogql(`
+        SELECT properties.$geoip_country_code AS c,
+               countDistinct(person_id) AS n,
+               toUnixTimestamp(max(timestamp)) AS latest
+        FROM events
+        WHERE ${SITE} AND event = '$pageview'
+          AND timestamp > now() - INTERVAL 60 MINUTE
+          AND properties.$geoip_country_code != ''
+        GROUP BY c ORDER BY n DESC LIMIT 40
+      `),
+    ]);
+    const nowS = Math.floor(now / 1000);
+    globeCache = {
+      at: now,
+      data: {
+        live: live[0][0],
+        liveCountries: live[0][1],
+        allTime: { views: allTime[0][0], countries: allTime[0][1], since: allTime[0][2] },
+        topCountries: countries7d.slice(0, 5).map(([c, n]) => ({ c, n })),
+        moreCountries: Math.max(0, countries7d.length - 5),
+        feed: feed.map(([c, event, path, app, device, ref, ts]) => ({
+          c,
+          copy: event === 'copy_prompt',
+          path,
+          app,
+          device,
+          ref,
+          ago: Math.max(0, nowS - ts),
+        })),
+        pins: pins.map(([c, n, latest]) => ({ c, n, ago: Math.max(0, nowS - latest) })),
+      },
+    };
+  } catch {
+    globeCache.at = now; // serve stale, retry after TTL
+  }
+  return globeCache.data;
+}
+
 let cache = { at: 0, data: null };
 
 export async function siteStats() {
