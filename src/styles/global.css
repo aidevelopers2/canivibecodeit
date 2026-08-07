@@ -154,9 +154,11 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 14px 24px;
+  padding: 14px 20px;
   gap: 16px;
-  max-width: 1280px;
+  /* Same width and side padding as .wrap: the brand mark sits on the content
+     column's left edge instead of floating off-grid to the left of it. */
+  max-width: 1120px;
   margin: 0 auto;
 }
 
@@ -2739,8 +2741,13 @@ button.sp-banner {
   -webkit-appearance: none;
   font: inherit;
   color: inherit;
-  text-align: left;
   cursor: pointer;
+}
+
+/* Buttons default to centered text; the banner variant must match its anchor
+   siblings, which are left-aligned flex rows. Cards center (below). */
+button.sp-banner {
+  text-align: left;
 }
 
 /* Stripe takes a moment to answer. The label swaps in place and the geometry is
@@ -2762,6 +2769,7 @@ button.sp-banner {
 .sp-card {
   display: block;
   width: 200px;
+  text-align: center;
   /* Tall enough for a full 60-character tagline: 172px of inner width at 12px
      mono is ~23 characters a line, and real taglines wrap to four of them.
      Every variant shares this height — a rail whose cards differ looks broken. */
@@ -2810,6 +2818,12 @@ button.sp-banner {
   background: rgba(var(--tint, 51, 230, 103), 0.18);
   animation: sp-breathe 3s ease-in-out infinite;
   animation-delay: calc(var(--i, 0) * 0.4s);
+}
+
+/* Center the logo on the same axis as the name and tagline. Banners keep
+   their left-aligned row layout. */
+.sp-card .sp-icon {
+  margin-inline: auto;
 }
 
 /* Hovering means they're already looking — stop asking for attention. */
@@ -2890,34 +2904,49 @@ button.sp-banner {
   display: none;
 }
 
-@media (min-width: 1280px) and (max-width: 1559px) {
+@media (min-width: 1280px) {
+  /* One set of numbers drives the whole desktop layout. The card starts at
+     200px wide and absorbs the leftover side space up to 392px; the gap
+     between content and card grows gently with the viewport; the content
+     column squeezes only while the minimum card + gap need the room. Above
+     the card cap, all remaining space lands in the gap. */
+  :root {
+    --sp-gap: clamp(12px, calc(100vw * 0.02 - 12px), 56px);
+    --sp-card-w: clamp(200px, calc((100vw - 1120px) / 2 - 16px - var(--sp-gap)), 392px);
+    --sp-side: calc(16px + var(--sp-card-w) + var(--sp-gap));
+  }
+
   main.wrap,
   .sponsor-page {
-    max-width: calc(100vw - 456px);
+    max-width: min(1120px, calc(100vw - var(--sp-side) * 2));
   }
-}
 
-@media (min-width: 1280px) {
+  /* The header column follows the same squeeze so the brand mark stays on the
+     content's left edge while the rails are up. */
+  .site-header .inner {
+    max-width: min(1120px, calc(100vw - var(--sp-side) * 2));
+  }
+
   /* Full-bleed sections must respect the rails too: the ticker and the hero's
      chip row otherwise run underneath the cards. */
   .ticker {
-    max-width: min(1120px, calc(100vw - 456px));
+    max-width: min(1120px, calc(100vw - var(--sp-side) * 2));
   }
 
   /* The digest card's border and the footer row are visible edges, so unlike
      the ticker they get the same 20px-per-side breathing room the content
      column's padding gives the death list. */
   .digest-card.wrap {
-    max-width: min(1120px, calc(100vw - 496px));
+    max-width: min(1120px, calc(100vw - var(--sp-side) * 2 - 40px));
   }
 
   .site-footer .inner {
-    max-width: min(1280px, calc(100vw - 496px));
+    max-width: min(1280px, calc(100vw - var(--sp-side) * 2 - 40px));
   }
 
   .hero {
-    padding-left: 228px;
-    padding-right: 228px;
+    padding-left: var(--sp-side);
+    padding-right: var(--sp-side);
   }
 
   .sp-rail {
@@ -2928,12 +2957,16 @@ button.sp-banner {
     gap: 10px;
     position: fixed;
     top: 76px;
-    width: 200px;
+    width: var(--sp-card-w);
     z-index: 40;
     /* 4 cards a side now: on short viewports the rail scrolls instead of
        clipping the bottom card. */
     max-height: calc(100vh - 90px);
     overflow-y: auto;
+  }
+
+  .sp-rail .sp-card {
+    width: auto;
   }
 
   .sp-left {
