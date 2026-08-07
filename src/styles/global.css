@@ -2959,14 +2959,43 @@ button.sp-banner {
     top: 76px;
     width: var(--sp-card-w);
     z-index: 40;
-    /* 4 cards a side now: on short viewports the rail scrolls instead of
+    /* The rail owns the full viewport height and the cards divide it (below);
+       on short viewports the min-heights win and the rail scrolls instead of
        clipping the bottom card. */
-    max-height: calc(100vh - 90px);
+    height: calc(100vh - 90px);
     overflow-y: auto;
   }
 
+  /* Cards share the rail's full height: each grows equally from its 160px
+     floor, and the content centers on both axes inside the taller card. */
   .sp-rail .sp-card {
     width: auto;
+    height: auto;
+    min-height: 160px;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  /* The sold-out notice grows too, but only to about double its natural
+     size — past that the paid cards absorb the rest. */
+  .sp-rail .sp-card.soldout {
+    min-height: 0;
+    /* Grow, but never shrink below the notice's natural height. */
+    flex: 1 0 auto;
+    max-height: 128px;
+  }
+
+  /* The open card is a button inside a form; the form is the rail's flex
+     child, so it must pass the granted height and width through. */
+  .sp-rail .sp-checkout-form {
+    flex: 1 1 auto;
+    display: flex;
+  }
+
+  .sp-rail .sp-checkout-form .sp-card {
+    flex: 1;
   }
 
   .sp-left {
