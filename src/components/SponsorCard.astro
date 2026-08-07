@@ -34,7 +34,7 @@ const icon = sponsor ? sponsor.logoUrl || faviconUrl(sponsor.url) : '';
      /sponsor detour. The classes and data attributes stay on the button so the
      styling and the analytics hooks are unchanged. */
   state === 'open' && (
-    <form class="sp-checkout-form" method="post" action="/api/sponsor/checkout" data-checkout>
+    <form class="sp-checkout-form" method="post" action="/api/sponsor/checkout" data-checkout data-astro-reload>
       <input type="hidden" name="slot" value={slot.id} />
       <button
         class="sp-card open"

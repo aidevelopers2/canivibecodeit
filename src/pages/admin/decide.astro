@@ -47,7 +47,7 @@ const returnTo = `/admin/decide?id=${encodeURIComponent(id)}&action=${action}&si
 
     {
       pending ? (
-        <form method="post" action="/api/sponsor/admin" style="padding-top: 22px;">
+        <form method="post" action="/api/sponsor/admin" style="padding-top: 22px;" data-astro-reload>
           <input type="hidden" name="id" value={id} />
           <input type="hidden" name="action" value={action} />
           <input type="hidden" name="sig" value={sig} />

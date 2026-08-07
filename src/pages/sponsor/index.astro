@@ -171,14 +171,14 @@ const steps = [
                     {usd(slot.priceCents)}
                     <span class="sp-per">/{RUN_DAYS} days</span>
                   </span>
-                  <form method="post" action="/api/sponsor/checkout" data-checkout>
+                  <form method="post" action="/api/sponsor/checkout" data-checkout data-astro-reload>
                     <input type="hidden" name="slot" value={slot.id} />
                     <button class="btn primary" type="submit" data-price={slot.priceCents}>
                       take this slot →
                     </button>
                   </form>
                   {slot.priceCents >= QUARTER_MIN_CENTS && (
-                    <form method="post" action="/api/sponsor/checkout" data-checkout>
+                    <form method="post" action="/api/sponsor/checkout" data-checkout data-astro-reload>
                       <input type="hidden" name="slot" value={slot.id} />
                       <input type="hidden" name="months" value={QUARTER_MONTHS} />
                       <button class="sp-quarter" type="submit" data-price={slot.priceCents * QUARTER_MONTHS}>
@@ -195,7 +195,7 @@ const steps = [
                     {slot.nextTaken ? (
                       <span class="sn taken">{NEXT_MONTH} · TAKEN</span>
                     ) : slot.nextState === 'open' ? (
-                      <form method="post" action="/api/sponsor/checkout" data-checkout>
+                      <form method="post" action="/api/sponsor/checkout" data-checkout data-astro-reload>
                         <input type="hidden" name="slot" value={slot.id} />
                         <input type="hidden" name="term" value="next" />
                         <button class="sn open" type="submit" data-price={slot.priceCents}>

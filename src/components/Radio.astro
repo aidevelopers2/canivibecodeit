@@ -1,0 +1,197 @@
+---
+// Header radio. Streams nightride.fm channels through a plain <audio> tag; the
+// wrapper carries transition:persist so the element (and the music) survives
+// ClientRouter navigations. No autoplay ever: playback starts on a tap and a
+// full page load only restores the chosen station and volume, not the sound.
+const STATIONS = [
+  { id: 'nightride', genre: 'synthwave' },
+  { id: 'chillsynth', genre: 'lo-fi synth' },
+  { id: 'datawave', genre: 'focus' },
+  { id: 'spacesynth', genre: 'cosmic disco' },
+  { id: 'darksynth', genre: 'heavier' },
+];
+---
+
+<div class="radio" transition:persist="radio" data-radio>
+  <button
+    class="radio-btn"
+    type="button"
+    aria-label="Can I Vibecode It radio"
+    aria-expanded="false"
+    aria-controls="radio-panel"
+    data-radio-toggle
+  >
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <rect x="3" y="10" width="18" height="10" rx="2"></rect>
+      <path d="M6 10 18 4"></path>
+      <circle cx="8" cy="15" r="1.6"></circle>
+      <path d="M13 13.5h5M13 16.5h5"></path>
+    </svg>
+    <span class="radio-dot" aria-hidden="true"></span>
+  </button>
+
+  <div class="radio-panel" id="radio-panel" hidden>
+    <div class="radio-head">
+      <div class="radio-head-row">
+        <span class="radio-title">CIVCI RADIO</span>
+        <span class="radio-onair" data-radio-onair>OFF AIR</span>
+      </div>
+      <span class="radio-tagline">beats to cancel subscriptions to</span>
+    </div>
+
+    <div class="radio-transport">
+      <button class="radio-play" type="button" aria-label="Play or pause" data-radio-play>
+        <svg class="r-play" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 1.5 10.5 6 2.5 10.5z" fill="currentColor"></path></svg>
+        <svg class="r-pause" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 1h3v10H2zM7 1h3v10H7z" fill="currentColor"></path></svg>
+      </button>
+      <span class="radio-now">
+        <b data-radio-name>nightride</b>
+        <small data-radio-status>synthwave</small>
+      </span>
+      <span class="radio-eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+    </div>
+
+    <div class="radio-stations">
+      {STATIONS.map((s) => (
+        <button type="button" class="radio-station" data-station={s.id} data-genre={s.genre} aria-pressed={s.id === 'nightride' ? 'true' : 'false'}>
+          <span class="rs-cursor" aria-hidden="true">▸</span>
+          <span class="rs-name">{s.id}</span>
+          <span class="rs-genre">{s.genre}</span>
+        </button>
+      ))}
+    </div>
+
+    <label class="radio-vol">
+      <span>VOL</span>
+      <input type="range" min="0" max="1" step="0.05" value="0.8" aria-label="Radio volume" data-radio-vol />
+    </label>
+
+    <div class="radio-foot">
+      <a href="https://nightride.fm">streams by nightride.fm ↗</a>
+      <span>free forever</span>
+    </div>
+  </div>
+
+  <audio data-radio-audio preload="none"></audio>
+</div>
+
+<script>
+  // Runs once per full page load; the [data-radio] subtree persists across
+  // soft navigations, so these element listeners survive with it.
+  const wrap = document.querySelector('[data-radio]');
+  if (wrap) {
+    const $ = (sel) => wrap.querySelector(sel);
+    const btn = $('[data-radio-toggle]');
+    const panel = $('.radio-panel');
+    const audio = $('[data-radio-audio]');
+    const playBtn = $('[data-radio-play]');
+    const nameEl = $('[data-radio-name]');
+    const statusEl = $('[data-radio-status]');
+    const onairEl = $('[data-radio-onair]');
+    const vol = $('[data-radio-vol]');
+    const stationBtns = [...wrap.querySelectorAll('[data-station]')];
+    const capture = (ev, props) => window.posthog?.capture(ev, props);
+
+    let prefs = {};
+    try {
+      prefs = JSON.parse(localStorage.getItem('radio') || '{}');
+    } catch {}
+    let station = stationBtns.some((b) => b.dataset.station === prefs.station)
+      ? prefs.station
+      : 'nightride';
+    let state = 'off'; // off | tuning | on
+    audio.volume = typeof prefs.volume === 'number' ? prefs.volume : 0.8;
+    vol.value = String(audio.volume);
+
+    const save = () => {
+      try {
+        localStorage.setItem('radio', JSON.stringify({ station, volume: audio.volume }));
+      } catch {}
+    };
+    const genreOf = (id) =>
+      stationBtns.find((b) => b.dataset.station === id)?.dataset.genre || '';
+
+    const render = (status) => {
+      wrap.classList.toggle('is-on', state === 'on');
+      wrap.classList.toggle('is-tuning', state === 'tuning');
+      onairEl.textContent = state === 'on' ? 'ON AIR' : state === 'tuning' ? 'TUNING' : 'OFF AIR';
+      nameEl.textContent = station;
+      statusEl.textContent =
+        status ?? (state === 'tuning' ? 'tuning…' : state === 'on' ? `${genreOf(station)} · live` : genreOf(station));
+      stationBtns.forEach((b) => {
+        const active = b.dataset.station === station;
+        b.classList.toggle('active', active);
+        b.setAttribute('aria-pressed', String(active));
+      });
+    };
+
+    const start = () => {
+      state = 'tuning';
+      render();
+      audio.src = `https://stream.nightride.fm/${station}.mp3`;
+      audio.play().catch(() => {
+        state = 'off';
+        render('tap play to start');
+      });
+      capture('radio_play', { station });
+    };
+    // Live streams keep downloading while "paused" — drop the source so the
+    // connection actually closes.
+    const stop = () => {
+      audio.pause();
+      audio.removeAttribute('src');
+      audio.load();
+      state = 'off';
+      render();
+      capture('radio_stop', { station });
+    };
+
+    audio.addEventListener('playing', () => {
+      state = 'on';
+      render();
+    });
+    audio.addEventListener('waiting', () => {
+      if (state !== 'off') {
+        state = 'tuning';
+        render();
+      }
+    });
+    audio.addEventListener('error', () => {
+      if (state === 'off') return;
+      state = 'off';
+      render('stream down · try another');
+    });
+
+    playBtn.addEventListener('click', () => (state === 'off' ? start() : stop()));
+    stationBtns.forEach((b) =>
+      b.addEventListener('click', () => {
+        const next = b.dataset.station;
+        if (next === station && state !== 'off') return;
+        station = next;
+        save();
+        capture('radio_station', { station });
+        start();
+      })
+    );
+    vol.addEventListener('input', () => {
+      audio.volume = Number(vol.value);
+      save();
+    });
+
+    const setOpen = (want) => {
+      panel.hidden = !want;
+      btn.setAttribute('aria-expanded', String(want));
+    };
+    btn.addEventListener('click', () => setOpen(panel.hidden));
+    // Document-level, added once per full load: this module doesn't re-execute
+    // on soft navigations, so these never stack.
+    document.addEventListener('click', (e) => {
+      if (!panel.hidden && !wrap.contains(e.target)) setOpen(false);
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !panel.hidden) setOpen(false);
+    });
+
+    render();
+  }
+</script>

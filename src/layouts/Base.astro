@@ -2,7 +2,9 @@
 import '@fontsource-variable/space-grotesk';
 import '@fontsource-variable/jetbrains-mono';
 import '../styles/global.css';
+import { ClientRouter } from 'astro:transitions';
 import DigestBar from '../components/DigestBar.astro';
+import Radio from '../components/Radio.astro';
 import SponsorRails from '../components/SponsorRails.astro';
 import SponsorTape from '../components/SponsorTape.astro';
 import { getBoard, nextRunMonthName } from '../lib/sponsors.js';
@@ -73,16 +75,23 @@ const blocks = [orgLd, ...jsonld];
 
     {blocks.map((b) => <script type="application/ld+json" set:html={JSON.stringify(b)} />)}
 
-    <!-- theme before first paint: stored choice wins, else system preference -->
+    <!-- theme before first paint: stored choice wins, else system preference.
+         ClientRouter swaps <html> attributes on soft navigations, so the theme
+         is re-applied on astro:after-swap (fires before paint). -->
     <script is:inline>
       (() => {
-        const stored = localStorage.getItem('theme');
-        const theme =
-          stored || (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
-        document.documentElement.dataset.theme = theme;
+        const apply = () => {
+          const stored = localStorage.getItem('theme');
+          const theme =
+            stored || (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+          document.documentElement.dataset.theme = theme;
+        };
+        apply();
+        document.addEventListener('astro:after-swap', apply);
       })();
     </script>
     {!isPrivate && <script is:inline src="/analytics.js" defer></script>}
+    <ClientRouter />
   </head>
   <body>
     <SponsorTape side="left" />
@@ -110,6 +119,7 @@ const blocks = [orgLd, ...jsonld];
             <svg class="moon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path></svg>
             <svg class="sun" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4m11.4-11.4 1.4-1.4"></path></svg>
           </button>
+          <Radio />
           <a class="gh" href="https://github.com/canivibecodeit/canivibecodeit">github ↗</a>
         </nav>
       </div>

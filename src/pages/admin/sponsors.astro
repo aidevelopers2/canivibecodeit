@@ -83,7 +83,7 @@ const ACTIONS = {
               {slot.endsAt ? ` · until ${shortDate(slot.endsAt)}` : ''}
             </span>
             <span class="admin-strong">{slot.sponsor?.name ?? usd(slot.priceCents)}</span>
-            <form method="post" action="/api/sponsor/admin">
+            <form method="post" action="/api/sponsor/admin" data-astro-reload>
               <input type="hidden" name="token" value={token} />
               <input type="hidden" name="return_to" value={returnTo} />
               <input type="hidden" name="action" value="price" />
@@ -102,7 +102,7 @@ const ACTIONS = {
             {!slot.nextTaken && (
               <div class="admin-actions">
                 {NEXT_STATES.filter((s) => s !== slot.nextState).map((s) => (
-                  <form method="post" action="/api/sponsor/admin">
+                  <form method="post" action="/api/sponsor/admin" data-astro-reload>
                     <input type="hidden" name="token" value={token} />
                     <input type="hidden" name="return_to" value={returnTo} />
                     <input type="hidden" name="action" value="next_state" />
@@ -126,6 +126,7 @@ const ACTIONS = {
     <form
       method="post"
       action="/api/sponsor/admin"
+      data-astro-reload
       onsubmit={`return confirm('Email all ${queue.length} people in the queue?')`}
     >
       <input type="hidden" name="token" value={token} />
@@ -138,7 +139,7 @@ const ACTIONS = {
       <h2>Mint a payment link</h2>
       <span class="note">for a slot's next run · paste the result into a DM</span>
     </div>
-    <form method="post" action="/api/sponsor/admin" class="admin-mint">
+    <form method="post" action="/api/sponsor/admin" class="admin-mint" data-astro-reload>
       <input type="hidden" name="token" value={token} />
       <input type="hidden" name="return_to" value={returnTo} />
       <input type="hidden" name="action" value="payment_link" />
@@ -182,7 +183,7 @@ const ACTIONS = {
 
             <div class="admin-actions">
               {(ACTIONS[p.status] ?? []).map(([action, label]) => (
-                <form method="post" action="/api/sponsor/admin">
+                <form method="post" action="/api/sponsor/admin" data-astro-reload>
                   <input type="hidden" name="token" value={token} />
                   <input type="hidden" name="return_to" value={returnTo} />
                   <input type="hidden" name="id" value={p.id} />
@@ -196,7 +197,7 @@ const ACTIONS = {
 
             {
               (p.status === 'submitted' || p.status === 'live') && (
-                <form method="post" action="/api/sponsor/admin" class="admin-edit">
+                <form method="post" action="/api/sponsor/admin" class="admin-edit" data-astro-reload>
                   <input type="hidden" name="token" value={token} />
                   <input type="hidden" name="return_to" value={returnTo} />
                   <input type="hidden" name="id" value={p.id} />

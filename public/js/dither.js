@@ -319,6 +319,13 @@
   };
 
   /* ---------- bootstrap the /stats page ---------- */
+  /* Module-level so the astro:before-swap teardown below can reach them: with
+     ClientRouter the theme observer and the resize-reload listener would
+     otherwise follow the visitor to every other page. */
+  let mo = null;
+  let resizeCtl = null;
+  let rt;
+
   const mount = () => {
     /* staggered entrance for tiles + panels, charts draw as panels land */
     const entering = $$('.dash .tile, .dash .panel');
@@ -384,24 +391,39 @@
     }, drawDelay);
 
     /* redraw on theme flip or resize */
-    new MutationObserver(() => charts.forEach((c) => c.redraw())).observe(
-      document.documentElement,
-      { attributes: true, attributeFilter: ['data-theme'] }
-    );
+    mo = new MutationObserver(() => charts.forEach((c) => c.redraw()));
+    mo.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
     /* Width changes only: on phones, scrolling collapses the URL bar, which
        fires resize with a new HEIGHT — reloading on that made the page
        flicker on every scroll. */
-    let rt;
     let lastW = innerWidth;
+    resizeCtl = new AbortController();
     addEventListener('resize', () => {
       if (innerWidth === lastW) return;
       lastW = innerWidth;
       clearTimeout(rt);
       rt = setTimeout(() => location.reload(), 400);
-    });
+    }, { signal: resizeCtl.signal });
   };
 
+  let mounted = false;
+  const boot = () => {
+    if (mounted) return;
+    mounted = true;
+    mount();
+  };
+  document.addEventListener('astro:page-load', boot);
+  document.addEventListener('astro:before-swap', () => {
+    mounted = false;
+    mo?.disconnect();
+    mo = null;
+    resizeCtl?.abort();
+    resizeCtl = null;
+    clearTimeout(rt);
+  });
+  // astro:page-load also fires on the initial load; the fallback only matters
+  // if the router ever goes away.
   document.readyState === 'loading'
-    ? addEventListener('DOMContentLoaded', mount)
-    : mount();
+    ? addEventListener('DOMContentLoaded', () => setTimeout(boot, 20))
+    : setTimeout(boot, 20);
 })();

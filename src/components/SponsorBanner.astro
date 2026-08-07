@@ -39,7 +39,7 @@ const icon = sponsor ? sponsor.logoUrl || faviconUrl(sponsor.url) : '';
       <span class="sp-arrow">→</span>
     </a>
   ) : openSlot ? (
-    <form class="sp-checkout-form" method="post" action="/api/sponsor/checkout" data-checkout>
+    <form class="sp-checkout-form" method="post" action="/api/sponsor/checkout" data-checkout data-astro-reload>
       <input type="hidden" name="slot" value={openSlot.id} />
       <button
         class="sp-banner open"

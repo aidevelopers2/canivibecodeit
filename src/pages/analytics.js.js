@@ -17,10 +17,21 @@ export function GET() {
       api_host: location.origin + '/ph',
       ui_host: ${JSON.stringify(uiHost)},
       person_profiles: 'always',
-      capture_pageview: true,
+      // ClientRouter navigations are pushState, not loads: history_change
+      // captures a pageview (and pageleave) for each soft navigation too.
+      capture_pageview: 'history_change',
       capture_pageleave: true,
       autocapture: true,
-      disable_session_recording: true
+      disable_session_recording: true,
+      // Private pages never load this script on a full load, but a soft
+      // navigation carries the already-initialised posthog with it. Same
+      // list as isPrivate in Base.astro: no token-bearing URL may ever
+      // reach analytics, so drop every event captured on one.
+      before_send: function (ev) {
+        var url = (ev && ev.properties && ev.properties.$current_url) || '';
+        if (/\\/admin|\\/sponsor\\/(details|stats)|[?&]token=/.test(url)) return null;
+        return ev;
+      }
     });
   };
   document.head.appendChild(s);
