@@ -219,7 +219,9 @@
   const SPIN = 4.2; // deg/s
   let dragging = false;
   let hovering = false;
-  let lastPointer = 0;
+  // far in the past, or the 4s post-interaction grace period would also
+  // cover the first 4s after page load and hold the globe still
+  let lastPointer = -1e9;
   let px = 0, py = 0;
 
   const flag = (cc) =>
@@ -457,7 +459,9 @@
   }
   setup();
   canvas.style.cursor = 'grab';
-  canvas.style.touchAction = 'none';
+  // pan-y: horizontal touch drags rotate the globe, vertical ones still
+  // scroll the page (a mid-page canvas must never trap the scroll)
+  canvas.style.touchAction = 'pan-y';
   draw(0); // paint immediately: the globe must never be blank when scrolled to
   io.observe(canvas);
 })();
