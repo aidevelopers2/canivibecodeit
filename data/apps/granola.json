@@ -12,9 +12,10 @@
     "unit": "per-seat",
     "native": "14 USD",
     "source": "https://www.granola.ai/pricing",
-    "checkedOn": "2026-07-30",
+    "checkedOn": "2026-08-07",
     "confidence": "high",
-    "notes": "Official page checked 2026-07-30 showed Business at $14/user/month and Enterprise from $35/user/month; older Individual $18 references may be stale."
+    "notes": "Official page checked 2026-07-30 showed Business at $14/user/month and Enterprise from $35/user/month; older Individual $18 references may be stale.",
+    "freeTier": "The free Basic plan includes AI notes but only limited meeting history."
   },
   "verdict": "yes",
   "verdictConfidence": "medium",

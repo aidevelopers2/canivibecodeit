@@ -12,9 +12,10 @@
     "unit": "per-seat",
     "native": "12 USD",
     "source": "https://calendly.com/pricing",
-    "checkedOn": "2026-07-30",
+    "checkedOn": "2026-08-07",
     "confidence": "high",
-    "notes": "Official pricing checked 2026-07-30; Standard listed at $12/seat/month monthly and $10/seat/month annually."
+    "notes": "Official pricing checked 2026-07-30; Standard listed at $12/seat/month monthly and $10/seat/month annually.",
+    "freeTier": "The free plan covers one event type on one connected calendar."
   },
   "verdict": "kinda",
   "verdictConfidence": "high",

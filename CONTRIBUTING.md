@@ -18,7 +18,11 @@ No web form, no account — the repo is the admin panel.
     "plan": "Business", "basis": "monthly per user",
     "unit": "per-seat",          // flat | per-seat | usage | one-time | custom
     "source": "https://www.granola.ai/pricing", "checkedOn": "2026-07-30",
-    "confidence": "high", "notes": null, "native": "14 USD"
+    "confidence": "high", "notes": null, "native": "14 USD",
+    "freeTier": "The free Basic plan includes AI notes but only limited meeting history."
+    // freeTier is optional: one plain sentence on the free tier (or that there
+    // isn't one), verified against the live pricing page. Pages that have it
+    // show a pricing section, so only add it with a fresh checkedOn.
   },
   "verdict": "yes",              // "yes" | "kinda" | "no"
   "verdictConfidence": "medium", // how sure we are

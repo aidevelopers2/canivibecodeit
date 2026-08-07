@@ -12,9 +12,10 @@
     "unit": "per-seat",
     "native": "18 USD",
     "source": "https://www.loom.com/pricing",
-    "checkedOn": "2026-07-30",
+    "checkedOn": "2026-08-07",
     "confidence": "high",
-    "notes": "Official/Atlassian pricing checked 2026-07-30; Business listed around $18/user/month."
+    "notes": "Official/Atlassian pricing checked 2026-07-30; Business listed around $18/user/month.",
+    "freeTier": "The free plan allows 25 videos of up to 5 minutes each."
   },
   "verdict": "kinda",
   "verdictConfidence": "high",

@@ -25,16 +25,38 @@ const alternatives = sortedAlternatives(app);
 const hasAltPage = alternatives.length >= ALTERNATIVES_PAGE_MIN;
 
 const verdictWord = { yes: 'YES', kinda: 'KINDA', no: 'NOT REALLY' }[app.verdict];
+const baseName = app.name.split(' / ')[0];
 const priceLine =
   app.priceMonthly != null ? `costs $${app.priceMonthly}/mo ($${saving}/yr)` : 'has usage-based pricing';
-const title = `Can I vibecode ${app.name}? ${verdictWord} · replace it with one AI prompt`;
-const description = `${verdictWord}: ${app.name} ${priceLine}. ${
+const brandTitle = `Can I vibecode ${app.name}? ${verdictWord} · replace it with one AI prompt`;
+const brandDescription = `${verdictWord}: ${app.name} ${priceLine}. ${
   app.verdict === 'no'
     ? "Here's why it survives vibecoding."
     : `Here's the exact prompt to build your own and what you lose.`
 }`;
 
+// Pages with structured free-tier data lead with pricing in the <title>/meta;
+// share cards keep the brand title via socialTitle. The H1 never changes.
+const freeTier = typeof app.pricing?.freeTier === 'string' ? app.pricing.freeTier : null;
+const pricingLed = freeTier != null && app.priceMonthly != null;
+const title = pricingLed
+  ? `${baseName} pricing ${new Date().getFullYear()}: plans, free tier, and our verdict`
+  : brandTitle;
+const description = pricingLed
+  ? `${baseName} costs $${app.priceMonthly}/mo. ${freeTier} Our verdict: ${verdictWord}: what an AI agent can rebuild today, the exact prompt, and what's one prompt away from free.`
+  : brandDescription;
+
 const faq = [
+  ...(pricingLed
+    ? [
+        {
+          q: `Is ${baseName} free?`,
+          a: `${freeTier} Paid is ${app.pricing?.plan || 'the paid plan'} at $${app.priceMonthly}/mo${
+            app.pricing?.checkedOn ? ` (checked ${app.pricing.checkedOn})` : ''
+          }.`,
+        },
+      ]
+    : []),
   {
     q: `Can I vibecode ${app.name}?`,
     a:
@@ -101,7 +123,7 @@ const tweet = encodeURIComponent(
 );
 ---
 
-<Base {title} {description} ogImage={`/og/${app.slug}.png`} {jsonld}>
+<Base {title} {description} socialTitle={brandTitle} ogImage={`/og/${app.slug}.png`} {jsonld}>
   <main class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb">
       <a href="/">the death list</a> / <a href={`/category/${app.category}`}>{cat.label.toLowerCase()}</a> /
@@ -302,6 +324,38 @@ const tweet = encodeURIComponent(
       )
     }
 
+    {
+      pricingLed && (
+        <section class="pricing-sec">
+          <span class="microlabel">the numbers</span>
+          <h2>{baseName} pricing</h2>
+          <div class="p-rows">
+            <p class="p-row">
+              <span class="p-k">{app.pricing?.plan ? app.pricing.plan.toLowerCase() : 'paid'}</span>
+              <span class="p-v">
+                ${app.priceMonthly}/mo{app.pricing?.basis ? ` · ${app.pricing.basis}` : ''} · ${saving?.toLocaleString('en-US')}/yr
+              </span>
+            </p>
+            <p class="p-row">
+              <span class="p-k">free tier</span>
+              <span class="p-v">{freeTier}</span>
+            </p>
+          </div>
+          <p class="p-verified">
+            verified {app.pricing?.checkedOn}
+            {app.pricing?.source && (
+              <>
+                {' '}·{' '}
+                <a href={app.pricing.source} rel="nofollow noopener" target="_blank">
+                  source ↗
+                </a>
+              </>
+            )}
+          </p>
+        </section>
+      )
+    }
+
     <section class="faq">
       <span class="microlabel">questions</span>
       {
@@ -327,5 +381,51 @@ const tweet = encodeURIComponent(
 
   .moat-chips .microlabel {
     margin-right: 3px;
+  }
+
+  .pricing-sec {
+    padding-top: 44px;
+  }
+
+  .pricing-sec h2 {
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    padding-top: 12px;
+  }
+
+  .p-rows {
+    margin-top: 14px;
+    border-top: 1px solid var(--border);
+    max-width: 76ch;
+  }
+
+  .p-row {
+    display: flex;
+    gap: 18px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .p-k {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--muted);
+    flex: 0 0 110px;
+    padding-top: 2px;
+  }
+
+  .p-verified {
+    margin-top: 10px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  .p-verified a {
+    color: var(--muted);
   }
 </style>

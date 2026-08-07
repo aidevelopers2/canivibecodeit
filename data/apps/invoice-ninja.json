@@ -12,9 +12,10 @@
     "unit": "flat",
     "native": "14 USD",
     "source": "https://invoiceninja.com/pricing-plans/",
-    "checkedOn": "2026-07-30",
+    "checkedOn": "2026-08-07",
     "confidence": "high",
-    "notes": "Official pricing checked 2026-07-30; Pro listed at $14/month or $140/year."
+    "notes": "Official pricing checked 2026-07-30; Pro listed at $14/month or $140/year.",
+    "freeTier": "The free plan covers up to 5 clients with unlimited invoicing."
   },
   "verdict": "yes",
   "verdictConfidence": "high",

@@ -12,9 +12,10 @@
     "unit": "flat",
     "native": "12.5 USD",
     "source": "https://typefully.com/pricing",
-    "checkedOn": "2026-07-30",
+    "checkedOn": "2026-08-07",
     "confidence": "medium",
-    "notes": "Official pricing URL checked; public 2026 references list Creator around $12.50/month annual-effective, with monthly pricing varying by plan."
+    "notes": "Official pricing URL checked; public 2026 references list Creator around $12.50/month annual-effective, with monthly pricing varying by plan.",
+    "freeTier": "The free plan allows 15 posts a month on one social set."
   },
   "verdict": "yes",
   "verdictConfidence": "medium",

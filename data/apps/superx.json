@@ -12,9 +12,10 @@
     "unit": "flat",
     "native": "49 USD",
     "source": "https://superx.so/pricing",
-    "checkedOn": "2026-07-30",
+    "checkedOn": "2026-08-07",
     "confidence": "high",
-    "notes": "Pro at $49/month (5 accounts, 500 posts, AI credits, auto DMs); Advanced at $49 launch price (normally $99); Ultra $199."
+    "notes": "Pro at $49/month (5 accounts, 500 posts, AI credits, auto DMs); Advanced at $49 launch price (normally $99); Ultra $199.",
+    "freeTier": "No free plan, only a time-limited trial before picking a paid tier."
   },
   "verdict": "kinda",
   "verdictConfidence": "high",

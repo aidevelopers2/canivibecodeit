@@ -5,16 +5,17 @@
   "category": "analytics",
   "subcategory": "privacy web analytics",
   "tagline": "Open-source privacy analytics with a hosted cloud option",
-  "priceMonthly": 9,
+  "priceMonthly": 20,
   "pricing": {
-    "plan": "Basic",
+    "plan": "Pro",
     "basis": "monthly",
     "unit": "flat",
-    "native": "9 USD",
+    "native": "20 USD",
     "source": "https://umami.is/docs/cloud",
-    "checkedOn": "2026-07-30",
+    "checkedOn": "2026-08-07",
     "confidence": "medium",
-    "notes": "Official docs/pricing checked; public references list Basic around $9/month and Pro around $20/month."
+    "notes": "Official pricing checked 2026-08-07; free Hobby tier, paid is Pro at $20/month for 1M events.",
+    "freeTier": "The free Hobby plan covers 100k events a month on 3 sites with 6 months retention."
   },
   "verdict": "yes",
   "verdictConfidence": "high",

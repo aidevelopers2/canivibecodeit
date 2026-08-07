@@ -12,9 +12,10 @@
     "unit": "per-seat",
     "native": "20 USD",
     "source": "https://vercel.com/pricing",
-    "checkedOn": "2026-07-30",
+    "checkedOn": "2026-08-07",
     "confidence": "high",
-    "notes": "Official pricing checked 2026-07-30; Pro listed at $20/month with usage-based components."
+    "notes": "Official pricing checked 2026-07-30; Pro listed at $20/month with usage-based components.",
+    "freeTier": "The free Hobby plan covers non-commercial projects; 1M requests and 100 GB monthly."
   },
   "verdict": "kinda",
   "verdictConfidence": "high",

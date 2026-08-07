@@ -12,9 +12,10 @@
     "unit": "flat",
     "native": "1.65 USD",
     "source": "https://bitwarden.com/pricing/",
-    "checkedOn": "2026-07-30",
+    "checkedOn": "2026-08-07",
     "confidence": "high",
-    "notes": "Official pricing checked 2026-07-30; Premium listed at $1.65/month billed annually ($19.80/year)."
+    "notes": "Official pricing checked 2026-07-30; Premium listed at $1.65/month billed annually ($19.80/year).",
+    "freeTier": "Free covers unlimited passwords, devices and passkeys; Premium adds TOTP and reports."
   },
   "verdict": "yes",
   "verdictConfidence": "medium",

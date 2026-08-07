@@ -12,9 +12,10 @@
     "unit": "flat",
     "native": "8.49 USD",
     "source": "https://superwhisper.com/docs/get-started/sw-pro",
-    "checkedOn": "2026-07-30",
+    "checkedOn": "2026-08-07",
     "confidence": "high",
-    "notes": "Official docs/checkout checked 2026-07-30; Pro monthly listed at $8.49, annual $84.99, lifetime $249.99."
+    "notes": "Official docs/checkout checked 2026-07-30; Pro monthly listed at $8.49, annual $84.99, lifetime $249.99.",
+    "freeTier": "A free version covers basic dictation; Pro adds unlimited cloud and local models."
   },
   "verdict": "yes",
   "verdictConfidence": "high",

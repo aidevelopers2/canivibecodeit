@@ -13,11 +13,14 @@ const septBoard = await getBoard();
 const septLeft = septBoard.slots.length - septBoard.prebookedCount;
 const prebookLabel = nextRunMonthName();
 
+// socialTitle lets a page rank under one <title> while share cards keep
+// another (og/twitter). Defaults to the same string.
 const {
   title,
   description,
   ogImage = '/og/home.png',
   jsonld = [],
+  socialTitle = Astro.props.title,
 } = Astro.props;
 
 const canonical = new URL(Astro.url.pathname, 'https://canivibecodeit.com').href;
@@ -59,12 +62,12 @@ const blocks = [orgLd, ...jsonld];
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Can I Vibecode It?" />
-    <meta property="og:title" content={title} />
+    <meta property="og:title" content={socialTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={ogUrl} />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={title} />
+    <meta name="twitter:title" content={socialTitle} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogUrl} />
 

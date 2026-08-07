@@ -12,9 +12,10 @@
     "unit": "flat",
     "native": "29 USD",
     "source": "https://www.post-bridge.com/pricing",
-    "checkedOn": "2026-07-30",
+    "checkedOn": "2026-08-07",
     "confidence": "high",
-    "notes": "Official pricing checked 2026-07-30; Creator (most popular) $29/month for 15 connected accounts, Growth $49 for 50, Pro $99 for unlimited. 7-day free trial on all tiers, annual gives 1 month free."
+    "notes": "Official pricing checked 2026-07-30; Creator (most popular) $29/month for 15 connected accounts, Growth $49 for 50, Pro $99 for unlimited. 7-day free trial on all tiers, annual gives 1 month free.",
+    "freeTier": "No free plan, just a 7-day trial on every tier."
   },
   "verdict": "kinda",
   "verdictConfidence": "high",

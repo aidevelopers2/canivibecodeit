@@ -12,9 +12,10 @@
     "unit": "flat",
     "native": "39 EUR + VAT",
     "source": "https://one-place.com/pricing",
-    "checkedOn": "2026-07-31",
+    "checkedOn": "2026-08-07",
     "confidence": "high",
-    "notes": "Public pricing page shows Free and Pro; Pro is €39/mo + VAT monthly, or €399/year in the source catalog."
+    "notes": "Public pricing page shows Free and Pro; Pro is €39/mo + VAT monthly, or €399/year in the source catalog.",
+    "freeTier": "The free plan gives unlimited search and saved searches, capped at 5 boards."
   },
   "verdict": "no",
   "verdictConfidence": "high",

@@ -12,9 +12,10 @@
     "unit": "flat",
     "native": "9 USD",
     "source": "https://plausible.io/",
-    "checkedOn": "2026-07-30",
+    "checkedOn": "2026-08-07",
     "confidence": "high",
-    "notes": "Official pages checked 2026-07-30; Starter listed at $9/month and Business at $19/month in public plan references."
+    "notes": "Official pages checked 2026-07-30; Starter listed at $9/month and Business at $19/month in public plan references.",
+    "freeTier": "No free plan, just a 30-day trial; the open source version is free to self-host."
   },
   "verdict": "yes",
   "verdictConfidence": "high",

@@ -12,9 +12,10 @@
     "unit": "flat",
     "native": "29 USD",
     "source": "https://tally.so/pricing",
-    "checkedOn": "2026-07-30",
+    "checkedOn": "2026-08-07",
     "confidence": "high",
-    "notes": "Official pricing/help checked 2026-07-30; Tally Pro listed at $29/month or $290/year, while pricing page also displayed a promo annual-effective $24/month."
+    "notes": "Official pricing/help checked 2026-07-30; Tally Pro listed at $29/month or $290/year, while pricing page also displayed a promo annual-effective $24/month.",
+    "freeTier": "The free plan covers unlimited forms and submissions under fair use."
   },
   "verdict": "yes",
   "verdictConfidence": "high",

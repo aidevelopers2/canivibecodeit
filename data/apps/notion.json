@@ -12,9 +12,10 @@
     "unit": "per-seat",
     "native": "12 USD",
     "source": "https://www.notion.com/pricing",
-    "checkedOn": "2026-07-30",
+    "checkedOn": "2026-08-07",
     "confidence": "medium",
-    "notes": "Official pricing page checked 2026-07-30; public plan pages show Plus around $12/month monthly and lower annual price."
+    "notes": "Official pricing page checked 2026-07-30; public plan pages show Plus around $12/month monthly and lower annual price.",
+    "freeTier": "Free for individuals with unlimited blocks; 5 MB uploads and 7-day history."
   },
   "verdict": "kinda",
   "verdictConfidence": "high",

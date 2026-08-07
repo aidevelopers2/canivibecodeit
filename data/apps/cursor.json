@@ -12,9 +12,10 @@
     "unit": "flat",
     "native": "20 USD",
     "source": "https://cursor.com/pricing",
-    "checkedOn": "2026-07-30",
+    "checkedOn": "2026-08-07",
     "confidence": "high",
-    "notes": "Official pricing checked 2026-07-30; Pro listed at $20/month, with India-only Start plan also reported separately."
+    "notes": "Official pricing checked 2026-07-30; Pro listed at $20/month, with India-only Start plan also reported separately.",
+    "freeTier": "The free Hobby plan includes limited agent requests; no credit card needed."
   },
   "verdict": "kinda",
   "verdictConfidence": "high",

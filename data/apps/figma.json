@@ -12,9 +12,10 @@
     "unit": "per-seat",
     "native": "20 USD",
     "source": "https://www.figma.com/pricing/",
-    "checkedOn": "2026-07-30",
+    "checkedOn": "2026-08-07",
     "confidence": "high",
-    "notes": "Official pricing/help checked 2026-07-30; Professional Full seat listed at $20/month monthly and $16/month annually."
+    "notes": "Official pricing/help checked 2026-07-30; Professional Full seat listed at $20/month monthly and $16/month annually.",
+    "freeTier": "The free Starter plan gives limited access with unlimited drafts and daily AI credits."
   },
   "verdict": "no",
   "verdictConfidence": "high",

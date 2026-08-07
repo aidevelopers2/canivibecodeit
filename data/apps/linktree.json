@@ -5,11 +5,12 @@
     "plan": null,
     "basis": "monthly",
     "unit": "flat",
-    "native": null,
+    "native": "15 USD",
     "source": null,
-    "checkedOn": "2026-07-29",
+    "checkedOn": "2026-08-07",
     "confidence": "medium",
-    "notes": null
+    "notes": "Official pricing checked 2026-08-07; Pro at $15/month monthly, $12/month annually.",
+    "freeTier": "The free plan allows unlimited links with basic analytics."
   },
   "verdictConfidence": "high",
   "verdictSummary": "A static page. The most obviously one-shottable thing on this list.",
@@ -29,7 +30,7 @@
   "name": "Linktree Pro",
   "domain": "linktr.ee",
   "category": "link-in-bio",
-  "priceMonthly": 9,
+  "priceMonthly": 15,
   "verdict": "yes",
   "notes": "A static page. The most obviously one-shottable thing on this list.",
   "whatYouLose": [

@@ -12,12 +12,13 @@
     "basis": "monthly per user",
     "unit": "per-seat",
     "source": "https://superhuman.com/pricing",
-    "checkedOn": "2026-07-31",
+    "checkedOn": "2026-08-07",
     "confidence": "high",
     "notes": "Official Business monthly seat price.",
     "native": "40 USD",
     "kind": "fixed",
-    "currency": "USD"
+    "currency": "USD",
+    "freeTier": "No free plan, just a 30-day trial (a referral is usually required)."
   },
   "verdict": "no",
   "verdictConfidence": "high",

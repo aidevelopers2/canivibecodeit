@@ -7,9 +7,10 @@
     "unit": "flat",
     "native": null,
     "source": null,
-    "checkedOn": "2026-07-29",
+    "checkedOn": "2026-08-07",
     "confidence": "medium",
-    "notes": null
+    "notes": null,
+    "freeTier": "The free plan caps dictation at 2,000 words per week on desktop."
   },
   "verdictConfidence": "high",
   "verdictSummary": "Hotkey → record → Whisper → paste at cursor. One of the most-cloned apps of the trend for a reason.",

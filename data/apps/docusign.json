@@ -12,12 +12,13 @@
     "basis": "monthly",
     "unit": "flat",
     "source": "https://docusign.com/products/electronic-signature/plans-and-pricing",
-    "checkedOn": "2026-07-31",
+    "checkedOn": "2026-08-07",
     "confidence": "high",
     "notes": "Official Personal monthly tier.",
     "native": "15 USD",
     "kind": "fixed",
-    "currency": "USD"
+    "currency": "USD",
+    "freeTier": "No free plan, just a trial; signing documents sent to you is always free."
   },
   "verdict": "no",
   "verdictConfidence": "high",

@@ -12,12 +12,13 @@
     "basis": "monthly",
     "unit": "flat",
     "source": "https://recall.wiki/pricing",
-    "checkedOn": "2026-07-31",
+    "checkedOn": "2026-08-07",
     "confidence": "medium",
     "notes": "Typical Plus monthly tier.",
     "native": "10 USD",
     "kind": "fixed",
-    "currency": "USD"
+    "currency": "USD",
+    "freeTier": "The free plan saves unlimited content but caps AI summaries at 10 a month."
   },
   "verdict": "kinda",
   "verdictConfidence": "medium",

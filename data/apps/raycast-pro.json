@@ -12,9 +12,10 @@
     "unit": "flat",
     "native": "10 USD",
     "source": "https://www.raycast.com/pricing",
-    "checkedOn": "2026-07-30",
+    "checkedOn": "2026-08-07",
     "confidence": "high",
-    "notes": "Official pricing checked 2026-07-30; Pro listed at $10/month monthly and $8/month annually."
+    "notes": "Official pricing checked 2026-07-30; Pro listed at $10/month monthly and $8/month annually.",
+    "freeTier": "The free plan covers core features with 5 notes and a 3-month clipboard history."
   },
   "verdict": "kinda",
   "verdictConfidence": "high",

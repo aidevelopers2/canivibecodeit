@@ -12,9 +12,10 @@
     "unit": "flat",
     "native": "24.99 USD",
     "source": "https://sleek.design/pricing",
-    "checkedOn": "2026-07-30",
+    "checkedOn": "2026-08-07",
     "confidence": "high",
-    "notes": "Starter $24.99/month or $240/year, capped at 5 projects and 3,000 credits (about 100 screens) a month. Pro $49.99/month or $360/year adds unlimited projects, 20,000 credits, and REST API access. Team $69.99/seat/month. Free is 1 project on one-time trial credits. All paid tiers currently carry an Early Bird badge, and the pricing page opens on the yearly toggle showing $20/month until you switch it. A cheaper Lite tier exists but only renders for purchasing-power-parity regions."
+    "notes": "Starter $24.99/month or $240/year, capped at 5 projects and 3,000 credits (about 100 screens) a month. Pro $49.99/month or $360/year adds unlimited projects, 20,000 credits, and REST API access. Team $69.99/seat/month. Free is 1 project on one-time trial credits. All paid tiers currently carry an Early Bird badge, and the pricing page opens on the yearly toggle showing $20/month until you switch it. A cheaper Lite tier exists but only renders for purchasing-power-parity regions.",
+    "freeTier": "The free plan is one project on one-time trial credits; nothing renews."
   },
   "verdict": "kinda",
   "verdictConfidence": "medium",

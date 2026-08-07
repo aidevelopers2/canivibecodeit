@@ -89,6 +89,11 @@ for (const file of files) {
     if (!UNITS.includes(app.pricing.unit)) {
       bad(`pricing.unit "${app.pricing.unit}" is not one of ${UNITS.join(' | ')}`);
     }
+    // Optional: one plain sentence about the free tier (or its absence). When
+    // present the page leads with pricing in <title>/meta, so it must be real.
+    if (app.pricing.freeTier !== undefined && app.pricing.freeTier !== null && !isStr(app.pricing.freeTier)) {
+      bad('pricing.freeTier must be a non-empty string or null');
+    }
   }
 
   if (Array.isArray(app.priorArt)) {

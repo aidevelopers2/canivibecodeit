@@ -12,9 +12,10 @@
     "unit": "per-seat",
     "native": "5 USD",
     "source": "https://obsidian.md/pricing",
-    "checkedOn": "2026-07-30",
+    "checkedOn": "2026-08-07",
     "confidence": "high",
-    "notes": "Official pricing checked 2026-07-30; Sync listed at $5/user/month monthly and $4/user/month annually."
+    "notes": "Official pricing checked 2026-07-30; Sync listed at $5/user/month monthly and $4/user/month annually.",
+    "freeTier": "Sync itself has no free tier, though the Obsidian app is free."
   },
   "verdict": "yes",
   "verdictConfidence": "high",

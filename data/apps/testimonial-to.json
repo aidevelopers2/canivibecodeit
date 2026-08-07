@@ -5,11 +5,12 @@
     "plan": null,
     "basis": "monthly",
     "unit": "flat",
-    "native": null,
+    "native": "29 USD",
     "source": null,
-    "checkedOn": "2026-07-29",
+    "checkedOn": "2026-08-07",
     "confidence": "medium",
-    "notes": null
+    "notes": "Official pricing checked 2026-08-07; Starter $29/month monthly, about $24/month on yearly billing.",
+    "freeTier": "The free plan holds 15 testimonials with unlimited widgets and walls."
   },
   "verdictConfidence": "high",
   "verdictSummary": "A form, an embed widget, and a wall page. $300/yr for what is essentially a guestbook.",
@@ -29,7 +30,7 @@
   "name": "Senja / Testimonial.to",
   "domain": "senja.io",
   "category": "testimonials",
-  "priceMonthly": 25,
+  "priceMonthly": 29,
   "verdict": "yes",
   "notes": "A form, an embed widget, and a wall page. $300/yr for what is essentially a guestbook.",
   "whatYouLose": [

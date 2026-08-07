@@ -12,9 +12,10 @@
     "unit": "flat",
     "native": "24 USD estimate / EUR source",
     "source": "https://n8n.io/pricing/",
-    "checkedOn": "2026-07-30",
+    "checkedOn": "2026-08-07",
     "confidence": "medium",
-    "notes": "Official pricing checked; public 2026 references list Starter around €20 annual-effective / about $24 monthly depending billing and currency."
+    "notes": "Official pricing checked; public 2026 references list Starter around €20 annual-effective / about $24 monthly depending billing and currency.",
+    "freeTier": "No free cloud plan, just a trial; self-hosting the open source core is free."
   },
   "verdict": "yes",
   "verdictConfidence": "high",
