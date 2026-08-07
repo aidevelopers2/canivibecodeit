@@ -2959,38 +2959,49 @@ button.sp-banner {
     top: 76px;
     width: var(--sp-card-w);
     z-index: 40;
-    /* The rail owns the full viewport height and the cards divide it (below);
-       on short viewports the min-heights win and the rail scrolls instead of
-       clipping the bottom card. */
+    /* The rail owns the full viewport height and the cards divide it (below).
+       Never scrollable: on short viewports the cards compress instead. */
     height: calc(100vh - 90px);
-    overflow-y: auto;
+    overflow: hidden;
   }
 
-  /* Cards share the rail's full height: each grows equally from its 160px
-     floor, and the content centers on both axes inside the taller card. */
+  /* Cards split the rail's height evenly: zero flex-basis keeps them equal,
+     and min-height 0 lets them compress on short viewports rather than
+     overflow the rail. Content centers on both axes inside the taller card. */
   .sp-rail .sp-card {
     width: auto;
     height: auto;
-    min-height: 160px;
-    flex: 1 1 auto;
+    min-height: 0;
+    flex: 1 1 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
 
-  /* The sold-out notice grows too, but only to about double its natural
-     size — past that the paid cards absorb the rest. */
-  .sp-rail .sp-card.soldout {
+  /* When a card compresses, the tagline gives way first; icon, name and
+     price keep their natural height. */
+  .sp-rail .sp-card > * {
+    flex-shrink: 0;
+  }
+
+  .sp-rail .sp-card .sp-tag {
+    flex-shrink: 1;
     min-height: 0;
-    /* Grow, but never shrink below the notice's natural height. */
-    flex: 1 0 auto;
+  }
+
+  /* The sold-out notice grows too, but only to about double its natural
+     size: past that the paid cards absorb the rest. */
+  .sp-rail .sp-card.soldout {
+    flex: 1 1 auto;
     max-height: 128px;
   }
 
   /* The open card is a button inside a form; the form is the rail's flex
-     child, so it must pass the granted height and width through. */
+     child, so it must pass the granted height and width through, and be
+     allowed to shrink, or its content height would force the rail open. */
   .sp-rail .sp-checkout-form {
-    flex: 1 1 auto;
+    flex: 1 1 0;
+    min-height: 0;
     display: flex;
   }
 
