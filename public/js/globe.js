@@ -228,9 +228,12 @@
       : '';
   let regionNames;
   try { regionNames = new Intl.DisplayNames(['en'], { type: 'region' }); } catch {}
-  const country = (cc) => {
+  const bareCountry = (cc) => {
     try { return regionNames?.of(cc) || cc; } catch { return cc; }
   };
+  // sentence form: countries whose English names take "the"
+  const THE = ['US', 'GB', 'NL', 'PH', 'AE', 'DO', 'CD'];
+  const country = (cc) => (THE.includes(cc) ? `the ${bareCountry(cc)}` : bareCountry(cc));
   const agoStr = (sec) =>
     sec < 10 ? 'just now' : sec < 60 ? `${sec}s ago` : sec < 3600 ? `${Math.floor(sec / 60)}m ago` : `${Math.floor(sec / 3600)}h ago`;
   const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
@@ -244,7 +247,7 @@
     }
     const drift = Math.floor((Date.now() - dataAt) / 1000);
     const f = pin.latest;
-    const head = `${flag(pin.c)} ${esc(country(pin.c))}${pin.n > 1 ? ` · ${pin.n} people this hour` : ''}`;
+    const head = `${flag(pin.c)} ${esc(bareCountry(pin.c))}${pin.n > 1 ? ` · ${pin.n} people this hour` : ''}`;
     let lines = `<b>${head}</b>`;
     if (f) {
       const verb = f.copy ? `copied the ${esc(f.app || 'app')} prompt` : `${f.ago + drift < 120 ? 'reading' : 'read'} ${esc(f.path)}`;

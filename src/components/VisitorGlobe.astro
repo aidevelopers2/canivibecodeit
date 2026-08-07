@@ -9,9 +9,12 @@ const flag = (cc) =>
     ? String.fromCodePoint(...[...cc].map((ch) => 0x1f1e6 + ch.charCodeAt(0) - 65))
     : '';
 const regionNames = new Intl.DisplayNames(['en'], { type: 'region' });
+// countries whose English names take "the" in a sentence
+const THE = new Set(['US', 'GB', 'NL', 'PH', 'AE', 'DO', 'CD']);
 const country = (cc) => {
   try {
-    return regionNames.of(cc) || cc;
+    const name = regionNames.of(cc) || cc;
+    return THE.has(cc) ? `the ${name}` : name;
   } catch {
     return cc;
   }
