@@ -45,8 +45,16 @@ export async function dashboardStats() {
   if (now - dashCache.at < 120_000) return dashCache.data;
 
   try {
-    const [tiles, byDay, pages, agents, topPrompts] = await Promise.all([
+    const [tiles, allTime, byDay, pages, agents, topPrompts] = await Promise.all([
       hogql(QUERY),
+      hogql(`
+        SELECT countIf(event = '$pageview') AS views,
+               countDistinctIf(person_id, event = '$pageview') AS visitors,
+               countIf(event = 'copy_prompt') AS copies,
+               toDate(min(timestamp)) AS since
+        FROM events
+        WHERE ${SITE}
+      `),
       hogql(`
         SELECT toDate(timestamp) AS d,
                countIf(event = '$pageview') AS views,
@@ -75,10 +83,12 @@ export async function dashboardStats() {
       `),
     ]);
     const [viewsToday, views7d, visitors7d, copies7d, bestDay] = tiles[0];
+    const [totalViews, totalVisitors, totalCopies, since] = allTime[0];
     dashCache = {
       at: now,
       data: {
         tiles: { viewsToday, views7d, visitors7d, copies7d, bestDay },
+        allTime: { views: totalViews, visitors: totalVisitors, copies: totalCopies, since },
         byDay: byDay.map(([d, views, visitors]) => ({ d, views, visitors })),
         pages: pages.map(([p, n]) => ({ p, n })),
         agents: agents.map(([a, n]) => ({ a, n })),

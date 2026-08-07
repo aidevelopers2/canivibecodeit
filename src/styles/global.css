@@ -1481,6 +1481,65 @@ a.row:hover .badge {
   color: var(--muted);
 }
 
+.dash-sub {
+  padding-top: 26px;
+}
+
+.dash-tiles .tile.span-2 {
+  grid-column: span 2;
+}
+
+.dash-tiles .tile.span-4 {
+  grid-column: 1 / -1;
+}
+
+a.tile {
+  text-decoration: none;
+  color: inherit;
+}
+
+.dash-tiles .tile.cta {
+  border-color: var(--primary-dim);
+  transition: border-color 0.2s ease, transform 0.3s var(--ease-snap);
+}
+
+.dash-tiles .tile.cta:hover {
+  border-color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.dash-tiles .cta-line {
+  font-family: var(--font-display);
+  font-size: clamp(17px, 2.2vw, 22px);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--fg);
+}
+
+.verdict-bar {
+  display: flex;
+  height: 10px;
+  margin-top: 14px;
+  border-radius: 100px;
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.verdict-bar i {
+  display: block;
+}
+
+.dash-line {
+  padding-top: 14px;
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.dash-line a {
+  color: var(--primary);
+}
+
 .dash-foot {
   padding-top: 28px;
   font-size: 12px;

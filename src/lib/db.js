@@ -372,6 +372,18 @@ async function pgDriver() {
       );
       return r.rows.map((x) => ({ ...x, count: Number(x.count) }));
     },
+    async sponsorTotals() {
+      const [imp, clk] = await Promise.all([
+        pool.query('SELECT COALESCE(SUM(count), 0) AS n, MIN(day) AS since FROM sponsor_impressions'),
+        pool.query('SELECT COUNT(*) AS n, MIN(created_at) AS since FROM sponsor_clicks'),
+      ]);
+      return {
+        impressions: Number(imp.rows[0].n),
+        impressionsSince: imp.rows[0].since ?? null,
+        clicks: Number(clk.rows[0].n),
+        clicksSince: clk.rows[0].since == null ? null : Number(clk.rows[0].since),
+      };
+    },
   };
 }
 
@@ -541,6 +553,20 @@ async function sqliteDriver() {
         .prepare('SELECT slot_id, day, count FROM sponsor_impressions WHERE day >= ? ORDER BY day')
         .all(sinceDay);
     },
+    async sponsorTotals() {
+      const imp = db
+        .prepare('SELECT COALESCE(SUM(count), 0) AS n, MIN(day) AS since FROM sponsor_impressions')
+        .get();
+      const clk = db
+        .prepare('SELECT COUNT(*) AS n, MIN(created_at) AS since FROM sponsor_clicks')
+        .get();
+      return {
+        impressions: Number(imp.n),
+        impressionsSince: imp.since ?? null,
+        clicks: Number(clk.n),
+        clicksSince: clk.since == null ? null : Number(clk.since),
+      };
+    },
   };
 }
 
@@ -640,6 +666,17 @@ export async function bumpImpressions(entries) {
 
 export async function impressionRows(sinceDay = '0000-00-00') {
   return (await getDriver()).impressionRows(sinceDay);
+}
+
+// All-time aggregates across every slot: the public /stats page shows only
+// these sums, never per-slot numbers. Cached briefly: the page renders per
+// request and two table scans per pageview would be pure waste.
+let totalsCache = { at: 0, data: null };
+export async function sponsorTotals() {
+  const now = Date.now();
+  if (now - totalsCache.at < 60_000) return totalsCache.data;
+  totalsCache = { at: now, data: await (await getDriver()).sponsorTotals() };
+  return totalsCache.data;
 }
 
 export async function purchasesForAdmin(limit = 60) {

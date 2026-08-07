@@ -1,14 +1,44 @@
 ---
 import Base from '../layouts/Base.astro';
 import { dashboardStats } from '../lib/analytics.js';
+import { allApps, appsWithAlternativesPage, moatsInUse, VERDICTS } from '../lib/apps.js';
+import { sponsorTotals } from '../lib/db.js';
+import { getBoard, nextRunMonthName } from '../lib/sponsors.js';
 
 const data = await dashboardStats();
 const fmt = (n) => (n == null ? '—' : Number(n).toLocaleString('en-US'));
 const s = data?.tiles;
+const at = data?.allTime;
+
+const shortDate = (d) =>
+  d == null
+    ? null
+    : new Date(d)
+        .toLocaleDateString('en-GB', { day: 'numeric', month: 'short', timeZone: 'UTC' })
+        .toLowerCase();
+const daysOnAir = at?.since
+  ? Math.max(1, Math.ceil((Date.now() - new Date(at.since + 'T00:00:00Z')) / 86400000))
+  : null;
+
+// The dataset itself, read straight from the JSON. No API involved.
+const apps = allApps();
+const byVerdict = { yes: 0, kinda: 0, no: 0 };
+for (const a of apps) byVerdict[a.verdict] = (byVerdict[a.verdict] ?? 0) + 1;
+const pct = (n) => (n / apps.length) * 100;
+const totalAlts = apps.reduce((sum, a) => sum + (a.alternatives ?? []).length, 0);
+const altApps = apps.filter((a) => (a.alternatives ?? []).length > 0).length;
+const altPages = appsWithAlternativesPage().length;
+const moatTags = moatsInUse().length;
+
+// Sponsor cards: aggregate across all slots only, never per-sponsor numbers.
+const sponsors = await sponsorTotals().catch(() => null);
+const board = await getBoard();
+const nextMonth = nextRunMonthName();
+const nextLeft = board.slots.length - board.prebookedCount;
 
 const title = 'Site analytics · Can I Vibecode It?';
 const description =
-  'Live, public analytics for canivibecodeit.com: what gets viewed and which prompts get copied into which AI coding agent.';
+  'Live, public numbers for canivibecodeit.com: traffic, prompt copies, the verdict dataset itself, and how the sponsor cards perform.';
 ---
 
 <Base {title} {description}>
@@ -45,6 +75,34 @@ const description =
       </div>
     </div>
 
+    <div class="dash-sub">
+      <span class="microlabel">
+        all-time{at?.since ? ` · counting since ${shortDate(at.since)} 2026` : ''}
+      </span>
+    </div>
+    <div class="dash-tiles">
+      <div class="tile" title="Every page view since analytics went live">
+        <span class="t-label">page views</span>
+        <span class="t-num" data-stat="totalViews">{fmt(at?.views)}</span>
+        <span class="t-def">all time</span>
+      </div>
+      <div class="tile" title="Unique visitors since analytics went live">
+        <span class="t-label">visitors</span>
+        <span class="t-num" data-stat="totalVisitors">{fmt(at?.visitors)}</span>
+        <span class="t-def">unique people, all time</span>
+      </div>
+      <div class="tile" title="Prompt copy and open-in-agent clicks, all time">
+        <span class="t-label">prompts copied</span>
+        <span class="t-num" data-stat="totalCopies">{fmt(at?.copies)}</span>
+        <span class="t-def">replacements started</span>
+      </div>
+      <div class="tile" title="Days since the first tracked page view">
+        <span class="t-label">days on air</span>
+        <span class="t-num" data-stat="daysOnAir">{fmt(daysOnAir)}</span>
+        <span class="t-def">and counting</span>
+      </div>
+    </div>
+
     {
       data ? (
         <div class="panels">
@@ -77,6 +135,76 @@ const description =
         </p>
       )
     }
+
+    <div class="list-head" style="padding-top: 44px;">
+      <h2>The dataset</h2>
+      <span class="note">MIT-licensed, grows by pull request</span>
+    </div>
+
+    <div class="dash-tiles">
+      <div class="tile" title="Paid SaaS apps with a verdict on the death list">
+        <span class="t-label">apps on the list</span>
+        <span class="t-num" data-stat="appCount">{fmt(apps.length)}</span>
+        <span class="t-def">one verdict each</span>
+      </div>
+      <div class="tile" title={`Verdict: ${VERDICTS.yes.label} (${VERDICTS.yes.sub})`}>
+        <span class="t-label">🟢 yes</span>
+        <span class="t-num" data-stat="yesCount">{fmt(byVerdict.yes)}</span>
+        <span class="t-def">{VERDICTS.yes.sub}</span>
+      </div>
+      <div class="tile" title={`Verdict: ${VERDICTS.kinda.label} (${VERDICTS.kinda.sub})`}>
+        <span class="t-label">🟡 kinda</span>
+        <span class="t-num" data-stat="kindaCount">{fmt(byVerdict.kinda)}</span>
+        <span class="t-def">{VERDICTS.kinda.sub}</span>
+      </div>
+      <div class="tile" title={`Verdict: ${VERDICTS.no.label} (${VERDICTS.no.sub})`}>
+        <span class="t-label">🔴 not really</span>
+        <span class="t-num" data-stat="noCount">{fmt(byVerdict.no)}</span>
+        <span class="t-def">{VERDICTS.no.sub}</span>
+      </div>
+    </div>
+
+    <div
+      class="verdict-bar"
+      role="img"
+      aria-label={`Verdict split across ${apps.length} apps: ${byVerdict.yes} yes, ${byVerdict.kinda} kinda, ${byVerdict.no} not really`}
+    >
+      <i style={`width:${pct(byVerdict.yes)}%;background:var(--primary)`}></i>
+      <i style={`width:${pct(byVerdict.kinda)}%;background:var(--kinda-bg)`}></i>
+      <i style={`width:${pct(byVerdict.no)}%;background:var(--no-bg)`}></i>
+    </div>
+
+    <p class="dash-line">
+      Plus <a href="/alternatives">{fmt(totalAlts)} free &amp; open-source alternatives</a>{` across ${fmt(altApps)} apps (${fmt(altPages)} dedicated pages) and `}<a href="/moats">{moatTags} moat tags</a> mapping what actually protects the survivors.
+    </p>
+
+    <div class="list-head" style="padding-top: 44px;">
+      <h2>Sponsor cards</h2>
+      <span class="note">summed across all 10 slots · individual sponsors keep their own numbers private</span>
+    </div>
+
+    <div class="dash-tiles">
+      <div class="tile span-2" title="Page renders carrying sponsor cards, counted server-side, bots filtered">
+        <span class="t-label">card impressions</span>
+        <span class="t-num" data-stat="sponsorImpressions">{fmt(sponsors?.impressions)}</span>
+        <span class="t-def">
+          server-counted, bots filtered{sponsors?.impressionsSince ? ` · since ${shortDate(sponsors.impressionsSince)}` : ''}
+        </span>
+      </div>
+      <div class="tile span-2" title="Clicks on sponsor cards across every surface">
+        <span class="t-label">card clicks</span>
+        <span class="t-num" data-stat="sponsorClicks">{fmt(sponsors?.clicks)}</span>
+        <span class="t-def">
+          all surfaces{sponsors?.clicksSince ? ` · since ${shortDate(sponsors.clicksSince)}` : ''}
+        </span>
+      </div>
+      <a class="tile cta span-4" href="/sponsor">
+        <span class="t-label">the pitch</span>
+        <span class="cta-line">
+          these numbers are the ad. pre-book {nextMonth.toLowerCase()}{board.prebookedCount > 0 ? ` · ${nextLeft} of ${board.slots.length} slots left` : ''} →
+        </span>
+      </a>
+    </div>
 
     <p class="dash-foot">
       First-party analytics, self-queried and published on purpose · the dithered
