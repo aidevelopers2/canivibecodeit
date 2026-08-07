@@ -138,8 +138,8 @@ const tweet = encodeURIComponent(
 <Base {title} {description} socialTitle={brandTitle} ogImage={`/og/${app.slug}.png`} {jsonld}>
   <main class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb">
-      <a href="/">the death list</a> / <a href={`/category/${app.category}`}>{cat.label.toLowerCase()}</a> /
-      <span class="here">{app.slug}</span>
+      {/* one line: the compiler strips the newline after "/", eating the space */}
+      <a href="/">the death list</a> / <a href={`/category/${app.category}`}>{cat.label.toLowerCase()}</a> / <span class="here">{app.slug}</span>
     </nav>
 
     <div class="app-head">
@@ -162,7 +162,7 @@ const tweet = encodeURIComponent(
       <span>price <b>{app.priceMonthly != null ? `${discontinued ? 'was ' : ''}$${app.priceMonthly}/mo` : discontinued ? 'gone' : 'varies'}</b></span>
       {saving != null && !discontinued && <span>you'd save <span class="save">${saving.toLocaleString('en-US')}/yr</span></span>}
       {app.diyTimeEstimate && <span>build time <b>{app.diyTimeEstimate}</b></span>}
-      <span>category <b>{cat.emoji} {cat.label.toLowerCase()}</b></span>
+      <span>category <a class="cat-pill" href={`/category/${app.category}`}>{cat.emoji} {cat.label.toLowerCase()}</a></span>
       <span>replaced by <b data-votes={app.slug}>{votes}</b> people</span>
     </div>
 

@@ -1324,11 +1324,31 @@ a.row:hover .badge {
 
 .stats {
   display: flex;
+  align-items: center;
   gap: 32px;
   flex-wrap: wrap;
   padding-top: 20px;
   font-size: 14px;
   color: var(--muted);
+}
+
+/* category as a clickable pill in the stats row, same look as .alt-pill.cat */
+.cat-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 4px 11px;
+  font-size: 12px;
+  color: var(--fg);
+  background: var(--card);
+  transition: border-color 0.15s ease, transform 0.12s var(--ease-snap);
+}
+
+.cat-pill:hover {
+  border-color: var(--primary);
+  transform: translateY(-1px);
 }
 
 .stats b {

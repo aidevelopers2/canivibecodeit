@@ -99,8 +99,8 @@ const jsonld = [
 <Base {title} {description} ogImage={`/og/${app.slug}.png`} {jsonld}>
   <main class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb">
-      <a href="/">the death list</a> / <a href="/alternatives">alternatives</a> /
-      <a href={`/${app.slug}`}>{app.slug}</a> / <span class="here">free alternatives</span>
+      {/* one line: the compiler strips the newline after "/", eating the space */}
+      <a href="/">the death list</a> / <a href="/alternatives">alternatives</a> / <a href={`/${app.slug}`}>{app.slug}</a> / <span class="here">free alternatives</span>
     </nav>
 
     <div class="app-head alt-head">
