@@ -4,7 +4,7 @@ import VerdictBadge from '../components/VerdictBadge.astro';
 import DigestCard from '../components/DigestCard.astro';
 import DigestReveal from '../components/DigestReveal.astro';
 import AltCard from '../components/AltCard.astro';
-import { getApp, relatedApps, yearlySaving, sortedAlternatives, ALTERNATIVES_PAGE_MIN, CATEGORIES, VERDICTS, MOAT_TAGS, MOAT_TAG_EMOJI } from '../lib/apps.js';
+import { getApp, relatedApps, yearlySaving, sortedAlternatives, ALTERNATIVES_PAGE_MIN, CATEGORIES, VERDICTS, MOAT_TAGS, MOAT_TAG_EMOJI, VIBE_CODING_TOOL_SLUGS } from '../lib/apps.js';
 import { voteCount, voteCounts } from '../lib/db.js';
 
 const { slug } = Astro.params;
@@ -145,6 +145,14 @@ const tweet = encodeURIComponent(
       <span>category <b>{cat.emoji} {cat.label.toLowerCase()}</b></span>
       <span>replaced by <b data-votes={app.slug}>{votes}</b> people</span>
     </div>
+
+    {
+      VIBE_CODING_TOOL_SLUGS.has(app.slug) && (
+        <p class="bvct-backlink">
+          ⌨️ featured in <a href="/best-vibe-coding-tools">the best vibe coding tools</a>
+        </p>
+      )
+    }
 
     {
       moats.length > 0 && (
@@ -381,6 +389,17 @@ const tweet = encodeURIComponent(
 
   .moat-chips .microlabel {
     margin-right: 3px;
+  }
+
+  .bvct-backlink {
+    padding-top: 16px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  .bvct-backlink a {
+    color: var(--primary);
   }
 
   .pricing-sec {

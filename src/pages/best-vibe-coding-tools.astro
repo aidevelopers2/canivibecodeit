@@ -1,0 +1,298 @@
+---
+/* Editorial roundup: the vibe coding tools themselves, grouped by shape, with
+   each entry linking back into the dataset (its verdict page + its free
+   alternatives). Built from existing verdict data on purpose; this page gets
+   richer when the attempts ledger ships, not before. */
+import Base from '../layouts/Base.astro';
+import DigestCard from '../components/DigestCard.astro';
+import VerdictBadge from '../components/VerdictBadge.astro';
+import { getApp, ALTERNATIVES_PAGE_MIN } from '../lib/apps.js';
+
+const GROUPS = [
+  {
+    label: 'agent IDEs',
+    blurb: 'a whole editor built around the agent',
+    tools: [
+      { slug: 'cursor', note: 'The default answer in 2026. A VS Code fork with agents that plan, edit, and run; most one-shot receipts you see on X trace back to it.' },
+      { slug: 'windsurf', note: "Cursor's closest rival: cleaner agent flow, cheaper seat, smaller ecosystem." },
+    ],
+  },
+  {
+    label: 'prompt-to-app builders',
+    blurb: 'describe the app, get a URL',
+    tools: [
+      { slug: 'lovable', note: 'Prompt to deployed web app with hosting and auth included. The fastest zero-to-URL if you don\'t call yourself a developer.' },
+      { slug: 'bolt-new', note: 'Prompt to running web project in a browser sandbox. Good for throwaway builds and demos you want in minutes.' },
+      { slug: 'v0', note: "Vercel's prompt-to-React tool. Best at UI components you paste into a codebase you already have." },
+      { slug: 'replit', note: 'Browser IDE with an agent, instant hosting, and a real mobile app. The whole loop in one tab.' },
+    ],
+  },
+  {
+    label: 'copilots in your editor',
+    blurb: 'the AI stays in the passenger seat',
+    tools: [
+      { slug: 'github-copilot', note: 'The incumbent. Cheapest seat, lives everywhere GitHub does, agent mode catching up fast.' },
+      { slug: 'sourcegraph-cody', note: 'Codebase-aware chat and completions; the answer that gets picked when the repo is enormous.' },
+      { slug: 'tabnine', note: "Private, local-first completions; the pick when code isn't allowed to leave the building." },
+      { slug: 'blackbox-ai', note: 'Code chat and agents in the browser; scrappy, and the free tier does a lot.' },
+    ],
+  },
+  {
+    label: 'autonomous agents',
+    blurb: 'give it the ticket, review the PR',
+    tools: [
+      { slug: 'devin', note: 'Plans, codes, tests, and opens the pull request on its own. Works best on well-scoped chores, not vision.' },
+      { slug: 'factory', note: 'Droids for migrations, tests, and grunt work at team scale.' },
+    ],
+  },
+];
+
+// Terminal agents have no verdict pages (they're the tools this site's copy
+// buttons assume you're holding), so they carry external links only.
+const TERMINAL = {
+  label: 'terminal agents',
+  blurb: 'the ones this site\'s "open in" buttons assume',
+  tools: [
+    { name: 'Claude Code', url: 'https://claude.com/claude-code', note: 'Terminal agent that reads your repo, edits files, runs tests, and ships. What most prompts on this site are written for.' },
+    { name: 'Codex', url: 'https://openai.com/codex/', note: "OpenAI's take on the same idea: point it at a repo and talk. CLI is open source." },
+    { name: 'aider', url: 'https://aider.chat', note: 'The open source original of the genre; git-native, works with whatever model you bring.' },
+  ],
+};
+
+const groups = GROUPS.map((g) => ({
+  ...g,
+  tools: g.tools.map((t) => {
+    const app = getApp(t.slug);
+    return {
+      ...t,
+      app,
+      hasAltPage: (app.alternatives ?? []).length >= ALTERNATIVES_PAGE_MIN,
+    };
+  }),
+}));
+
+const n = groups.reduce((s, g) => s + g.tools.length, 0) + TERMINAL.tools.length;
+const year = new Date().getFullYear();
+
+const title = `${n} best vibe coding tools in ${year}: the honest list`;
+const description = `The ${n} vibe coding tools actually worth knowing in ${year}: agent IDEs, prompt-to-app builders, terminal agents, what they cost, and free alternatives to each.`;
+
+const faq = [
+  {
+    q: 'What is vibe coding?',
+    a: 'Describing what you want in plain language and letting an AI agent write, run, and fix the code. The term stuck in early 2025; the tools on this page are where it actually works in practice.',
+  },
+  {
+    q: 'Which vibe coding tools are free?',
+    a: 'Most have a usable free tier: Cursor and GitHub Copilot have free plans, v0, Bolt.new and Lovable give free credits, and aider plus the Codex CLI are open source. The paid tiers buy bigger models and more runs, not the idea.',
+  },
+  {
+    q: 'Can AI rebuild these tools too?',
+    a: `Fair question on this site. We hold verdicts on every tool above that sells a subscription: Cursor and Replit rate KINDA, most of the rest survive on more than their code. Each card links to the full verdict.`,
+  },
+];
+
+const jsonld = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: title,
+    numberOfItems: n,
+    itemListElement: [
+      ...groups.flatMap((g) => g.tools.map((t) => t.app.name)),
+      ...TERMINAL.tools.map((t) => t.name),
+    ].map((name, i) => ({ '@type': 'ListItem', position: i + 1, name })),
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faq.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
+  },
+];
+
+let rank = 0;
+---
+
+<Base {title} {description} {jsonld}>
+  <main class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="/">the death list</a> / <span class="here">best vibe coding tools</span>
+    </nav>
+
+    <div class="list-head" style="padding-top: 20px;">
+      <h1 class="bvct-h1">The best vibe coding tools</h1>
+      <span class="note">{n} tools · {year} · no votes, no pay-to-list</span>
+    </div>
+
+    <p class="bvct-intro">
+      We keep verdicts on what AI can replace for a living, so here's the honest
+      list of the tools doing the replacing. Grouped by shape, priced as listed,
+      and each card links to our verdict on whether you could vibecode the tool
+      itself, plus its free alternatives. Sponsors never touch this list.
+    </p>
+
+    {
+      groups.map((g) => (
+        <section class="bvct-group">
+          <span class="microlabel">{g.label} · {g.blurb}</span>
+          {g.tools.map((t) => {
+            rank += 1;
+            return (
+              <div class="bvct-row">
+                <span class="bvct-n">{String(rank).padStart(2, '0')}</span>
+                <img src={`/icons/${t.slug}.png`} alt="" width="34" height="34" loading="lazy" />
+                <div class="bvct-body">
+                  <p class="bvct-name">
+                    {t.app.name.split(' / ')[0]}
+                    <span class="bvct-price">
+                      {t.app.priceMonthly != null ? `$${t.app.priceMonthly}/mo` : 'price varies'}
+                    </span>
+                    <VerdictBadge verdict={t.app.verdict} />
+                  </p>
+                  <p class="bvct-note">{t.note}</p>
+                  <p class="bvct-links">
+                    <a href={`/${t.slug}`}>can you vibecode it? →</a>
+                    {t.hasAltPage && <a href={`/${t.slug}/alternatives`}>free alternatives →</a>}
+                  </p>
+                </div>
+              </div>
+            );
+          })}
+        </section>
+      ))
+    }
+
+    <section class="bvct-group">
+      <span class="microlabel">{TERMINAL.label} · {TERMINAL.blurb}</span>
+      {
+        TERMINAL.tools.map((t) => {
+          rank += 1;
+          return (
+            <div class="bvct-row">
+              <span class="bvct-n">{String(rank).padStart(2, '0')}</span>
+              <div class="bvct-body">
+                <p class="bvct-name">
+                  {t.name}
+                  <a class="bvct-ext" href={t.url} rel="noopener" target="_blank">↗</a>
+                </p>
+                <p class="bvct-note">{t.note}</p>
+              </div>
+            </div>
+          );
+        })
+      }
+    </section>
+
+    <section class="faq">
+      <span class="microlabel">questions</span>
+      {
+        faq.map((f, i) => (
+          <details open={i === 0}>
+            <summary>{f.q}</summary>
+            <p class="a">{f.a}</p>
+          </details>
+        ))
+      }
+    </section>
+  </main>
+
+  <DigestCard source="bvct" />
+</Base>
+
+<style>
+  .bvct-h1 {
+    font-family: var(--font-display);
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+
+  .bvct-intro {
+    padding-top: 18px;
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: var(--muted);
+    max-width: 76ch;
+  }
+
+  .bvct-group {
+    padding-top: 36px;
+  }
+
+  .bvct-row {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .bvct-row img {
+    border-radius: 7px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .bvct-n {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--muted);
+    flex: 0 0 24px;
+    padding-top: 8px;
+  }
+
+  .bvct-body {
+    min-width: 0;
+  }
+
+  .bvct-name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    font-family: var(--font-display);
+    font-size: 17px;
+    font-weight: 600;
+  }
+
+  .bvct-price {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--muted);
+  }
+
+  .bvct-ext {
+    text-decoration: none;
+    color: var(--primary);
+  }
+
+  .bvct-note {
+    padding-top: 6px;
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--muted);
+    max-width: 70ch;
+  }
+
+  .bvct-links {
+    display: flex;
+    gap: 18px;
+    padding-top: 8px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+  }
+
+  .bvct-links a {
+    color: var(--primary);
+    text-decoration: none;
+  }
+
+  .bvct-links a:hover {
+    text-decoration: underline;
+  }
+</style>

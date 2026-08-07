@@ -65,6 +65,14 @@ const jsonld = [
       }
     </nav>
 
+    {
+      cat === 'dev-tools' && (
+        <p class="cat-crosslink">
+          ⌨️ the tools doing the building, ranked: <a href="/best-vibe-coding-tools">best vibe coding tools</a>
+        </p>
+      )
+    }
+
     <div class="thead microlabel">
       <span class="c-app">app</span>
       <span class="c-cat">category</span>
@@ -85,3 +93,16 @@ const jsonld = [
 
   <DigestCard source="category" />
 </Base>
+
+<style>
+  .cat-crosslink {
+    padding-top: 16px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  .cat-crosslink a {
+    color: var(--primary);
+  }
+</style>
