@@ -7,6 +7,7 @@
   "subcategory": "synthetic voice, dubbing and AI avatars",
   "tagline": "Run a local licensed TTS model and organize voiceover projects",
   "priceMonthly": 39,
+  "discontinued": "shut down on December 31, 2025, after the team was acquihired by Meta",
   "pricing": {
     "plan": "Creator",
     "basis": "monthly",
@@ -45,7 +46,7 @@
   "moatNotes": "models, compute, rights, and safety operations",
   "replacementScope": "clearly labeled local synthetic-media tool",
   "ongoingBurden": "model licensing, consent records, impersonation risk, watermarking, GPU queues, media storage, abuse response, and rapid model changes",
-  "whyPeopleStillPay": "People still pay for PlayHT because customers pay for output quality, production speed, licensed voices, consent workflows, and a provider that carries the operational risk. The recurring cost buys model licensing, consent records, impersonation risk, watermarking, GPU queues, media storage, abuse response, and rapid model changes, not just the visible interface.",
+  "whyPeopleStillPay": "People paid for PlayHT because customers paid for output quality, production speed, licensed voices, consent workflows, and a provider that carried the operational risk. The recurring cost bought model licensing, consent records, impersonation risk, watermarking, GPU queues, media storage, abuse response, and rapid model changes, not just the visible interface.",
   "priorArt": [
     {
       "name": "Piper",

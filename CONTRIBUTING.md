@@ -14,6 +14,10 @@ No web form, no account — the repo is the admin panel.
   "subcategory": "meeting transcription + AI notes",  // optional, freeform
   "tagline": "AI meeting notepad ...",                // one line, what the app is
   "priceMonthly": 14,            // typical paid tier, USD/month; null if it varies
+  "discontinued": null,          // optional: if the product is dead, a fragment that
+                                 // reads as "{name} {discontinued}." e.g. "shut down on
+                                 // September 24, 2025". The page keeps the verdict but
+                                 // shows a post-mortem banner and past-tense pricing.
   "pricing": {                   // provenance — prices drift, receipts matter
     "plan": "Business", "basis": "monthly per user",
     "unit": "per-seat",          // flat | per-seat | usage | one-time | custom

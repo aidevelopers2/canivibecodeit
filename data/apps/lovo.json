@@ -7,6 +7,7 @@
   "subcategory": "synthetic voice, dubbing and AI avatars",
   "tagline": "Produce labeled voiceovers from licensed local voices and user-authored scripts",
   "priceMonthly": 24,
+  "discontinued": "filed for Chapter 7 bankruptcy in May 2026 and is offline",
   "pricing": {
     "plan": "Basic",
     "basis": "monthly",
@@ -45,7 +46,7 @@
   "moatNotes": "models, compute, rights, and safety operations",
   "replacementScope": "clearly labeled local synthetic-media tool",
   "ongoingBurden": "model licensing, consent records, impersonation risk, watermarking, GPU queues, media storage, abuse response, and rapid model changes",
-  "whyPeopleStillPay": "People still pay for LOVO because customers pay for output quality, production speed, licensed voices, consent workflows, and a provider that carries the operational risk. The recurring cost buys model licensing, consent records, impersonation risk, watermarking, GPU queues, media storage, abuse response, and rapid model changes, not just the visible interface.",
+  "whyPeopleStillPay": "People paid for LOVO because customers paid for output quality, production speed, licensed voices, consent workflows, and a provider that carried the operational risk. The recurring cost bought model licensing, consent records, impersonation risk, watermarking, GPU queues, media storage, abuse response, and rapid model changes, not just the visible interface.",
   "priorArt": [
     {
       "name": "Piper",

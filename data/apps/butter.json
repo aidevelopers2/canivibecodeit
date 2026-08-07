@@ -7,6 +7,7 @@
   "subcategory": "video meetings and webinars",
   "tagline": "Host a facilitated workshop interface around a modest private video room",
   "priceMonthly": 14,
+  "discontinued": "shut down after the team joined Miro in 2025",
   "pricing": {
     "plan": "Starter",
     "basis": "monthly per member",
@@ -45,7 +46,7 @@
   "moatNotes": "real-time media infrastructure and reliability",
   "replacementScope": "small private meeting service",
   "ongoingBurden": "TURN capacity, codecs, browsers, packet loss, scaling, recording, consent, abuse, monitoring, and incident response",
-  "whyPeopleStillPay": "People still pay for Butter because video products survive because real-time media quality and global reliability are infrastructure businesses, not weekend interface projects. The recurring cost buys TURN capacity, codecs, browsers, packet loss, scaling, recording, consent, abuse, monitoring, and incident response, not just the visible interface.",
+  "whyPeopleStillPay": "People paid for Butter because video products survive because real-time media quality and global reliability are infrastructure businesses, not weekend interface projects. The recurring cost bought TURN capacity, codecs, browsers, packet loss, scaling, recording, consent, abuse, monitoring, and incident response, not just the visible interface.",
   "priorArt": [
     {
       "name": "Jitsi Meet",

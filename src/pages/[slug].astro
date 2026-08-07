@@ -26,14 +26,19 @@ const hasAltPage = alternatives.length >= ALTERNATIVES_PAGE_MIN;
 
 const verdictWord = { yes: 'YES', kinda: 'KINDA', no: 'NOT REALLY' }[app.verdict];
 const baseName = app.name.split(' / ')[0];
+// Optional death notice: a sentence fragment that composes as "{name} {discontinued}."
+// Set on apps whose product is gone; the page stays up as the post-mortem.
+const discontinued = typeof app.discontinued === 'string' ? app.discontinued : null;
 const priceLine =
   app.priceMonthly != null ? `costs $${app.priceMonthly}/mo ($${saving}/yr)` : 'has usage-based pricing';
 const brandTitle = `Can I vibecode ${app.name}? ${verdictWord} · replace it with one AI prompt`;
-const brandDescription = `${verdictWord}: ${app.name} ${priceLine}. ${
-  app.verdict === 'no'
-    ? "Here's why it survives vibecoding."
-    : `Here's the exact prompt to build your own and what you lose.`
-}`;
+const brandDescription = discontinued
+  ? `${app.name} ${discontinued}. ${verdictWord} on vibecoding a replacement: what an AI agent can rebuild today, and the exact prompt.`
+  : `${verdictWord}: ${app.name} ${priceLine}. ${
+      app.verdict === 'no'
+        ? "Here's why it survives vibecoding."
+        : `Here's the exact prompt to build your own and what you lose.`
+    }`;
 
 // Pages with structured free-tier data lead with pricing in the <title>/meta;
 // share cards keep the brand title via socialTitle. The H1 never changes.
@@ -68,8 +73,11 @@ const faq = [
   },
   {
     q: `How much does ${app.name} cost?`,
-    a:
-      app.priceMonthly != null
+    a: discontinued
+      ? `Nothing anymore: ${app.name} ${discontinued}.${
+          app.priceMonthly != null ? ` Before that it ran about $${app.priceMonthly}/month.` : ''
+        }`
+      : app.priceMonthly != null
         ? `${app.name} costs about $${app.priceMonthly}/month (${app.pricing?.plan || 'paid plan'}${
             app.pricing?.checkedOn ? `, checked ${app.pricing.checkedOn}` : ''
           }), which is $${saving} per year. ${
@@ -81,7 +89,11 @@ const faq = [
   },
   {
     q: `What do I lose by replacing ${app.name}?`,
-    a: `Honestly: ${app.whatYouLose.join('; ')}. If any of those are load-bearing for you, keep paying.`,
+    a: `Honestly: ${app.whatYouLose.join('; ')}. ${
+      discontinued
+        ? "Since the product is gone, these gaps are now everyone's problem."
+        : 'If any of those are load-bearing for you, keep paying.'
+    }`,
   },
   {
     q: `Is there an open-source alternative to ${app.name}?`,
@@ -138,9 +150,17 @@ const tweet = encodeURIComponent(
       <VerdictBadge verdict={app.verdict} big />
     </div>
 
+    {
+      discontinued && (
+        <p class="discontinued-note">
+          🪦 {baseName} {discontinued}. The verdict below is now a post-mortem.
+        </p>
+      )
+    }
+
     <div class="stats">
-      <span>price <b>{app.priceMonthly != null ? `$${app.priceMonthly}/mo` : 'varies'}</b></span>
-      {saving != null && <span>you'd save <span class="save">${saving.toLocaleString('en-US')}/yr</span></span>}
+      <span>price <b>{app.priceMonthly != null ? `${discontinued ? 'was ' : ''}$${app.priceMonthly}/mo` : discontinued ? 'gone' : 'varies'}</b></span>
+      {saving != null && !discontinued && <span>you'd save <span class="save">${saving.toLocaleString('en-US')}/yr</span></span>}
       {app.diyTimeEstimate && <span>build time <b>{app.diyTimeEstimate}</b></span>}
       <span>category <b>{cat.emoji} {cat.label.toLowerCase()}</b></span>
       <span>replaced by <b data-votes={app.slug}>{votes}</b> people</span>
@@ -396,6 +416,16 @@ const tweet = encodeURIComponent(
     font-family: var(--font-mono);
     font-size: 12px;
     color: var(--muted);
+  }
+
+  .discontinued-note {
+    margin-top: 18px;
+    padding: 10px 14px;
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--primary);
+    font-size: 14px;
+    line-height: 1.6;
+    max-width: 76ch;
   }
 
   .bvct-backlink a {

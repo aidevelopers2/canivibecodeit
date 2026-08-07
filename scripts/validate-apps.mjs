@@ -96,6 +96,13 @@ for (const file of files) {
     }
   }
 
+  // Optional death notice: a sentence fragment that reads as "{name} {discontinued}."
+  // ("shut down on September 24, 2025"). The page renders a post-mortem banner
+  // and stops claiming a live price when it is present.
+  if (app.discontinued !== undefined && app.discontinued !== null && !isStr(app.discontinued)) {
+    bad('discontinued must be a non-empty string or null');
+  }
+
   if (Array.isArray(app.priorArt)) {
     app.priorArt.forEach((p, i) => {
       if (!p || typeof p !== 'object' || !isStr(p.name) || !isStr(p.url)) {

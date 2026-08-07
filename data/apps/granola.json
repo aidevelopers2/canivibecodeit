@@ -41,11 +41,6 @@
   "whyPeopleStillPay": "They pay because it is always on, nicely integrated with calendar/work calls, and trustworthy enough not to lose meeting history.",
   "priorArt": [
     {
-      "name": "quill",
-      "url": "https://github.com/dremnik/quill",
-      "desc": "open-source Granola alternative"
-    },
-    {
       "name": "whisper.cpp",
       "url": "https://github.com/ggml-org/whisper.cpp",
       "desc": "local transcription engine"

@@ -7,6 +7,7 @@
   "subcategory": "AI project management",
   "tagline": "Project workspace with tasks, documents, automation, and AI coordination",
   "priceMonthly": null,
+  "discontinued": "shut down on September 24, 2025",
   "pricing": {
     "plan": "Typical paid plan",
     "kind": "unknown",
@@ -42,7 +43,7 @@
     "execution-polish"
   ],
   "moatNotes": "collaboration/integrations/polish",
-  "whyPeopleStillPay": "Height: Teams pay because shared state, notifications, permissions, and migrations are harder than the visible board or list.",
+  "whyPeopleStillPay": "Height: Teams paid because shared state, notifications, permissions, and migrations are harder than the visible board or list.",
   "ongoingBurden": "Maintain notifications, recurring-date logic, importers, permissions, backups, and collaboration conflict handling.",
   "priorArt": [
     {
