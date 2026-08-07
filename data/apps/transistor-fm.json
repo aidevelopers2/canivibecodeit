@@ -53,7 +53,38 @@
       "desc": "Long-running open-source multitrack audio editor and useful implementation prior art."
     }
   ],
-  "alternatives": [],
+  "alternatives": [
+    {
+      "name": "Castopod",
+      "url": "https://castopod.org/",
+      "type": "open-source",
+      "repo": "https://github.com/ad-aures/castopod",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Podcast hosting on your server, complete with feeds, analytics and comments; you inherit the server.",
+      "stars": 863,
+      "lastCommit": "2026-06",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Podlove Podcast Publisher",
+      "url": "https://podlove.org/podlove-podcast-publisher/",
+      "type": "open-source",
+      "repo": "https://github.com/podlove/podlove-publisher",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A serious WordPress podcast publisher, provided WordPress is already a life choice.",
+      "stars": 306,
+      "lastCommit": "2026-07",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
   "rejectedAlternatives": [],
   "relatedSlugs": [
     "riverside",

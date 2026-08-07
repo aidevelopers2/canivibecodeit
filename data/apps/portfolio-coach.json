@@ -54,7 +54,23 @@
     }
   ],
   "alternatives": [],
-  "rejectedAlternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Ghostfolio",
+      "url": "https://ghostfol.io/",
+      "desc": "A strong private portfolio dashboard, but it has neither UK planning tools nor AI reviews."
+    },
+    {
+      "name": "Portfolio Performance",
+      "url": "https://www.portfolio-performance.info/en/",
+      "desc": "Live valuations and deep analysis are excellent; UK planning and AI reviews are absent."
+    },
+    {
+      "name": "Wealthfolio",
+      "url": "https://wealthfolio.app/",
+      "desc": "Portfolio tracking and optional AI are here; UK planning tools are not."
+    }
+  ],
   "relatedSlugs": [
     "monarch-money",
     "copilot-money",

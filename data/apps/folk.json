@@ -114,9 +114,61 @@
       "lastCommit": "2026-08",
       "selfHost": "docker",
       "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Zoho CRM Free",
+      "url": "https://www.zoho.com/crm/free-crm.html",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "Relationship lists, notes, tasks, and modest email for three users; less charming, more complete.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-07"
+    },
+    {
+      "name": "Odoo CRM One App Free",
+      "url": "https://www.odoo.com/app/crm",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "A hosted relationship database with activities and email; subtlety was not in the brief.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-07"
+    },
+    {
+      "name": "Freshsales Free",
+      "url": "https://www.freshworks.com/crm/sales/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "Contacts, notes, activities, and built-in email for three users; enrichment is thin.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-07"
     }
   ],
-  "rejectedAlternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Monica",
+      "url": "https://www.monicahq.com/",
+      "desc": "Excellent personal relationship memory; it does not run the lightweight outreach this row requires."
+    }
+  ],
   "relatedSlugs": [
     "pipedrive",
     "close-crm",

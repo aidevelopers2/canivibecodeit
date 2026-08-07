@@ -53,8 +53,40 @@
       "desc": "Active open-source project and issue tracking platform."
     }
   ],
-  "alternatives": [],
-  "rejectedAlternatives": [],
+  "alternatives": [
+    {
+      "name": "Leantime",
+      "url": "https://leantime.io",
+      "type": "open-source",
+      "repo": "https://github.com/Leantime/leantime",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Tasks, documents, goals, dashboards, and planning in one community stack; automation is comparatively thin",
+      "stars": 10000,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Huly",
+      "url": "https://huly.io",
+      "desc": "Tasks and documents are real, but goals and dashboards are missing and the hosted service is dead"
+    },
+    {
+      "name": "Plane",
+      "url": "https://plane.so",
+      "desc": "Tasks and pages are strong, but goals and general workflow automation do not clear the bar"
+    },
+    {
+      "name": "YouTrack",
+      "url": "https://www.jetbrains.com/youtrack/",
+      "desc": "Tasks, articles, dashboards, and automation are free for ten users; there is no real goals layer"
+    }
+  ],
   "relatedSlugs": [
     "asana",
     "monday-com",

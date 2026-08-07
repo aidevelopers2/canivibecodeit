@@ -59,7 +59,23 @@
     }
   ],
   "alternatives": [],
-  "rejectedAlternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Dolibarr",
+      "url": "https://www.dolibarr.org/",
+      "desc": "It covers bookkeeping and invoices, but payroll and receipt management are absent."
+    },
+    {
+      "name": "ERPNext",
+      "url": "https://frappe.io/erpnext",
+      "desc": "Books, invoices and payroll exist; card payments and receipt capture are not a comparable finished workflow."
+    },
+    {
+      "name": "Wave Starter",
+      "url": "https://www.waveapps.com/",
+      "desc": "The free tier still makes receipt OCR and payroll paid, so it cannot replace the job described."
+    }
+  ],
   "relatedSlugs": [
     "bonsai",
     "honeybook",

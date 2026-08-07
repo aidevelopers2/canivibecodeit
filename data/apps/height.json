@@ -57,8 +57,41 @@
       "desc": "Open-source issue and project tracker."
     }
   ],
-  "alternatives": [],
-  "rejectedAlternatives": [],
+  "alternatives": [
+    {
+      "name": "YouTrack",
+      "url": "https://www.jetbrains.com/youtrack/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "Tasks, articles, no-code workflows, dashboards, and weekly AI credits for ten people",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Huly",
+      "url": "https://huly.io",
+      "desc": "Tasks and docs are real, but the AI service is not prepackaged and hosted Huly is dead"
+    },
+    {
+      "name": "Leantime",
+      "url": "https://leantime.io",
+      "desc": "Projects and goals are good; AI and advanced automation live outside the basic community job"
+    },
+    {
+      "name": "Plane",
+      "url": "https://plane.so",
+      "desc": "A strong issue tracker with pages, but no free AI coordination layer"
+    }
+  ],
   "relatedSlugs": [
     "fibery",
     "slite",

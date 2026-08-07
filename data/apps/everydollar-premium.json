@@ -51,8 +51,53 @@
       "desc": "Active local-first open-source personal finance application."
     }
   ],
-  "alternatives": [],
-  "rejectedAlternatives": [],
+  "alternatives": [
+    {
+      "name": "Actual Budget",
+      "url": "https://actualbudget.org/",
+      "type": "open-source",
+      "repo": "https://github.com/actualbudget/actual",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "Envelope budgeting, CSV imports and rules on your own disk; bank sync is optional, not the landlord.",
+      "stars": 28000,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "OpenBudgeteer",
+      "url": "https://github.com/TheAxelander/OpenBudgeteer",
+      "type": "open-source",
+      "repo": "https://github.com/TheAxelander/OpenBudgeteer",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "YNAB-style buckets with transaction imports in a Docker box; bank sync and coaching did not make the container.",
+      "stars": 966,
+      "lastCommit": "2025-12",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Aspire Budgeting",
+      "url": "https://aspirebudget.com/",
+      "desc": "The spreadsheet is free, but CSV import and auto-categorization live in the $5/month Turbo add-on."
+    },
+    {
+      "name": "Cashew",
+      "url": "https://cashewapp.web.app/",
+      "desc": "The store app kept moving while meaningful public source work stopped in 2024; a README edit in March 2026 is not maintenance."
+    }
+  ],
   "relatedSlugs": [
     "rocket-money",
     "quicken-simplifi",

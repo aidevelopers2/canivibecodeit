@@ -51,8 +51,47 @@
       "desc": "Open-source self-hosted trail database and route explorer using open map data."
     }
   ],
-  "alternatives": [],
-  "rejectedAlternatives": [],
+  "alternatives": [
+    {
+      "name": "TREK",
+      "url": "https://github.com/liketrek/TREK",
+      "type": "open-source",
+      "repo": "https://github.com/liketrek/TREK",
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "A collaborative road-trip map with stops, notes and budgets; Docker is the toll booth.",
+      "stars": 11600,
+      "lastCommit": "2026-07",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "AdventureLog",
+      "url": "https://adventurelog.app/",
+      "type": "open-source",
+      "repo": "https://github.com/seanmorley15/AdventureLog",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A shared road-trip map with stops and notes, minus the affiliate-link tourism.",
+      "stars": 3500,
+      "lastCommit": "2026-05",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Furkot",
+      "url": "https://trips.furkot.com/",
+      "desc": "It looks free until enough map use; then editing locks until a $14-a-year Pass."
+    }
+  ],
   "relatedSlugs": [
     "tripit-pro",
     "wanderlog-pro",

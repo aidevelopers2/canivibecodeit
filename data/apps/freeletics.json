@@ -51,8 +51,48 @@
       "desc": "Active open-source fitness and workout management application."
     }
   ],
-  "alternatives": [],
-  "rejectedAlternatives": [],
+  "alternatives": [
+    {
+      "name": "Workout.cool",
+      "url": "https://workout.cool/",
+      "type": "open-source",
+      "repo": "https://github.com/Snouzy/workout-cool",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Pick equipment and muscles; it makes a routine without pretending to know your soul.",
+      "stars": 8300,
+      "lastCommit": "2026-07",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "wger",
+      "url": "https://wger.de/",
+      "type": "open-source",
+      "repo": "https://github.com/wger-project/wger",
+      "platforms": [
+        "web",
+        "linux",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "A fixed exercise library and routine builder without the drill-sergeant subscription.",
+      "stars": 6600,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "workout.lol",
+      "url": "https://workout.lol/",
+      "desc": "The famous equipment-aware generator was sold and abandoned; last commit 2024-09."
+    }
+  ],
   "relatedSlugs": [
     "strava",
     "myfitnesspal-premium",

@@ -54,7 +54,13 @@
     }
   ],
   "alternatives": [],
-  "rejectedAlternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Audacity",
+      "url": "https://www.audacityteam.org/",
+      "desc": "Edits audio, but does not publish or package the recurring show."
+    }
+  ],
   "relatedSlugs": [
     "riverside",
     "auphonic",

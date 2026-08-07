@@ -56,8 +56,59 @@
       "desc": "Open-source form builder and collection backend."
     }
   ],
-  "alternatives": [],
-  "rejectedAlternatives": [],
+  "alternatives": [
+    {
+      "name": "Typebot",
+      "url": "https://typebot.io",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Conversational landing flows with branching, calculations, payments, and analytics; the licence is fair-source, not open-source",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Tally",
+      "url": "https://tally.so",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Multi-page forms, calculations, conditional logic, and result pages are free; removing the branding is not",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Forminator",
+      "url": "https://wordpress.org/plugins/forminator/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Forms, quizzes, calculators, and payments for free, provided the landing page lives in WordPress",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "HeyForm",
+      "url": "https://heyform.net",
+      "desc": "Polished multi-step forms, but no calculator or formula-driven result engine"
+    }
+  ],
   "relatedSlugs": [
     "involve-me",
     "outgrow",

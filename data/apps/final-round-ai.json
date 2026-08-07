@@ -52,8 +52,53 @@
       "desc": "Active open-source resume builder with structured data and PDF export."
     }
   ],
-  "alternatives": [],
-  "rejectedAlternatives": [],
+  "alternatives": [
+    {
+      "name": "Mocky",
+      "url": "https://mocky.pro/en",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Voice mock interviews built from your resume and job description, with an hourly free-session limit instead of live cheating.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "FreeMockInterview",
+      "url": "https://freemockinterview.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "No-login microphone practice with feedback on structure, pace and content across a broad role library.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "DeepInterview",
+      "url": "https://github.com/ngoanpv/DeepInterview",
+      "desc": "A young 19-star build whose real voice mode still needs LiveKit and model-provider plumbing."
+    },
+    {
+      "name": "Google Interview Warmup",
+      "url": "https://grow.google/certificates/interview-warmup/",
+      "desc": "The once-famous tool has disappeared; its old address now lands on generic interview tips."
+    },
+    {
+      "name": "Yoodli",
+      "url": "https://yoodli.ai/pricing",
+      "desc": "The free plan gives only five lifetime roleplays, which is a sample platter rather than an interview-practice replacement."
+    }
+  ],
   "relatedSlugs": [
     "teal-plus",
     "jobscan",

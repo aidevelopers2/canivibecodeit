@@ -53,8 +53,39 @@
       "desc": "Active open-source personal music server for legally owned libraries."
     }
   ],
-  "alternatives": [],
-  "rejectedAlternatives": [],
+  "alternatives": [
+    {
+      "name": "Ample – Organize Your Samples",
+      "url": "https://apps.apple.com/us/app/ample-organize-your-samples/id1512016255?mt=12",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos"
+      ],
+      "desc": "A local sample librarian that tags key and tempo without charging rent on your own files.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "ADSR Sample Manager",
+      "url": "https://www.adsrsounds.com/product/software/adsr-sample-manager/",
+      "desc": "Old tutorials still call it free; the current store lists it at $9.99."
+    },
+    {
+      "name": "Sononym",
+      "url": "https://www.sononym.net/",
+      "desc": "A 30-day trial followed by $99 is not a free replacement."
+    },
+    {
+      "name": "Waves COSMOS",
+      "url": "https://www.waves.com/plugins/cosmos-sample-finder",
+      "desc": "The ‘free’ sample manager is now $29.99 or bundled with paid CR8."
+    }
+  ],
   "relatedSlugs": [
     "spotify-premium",
     "apple-music",

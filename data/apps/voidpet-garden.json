@@ -54,7 +54,23 @@
       "desc": "Private on-device Android journal with mood coordinates and local CBT-oriented reframing."
     }
   ],
-  "alternatives": [],
+  "alternatives": [
+    {
+      "name": "Finch",
+      "url": "https://finchcare.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "ios",
+        "android"
+      ],
+      "desc": "A mood-and-goals journal where one bird grows instead of a menagerie of feelings; the core loop is free.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
   "rejectedAlternatives": [],
   "relatedSlugs": [
     "headspace",

@@ -52,7 +52,23 @@
     }
   ],
   "alternatives": [],
-  "rejectedAlternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "AFFiNE",
+      "url": "https://affine.pro",
+      "desc": "Collaborative outlines, documents, and canvases are there; the agent layer is not"
+    },
+    {
+      "name": "AppFlowy",
+      "url": "https://www.appflowy.io",
+      "desc": "The workspace is usable, but free self-hosted collaboration is capped at one member plus guests"
+    },
+    {
+      "name": "Huly",
+      "url": "https://huly.io",
+      "desc": "Tasks and docs are there; the agent layer is not, and hosted Huly is shutting down"
+    }
+  ],
   "relatedSlugs": [
     "ticktick",
     "things-3",

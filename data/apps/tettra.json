@@ -57,7 +57,23 @@
     }
   ],
   "alternatives": [],
-  "rejectedAlternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "AppFlowy",
+      "url": "https://www.appflowy.io",
+      "desc": "It stores team knowledge, but the free self-hosted collaboration tier is one seat plus guests"
+    },
+    {
+      "name": "Docmost",
+      "url": "https://docmost.com",
+      "desc": "A strong wiki with search, but no verification or chat-native answer workflow"
+    },
+    {
+      "name": "Outline",
+      "url": "https://www.getoutline.com",
+      "desc": "A polished wiki, but self-hosting is paid and it lacks Tettra's chat-native knowledge workflow"
+    }
+  ],
   "relatedSlugs": [
     "guru",
     "confluence",

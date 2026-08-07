@@ -56,8 +56,35 @@
       "desc": "Open-source form builder and collection backend."
     }
   ],
-  "alternatives": [],
-  "rejectedAlternatives": [],
+  "alternatives": [
+    {
+      "name": "LimeSurvey",
+      "url": "https://www.limesurvey.org",
+      "type": "open-source",
+      "repo": "https://github.com/LimeSurvey/LimeSurvey",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "The same survey engine, minus the hosting bill and plus the PHP chores",
+      "stars": 3700,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Formbricks",
+      "url": "https://formbricks.com",
+      "desc": "Logic and privacy are free, but quota management is enterprise-licensed"
+    },
+    {
+      "name": "HeyForm",
+      "url": "https://heyform.net",
+      "desc": "Good conversational surveys, but no LimeSurvey-grade quota engine"
+    }
+  ],
   "relatedSlugs": [
     "alchemer",
     "survicate",

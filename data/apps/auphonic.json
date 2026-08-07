@@ -52,7 +52,24 @@
       "desc": "Long-running open-source multitrack audio editor and useful implementation prior art."
     }
   ],
-  "alternatives": [],
+  "alternatives": [
+    {
+      "name": "Audacity",
+      "url": "https://www.audacityteam.org/",
+      "type": "open-source",
+      "repo": "https://github.com/audacity/audacity",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "Noise reduction, loudness normalization and batch macros, with no cloud queue to blame.",
+      "stars": 17500,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
   "rejectedAlternatives": [],
   "relatedSlugs": [
     "riverside",

@@ -50,7 +50,55 @@
       "desc": "Active open-source fitness and workout management application."
     }
   ],
-  "alternatives": [],
+  "alternatives": [
+    {
+      "name": "LiftLog",
+      "url": "https://liftlog.online/",
+      "type": "open-source",
+      "repo": "https://github.com/LiamMorrow/LiftLog",
+      "platforms": [
+        "ios",
+        "android"
+      ],
+      "desc": "Sets, timers, plans and charts live on the phone instead of behind a lifetime unlock.",
+      "stars": 523,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "FitNotes",
+      "url": "https://www.fitnotesapp.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "android"
+      ],
+      "desc": "A no-ad Android lifting log that has been doing the basic job for years.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "wger",
+      "url": "https://wger.de/",
+      "type": "open-source",
+      "repo": "https://github.com/wger-project/wger",
+      "platforms": [
+        "web",
+        "linux",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "Workouts, sets, timers and charts on your own server; setup day counts as cardio.",
+      "stars": 6600,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
   "rejectedAlternatives": [],
   "relatedSlugs": [
     "strava",

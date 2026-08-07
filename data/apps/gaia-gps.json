@@ -52,7 +52,37 @@
       "desc": "Open-source self-hosted trail database and route explorer using open map data."
     }
   ],
-  "alternatives": [],
+  "alternatives": [
+    {
+      "name": "OsmAnd~",
+      "url": "https://f-droid.org/packages/net.osmand.plus/",
+      "type": "open-source",
+      "repo": "https://github.com/osmandapp/OsmAnd",
+      "platforms": [
+        "android"
+      ],
+      "desc": "The F-Droid build gives you offline topo maps and GPX without the subscription gate.",
+      "stars": 5900,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Organic Maps",
+      "url": "https://organicmaps.app/",
+      "type": "open-source",
+      "repo": "https://github.com/organicmaps/organicmaps",
+      "platforms": [
+        "ios",
+        "android"
+      ],
+      "desc": "Offline open maps and GPX files on the phone; detailed expedition notes remain basic.",
+      "stars": 14989,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
   "rejectedAlternatives": [],
   "relatedSlugs": [
     "tripit-pro",

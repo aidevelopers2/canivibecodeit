@@ -59,7 +59,23 @@
     }
   ],
   "alternatives": [],
-  "rejectedAlternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Adminsoft Accounts",
+      "url": "https://www.adminsoftware.biz/",
+      "desc": "The famous free UK answer stopped being free for new releases on 25 July 2026, so the no-cost build is now the frozen one."
+    },
+    {
+      "name": "ERPNext",
+      "url": "https://frappe.io/erpnext",
+      "desc": "Accounting and payroll exist, but UK tax filing and HMRC-ready workflows are not a finished replacement."
+    },
+    {
+      "name": "Pandle Free",
+      "url": "https://www.pandle.com/",
+      "desc": "Free UK bookkeeping and MTD submissions, but payroll is absent, so it does not replace FreeAgent's full job."
+    }
+  ],
   "relatedSlugs": [
     "quicken-simplifi",
     "wave",

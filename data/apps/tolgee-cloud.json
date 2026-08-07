@@ -53,7 +53,41 @@
       "desc": "Active open-source localization platform with translation memory and in-context tooling."
     }
   ],
-  "alternatives": [],
+  "alternatives": [
+    {
+      "name": "Tolgee",
+      "url": "https://tolgee.io/",
+      "type": "open-source",
+      "repo": "https://github.com/tolgee/tolgee-platform",
+      "platforms": [
+        "web",
+        "self-hosted",
+        "browser-extension",
+        "cli"
+      ],
+      "desc": "The same core product without the cloud bill; you become the person who notices failed backups.",
+      "stars": 4100,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Weblate",
+      "url": "https://weblate.org/",
+      "type": "open-source",
+      "repo": "https://github.com/WeblateOrg/weblate",
+      "platforms": [
+        "web",
+        "self-hosted",
+        "cli"
+      ],
+      "desc": "A mature alternative localization workspace with Git sync, memory and review, traded for your own operations.",
+      "stars": 6000,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
   "rejectedAlternatives": [],
   "relatedSlugs": [
     "lokalise",

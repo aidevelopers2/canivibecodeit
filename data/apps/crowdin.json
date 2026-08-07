@@ -53,7 +53,72 @@
       "desc": "Active open-source localization platform with translation memory and in-context tooling."
     }
   ],
-  "alternatives": [],
+  "alternatives": [
+    {
+      "name": "Tolgee",
+      "url": "https://tolgee.io/",
+      "type": "open-source",
+      "repo": "https://github.com/tolgee/tolgee-platform",
+      "platforms": [
+        "web",
+        "self-hosted",
+        "browser-extension",
+        "cli"
+      ],
+      "desc": "In-context translation, screenshots, memory, terminology, review and CI integrations in a much smaller bill.",
+      "stars": 4100,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Weblate",
+      "url": "https://weblate.org/",
+      "type": "open-source",
+      "repo": "https://github.com/WeblateOrg/weblate",
+      "platforms": [
+        "web",
+        "self-hosted",
+        "cli"
+      ],
+      "desc": "Serious Git-based localization with memory, glossaries, screenshots, suggestions and review; the interface means business.",
+      "stars": 6000,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Mozilla Pontoon",
+      "url": "https://pontoon.mozilla.org/",
+      "type": "open-source",
+      "repo": "https://github.com/mozilla/pontoon",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A mature software-translation system with repository sync, suggestions and review, provided you are willing to operate it properly.",
+      "stars": 1700,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Accent",
+      "url": "https://www.accent.reviews/",
+      "type": "open-source",
+      "repo": "https://github.com/mirego/accent",
+      "platforms": [
+        "web",
+        "self-hosted",
+        "cli"
+      ],
+      "desc": "A lean collaborative string editor with history, rollback and CLI sync, minus Crowdin's integration department.",
+      "stars": 1500,
+      "lastCommit": "2026-06",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
   "rejectedAlternatives": [],
   "relatedSlugs": [
     "lokalise",

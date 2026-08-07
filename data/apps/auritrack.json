@@ -54,8 +54,40 @@
       "status": "alive"
     }
   ],
-  "alternatives": [],
-  "rejectedAlternatives": [],
+  "alternatives": [
+    {
+      "name": "TaxHacker",
+      "url": "https://taxhacker.app/",
+      "type": "open-source",
+      "repo": "https://github.com/vas3k/TaxHacker",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Feed it receipts, invoices or bank statements and let an LLM fill the ledger; it is useful, young and very much your server.",
+      "stars": 6600,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Actual Budget",
+      "url": "https://actualbudget.org/",
+      "desc": "A first-rate ledger, but it does not turn chat messages and statements into bookkeeping."
+    },
+    {
+      "name": "Maybe Finance",
+      "url": "https://github.com/maybe-finance/maybe",
+      "desc": "The famous answer is archived; last push July 2025."
+    },
+    {
+      "name": "Midday",
+      "url": "https://midday.ai/",
+      "desc": "Looks perfect; its README limits the public build to non-commercial use and sends businesses to a paid license."
+    }
+  ],
   "relatedSlugs": [
     "ynab",
     "monarch-money",

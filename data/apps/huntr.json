@@ -52,7 +52,38 @@
       "desc": "Active open-source resume builder with structured data and PDF export."
     }
   ],
-  "alternatives": [],
+  "alternatives": [
+    {
+      "name": "Reactive Resume",
+      "url": "https://rxresu.me/",
+      "type": "open-source",
+      "repo": "https://github.com/AmruthPillai/Reactive-Resume",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A credible job-search workspace: applications, contacts, tasks, files, resumes and cover letters all live together.",
+      "stars": 40000,
+      "lastCommit": "2026-07",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "JobSync",
+      "url": "https://jobsync.ca/",
+      "type": "open-source",
+      "repo": "https://github.com/Gsync/jobsync",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A self-hosted application tracker with tasks, documents and activity history, minus Huntr's polished contact CRM.",
+      "stars": 800,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
   "rejectedAlternatives": [],
   "relatedSlugs": [
     "teal-plus",

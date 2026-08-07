@@ -128,6 +128,52 @@
       "lastCommit": "2026-08",
       "selfHost": "docker",
       "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Zoho CRM Free",
+      "url": "https://www.zoho.com/crm/free-crm.html",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "Contacts, deals, and 150 emails a day for three users; enough for permissioned, low-volume selling.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-07"
+    },
+    {
+      "name": "Freshsales Free",
+      "url": "https://www.freshworks.com/crm/sales/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "A three-user CRM with built-in email and one pipeline; sequences live in paid land.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-07"
+    },
+    {
+      "name": "Odoo CRM One App Free",
+      "url": "https://www.odoo.com/app/crm",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "A hosted pipeline with email activities for unlimited users; mass-mail cleverness is elsewhere.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-07"
     }
   ],
   "rejectedAlternatives": [],

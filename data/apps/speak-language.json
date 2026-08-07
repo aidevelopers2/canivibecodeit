@@ -52,7 +52,40 @@
       "desc": "Long-running open-source learning platform with courses, assessments, and progress tracking."
     }
   ],
-  "alternatives": [],
+  "alternatives": [
+    {
+      "name": "FreeLingo",
+      "url": "https://freelingo.app/",
+      "type": "open-source",
+      "repo": "https://github.com/ArtCC/freelingo",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Structured lessons and voice exercises backed by local or supplied models; less magical, more inspectable.",
+      "stars": 62,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Moodle",
+      "url": "https://moodle.org/",
+      "type": "open-source",
+      "repo": "https://github.com/moodle/moodle",
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "Hosts scripted roleplay prompts, recordings and lesson objectives, but the conversational model must come from elsewhere.",
+      "stars": 7300,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
   "rejectedAlternatives": [],
   "relatedSlugs": [
     "duolingo-super",

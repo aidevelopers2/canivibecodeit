@@ -129,9 +129,67 @@
       "lastCommit": "2026-08",
       "selfHost": "ops",
       "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Odoo Helpdesk One App Free",
+      "url": "https://www.odoo.com/app/helpdesk",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "A real hosted ticket desk for unlimited users, as long as Helpdesk is your one free Odoo app.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-07"
+    },
+    {
+      "name": "tawk.to",
+      "url": "https://www.tawk.to/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "ios",
+        "android"
+      ],
+      "desc": "Live chat, tickets, email, and a help centre for zero dollars; the tiny tawk.to badge pays the rent.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-07"
+    },
+    {
+      "name": "LibreDesk",
+      "url": "https://libredesk.io/",
+      "type": "open-source",
+      "repo": "https://github.com/abhinavxd/libredesk",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A modern email-and-live-chat desk in one compact stack, because apparently that was allowed.",
+      "stars": 2682,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-07"
     }
   ],
-  "rejectedAlternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "FreeScout",
+      "url": "https://freescout.net/",
+      "desc": "Email tickets are free; the customer portal and web form are a paid module."
+    },
+    {
+      "name": "Freshdesk Free Program",
+      "url": "https://www.freshworks.com/freshdesk/pricing/",
+      "desc": "The free program expires after six months, so it cannot replace an ongoing desk."
+    }
+  ],
   "relatedSlugs": [
     "intercom",
     "help-scout",

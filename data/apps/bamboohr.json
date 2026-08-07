@@ -52,7 +52,69 @@
       "desc": "Active open-source human-resources and payroll application built on Frappe."
     }
   ],
-  "alternatives": [],
+  "alternatives": [
+    {
+      "name": "Connecteam Small Business Plan",
+      "url": "https://connecteam.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "Directory, documents, leave and onboarding for ten people; employee eleven is the business model.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "OrangeHRM Starter",
+      "url": "https://www.orangehrm.com/orangehrm-starter-open-source-software",
+      "type": "open-source",
+      "repo": "https://github.com/orangehrm/orangehrm",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "The old-school HR suite: records, leave, attendance and approvals, with a real server and no fashion budget.",
+      "stars": 1107,
+      "lastCommit": "2026-06",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Horilla HR",
+      "url": "https://www.horilla.com/",
+      "type": "open-source",
+      "repo": "https://github.com/horilla/horilla-hr",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Hire-to-leave HR in Docker; free forever means you own the updates and backups.",
+      "stars": 1400,
+      "lastCommit": "2026-07",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Frappe HR",
+      "url": "https://frappe.io/hr",
+      "type": "open-source",
+      "repo": "https://github.com/frappe/hrms",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A complete HR suite without the license bill; the server, backups and upgrades are now in your job description.",
+      "stars": 8500,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
   "rejectedAlternatives": [],
   "relatedSlugs": [
     "gusto",

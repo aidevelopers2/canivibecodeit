@@ -53,7 +53,72 @@
       "desc": "Active open-source project and issue tracking platform."
     }
   ],
-  "alternatives": [],
+  "alternatives": [
+    {
+      "name": "ONLYOFFICE Groups",
+      "url": "https://www.onlyoffice.com/workspace",
+      "type": "open-source",
+      "repo": "https://github.com/ONLYOFFICE/CommunityServer",
+      "platforms": [
+        "web",
+        "windows",
+        "linux",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "Projects, discussions, files, calendars, milestones, and time tracking in one enormous self-hosted office",
+      "stars": 3100,
+      "lastCommit": "2026-05",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Huly",
+      "url": "https://huly.io",
+      "type": "open-source",
+      "repo": "https://github.com/hcengineering/platform",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Tasks, docs, chat, calendar, and files; hosted Huly died in July, so this is self-host or nothing",
+      "stars": 25866,
+      "lastCommit": "2026-05",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "OpenProject",
+      "url": "https://www.openproject.org",
+      "type": "open-source",
+      "repo": "https://github.com/opf/openproject",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "To-dos, files, schedules, meetings, forums, and wikis; calm is not included",
+      "stars": 15200,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Leantime",
+      "url": "https://leantime.io",
+      "type": "open-source",
+      "repo": "https://github.com/Leantime/leantime",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Projects, discussions, files, milestones, and status reporting without Basecamp's deliberate simplicity",
+      "stars": 10000,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
   "rejectedAlternatives": [],
   "relatedSlugs": [
     "asana",

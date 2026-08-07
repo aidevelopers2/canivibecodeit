@@ -52,7 +52,52 @@
       "desc": "Active open-source fitness and workout management application."
     }
   ],
-  "alternatives": [],
+  "alternatives": [
+    {
+      "name": "Endurain",
+      "url": "https://endurain.com/",
+      "type": "open-source",
+      "repo": "https://github.com/endurain-project/endurain",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A private Strava-shaped box for GPX, TCX and FIT files; the social network stays deleted.",
+      "stars": 2124,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "FitTrackee",
+      "url": "https://fittrackee.org/",
+      "type": "open-source",
+      "repo": "https://github.com/SamR1/FitTrackee",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Import activities, map them and keep the stats on your own server.",
+      "stars": 1100,
+      "lastCommit": "2026-07",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "RUNALYZE",
+      "url": "https://runalyze.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Upload activities and get serious maps and charts for free; the social feed has been deliberately misplaced.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
   "rejectedAlternatives": [],
   "relatedSlugs": [
     "myfitnesspal-premium",

@@ -52,8 +52,64 @@
       "status": "alive"
     }
   ],
-  "alternatives": [],
-  "rejectedAlternatives": [],
+  "alternatives": [
+    {
+      "name": "Actual Budget",
+      "url": "https://actualbudget.org/",
+      "type": "open-source",
+      "repo": "https://github.com/actualbudget/actual",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "Envelope budgeting, imports and rules on your own disk; bank sync is optional, not the landlord.",
+      "stars": 28000,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "OpenBudgeteer",
+      "url": "https://github.com/TheAxelander/OpenBudgeteer",
+      "type": "open-source",
+      "repo": "https://github.com/TheAxelander/OpenBudgeteer",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "YNAB-style buckets in a Docker box; bank sync and habit coaching did not make the container.",
+      "stars": 966,
+      "lastCommit": "2025-12",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Aspire Budgeting",
+      "url": "https://aspirebudget.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "A polished zero-based budget living in Google Sheets; CSV imports and auto-categorization are the paid shortcut.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Cashew",
+      "url": "https://cashewapp.web.app/",
+      "desc": "The store app kept moving while meaningful public source work stopped in 2024; a README edit in March 2026 is not maintenance."
+    }
+  ],
   "relatedSlugs": [
     "monarch-money",
     "copilot-money",

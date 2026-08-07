@@ -50,8 +50,33 @@
       "desc": "Mature open-source task and project manager with lists, kanban, and recurring work."
     }
   ],
-  "alternatives": [],
-  "rejectedAlternatives": [],
+  "alternatives": [
+    {
+      "name": "Lunatask",
+      "url": "https://lunatask.app",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android"
+      ],
+      "desc": "Tasks, seven habits, a daily calendar, reminders, recurrence, and Pomodoro; external calendar sync is paid",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Super Productivity",
+      "url": "https://super-productivity.com",
+      "desc": "Tasks, recurrence, timeboxing, and Pomodoro are excellent; there is no actual habit tracker"
+    }
+  ],
   "relatedSlugs": [
     "things-3",
     "routine",

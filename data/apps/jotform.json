@@ -53,7 +53,23 @@
     }
   ],
   "alternatives": [],
-  "rejectedAlternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Budibase",
+      "url": "https://budibase.com",
+      "desc": "Apps, tables, approvals, and workflows are there; payments are not, and PDF export is paid"
+    },
+    {
+      "name": "Forminator",
+      "url": "https://wordpress.org/plugins/forminator/",
+      "desc": "Forms and payments are strong; approvals, apps, and database tables are not part of the product"
+    },
+    {
+      "name": "OhMyForm",
+      "url": "https://github.com/ohmyform/ohmyform",
+      "desc": "Everyone still recommends it; the repo was archived in 2024 and the last real code is roughly five years old"
+    }
+  ],
   "relatedSlugs": [
     "softr",
     "glide",

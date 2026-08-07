@@ -130,6 +130,35 @@
       "lastCommit": "2026-08",
       "selfHost": "docker",
       "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Monica",
+      "url": "https://www.monicahq.com/",
+      "type": "open-source",
+      "repo": "https://github.com/monicahq/monica",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A self-hosted relationship memory for people, notes, reminders, and follow-ups; LinkedIn stays manual.",
+      "stars": 24976,
+      "lastCommit": "2026-04",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-07"
+    },
+    {
+      "name": "Odoo CRM One App Free",
+      "url": "https://www.odoo.com/app/crm",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "A hosted contact-and-follow-up workflow for unlimited users; no LinkedIn robot in sight.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-07"
     }
   ],
   "rejectedAlternatives": [],

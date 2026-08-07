@@ -53,7 +53,18 @@
     }
   ],
   "alternatives": [],
-  "rejectedAlternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Audacity",
+      "url": "https://www.audacityteam.org/",
+      "desc": "Noise tools are not transcript-aligned filler and mouth-sound editing."
+    },
+    {
+      "name": "Rescript",
+      "url": "https://app.getrescript.com/",
+      "desc": "Slick and active, but the source is noncommercial; a monetized podcast needs permission."
+    }
+  ],
   "relatedSlugs": [
     "riverside",
     "alitu",

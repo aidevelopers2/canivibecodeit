@@ -50,7 +50,78 @@
       "desc": "Mature open-source task and project manager with lists, kanban, and recurring work."
     }
   ],
-  "alternatives": [],
+  "alternatives": [
+    {
+      "name": "Apple Reminders",
+      "url": "https://apps.apple.com/us/app/reminders/id1108187841",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos",
+        "ios"
+      ],
+      "desc": "Things minus the polish tax, provided every device in sight has an Apple logo",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Microsoft To Do",
+      "url": "https://www.microsoft.com/en-us/microsoft-365/microsoft-to-do-list-app",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "ios",
+        "android"
+      ],
+      "desc": "A polished free task manager, paid for with a Microsoft account rather than money",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Super Productivity",
+      "url": "https://super-productivity.com",
+      "type": "open-source",
+      "repo": "https://github.com/super-productivity/super-productivity",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android"
+      ],
+      "desc": "A local task manager with timeboxing, Pomodoro, and no account begging to be created",
+      "stars": 21156,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Vikunja",
+      "url": "https://vikunja.io",
+      "type": "open-source",
+      "repo": "https://github.com/go-vikunja/vikunja",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "A capable Todoist replacement once you accept becoming its hosting department",
+      "stars": 5000,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
   "rejectedAlternatives": [],
   "relatedSlugs": [
     "ticktick",

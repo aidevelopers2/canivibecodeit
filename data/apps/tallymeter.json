@@ -54,8 +54,50 @@
       "status": "alive"
     }
   ],
-  "alternatives": [],
-  "rejectedAlternatives": [],
+  "alternatives": [
+    {
+      "name": "Kimai",
+      "url": "https://www.kimai.org/",
+      "type": "open-source",
+      "repo": "https://github.com/kimai/kimai",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Time, expenses, numbered invoices and a JSON API; the MCP server is the missing party trick.",
+      "stars": 4900,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Invoice Ninja self-hosted",
+      "url": "https://invoiceninja.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "Time entries become numbered invoices and the API is usable; agents do not get a ready-made MCP server.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "solidtime",
+      "url": "https://www.solidtime.io/",
+      "desc": "A polished timer with an API, but it stops before invoices."
+    }
+  ],
   "relatedSlugs": [
     "clockify",
     "freshbooks",

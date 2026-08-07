@@ -54,7 +54,13 @@
     }
   ],
   "alternatives": [],
-  "rejectedAlternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Navidrome",
+      "url": "https://www.navidrome.org/",
+      "desc": "A good private jukebox, but it has no SoundCloud-style track comments."
+    }
+  ],
   "relatedSlugs": [
     "spotify-premium",
     "apple-music",

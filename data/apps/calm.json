@@ -53,7 +53,13 @@
     }
   ],
   "alternatives": [],
-  "rejectedAlternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Medito",
+      "url": "https://meditofoundation.org/medito-app",
+      "desc": "Everything is genuinely free, but it plays Medito’s library rather than organizing your audio."
+    }
+  ],
   "relatedSlugs": [
     "strava",
     "myfitnesspal-premium",

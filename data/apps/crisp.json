@@ -118,9 +118,65 @@
       "lastCommit": null,
       "selfHost": "hosted",
       "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "LibreDesk",
+      "url": "https://libredesk.io/",
+      "type": "open-source",
+      "repo": "https://github.com/abhinavxd/libredesk",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A modern email-and-live-chat desk in one compact stack, because apparently that was allowed.",
+      "stars": 2682,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-07"
+    },
+    {
+      "name": "Odoo Helpdesk One App Free",
+      "url": "https://www.odoo.com/app/helpdesk",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "A real hosted ticket desk for unlimited users, as long as Helpdesk is your one free Odoo app.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-07"
+    },
+    {
+      "name": "HubSpot Free Help Desk",
+      "url": "https://www.hubspot.com/products/service/help-desk",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "A hosted shared inbox, live chat, and ticket queue for two users; the knowledge base lives upstairs.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-07"
     }
   ],
-  "rejectedAlternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Chaskiq",
+      "url": "https://chaskiq.io/",
+      "desc": "The homepage still smiles; the repo carries an open abandonment report and years of unresolved production-install breakage."
+    },
+    {
+      "name": "Papercups",
+      "url": "https://github.com/papercups-io/papercups",
+      "desc": "Everyone still recommends it; the main repo has not moved since February 2024."
+    }
+  ],
   "relatedSlugs": [
     "intercom",
     "zendesk",

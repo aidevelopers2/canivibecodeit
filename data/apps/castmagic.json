@@ -53,7 +53,13 @@
     }
   ],
   "alternatives": [],
-  "rejectedAlternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Speakr",
+      "url": "https://murtaza-nasir.github.io/speakr/",
+      "desc": "It handles transcripts and text assets, but not the audio or video clips in this job."
+    }
+  ],
   "relatedSlugs": [
     "riverside",
     "alitu",

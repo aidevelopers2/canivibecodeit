@@ -53,8 +53,141 @@
       "status": "alive"
     }
   ],
-  "alternatives": [],
-  "rejectedAlternatives": [],
+  "alternatives": [
+    {
+      "name": "ERPNext",
+      "url": "https://frappe.io/erpnext",
+      "type": "open-source",
+      "repo": "https://github.com/frappe/erpnext",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A real accounting ERP with invoices, expenses, reconciliation, inventory and payroll; setup is a small IT department in miniature.",
+      "stars": 37700,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Manager Desktop",
+      "url": "https://www.manager.io/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "A complete desktop ledger with invoices, reconciliation, expenses and inventory; teamwork stops at the file.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Bigcapital",
+      "url": "https://bigcapital.app/",
+      "type": "open-source",
+      "repo": "https://github.com/bigcapitalhq/bigcapital",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Modern double-entry books, bills, expenses and inventory in Docker; bank feeds are still your problem to arrange.",
+      "stars": 3800,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "LedgerSMB",
+      "url": "https://ledgersmb.org/",
+      "type": "open-source",
+      "repo": "https://github.com/ledgersmb/LedgerSMB",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Serious double-entry accounting with quotes, stock, projects and reports; the interface does not audition for lifestyle ads.",
+      "stars": 554,
+      "lastCommit": "2026-07",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Frappe Books",
+      "url": "https://frappe.io/books",
+      "type": "open-source",
+      "repo": "https://github.com/frappe/books",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "Local books with invoices, bills, payments and a real ledger; collaboration ends where the SQLite file begins.",
+      "stars": 4900,
+      "lastCommit": "2026-03",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Odoo Accounting — One App Free",
+      "url": "https://www.odoo.com/app/accounting",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "A full hosted accounting app for zero dollars; install one unrelated Odoo app and the free ride ends.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Dolibarr",
+      "url": "https://www.dolibarr.org/",
+      "type": "open-source",
+      "repo": "https://github.com/Dolibarr/dolibarr",
+      "platforms": [
+        "web",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "Invoices, banking, stock and double-entry books in one practical suite; payroll is explicitly not invited.",
+      "stars": 7500,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "GnuCash",
+      "url": "https://www.gnucash.org/",
+      "type": "open-source",
+      "repo": "https://github.com/gnucash/gnucash",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "Industrial-strength double entry, invoicing and reports on a desktop; friendly is not one of the accounting standards.",
+      "stars": 4300,
+      "lastCommit": "2026-06",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Akaunting",
+      "url": "https://akaunting.com/",
+      "desc": "The free base is single-entry unless you buy the Double-Entry app, and the repo is BSL rather than open source."
+    }
+  ],
   "relatedSlugs": [
     "xero",
     "freshbooks",

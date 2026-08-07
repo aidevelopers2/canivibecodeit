@@ -97,6 +97,52 @@
       "lastCommit": "2026-08",
       "selfHost": "docker",
       "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Zoho CRM Free",
+      "url": "https://www.zoho.com/crm/free-crm.html",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "A full little CRM for three users and 5,000 records; the wider Zoho maze is optional.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-07"
+    },
+    {
+      "name": "Odoo CRM One App Free",
+      "url": "https://www.odoo.com/app/crm",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "A full hosted pipeline for unlimited users, provided CRM is the only Odoo app you marry.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-07"
+    },
+    {
+      "name": "HubSpot Free CRM",
+      "url": "https://www.hubspot.com/products/crm",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "A real hosted CRM for two users and 1,000 records; the upgrade banners are part of the furniture.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-07"
     }
   ],
   "rejectedAlternatives": [

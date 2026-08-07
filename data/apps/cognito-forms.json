@@ -57,7 +57,18 @@
     }
   ],
   "alternatives": [],
-  "rejectedAlternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Budibase",
+      "url": "https://budibase.com",
+      "desc": "Forms and approvals are free, but PDF export is paid and there is no native payment flow"
+    },
+    {
+      "name": "Forminator",
+      "url": "https://wordpress.org/plugins/forminator/",
+      "desc": "Payments and calculations are free; PDF generation is Pro and it has no approval workflow"
+    }
+  ],
   "relatedSlugs": [
     "formsite",
     "feathery",

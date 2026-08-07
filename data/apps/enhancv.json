@@ -52,7 +52,38 @@
       "desc": "Active open-source resume builder with structured data and PDF export."
     }
   ],
-  "alternatives": [],
+  "alternatives": [
+    {
+      "name": "Reactive Resume",
+      "url": "https://rxresu.me/",
+      "type": "open-source",
+      "repo": "https://github.com/AmruthPillai/Reactive-Resume",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A polished resume studio with enough templates to make tasteful a user setting.",
+      "stars": 40000,
+      "lastCommit": "2026-07",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Resume Matcher",
+      "url": "https://www.resumematcher.fyi/",
+      "type": "open-source",
+      "repo": "https://github.com/srbhr/Resume-Matcher",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Tailors a master resume to a pasted job description, then exports the result without selling you credits.",
+      "stars": 28000,
+      "lastCommit": "2026-07",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
   "rejectedAlternatives": [],
   "relatedSlugs": [
     "teal-plus",

@@ -57,8 +57,80 @@
       "desc": "Open-source issue and project tracker."
     }
   ],
-  "alternatives": [],
-  "rejectedAlternatives": [],
+  "alternatives": [
+    {
+      "name": "XWiki",
+      "url": "https://www.xwiki.org",
+      "type": "open-source",
+      "repo": "https://github.com/xwiki/xwiki-platform",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Confluence's grown-up open-source cousin; powerful enough to require an actual administrator",
+      "stars": 1300,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Docmost",
+      "url": "https://docmost.com",
+      "type": "open-source",
+      "repo": "https://github.com/docmost/docmost",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Confluence with less ceremony and a Docker bill",
+      "stars": 21300,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "BookStack",
+      "url": "https://www.bookstackapp.com",
+      "type": "open-source",
+      "repo": "https://github.com/BookStackApp/BookStack",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A wiki organized like a bookshelf; gloriously opinionated and much less flexible than Confluence",
+      "stars": 18971,
+      "lastCommit": "2026-07",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Wiki.js",
+      "url": "https://js.wiki",
+      "type": "open-source",
+      "repo": "https://github.com/requarks/wiki",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A modern wiki with enough knobs to remind you that you are now the administrator",
+      "stars": 28700,
+      "lastCommit": "2026-05",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "AppFlowy",
+      "url": "https://www.appflowy.io",
+      "desc": "The app is open-source, but the official free self-hosted collaboration tier is one seat plus guests"
+    },
+    {
+      "name": "Outline",
+      "url": "https://www.getoutline.com",
+      "desc": "A favourite self-hosted wiki recommendation; on-prem now starts at $10 a month and cloud is a 30-day trial"
+    }
+  ],
   "relatedSlugs": [
     "taskade",
     "meistertask",

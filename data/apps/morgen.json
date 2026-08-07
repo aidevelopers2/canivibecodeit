@@ -52,7 +52,13 @@
     }
   ],
   "alternatives": [],
-  "rejectedAlternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Nextcloud Calendar",
+      "url": "https://apps.nextcloud.com/apps/calendar",
+      "desc": "Booking exists, but a July 2026 bug makes appointment availability use the wrong time zone"
+    }
+  ],
   "relatedSlugs": [
     "ticktick",
     "things-3",

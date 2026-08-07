@@ -52,8 +52,45 @@
       "desc": "Active open-source personal music server for legally owned libraries."
     }
   ],
-  "alternatives": [],
-  "rejectedAlternatives": [],
+  "alternatives": [
+    {
+      "name": "Audiotool",
+      "url": "https://www.audiotool.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "A no-cap browser DAW; stems require the ancient ritual of solo, bounce and repeat.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "BandLab",
+      "url": "https://www.bandlab.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "A genuinely free 16-track browser studio; fifteen minutes is the ceiling, which should settle the prog-rock ambitions.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Amped Studio",
+      "url": "https://ampedstudio.com/pricing/",
+      "desc": "The free tier stops at five projects, 16 tracks, MP3-only export and no imported-audio storage."
+    }
+  ],
   "relatedSlugs": [
     "spotify-premium",
     "apple-music",

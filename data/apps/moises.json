@@ -52,8 +52,42 @@
       "desc": "Active open-source personal music server for legally owned libraries."
     }
   ],
-  "alternatives": [],
-  "rejectedAlternatives": [],
+  "alternatives": [
+    {
+      "name": "StemDeck",
+      "url": "https://github.com/stemdeckapp/stemdeck",
+      "type": "open-source",
+      "repo": "https://github.com/stemdeckapp/stemdeck",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "Local six-stem separation plus loops and a mixer; chords and pitch-shifting remain someone else’s problem.",
+      "stars": 2000,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Demucs GUI",
+      "url": "https://github.com/CarlGao4/Demucs-Gui",
+      "desc": "A tidy Windows wrapper whose last commit was 2025-06, just outside the maintenance bar."
+    },
+    {
+      "name": "StemRoller",
+      "url": "https://www.stemroller.com/",
+      "desc": "It separates four stems but stops before the looping and practice controls."
+    },
+    {
+      "name": "Ultimate Vocal Remover GUI",
+      "url": "https://github.com/Anjok07/ultimatevocalremovergui",
+      "desc": "Everyone recommends it; 25,700 stars, but the last commit was 2025-03."
+    }
+  ],
   "relatedSlugs": [
     "spotify-premium",
     "apple-music",

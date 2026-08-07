@@ -58,7 +58,18 @@
     }
   ],
   "alternatives": [],
-  "rejectedAlternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Frappe HR",
+      "url": "https://frappe.io/hr",
+      "desc": "Expense claims and travel requests are here; corporate cards, booking and two-way accounting sync are not."
+    },
+    {
+      "name": "Zoho Expense Free",
+      "url": "https://www.zoho.com/expense/",
+      "desc": "Free for three users, but corporate cards, direct reimbursements and travel booking live on paid plans."
+    }
+  ],
   "relatedSlugs": [
     "hurdlr",
     "keeper-tax",

@@ -53,8 +53,83 @@
       "status": "alive"
     }
   ],
-  "alternatives": [],
-  "rejectedAlternatives": [],
+  "alternatives": [
+    {
+      "name": "ERPNext",
+      "url": "https://frappe.io/erpnext",
+      "type": "open-source",
+      "repo": "https://github.com/frappe/erpnext",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Accounting, invoices, expenses, time and payment requests in one ERP; simplicity did not survive the migration.",
+      "stars": 37700,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Dolibarr",
+      "url": "https://www.dolibarr.org/",
+      "type": "open-source",
+      "repo": "https://github.com/Dolibarr/dolibarr",
+      "platforms": [
+        "web",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "Invoices, expenses, time, payments and a real ledger; it looks more back office than front page.",
+      "stars": 7500,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Manager Desktop",
+      "url": "https://www.manager.io/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "A full desktop ledger with invoices, expenses and billable time; collaboration is the part you do not get.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "LedgerSMB",
+      "url": "https://ledgersmb.org/",
+      "type": "open-source",
+      "repo": "https://github.com/ledgersmb/LedgerSMB",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Serious accounting with invoices, expenses, projects and timecards; the interface assumes you came for the ledger.",
+      "stars": 554,
+      "lastCommit": "2026-07",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Crater",
+      "url": "https://github.com/crater-invoice-inc/crater",
+      "desc": "Still widely recommended; last push August 2024 and the last release is four years old."
+    },
+    {
+      "name": "Zoho Invoice",
+      "url": "https://www.zoho.com/invoice/",
+      "desc": "The free invoicing, time and expense tools are good; full accounting is not part of the product."
+    }
+  ],
   "relatedSlugs": [
     "invoice-ninja",
     "ynab",

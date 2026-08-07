@@ -52,7 +52,54 @@
       "desc": "Active open-source human-resources and payroll application built on Frappe."
     }
   ],
-  "alternatives": [],
+  "alternatives": [
+    {
+      "name": "Connecteam Small Business Plan",
+      "url": "https://connecteam.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "Documents, leave, schedules and onboarding for ten people; user eleven starts the subscription.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Horilla HR",
+      "url": "https://www.horilla.com/",
+      "type": "open-source",
+      "repo": "https://github.com/horilla/horilla-hr",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Documents, onboarding, leave and rotating shifts in Docker; administration is the free-plan limit.",
+      "stars": 1400,
+      "lastCommit": "2026-07",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Frappe HR",
+      "url": "https://frappe.io/hr",
+      "type": "open-source",
+      "repo": "https://github.com/frappe/hrms",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Employee documents, onboarding, leave and shifts in one full HR stack; you operate the stack.",
+      "stars": 8500,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
   "rejectedAlternatives": [],
   "relatedSlugs": [
     "gusto",

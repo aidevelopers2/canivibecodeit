@@ -52,8 +52,40 @@
       "desc": "Active open-source survey and experience-management platform."
     }
   ],
-  "alternatives": [],
-  "rejectedAlternatives": [],
+  "alternatives": [
+    {
+      "name": "Baserow",
+      "url": "https://baserow.io",
+      "type": "open-source",
+      "repo": "https://github.com/baserow/baserow",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Airtable's database half with public forms and your own disk underneath",
+      "stars": 5400,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Grist",
+      "url": "https://www.getgrist.com",
+      "desc": "It owns the database, but conditional questions remain an open feature request"
+    },
+    {
+      "name": "NocoDB",
+      "url": "https://nocodb.com",
+      "desc": "The Community edition writes to your database, but conditional fields, validation, and redirects are paid"
+    },
+    {
+      "name": "Teable",
+      "url": "https://teable.ai",
+      "desc": "Basic forms lack branching; Teable points you to its advanced App Builder for conditional multi-step flows"
+    }
+  ],
   "relatedSlugs": [
     "surveymonkey",
     "paperform",

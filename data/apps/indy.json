@@ -58,8 +58,52 @@
       "desc": "Open-source invoicing, payments, and client management."
     }
   ],
-  "alternatives": [],
-  "rejectedAlternatives": [],
+  "alternatives": [
+    {
+      "name": "ERPNext",
+      "url": "https://frappe.io/erpnext",
+      "type": "open-source",
+      "repo": "https://github.com/frappe/erpnext",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "CRM, proposals, contracts, projects, time and invoices in one free ERP; setup is considerably less indie.",
+      "stars": 37700,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Dolibarr",
+      "url": "https://www.dolibarr.org/",
+      "type": "open-source",
+      "repo": "https://github.com/Dolibarr/dolibarr",
+      "platforms": [
+        "web",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "Proposals, contracts, tasks, time and billing in one practical suite; the interface has sensible shoes.",
+      "stars": 7500,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Agiled Free",
+      "url": "https://agiled.app/",
+      "desc": "Its pricing page admits a free plan exists but never publishes its limits, while its own pages disagree on contracts, proposals and client caps."
+    },
+    {
+      "name": "Fiverr Workspace / AND.CO",
+      "url": "https://www.and.co/",
+      "desc": "The old free freelancer suite now redirects to Fiverr's marketplace; the product page is gone."
+    }
+  ],
   "relatedSlugs": [
     "plutio",
     "harvest",

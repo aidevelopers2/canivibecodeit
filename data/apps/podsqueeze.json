@@ -52,7 +52,23 @@
       "desc": "Long-running open-source multitrack audio editor and useful implementation prior art."
     }
   ],
-  "alternatives": [],
+  "alternatives": [
+    {
+      "name": "Speakr",
+      "url": "https://murtaza-nasir.github.io/speakr/",
+      "type": "open-source",
+      "repo": "https://github.com/murtaza-nasir/speakr",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Podcast repurposing with your own model endpoints instead of another monthly invoice.",
+      "stars": 3600,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
   "rejectedAlternatives": [],
   "relatedSlugs": [
     "riverside",

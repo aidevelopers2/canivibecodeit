@@ -114,6 +114,68 @@
       "lastCommit": "2026-08",
       "selfHost": "docker",
       "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Odoo CRM One App Free",
+      "url": "https://www.odoo.com/app/crm",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "A full hosted pipeline for unlimited users, provided CRM is the only Odoo app you marry.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-07"
+    },
+    {
+      "name": "Zoho CRM Free",
+      "url": "https://www.zoho.com/crm/free-crm.html",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "A full little CRM for three users and 5,000 records; the wider Zoho maze is optional.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-07"
+    },
+    {
+      "name": "Freshsales Free",
+      "url": "https://www.freshworks.com/crm/sales/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "A clean three-user pipeline with email and mobile apps; useful automation starts asking for rent.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-07"
+    },
+    {
+      "name": "Bitrix24 Free",
+      "url": "https://www.bitrix24.com/tools/crm/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "Contacts and deals for a small team, wrapped in enough menus to qualify as indoor architecture.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-07"
     }
   ],
   "rejectedAlternatives": [],

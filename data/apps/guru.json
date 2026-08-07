@@ -58,7 +58,23 @@
     }
   ],
   "alternatives": [],
-  "rejectedAlternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "AppFlowy",
+      "url": "https://www.appflowy.io",
+      "desc": "It can hold knowledge, but it has neither verified cards nor embedded work-tool search"
+    },
+    {
+      "name": "Docmost",
+      "url": "https://docmost.com",
+      "desc": "Excellent collaborative docs, but no verification, staleness, or answer-card workflow"
+    },
+    {
+      "name": "Outline",
+      "url": "https://www.getoutline.com",
+      "desc": "A solid wiki, but self-hosting now costs money and it lacks Guru's verification workflow"
+    }
+  ],
   "relatedSlugs": [
     "confluence",
     "taskade",

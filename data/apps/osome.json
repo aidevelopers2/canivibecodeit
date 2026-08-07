@@ -52,7 +52,18 @@
     }
   ],
   "alternatives": [],
-  "rejectedAlternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "ERPNext",
+      "url": "https://frappe.io/erpnext",
+      "desc": "It can keep the books; it cannot incorporate a company, file local returns or act as company secretary."
+    },
+    {
+      "name": "Odoo",
+      "url": "https://www.odoo.com/",
+      "desc": "ERP software, not a company secretary, tax filer or incorporation service."
+    }
+  ],
   "relatedSlugs": [
     "xero",
     "quickbooks-online",

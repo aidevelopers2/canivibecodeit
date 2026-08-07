@@ -51,7 +51,42 @@
       "desc": "Active local-first open-source personal finance application."
     }
   ],
-  "alternatives": [],
+  "alternatives": [
+    {
+      "name": "KMyMoney",
+      "url": "https://kmymoney.org/",
+      "type": "open-source",
+      "repo": "https://github.com/KDE/kmymoney",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "Imports, categorisation and cash-flow forecasting on the desktop; the forecast is not dressed as a calendar.",
+      "stars": 202,
+      "lastCommit": "2026-07",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Money Manager Ex",
+      "url": "https://moneymanagerex.org/",
+      "type": "open-source",
+      "repo": "https://github.com/moneymanagerex/moneymanagerex",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android"
+      ],
+      "desc": "Imported transactions, categories and cash-flow forecasts without a subscription; calendar presentation is the loss.",
+      "stars": 2200,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
   "rejectedAlternatives": [],
   "relatedSlugs": [
     "rocket-money",

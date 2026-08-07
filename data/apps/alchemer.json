@@ -58,7 +58,23 @@
     }
   ],
   "alternatives": [],
-  "rejectedAlternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Formbricks",
+      "url": "https://formbricks.com",
+      "desc": "Surveys and integrations are strong; workflows and quota management are enterprise-licensed"
+    },
+    {
+      "name": "HeyForm",
+      "url": "https://heyform.net",
+      "desc": "Conversational surveys are real, but there is no enterprise workflow or feedback-program layer"
+    },
+    {
+      "name": "LimeSurvey",
+      "url": "https://www.limesurvey.org",
+      "desc": "A deep survey engine, but not Alchemer’s workflow and feedback-program layer"
+    }
+  ],
   "relatedSlugs": [
     "survicate",
     "uservoice",

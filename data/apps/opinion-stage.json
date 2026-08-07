@@ -51,8 +51,45 @@
       "desc": "Active open-source survey and experience-management platform."
     }
   ],
-  "alternatives": [],
-  "rejectedAlternatives": [],
+  "alternatives": [
+    {
+      "name": "Forminator",
+      "url": "https://wordpress.org/plugins/forminator/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Polls, quizzes, surveys, calculations, and response summaries, free inside WordPress",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "HeyForm",
+      "url": "https://heyform.net",
+      "type": "open-source",
+      "repo": "https://github.com/heyform/heyform",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Polls, quizzes, and surveys with conversational presentation and exportable answers",
+      "stars": 8881,
+      "lastCommit": "2026-07",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Formbricks",
+      "url": "https://formbricks.com",
+      "desc": "A strong survey platform, but not a quiz-and-poll result engine"
+    }
+  ],
   "relatedSlugs": [
     "surveymonkey",
     "fillout",

@@ -52,8 +52,30 @@
       "desc": "Active open-source survey and experience-management platform."
     }
   ],
-  "alternatives": [],
-  "rejectedAlternatives": [],
+  "alternatives": [
+    {
+      "name": "Budibase",
+      "url": "https://budibase.com",
+      "type": "open-source",
+      "repo": "https://github.com/Budibase/budibase",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Forms, approvals, and automations in one box; you supply the box",
+      "stars": 28000,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "NocoDB",
+      "url": "https://nocodb.com",
+      "desc": "Community forms are usable, but conditional fields, validation, redirects, and the richer workflow layer are paid"
+    }
+  ],
   "relatedSlugs": [
     "surveymonkey",
     "fillout",

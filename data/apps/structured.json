@@ -50,7 +50,45 @@
       "desc": "Mature open-source task and project manager with lists, kanban, and recurring work."
     }
   ],
-  "alternatives": [],
+  "alternatives": [
+    {
+      "name": "Lunatask",
+      "url": "https://lunatask.app",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android"
+      ],
+      "desc": "A visual daily calendar, recurring tasks, reminders, and time blocking; seven habits are free",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Super Productivity",
+      "url": "https://super-productivity.com",
+      "type": "open-source",
+      "repo": "https://github.com/super-productivity/super-productivity",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android"
+      ],
+      "desc": "Timeboxes tasks into a daily plan and keeps reminders and repeats local",
+      "stars": 21156,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
   "rejectedAlternatives": [],
   "relatedSlugs": [
     "ticktick",

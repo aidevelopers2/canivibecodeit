@@ -52,7 +52,23 @@
     }
   ],
   "alternatives": [],
-  "rejectedAlternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "HeyForm",
+      "url": "https://heyform.net",
+      "desc": "Multi-step forms are real, but reusable cross-form field groups are not"
+    },
+    {
+      "name": "OpnForm",
+      "url": "https://opnform.com",
+      "desc": "Validation and pages are there; reusable field groups are not"
+    },
+    {
+      "name": "Tally",
+      "url": "https://tally.so",
+      "desc": "A polished multi-page form builder, but it cannot define reusable field groups"
+    }
+  ],
   "relatedSlugs": [
     "surveymonkey",
     "fillout",

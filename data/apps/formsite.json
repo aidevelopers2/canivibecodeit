@@ -57,7 +57,23 @@
     }
   ],
   "alternatives": [],
-  "rejectedAlternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Budibase",
+      "url": "https://budibase.com",
+      "desc": "It handles workflows, but native payments and PDF report output are missing or paid"
+    },
+    {
+      "name": "Forminator",
+      "url": "https://wordpress.org/plugins/forminator/",
+      "desc": "It handles forms and payments, but not Formsite-style approval workflows or secure case handling"
+    },
+    {
+      "name": "Microsoft Forms",
+      "url": "https://www.microsoft.com/en-us/microsoft-365/online-surveys-polls-quizzes",
+      "desc": "The personal free tier stops at 200 responses per form, so it is a demo with better branding"
+    }
+  ],
   "relatedSlugs": [
     "feathery",
     "reform",

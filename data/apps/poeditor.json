@@ -53,7 +53,72 @@
       "desc": "Active open-source localization platform with translation memory and in-context tooling."
     }
   ],
-  "alternatives": [],
+  "alternatives": [
+    {
+      "name": "Tolgee",
+      "url": "https://tolgee.io/",
+      "type": "open-source",
+      "repo": "https://github.com/tolgee/tolgee-platform",
+      "platforms": [
+        "web",
+        "self-hosted",
+        "browser-extension",
+        "cli"
+      ],
+      "desc": "Keys, contributors, comments, review and normal localization formats, plus in-context editing POEditor never had.",
+      "stars": 4100,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Weblate",
+      "url": "https://weblate.org/",
+      "type": "open-source",
+      "repo": "https://github.com/WeblateOrg/weblate",
+      "platforms": [
+        "web",
+        "self-hosted",
+        "cli"
+      ],
+      "desc": "Contributor translation, suggestions, checks, review and broad file-format support tied neatly to version control.",
+      "stars": 6000,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Accent",
+      "url": "https://www.accent.reviews/",
+      "type": "open-source",
+      "repo": "https://github.com/mirego/accent",
+      "platforms": [
+        "web",
+        "self-hosted",
+        "cli"
+      ],
+      "desc": "A smaller collaborative string editor with history and exports; enough product, considerably less platform.",
+      "stars": 1500,
+      "lastCommit": "2026-06",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Ever Traduora",
+      "url": "https://traduora.co/",
+      "type": "open-source",
+      "repo": "https://github.com/ever-co/ever-traduora",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A clean team translation catalog with suggestions, search, imports, exports and an API.",
+      "stars": 2100,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
   "rejectedAlternatives": [],
   "relatedSlugs": [
     "lokalise",

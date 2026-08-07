@@ -132,6 +132,52 @@
       "lastCommit": null,
       "selfHost": "one-click",
       "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Cherry Studio",
+      "url": "https://cherry-ai.com/",
+      "type": "open-source",
+      "repo": "https://github.com/CherryHQ/cherry-studio",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "A desktop workspace for many models, agents, files, tools, and an impressive number of toggles.",
+      "stars": 49901,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-07"
+    },
+    {
+      "name": "LobeHub",
+      "url": "https://lobehub.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A polished agent-and-files workspace you can deploy yourself; inference is still somebody's bill.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-07"
+    },
+    {
+      "name": "LibreChat",
+      "url": "https://www.librechat.ai/",
+      "type": "open-source",
+      "repo": "https://github.com/danny-avila/LibreChat",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A broad multi-provider assistant with agents, files, search, and no included frontier-model bill.",
+      "stars": 41724,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-07"
     }
   ],
   "rejectedAlternatives": [

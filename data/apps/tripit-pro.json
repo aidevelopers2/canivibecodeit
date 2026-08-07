@@ -52,7 +52,23 @@
       "desc": "Open-source self-hosted trail database and route explorer using open map data."
     }
   ],
-  "alternatives": [],
+  "alternatives": [
+    {
+      "name": "KDE Itinerary",
+      "url": "https://apps.kde.org/itinerary/",
+      "type": "open-source",
+      "repo": "https://github.com/KDE/itinerary",
+      "platforms": [
+        "linux",
+        "android"
+      ],
+      "desc": "It extracts reservations from files and email locally, then builds the itinerary without selling the inbox.",
+      "stars": 64,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
   "rejectedAlternatives": [],
   "relatedSlugs": [
     "wanderlog-pro",

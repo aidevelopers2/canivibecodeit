@@ -52,7 +52,53 @@
       "desc": "Active open-source resume builder with structured data and PDF export."
     }
   ],
-  "alternatives": [],
+  "alternatives": [
+    {
+      "name": "Reactive Resume",
+      "url": "https://rxresu.me/",
+      "type": "open-source",
+      "repo": "https://github.com/AmruthPillai/Reactive-Resume",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Application tracking, evidence reuse, tailored resumes and cover letters in one unusually complete free package.",
+      "stars": 40000,
+      "lastCommit": "2026-07",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "JobSync",
+      "url": "https://jobsync.ca/",
+      "type": "open-source",
+      "repo": "https://github.com/Gsync/jobsync",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A local job-search command centre with applications, tasks, documents and model-assisted tailoring.",
+      "stars": 800,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Resume Matcher",
+      "url": "https://www.resumematcher.fyi/",
+      "type": "open-source",
+      "repo": "https://github.com/srbhr/Resume-Matcher",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Excellent at the master-resume and tailoring half; bring a separate board for the applications themselves.",
+      "stars": 28000,
+      "lastCommit": "2026-07",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
   "rejectedAlternatives": [],
   "relatedSlugs": [
     "jobscan",

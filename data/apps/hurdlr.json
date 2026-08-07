@@ -59,7 +59,23 @@
     }
   ],
   "alternatives": [],
-  "rejectedAlternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Actual Budget",
+      "url": "https://actualbudget.org/",
+      "desc": "A maintained ledger and importer, not a mileage tracker or tax-estimation service."
+    },
+    {
+      "name": "TaxHacker",
+      "url": "https://taxhacker.app/",
+      "desc": "It can read receipts and statements, but mileage, invoicing and tax estimates are outside the product."
+    },
+    {
+      "name": "Zoho Invoice",
+      "url": "https://www.zoho.com/invoice/",
+      "desc": "Mileage, expenses and invoices are here; quarterly tax estimates and filing are not."
+    }
+  ],
   "relatedSlugs": [
     "keeper-tax",
     "zoho-books",

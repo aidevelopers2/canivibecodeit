@@ -52,7 +52,95 @@
       "desc": "Active local-first open-source personal finance application."
     }
   ],
-  "alternatives": [],
+  "alternatives": [
+    {
+      "name": "Money Manager Ex",
+      "url": "https://moneymanagerex.org/",
+      "type": "open-source",
+      "repo": "https://github.com/moneymanagerex/moneymanagerex",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android"
+      ],
+      "desc": "A local ledger with imports, budgets, reports and investments; the interface has no subscription budget.",
+      "stars": 2200,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "GnuCash",
+      "url": "https://www.gnucash.org/",
+      "type": "open-source",
+      "repo": "https://github.com/gnucash/gnucash",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "Industrial-strength local books, imports, budgets and reports; usability is an elective.",
+      "stars": 4300,
+      "lastCommit": "2026-06",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "KMyMoney",
+      "url": "https://kmymoney.org/",
+      "type": "open-source",
+      "repo": "https://github.com/KDE/kmymoney",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "A local ledger with imports, budgets, investments and forecasts; the desktop still believes in menus.",
+      "stars": 202,
+      "lastCommit": "2026-07",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Actual Budget",
+      "url": "https://actualbudget.org/",
+      "type": "open-source",
+      "repo": "https://github.com/actualbudget/actual",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "Imports, envelope budgets and reports on your disk; investment tracking is basic.",
+      "stars": 28000,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Wealthfolio",
+      "url": "https://wealthfolio.app/",
+      "type": "open-source",
+      "repo": "https://github.com/afadil/wealthfolio",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "self-hosted"
+      ],
+      "desc": "Local investments, spending, budgets and reports; traditional bill-pay features are thinner.",
+      "stars": 8500,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
   "rejectedAlternatives": [],
   "relatedSlugs": [
     "rocket-money",

@@ -53,8 +53,45 @@
       "desc": "Active open-source project and issue tracking platform."
     }
   ],
-  "alternatives": [],
-  "rejectedAlternatives": [],
+  "alternatives": [
+    {
+      "name": "Teable",
+      "url": "https://teable.ai",
+      "type": "open-source",
+      "repo": "https://github.com/teableio/teable",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Airtable-shaped tables, forms, kanban, and automation; AI is where the upsell begins",
+      "stars": 21300,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Budibase",
+      "url": "https://budibase.com",
+      "type": "open-source",
+      "repo": "https://github.com/Budibase/budibase",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Configurable data, forms, views, approvals, and automations in one box; you supply the box",
+      "stars": 28000,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Baserow",
+      "url": "https://baserow.io",
+      "desc": "The free edition stops at grid, gallery, and form views; kanban and timeline are paid"
+    }
+  ],
   "relatedSlugs": [
     "asana",
     "clickup",

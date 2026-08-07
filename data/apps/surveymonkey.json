@@ -52,8 +52,89 @@
       "desc": "Active open-source survey and experience-management platform."
     }
   ],
-  "alternatives": [],
-  "rejectedAlternatives": [],
+  "alternatives": [
+    {
+      "name": "LimeSurvey",
+      "url": "https://www.limesurvey.org",
+      "type": "open-source",
+      "repo": "https://github.com/LimeSurvey/LimeSurvey",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "The survey engine that does nearly everything, provided you enjoy administering PHP",
+      "stars": 3700,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Formbricks",
+      "url": "https://formbricks.com",
+      "type": "open-source",
+      "repo": "https://github.com/formbricks/formbricks",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Serious survey machinery without the enterprise invoice; self-hosting still means owning the machinery",
+      "stars": 12700,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "HeyForm",
+      "url": "https://heyform.net",
+      "type": "open-source",
+      "repo": "https://github.com/heyform/heyform",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Typeform's manners, minus the monthly rent",
+      "stars": 8881,
+      "lastCommit": "2026-07",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Google Forms",
+      "url": "https://workspace.google.com/products/forms/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Forms, surveys, quizzes, and Sheets output; design restraint is compulsory",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Nextcloud Forms",
+      "url": "https://apps.nextcloud.com/apps/forms",
+      "type": "open-source",
+      "repo": "https://github.com/nextcloud/forms",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Google Forms inside Nextcloud; simple is the feature and the limitation",
+      "stars": 378,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Microsoft Forms",
+      "url": "https://www.microsoft.com/en-us/microsoft-365/online-surveys-polls-quizzes",
+      "desc": "The personal free tier stops at 200 responses per form, so it is a demo with better branding"
+    }
+  ],
   "relatedSlugs": [
     "fillout",
     "paperform",

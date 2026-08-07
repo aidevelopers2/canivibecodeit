@@ -51,7 +51,76 @@
       "desc": "Active local-first open-source personal finance application."
     }
   ],
-  "alternatives": [],
+  "alternatives": [
+    {
+      "name": "FreeBudget",
+      "url": "https://freebudget.org/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "CSV imports, spending plans, rules, reports and net worth for free; live bank links cost extra.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Actual Budget",
+      "url": "https://actualbudget.org/",
+      "type": "open-source",
+      "repo": "https://github.com/actualbudget/actual",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "Imported account data, budgets, rules and reports on your disk; watchlists become categories and schedules.",
+      "stars": 28000,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Firefly III",
+      "url": "https://www.firefly-iii.org/",
+      "type": "open-source",
+      "repo": "https://github.com/firefly-iii/firefly-iii",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Imported transactions, budgets, recurring bills and reports in Docker; setup is not simplified.",
+      "stars": 24200,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Wealthfolio",
+      "url": "https://wealthfolio.app/",
+      "type": "open-source",
+      "repo": "https://github.com/afadil/wealthfolio",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "self-hosted"
+      ],
+      "desc": "Spending, budgets, rules and net worth on your device; automatic account sync is paid.",
+      "stars": 8500,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
   "rejectedAlternatives": [],
   "relatedSlugs": [
     "rocket-money",

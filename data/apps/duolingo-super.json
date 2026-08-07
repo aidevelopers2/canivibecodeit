@@ -52,7 +52,71 @@
       "desc": "Long-running open-source learning platform with courses, assessments, and progress tracking."
     }
   ],
-  "alternatives": [],
+  "alternatives": [
+    {
+      "name": "Anki",
+      "url": "https://apps.ankiweb.net/",
+      "type": "open-source",
+      "repo": "https://github.com/ankitects/anki",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "Build a small language deck with audio, images, typed answers and excellent spaced repetition; no cartoon guilt trips.",
+      "stars": 29600,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "AnkiDroid",
+      "url": "https://ankidroid.org/",
+      "type": "open-source",
+      "repo": "https://github.com/ankidroid/Anki-Android",
+      "platforms": [
+        "android"
+      ],
+      "desc": "A full Android Anki client for authored language decks, pronunciation recordings and offline review.",
+      "stars": 11499,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "FreeLingo",
+      "url": "https://freelingo.app/",
+      "type": "open-source",
+      "repo": "https://github.com/ArtCC/freelingo",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A Duolingo-shaped course runner with CEFR lessons, voice exercises and spaced review; self-hosting is the price of unlimited use.",
+      "stars": 62,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Moodle",
+      "url": "https://moodle.org/",
+      "type": "open-source",
+      "repo": "https://github.com/moodle/moodle",
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "Can run your own sequenced lessons, quizzes and progress tracking, though nobody will mistake it for a game.",
+      "stars": 7300,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
   "rejectedAlternatives": [],
   "relatedSlugs": [
     "brilliant",

@@ -52,7 +52,23 @@
     }
   ],
   "alternatives": [],
-  "rejectedAlternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Firefly III",
+      "url": "https://www.firefly-iii.org/",
+      "desc": "It can expose recurring charges after import, but there is no cancellation workflow or provider checklist."
+    },
+    {
+      "name": "Maybe Finance",
+      "url": "https://github.com/maybe-finance/maybe",
+      "desc": "The once-obvious answer is archived; last push July 2025."
+    },
+    {
+      "name": "Wallos",
+      "url": "https://github.com/ellite/Wallos",
+      "desc": "A tidy subscription tracker, but it neither finds charges from imported transactions nor cancels anything."
+    }
+  ],
   "relatedSlugs": [
     "quicken-simplifi",
     "tiller-money",

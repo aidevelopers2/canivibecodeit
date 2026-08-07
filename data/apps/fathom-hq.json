@@ -53,7 +53,13 @@
     }
   ],
   "alternatives": [],
-  "rejectedAlternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Metabase",
+      "url": "https://www.metabase.com/",
+      "desc": "A maintained BI tool, not a finished finance-reporting product; consolidations and forecasts are still your modelling job."
+    }
+  ],
   "relatedSlugs": [
     "ahrefs",
     "semrush",

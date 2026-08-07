@@ -51,7 +51,93 @@
       "desc": "Long-running open-source learning platform with courses, assessments, and progress tracking."
     }
   ],
-  "alternatives": [],
+  "alternatives": [
+    {
+      "name": "eXeLearning",
+      "url": "https://exelearning.net/en/",
+      "type": "open-source",
+      "repo": "https://github.com/exelearning/exelearning",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "A desktop lesson authoring tool for interactive exercises, games, equations and quizzes, with decidedly public-sector aesthetics.",
+      "stars": 138,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Oppia",
+      "url": "https://www.oppia.org/",
+      "type": "open-source",
+      "repo": "https://github.com/oppia/oppia",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Authors branching interactive explorations that respond to wrong answers instead of merely displaying the solution.",
+      "stars": 6800,
+      "lastCommit": "2026-08",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Lumi",
+      "url": "https://lumi.education/en/lumi-h5p-offline-desktop-editor/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "A free desktop H5P editor for interactive lessons, simulations and quizzes; content quality remains your problem.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "GeoGebra",
+      "url": "https://www.geogebra.org/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android"
+      ],
+      "desc": "Excellent interactive mathematics authoring and practice, but it stops being Brilliant once the science is not mathematical.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Moodle",
+      "url": "https://moodle.org/",
+      "type": "open-source",
+      "repo": "https://github.com/moodle/moodle",
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "Hosts authored activities, quizzes and progress, although the actual interactive pedagogy still has to come from you.",
+      "stars": 7300,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
   "rejectedAlternatives": [],
   "relatedSlugs": [
     "duolingo-super",

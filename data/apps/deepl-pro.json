@@ -52,8 +52,46 @@
       "desc": "Active open-source localization platform with translation memory and in-context tooling."
     }
   ],
-  "alternatives": [],
-  "rejectedAlternatives": [],
+  "alternatives": [
+    {
+      "name": "OmegaT",
+      "url": "https://omegat.org/",
+      "type": "open-source",
+      "repo": "https://github.com/omegat-org/omegat",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "A desktop translation-memory workbench that can call your chosen machine-translation provider and keeps the project local.",
+      "stars": 526,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "MateCat",
+      "url": "https://www.matecat.com/",
+      "type": "open-source",
+      "repo": "https://github.com/matecat/MateCat",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A free hosted CAT editor with translation memory and machine translation; use your own judgment where DeepL sold confidence.",
+      "stars": 505,
+      "lastCommit": "2026-08",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Swordfish",
+      "url": "https://maxprograms.com/products/swordfish.html",
+      "desc": "The source is open, but the ready-made installers are a 30-day trial, so a non-builder has not escaped the meter."
+    }
+  ],
   "relatedSlugs": [
     "lokalise",
     "crowdin",

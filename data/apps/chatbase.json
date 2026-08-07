@@ -100,6 +100,21 @@
       "name": "VoltAgent",
       "url": "https://voltagent.dev/",
       "desc": "An agent engineering framework with a console, not a deploy-and-answer support desk."
+    },
+    {
+      "name": "Botpress",
+      "url": "https://botpress.com/",
+      "desc": "The free plan stops at 100 conversations a month, and voice is an Enterprise feature."
+    },
+    {
+      "name": "Dify",
+      "url": "https://dify.ai/",
+      "desc": "A visual agent builder, not a ready chat-email-voice support desk."
+    },
+    {
+      "name": "Flowise",
+      "url": "https://flowiseai.com/",
+      "desc": "A visual agent builder; you still have to build the support product and supply email and voice plumbing."
     }
   ],
   "relatedSlugs": [

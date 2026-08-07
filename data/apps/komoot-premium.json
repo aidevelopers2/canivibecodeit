@@ -52,7 +52,66 @@
       "desc": "Open-source self-hosted trail database and route explorer using open map data."
     }
   ],
-  "alternatives": [],
+  "alternatives": [
+    {
+      "name": "OsmAnd~",
+      "url": "https://f-droid.org/packages/net.osmand.plus/",
+      "type": "open-source",
+      "repo": "https://github.com/osmandapp/OsmAnd",
+      "platforms": [
+        "android"
+      ],
+      "desc": "The F-Droid build plans offline routes and handles GPX without paid region packs.",
+      "stars": 5900,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Organic Maps",
+      "url": "https://organicmaps.app/",
+      "type": "open-source",
+      "repo": "https://github.com/organicmaps/organicmaps",
+      "platforms": [
+        "ios",
+        "android"
+      ],
+      "desc": "Offline OSM routing and GPX import/export with no region packs to buy.",
+      "stars": 14989,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Wanderer",
+      "url": "https://wanderer.to/",
+      "type": "open-source",
+      "repo": "https://github.com/open-wanderer/wanderer",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Plan and catalogue OSM routes on your server, then export the GPX and own the maintenance too.",
+      "stars": 3802,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "gpx.studio",
+      "url": "https://gpx.studio/",
+      "type": "open-source",
+      "repo": "https://github.com/gpxstudio/gpx.studio",
+      "platforms": [
+        "web"
+      ],
+      "desc": "Plan and edit GPX routes in a browser; it saves files, not your travel life.",
+      "stars": 1154,
+      "lastCommit": "2026-08",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
   "rejectedAlternatives": [],
   "relatedSlugs": [
     "tripit-pro",

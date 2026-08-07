@@ -63,7 +63,13 @@
       "checkedOn": "2026-08-06"
     }
   ],
-  "rejectedAlternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Chatwoot",
+      "url": "https://www.chatwoot.com/",
+      "desc": "It speaks Telegram, but website chats stay in Chatwoot instead of landing in Telegram."
+    }
+  ],
   "relatedSlugs": [],
   "pagePriority": 5,
   "verifiedOneShot": false,

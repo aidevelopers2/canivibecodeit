@@ -53,8 +53,59 @@
       "desc": "Active open-source project and issue tracking platform."
     }
   ],
-  "alternatives": [],
-  "rejectedAlternatives": [],
+  "alternatives": [
+    {
+      "name": "Odoo Community",
+      "url": "https://www.odoo.com/app/project",
+      "type": "open-source",
+      "repo": "https://github.com/odoo/odoo",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Projects, milestones, recurring tasks, timesheets, and client portal access inside an ERP that brought ninety other modules",
+      "stars": 53527,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "ONLYOFFICE Groups",
+      "url": "https://www.onlyoffice.com/workspace",
+      "type": "open-source",
+      "repo": "https://github.com/ONLYOFFICE/CommunityServer",
+      "platforms": [
+        "web",
+        "windows",
+        "linux",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "Milestones, timesheets, reports, and view-only client guests; the price is running an office suite",
+      "stars": 3100,
+      "lastCommit": "2026-05",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Leantime",
+      "url": "https://leantime.io",
+      "desc": "Time tracking and milestones are strong, but there is no proper client-facing portal"
+    },
+    {
+      "name": "OpenProject",
+      "url": "https://www.openproject.org",
+      "desc": "Time and milestones are free; sharing individual work with external clients is an Enterprise add-on"
+    },
+    {
+      "name": "PLANKA",
+      "url": "https://planka.app",
+      "desc": "External client roles and recurring cards are Pro features"
+    }
+  ],
   "relatedSlugs": [
     "asana",
     "monday-com",

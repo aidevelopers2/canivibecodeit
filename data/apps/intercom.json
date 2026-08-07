@@ -117,9 +117,39 @@
       "lastCommit": "2026-08",
       "selfHost": "ops",
       "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Odoo Helpdesk One App Free",
+      "url": "https://www.odoo.com/app/helpdesk",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "A real hosted ticket desk for unlimited users, as long as Helpdesk is your one free Odoo app.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-07"
     }
   ],
-  "rejectedAlternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Chaskiq",
+      "url": "https://chaskiq.io/",
+      "desc": "Source is available, but open abandonment and broken-production reports make it a bad non-builder recommendation."
+    },
+    {
+      "name": "HubSpot Free Help Desk",
+      "url": "https://www.hubspot.com/products/service/help-desk",
+      "desc": "The inbox and widget are free; the knowledge base required by this row is not."
+    },
+    {
+      "name": "Papercups",
+      "url": "https://github.com/papercups-io/papercups",
+      "desc": "The famous open-source Intercom alternative has not seen a main-repo commit since February 2024."
+    }
+  ],
   "relatedSlugs": [
     "zendesk",
     "help-scout",

@@ -164,6 +164,21 @@
       "lastCommit": null,
       "selfHost": "one-click",
       "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "LobeHub",
+      "url": "https://lobehub.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A polished agents-and-files workspace; self-hosting is free and frontier inference usually is not.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-07"
     }
   ],
   "rejectedAlternatives": [

@@ -52,7 +52,56 @@
       "desc": "Long-running open-source multitrack audio editor and useful implementation prior art."
     }
   ],
-  "alternatives": [],
+  "alternatives": [
+    {
+      "name": "Kdenlive",
+      "url": "https://kdenlive.org/",
+      "type": "open-source",
+      "repo": "https://github.com/KDE/kdenlive",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "A full video editor for locally recorded tracks; sync and polish are manual, but real.",
+      "stars": 5400,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Shotcut",
+      "url": "https://www.shotcut.org/",
+      "type": "open-source",
+      "repo": "https://github.com/mltframework/shotcut",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "A local interview editor with captions and noise tools; none of the remote-recording magic survives.",
+      "stars": 14800,
+      "lastCommit": "2026-07",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Audacity",
+      "url": "https://www.audacityteam.org/",
+      "type": "open-source",
+      "repo": "https://github.com/audacity/audacity",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "A multitrack editor for the files you already have; remote capture remains somebody else’s problem.",
+      "stars": 17500,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
   "rejectedAlternatives": [],
   "relatedSlugs": [
     "alitu",

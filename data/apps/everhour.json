@@ -56,8 +56,50 @@
       "desc": "Open-source invoicing, payments, and client management."
     }
   ],
-  "alternatives": [],
-  "rejectedAlternatives": [],
+  "alternatives": [
+    {
+      "name": "Kimai",
+      "url": "https://www.kimai.org/",
+      "type": "open-source",
+      "repo": "https://github.com/kimai/kimai",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Time, budgets, expenses, invoices and an API; project-tool integrations are thinner than Everhour's.",
+      "stars": 4900,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Invoice Ninja self-hosted",
+      "url": "https://invoiceninja.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "Time, tasks, quotes, expenses and invoices for free on your server; deep project-tool integrations do not follow.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "solidtime",
+      "url": "https://www.solidtime.io/",
+      "desc": "Modern and maintained, but it stops before invoices and expenses."
+    }
+  ],
   "relatedSlugs": [
     "invoice2go",
     "expensify",

@@ -57,7 +57,23 @@
     }
   ],
   "alternatives": [],
-  "rejectedAlternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "AFFiNE",
+      "url": "https://affine.pro",
+      "desc": "Docs, whiteboards, and databases are real; workflow automation is not"
+    },
+    {
+      "name": "AppFlowy",
+      "url": "https://www.appflowy.io",
+      "desc": "The workspace pieces are promising, but the official free self-hosted collaboration tier is one seat plus guests"
+    },
+    {
+      "name": "Huly",
+      "url": "https://huly.io",
+      "desc": "Tasks and documents are real, but whiteboards and a general database layer are missing"
+    }
+  ],
   "relatedSlugs": [
     "slite",
     "nuclino",

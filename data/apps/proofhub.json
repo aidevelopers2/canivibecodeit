@@ -57,7 +57,23 @@
     }
   ],
   "alternatives": [],
-  "rejectedAlternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Huly",
+      "url": "https://huly.io",
+      "desc": "Tasks, chat, and files are present; proofing is absent and hosted Huly is dead"
+    },
+    {
+      "name": "Leantime",
+      "url": "https://leantime.io",
+      "desc": "Projects, discussions, files, and reports are present; visual proofing is not"
+    },
+    {
+      "name": "OpenProject",
+      "url": "https://www.openproject.org",
+      "desc": "Planning and reporting are extensive, but there is no ProofHub-style visual proofing workflow"
+    }
+  ],
   "relatedSlugs": [
     "clickup",
     "asana",

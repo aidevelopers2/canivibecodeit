@@ -116,9 +116,83 @@
       "lastCommit": "2026-08",
       "selfHost": "ops",
       "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "tawk.to",
+      "url": "https://www.tawk.to/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "ios",
+        "android"
+      ],
+      "desc": "Live chat, tickets, email, and a help centre for zero dollars; the tiny tawk.to badge pays the rent.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-07"
+    },
+    {
+      "name": "HubSpot Free Help Desk",
+      "url": "https://www.hubspot.com/products/service/help-desk",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "A hosted shared inbox, live chat, and ticket queue for two users; the knowledge base lives upstairs.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-07"
+    },
+    {
+      "name": "Odoo Helpdesk One App Free",
+      "url": "https://www.odoo.com/app/helpdesk",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "A real hosted ticket desk for unlimited users, as long as Helpdesk is your one free Odoo app.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-07"
+    },
+    {
+      "name": "LibreDesk",
+      "url": "https://libredesk.io/",
+      "type": "open-source",
+      "repo": "https://github.com/abhinavxd/libredesk",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A modern email-and-live-chat desk in one compact stack, because apparently that was allowed.",
+      "stars": 2682,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-07"
     }
   ],
-  "rejectedAlternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "FreeScout",
+      "url": "https://freescout.net/",
+      "desc": "The shared mailbox is free; the rules that make it Front-like are a paid module."
+    },
+    {
+      "name": "Freshdesk Free Program",
+      "url": "https://www.freshworks.com/freshdesk/pricing/",
+      "desc": "The no-cost program expires after six months; that is a trial with better manners."
+    }
+  ],
   "relatedSlugs": [
     "intercom",
     "zendesk",

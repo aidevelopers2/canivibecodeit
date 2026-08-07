@@ -52,8 +52,45 @@
       "desc": "Active open-source resume builder with structured data and PDF export."
     }
   ],
-  "alternatives": [],
-  "rejectedAlternatives": [],
+  "alternatives": [
+    {
+      "name": "Resume Matcher",
+      "url": "https://www.resumematcher.fyi/",
+      "type": "open-source",
+      "repo": "https://github.com/srbhr/Resume-Matcher",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Transparent job-match scoring, missing terms and concrete edits instead of an unexplained motivational number.",
+      "stars": 28000,
+      "lastCommit": "2026-07",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Jobalytics ATS Checker",
+      "url": "https://jobalytics.app/free-ats-checker",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "browser-extension"
+      ],
+      "desc": "An unlimited resume-to-job checker that shows the terms it matched and the ones you forgot.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "OpenResume",
+      "url": "https://www.open-resume.com/",
+      "desc": "Its parser is useful, but the repository has been quiet since October 2024 and there is no real job-description scoring workflow."
+    }
+  ],
   "relatedSlugs": [
     "teal-plus",
     "jobscan",

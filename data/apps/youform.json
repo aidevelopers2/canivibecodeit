@@ -56,8 +56,74 @@
       "desc": "Open-source form builder and collection backend."
     }
   ],
-  "alternatives": [],
-  "rejectedAlternatives": [],
+  "alternatives": [
+    {
+      "name": "HeyForm",
+      "url": "https://heyform.net",
+      "type": "open-source",
+      "repo": "https://github.com/heyform/heyform",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Typeform's manners, minus the monthly rent",
+      "stars": 8881,
+      "lastCommit": "2026-07",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Typebot",
+      "url": "https://typebot.io",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Conversational forms with deep branching; self-hosting is free under a fair-source licence",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "OpnForm",
+      "url": "https://opnform.com",
+      "type": "open-source",
+      "repo": "https://github.com/OpnForm/OpnForm",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Open-source forms with unlimited respondents; the free self-hosted builder team stops at two",
+      "stars": 3500,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Tally",
+      "url": "https://tally.so",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "A generous hosted form builder; branding and custom domains are the upsell",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "TellForm",
+      "url": "https://github.com/tellform/tellform",
+      "desc": "A once-famous Typeform clone; archived since 2019, which is a long time to trust a form endpoint"
+    }
+  ],
   "relatedSlugs": [
     "heyflow",
     "involve-me",

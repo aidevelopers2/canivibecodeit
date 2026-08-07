@@ -51,7 +51,74 @@
       "desc": "Long-running open-source learning platform with courses, assessments, and progress tracking."
     }
   ],
-  "alternatives": [],
+  "alternatives": [
+    {
+      "name": "LearnHouse",
+      "url": "https://www.learnhouse.app/",
+      "type": "open-source",
+      "repo": "https://github.com/learnhouse/learnhouse",
+      "platforms": [
+        "web",
+        "self-hosted",
+        "cli"
+      ],
+      "desc": "A private course library for videos, files, quizzes, assignments and discussion, with no creator marketplace attached.",
+      "stars": 2100,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Kolibri",
+      "url": "https://learningequality.org/kolibri/",
+      "type": "open-source",
+      "repo": "https://github.com/learningequality/kolibri",
+      "platforms": [
+        "web",
+        "windows",
+        "linux",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "An offline-first library for owned videos, audio and documents, plus lessons, assignments and progress.",
+      "stars": 1100,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Frappe Learning",
+      "url": "https://frappe.io/learning",
+      "type": "open-source",
+      "repo": "https://github.com/frappe/lms",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Courses, videos, PDFs, quizzes, assignments and cohorts in a capable stack that expects you to meet Frappe.",
+      "stars": 3100,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Moodle",
+      "url": "https://moodle.org/",
+      "type": "open-source",
+      "repo": "https://github.com/moodle/moodle",
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "Organizes owned tutorial videos and projects with completion tracking; a private school where you are also IT.",
+      "stars": 7300,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
   "rejectedAlternatives": [],
   "relatedSlugs": [
     "duolingo-super",

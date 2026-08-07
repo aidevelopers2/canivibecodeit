@@ -53,8 +53,44 @@
       "desc": "Open-source self-hosted trail database and route explorer using open map data."
     }
   ],
-  "alternatives": [],
-  "rejectedAlternatives": [],
+  "alternatives": [
+    {
+      "name": "OsmAnd~",
+      "url": "https://f-droid.org/packages/net.osmand.plus/",
+      "type": "open-source",
+      "repo": "https://github.com/osmandapp/OsmAnd",
+      "platforms": [
+        "android"
+      ],
+      "desc": "Offline topo maps, routes and GPX on Android; trail discovery is OpenStreetMap, not AllTrails.",
+      "stars": 5900,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Organic Maps",
+      "url": "https://organicmaps.app/",
+      "type": "open-source",
+      "repo": "https://github.com/organicmaps/organicmaps",
+      "platforms": [
+        "ios",
+        "android"
+      ],
+      "desc": "Offline OSM maps, bookmarks and GPX files with no account and no subscription.",
+      "stars": 14989,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Wanderer",
+      "url": "https://wanderer.to/",
+      "desc": "A fine GPX route library, but it does not provide offline trip notes on the trail."
+    }
+  ],
   "relatedSlugs": [
     "tripit-pro",
     "wanderlog-pro",

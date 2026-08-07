@@ -53,8 +53,31 @@
       "desc": "Active open-source personal music server for legally owned libraries."
     }
   ],
-  "alternatives": [],
-  "rejectedAlternatives": [],
+  "alternatives": [
+    {
+      "name": "Audacity",
+      "url": "https://www.audacityteam.org/",
+      "type": "open-source",
+      "repo": "https://github.com/audacity/audacity",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "The unglamorous local release bench: edit, normalize, batch, export, repeat.",
+      "stars": 17500,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "REAPER",
+      "url": "https://www.reaper.fm/",
+      "desc": "The famous endless trial is a 60-day evaluation; after that you owe the license."
+    }
+  ],
   "relatedSlugs": [
     "spotify-premium",
     "apple-music",

@@ -53,8 +53,91 @@
       "desc": "Active open-source project and issue tracking platform."
     }
   ],
-  "alternatives": [],
-  "rejectedAlternatives": [],
+  "alternatives": [
+    {
+      "name": "Plane",
+      "url": "https://plane.so",
+      "type": "open-source",
+      "repo": "https://github.com/makeplane/plane",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Linear-and-Jira-shaped work tracking without the subscription; the stack behind it is not small",
+      "stars": 55600,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "OpenProject",
+      "url": "https://www.openproject.org",
+      "type": "open-source",
+      "repo": "https://github.com/opf/openproject",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "The enterprise project suite; free in money, expensive in menus",
+      "stars": 15200,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "YouTrack",
+      "url": "https://www.jetbrains.com/youtrack/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "A full project tracker for ten people; user eleven is where JetBrains remembers billing",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Leantime",
+      "url": "https://leantime.io",
+      "type": "open-source",
+      "repo": "https://github.com/Leantime/leantime",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A small-team project suite that remembers goals and timesheets, not just tickets",
+      "stars": 10000,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Redmine",
+      "url": "https://www.redmine.org",
+      "type": "open-source",
+      "repo": "https://github.com/redmine/redmine",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Project tracking, time sheets, Gantt, and wikis from the era when software admitted it needed configuration",
+      "stars": 6000,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Focalboard",
+      "url": "https://github.com/mattermost-community/focalboard",
+      "desc": "Still recommended everywhere; Mattermost stopped maintaining it and the last standalone release was April 2023"
+    }
+  ],
   "relatedSlugs": [
     "monday-com",
     "clickup",

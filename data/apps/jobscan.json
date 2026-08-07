@@ -52,8 +52,45 @@
       "desc": "Active open-source resume builder with structured data and PDF export."
     }
   ],
-  "alternatives": [],
-  "rejectedAlternatives": [],
+  "alternatives": [
+    {
+      "name": "Resume Matcher",
+      "url": "https://www.resumematcher.fyi/",
+      "type": "open-source",
+      "repo": "https://github.com/srbhr/Resume-Matcher",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Paste a job description, inspect the keyword and section gaps, then generate a truthful tailored copy.",
+      "stars": 28000,
+      "lastCommit": "2026-07",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Jobalytics ATS Checker",
+      "url": "https://jobalytics.app/free-ats-checker",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "browser-extension"
+      ],
+      "desc": "A genuinely unlimited checker for matched and missing terms, without making you create an account first.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "OpenResume",
+      "url": "https://www.open-resume.com/",
+      "desc": "Popular and open-source, but its last meaningful repository activity was October 2024 and it checks ATS readability rather than job fit."
+    }
+  ],
   "relatedSlugs": [
     "teal-plus",
     "huntr",

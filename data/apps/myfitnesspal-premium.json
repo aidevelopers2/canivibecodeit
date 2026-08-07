@@ -52,7 +52,69 @@
       "desc": "Active open-source fitness and workout management application."
     }
   ],
-  "alternatives": [],
+  "alternatives": [
+    {
+      "name": "OpenNutriTracker",
+      "url": "https://simonoppowa.github.io/OpenNutriTracker-Website/",
+      "type": "open-source",
+      "repo": "https://github.com/simonoppowa/OpenNutriTracker",
+      "platforms": [
+        "ios",
+        "android"
+      ],
+      "desc": "Calories, macros and micronutrients stay on your phone; the app declines to become your diet coach.",
+      "stars": 2300,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Food You",
+      "url": "https://foodyou.maksimowiczm.com/",
+      "type": "open-source",
+      "repo": "https://github.com/maksimowiczm/FoodYou",
+      "platforms": [
+        "android"
+      ],
+      "desc": "A local Android food diary with proper micronutrients and none of the motivational yelling.",
+      "stars": 520,
+      "lastCommit": "2026-06",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Waistline",
+      "url": "https://waist-line.com/",
+      "type": "open-source",
+      "repo": "https://github.com/davidhealey/waistline",
+      "platforms": [
+        "android"
+      ],
+      "desc": "A plain Android calorie diary that keeps its data local and its opinions to itself.",
+      "stars": 714,
+      "lastCommit": "2026-07",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "wger",
+      "url": "https://wger.de/",
+      "type": "open-source",
+      "repo": "https://github.com/wger-project/wger",
+      "platforms": [
+        "web",
+        "linux",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "Meals, workouts and trend charts in one open-source bunker; polish is not the main feature.",
+      "stars": 6600,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
   "rejectedAlternatives": [],
   "relatedSlugs": [
     "strava",

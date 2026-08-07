@@ -53,8 +53,41 @@
       "desc": "Active open-source project and issue tracking platform."
     }
   ],
-  "alternatives": [],
-  "rejectedAlternatives": [],
+  "alternatives": [
+    {
+      "name": "YouTrack",
+      "url": "https://www.jetbrains.com/youtrack/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "Boards, recurring work via visual schedules, Gantt, calendars, and reports for ten users",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Focalboard",
+      "url": "https://github.com/mattermost-community/focalboard",
+      "desc": "Still recommended everywhere; Mattermost stopped maintaining it and the last standalone release was April 2023"
+    },
+    {
+      "name": "OpenProject",
+      "url": "https://www.openproject.org",
+      "desc": "Boards and timelines are free, but recurring tasks are still on the late-2026 roadmap"
+    },
+    {
+      "name": "PLANKA",
+      "url": "https://planka.app",
+      "desc": "The free Community edition paywalls recurring cards and calendar view, both central to this job"
+    }
+  ],
   "relatedSlugs": [
     "asana",
     "monday-com",

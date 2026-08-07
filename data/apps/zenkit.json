@@ -57,7 +57,23 @@
     }
   ],
   "alternatives": [],
-  "rejectedAlternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "AFFiNE",
+      "url": "https://affine.pro",
+      "desc": "Documents, whiteboards, and databases are real; there is no mature project-task engine"
+    },
+    {
+      "name": "AppFlowy",
+      "url": "https://www.appflowy.io",
+      "desc": "The workspace has databases and kanban, but free self-hosted collaboration is one member plus guests"
+    },
+    {
+      "name": "Docmost",
+      "url": "https://docmost.com",
+      "desc": "The open-source wiki is real, but the database and kanban feature called Bases is commercial"
+    }
+  ],
   "relatedSlugs": [
     "proofhub",
     "clickup",

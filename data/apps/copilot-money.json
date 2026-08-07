@@ -50,7 +50,77 @@
       "status": "alive"
     }
   ],
-  "alternatives": [],
+  "alternatives": [
+    {
+      "name": "Wealthfolio",
+      "url": "https://wealthfolio.app/",
+      "type": "open-source",
+      "repo": "https://github.com/afadil/wealthfolio",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "self-hosted"
+      ],
+      "desc": "Portfolio, net worth, spending and budgets on your own device; automatic broker sync is the paid convenience.",
+      "stars": 8500,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Money Manager Ex",
+      "url": "https://moneymanagerex.org/",
+      "type": "open-source",
+      "repo": "https://github.com/moneymanagerex/moneymanagerex",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android"
+      ],
+      "desc": "A local ledger with budgets, reports and investments; the interface has no subscription budget.",
+      "stars": 2200,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "GnuCash",
+      "url": "https://www.gnucash.org/",
+      "type": "open-source",
+      "repo": "https://github.com/gnucash/gnucash",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "Spending, budgets and investments in a serious double-entry desktop; simplicity did not make the balance sheet.",
+      "stars": 4300,
+      "lastCommit": "2026-06",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "KMyMoney",
+      "url": "https://kmymoney.org/",
+      "type": "open-source",
+      "repo": "https://github.com/KDE/kmymoney",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "Budgets, investments and cash-flow forecasts on the desktop; delight was not in the KDE requirements.",
+      "stars": 202,
+      "lastCommit": "2026-07",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
   "rejectedAlternatives": [],
   "relatedSlugs": [
     "fathom-hq",

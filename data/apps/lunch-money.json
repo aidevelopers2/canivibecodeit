@@ -51,7 +51,92 @@
       "desc": "Active local-first open-source personal finance application."
     }
   ],
-  "alternatives": [],
+  "alternatives": [
+    {
+      "name": "FreeBudget",
+      "url": "https://freebudget.org/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "Budgets, rules, CSV imports and net worth for free; live bank links are the one thing that sends a small bill.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Actual Budget",
+      "url": "https://actualbudget.org/",
+      "type": "open-source",
+      "repo": "https://github.com/actualbudget/actual",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "A transparent ledger with imports, rules and reports on your own disk; automatic bank sync is optional.",
+      "stars": 28000,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Firefly III",
+      "url": "https://www.firefly-iii.org/",
+      "type": "open-source",
+      "repo": "https://github.com/firefly-iii/firefly-iii",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A meticulous imported ledger with rules and reports in Docker; powerful, private and willing to teach accounting words.",
+      "stars": 24200,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "ezBookkeeping",
+      "url": "https://ezbookkeeping.mayswind.net/",
+      "type": "open-source",
+      "repo": "https://github.com/mayswind/ezBookkeeping",
+      "platforms": [
+        "web",
+        "self-hosted",
+        "cli"
+      ],
+      "desc": "A fast private ledger with absurdly broad import support, mapping rules and sharp reports; budgeting is deliberately not invited.",
+      "stars": 5400,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Wealthfolio",
+      "url": "https://wealthfolio.app/",
+      "type": "open-source",
+      "repo": "https://github.com/afadil/wealthfolio",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "self-hosted"
+      ],
+      "desc": "Transactions, rules, spending reports and net worth on your device; automatic account sync is paid.",
+      "stars": 8500,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
   "rejectedAlternatives": [],
   "relatedSlugs": [
     "rocket-money",

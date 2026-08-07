@@ -52,8 +52,91 @@
       "status": "alive"
     }
   ],
-  "alternatives": [],
-  "rejectedAlternatives": [],
+  "alternatives": [
+    {
+      "name": "Invoice Ninja self-hosted",
+      "url": "https://invoiceninja.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "The same invoicing stack on your own server; billing is free, the license is source-available, and removing its branding costs extra.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "InvoiceShelf",
+      "url": "https://invoiceshelf.com/",
+      "type": "open-source",
+      "repo": "https://github.com/InvoiceShelf/InvoiceShelf",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Invoices, estimates, expenses, payments and a client portal; the bill arrives as Docker maintenance instead.",
+      "stars": 1800,
+      "lastCommit": "2026-07",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "ERPNext",
+      "url": "https://frappe.io/erpnext",
+      "type": "open-source",
+      "repo": "https://github.com/frappe/erpnext",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Quotes, invoices, payments, expenses and a portal inside a much larger ERP than anyone ordered.",
+      "stars": 37700,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Zoho Invoice",
+      "url": "https://www.zoho.com/invoice/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "Quotes, time, expenses, payments and a portal for free; Zoho still keeps an annual invoice ceiling.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Crater",
+      "url": "https://github.com/crater-invoice-inc/crater",
+      "desc": "Still widely recommended; last push August 2024 and the last release is four years old."
+    },
+    {
+      "name": "InvoicePlane",
+      "url": "https://invoiceplane.com/",
+      "desc": "Quotes, invoices and payments are solid; expenses and a real client portal never show up."
+    },
+    {
+      "name": "SolidInvoice",
+      "url": "https://solidinvoice.co/",
+      "desc": "Quotes, recurring invoices and payments are here; expense tracking and a client portal are not."
+    }
+  ],
   "relatedSlugs": [
     "ynab",
     "monarch-money",

@@ -50,7 +50,13 @@
     }
   ],
   "alternatives": [],
-  "rejectedAlternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "ClaimSolo",
+      "url": "https://github.com/codecube/ClaimSolo",
+      "desc": "Exactly the right workflow, but it is an 11-commit source checkout with two stars and no installer."
+    }
+  ],
   "relatedSlugs": [],
   "pagePriority": 4,
   "verifiedOneShot": false,

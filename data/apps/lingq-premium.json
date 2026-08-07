@@ -52,8 +52,45 @@
       "desc": "Long-running open-source learning platform with courses, assessments, and progress tracking."
     }
   ],
-  "alternatives": [],
-  "rejectedAlternatives": [],
+  "alternatives": [
+    {
+      "name": "Lute",
+      "url": "https://luteorg.github.io/lute-manual/",
+      "type": "open-source",
+      "repo": "https://github.com/LuteOrg/lute-v3",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Import text and audio, mark every word by familiarity and review it in context; this is the unusually exact one.",
+      "stars": 1517,
+      "lastCommit": "2026-07",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Learning with Texts",
+      "url": "https://hugofara.github.io/lwt/",
+      "type": "open-source",
+      "repo": "https://github.com/HugoFara/lwt",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "The older, homelier version of the same idea: imported texts, audio, known-word states and contextual review.",
+      "stars": 240,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "LinguaCafe",
+      "url": "https://simjanos-dev.github.io/LinguaCafeHome/",
+      "desc": "Almost a direct LingQ clone, but its last repository activity was March 2025, outside the maintenance bar."
+    }
+  ],
   "relatedSlugs": [
     "duolingo-super",
     "brilliant",

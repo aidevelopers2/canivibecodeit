@@ -53,7 +53,55 @@
       "desc": "Active open-source localization platform with translation memory and in-context tooling."
     }
   ],
-  "alternatives": [],
+  "alternatives": [
+    {
+      "name": "MateCat",
+      "url": "https://www.matecat.com/",
+      "type": "open-source",
+      "repo": "https://github.com/matecat/MateCat",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Free hosted translation jobs with memory, machine translation, sharing and an optional professional marketplace.",
+      "stars": 505,
+      "lastCommit": "2026-08",
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "OmegaT",
+      "url": "https://omegat.org/",
+      "type": "open-source",
+      "repo": "https://github.com/omegat-org/omegat",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "A dependable desktop CAT tool for jobs, memory, glossaries and approved machine translation; no freelancer bazaar included.",
+      "stars": 526,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Weblate",
+      "url": "https://weblate.org/",
+      "type": "open-source",
+      "repo": "https://github.com/WeblateOrg/weblate",
+      "platforms": [
+        "web",
+        "self-hosted",
+        "cli"
+      ],
+      "desc": "Handles collaborative software-translation jobs with memory and review, but wisely does not impersonate Smartcat's marketplace.",
+      "stars": 6000,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
   "rejectedAlternatives": [],
   "relatedSlugs": [
     "lokalise",

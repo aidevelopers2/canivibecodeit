@@ -57,7 +57,23 @@
     }
   ],
   "alternatives": [],
-  "rejectedAlternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "AppFlowy",
+      "url": "https://www.appflowy.io",
+      "desc": "It can host team knowledge, but the official free self-hosted collaboration tier is one seat plus guests"
+    },
+    {
+      "name": "Docmost",
+      "url": "https://docmost.com",
+      "desc": "Search and collaborative pages are excellent; verification and staleness workflows are missing"
+    },
+    {
+      "name": "Outline",
+      "url": "https://www.getoutline.com",
+      "desc": "It is the obvious recommendation, but self-hosting starts at $10 a month and cloud is trial-only"
+    }
+  ],
   "relatedSlugs": [
     "tettra",
     "guru",

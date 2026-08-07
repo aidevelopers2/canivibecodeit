@@ -58,7 +58,18 @@
     }
   ],
   "alternatives": [],
-  "rejectedAlternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Actual Budget",
+      "url": "https://actualbudget.org/",
+      "desc": "A maintained ledger, not a tax service; it will not find write-offs or file a return."
+    },
+    {
+      "name": "TaxHacker",
+      "url": "https://taxhacker.app/",
+      "desc": "It can classify receipts and statements, but it neither gives tax advice nor files a return."
+    }
+  ],
   "relatedSlugs": [
     "zoho-books",
     "sage-accounting",

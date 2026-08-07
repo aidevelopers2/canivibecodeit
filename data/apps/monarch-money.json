@@ -52,7 +52,76 @@
       "status": "alive"
     }
   ],
-  "alternatives": [],
+  "alternatives": [
+    {
+      "name": "Wealthfolio",
+      "url": "https://wealthfolio.app/",
+      "type": "open-source",
+      "repo": "https://github.com/afadil/wealthfolio",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "self-hosted"
+      ],
+      "desc": "Investments, net worth, spending, budgets and goals on your device; automatic broker sync is the paid shortcut.",
+      "stars": 8500,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Actual Budget",
+      "url": "https://actualbudget.org/",
+      "type": "open-source",
+      "repo": "https://github.com/actualbudget/actual",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "Budgets, imported transactions, schedules and reports on your disk; investment analytics are much thinner.",
+      "stars": 28000,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Firefly III",
+      "url": "https://www.firefly-iii.org/",
+      "type": "open-source",
+      "repo": "https://github.com/firefly-iii/firefly-iii",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Transactions, budgets, goals and net worth in Docker; portfolio analysis is not its favourite spreadsheet.",
+      "stars": 24200,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "FreeBudget",
+      "url": "https://freebudget.org/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "Budgets, rules, CSV imports, reports and net worth for free; live bank links cost extra.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
   "rejectedAlternatives": [],
   "relatedSlugs": [
     "copilot-money",

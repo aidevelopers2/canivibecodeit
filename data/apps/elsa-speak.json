@@ -51,7 +51,55 @@
       "desc": "Long-running open-source learning platform with courses, assessments, and progress tracking."
     }
   ],
-  "alternatives": [],
+  "alternatives": [
+    {
+      "name": "Speechling",
+      "url": "https://speechling.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "Native-audio imitation, side-by-side recordings and a small monthly ration of human pronunciation coaching.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Anki",
+      "url": "https://apps.ankiweb.net/",
+      "type": "open-source",
+      "repo": "https://github.com/ankitects/anki",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "Records your voice beside reference audio for honest comparison, but does not invent a dubious pronunciation diagnosis.",
+      "stars": 29600,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "AnkiDroid",
+      "url": "https://ankidroid.org/",
+      "type": "open-source",
+      "repo": "https://github.com/ankidroid/Anki-Android",
+      "platforms": [
+        "android"
+      ],
+      "desc": "Mobile listen-and-record practice using your own cards; feedback comes from your ears rather than an AI score.",
+      "stars": 11499,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
   "rejectedAlternatives": [],
   "relatedSlugs": [
     "duolingo-super",

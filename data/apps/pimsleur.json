@@ -50,7 +50,56 @@
       "desc": "Long-running open-source learning platform with courses, assessments, and progress tracking."
     }
   ],
-  "alternatives": [],
+  "alternatives": [
+    {
+      "name": "Anki",
+      "url": "https://apps.ankiweb.net/",
+      "type": "open-source",
+      "repo": "https://github.com/ankitects/anki",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "Turns legally owned audio and recall prompts into a scheduled personal course, without supplying Pimsleur's recordings.",
+      "stars": 29600,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "AnkiDroid",
+      "url": "https://ankidroid.org/",
+      "type": "open-source",
+      "repo": "https://github.com/ankidroid/Anki-Android",
+      "platforms": [
+        "android"
+      ],
+      "desc": "An offline Android player and scheduler for your own audio recall cards, not a free copy of the copyrighted course.",
+      "stars": 11499,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Moodle",
+      "url": "https://moodle.org/",
+      "type": "open-source",
+      "repo": "https://github.com/moodle/moodle",
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "Sequences owned audio lessons, recall activities and progress for a learner or class; setup is much less conversational.",
+      "stars": 7300,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
   "rejectedAlternatives": [],
   "relatedSlugs": [
     "duolingo-super",

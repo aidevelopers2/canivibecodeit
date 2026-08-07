@@ -53,7 +53,23 @@
     }
   ],
   "alternatives": [],
-  "rejectedAlternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "GTranslate Free",
+      "url": "https://gtranslate.io/",
+      "desc": "The free widget has no translated routes, search indexing or manual editing; the actual Linguise job starts on paid plans."
+    },
+    {
+      "name": "LibreTranslate",
+      "url": "https://libretranslate.com/",
+      "desc": "A maintained translation server and API, not a finished product that discovers a site and emits localized routes."
+    },
+    {
+      "name": "TranslatePress Free",
+      "url": "https://translatepress.com/",
+      "desc": "A useful free WordPress translator, not a deploy-time static-route generator for an arbitrary site."
+    }
+  ],
   "relatedSlugs": [
     "lokalise",
     "crowdin",

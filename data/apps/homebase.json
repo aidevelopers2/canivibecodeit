@@ -52,8 +52,103 @@
       "desc": "Active open-source human-resources and payroll application built on Frappe."
     }
   ],
-  "alternatives": [],
-  "rejectedAlternatives": [],
+  "alternatives": [
+    {
+      "name": "Sling Free",
+      "url": "https://getsling.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "Shift scheduling, availability and swaps for 30 people; the time clock is where the upsell starts.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "7shifts Comp",
+      "url": "https://www.7shifts.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "Schedules, availability, time off and shift swaps for one 15-person location; restaurant branding comes free too.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Connecteam Small Business Plan",
+      "url": "https://connecteam.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "Scheduling, time off and shift changes for ten people; user eleven has a price tag.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Horilla HR",
+      "url": "https://www.horilla.com/",
+      "type": "open-source",
+      "repo": "https://github.com/horilla/horilla-hr",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Schedules, rotating shifts and leave in Docker; a whole HR suite comes along for the ride.",
+      "stars": 1400,
+      "lastCommit": "2026-07",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Frappe HR",
+      "url": "https://frappe.io/hr",
+      "type": "open-source",
+      "repo": "https://github.com/frappe/hrms",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Schedules, shifts and leave in a full HR stack; running the stack is the unpaid role.",
+      "stars": 8500,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Homebase Basic",
+      "url": "https://www.joinhomebase.com/",
+      "desc": "The $0 plan builds a weekly schedule, but availability, time-off requests and shift trades start on paid tiers."
+    },
+    {
+      "name": "Jibble Scheduling",
+      "url": "https://www.jibble.io/employee-scheduling-software",
+      "desc": "The free scheduling page still says Coming soon, so it cannot replace a scheduler today."
+    },
+    {
+      "name": "TimeTrex Community",
+      "url": "https://portal.timetrex.com/community-edition",
+      "desc": "Community Edition was discontinued in October 2024 and no longer receives security updates."
+    }
+  ],
   "relatedSlugs": [
     "gusto",
     "rippling",

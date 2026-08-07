@@ -57,7 +57,23 @@
       "desc": "Open-source form builder and collection backend."
     }
   ],
-  "alternatives": [],
+  "alternatives": [
+    {
+      "name": "Formbricks",
+      "url": "https://formbricks.com",
+      "type": "open-source",
+      "repo": "https://github.com/formbricks/formbricks",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Serious survey machinery without the enterprise invoice; self-hosting still means owning the machinery",
+      "stars": 12700,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
   "rejectedAlternatives": [],
   "relatedSlugs": [
     "uservoice",

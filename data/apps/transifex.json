@@ -53,7 +53,72 @@
       "desc": "Active open-source localization platform with translation memory and in-context tooling."
     }
   ],
-  "alternatives": [],
+  "alternatives": [
+    {
+      "name": "Tolgee",
+      "url": "https://tolgee.io/",
+      "type": "open-source",
+      "repo": "https://github.com/tolgee/tolgee-platform",
+      "platforms": [
+        "web",
+        "self-hosted",
+        "browser-extension",
+        "cli"
+      ],
+      "desc": "In-context product localization with memory, terminology and review, sized sensibly for a small team.",
+      "stars": 4100,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Weblate",
+      "url": "https://weblate.org/",
+      "type": "open-source",
+      "repo": "https://github.com/WeblateOrg/weblate",
+      "platforms": [
+        "web",
+        "self-hosted",
+        "cli"
+      ],
+      "desc": "A mature continuous-localization system with source-control sync, translation memory, checks and review.",
+      "stars": 6000,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Mozilla Pontoon",
+      "url": "https://pontoon.mozilla.org/",
+      "type": "open-source",
+      "repo": "https://github.com/mozilla/pontoon",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A proven software-localization workspace with repository sync and peer review, but no turnkey little-team deployment.",
+      "stars": 1700,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Accent",
+      "url": "https://www.accent.reviews/",
+      "type": "open-source",
+      "repo": "https://github.com/mirego/accent",
+      "platforms": [
+        "web",
+        "self-hosted",
+        "cli"
+      ],
+      "desc": "String collaboration, history, review and automation in a leaner package than Transifex's expanding universe.",
+      "stars": 1500,
+      "lastCommit": "2026-06",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
   "rejectedAlternatives": [],
   "relatedSlugs": [
     "lokalise",

@@ -53,7 +53,40 @@
       "desc": "Long-running open-source multitrack audio editor and useful implementation prior art."
     }
   ],
-  "alternatives": [],
+  "alternatives": [
+    {
+      "name": "Kdenlive",
+      "url": "https://kdenlive.org/",
+      "type": "open-source",
+      "repo": "https://github.com/KDE/kdenlive",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "Turn waveforms and captions into social clips manually; automation is the missing employee.",
+      "stars": 5400,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Shotcut",
+      "url": "https://www.shotcut.org/",
+      "type": "open-source",
+      "repo": "https://github.com/mltframework/shotcut",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "Captions, waveforms and vertical exports without a subscription; you still do the cutting.",
+      "stars": 14800,
+      "lastCommit": "2026-07",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
   "rejectedAlternatives": [],
   "relatedSlugs": [
     "riverside",

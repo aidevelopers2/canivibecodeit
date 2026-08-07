@@ -53,7 +53,18 @@
     }
   ],
   "alternatives": [],
-  "rejectedAlternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Actual Budget",
+      "url": "https://actualbudget.org/",
+      "desc": "Excellent budgeting software, but not a transparent spreadsheet model with reusable sheet templates."
+    },
+    {
+      "name": "Aspire Budgeting",
+      "url": "https://aspirebudget.com/",
+      "desc": "The spreadsheet is free, but CSV import and auto-categorization live in the $5/month Turbo add-on."
+    }
+  ],
   "relatedSlugs": [
     "rocket-money",
     "quicken-simplifi",

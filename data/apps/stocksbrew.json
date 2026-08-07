@@ -50,7 +50,18 @@
     }
   ],
   "alternatives": [],
-  "rejectedAlternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "OpenBB",
+      "url": "https://openbb.co/",
+      "desc": "A financial-data workbench, not a service handing you current calls, targets and earnings alerts."
+    },
+    {
+      "name": "Stocknear Basic",
+      "url": "https://stocknear.com/",
+      "desc": "The data is real, but five watchlist slots and three alerts make the free tier a demo, not a StocksBrew replacement."
+    }
+  ],
   "relatedSlugs": [],
   "pagePriority": 3,
   "verifiedOneShot": false,

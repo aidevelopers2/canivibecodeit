@@ -53,7 +53,23 @@
     }
   ],
   "alternatives": [],
-  "rejectedAlternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "GTranslate Free",
+      "url": "https://gtranslate.io/",
+      "desc": "The free widget swaps text in place but withholds translated URLs, indexing and editing, which are the point of Weglot."
+    },
+    {
+      "name": "LibreTranslate",
+      "url": "https://libretranslate.com/",
+      "desc": "A translation API with a web box, not a crawler, route generator or deploy-time website-localization product."
+    },
+    {
+      "name": "TranslatePress Free",
+      "url": "https://translatepress.com/",
+      "desc": "A respectable free WordPress plugin, not a static-build tool that generates localized routes across arbitrary sites."
+    }
+  ],
   "relatedSlugs": [
     "lokalise",
     "crowdin",

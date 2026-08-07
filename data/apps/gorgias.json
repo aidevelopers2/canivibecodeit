@@ -70,6 +70,24 @@
       "lastCommit": "2026-08",
       "selfHost": "ops",
       "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "tawk.to",
+      "url": "https://www.tawk.to/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "ios",
+        "android"
+      ],
+      "desc": "A free shared inbox with a Shopify order tab; the AI order bot is where the bill starts.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-07"
     }
   ],
   "rejectedAlternatives": [],

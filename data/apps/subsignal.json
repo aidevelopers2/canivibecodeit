@@ -62,7 +62,22 @@
       "desc": "Self-hosted change monitoring with notifications."
     }
   ],
-  "alternatives": [],
+  "alternatives": [
+    {
+      "name": "F5Bot",
+      "url": "https://f5bot.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "Reddit keyword alerts by email; no dashboard, no scoring, no theatre.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-07"
+    }
+  ],
   "rejectedAlternatives": [
     {
       "name": "F5Bot",

@@ -52,7 +52,25 @@
       "desc": "Active open-source personal music server for legally owned libraries."
     }
   ],
-  "alternatives": [],
+  "alternatives": [
+    {
+      "name": "Audiobookshelf",
+      "url": "https://www.audiobookshelf.org/",
+      "type": "open-source",
+      "repo": "https://github.com/advplyr/audiobookshelf",
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "A private audiobook shelf with a basic ebook reader; it is a library, not a bookstore.",
+      "stars": 13900,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
   "rejectedAlternatives": [],
   "relatedSlugs": [
     "spotify-premium",

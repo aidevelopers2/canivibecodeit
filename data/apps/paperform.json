@@ -51,8 +51,29 @@
       "desc": "Active open-source survey and experience-management platform."
     }
   ],
-  "alternatives": [],
-  "rejectedAlternatives": [],
+  "alternatives": [
+    {
+      "name": "Tally",
+      "url": "https://tally.so",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web"
+      ],
+      "desc": "The closest free document-like form editor; branding and custom domains are the tax",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "OpnForm",
+      "url": "https://opnform.com",
+      "desc": "A capable form builder, but its layout is still form-shaped rather than document-shaped"
+    }
+  ],
   "relatedSlugs": [
     "surveymonkey",
     "fillout",

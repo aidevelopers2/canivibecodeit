@@ -65,6 +65,11 @@
       "name": "Mautic",
       "url": "https://mautic.org/",
       "desc": "It can run the sequence, but it does not enrich contacts through user-supplied providers without custom integration work."
+    },
+    {
+      "name": "n8n",
+      "url": "https://n8n.io/",
+      "desc": "It can wire enrichment APIs together, which is precisely the building project this list excludes."
     }
   ],
   "relatedSlugs": [

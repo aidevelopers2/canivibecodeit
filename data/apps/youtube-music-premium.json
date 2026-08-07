@@ -53,7 +53,119 @@
       "desc": "Active open-source personal music server for legally owned libraries."
     }
   ],
-  "alternatives": [],
+  "alternatives": [
+    {
+      "name": "Navidrome",
+      "url": "https://www.navidrome.org/",
+      "type": "open-source",
+      "repo": "https://github.com/navidrome/navidrome",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "Your music, your disk, your streaming server; the licensed catalogue is the part it cannot clone.",
+      "stars": 22700,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Jellyfin",
+      "url": "https://jellyfin.org/",
+      "type": "open-source",
+      "repo": "https://github.com/jellyfin/jellyfin",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "A media server that also handles music, because apparently your albums can live beside your films.",
+      "stars": 54980,
+      "lastCommit": "2026-07",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Koel",
+      "url": "https://koel.dev/",
+      "type": "open-source",
+      "repo": "https://github.com/koel/koel",
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "A clean personal jukebox; solo listening is free, team features are not.",
+      "stars": 17200,
+      "lastCommit": "2026-07",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "mStream",
+      "url": "https://mstream.io/",
+      "type": "open-source",
+      "repo": "https://github.com/IrosTheBeggar/mStream",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "The small, installable music server for people who do not want a media empire.",
+      "stars": 2400,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Swing Music",
+      "url": "https://github.com/swingmx/swingmusic",
+      "type": "open-source",
+      "repo": "https://github.com/swingmx/swingmusic",
+      "platforms": [
+        "web",
+        "macos",
+        "windows",
+        "linux",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "A prettier private jukebox with daily mixes; remote access still becomes your networking hobby.",
+      "stars": 2000,
+      "lastCommit": "2026-05",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Ampache",
+      "url": "https://ampache.org/",
+      "type": "open-source",
+      "repo": "https://github.com/ampache/ampache",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A mature web jukebox with enough knobs to remind you it predates subscription fatigue.",
+      "stars": 3800,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
   "rejectedAlternatives": [],
   "relatedSlugs": [
     "spotify-premium",

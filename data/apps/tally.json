@@ -52,8 +52,45 @@
       "status": "alive"
     }
   ],
-  "alternatives": [],
-  "rejectedAlternatives": [],
+  "alternatives": [
+    {
+      "name": "OpnForm",
+      "url": "https://opnform.com",
+      "type": "open-source",
+      "repo": "https://github.com/OpnForm/OpnForm",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Open-source forms with unlimited respondents; the free self-hosted builder team stops at two",
+      "stars": 3500,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "HeyForm",
+      "url": "https://heyform.net",
+      "type": "open-source",
+      "repo": "https://github.com/heyform/heyform",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Tally's conversational cousin, minus the document-like editor",
+      "stars": 8881,
+      "lastCommit": "2026-07",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Baserow",
+      "url": "https://baserow.io",
+      "desc": "Standard forms are free; one-question Survey Mode is paid, and the editor is database-first"
+    }
+  ],
   "relatedSlugs": [
     "typeform",
     "jotform",

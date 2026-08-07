@@ -56,8 +56,30 @@
       "desc": "Open-source form builder and collection backend."
     }
   ],
-  "alternatives": [],
-  "rejectedAlternatives": [],
+  "alternatives": [
+    {
+      "name": "Forminator",
+      "url": "https://wordpress.org/plugins/forminator/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Forms, polls, quizzes, calculations, and payments, free as long as you already live inside WordPress",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Microsoft Forms",
+      "url": "https://www.microsoft.com/en-us/microsoft-365/online-surveys-polls-quizzes",
+      "desc": "The personal free tier stops at 200 responses per form, so it is a demo with better branding"
+    }
+  ],
   "relatedSlugs": [
     "cognito-forms",
     "formsite",

@@ -53,8 +53,73 @@
       "desc": "Active open-source human-resources and payroll application built on Frappe."
     }
   ],
-  "alternatives": [],
-  "rejectedAlternatives": [],
+  "alternatives": [
+    {
+      "name": "Sling Free",
+      "url": "https://getsling.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "Schedules, availability and manager-approved swaps for 30 people; the time clock costs extra.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "7shifts Comp",
+      "url": "https://www.7shifts.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "A small roster, availability form and approved shift trades for one 15-person location.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Connecteam Small Business Plan",
+      "url": "https://connecteam.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "Scheduling, availability and shift changes for ten people; employee eleven ends the free plan.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Findmyshift Free",
+      "url": "https://www.findmyshift.com/",
+      "desc": "Free forever for five staff, but one week of forward planning and no shift templates is too cramped for an ongoing roster."
+    },
+    {
+      "name": "Homebase Basic",
+      "url": "https://www.joinhomebase.com/",
+      "desc": "The free schedule is real, but availability, time-off requests and shift trades require a paid plan."
+    },
+    {
+      "name": "Jibble Scheduling",
+      "url": "https://www.jibble.io/employee-scheduling-software",
+      "desc": "The scheduling product still says Coming soon."
+    }
+  ],
   "relatedSlugs": [
     "gusto",
     "rippling",

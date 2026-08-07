@@ -50,7 +50,25 @@
       "status": "alive"
     }
   ],
-  "alternatives": [],
+  "alternatives": [
+    {
+      "name": "Atlas CMMS",
+      "url": "https://atlas-cmms.com",
+      "type": "open-source",
+      "repo": "https://github.com/Grashjs/cmms",
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "self-hosted"
+      ],
+      "desc": "Jira for technicians: work orders, assets, PM schedules, and a server you now own",
+      "stars": 717,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
   "rejectedAlternatives": [],
   "relatedSlugs": [
     "todoist",

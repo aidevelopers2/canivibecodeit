@@ -117,6 +117,22 @@
       "lastCommit": null,
       "selfHost": "one-click",
       "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Cherry Studio",
+      "url": "https://cherry-ai.com/",
+      "type": "open-source",
+      "repo": "https://github.com/CherryHQ/cherry-studio",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "A desktop model cockpit with parallel answers, files, agents, and rather more settings than restraint.",
+      "stars": 49901,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-07"
     }
   ],
   "rejectedAlternatives": [
@@ -124,6 +140,11 @@
       "name": "Msty",
       "url": "https://msty.ai/",
       "desc": "The desktop core is $0, but the terms limit it to private non-commercial use; paid work needs a license."
+    },
+    {
+      "name": "LibreChat",
+      "url": "https://www.librechat.ai/",
+      "desc": "A polished multi-provider chat, but it does not send one prompt to several models side by side."
     }
   ],
   "relatedSlugs": [

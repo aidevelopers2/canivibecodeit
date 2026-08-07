@@ -57,8 +57,146 @@
       "desc": "Open-source invoicing, payments, and client management."
     }
   ],
-  "alternatives": [],
-  "rejectedAlternatives": [],
+  "alternatives": [
+    {
+      "name": "Pandle Free",
+      "url": "https://www.pandle.com/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "UK books, invoices and MTD returns for free; live bank feeds, receipt capture and mileage are the £5 temptation.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "ERPNext",
+      "url": "https://frappe.io/erpnext",
+      "type": "open-source",
+      "repo": "https://github.com/frappe/erpnext",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Accounting, invoices, reconciliation, reporting and payroll in one ERP; local filing still needs local judgment.",
+      "stars": 37700,
+      "lastCommit": "2026-08",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Manager Desktop",
+      "url": "https://www.manager.io/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "A full desktop ledger with bank reconciliation and invoices; cloud collaboration did not make the installer.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Bigcapital",
+      "url": "https://bigcapital.app/",
+      "type": "open-source",
+      "repo": "https://github.com/bigcapitalhq/bigcapital",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Modern double-entry accounting and inventory in Docker; automatic bank feeds are not included.",
+      "stars": 3800,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "LedgerSMB",
+      "url": "https://ledgersmb.org/",
+      "type": "open-source",
+      "repo": "https://github.com/ledgersmb/LedgerSMB",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Books, invoices, bank accounts, stock and reports without a subscription; the UI is all business.",
+      "stars": 554,
+      "lastCommit": "2026-07",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Odoo Accounting — One App Free",
+      "url": "https://www.odoo.com/app/accounting",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "desc": "Hosted accounting for zero dollars and unlimited users; adding a second unrelated app ends the free plan.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "hosted",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Dolibarr",
+      "url": "https://www.dolibarr.org/",
+      "type": "open-source",
+      "repo": "https://github.com/Dolibarr/dolibarr",
+      "platforms": [
+        "web",
+        "windows",
+        "linux",
+        "self-hosted"
+      ],
+      "desc": "Invoicing, banking, stock and accounting in one practical suite; payroll is outside the core project.",
+      "stars": 7500,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "GnuCash",
+      "url": "https://www.gnucash.org/",
+      "type": "open-source",
+      "repo": "https://github.com/gnucash/gnucash",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "desc": "Double-entry books, reconciliation and reports on the desktop; cloud convenience is replaced by file ownership.",
+      "stars": 4300,
+      "lastCommit": "2026-06",
+      "selfHost": "one-click",
+      "checkedOn": "2026-08-06"
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "name": "Adminsoft Accounts",
+      "url": "https://www.adminsoftware.biz/",
+      "desc": "The famous free UK answer stopped being free for new releases on 25 July 2026, so the no-cost build is now the frozen one."
+    },
+    {
+      "name": "Akaunting",
+      "url": "https://akaunting.com/",
+      "desc": "The free base is single-entry unless you buy the Double-Entry app, and the repo is BSL rather than open source."
+    }
+  ],
   "relatedSlugs": [
     "freeagent",
     "quicken-simplifi",

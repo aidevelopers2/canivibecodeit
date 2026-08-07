@@ -52,7 +52,38 @@
       "desc": "Active open-source survey and experience-management platform."
     }
   ],
-  "alternatives": [],
+  "alternatives": [
+    {
+      "name": "OpnForm",
+      "url": "https://opnform.com",
+      "type": "open-source",
+      "repo": "https://github.com/OpnForm/OpnForm",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Tally with a server bill instead of a subscription",
+      "stars": 3500,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "HeyForm",
+      "url": "https://heyform.net",
+      "type": "open-source",
+      "repo": "https://github.com/heyform/heyform",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Typeform's manners, minus the monthly rent",
+      "stars": 8881,
+      "lastCommit": "2026-07",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-06"
+    }
+  ],
   "rejectedAlternatives": [],
   "relatedSlugs": [
     "surveymonkey",
