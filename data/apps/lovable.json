@@ -75,6 +75,36 @@
       "lastCommit": "2026-08",
       "selfHost": "one-click",
       "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Onlook",
+      "url": "https://onlook.com",
+      "type": "open-source",
+      "repo": "https://github.com/onlook-dev/onlook",
+      "stars": 26433,
+      "lastCommit": "2026-07",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Open source visual builder that edits a real React codebase with AI, Figma-style.",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-07"
+    },
+    {
+      "name": "open-lovable",
+      "url": "https://github.com/firecrawl/open-lovable",
+      "type": "open-source",
+      "repo": "https://github.com/firecrawl/open-lovable",
+      "stars": 28217,
+      "lastCommit": "2025-11",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Chats a React app together, or clones an existing site into one; bring your own model keys.",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-07"
     }
   ],
   "rejectedAlternatives": [
@@ -87,11 +117,6 @@
       "name": "Continue",
       "url": "https://continue.dev/",
       "desc": "Acquired and read-only, and an editor agent was never a hosted prompt-to-app product."
-    },
-    {
-      "name": "Onlook",
-      "url": "https://onlook.com/",
-      "desc": "The code is active; the product still says early access and sends users to a waitlist."
     }
   ],
   "relatedSlugs": [

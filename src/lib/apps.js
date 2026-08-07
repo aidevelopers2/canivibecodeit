@@ -230,6 +230,19 @@ export function sortedAlternatives(app) {
 // so the bar is 3+ — below that the verdict-page section is the whole story.
 export const ALTERNATIVES_PAGE_MIN = 3;
 
+// Apps whose bare name loses its Google SERP to the everyday word (granola is
+// a cereal results page). Their alternatives titles say "{name} app" instead.
+// Only list apps that LOSE the SERP; big brands (notion, linear) own theirs.
+export const COMMON_NOUN_SLUGS = new Set(['granola', 'timing', 'tower', 'factory']);
+
+// Dataset apps featured on /best-vibe-coding-tools; their pages link back to
+// the roundup (two-way). Keep in sync with that page's groups.
+export const VIBE_CODING_TOOL_SLUGS = new Set([
+  'cursor', 'windsurf', 'lovable', 'bolt-new', 'v0', 'replit',
+  'github-copilot', 'sourcegraph-cody', 'tabnine', 'blackbox-ai',
+  'devin', 'factory',
+]);
+
 export function appsWithAlternativesPage() {
   return allApps().filter(
     (a) => (a.alternatives ?? []).length >= ALTERNATIVES_PAGE_MIN
@@ -252,6 +265,9 @@ export const SELF_HOST_LABELS = {
 const ALT_SITEMAP_PRIORITY = [
   'zapier', 'loom', 'calendly', 'intercom', 'grammarly',
   'notion', 'mailchimp', 'docusign', 'typeform', '1password',
+  // 2026-08-07: the AI builder tools themselves; near-zero KD, real volume
+  // (replit 1,300/mo KD 2, cursor 800 KD 6, lovable 800 KD 1, v0, bolt.new).
+  'replit', 'cursor', 'lovable', 'v0', 'bolt-new', 'windsurf',
 ];
 const ALT_SITEMAP_LIMIT = 30;
 

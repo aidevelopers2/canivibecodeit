@@ -67,6 +67,36 @@
       "lastCommit": "2026-08",
       "selfHost": "one-click",
       "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "OpenUI",
+      "url": "https://github.com/wandb/openui",
+      "type": "open-source",
+      "repo": "https://github.com/wandb/openui",
+      "stars": 22496,
+      "lastCommit": "2026-08",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Describe a component and see it rendered live, with output as HTML, React, or Svelte.",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-07"
+    },
+    {
+      "name": "Onlook",
+      "url": "https://onlook.com",
+      "type": "open-source",
+      "repo": "https://github.com/onlook-dev/onlook",
+      "stars": 26433,
+      "lastCommit": "2026-07",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Visual AI editor for React apps: click an element, restyle it, let the model write the code.",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-07"
     }
   ],
   "rejectedAlternatives": [
@@ -79,11 +109,6 @@
       "name": "Continue",
       "url": "https://continue.dev/",
       "desc": "Acquired and read-only, and an editor agent is not a component generator with live previews."
-    },
-    {
-      "name": "Onlook",
-      "url": "https://onlook.com/",
-      "desc": "The code is active; the product still says early access and sends users to a waitlist."
     }
   ],
   "relatedSlugs": [

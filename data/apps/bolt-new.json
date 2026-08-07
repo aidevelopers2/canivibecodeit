@@ -67,6 +67,36 @@
       "lastCommit": "2026-08",
       "selfHost": "one-click",
       "checkedOn": "2026-08-06"
+    },
+    {
+      "name": "Onlook",
+      "url": "https://onlook.com",
+      "type": "open-source",
+      "repo": "https://github.com/onlook-dev/onlook",
+      "stars": 26433,
+      "lastCommit": "2026-07",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Open source visual builder on a real React codebase; the grown-up sibling of the browser sandbox.",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-07"
+    },
+    {
+      "name": "open-lovable",
+      "url": "https://github.com/firecrawl/open-lovable",
+      "type": "open-source",
+      "repo": "https://github.com/firecrawl/open-lovable",
+      "stars": 28217,
+      "lastCommit": "2025-11",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Same prompt-to-app loop in a cloud sandbox, powered by your own model keys.",
+      "selfHost": "ops",
+      "checkedOn": "2026-08-07"
     }
   ],
   "rejectedAlternatives": [
@@ -79,11 +109,6 @@
       "name": "Continue",
       "url": "https://continue.dev/",
       "desc": "Acquired and read-only, and an editor agent was never a local prompt-to-app sandbox."
-    },
-    {
-      "name": "Onlook",
-      "url": "https://onlook.com/",
-      "desc": "The code is active; the product still says early access and sends users to a waitlist."
     }
   ],
   "relatedSlugs": [

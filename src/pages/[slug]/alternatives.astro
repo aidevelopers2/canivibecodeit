@@ -13,6 +13,7 @@ import {
   sortedAlternatives,
   yearlySaving,
   ALTERNATIVES_PAGE_MIN,
+  COMMON_NOUN_SLUGS,
   SELF_HOST_LABELS,
   CATEGORIES,
   VERDICTS,
@@ -40,10 +41,12 @@ const siblings = appsWithAlternativesPage()
   .filter((a) => a.category === app.category && a.slug !== app.slug)
   .slice(0, 6);
 
-const title = `${shortName} alternatives: ${n} free & open-source picks`;
-const description = `${n} curated, verified alternatives to ${shortName}${
-  app.priceMonthly != null ? ` ($${app.priceMonthly}/mo)` : ''
-} that cost $0: ${ossCount === n ? 'all open source' : `${ossCount} open source`}, all actually free. GitHub stars and last activity checked, no votes, no pay-to-list.`;
+// Head-term title: count first (every ranking roundup carries one), free/open
+// source qualifiers folded in rather than split into variant pages. Common-noun
+// apps get an "app" disambiguator so Google knows which granola we mean.
+const seoName = COMMON_NOUN_SLUGS.has(app.slug) ? `${shortName} app` : shortName;
+const title = `${n} ${seoName} alternatives: free, open source, or one prompt away`;
+const description = `Every real ${shortName} alternative: free tiers, open source picks, self-hosted options, and whether an AI agent can just build you one. GitHub stars and last activity checked, no pay-to-list.`;
 
 const faq = [
   {
