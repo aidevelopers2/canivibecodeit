@@ -15,9 +15,9 @@ const board = await getBoard();
 const apps = allApps();
 const notice = Astro.url.searchParams.get('error') || Astro.url.searchParams.get('msg') || '';
 
-const title = 'Sponsor canivibecodeit · a few slots, one payment, no sales call';
+const title = 'Sponsor canivibecodeit · ten fixed slots, read by builders';
 const description =
-  'Sponsor slots on the death list. Buy 30 days in one click, no contract, no account manager. Sponsorship never touches a verdict.';
+  'Sponsor slots in front of builders choosing their AI-era stack. Buy 30 days in one click, no contract, no account manager. Sponsorship never touches a verdict.';
 
 const SEPT_TIMELINE = [
   { date: 'aug 21', note: 'first refusal ends for current sponsors', live: true },
@@ -68,13 +68,14 @@ const steps = [
     <section class="sp-hero">
       <h1>Sponsor canivibecodeit.</h1>
       <p class="sub">
-        Ten fixed slots. People land here to cancel something, which makes it a
-        strange and very good place to be the thing they keep.
+        Ten fixed slots, read by builders deciding what to build and what to
+        build on. If your product belongs in that stack, this is the shelf it
+        gets picked from.
       </p>
       <div class="sp-statband">
         <div class="sp-stat" style="--i: 0"><b>300,000+</b><span>views a month, current pace</span></div>
         <div class="sp-stat" style="--i: 1"><b>{apps.length}</b><span>apps on the list</span></div>
-        <div class="sp-stat" style="--i: 2"><b>devs &amp; founders</b><span>who are cutting SaaS bills</span></div>
+        <div class="sp-stat" style="--i: 2"><b>builders</b><span>choosing their AI-era stack</span></div>
         <div class="sp-stat green" style="--i: 3"><b>{takenCount}/{board.slots.length}</b><span>{NEXT_MONTH} slots taken</span></div>
       </div>
     </section>
@@ -118,6 +119,35 @@ const steps = [
           ))
         }
       </div>
+    </section>
+
+    <section class="sp-who">
+      <div class="list-head">
+        <h2>Who sponsors here</h2>
+        <span class="note">two kinds of sponsor do well on this page</span>
+      </div>
+      <div class="sp-who-grid">
+        <div class="sp-who-card">
+          <span class="sp-who-head">presence buyers</span>
+          <p>
+            You want builders to know your name. A fixed card on a page they
+            keep coming back to; no funnel math, just being where your people
+            already look.
+          </p>
+        </div>
+        <div class="sp-who-card">
+          <span class="sp-who-head">signup buyers</span>
+          <p>
+            You sell a tool builders buy for themselves: self-serve, priced for
+            one person's card, value visible in the first session. They click,
+            they try it, you see it.
+          </p>
+        </div>
+      </div>
+      <p class="sp-who-cats">
+        works best for: AI coding tools · infra &amp; hosting · APIs &amp; inference
+        · payments for builders · growth &amp; analytics
+      </p>
     </section>
 
     <section class="sp-board" id="slots">
@@ -410,6 +440,46 @@ const steps = [
     transform: scale(1.08);
   }
 
+  .sp-who-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 8px;
+  }
+
+  .sp-who-card {
+    padding-right: 48px;
+  }
+
+  .sp-who-card + .sp-who-card {
+    border-left: 1px solid var(--border);
+    padding-left: 48px;
+    padding-right: 0;
+  }
+
+  .sp-who-head {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .sp-who-card p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--muted);
+  }
+
+  .sp-who-cats {
+    margin-top: 28px;
+    padding-top: 16px;
+    border-top: 1px dashed var(--border);
+    font-family: var(--font-mono);
+    font-size: 12px;
+    line-height: 1.7;
+    color: var(--muted);
+  }
+
   /* Per-slot September line on the board cards. */
   .sp-slot :global(.sp-slot-next) {
     display: block;
@@ -502,6 +572,22 @@ const steps = [
       border-top: 1px solid var(--border);
       padding-left: 0;
       padding-top: 28px;
+    }
+
+    .sp-who-grid {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    .sp-who-card {
+      padding-right: 0;
+    }
+
+    .sp-who-card + .sp-who-card {
+      border-left: 0;
+      border-top: 1px solid var(--border);
+      padding-left: 0;
+      padding-top: 24px;
     }
   }
 </style>
