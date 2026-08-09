@@ -35,7 +35,10 @@
     "weeks of trend history and a competitor 'what moved' digest; a single run is mostly noise",
     "a hosted, shareable report link you can hand a client without exposing your own infra"
   ],
-  "moatTags": ["execution-polish", "integrations"],
+  "moatTags": [
+    "execution-polish",
+    "integrations"
+  ],
   "moatNotes": "continuous scan + writing-plan orchestration, not proprietary data; the underlying Reddit/HN corpus is public and unlicensed",
   "whyPeopleStillPay": "They're paying for the parts that don't fit in a prompt: a script that runs every day for months without babysitting, buyer questions mined from real Reddit and Hacker News threads instead of guessed ones, a writing plan and AI-ready drafts wired to the same gaps the scores found, and a link they can hand a client. None of that is a moat a bigger company can't cross; it's the upkeep most people quit paying attention to by week three.",
   "priorArt": [
@@ -52,7 +55,10 @@
       "url": "https://www.elmohq.com/",
       "type": "open-source",
       "repo": "https://github.com/elmohq/elmo",
-      "platforms": ["web", "self-hosted"],
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
       "desc": "Covers the visibility-check half well; it has no Reddit/HN buyer-thread mining and no writing-plan or draft generation on top of the scores.",
       "stars": 224,
       "lastCommit": "2026-08",
@@ -61,7 +67,12 @@
     }
   ],
   "rejectedAlternatives": [],
-  "relatedSlugs": ["profound", "100-questions", "semrush"],
+  "relatedSlugs": [
+    "profound",
+    "100-questions",
+    "semrush",
+    "snitchfeed"
+  ],
   "pagePriority": 3,
   "verifiedOneShot": false,
   "notes": "The visibility checks are two providers, not nine; the Reddit/HN scan and writing-plan loop are the part actually worth paying for.",
