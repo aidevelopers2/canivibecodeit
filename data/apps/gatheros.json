@@ -62,6 +62,40 @@
       "desc": "Local media manager built around tags, search, downloads, and offline-first control of large collections."
     }
   ],
+  "alternatives": [
+    {
+      "checkedOn": "2026-08-09",
+      "name": "Karakeep",
+      "url": "https://karakeep.app",
+      "type": "open-source",
+      "repo": "https://github.com/karakeep-app/karakeep",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Bookmark-everything library with image capture, AI tagging and semantic search; a container on your box instead of a Mac app.",
+      "stars": 28209,
+      "lastCommit": "2026-08",
+      "selfHost": "docker"
+    },
+    {
+      "checkedOn": "2026-08-09",
+      "name": "Hydrus Network",
+      "url": "https://hydrusnetwork.github.io/hydrus/",
+      "type": "open-source",
+      "repo": "https://github.com/hydrusnetwork/hydrus",
+      "platforms": [
+        "windows",
+        "macos",
+        "linux"
+      ],
+      "desc": "Local-first media manager built around tags and search; industrial-strength, and looks it.",
+      "stars": 3151,
+      "lastCommit": "2026-08",
+      "selfHost": "one-click"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "milanote",
     "raindrop-io",

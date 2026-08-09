@@ -55,6 +55,24 @@
       "desc": "Small research-grade toolkit for monitoring brand visibility in LLM search; a reasonable starting point"
     }
   ],
+  "alternatives": [
+    {
+      "checkedOn": "2026-08-09",
+      "name": "Elmo",
+      "url": "https://www.elmohq.com/",
+      "type": "open-source",
+      "repo": "https://github.com/elmohq/elmo",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Self-hosted AEO tracker covering the API-proxy scoring loop; it queries model APIs, which is exactly the faithfulness gap the paid product exists to cross.",
+      "stars": 230,
+      "lastCommit": "2026-08",
+      "selfHost": "docker"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "profound",
     "100-questions",

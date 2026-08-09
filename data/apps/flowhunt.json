@@ -54,6 +54,54 @@
       "desc": "Open-source drag-and-drop builder for LLM agents and RAG flows"
     }
   ],
+  "alternatives": [
+    {
+      "name": "n8n Community Edition",
+      "url": "https://n8n.io/",
+      "type": "free",
+      "repo": null,
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "The same workflow engine without the cloud bill; you inherit updates, backups, and uptime.",
+      "stars": null,
+      "lastCommit": null,
+      "selfHost": "docker",
+      "checkedOn": "2026-08-09"
+    },
+    {
+      "name": "Activepieces Community Edition",
+      "url": "https://www.activepieces.com/open-source",
+      "type": "open-source",
+      "repo": "https://github.com/activepieces/activepieces",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "A genuinely open-source workflow runner with a simpler one-container path.",
+      "stars": 23668,
+      "lastCommit": "2026-08",
+      "selfHost": "docker",
+      "checkedOn": "2026-08-09"
+    },
+    {
+      "checkedOn": "2026-08-09",
+      "name": "Flowise",
+      "url": "https://flowiseai.com",
+      "type": "open-source",
+      "repo": "https://github.com/FlowiseAI/Flowise",
+      "platforms": [
+        "web",
+        "self-hosted"
+      ],
+      "desc": "Drag-and-drop builder for LLM agents and RAG flows; the visual layer without the hosted meter.",
+      "stars": 55273,
+      "lastCommit": "2026-08",
+      "selfHost": "docker"
+    }
+  ],
+  "rejectedAlternatives": [],
   "relatedSlugs": [
     "activepieces-cloud",
     "n8n-cloud",

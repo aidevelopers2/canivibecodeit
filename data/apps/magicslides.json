@@ -54,6 +54,19 @@
       "desc": "Markdown-to-slides ecosystem with PPTX/PDF export"
     }
   ],
+  "alternatives": [],
+  "rejectedAlternatives": [
+    {
+      "name": "Slidev",
+      "url": "https://sli.dev",
+      "desc": "The developer answer: markdown in, slides out. A framework you write decks in, not an AI generator a non-builder adopts."
+    },
+    {
+      "name": "Marp",
+      "url": "https://marp.app",
+      "desc": "Markdown-to-PPTX/PDF toolchain, free and maintained; it renders decks, it does not write them."
+    }
+  ],
   "relatedSlugs": [
     "gamma",
     "beautiful-ai"
