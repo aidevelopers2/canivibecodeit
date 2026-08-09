@@ -3415,10 +3415,10 @@ button.sp-banner {
     min-height: 0;
   }
 
-  /* The sold-out notice grows too, but only to about double its natural
-     size: past that the paid cards absorb the rest. */
+  /* The sold-out notice compresses with the paid cards (same zero flex
+     basis), it just stops growing sooner: past about double its natural
+     size the paid cards absorb the rest. */
   .sp-rail .sp-card.soldout {
-    flex: 1 1 auto;
     max-height: 128px;
   }
 
