@@ -2994,13 +2994,18 @@ a.tile {
 
 /* ---------- responsive ---------- */
 
-@media (max-width: 760px) {
-  /* The sponsor link stays: it's the one nav item that makes money, and a
-     buyer on a phone otherwise has no way to find the board. */
+/* The nav's five text links need roughly 960px of header width on one line;
+   below that they wrap and squash the bar, so they bow out earlier than the
+   rest of the mobile layout. The sponsor link stays: it's the one nav item
+   that makes money, and a buyer on a phone otherwise has no way to find the
+   board. */
+@media (max-width: 980px) {
   .site-nav a:not(.gh):not([href='/sponsor']) {
     display: none;
   }
+}
 
+@media (max-width: 760px) {
   /* Everything in one row without horizontal scroll. */
   .site-header .inner {
     padding: 12px 16px;
@@ -3129,6 +3134,19 @@ a.tile {
 
   .actions .tweet {
     display: none;
+  }
+}
+
+/* Very small phones: tighter gaps keep the single-row header from wrapping.
+   Must come after the 760px block above, which sets the roomier values. */
+@media (max-width: 360px) {
+  .site-header .inner {
+    gap: 8px;
+    padding: 12px 10px;
+  }
+
+  .site-nav {
+    gap: 8px;
   }
 }
 
@@ -3326,10 +3344,13 @@ button.sp-banner {
     max-width: min(1120px, calc(100vw - var(--sp-side) * 2));
   }
 
-  /* The header column follows the same squeeze so the brand mark stays on the
-     content's left edge while the rails are up. */
+  /* The header column follows the content squeeze so the brand mark stays on
+     the content's left edge while the rails are up, but never drops below the
+     ~960px the nav row needs on one line. Between 1280 and ~1450px the header
+     therefore spreads a little wider than the content column; that space is
+     clear, the rails start at top: 76px, below the header. */
   .site-header .inner {
-    max-width: min(1120px, calc(100vw - var(--sp-side) * 2));
+    max-width: min(1120px, max(984px, calc(100vw - var(--sp-side) * 2)));
   }
 
   /* Full-bleed sections must respect the rails too: the ticker and the hero's
