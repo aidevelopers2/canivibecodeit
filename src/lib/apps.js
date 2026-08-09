@@ -102,7 +102,7 @@ export const MOAT_TAGS = {
 };
 
 // Category-page title phrase (template: "{N} {phrase}: free & open source
-// picks"). The head noun is category-specific and the wrong one costs an
+// picks"). Nouns measured via Ahrefs 2026-08-09 (task A, planning ledger); The head noun is category-specific and the wrong one costs an
 // order of magnitude, so: phrases with measured volume are marked, labels that
 // already read as plural nouns stand alone, and everything else defaults to
 // "<label> tools" until a per-category volume pull replaces the guess.
@@ -115,11 +115,11 @@ const CATEGORY_PHRASES = {
   'ai-assistant': 'AI assistants',
   'productivity-utilities': 'productivity utilities',
   'forms': 'form builders',
-  'newsletter': 'newsletter tools',
+  'newsletter': 'newsletter software',
   'testimonials': 'testimonial tools',
-  'whiteboard': 'whiteboard apps',
-  'diagrams': 'diagramming tools',
-  'presentations': 'presentation tools',
+  'whiteboard': 'whiteboard software',
+  'diagrams': 'diagramming software',
+  'presentations': 'presentation software',
   'documents': 'document & PDF tools',
   'tasks': 'to-do list apps',
   'tasks-calendar': 'tasks & calendar apps',
@@ -128,22 +128,35 @@ const CATEGORY_PHRASES = {
   'meeting-notes': 'AI meeting note takers',
   'finance-accounting': 'accounting & finance software',
   'no-code-apps': 'no-code app builders',
-  'personal-finance': 'personal finance apps',
-  'screen-recording': 'screen recorders',
+  'personal-finance': 'personal finance software',
+  'screen-recording': 'screen recording software',
   'hosting': 'hosting platforms',
   'community': 'community platforms',
   'read-it-later': 'read it later apps',
   'email': 'email apps',
-  'cloud-storage': 'cloud storage services',
-  'crm': 'CRMs',
-  'photo-editing': 'photo editors',
+  'cloud-storage': 'cloud storage apps',
+  'crm': 'CRM software',
+  'photo-editing': 'photo editing software',
   'reading': 'reading apps',
-  'time-tracking': 'time tracking apps',
+  'time-tracking': 'time tracking software',
   'travel': 'travel apps',
-  'video-conferencing': 'video conferencing apps',
+  'video-conferencing': 'video conferencing software',
   'wellness': 'wellness apps',
   'qr-codes': 'QR code generators',
   'screenshots': 'screenshot tools',
+  'social-media': 'social media apps',
+  'automation': 'automation software',
+  'design': 'design software',
+  'scheduling': 'scheduling software',
+  'customer-support': 'customer support software',
+  'sales-outreach': 'sales outreach software',
+  'project-management': 'project management software',
+  'podcasting': 'podcasting software',
+  'legal': 'legal software',
+  'hr': 'HR software',
+  'monitoring': 'monitoring software',
+  'voice-dictation': 'dictation software',
+  'audio': 'music & audio apps',
 };
 
 export function categoryPhrase(slug) {
