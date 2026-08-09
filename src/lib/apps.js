@@ -101,6 +101,57 @@ export const MOAT_TAGS = {
   'execution-polish': 'execution polish',
 };
 
+// Category-page title phrase (template: "{N} {phrase}: free & open source
+// picks"). The head noun is category-specific and the wrong one costs an
+// order of magnitude, so: phrases with measured volume are marked, labels that
+// already read as plural nouns stand alone, and everything else defaults to
+// "<label> tools" until a per-category volume pull replaces the guess.
+const CATEGORY_PHRASES = {
+  'notes-knowledge': 'note taking apps', // measured: "app" beats "tools" 20x
+  'dev-tools': 'dev tools',
+  'writing-assistant': 'writing tools',
+  'website-builder': 'website builders',
+  'databases': 'databases',
+  'ai-assistant': 'AI assistants',
+  'productivity-utilities': 'productivity utilities',
+  'forms': 'form builders',
+  'newsletter': 'newsletter tools',
+  'testimonials': 'testimonial tools',
+  'whiteboard': 'whiteboard apps',
+  'diagrams': 'diagramming tools',
+  'presentations': 'presentation tools',
+  'documents': 'document & PDF tools',
+  'tasks': 'to-do list apps',
+  'tasks-calendar': 'tasks & calendar apps',
+  'ai-image': 'AI image generators',
+  'ai-video': 'AI video generators',
+  'meeting-notes': 'AI meeting note takers',
+  'finance-accounting': 'accounting & finance software',
+  'no-code-apps': 'no-code app builders',
+  'personal-finance': 'personal finance apps',
+  'screen-recording': 'screen recorders',
+  'hosting': 'hosting platforms',
+  'community': 'community platforms',
+  'read-it-later': 'read it later apps',
+  'email': 'email apps',
+  'cloud-storage': 'cloud storage services',
+  'crm': 'CRMs',
+  'photo-editing': 'photo editors',
+  'reading': 'reading apps',
+  'time-tracking': 'time tracking apps',
+  'travel': 'travel apps',
+  'video-conferencing': 'video conferencing apps',
+  'wellness': 'wellness apps',
+  'qr-codes': 'QR code generators',
+  'screenshots': 'screenshot tools',
+};
+
+export function categoryPhrase(slug) {
+  const meta = CATEGORIES[slug];
+  if (!meta) return null;
+  return CATEGORY_PHRASES[slug] ?? `${meta.label.toLowerCase()} tools`;
+}
+
 // One icon per moat tag, the way categories have one. No per-tag colours —
 // colour on this site means verdict.
 export const MOAT_TAG_EMOJI = {

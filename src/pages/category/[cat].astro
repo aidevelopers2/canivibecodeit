@@ -2,7 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import AppRow from '../../components/AppRow.astro';
 import DigestCard from '../../components/DigestCard.astro';
-import { appsByCategory, categoriesInUse, CATEGORIES } from '../../lib/apps.js';
+import { appsByCategory, categoriesInUse, categoryPhrase, CATEGORIES } from '../../lib/apps.js';
 import { voteCounts } from '../../lib/db.js';
 
 const { cat } = Astro.params;
@@ -14,10 +14,23 @@ const apps = appsByCategory(cat).sort((a, b) => votes(b.slug) - votes(a.slug));
 if (apps.length === 0) return new Response(null, { status: 404 });
 
 const cats = categoriesInUse();
-const title = `Vibecode your ${meta.label.toLowerCase()} subscription · Can I Vibecode It?`;
-const description = `${meta.label} apps ranked by how replaceable they are with one AI prompt: ${apps
-  .map((a) => a.name)
-  .join(', ')}.`;
+// Keyword title on categories with enough apps to be a real list; tiny
+// categories keep the brand title (a "2 X tools" roundup reads as thin).
+const phrase = categoryPhrase(cat);
+const templated = apps.length >= 3;
+const title = templated
+  ? `${apps.length} ${phrase}: free & open source picks`
+  : `Vibecode your ${meta.label.toLowerCase()} subscription · Can I Vibecode It?`;
+const description = templated
+  ? `${apps.length} ${phrase} compared: ${apps
+      .slice(0, 8)
+      .map((a) => a.name)
+      .join(', ')} and more. Which are free, which are open source, and which an AI agent can just build you.`
+  : `${meta.label} apps ranked by how replaceable they are with one AI prompt: ${apps
+      .map((a) => a.name)
+      .join(', ')}.`;
+
+const socialTitle = `Vibecode your ${meta.label.toLowerCase()} subscription · Can I Vibecode It?`;
 
 const jsonld = [
   {
@@ -43,7 +56,7 @@ const jsonld = [
 ];
 ---
 
-<Base {title} {description} {jsonld}>
+<Base {title} {description} {socialTitle} {jsonld}>
   <main class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb">
       <a href="/">the death list</a> / <span class="here">{meta.label.toLowerCase()}</span>
