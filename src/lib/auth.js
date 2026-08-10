@@ -22,15 +22,9 @@
 import { betterAuth } from 'better-auth';
 import { getOAuthState } from 'better-auth/api';
 import { addToWaitlist, authDatabase, removeFromWaitlist, stackClear } from './db.js';
-import { alertRob, deleteResendContact, mirrorToResend } from './mail.js';
+import { alertRob, deleteResendContact, esc, mirrorToResend, unmailable } from './mail.js';
 
 const BASE_URL = process.env.BETTER_AUTH_URL || 'http://localhost:8095';
-
-// Provider-synthesized addresses that can never receive mail; keep them out
-// of the digest list, they only bounce and burn sender reputation.
-export function unmailable(email) {
-  return /@users\.noreply\.github\.com$/i.test(email);
-}
 
 async function buildAuth() {
   if (process.env.DATABASE_URL && !process.env.BETTER_AUTH_SECRET) {
@@ -99,7 +93,7 @@ async function buildAuth() {
             const gone = await deleteResendContact(email);
             if (!gone) {
               // The account rows still get deleted; a human sweeps the mirror.
-              alertRob('account delete: Resend contact removal failed', `<p>${email}</p>`);
+              alertRob('account delete: Resend contact removal failed', `<p>${esc(email)}</p>`);
             }
           }
         },

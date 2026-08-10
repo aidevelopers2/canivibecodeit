@@ -775,14 +775,17 @@
       if (state) state.textContent = next ? 'subscribed' : 'not subscribed';
       try {
         const res = await jsonPost('/api/account/digest', 'POST', { on: next });
-        if (!res.ok) throw new Error();
+        if (!res.ok) {
+          const d = await res.json().catch(() => ({}));
+          throw new Error(d.error || '');
+        }
         toast(next ? 'digest on · see you thursday' : 'digest off');
-      } catch {
+      } catch (err) {
         digestToggle.dataset.on = next ? '' : '1';
         digestToggle.classList.toggle('on', !next);
         digestToggle.setAttribute('aria-checked', String(!next));
         if (state) state.textContent = !next ? 'subscribed' : 'not subscribed';
-        toast('something broke · try again');
+        toast(err?.message || 'something broke · try again');
       }
     });
 

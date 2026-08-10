@@ -4,8 +4,7 @@
 // what actually stops or starts mail, so a failed sync is a failed request,
 // never a silent success.
 import { addToWaitlist, rateLimit, setUserNewsletter } from '../../../lib/db.js';
-import { unmailable } from '../../../lib/auth.js';
-import { setResendSubscribed } from '../../../lib/mail.js';
+import { setResendSubscribed, unmailable } from '../../../lib/mail.js';
 import { crossOrigin, json, readBody } from '../../../lib/request.js';
 
 export async function POST({ request, locals }) {

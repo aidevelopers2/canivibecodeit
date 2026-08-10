@@ -46,6 +46,12 @@ export async function alertRob(subject, html) {
   return sendMail({ to: process.env.DIGEST_ALERT_EMAIL, subject, html });
 }
 
+/* Provider-synthesized addresses that can never receive mail; keep them out
+   of the digest list, they only bounce and burn sender reputation. */
+export function unmailable(email) {
+  return /@users\.noreply\.github\.com$/i.test(email);
+}
+
 /* Add an email to the digest audience. Inert until the Resend vars are set:
    the site's waitlist table is the source of truth, the audience is a mirror.
    Fire-and-forget: never blocks or fails the caller. Callers must only

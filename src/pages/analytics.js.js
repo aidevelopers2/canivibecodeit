@@ -29,7 +29,7 @@ export function GET() {
       // reach analytics, so drop every event captured on one.
       before_send: function (ev) {
         var url = (ev && ev.properties && ev.properties.$current_url) || '';
-        if (/\\/admin|\\/sponsor\\/(details|stats)|[?&]token=/.test(url)) return null;
+        if (/\\/admin|\\/sponsor\\/(details|stats)|\\/account|[?&]token=/.test(url)) return null;
         return ev;
       }
     });

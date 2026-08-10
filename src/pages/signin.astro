@@ -14,7 +14,8 @@ const ERRORS = {
 };
 const errorCode = Astro.url.searchParams.get('error');
 const errorLine = errorCode
-  ? ERRORS[errorCode] || 'sign-in failed. try again, or try the other provider.'
+  ? (Object.hasOwn(ERRORS, errorCode) && ERRORS[errorCode]) ||
+    'sign-in failed. try again, or try the other provider.'
   : null;
 ---
 
