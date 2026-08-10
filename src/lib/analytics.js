@@ -56,14 +56,17 @@ let dashInFlight = null;
 
 // Fuller dataset for the /stats page. One shared 2-minute cache; concurrent
 // callers at TTL expiry share one refresh instead of racing PostHog.
+// Stale-while-revalidate: an expired cache still serves instantly while one
+// background refresh runs, so page renders never wait on PostHog. Only a
+// cold cache (first hit after a deploy) blocks.
 export async function dashboardStats() {
   if (!PROJECT || !KEY) return null;
-  if (Date.now() - dashCache.at < 120_000) return dashCache.data;
-  if (!dashInFlight)
+  if (Date.now() - dashCache.at >= 120_000 && !dashInFlight)
     dashInFlight = refreshDashboard().finally(() => {
       dashInFlight = null;
     });
-  return dashInFlight;
+  if (dashCache.data) return dashCache.data;
+  return dashInFlight ?? dashCache.data;
 }
 
 async function refreshDashboard() {
@@ -151,12 +154,15 @@ let globeInFlight = null;
    tell the client how old the snapshot is. */
 export async function globeStats() {
   if (!PROJECT || !KEY) return null;
-  if (Date.now() - globeCache.at < 30_000) return globeCache.data;
-  if (!globeInFlight)
+  // Stale-while-revalidate: past the TTL the stale snapshot still returns
+  // instantly (its `at` keeps the "ago" labels honest) while one background
+  // refresh runs. Only a cold cache blocks.
+  if (Date.now() - globeCache.at >= 30_000 && !globeInFlight)
     globeInFlight = refreshGlobe().finally(() => {
       globeInFlight = null;
     });
-  return globeInFlight;
+  if (globeCache.data) return globeCache.data;
+  return globeInFlight ?? globeCache.data;
 }
 
 async function refreshGlobe() {
@@ -265,12 +271,14 @@ let siteInFlight = null;
 
 export async function siteStats() {
   if (!PROJECT || !KEY) return null;
-  if (Date.now() - cache.at < 60_000) return cache.data;
-  if (!siteInFlight)
+  // Stale-while-revalidate, same as dashboardStats: serve stale instantly,
+  // refresh in the background, block only when the cache is cold.
+  if (Date.now() - cache.at >= 60_000 && !siteInFlight)
     siteInFlight = refreshSite().finally(() => {
       siteInFlight = null;
     });
-  return siteInFlight;
+  if (cache.data) return cache.data;
+  return siteInFlight ?? cache.data;
 }
 
 async function refreshSite() {
