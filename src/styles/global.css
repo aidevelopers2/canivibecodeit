@@ -4200,10 +4200,11 @@ button.sp-banner {
   .site-nav .signin {
     display: none;
   }
+  /* Chips size up to match the 34px theme/radio buttons beside them. */
   .site-nav .signin-chip {
     display: flex;
-    width: 26px;
-    height: 26px;
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
     border: 1px solid var(--border);
     color: var(--muted);
@@ -4211,9 +4212,18 @@ button.sp-banner {
     justify-content: center;
     flex-shrink: 0;
   }
+  .site-nav .signin-chip svg {
+    width: 14px;
+    height: 14px;
+  }
   .site-nav .signin-chip:hover {
     color: var(--fg);
     border-color: var(--muted);
+  }
+  .site-nav .avatar-chip {
+    width: 32px;
+    height: 32px;
+    font-size: 13px;
   }
 }
 
@@ -4432,6 +4442,16 @@ button.sp-banner {
   }
   .row .row-save {
     opacity: 1;
+  }
+  /* Verdict chip centers across both card lines, level with the bookmark,
+     instead of riding high on the name line. Price stops spanning into the
+     chip's column so nothing overlaps. */
+  .row .c-verdict {
+    grid-row: 1 / 3;
+    align-self: center;
+  }
+  .row .c-price {
+    grid-column: 2 / 3;
   }
 }
 
