@@ -584,6 +584,223 @@
       a.addEventListener('click', () => track('share', { app: a.dataset.share }))
     );
 
+    /* ---------- accounts + my stack ---------- */
+    const authed = document.body.dataset.user === '1';
+    const jsonPost = (url, method, body) =>
+      fetch(url, {
+        method,
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body),
+      });
+
+    /* Signup modal: stays on the page (converts better than navigating away).
+       The [data-signin] links keep href=/signin so no-JS still works. */
+    const modal = $('#signup-modal');
+    let pendingSlug = null;
+    const openSignup = (slug) => {
+      pendingSlug = slug || null;
+      if (!modal) {
+        window.location.href = '/signin';
+        return;
+      }
+      modal.hidden = false;
+      document.body.style.overflow = 'hidden';
+      track('signup_open', { app: pendingSlug || undefined });
+    };
+    const closeSignup = () => {
+      if (modal) modal.hidden = true;
+      document.body.style.overflow = '';
+    };
+    onLeave(closeSignup);
+    modal?.addEventListener('click', (e) => {
+      if (e.target === modal || e.target.closest('[data-signup-close]')) closeSignup();
+    });
+    document.addEventListener(
+      'keydown',
+      (e) => {
+        if (e.key === 'Escape' && modal && !modal.hidden) closeSignup();
+      },
+      { signal: page.signal }
+    );
+    $$('[data-signin]').forEach((a) =>
+      a.addEventListener('click', (e) => {
+        e.preventDefault();
+        openSignup();
+      })
+    );
+
+    /* The checkbox value rides inside the signed OAuth state; the pending save
+       comes back as a ?stacksave= param on the callback URL. The callback is
+       pathname-only: Better Auth's trustedOrigins regex rejects several legal
+       query characters, and a rejected callback means sign-in dies with a 403.
+       The checkbox is read from the SAME surface as the clicked button; the
+       hidden modal also has one and must never shadow the /signin page's. */
+    const oauthStart = async (btn) => {
+      const provider = btn.dataset.oauth;
+      const box = btn
+        .closest('.signup-card, .signin-card')
+        ?.querySelector('input[type="checkbox"]');
+      let callbackURL = location.pathname === '/signin' ? '/' : location.pathname;
+      if (pendingSlug) callbackURL += `?stacksave=${encodeURIComponent(pendingSlug)}`;
+      try {
+        const res = await jsonPost('/api/auth/sign-in/social', 'POST', {
+          provider,
+          callbackURL,
+          additionalData: { newsletter: !!box?.checked },
+        });
+        if (!res.ok) throw new Error();
+        const { url } = await res.json();
+        if (!url) throw new Error();
+        track('signup_start', { provider, digest: !!box?.checked });
+        window.location.href = url;
+      } catch {
+        toast('sign-in failed to start · try again');
+      }
+    };
+    $$('[data-oauth]').forEach((btn) =>
+      btn.addEventListener('click', () => oauthStart(btn))
+    );
+
+    const markIcons = (slug, saved) =>
+      $$(`[data-stack-icon][data-slug="${CSS.escape(slug)}"]`).forEach((el) =>
+        el.classList.toggle('saved', saved)
+      );
+    const setStackBtn = (btn, saved) => {
+      btn.dataset.saved = saved ? '1' : '';
+      btn.classList.toggle('in-stack', saved);
+      btn.textContent = saved ? '✓ in your stack' : '+ save to my stack';
+    };
+    const toggleStack = async (slug, saved) => {
+      const res = await jsonPost('/api/stack', saved ? 'DELETE' : 'POST', { slug });
+      if (!res.ok) throw new Error();
+      const btn = $(`[data-stack="${CSS.escape(slug)}"]`);
+      if (btn) setStackBtn(btn, !saved);
+      markIcons(slug, !saved);
+      toast(saved ? 'removed from your stack' : '✓ saved to your stack');
+      track(saved ? 'stack_remove' : 'stack_add', { app: slug });
+    };
+
+    /* verdict-page button */
+    $$('[data-stack]').forEach((btn) =>
+      btn.addEventListener('click', async () => {
+        const slug = btn.dataset.stack;
+        if (!authed) return openSignup(slug);
+        try {
+          await toggleStack(slug, btn.dataset.saved === '1');
+        } catch {
+          toast('something broke · try again');
+        }
+      })
+    );
+
+    /* death-list quick-save icons (span[role=button] inside the row link) */
+    const iconAct = async (el) => {
+      const slug = el.dataset.slug;
+      if (!authed) return openSignup(slug);
+      try {
+        await toggleStack(slug, el.classList.contains('saved'));
+      } catch {
+        toast('something broke · try again');
+      }
+    };
+    $$('[data-stack-icon]').forEach((el) => {
+      el.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        iconAct(el);
+      });
+      el.addEventListener('keydown', (e) => {
+        if (e.key !== 'Enter' && e.key !== ' ') return;
+        e.preventDefault();
+        e.stopPropagation();
+        iconAct(el);
+      });
+    });
+
+    /* signed-in: paint saved states on the list icons once per page */
+    if (authed && $('[data-stack-icon]')) {
+      fetch('/api/stack')
+        .then((r) => (r.ok ? r.json() : null))
+        .then((d) => d?.slugs?.forEach((s) => markIcons(s, true)))
+        .catch(() => {});
+    }
+
+    /* back from OAuth with a pending save: finish it, clean the URL */
+    const params = new URLSearchParams(location.search);
+    const pendingSave = params.get('stacksave');
+    if (pendingSave) {
+      params.delete('stacksave');
+      history.replaceState(null, '', location.pathname + (params.size ? `?${params}` : ''));
+      if (authed) {
+        jsonPost('/api/stack', 'POST', { slug: pendingSave })
+          .then((r) => {
+            if (!r.ok) return;
+            const btn = $(`[data-stack="${CSS.escape(pendingSave)}"]`);
+            if (btn) setStackBtn(btn, true);
+            markIcons(pendingSave, true);
+            toast('✓ saved to your stack');
+          })
+          .catch(() => {});
+      }
+    }
+
+    /* ---------- /account ---------- */
+    $('[data-signout]')?.addEventListener('click', async () => {
+      try {
+        await jsonPost('/api/auth/sign-out', 'POST', {});
+      } catch {}
+      window.location.href = '/';
+    });
+
+    $$('[data-stack-remove]').forEach((btn) =>
+      btn.addEventListener('click', async () => {
+        try {
+          const res = await jsonPost('/api/stack', 'DELETE', { slug: btn.dataset.stackRemove });
+          if (!res.ok) throw new Error();
+          btn.closest('.stack-row')?.remove();
+          toast('removed from your stack');
+        } catch {
+          toast('something broke · try again');
+        }
+      })
+    );
+
+    const digestToggle = $('[data-digest-toggle]');
+    digestToggle?.addEventListener('click', async () => {
+      const next = digestToggle.dataset.on !== '1';
+      digestToggle.dataset.on = next ? '1' : '';
+      digestToggle.classList.toggle('on', next);
+      digestToggle.setAttribute('aria-checked', String(next));
+      const state = $('[data-digest-state]');
+      if (state) state.textContent = next ? 'subscribed' : 'not subscribed';
+      try {
+        const res = await jsonPost('/api/account/digest', 'POST', { on: next });
+        if (!res.ok) throw new Error();
+        toast(next ? 'digest on · see you thursday' : 'digest off');
+      } catch {
+        digestToggle.dataset.on = next ? '' : '1';
+        digestToggle.classList.toggle('on', !next);
+        digestToggle.setAttribute('aria-checked', String(!next));
+        if (state) state.textContent = !next ? 'subscribed' : 'not subscribed';
+        toast('something broke · try again');
+      }
+    });
+
+    $('[data-delete-account]')?.addEventListener('click', async () => {
+      if (!confirm('Delete your account? Wipes your stack and unsubscribes your email. No undo.')) return;
+      try {
+        const res = await fetch('/api/account/delete', { method: 'POST' });
+        if (!res.ok) {
+          const d = await res.json().catch(() => ({}));
+          toast(d.error || 'delete failed · sign in again and retry');
+          return;
+        }
+        window.location.href = '/';
+      } catch {
+        toast('something broke · try again');
+      }
+    });
+
     /* ---------- sponsors ---------- */
     $$('.sp-card, .sp-banner, .sp-tape-item').forEach((el) =>
       el.addEventListener('click', () => {

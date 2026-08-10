@@ -3000,7 +3000,9 @@ a.tile {
    that makes money, and a buyer on a phone otherwise has no way to find the
    board. */
 @media (max-width: 980px) {
-  .site-nav a:not(.gh):not([href='/sponsor']) {
+  /* Account affordances are exempt: sign-in/avatar must survive every width
+     (the chip swap below 760px is handled in the accounts section). */
+  .site-nav a:not(.gh):not([href='/sponsor']):not(.signin):not(.signin-chip):not(.avatar-chip) {
     display: none;
   }
 }
@@ -4161,6 +4163,263 @@ button.sp-banner {
    the header overflow once the sponsor link joined the row. */
 @media (max-width: 560px) {
   .brand .word {
+    display: none;
+  }
+}
+
+/* ---------- accounts: header, signup modal, my stack ---------- */
+
+/* "sign in" reads a step brighter than the muted nav links: it's the one nav
+   action, not another destination. Below 760px it becomes the person chip
+   (same 26px footprint as the signed-in avatar, so nothing reflows). */
+.site-nav .signin {
+  color: var(--fg);
+  white-space: nowrap;
+}
+
+.site-nav .signin-chip {
+  display: none;
+}
+
+.site-nav .avatar-chip {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 1px solid var(--primary);
+  background: var(--surface-2);
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+@media (max-width: 760px) {
+  .site-nav .signin {
+    display: none;
+  }
+  .site-nav .signin-chip {
+    display: flex;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .site-nav .signin-chip:hover {
+    color: var(--fg);
+    border-color: var(--muted);
+  }
+}
+
+.signup-backdrop {
+  position: fixed;
+  inset: 0;
+  /* above the digest bar (90), below the toast (100) so feedback still shows */
+  z-index: 95;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* display:flex above would silently defeat the hidden attribute; without this
+   the invisible backdrop swallows every click on the page. */
+.signup-backdrop[hidden] {
+  display: none;
+}
+
+.signup-card {
+  position: relative;
+  width: min(440px, 100%);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 36px 36px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.5);
+}
+
+.signup-card h2 {
+  font-family: var(--font-display);
+  font-size: 24px;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.signup-sub {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.signup-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.oauth-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  height: 48px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--surface-2);
+  color: var(--fg);
+  font: inherit;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color 0.15s ease, transform 0.1s ease;
+}
+
+.oauth-btn:hover {
+  border-color: var(--muted);
+}
+
+.oauth-btn:active {
+  transform: scale(0.98);
+}
+
+.signup-digest {
+  display: flex;
+  gap: 12px;
+  padding: 16px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.signup-digest input {
+  margin-top: 2px;
+  accent-color: var(--primary);
+  flex-shrink: 0;
+}
+
+.signup-digest span {
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.signup-fine {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.signup-fine a {
+  color: var(--primary);
+}
+
+.signup-close {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.signup-close:hover {
+  color: var(--fg);
+}
+
+/* Phone: the modal becomes a bottom sheet. */
+@media (max-width: 560px) {
+  .signup-backdrop {
+    align-items: flex-end;
+    padding: 0;
+  }
+  .signup-card {
+    width: 100%;
+    border-radius: 12px 12px 0 0;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    padding: 24px 20px 28px;
+  }
+}
+
+/* Verdict-page save button states. */
+.stack-btn.in-stack {
+  border-color: color-mix(in srgb, var(--primary) 35%, transparent);
+  background: color-mix(in srgb, var(--primary) 8%, transparent);
+  color: var(--primary);
+}
+
+/* Death-list quick-save lane: fixed 48px slot after the votes column, icon
+   revealed on row hover (always visible when saved; softly visible on touch
+   screens where hover doesn't exist). Hidden on phones where rows collapse
+   into grid cards. */
+.thead .c-save,
+.row .c-save {
+  width: 48px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.row-save {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--muted);
+  opacity: 0;
+  transition: opacity 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.row:hover .row-save,
+.row-save:focus-visible,
+.row-save.saved {
+  opacity: 1;
+}
+
+.row-save:hover {
+  border-color: color-mix(in srgb, var(--primary) 40%, transparent);
+  background: color-mix(in srgb, var(--primary) 8%, transparent);
+  color: var(--primary);
+}
+
+.row-save.saved {
+  color: var(--primary);
+}
+
+.row-save.saved svg path {
+  fill: currentColor;
+}
+
+@media (hover: none) {
+  .row-save {
+    opacity: 0.6;
+  }
+}
+
+@media (max-width: 760px) {
+  .thead .c-save,
+  .row .c-save {
     display: none;
   }
 }

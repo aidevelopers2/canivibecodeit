@@ -33,6 +33,22 @@ export function validEmail(email) {
   return typeof email === 'string' && email.length <= 254 && EMAIL_RE.test(email);
 }
 
+// Cross-site writes are already blocked by the session cookie's SameSite=Lax;
+// this closes the loop explicitly since Astro's own checkOrigin is off (it
+// misfires behind the proxy). Only a PRESENT mismatched Origin is rejected:
+// same-origin non-browser clients may omit the header entirely.
+export function crossOrigin(request) {
+  const origin = request.headers.get('origin');
+  if (!origin) return false;
+  const expected = process.env.BETTER_AUTH_URL || process.env.SITE_URL;
+  if (!expected) return false;
+  try {
+    return new URL(origin).origin !== new URL(expected).origin;
+  } catch {
+    return true;
+  }
+}
+
 // Accepts JSON or classic form posts, so the forms work without JS too.
 export async function readBody(request) {
   const type = request.headers.get('content-type') || '';
