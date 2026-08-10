@@ -60,6 +60,26 @@ for (const file of files) {
     continue;
   }
 
+  // Defense in depth against markup injection: app JSON is rendered into pages,
+  // including a JSON-LD <script> block, so no string field may carry the angle
+  // brackets that could break out of a tag. Reject "<" and ">" anywhere.
+  // `prompt` is exempt: the copy-paste prompts legitimately contain "<"/">"
+  // (comparisons, code) and are only ever rendered as escaped text, never into
+  // a <script>/JSON-LD block.
+  const scanAngles = (val, keyPath) => {
+    if (typeof val === 'string') {
+      if (val.includes('<') || val.includes('>')) bad(`"${keyPath}" contains "<" or ">" (not allowed in app content)`);
+    } else if (Array.isArray(val)) {
+      val.forEach((v, i) => scanAngles(v, `${keyPath}[${i}]`));
+    } else if (val && typeof val === 'object') {
+      for (const [k, v] of Object.entries(val)) {
+        if (k === 'prompt') continue;
+        scanAngles(v, keyPath ? `${keyPath}.${k}` : k);
+      }
+    }
+  };
+  scanAngles(app, '');
+
   if (app.slug !== path.basename(file, '.json')) {
     bad(`slug "${app.slug}" does not match the filename`);
   }

@@ -51,6 +51,13 @@ async function hogql(query, { fresh = false } = {}) {
 
 const SITE = `properties.$host = 'canivibecodeit.com'`;
 
+// $pathname arrives from PostHog events, and anyone can POST a fake event with
+// the public ingest key, so it is attacker-controlled. A genuine path starts
+// with "/" and carries no markup or quotes; anything else is spoofed. Collapse
+// it to "/" so a payload can never ride the feed into a set:html JSON blob.
+const cleanPath = (p) =>
+  typeof p === 'string' && p.length <= 128 && /^\/[^\s<>"'`]*$/.test(p) ? p : '/';
+
 let dashCache = { at: 0, data: null };
 let dashInFlight = null;
 
@@ -121,7 +128,7 @@ async function refreshDashboard() {
         tiles: { viewsToday, views7d, visitors7d, copies7d, bestDay },
         allTime: { views: totalViews, visitors: totalVisitors, copies: totalCopies, since },
         byDay: byDay.map(([d, views, visitors]) => ({ d, views, visitors })),
-        pages: pages.map(([p, n]) => ({ p, n })),
+        pages: pages.map(([p, n]) => ({ p: cleanPath(p), n })),
         agents: agents.map(([a, n]) => ({ a, n })),
         topPrompts: topPrompts.map(([app, n]) => ({ app, n })),
       },
@@ -251,7 +258,7 @@ async function refreshGlobe() {
         feed: feed.map(([c, event, path, app, device, ref, ts]) => ({
           c,
           copy: event === 'copy_prompt',
-          path,
+          path: cleanPath(path),
           app,
           device,
           ref,
