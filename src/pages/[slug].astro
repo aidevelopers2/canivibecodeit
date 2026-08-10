@@ -150,7 +150,19 @@ const tweet = encodeURIComponent(
         <img src={`/icons/${app.slug}.png`} alt="" width="48" height="48" />
         <h1>Can I vibecode {app.name.split(' / ')[0]}?</h1>
       </span>
-      <VerdictBadge verdict={app.verdict} big />
+      <span class="verdict-side">
+        <VerdictBadge verdict={app.verdict} big />
+        <button
+          class:list={['head-save', { saved: inStack }]}
+          data-stack-icon
+          data-slug={app.slug}
+          aria-pressed={inStack ? 'true' : 'false'}
+        >
+          <svg width="12" height="14" viewBox="0 0 12 14" fill="none" aria-hidden="true"><path d="M1 1.5H11V13L6 9.8L1 13V1.5Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"></path></svg>
+          <span class="off">save to my stack</span>
+          <span class="on">in your stack</span>
+        </button>
+      </span>
     </div>
 
     {

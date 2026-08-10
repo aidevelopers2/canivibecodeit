@@ -597,19 +597,36 @@
        The [data-signin] links keep href=/signin so no-JS still works. */
     const modal = $('#signup-modal');
     let pendingSlug = null;
+    let modalCloseTimer;
     const openSignup = (slug) => {
       pendingSlug = slug || null;
       if (!modal) {
         window.location.href = '/signin';
         return;
       }
-      modal.hidden = false;
+      /* The title is conditional: "Sign in" from the nav, the save pitch only
+         when a save actually triggered it. */
+      const title = $('#signup-title');
+      if (title) title.textContent = pendingSlug ? 'Save it to your stack' : 'Sign in';
+      /* Hiding the scrollbar shrinks the viewport and shifts the page; pad the
+         body by exactly the scrollbar width so nothing moves. */
+      const scrollbar = window.innerWidth - document.documentElement.clientWidth;
+      if (scrollbar > 0) document.body.style.paddingRight = `${scrollbar}px`;
       document.body.style.overflow = 'hidden';
+      clearTimeout(modalCloseTimer);
+      modal.hidden = false;
+      requestAnimationFrame(() => requestAnimationFrame(() => modal.classList.add('open')));
       track('signup_open', { app: pendingSlug || undefined });
     };
     const closeSignup = () => {
-      if (modal) modal.hidden = true;
       document.body.style.overflow = '';
+      document.body.style.paddingRight = '';
+      if (!modal || modal.hidden) return;
+      modal.classList.remove('open');
+      clearTimeout(modalCloseTimer);
+      modalCloseTimer = setTimeout(() => {
+        modal.hidden = true;
+      }, 240);
     };
     onLeave(closeSignup);
     modal?.addEventListener('click', (e) => {
@@ -662,15 +679,17 @@
     );
 
     const markIcons = (slug, saved) =>
-      $$(`[data-stack-icon][data-slug="${CSS.escape(slug)}"]`).forEach((el) =>
-        el.classList.toggle('saved', saved)
-      );
+      $$(`[data-stack-icon][data-slug="${CSS.escape(slug)}"]`).forEach((el) => {
+        el.classList.toggle('saved', saved);
+        if (el.hasAttribute('aria-pressed')) el.setAttribute('aria-pressed', String(saved));
+      });
     const setStackBtn = (btn, saved) => {
       btn.dataset.saved = saved ? '1' : '';
       btn.classList.toggle('in-stack', saved);
       btn.textContent = saved ? '✓ in your stack' : '+ save to my stack';
     };
     const toggleStack = async (slug, saved) => {
+      if (saved && !confirm('Remove from your stack?')) return;
       const res = await jsonPost('/api/stack', saved ? 'DELETE' : 'POST', { slug });
       if (!res.ok) throw new Error();
       const btn = $(`[data-stack="${CSS.escape(slug)}"]`);
@@ -754,6 +773,7 @@
 
     $$('[data-stack-remove]').forEach((btn) =>
       btn.addEventListener('click', async () => {
+        if (!confirm('Remove from your stack?')) return;
         try {
           const res = await jsonPost('/api/stack', 'DELETE', { slug: btn.dataset.stackRemove });
           if (!res.ok) throw new Error();
