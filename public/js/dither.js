@@ -242,7 +242,10 @@
     let mouse = null;
     let amp = 0;
     let raf = null;
-    const AURA_R = 230; // beyond this the gaussian is visually ~0; bounds the patch
+    // Bounds the patch. 260 is where the gaussian actually falls under the
+    // 0.0008 floor ditherRectBoostOnly skips at; a tighter bound clips a ring
+    // of cells that were still (barely) lighting up.
+    const AURA_R = 260;
     const liveLoop = (now) => {
       const target = mouse ? 1 : 0;
       amp += (target - amp) * 0.12;
@@ -265,7 +268,10 @@
         ctx.drawImage(bg, 0, 0, w, h);
 
         const ys = points.map((p) => Y(p.v));
-        const boost = (px, py) => aura(c.x, c.y)(px, py) * amp;
+        // Build the gaussian once per frame, not once per cell: boost() runs
+        // ~10k times a frame and was allocating a closure on every one.
+        const auraAt = aura(c.x, c.y);
+        const boost = (px, py) => auraAt(px, py) * amp;
 
         ctx.save();
         ctx.beginPath();
@@ -304,11 +310,11 @@
     canvas.onmousemove = (e) => {
       const r = canvas.getBoundingClientRect();
       mouse = { x: e.clientX - r.left, y: e.clientY - r.top };
-      if (reduced) {
-        draw(1);
-      } else if (!raf) {
-        raf = requestAnimationFrame(liveLoop);
-      }
+      /* Reduced motion never gets the aura or the cursor rule (both live in
+         liveLoop), so redrawing here repainted a pixel-identical chart on
+         every mousemove: ~9k fillRects for nothing. The tooltip below is the
+         whole hover affordance in that mode. */
+      if (!reduced && !raf) raf = requestAnimationFrame(liveLoop);
       const i = Math.round(((mouse.x - PAD.l) / iw) * (points.length - 1));
       if (i < 0 || i >= points.length) return hideTip();
       const p = points[i];
