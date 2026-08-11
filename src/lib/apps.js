@@ -102,7 +102,8 @@ export const MOAT_TAGS = {
 };
 
 // Category-page title phrase (template: "{N} {phrase}: free & open source
-// picks"). Nouns measured via Ahrefs 2026-08-09 (task A, planning ledger); The head noun is category-specific and the wrong one costs an
+// picks"). Head nouns are measured, not guessed: the right one is category-
+// specific and the wrong one costs an
 // order of magnitude, so: phrases with measured volume are marked, labels that
 // already read as plural nouns stand alone, and everything else defaults to
 // "<label> tools" until a per-category volume pull replaces the guess.
@@ -321,16 +322,14 @@ export const SELF_HOST_LABELS = {
   ops: 'self-host, real ops',
 };
 
-// Sitemap staging (decided 2026-08-06, Ahrefs advice): a young domain shouldn't
-// push all 350+ new pages to Google at once. The named slugs are the low-KD /
-// high-volume targets from the Ahrefs research; the rest of the ~30 fill up by
-// editorial weight. ALL alternatives pages must join the sitemap ~6-8 weeks
-// after launch — tracked in planning/16-alternatives/progress.md, do not lose.
+// Sitemap staging (decided 2026-08-06): a young domain shouldn't push all 350+
+// new pages at a search engine at once. The named slugs are the low-competition,
+// high-volume targets; the rest of the ~30 fill up by editorial weight. ALL
+// alternatives pages must join the sitemap ~6-8 weeks after launch.
 const ALT_SITEMAP_PRIORITY = [
   'zapier', 'loom', 'calendly', 'intercom', 'grammarly',
   'notion', 'mailchimp', 'docusign', 'typeform', '1password',
-  // 2026-08-07: the AI builder tools themselves; near-zero KD, real volume
-  // (replit 1,300/mo KD 2, cursor 800 KD 6, lovable 800 KD 1, v0, bolt.new).
+  // 2026-08-07: the AI builder tools themselves, all low competition.
   'replit', 'cursor', 'lovable', 'v0', 'bolt-new', 'windsurf',
 ];
 const ALT_SITEMAP_LIMIT = 30;
