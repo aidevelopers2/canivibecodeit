@@ -3,8 +3,8 @@
 // from the session; signed-out visitors go to /signin.
 import Base from '../layouts/Base.astro';
 import VerdictBadge from '../components/VerdictBadge.astro';
-import { getApp } from '../lib/apps.js';
-import { stackSlugs } from '../lib/db.js';
+import { allApps, getApp } from '../lib/apps.js';
+import { stackSlugs, voteCounts } from '../lib/db.js';
 
 const user = Astro.locals.user;
 if (!user) return Astro.redirect('/signin');
@@ -13,6 +13,25 @@ const slugs = await stackSlugs(user.id);
 const apps = slugs.map((s) => getApp(s)).filter(Boolean);
 const monthly = Math.round(apps.reduce((sum, a) => sum + (a.priceMonthly ?? 0), 0));
 const digestOn = user.newsletter === true;
+
+// Empty stack: seed the section with the most-replaced apps so the first save
+// can happen right here. Priced YES verdicts only — anything else is a
+// suggestion you can't act on. Votes are a running total, not a time window.
+const votes = apps.length === 0 ? await voteCounts() : null;
+const suggestions =
+  apps.length === 0
+    ? allApps()
+        .filter((a) => a.verdict === 'yes' && a.priceMonthly != null)
+        .sort(
+          (a, b) =>
+            votes(b.slug) - votes(a.slug) ||
+            (b.pagePriority ?? 3) - (a.pagePriority ?? 3) ||
+            b.priceMonthly - a.priceMonthly ||
+            a.name.localeCompare(b.name)
+        )
+        .slice(0, 3)
+    : [];
+const totalApps = allApps().length;
 ---
 
 <Base title="Your account · canivibecodeit" description="Your stack, your digest, nothing else.">
@@ -26,13 +45,31 @@ const digestOn = user.newsletter === true;
       <div class="section-head">
         <span class="microlabel">my stack · {apps.length} {apps.length === 1 ? 'app' : 'apps'}</span>
         {monthly > 0 && <span class="microlabel saved-line">${monthly}/mo you could stop paying</span>}
+        {apps.length === 0 && <span class="microlabel">most replaced</span>}
       </div>
       {
         apps.length === 0 ? (
-          <p class="empty">
-            nothing saved yet. find an app on <a href="/#death-list">the death list</a> and hit
-            "+ save to my stack".
-          </p>
+          <div class="empty-stack">
+            <p class="empty">
+              nothing saved yet. save the subscriptions you actually pay for and we'll total up
+              what they cost you.
+            </p>
+            <div class="stack-rows">
+              {suggestions.map((app) => (
+                <div class="stack-row">
+                  <img src={`/icons/${app.slug}.png`} alt="" width="24" height="24" loading="lazy" />
+                  <a class="stack-name" href={`/${app.slug}`}>{app.name}</a>
+                  <span class="stack-price">${app.priceMonthly}/mo</span>
+                  <span class="stack-verdict"><VerdictBadge verdict={app.verdict} /></span>
+                  <button class="stack-save" data-stack-suggest={app.slug}>+ save</button>
+                </div>
+              ))}
+            </div>
+            <div class="empty-cta">
+              <a class="btn primary" href="/">browse all {totalApps} →</a>
+              <span class="empty-note">the death list: every app with a verdict</span>
+            </div>
+          </div>
         ) : (
           <div class="stack-rows">
             {apps.map((app) => (
@@ -51,7 +88,7 @@ const digestOn = user.newsletter === true;
 
     <section class="account-section">
       <span class="microlabel">weekly digest</span>
-      <div class="digest-card">
+      <div class="digest-panel">
         <div class="digest-text">
           <span class="digest-state" data-digest-state>{digestOn ? 'subscribed' : 'not subscribed'}</span>
           <span class="digest-desc">verdicts that changed, case studies, tips. one email a week, one click to leave.</span>
@@ -116,6 +153,39 @@ const digestOn = user.newsletter === true;
     color: var(--muted);
     font-size: 14px;
   }
+  .empty-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  .stack-save {
+    flex-shrink: 0;
+    padding: 7px 13px;
+    border: 1px solid var(--primary-dim);
+    border-radius: 6px;
+    background: none;
+    color: var(--primary);
+    font: inherit;
+    font-size: 13px;
+    cursor: pointer;
+  }
+  .stack-save:hover {
+    background: color-mix(in srgb, var(--primary) 10%, transparent);
+  }
+  .stack-save[disabled] {
+    opacity: 0.5;
+    cursor: default;
+  }
+  .empty-cta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .empty-note {
+    color: var(--muted);
+    font-size: 13px;
+  }
   .stack-rows {
     display: flex;
     flex-direction: column;
@@ -167,7 +237,9 @@ const digestOn = user.newsletter === true;
   .stack-remove:hover {
     color: var(--no, #ff4444);
   }
-  .digest-card {
+  /* NOT .digest-card: global.css owns that name for the homepage signup block
+     (column, centred, margin-top 72px) and those three would leak in here. */
+  .digest-panel {
     display: flex;
     align-items: center;
     justify-content: space-between;

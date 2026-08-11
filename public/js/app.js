@@ -785,6 +785,25 @@
       })
     );
 
+    /* empty-stack suggestions: save without leaving /account. Reload rather
+       than patch the DOM — the count, the total and the whole section are
+       server-rendered, and this fires at most three times per account. */
+    $$('[data-stack-suggest]').forEach((btn) =>
+      btn.addEventListener('click', async () => {
+        const slug = btn.dataset.stackSuggest;
+        btn.disabled = true;
+        try {
+          const res = await jsonPost('/api/stack', 'POST', { slug });
+          if (!res.ok) throw new Error();
+          track('stack_add', { app: slug });
+          window.location.reload();
+        } catch {
+          btn.disabled = false;
+          toast('something broke · try again');
+        }
+      })
+    );
+
     const digestToggle = $('[data-digest-toggle]');
     digestToggle?.addEventListener('click', async () => {
       const next = digestToggle.dataset.on !== '1';
