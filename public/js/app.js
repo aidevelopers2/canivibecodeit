@@ -209,6 +209,17 @@
     const BADGE = { yes: 'YES', kinda: 'KINDA', no: 'NOT REALLY' };
     let srActive = -1;
 
+    /* Rows are built as DOM nodes, never as an HTML string. The values here
+       come back out of the rendered page decoded (getAttribute/textContent),
+       so re-parsing them as markup would undo the server's escaping and hand
+       an app entry a way to smuggle attributes into this dropdown. */
+    const el = (tag, cls, text) => {
+      const n = document.createElement(tag);
+      if (cls) n.className = cls;
+      if (text != null) n.textContent = text;
+      return n;
+    };
+
     const renderDropdown = (q) => {
       if (!srBox) return;
       srActive = -1;
@@ -218,25 +229,33 @@
         // stale row from three keystrokes ago must not swallow the keypress and
         // redirect someone whose full query matches nothing.
         srBox.classList.remove('open');
-        srBox.innerHTML = '';
+        srBox.replaceChildren();
         search?.setAttribute('aria-expanded', 'false');
         return;
       }
       const top = hits.slice(0, 6);
-      srBox.innerHTML =
-        top
-          .map(
-            (r, i) => `<a class="sr-row" role="option" data-i="${i}" href="${r.href}">
-              <img src="${r.icon}" alt="" width="20" height="20">
-              <span class="sr-name">${r.name}</span>
-              <span class="badge ${r.verdict}">${BADGE[r.verdict]}</span>
-              <span class="sr-meta">${r.meta}</span>
-            </a>`
-          )
-          .join('') +
-        (hits.length > top.length
-          ? `<a class="sr-foot" href="#death-list">↓ all ${hits.length} matches in the death list</a>`
-          : '');
+      const nodes = top.map((r, i) => {
+        const a = el('a', 'sr-row');
+        a.setAttribute('role', 'option');
+        a.dataset.i = i;
+        a.href = r.href;
+        const img = el('img', null);
+        img.src = r.icon;
+        img.alt = '';
+        img.width = 20;
+        img.height = 20;
+        const badge = el('span', 'badge', BADGE[r.verdict] ?? '');
+        // Only the three known verdicts get to name a class.
+        if (r.verdict in BADGE) badge.classList.add(r.verdict);
+        a.append(img, el('span', 'sr-name', r.name), badge, el('span', 'sr-meta', r.meta));
+        return a;
+      });
+      if (hits.length > top.length) {
+        const foot = el('a', 'sr-foot', `↓ all ${hits.length} matches in the death list`);
+        foot.href = '#death-list';
+        nodes.push(foot);
+      }
+      srBox.replaceChildren(...nodes);
       srBox.classList.add('open');
       search?.setAttribute('aria-expanded', 'true');
     };
@@ -688,8 +707,52 @@
       btn.classList.toggle('in-stack', saved);
       btn.textContent = saved ? '✓ in your stack' : '+ save to my stack';
     };
+    /* Two-step confirm, in place of a browser confirm(): the button arms
+       itself, says so, and disarms on second thoughts (a click anywhere else,
+       Escape, or 4s of hesitation). One armed button at a time. Returns true
+       only on the click that confirms. */
+    let armedBtn = null;
+    let armedLabel = '';
+    let armedTimer;
+    const disarm = () => {
+      if (!armedBtn) return;
+      clearTimeout(armedTimer);
+      armedBtn.textContent = armedLabel;
+      armedBtn.classList.remove('armed');
+      armedBtn = null;
+    };
+    const armConfirm = (btn, label) => {
+      if (armedBtn === btn) {
+        disarm();
+        return true;
+      }
+      disarm();
+      armedBtn = btn;
+      armedLabel = btn.textContent;
+      armedTimer = setTimeout(disarm, 4000);
+      btn.textContent = label;
+      btn.classList.add('armed');
+      return false;
+    };
+    /* The arming click reaches this on the way up, but the button still
+       contains the target then, so it never disarms itself. */
+    document.addEventListener(
+      'click',
+      (e) => {
+        if (armedBtn && !armedBtn.contains(e.target)) disarm();
+      },
+      { signal: page.signal }
+    );
+    document.addEventListener(
+      'keydown',
+      (e) => {
+        if (e.key === 'Escape') disarm();
+      },
+      { signal: page.signal }
+    );
+    onLeave(disarm);
+
     const toggleStack = async (slug, saved) => {
-      if (saved && !confirm('Remove from your stack?')) return;
       const res = await jsonPost('/api/stack', saved ? 'DELETE' : 'POST', { slug });
       if (!res.ok) throw new Error();
       const btn = $(`[data-stack="${CSS.escape(slug)}"]`);
@@ -704,8 +767,10 @@
       btn.addEventListener('click', async () => {
         const slug = btn.dataset.stack;
         if (!authed) return openSignup(slug);
+        const saved = btn.dataset.saved === '1';
+        if (saved && !armConfirm(btn, 'click again to remove')) return;
         try {
-          await toggleStack(slug, btn.dataset.saved === '1');
+          await toggleStack(slug, saved);
         } catch {
           toast('something broke · try again');
         }
@@ -773,7 +838,7 @@
 
     $$('[data-stack-remove]').forEach((btn) =>
       btn.addEventListener('click', async () => {
-        if (!confirm('Remove from your stack?')) return;
+        if (!armConfirm(btn, 'confirm?')) return;
         try {
           const res = await jsonPost('/api/stack', 'DELETE', { slug: btn.dataset.stackRemove });
           if (!res.ok) throw new Error();
@@ -828,17 +893,71 @@
       }
     });
 
-    $('[data-delete-account]')?.addEventListener('click', async () => {
-      if (!confirm('Delete your account? Wipes your stack and unsubscribes your email. No undo.')) return;
+    /* Delete account: the one destructive action here, so it gets a real
+       modal and a typed phrase rather than a button you can fat-finger.
+       Same open/close mechanics as the signup modal. */
+    const delModal = $('#delete-modal');
+    const delPhrase = $('[data-delete-phrase]');
+    const delGo = $('[data-delete-go]');
+    let delCloseTimer;
+    const closeDelete = () => {
+      document.body.style.overflow = '';
+      document.body.style.paddingRight = '';
+      if (!delModal || delModal.hidden) return;
+      delModal.classList.remove('open');
+      clearTimeout(delCloseTimer);
+      delCloseTimer = setTimeout(() => {
+        delModal.hidden = true;
+      }, 240);
+    };
+    const openDelete = () => {
+      if (!delModal) return;
+      if (delPhrase) delPhrase.value = '';
+      if (delGo) delGo.disabled = true;
+      const scrollbar = window.innerWidth - document.documentElement.clientWidth;
+      if (scrollbar > 0) document.body.style.paddingRight = `${scrollbar}px`;
+      document.body.style.overflow = 'hidden';
+      clearTimeout(delCloseTimer);
+      delModal.hidden = false;
+      requestAnimationFrame(() => requestAnimationFrame(() => {
+        delModal.classList.add('open');
+        delPhrase?.focus();
+      }));
+    };
+    onLeave(closeDelete);
+    $('[data-delete-account]')?.addEventListener('click', openDelete);
+    delModal?.addEventListener('click', (e) => {
+      if (e.target === delModal || e.target.closest('[data-delete-cancel]')) closeDelete();
+    });
+    document.addEventListener(
+      'keydown',
+      (e) => {
+        if (e.key === 'Escape' && delModal && !delModal.hidden) closeDelete();
+      },
+      { signal: page.signal }
+    );
+    delPhrase?.addEventListener('input', () => {
+      if (delGo) delGo.disabled = delPhrase.value.trim().toLowerCase() !== 'delete';
+    });
+    delGo?.addEventListener('click', async () => {
+      if (delGo.disabled) return;
+      delGo.disabled = true;
+      delGo.textContent = 'deleting…';
       try {
         const res = await fetch('/api/account/delete', { method: 'POST' });
         if (!res.ok) {
           const d = await res.json().catch(() => ({}));
+          delGo.textContent = 'delete account';
+          delGo.disabled = false;
+          closeDelete();
           toast(d.error || 'delete failed · sign in again and retry');
           return;
         }
         window.location.href = '/';
       } catch {
+        delGo.textContent = 'delete account';
+        delGo.disabled = false;
+        closeDelete();
         toast('something broke · try again');
       }
     });

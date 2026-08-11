@@ -4376,6 +4376,15 @@ button.sp-banner {
   color: var(--primary);
 }
 
+/* Armed half of the two-step remove confirm (no browser confirm() anywhere):
+   the label has already changed, this makes it read as destructive. */
+.stack-btn.armed,
+.stack-btn.in-stack.armed {
+  border-color: color-mix(in srgb, #ff4444 45%, transparent);
+  background: color-mix(in srgb, #ff4444 10%, transparent);
+  color: #ff4444;
+}
+
 /* Death-list quick-save lane: fixed 48px slot after the votes column, icon
    revealed on row hover (always visible when saved; softly visible on touch
    screens where hover doesn't exist). Hidden on phones where rows collapse

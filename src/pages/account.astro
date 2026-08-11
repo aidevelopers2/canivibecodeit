@@ -112,6 +112,40 @@ const totalApps = allApps().length;
       </div>
       <p class="danger-note">delete wipes your stack and takes your email off the digest. no soft-delete, no exit survey.</p>
     </section>
+
+    <div class="confirm-backdrop" id="delete-modal" hidden>
+      <div
+        class="confirm-card"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="delete-title"
+        aria-describedby="delete-body"
+      >
+        <h2 id="delete-title">Delete your account?</h2>
+        <p class="confirm-sub" id="delete-body">
+          This wipes your stack{apps.length > 0 ? ` (${apps.length} ${apps.length === 1 ? 'app' : 'apps'})` : ''}, takes
+          your email off the digest, and deletes the account rows. No soft-delete, no exit survey,
+          no undo.
+        </p>
+        <label class="confirm-type">
+          <span class="microlabel">type <b>delete</b> to confirm</span>
+          <input
+            type="text"
+            data-delete-phrase
+            autocomplete="off"
+            autocapitalize="off"
+            autocorrect="off"
+            spellcheck="false"
+            placeholder="delete"
+          />
+        </label>
+        <div class="confirm-actions">
+          <button class="btn ghost" data-delete-cancel>cancel</button>
+          <button class="btn danger" data-delete-go disabled>delete account</button>
+        </div>
+        <button class="confirm-close" data-delete-cancel aria-label="close">×</button>
+      </div>
+    </div>
   </main>
 </Base>
 
@@ -236,6 +270,137 @@ const totalApps = allApps().length;
   }
   .stack-remove:hover {
     color: var(--no, #ff4444);
+  }
+  /* Armed state for the two-step confirm: the label already changed, so this
+     just has to make it read as the dangerous click it now is. */
+  .stack-remove.armed {
+    color: #ff4444;
+    font-weight: 500;
+  }
+
+  /* Delete confirmation modal. Mirrors the signup modal's mechanics (fade the
+     backdrop, lift the card) so both dialogs feel like the same object. */
+  .confirm-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 95;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(2px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.18s var(--ease-out);
+  }
+  /* display:flex would otherwise defeat [hidden] and leave an invisible
+     backdrop swallowing every click on the page. */
+  .confirm-backdrop[hidden] {
+    display: none;
+  }
+  .confirm-backdrop.open {
+    opacity: 1;
+  }
+  .confirm-card {
+    position: relative;
+    width: min(440px, 100%);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 32px 32px 26px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transform: translateY(10px) scale(0.985);
+    transition: transform 0.22s var(--ease-out), opacity 0.18s var(--ease-out);
+  }
+  .confirm-backdrop.open .confirm-card {
+    opacity: 1;
+    transform: none;
+  }
+  .confirm-card h2 {
+    font-family: var(--font-display);
+    font-size: 21px;
+    margin: 0;
+  }
+  .confirm-sub {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.6;
+  }
+  .confirm-type {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .confirm-type b {
+    color: var(--fg);
+  }
+  .confirm-type input {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 11px 13px;
+    color: var(--fg);
+    font: inherit;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.15s var(--ease-out), box-shadow 0.15s var(--ease-out);
+  }
+  .confirm-type input:focus {
+    border-color: #ff4444;
+    box-shadow: 0 0 0 3px color-mix(in srgb, #ff4444 16%, transparent);
+  }
+  .confirm-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+  }
+  .confirm-actions .btn.danger[disabled] {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+  .confirm-close {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    background: none;
+    border: none;
+    color: var(--muted);
+    font-size: 20px;
+    line-height: 1;
+    padding: 4px 6px;
+    cursor: pointer;
+  }
+  .confirm-close:hover {
+    color: var(--fg);
+  }
+  @media (max-width: 560px) {
+    .confirm-card {
+      transform: translateY(28px);
+    }
+    /* Plain column, not column-reverse: keeps cancel before delete, the same
+       order as the desktop row, instead of putting the destructive button
+       under the thumb. */
+    .confirm-actions {
+      flex-direction: column;
+    }
+    .confirm-actions .btn {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .confirm-backdrop,
+    .confirm-card,
+    .confirm-type input {
+      transition: none;
+    }
+    .confirm-card {
+      transform: none;
+    }
   }
   /* NOT .digest-card: global.css owns that name for the homepage signup block
      (column, centred, margin-top 72px) and those three would leak in here. */
