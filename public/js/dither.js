@@ -31,6 +31,10 @@
   };
 
   const fmt = (n) => Number(n).toLocaleString('en-US');
+  // Chart labels (page paths, agent names, app names) originate from PostHog
+  // events, which anyone can spoof, and land in tooltip innerHTML below. Escape
+  // them so a crafted label can't inject markup.
+  const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
   const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /* shared tooltip */
@@ -216,7 +220,7 @@
       if (i < 0 || i >= points.length) return hideTip();
       const p = points[i];
       tooltip(
-        `<b>${p.full}</b><br>${fmt(p.v)} ${opts.unit || 'views'}${p.extra ? `<br><span>${p.extra}</span>` : ''}`,
+        `<b>${esc(p.full)}</b><br>${fmt(p.v)} ${esc(opts.unit || 'views')}${p.extra ? `<br><span>${esc(p.extra)}</span>` : ''}`,
         e.clientX,
         e.clientY
       );
@@ -290,7 +294,7 @@
       hoverI = i;
       if (reduced) draw(1, i);
       else if (!raf) raf = requestAnimationFrame(liveLoop);
-      tooltip(`<b>${rows[i].label}</b><br>${fmt(rows[i].n)} ${opts.unit || ''}`, e.clientX, e.clientY);
+      tooltip(`<b>${esc(rows[i].label)}</b><br>${fmt(rows[i].n)} ${esc(opts.unit || '')}`, e.clientX, e.clientY);
     };
     canvas.onmouseleave = () => {
       hideTip();
