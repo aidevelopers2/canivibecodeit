@@ -2,7 +2,28 @@
 // puts the signed-in user (or null) on Astro.locals. No CSP yet: the site runs
 // inline scripts in several islands and a blanket policy would need its own
 // audit pass first.
+import { timingSafeEqual } from 'node:crypto';
 import { getAuth } from './lib/auth.js';
+
+/* Cloudflare origin lock. A Transform Rule on the zone stamps a secret
+   x-origin-verify header onto every request CF forwards to the origin, so a
+   request without it reached Railway directly and its client-sent headers
+   (x-forwarded-for above all) can't be trusted. Three states, all env-driven
+   so rollback is an env change, never a deploy:
+   - ORIGIN_VERIFY_SECRET unset            → off (local dev, instant disable)
+   - secret set, ORIGIN_VERIFY_ENFORCE!=1  → log-only: count the miss, serve
+   - secret set, ORIGIN_VERIFY_ENFORCE=1   → 403 the request */
+function originVerdict(request) {
+  const secret = process.env.ORIGIN_VERIFY_SECRET;
+  if (!secret) return 'ok';
+  const got = request.headers.get('x-origin-verify') ?? '';
+  // Node hands header values over as latin1; re-encoding them as UTF-8 would
+  // make any secret with a byte over 0x7F unmatchable and 403 the whole site.
+  const a = Buffer.from(got, 'latin1');
+  const b = Buffer.from(secret, 'utf8');
+  if (a.length === b.length && timingSafeEqual(a, b)) return 'ok';
+  return ['1', 'true'].includes(process.env.ORIGIN_VERIFY_ENFORCE) ? 'block' : 'log';
+}
 
 // Session-varying surfaces: never cacheable, anywhere. Everything else on the
 // site stays cache-friendly for the ~99% anonymous traffic.
@@ -13,6 +34,21 @@ export async function onRequest(context, next) {
   context.locals.session = null;
 
   const path = context.url.pathname;
+
+  // Never at build time: a prerendered page must not bake a 403 body.
+  const verdict = context.isPrerendered ? 'ok' : originVerdict(context.request);
+  if (verdict !== 'ok') {
+    // One short line per miss, path truncated: both are attacker-controlled
+    // volume on the direct-origin route, and a log flood would blind the
+    // exact rollout window these lines exist to validate.
+    console.warn(`origin-verify ${verdict}: ${context.request.method} ${path.slice(0, 80)}`);
+    if (verdict === 'block') {
+      return new Response('forbidden', {
+        status: 403,
+        headers: { 'Content-Type': 'text/plain', 'Cache-Control': 'no-store' },
+      });
+    }
+  }
   // Skip the lookup where it can't matter: the PostHog proxy and Better
   // Auth's own routes (its handler reads the cookie itself). Anonymous
   // visitors carry no session cookie and skip the DB entirely. Any failure

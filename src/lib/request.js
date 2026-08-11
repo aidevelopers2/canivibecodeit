@@ -1,8 +1,17 @@
 // Client IP: only Cloudflare can reach this box in production, so CF-Connecting-IP
-// is trustworthy there. Fall back to the socket address for local dev.
+// is trustworthy there. The x-forwarded-for fallback is client-spoofable, so it
+// only applies while the origin lock is off (local dev / pre-rollout): with
+// ORIGIN_VERIFY_SECRET set, a request with no cf-connecting-ip reached the
+// origin directly and gets the shared 'unknown' rate-limit bucket instead of a
+// self-chosen fresh one.
 export function clientIp(request, astroClientAddress) {
+  const cf = request.headers.get('cf-connecting-ip');
+  if (cf) return cf;
+  // The literal bucket, not astroClientAddress: Astro's clientAddress starts
+  // trusting x-forwarded-for if security.allowedDomains is ever configured,
+  // which would silently reopen the spoof this line exists to close.
+  if (process.env.ORIGIN_VERIFY_SECRET) return 'unknown';
   return (
-    request.headers.get('cf-connecting-ip') ||
     request.headers.get('x-forwarded-for')?.split(',')[0].trim() ||
     astroClientAddress ||
     'unknown'
