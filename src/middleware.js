@@ -1,9 +1,9 @@
 // Security headers on every rendered response, plus the session lookup that
-// puts the signed-in user (or null) on Astro.locals. No CSP yet: the site runs
-// inline scripts in several islands and a blanket policy would need its own
-// audit pass first.
+// puts the signed-in user (or null) on Astro.locals. CSP ships from
+// lib/csp.js: report-only until CSP_ENFORCE is set.
 import { timingSafeEqual } from 'node:crypto';
 import { getAuth } from './lib/auth.js';
+import { cspHeader } from './lib/csp.js';
 
 /* Cloudflare origin lock. A Transform Rule on the zone stamps a secret
    x-origin-verify header onto every request CF forwards to the origin, so a
@@ -75,6 +75,15 @@ export async function onRequest(context, next) {
       res.headers.set('X-Frame-Options', 'SAMEORIGIN');
       res.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
       res.headers.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=()');
+      if ((res.headers.get('Content-Type') || '').includes('text/html')) {
+        // Report-only until CSP_ENFORCE is set (see lib/csp.js). Dev is
+        // excluded: Astro's dev tooling injects its own inline scripts and
+        // would drown the reports in noise.
+        if (import.meta.env.PROD) {
+          const csp = cspHeader();
+          res.headers.set(csp.name, csp.value);
+        }
+      }
       if (PRIVATE_PATH.test(path)) {
         res.headers.set('Cache-Control', 'private, no-store');
       } else if ((res.headers.get('Content-Type') || '').includes('text/html')) {
