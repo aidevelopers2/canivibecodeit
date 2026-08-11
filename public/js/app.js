@@ -786,7 +786,7 @@
     );
 
     /* empty-stack suggestions: save without leaving /account. Reload rather
-       than patch the DOM — the count, the total and the whole section are
+       than patch the DOM: the count, the total and the whole section are
        server-rendered, and this fires at most three times per account. */
     $$('[data-stack-suggest]').forEach((btn) =>
       btn.addEventListener('click', async () => {

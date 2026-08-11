@@ -15,7 +15,7 @@ const monthly = Math.round(apps.reduce((sum, a) => sum + (a.priceMonthly ?? 0), 
 const digestOn = user.newsletter === true;
 
 // Empty stack: seed the section with the most-replaced apps so the first save
-// can happen right here. Priced YES verdicts only — anything else is a
+// can happen right here. Priced YES verdicts only: anything else is a
 // suggestion you can't act on. Votes are a running total, not a time window.
 const votes = apps.length === 0 ? await voteCounts() : null;
 const suggestions =
