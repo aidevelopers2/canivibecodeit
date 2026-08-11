@@ -63,10 +63,14 @@ const jsonld = [
     <div class="search-wrap">
       <div class="search">
         <span class="chevron">&gt;</span>
+        {/* Placeholder stays short on purpose: mobile bumps this input to 16px
+            (the iOS zoom guard), which clipped the old "(N on the list)" at
+            390px and narrower, and would clip harder once the count goes four
+            digits. The full count is in the line right above the box. */}
         <input
           type="search"
           id="search"
-          placeholder={`type an app… (${apps.length} on the list)`}
+          placeholder={`type an app… (${apps.length})`}
           autocomplete="off"
           aria-label="Search apps"
           role="combobox"
